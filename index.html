@@ -118,6 +118,20 @@
   .reveal-bonus{color:var(--green);font-size:.75rem;font-weight:600;margin-left:auto;}
 
   .last-updated{font-size:.7rem;color:var(--muted);text-align:center;margin-top:10px;}
+  .admin-card{background:var(--card);border:1px solid rgba(107,117,153,.3);border-radius:20px;padding:20px;margin-bottom:16px;display:none;}
+  .admin-card.show{display:block;}
+  .admin-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.05em;color:var(--muted);margin-bottom:4px;}
+  .admin-hint{font-size:.75rem;color:var(--muted);margin-bottom:14px;line-height:1.4;}
+  .admin-unlock{display:flex;gap:8px;align-items:center;margin-bottom:0;}
+  .admin-unlock input{background:rgba(107,117,153,.1);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.9rem;padding:8px 12px;outline:none;width:90px;text-align:center;letter-spacing:.2em;}
+  .admin-unlock button{background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.85rem;padding:8px 14px;cursor:pointer;}
+  .admin-form{display:none;margin-top:14px;}
+  .admin-form.show{display:block;}
+  .admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
+  .admin-select{background:rgba(107,117,153,.08);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.85rem;padding:8px 10px;outline:none;width:100%;}
+  .admin-btn{width:100%;padding:11px;border:none;border-radius:10px;background:var(--card2);border:1px solid var(--border);color:var(--muted);font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.06em;cursor:pointer;}
+  .admin-err{font-size:.72rem;color:var(--red);margin-top:6px;}
+  .admin-success{font-size:.72rem;color:var(--green);margin-top:6px;}
   .overview-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px;margin-bottom:16px;}
   .overview-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.05em;color:var(--text);margin-bottom:14px;}
   .ov-item{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);}
@@ -182,6 +196,40 @@
   <button class="submit-btn" id="submitBtn" onclick="submitSteps()">UPDATE SCOREBOARD</button>
   <div class="confetti-msg" id="goalMsg"></div>
   <div class="last-updated" id="lastUpdated"></div>
+</div>
+
+<div class="admin-card show" id="adminCard">
+  <div class="admin-title">🔧 Admin — Edit Past Entry</div>
+  <p class="admin-hint">Enter admin PIN to unlock. Use this to fix missed or incorrect step entries from previous days.</p>
+  <div class="admin-unlock">
+    <input type="password" id="adminPinInput" maxlength="4" placeholder="PIN" onkeyup="checkAdminPin()">
+    <button onclick="checkAdminPin()">Unlock</button>
+  </div>
+  <div class="admin-form" id="adminForm">
+    <div class="admin-grid">
+      <select class="admin-select" id="adminDay">
+        <option value="">Select day...</option>
+        <option value="2026-04-27">Mon 4/27 — The Sprint</option>
+        <option value="2026-04-28">Tue 4/28 — Comeback Kid</option>
+        <option value="2026-04-29">Wed 4/29 — Price Is Right</option>
+        <option value="2026-04-30">Thu 4/30 — The Sniper</option>
+        <option value="2026-05-01">Fri 5/1 — The Blindfold</option>
+      </select>
+      <select class="admin-select" id="adminPlayer">
+        <option value="">Select player...</option>
+        <option value="Shania">Shania</option>
+        <option value="Chris">Chris</option>
+        <option value="Jordan">Jordan</option>
+        <option value="Michael">Michael</option>
+        <option value="KayKay">KayKay</option>
+        <option value="Lauren">Lauren</option>
+      </select>
+    </div>
+    <input type="number" min="0" placeholder="Enter steps" id="adminSteps" style="background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.2);border-radius:8px;color:var(--text);font-family:'Bebas Neue',sans-serif;font-size:1.2rem;padding:8px 12px;width:100%;outline:none;margin-bottom:10px;letter-spacing:.04em;">
+    <button class="admin-btn" onclick="submitAdminEntry()">UPDATE ENTRY</button>
+    <p class="admin-err" id="adminErr"></p>
+    <p class="admin-success" id="adminSuccess"></p>
+  </div>
 </div>
 
 <div class="overview-card" id="overviewCard">
@@ -544,6 +592,40 @@ function renderSniperCard(){
   } else {
     revealCard.classList.remove('show');
   }
+}
+
+function checkAdminPin(){
+  const pin = document.getElementById('adminPinInput').value;
+  const form = document.getElementById('adminForm');
+  if(pin === '5678'){
+    form.classList.add('show');
+    document.getElementById('adminErr') && (document.getElementById('adminErr').textContent = '');
+  } else {
+    form.classList.remove('show');
+  }
+}
+
+async function submitAdminEntry(){
+  const day = document.getElementById('adminDay').value;
+  const player = document.getElementById('adminPlayer').value;
+  const steps = document.getElementById('adminSteps').value;
+  const errEl = document.getElementById('adminErr');
+  const successEl = document.getElementById('adminSuccess');
+  errEl.textContent = '';
+  successEl.textContent = '';
+  if(!day || !player || steps === ''){
+    errEl.textContent = 'Please select a day, player and enter steps.';
+    return;
+  }
+  if(!state.days[day]){
+    errEl.textContent = 'Day not found in data.';
+    return;
+  }
+  state.days[day].steps[player] = parseInt(steps) || 0;
+  await saveToStorage();
+  successEl.textContent = player + '\'s steps updated for ' + day + ' ✓';
+  document.getElementById('adminSteps').value = '';
+  renderAll();
 }
 
 function renderOverview(){
