@@ -251,7 +251,7 @@ const API_KEY = '$2a$10$uDo22iaGWCKAJXQ6rr8vFOT/JKIDhT0tg7JUjRk582GMH8XtjtcLW';
 const BIN_URL = 'https://api.jsonbin.io/v3/b/' + BIN_ID;
 
 const PLAYERS = ['Shania','Chris','Jordan','Michael','KayKay','Lauren'];
-const PINS = {Shania:'5678',Chris:'5678',Jordan:'5678',Michael:'5678',KayKay:'5678',Lauren:'5678',ADMIN:'5678'};
+const PINS = {Shania:'5678',Chris:'5678',Jordan:'5678',Michael:'5678',KayKay:'5678',Lauren:'5678',ADMIN:'5678',WEDNESDAY:'0911'};
 
 const DAYS = [
   {date:'2026-04-27',label:'Monday, April 27',mode:'sprint',name:'The Sprint',
@@ -261,7 +261,7 @@ const DAYS = [
    desc:"Yesterday's last place finisher gets +2,000 steps added to their total. Highest adjusted count wins.",
    color:'mode-comeback'},
   {date:'2026-04-29',label:'Wednesday, April 29',mode:'priceisright',name:'The Price Is Right',
-   desc:'A secret target has been set. Get as close as possible without going over. Going over disqualifies you for the day.',
+   desc:'A secret target between 7,500 and 20,000 steps has been set. Get as close as possible without going over. Going over disqualifies you for the day.',
    color:'mode-price'},
   {date:'2026-04-30',label:'Thursday, April 30',mode:'sniper',name:'The Sniper',
    desc:'Everyone privately picks a target. If you out-step your target, earn a bonus 0.5 points. Highest step count also wins the day point.',
@@ -303,6 +303,10 @@ function photoEl(name, cls, size){
 }
 
 function validatePin(name, pin){
+  const today = getTodayDate();
+  if(today === '2026-04-29'){
+    return pin === PINS.WEDNESDAY;
+  }
   return pin === PINS.ADMIN || pin === PINS[name];
 }
 
@@ -333,11 +337,27 @@ function computePoints(state){
       submitted.forEach(p => {
         adjusted[p] = steps[p] + (p === prevLastPlace ? 2000 : 0);
       });
-      const maxAdj = Math.max(...submitted.map(p=>adjusted[p]));
-      const winners = submitted.filter(p => adjusted[p] === maxAdj);
-      winners.forEach(w => pts[w] += 1/winners.length);
-      const sorted = [...submitted].sort((a,b) => adjusted[a]-adjusted[b]);
-      prevLastPlace = sorted[0];
+      const combackKid = prevLastPlace;
+      const combackKidAdj = adjusted[combackKid] || 0;
+      // Sort everyone by adjusted steps
+      const sortedAdj = [...submitted].sort((a,b) => adjusted[b]-adjusted[a]);
+      const lastPlace = sortedAdj[sortedAdj.length-1];
+      const firstPlace = sortedAdj[0];
+      // Everyone else earns 1 pt if they beat Comeback Kid's adjusted total
+      submitted.forEach(p => {
+        if(p !== combackKid && adjusted[p] > combackKidAdj){
+          pts[p] += 1;
+        }
+      });
+      // Comeback Kid scoring
+      if(combackKid){
+        if(firstPlace === combackKid){
+          pts[combackKid] += 2; // first place
+        } else if(lastPlace !== combackKid){
+          pts[combackKid] += 1; // didn't finish last
+        }
+      }
+      prevLastPlace = lastPlace;
 
     } else if(day.mode === 'priceisright'){
       const target = d.target;
@@ -503,6 +523,16 @@ function renderDayHistory(){
 
 function renderEntryRows(){
   const today = getTodayDate();
+  const hintEl = document.getElementById('entryHint');
+  if(hintEl){
+    if(today === '2026-04-29'){
+      hintEl.textContent = 'Wednesday special: only the organizer can enter steps today. Use PIN 0911.';
+      hintEl.style.color = 'var(--blue)';
+    } else {
+      hintEl.textContent = 'Enter your steps and PIN 5678 to submit.';
+      hintEl.style.color = '';
+    }
+  }
   const day = getTodayDay();
   const d = state && state.days[today] ? state.days[today] : {steps:{}};
   const rows = document.getElementById('entryRows');
@@ -681,7 +711,7 @@ async function loadFromStorage(){
   }
   // ensure price is right target exists
   if(state && state.days && state.days['2026-04-29'] && !state.days['2026-04-29'].target){
-    state.days['2026-04-29'].target = Math.floor(Math.random()*(12000-5000)+5000);
+    state.days['2026-04-29'].target = Math.floor(Math.random()*(20000-7500)+7500);
   }
   renderAll();
 }
