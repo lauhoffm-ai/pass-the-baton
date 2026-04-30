@@ -564,7 +564,7 @@ function renderEntryRows(){
 
 function getCombackKid(){
   if(!state) return null;
-  const sprintDay = state.days['2026-04-30'];
+  const sprintDay = state.days['2026-04-27'];
   if(!sprintDay || !sprintDay.steps) return null;
   const submitted = PLAYERS.filter(p => sprintDay.steps[p] !== null && sprintDay.steps[p] !== undefined);
   if(!submitted.length) return null;
