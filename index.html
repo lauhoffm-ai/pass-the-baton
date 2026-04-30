@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mario Party Week 🎮</title>
+<title>Mario Party Week 🎮</title> 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#0d0f14;--card:#161a24;--card2:#1c2130;--accent:#f5a623;--accent2:#ff6b35;--green:#4ade80;--red:#f87171;--blue:#60a5fa;--purple:#a78bfa;--text:#f0f4ff;--muted:#6b7599;--border:#252c3f;}
@@ -501,7 +501,7 @@ function renderDayHistory(){
     const sortedBySteps = [...submitted].sort((a,b) => (useSteps[b]||0)-(useSteps[a]||0));
     const rows = sortedBySteps.map(p => {
       const isWinner = p === dayWinner;
-      const adj = day.mode==='comeback' && p===prevLastPlace ? ' +2k' : '';
+      const adj = day.mode==='comeback' && p===getCombackKid() ? ' +2k' : '';
       const sniperBonus = day.mode==='sniper' && d.targets && d.targets[p] && d.steps[d.targets[p]] !== null && d.steps[p] > d.steps[d.targets[p]] ? ' +0.5🎯' : '';
       return `<div class="day-hist-row">
         ${photoEl(p,'day-hist-photo',24)}
