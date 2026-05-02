@@ -3,238 +3,322 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mario Party Week 🎮</title> 
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Survivor Step Challenge 🔥</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0d0f14;--card:#161a24;--card2:#1c2130;--accent:#f5a623;--accent2:#ff6b35;--green:#4ade80;--red:#f87171;--blue:#60a5fa;--purple:#a78bfa;--text:#f0f4ff;--muted:#6b7599;--border:#252c3f;}
+  :root{
+    --bg:#0f0d09;--card:#1a1610;--card2:#221e14;
+    --fire:#f5722a;--fire2:#e8401a;--gold:#c9952a;--gold2:#f0c040;
+    --green:#4a8c3f;--green2:#6ab85e;
+    --red:#b03020;--red2:#d94030;
+    --torch:#ff9a2e;--ember:#ff6b1a;
+    --text:#f5eed8;--muted:#8a7d5a;--border:#2e2820;
+    --elim:#5a4030;
+  }
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;padding:20px 16px 60px;
-    background-image:radial-gradient(ellipse at 20% 0%,rgba(167,139,250,.07) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(255,107,53,.06) 0%,transparent 50%);}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:'DM Sans',sans-serif;min-height:100vh;
+    padding:0 0 60px;
+    background-image:
+      radial-gradient(ellipse at 50% 0%,rgba(245,114,42,.12) 0%,transparent 55%),
+      radial-gradient(ellipse at 20% 100%,rgba(74,140,63,.06) 0%,transparent 40%),
+      radial-gradient(ellipse at 80% 60%,rgba(201,149,42,.05) 0%,transparent 40%);
+  }
 
-  header{text-align:center;padding:20px 0 24px;}
-  .icon{font-size:2.2rem;display:block;animation:wiggle 2s ease-in-out infinite;}
-  @keyframes wiggle{0%,100%{transform:rotate(-8deg);}50%{transform:rotate(8deg);}}
-  h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,9vw,4rem);letter-spacing:.04em;line-height:1;
-    background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:4px 0 3px;}
-  .subtitle{color:var(--muted);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;}
-  .sync-status{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.7rem;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.1em;}
-  .sync-dot{width:7px;height:7px;border-radius:50%;background:var(--muted);flex-shrink:0;transition:background .3s;}
-  .sync-dot.live{background:var(--green);box-shadow:0 0 6px var(--green);animation:pulse 2s infinite;}
-  .sync-dot.saving{background:var(--accent);animation:pulse .5s infinite;}
-  .sync-dot.error{background:var(--red);}
-  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+  /* HERO HEADER */
+  .hero{
+    text-align:center;
+    padding:32px 20px 28px;
+    position:relative;
+    border-bottom:1px solid var(--border);
+    background:linear-gradient(180deg,rgba(245,114,42,.08) 0%,transparent 100%);
+  }
+  .flames{display:flex;justify-content:center;gap:8px;margin-bottom:12px;}
+  .flame{font-size:1.8rem;animation:flicker 1.5s ease-in-out infinite;}
+  .flame:nth-child(2){animation-delay:.3s;font-size:2.2rem;}
+  .flame:nth-child(3){animation-delay:.6s;}
+  @keyframes flicker{0%,100%{transform:scaleY(1) rotate(-2deg);opacity:.9;}50%{transform:scaleY(1.1) rotate(2deg);opacity:1;}}
+  h1{
+    font-family:'Cinzel',serif;font-size:clamp(2.4rem,9vw,3.8rem);
+    font-weight:900;letter-spacing:.06em;line-height:1;
+    background:linear-gradient(135deg,var(--gold2) 0%,var(--fire) 50%,var(--gold) 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    margin-bottom:4px;
+  }
+  .subtitle{color:var(--muted);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-family:'Cinzel',serif;}
+  .tagline{color:var(--fire);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;margin-top:6px;font-style:italic;}
+  .sync-status{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.68rem;color:var(--muted);margin-top:10px;text-transform:uppercase;letter-spacing:.1em;}
+  .sync-dot{width:6px;height:6px;border-radius:50%;background:var(--muted);flex-shrink:0;}
+  .sync-dot.live{background:var(--green2);box-shadow:0 0 6px var(--green2);animation:pulse 2s infinite;}
+  .sync-dot.saving{background:var(--torch);animation:pulse .5s infinite;}
+  .sync-dot.error{background:var(--red2);}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
 
-  /* DAY MODE CARD */
-  .mode-card{border-radius:20px;padding:20px 22px;margin-bottom:16px;position:relative;overflow:hidden;border:1px solid var(--border);}
-  .mode-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
-  .mode-sprint::before{background:linear-gradient(90deg,#f5a623,#ff6b35);}
-  .mode-comeback::before{background:linear-gradient(90deg,#4ade80,#22d3ee);}
-  .mode-price::before{background:linear-gradient(90deg,#60a5fa,#a78bfa);}
-  .mode-sniper::before{background:linear-gradient(90deg,#f87171,#fb923c);}
-  .mode-blindfold::before{background:linear-gradient(90deg,#a78bfa,#ec4899);}
-  .mode-tag{font-size:.65rem;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:6px;}
-  .mode-name{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.04em;line-height:1;margin-bottom:6px;}
-  .mode-sprint .mode-name{color:var(--accent);}
-  .mode-comeback .mode-name{color:var(--green);}
-  .mode-price .mode-name{color:var(--blue);}
-  .mode-sniper .mode-name{color:var(--red);}
-  .mode-blindfold .mode-name{color:var(--purple);}
-  .mode-desc{font-size:.82rem;color:var(--muted);line-height:1.5;}
-  .mode-target{display:inline-block;margin-top:8px;background:rgba(96,165,250,.15);color:var(--blue);border-radius:8px;padding:4px 12px;font-size:.8rem;font-weight:600;}
-  .mode-target.hidden{background:rgba(107,117,153,.1);color:var(--muted);}
+  .page-content{padding:0 16px;}
 
-  /* LEADERBOARD */
-  .section-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin:0 0 10px;}
-  .leaderboard{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
-  .lb-item{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:12px 16px;display:grid;grid-template-columns:auto auto 1fr auto auto;align-items:center;gap:10px;}
-  .lb-item.leader{border-color:rgba(245,166,35,.4);background:linear-gradient(135deg,rgba(245,166,35,.07) 0%,var(--card) 60%);}
-  .lb-rank{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--muted);width:20px;text-align:center;}
-  .lb-item.leader .lb-rank{color:var(--accent);}
-  .lb-photo{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid var(--border);}
-  .lb-item.leader .lb-photo{border-color:var(--accent);}
-  .lb-photo-placeholder{width:38px;height:38px;border-radius:50%;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:1rem;border:2px solid var(--border);}
-  .lb-name{font-weight:600;font-size:.95rem;}
-  .lb-steps{font-size:.75rem;color:var(--muted);text-align:right;}
-  .lb-points{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--text);min-width:36px;text-align:right;}
-  .lb-item.leader .lb-points{color:var(--accent);}
-  .lb-pts-label{font-size:.6rem;color:var(--muted);font-family:'DM Sans',sans-serif;}
+  /* TRIBAL DIVIDER */
+  .tribal-div{
+    display:flex;align-items:center;gap:10px;margin:20px 0 14px;
+  }
+  .tribal-div::before,.tribal-div::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);}
+  .tribal-label{font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
 
-  /* DAY HISTORY */
-  .day-history{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
-  .day-hist-item{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:12px 16px;}
-  .day-hist-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
-  .day-hist-name{font-size:.78rem;font-weight:600;color:var(--text);}
-  .day-hist-mode{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);}
-  .day-hist-winner{font-size:.72rem;color:var(--green);font-weight:600;}
-  .day-hist-rows{display:flex;flex-direction:column;gap:4px;}
-  .day-hist-row{display:flex;align-items:center;gap:8px;font-size:.78rem;}
-  .day-hist-photo{width:24px;height:24px;border-radius:50%;object-fit:cover;flex-shrink:0;}
-  .day-hist-pname{flex:1;color:var(--muted);}
-  .day-hist-pname.winner{color:var(--text);font-weight:600;}
-  .day-hist-psteps{color:var(--text);}
-  .day-hist-ppts{color:var(--accent);font-weight:600;min-width:32px;text-align:right;}
-  .day-pending{font-size:.78rem;color:var(--muted);font-style:italic;padding:4px 0;}
+  /* DAY CARD */
+  .day-card{
+    border-radius:16px;padding:20px 22px;margin-bottom:20px;
+    position:relative;overflow:hidden;
+    border:1px solid var(--border);
+    background:var(--card);
+  }
+  .day-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+  .day-active::before{background:linear-gradient(90deg,var(--fire2),var(--torch),var(--gold2));}
+  .day-done::before{background:linear-gradient(90deg,var(--green),var(--green2));}
+  .day-upcoming::before{background:var(--border);}
+  .day-redemption::before{background:linear-gradient(90deg,var(--gold),var(--fire));}
+  .day-championship::before{background:linear-gradient(90deg,var(--gold2),var(--gold),var(--gold2));animation:shimmer 2s linear infinite;}
+  @keyframes shimmer{0%{background-position:0%;}100%{background-position:200%;}}
+  .day-tag{font-family:'Cinzel',serif;font-size:.62rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);margin-bottom:6px;}
+  .day-name{font-family:'Cinzel',serif;font-size:1.7rem;font-weight:700;letter-spacing:.04em;line-height:1;margin-bottom:6px;}
+  .day-active .day-name{color:var(--torch);}
+  .day-done .day-name{color:var(--green2);}
+  .day-upcoming .day-name{color:var(--muted);}
+  .day-redemption .day-name{color:var(--gold2);}
+  .day-championship .day-name{color:var(--gold2);}
+  .day-desc{font-size:.8rem;color:var(--muted);line-height:1.55;}
+  .torch-icon{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:2.2rem;opacity:.25;}
 
-  /* ENTRY CARD */
-  .entry-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px 20px;margin-bottom:16px;}
-  .entry-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.05em;color:var(--accent);margin-bottom:4px;}
+  /* STANDINGS */
+  .standings{display:flex;flex-direction:column;gap:8px;margin-bottom:4px;}
+  .player-row{
+    border-radius:14px;padding:12px 16px;
+    display:grid;grid-template-columns:auto auto 1fr auto;
+    align-items:center;gap:10px;
+    border:1px solid var(--border);
+    background:var(--card);
+    transition:border-color .2s;
+  }
+  .player-row.alive{border-color:rgba(74,140,63,.3);background:linear-gradient(135deg,rgba(74,140,63,.05) 0%,var(--card) 60%);}
+  .player-row.eliminated{opacity:.5;border-color:rgba(176,48,32,.2);background:rgba(90,64,48,.15);}
+  .player-row.champion{border-color:rgba(201,149,42,.5);background:linear-gradient(135deg,rgba(201,149,42,.1) 0%,var(--card) 60%);}
+  .player-row.redemption-candidate{border-color:rgba(201,149,42,.35);background:rgba(201,149,42,.05);}
+  .player-rank{font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;color:var(--muted);width:20px;text-align:center;}
+  .player-row.champion .player-rank{color:var(--gold2);}
+  .player-photo{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--border);}
+  .player-row.alive .player-photo{border-color:rgba(74,140,63,.5);}
+  .player-row.eliminated .player-photo{border-color:rgba(176,48,32,.3);filter:grayscale(.8) brightness(.7);}
+  .player-row.champion .player-photo{border-color:var(--gold);box-shadow:0 0 12px rgba(201,149,42,.3);}
+  .player-name{font-family:'Cinzel',serif;font-weight:700;font-size:.9rem;letter-spacing:.04em;}
+  .player-status{font-size:.68rem;margin-top:2px;}
+  .player-row.alive .player-status{color:var(--green2);}
+  .player-row.eliminated .player-status{color:var(--red2);}
+  .player-row.champion .player-status{color:var(--gold2);}
+  .player-row.redemption-candidate .player-status{color:var(--torch);}
+  .player-total{font-family:'Cinzel',serif;font-size:1.2rem;font-weight:700;color:var(--text);text-align:right;}
+  .player-avg{font-size:.67rem;color:var(--muted);text-align:right;}
+
+  /* TRIBAL COUNCIL */
+  .tribal-card{
+    border-radius:16px;padding:18px 20px;margin-bottom:16px;
+    border:1px solid rgba(176,48,32,.4);
+    background:linear-gradient(160deg,rgba(176,48,32,.08) 0%,var(--card) 70%);
+    display:none;
+  }
+  .tribal-card.show{display:block;}
+  .tribal-title{font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;letter-spacing:.06em;color:var(--red2);margin-bottom:4px;}
+  .tribal-sub{font-size:.75rem;color:var(--muted);margin-bottom:12px;line-height:1.5;}
+  .pending-msg{font-size:.8rem;color:var(--torch);font-style:italic;text-align:center;padding:12px 0;}
+
+  /* REDEMPTION */
+  .redemption-card{
+    border-radius:16px;padding:18px 20px;margin-bottom:16px;
+    border:1px solid rgba(201,149,42,.35);
+    background:linear-gradient(160deg,rgba(201,149,42,.07) 0%,var(--card) 70%);
+    display:none;
+  }
+  .redemption-card.show{display:block;}
+  .redemption-title{font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;letter-spacing:.06em;color:var(--gold2);margin-bottom:4px;}
+  .redemption-sub{font-size:.75rem;color:var(--muted);margin-bottom:12px;line-height:1.5;}
+  .redemption-rows{display:flex;flex-direction:column;gap:6px;}
+  .redemption-row{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;border:1px solid var(--border);font-size:.82rem;background:var(--card2);}
+  .redemption-row.leader{border-color:rgba(201,149,42,.4);background:rgba(201,149,42,.07);}
+  .redemption-avg{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--muted);margin-left:auto;}
+  .redemption-row.leader .redemption-avg{color:var(--gold2);}
+  .redeem-badge{font-size:.6rem;background:rgba(201,149,42,.15);color:var(--gold2);border-radius:4px;padding:2px 7px;margin-left:6px;font-family:'Cinzel',serif;letter-spacing:.08em;}
+
+  /* HISTORY */
+  .day-history{display:flex;flex-direction:column;gap:8px;margin-bottom:4px;}
+  .hist-item{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:12px 16px;}
+  .hist-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+  .hist-day{font-family:'Cinzel',serif;font-size:.82rem;font-weight:700;color:var(--text);}
+  .hist-date{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);}
+  .hist-elim{font-size:.7rem;color:var(--red2);font-weight:600;}
+  .hist-rows{display:flex;flex-direction:column;gap:4px;}
+  .hist-row{display:flex;align-items:center;gap:8px;font-size:.78rem;}
+  .hist-photo{width:24px;height:24px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  .hist-name{flex:1;color:var(--muted);}
+  .hist-name.top{color:var(--text);font-weight:600;}
+  .hist-name.out{color:var(--red2);text-decoration:line-through;opacity:.6;}
+  .hist-steps{color:var(--text);}
+  .hist-badge{font-size:.6rem;border-radius:4px;padding:1px 6px;margin-left:4px;}
+  .b-elim{background:rgba(176,48,32,.2);color:var(--red2);}
+  .b-top{background:rgba(74,140,63,.15);color:var(--green2);}
+  .b-redeem{background:rgba(201,149,42,.15);color:var(--gold2);}
+  .b-pending{background:rgba(138,125,90,.1);color:var(--muted);font-style:italic;}
+
+  /* ENTRY */
+  .entry-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:16px;}
+  .entry-title{font-family:'Cinzel',serif;font-size:1.2rem;font-weight:700;letter-spacing:.05em;color:var(--torch);margin-bottom:4px;}
   .entry-hint{font-size:.75rem;color:var(--muted);margin-bottom:14px;line-height:1.4;}
   .entry-rows{display:flex;flex-direction:column;gap:10px;}
   .entry-row{background:var(--card2);border-radius:12px;padding:10px 14px;border:1px solid var(--border);}
-  .entry-row-top{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:10px;margin-bottom:0;}
+  .entry-row.elim-row{opacity:.45;}
+  .entry-row-top{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:10px;}
   .entry-photo{width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;}
-  .entry-photo-placeholder{width:36px;height:36px;border-radius:50%;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
-  .entry-name{font-weight:600;font-size:.9rem;}
-  .entry-submitted{font-size:.7rem;color:var(--green);background:rgba(74,222,128,.1);border-radius:6px;padding:2px 8px;}
-  .entry-input{background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.2);border-radius:8px;color:var(--text);font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.04em;padding:5px 10px;width:110px;text-align:right;outline:none;transition:border-color .2s;}
-  .entry-input:focus{border-color:var(--accent);}
-  .entry-input::placeholder{color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.82rem;}
+  .entry-name{font-family:'Cinzel',serif;font-weight:700;font-size:.85rem;letter-spacing:.03em;}
+  .entry-elim-tag{font-size:.6rem;color:var(--red2);background:rgba(176,48,32,.15);border-radius:4px;padding:1px 6px;}
+  .entry-submitted{font-size:.68rem;color:var(--green2);background:rgba(74,140,63,.12);border-radius:6px;padding:2px 8px;}
+  .entry-input{background:rgba(245,114,42,.07);border:1px solid rgba(245,114,42,.25);border-radius:8px;color:var(--text);font-family:'Cinzel',serif;font-size:1.1rem;letter-spacing:.04em;padding:5px 10px;width:110px;text-align:right;outline:none;transition:border-color .2s;}
+  .entry-input:focus{border-color:var(--torch);}
+  .entry-input::placeholder{color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.8rem;}
   .pin-row{display:flex;align-items:center;gap:6px;margin-top:7px;}
-  .pin-input{background:rgba(107,117,153,.1);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.82rem;padding:4px 8px;width:70px;outline:none;text-align:center;letter-spacing:.2em;}
-  .pin-input:focus{border-color:var(--muted);}
+  .pin-input{background:rgba(138,125,90,.1);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.82rem;padding:4px 8px;width:70px;outline:none;text-align:center;letter-spacing:.2em;}
   .pin-label{font-size:.7rem;color:var(--muted);}
-  .pin-err{font-size:.7rem;color:var(--red);margin-left:4px;}
-  .submit-btn{width:100%;margin-top:14px;padding:13px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0d0f14;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.08em;cursor:pointer;transition:transform .15s,opacity .15s;}
-  .submit-btn:active{transform:scale(.97);opacity:.88;}
-  .submit-btn:disabled{opacity:.5;cursor:not-allowed;}
+  .pin-err{font-size:.7rem;color:var(--red2);margin-left:4px;}
+  .submit-btn{width:100%;margin-top:14px;padding:13px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--fire2),var(--torch),var(--gold));color:#0f0d09;font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;letter-spacing:.1em;cursor:pointer;transition:transform .15s,opacity .15s;}
+  .submit-btn:active{transform:scale(.97);opacity:.85;}
+  .submit-btn:disabled{opacity:.4;cursor:not-allowed;}
 
-  /* SNIPER SECTION */
-  .sniper-card{background:var(--card);border:1px solid rgba(248,113,113,.3);border-radius:20px;padding:20px;margin-bottom:16px;}
-  .sniper-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.05em;color:var(--red);margin-bottom:4px;}
-  .sniper-hint{font-size:.75rem;color:var(--muted);margin-bottom:14px;line-height:1.4;}
-  .sniper-rows{display:flex;flex-direction:column;gap:10px;}
-  .sniper-row{background:var(--card2);border-radius:12px;padding:10px 14px;border:1px solid var(--border);}
-  .sniper-row-top{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;}
-  .sniper-select{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.85rem;padding:5px 10px;outline:none;flex:1;width:100%;}
-  .sniper-submitted{font-size:.7rem;color:var(--red);background:rgba(248,113,113,.1);border-radius:6px;padding:2px 8px;}
-
-  /* REVEAL */
-  .reveal-card{background:var(--card);border:1px solid rgba(167,139,250,.3);border-radius:20px;padding:20px;margin-bottom:16px;display:none;}
-  .reveal-card.show{display:block;}
-  .reveal-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.05em;color:var(--purple);margin-bottom:12px;}
-  .reveal-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:.85rem;}
-  .reveal-row:last-child{border-bottom:none;}
-  .reveal-arrow{color:var(--red);font-size:1rem;}
-  .reveal-bonus{color:var(--green);font-size:.75rem;font-weight:600;margin-left:auto;}
-
-  .last-updated{font-size:.7rem;color:var(--muted);text-align:center;margin-top:10px;}
-  .admin-card{background:var(--card);border:1px solid rgba(107,117,153,.3);border-radius:20px;padding:20px;margin-bottom:16px;display:none;}
-  .admin-card.show{display:block;}
-  .admin-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.05em;color:var(--muted);margin-bottom:4px;}
-  .admin-hint{font-size:.75rem;color:var(--muted);margin-bottom:14px;line-height:1.4;}
-  .admin-unlock{display:flex;gap:8px;align-items:center;margin-bottom:0;}
-  .admin-unlock input{background:rgba(107,117,153,.1);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.9rem;padding:8px 12px;outline:none;width:90px;text-align:center;letter-spacing:.2em;}
-  .admin-unlock button{background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.85rem;padding:8px 14px;cursor:pointer;}
-  .admin-form{display:none;margin-top:14px;}
+  /* ADMIN */
+  .admin-card{background:var(--card);border:1px solid rgba(138,125,90,.2);border-radius:16px;padding:18px;margin-bottom:16px;}
+  .admin-title{font-family:'Cinzel',serif;font-size:1rem;font-weight:700;letter-spacing:.05em;color:var(--muted);margin-bottom:4px;}
+  .admin-hint{font-size:.73rem;color:var(--muted);margin-bottom:12px;}
+  .admin-unlock{display:flex;gap:8px;align-items:center;}
+  .admin-unlock input{background:rgba(138,125,90,.1);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.9rem;padding:7px 12px;outline:none;width:90px;text-align:center;letter-spacing:.2em;}
+  .admin-unlock button{background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.82rem;padding:7px 14px;cursor:pointer;}
+  .admin-form{display:none;margin-top:12px;}
   .admin-form.show{display:block;}
   .admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
-  .admin-select{background:rgba(107,117,153,.08);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.85rem;padding:8px 10px;outline:none;width:100%;}
-  .admin-btn{width:100%;padding:11px;border:none;border-radius:10px;background:var(--card2);border:1px solid var(--border);color:var(--muted);font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.06em;cursor:pointer;}
-  .admin-err{font-size:.72rem;color:var(--red);margin-top:6px;}
-  .admin-success{font-size:.72rem;color:var(--green);margin-top:6px;}
-  .overview-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px;margin-bottom:16px;}
-  .overview-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.05em;color:var(--text);margin-bottom:14px;}
-  .ov-item{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);}
+  .admin-select{background:rgba(138,125,90,.08);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.82rem;padding:7px 10px;outline:none;width:100%;}
+  .admin-steps-input{background:rgba(245,114,42,.07);border:1px solid rgba(245,114,42,.2);border-radius:8px;color:var(--text);font-family:'Cinzel',serif;font-size:1.1rem;padding:7px 12px;width:100%;outline:none;margin-bottom:10px;}
+  .admin-btn{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px;background:var(--card2);color:var(--muted);font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:.06em;cursor:pointer;}
+  .admin-success{font-size:.7rem;color:var(--green2);margin-top:6px;}
+  .admin-err{font-size:.7rem;color:var(--red2);margin-top:6px;}
+
+  /* OVERVIEW */
+  .overview-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:16px;}
+  .overview-title{font-family:'Cinzel',serif;font-size:1rem;font-weight:700;letter-spacing:.06em;color:var(--text);margin-bottom:14px;}
+  .ov-item{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);}
   .ov-item:last-child{border-bottom:none;}
-  .ov-item.today{background:rgba(245,166,35,.05);border-radius:10px;padding:12px;margin:0 -10px;border-bottom:none;}
-  .ov-item.today + .ov-item{border-top:1px solid var(--border);}
-  .ov-dot{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
-  .ov-dot.sprint{background:rgba(245,166,35,.15);}
-  .ov-dot.comeback{background:rgba(74,222,128,.15);}
-  .ov-dot.priceisright{background:rgba(96,165,250,.15);}
-  .ov-dot.sniper{background:rgba(248,113,113,.15);}
-  .ov-dot.blindfold{background:rgba(167,139,250,.15);}
+  .ov-today{background:rgba(245,114,42,.05);border-radius:10px;padding:10px;margin:0 -10px;}
+  .ov-dot{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;background:rgba(138,125,90,.1);}
   .ov-info{flex:1;}
-  .ov-date{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px;}
-  .ov-name{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:3px;}
-  .ov-desc{font-size:.75rem;color:var(--muted);line-height:1.4;}
-  .ov-badge{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;border-radius:4px;padding:2px 7px;white-space:nowrap;margin-top:4px;display:inline-block;}
-  .ov-badge.today-badge{background:rgba(245,166,35,.15);color:var(--accent);}
-  .ov-badge.done-badge{background:rgba(74,222,128,.1);color:var(--green);}
-  .ov-badge.upcoming-badge{background:rgba(107,117,153,.1);color:var(--muted);}
-  .confetti-msg{display:none;text-align:center;padding:16px;background:linear-gradient(135deg,rgba(74,222,128,.1),rgba(245,166,35,.1));border:1px solid rgba(74,222,128,.3);border-radius:14px;margin-top:12px;font-weight:600;font-size:1rem;color:var(--green);}
-  .confetti-msg.show{display:block;animation:popIn .4s cubic-bezier(.34,1.56,.64,1);}
+  .ov-date{font-size:.67rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1px;}
+  .ov-name{font-family:'Cinzel',serif;font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:2px;letter-spacing:.04em;}
+  .ov-desc{font-size:.72rem;color:var(--muted);line-height:1.4;}
+  .ov-badge{font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;border-radius:4px;padding:2px 7px;margin-top:4px;display:inline-block;font-family:'Cinzel',serif;}
+  .b-ov-today{background:rgba(245,114,42,.15);color:var(--torch);}
+  .b-ov-done{background:rgba(74,140,63,.1);color:var(--green2);}
+  .b-ov-upcoming{background:rgba(138,125,90,.1);color:var(--muted);}
+
+  .last-updated{font-size:.68rem;color:var(--muted);text-align:center;margin-top:10px;}
+  .champion-msg{display:none;text-align:center;padding:20px;background:linear-gradient(135deg,rgba(201,149,42,.12),rgba(245,114,42,.08));border:1px solid rgba(201,149,42,.4);border-radius:14px;margin-top:12px;font-family:'Cinzel',serif;font-weight:700;font-size:1.1rem;color:var(--gold2);letter-spacing:.06em;}
+  .champion-msg.show{display:block;animation:popIn .5s cubic-bezier(.34,1.56,.64,1);}
   @keyframes popIn{from{transform:scale(.8);opacity:0;}to{transform:scale(1);opacity:1;}}
 </style>
 </head>
 <body>
-<header>
-  <span class="icon">🎮</span>
-  <h1>Mario Party Week</h1>
-  <p class="subtitle">Lauhoff Family · May the Best Stepper Win</p>
+
+<div class="hero">
+  <div class="flames">
+    <span class="flame">🔥</span>
+    <span class="flame">🔥</span>
+    <span class="flame">🔥</span>
+  </div>
+  <h1>SURVIVOR</h1>
+  <p class="subtitle">Marcos & Muscles · Step Challenge</p>
+  <p class="tagline">Outwalk. Outlast. Outshine.</p>
   <div class="sync-status"><div class="sync-dot" id="syncDot"></div><span id="syncLabel">Connecting...</span></div>
-</header>
-
-<div id="modeCard" class="mode-card mode-sprint">
-  <div class="mode-tag" id="modeDate">Thursday, April 30</div>
-  <div class="mode-name" id="modeName">The Sprint</div>
-  <div class="mode-desc" id="modeDesc">Classic rules — highest step count wins the day. No tricks, no modifiers. Just walk.</div>
-  <span class="mode-target hidden" id="modeTarget" style="display:none"></span>
 </div>
 
-<p class="section-label">Points Leaderboard</p>
-<div class="leaderboard" id="leaderboard"></div>
+<div class="page-content">
 
-<p class="section-label">This Week's Results</p>
-<div class="day-history" id="dayHistory"></div>
-
-<div class="sniper-card" id="sniperCard" style="display:none">
-  <div class="sniper-title">🎯 Sniper Assignments</div>
-  <p class="sniper-hint">Enter your PIN and pick your target. Assignments reveal once everyone has submitted.</p>
-  <div class="sniper-rows" id="sniperRows"></div>
-  <button class="submit-btn" id="sniperSubmitBtn" onclick="submitSniperTargets()" style="background:linear-gradient(135deg,var(--red),#fb923c)">LOCK IN TARGETS</button>
-  <div id="sniperRevealCard" class="reveal-card">
-    <div class="reveal-title">🎯 Targets Revealed</div>
-    <div id="sniperRevealRows"></div>
+  <div class="tribal-div"><span class="tribal-label">Today's Challenge</span></div>
+  <div id="dayCard" class="day-card day-upcoming">
+    <span class="torch-icon">🕯️</span>
+    <div class="day-tag" id="dayTag">Day 1 · Monday, May 4</div>
+    <div class="day-name" id="dayName">Full Squad</div>
+    <div class="day-desc" id="dayDesc">All 6 players compete. Lowest step count is eliminated from contention. 5 remain.</div>
   </div>
-</div>
 
-<div class="entry-card">
-  <div class="entry-title" id="entryTitle">✏️ Log Today's Steps</div>
-  <p class="entry-hint" id="entryHint">Enter your steps and PIN to submit. Admin PIN works for any slot.</p>
-  <div class="entry-rows" id="entryRows"></div>
-  <button class="submit-btn" id="submitBtn" onclick="submitSteps()">UPDATE SCOREBOARD</button>
-  <div class="confetti-msg" id="goalMsg"></div>
-  <div class="last-updated" id="lastUpdated"></div>
-</div>
+  <div class="tribal-div"><span class="tribal-label">Tribal Standings</span></div>
+  <div class="standings" id="standings"></div>
 
-<div class="admin-card show" id="adminCard">
-  <div class="admin-title">🔧 Admin — Edit Past Entry</div>
-  <p class="admin-hint">Enter admin PIN to unlock. Use this to fix missed or incorrect step entries from previous days.</p>
-  <div class="admin-unlock">
-    <input type="password" id="adminPinInput" maxlength="4" placeholder="PIN" onkeyup="checkAdminPin()">
-    <button onclick="checkAdminPin()">Unlock</button>
+  <div class="redemption-card" id="redemptionCard">
+    <div class="redemption-title">⚡ Redemption Island</div>
+    <p class="redemption-sub">The eliminated player with the highest daily step average returns for Day 5. Every step taken after elimination could bring you back.</p>
+    <div class="redemption-rows" id="redemptionRows"></div>
   </div>
-  <div class="admin-form" id="adminForm">
-    <div class="admin-grid">
-      <select class="admin-select" id="adminDay">
-        <option value="">Select day...</option>
-        <option value="2026-04-27">Mon 4/27 — The Sprint</option>
-        <option value="2026-04-28">Tue 4/28 — Comeback Kid</option>
-        <option value="2026-04-29">Wed 4/29 — Price Is Right</option>
-        <option value="2026-04-30">Thu 4/30 — The Sniper</option>
-        <option value="2026-05-01">Fri 5/1 — The Blindfold</option>
-      </select>
-      <select class="admin-select" id="adminPlayer">
-        <option value="">Select player...</option>
-        <option value="Shania">Shania</option>
-        <option value="Chris">Chris</option>
-        <option value="Jordan">Jordan</option>
-        <option value="Michael">Michael</option>
-        <option value="KayKay">KayKay</option>
-        <option value="Lauren">Lauren</option>
-      </select>
+
+  <div class="tribal-card" id="tribalCard">
+    <div class="tribal-title">🗳️ Tribal Council — Pending</div>
+    <p class="tribal-sub">Not all votes are in. Elimination will be revealed once everyone has submitted their steps.</p>
+    <div class="pending-msg" id="tribalPending"></div>
+  </div>
+
+  <div class="tribal-div" id="historyDivider" style="display:none"><span class="tribal-label">Tribal History</span></div>
+  <div class="day-history" id="dayHistory"></div>
+
+  <div class="tribal-div"><span class="tribal-label">Log Your Steps</span></div>
+  <div class="entry-card">
+    <div class="entry-title">🔥 Cast Your Steps</div>
+    <p class="entry-hint" id="entryHint">Enter your steps and PIN 5678 to submit. The tribe has spoken.</p>
+    <div class="entry-rows" id="entryRows"></div>
+    <button class="submit-btn" id="submitBtn" onclick="submitSteps()">THE TRIBE HAS SPOKEN</button>
+    <div class="champion-msg" id="championMsg"></div>
+    <div class="last-updated" id="lastUpdated"></div>
+  </div>
+
+  <div class="admin-card">
+    <div class="admin-title">⚙️ Council Admin</div>
+    <p class="admin-hint">Enter PIN to fix missed or incorrect entries from any day.</p>
+    <div class="admin-unlock">
+      <input type="password" id="adminPinInput" maxlength="4" placeholder="PIN" onkeyup="checkAdminPin()">
+      <button onclick="checkAdminPin()">Unlock</button>
     </div>
-    <input type="number" min="0" placeholder="Enter steps" id="adminSteps" style="background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.2);border-radius:8px;color:var(--text);font-family:'Bebas Neue',sans-serif;font-size:1.2rem;padding:8px 12px;width:100%;outline:none;margin-bottom:10px;letter-spacing:.04em;">
-    <button class="admin-btn" onclick="submitAdminEntry()">UPDATE ENTRY</button>
-    <p class="admin-err" id="adminErr"></p>
-    <p class="admin-success" id="adminSuccess"></p>
+    <div class="admin-form" id="adminForm">
+      <div class="admin-grid">
+        <select class="admin-select" id="adminDay">
+          <option value="">Select day...</option>
+          <option value="2026-05-04">Mon 5/4 — Day 1</option>
+          <option value="2026-05-05">Tue 5/5 — Day 2</option>
+          <option value="2026-05-06">Wed 5/6 — Day 3</option>
+          <option value="2026-05-07">Thu 5/7 — Day 4</option>
+          <option value="2026-05-08">Fri 5/8 — Day 5 Redemption</option>
+          <option value="2026-05-09">Sat 5/9 — Day 6 Championship</option>
+        </select>
+        <select class="admin-select" id="adminPlayer">
+          <option value="">Select player...</option>
+          <option value="Shania">Shania</option>
+          <option value="Chris">Chris</option>
+          <option value="Jordan">Jordan</option>
+          <option value="Michael">Michael</option>
+          <option value="KayKay">KayKay</option>
+          <option value="Lauren">Lauren</option>
+        </select>
+      </div>
+      <input type="number" min="0" placeholder="Enter steps" id="adminSteps" class="admin-steps-input">
+      <button class="admin-btn" onclick="submitAdminEntry()">UPDATE ENTRY</button>
+      <p class="admin-err" id="adminErr"></p>
+      <p class="admin-success" id="adminSuccess"></p>
+    </div>
   </div>
-</div>
 
-<div class="overview-card" id="overviewCard">
-  <div class="overview-title">📅 Week At A Glance</div>
-  <div id="overviewList"></div>
+  <div class="overview-card">
+    <div class="overview-title">📜 The Journey</div>
+    <div id="overviewList"></div>
+  </div>
+
 </div>
 
 <script>
@@ -246,476 +330,351 @@ const PHOTOS = {
   'Lauren': 'data:image/jpeg;base64,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',
   'KayKay': 'data:image/jpeg;base64,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'
 };
-const BIN_ID = '69dfed3b856a6821893a5527';
-const API_KEY = '$2a$10$uDo22iaGWCKAJXQ6rr8vFOT/JKIDhT0tg7JUjRk582GMH8XtjtcLW';
-const BIN_URL = 'https://api.jsonbin.io/v3/b/' + BIN_ID;
+const BIN_ID='69dfed3b856a6821893a5527';
+const API_KEY='$2a$10$uDo22iaGWCKAJXQ6rr8vFOT/JKIDhT0tg7JUjRk582GMH8XtjtcLW';
+const BIN_URL='https://api.jsonbin.io/v3/b/'+BIN_ID;
+const PIN='5678';
+const PLAYERS=['Shania','Chris','Jordan','Michael','KayKay','Lauren'];
 
-const PLAYERS = ['Shania','Chris','Jordan','Michael','KayKay','Lauren'];
-const PINS = {Shania:'5678',Chris:'5678',Jordan:'5678',Michael:'5678',KayKay:'5678',Lauren:'5678',ADMIN:'5678',WEDNESDAY:'0911'};
-
-const DAYS = [
-  {date:'2026-04-27',label:'Monday, April 27',mode:'sprint',name:'The Sprint',
-   desc:'Classic rules — highest step count wins the day. No tricks, no modifiers. Just walk.',
-   color:'mode-sprint'},
-  {date:'2026-04-28',label:'Tuesday, April 28',mode:'comeback',name:'The Comeback Kid',
-   desc:"Yesterday's last place gets +2,000 steps added to their total. Beat their adjusted total to earn a point. Comeback Kid earns 2pts for 1st place, 1pt for not finishing last, 0pts for finishing last again.",
-   color:'mode-comeback'},
-  {date:'2026-04-29',label:'Wednesday, April 29',mode:'priceisright',name:'The Price Is Right',
-   desc:'A secret target between 7,500 and 20,000 steps has been set. Get as close as possible without going over. Going over disqualifies you for the day.',
-   color:'mode-price'},
-  {date:'2026-04-30',label:'Thursday, April 30',mode:'sniper',name:'The Sniper',
-   desc:'Everyone privately picks a target. If you out-step your target, earn a bonus 0.5 points. Highest step count also wins the day point.',
-   color:'mode-sniper'},
-  {date:'2026-05-01',label:'Friday, May 1',mode:'blindfold',name:'The Blindfold',
-   desc:'No Stridekick until 10 PM. Walk completely blind. Highest count when everyone syncs wins.',
-   color:'mode-blindfold'},
+const DAYS=[
+  {date:'2026-05-04',label:'Monday, May 4',tag:'Day 1',name:'Full Squad',active:6,
+   desc:'All 6 players compete. Lowest step count eliminated from contention. 5 remain.',cls:'day-active',emoji:'🔥'},
+  {date:'2026-05-05',label:'Tuesday, May 5',tag:'Day 2',name:'First Blood',active:5,
+   desc:'5 players compete. Lowest step count eliminated. 4 remain.',cls:'day-upcoming',emoji:'⚔️'},
+  {date:'2026-05-06',label:'Wednesday, May 6',tag:'Day 3',name:'Halfway Point',active:4,
+   desc:'4 players compete. Lowest step count eliminated. 3 remain.',cls:'day-upcoming',emoji:'🌴'},
+  {date:'2026-05-07',label:'Thursday, May 7',tag:'Day 4',name:'Final 3',active:3,
+   desc:'3 players compete. Lowest eliminated. Final 2 confirmed. Redemption Island activates — eliminated player with highest step average returns for Day 5.',cls:'day-upcoming',emoji:'🗳️'},
+  {date:'2026-05-08',label:'Friday, May 8',tag:'Day 5',name:'Redemption Day',active:3,
+   desc:'One eliminated player returns from Redemption Island. 3-way battle. Lowest steps eliminated. Final 2 remain.',cls:'day-redemption',emoji:'⚡'},
+  {date:'2026-05-09',label:'Saturday, May 9',tag:'Day 6',name:'Final Tribal Council',active:2,
+   desc:'Final 2 go head to head. Highest step count wins the Survivor Championship. Lowest overall steps earns the Hype Man punishment.',cls:'day-championship',emoji:'🏆'},
 ];
 
-let state = null;
-
-let TEST_DATE = '2026-04-30';
-
-
-let lastUpdatedTime = null;
-let pendingSteps = {};
-let pendingPins = {};
-let pendingSniperTargets = {};
-let pendingSniperPins = {};
+let state=null,lastUpdatedTime=null;
 
 function getTodayDate(){
-  const now = new Date();
-const yyyy = now.getFullYear();
-const mm = String(now.getMonth()+1).padStart(2,'0');
-const dd = String(now.getDate()).padStart(2,'0');
-return yyyy+'-'+mm+'-'+dd;
+  const now=new Date();
+  return `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
 }
-
 function getTodayDay(){
-  const today = getTodayDate();
-  return DAYS.find(d => d.date === today) || DAYS[DAYS.length-1];
+  const today=getTodayDate();
+  return DAYS.find(d=>d.date===today)||DAYS[DAYS.length-1];
 }
-
-function setSyncStatus(s,l){
-  document.getElementById('syncDot').className='sync-dot '+s;
-  document.getElementById('syncLabel').textContent=l;
-}
-
-function photoEl(name, cls, size){
-  size = size || 36;
+function photoEl(name,cls,size=36){
   if(PHOTOS[name]) return `<img src="${PHOTOS[name]}" class="${cls}" style="width:${size}px;height:${size}px;border-radius:50%;object-fit:cover;flex-shrink:0;" alt="${name}">`;
-  return `<div class="${cls}-placeholder" style="width:${size}px;height:${size}px;border-radius:50%;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;">👤</div>`;
+  return `<div style="width:${size}px;height:${size}px;border-radius:50%;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;">👤</div>`;
+}
+function setSyncStatus(s,l){document.getElementById('syncDot').className='sync-dot '+s;document.getElementById('syncLabel').textContent=l;}
+function getSteps(date){return state&&state.days[date]?state.days[date].steps:{};}
+
+// ── GAME LOGIC — all eliminations require ALL active players to have submitted ──
+
+function allSubmitted(date, activePlayers){
+  const steps=getSteps(date);
+  return activePlayers.every(p=>steps[p]!==null&&steps[p]!==undefined);
 }
 
-function validatePin(name, pin){
-  const today = getTodayDate();
-  if(today === '2026-04-29'){
-    return pin === PINS.WEDNESDAY;
-  }
-  return pin === PINS.ADMIN || pin === PINS[name];
-}
+function getGameState(){
+  // Returns {eliminated:[], remaining:[], redeemPlayer:null, day5Elim:null, champion:null}
+  const eliminated=[];
+  let remaining=[...PLAYERS];
 
-// ---- SCORING ENGINE ----
-function computePoints(state){
-  const pts = {Shania:0,Chris:0,Jordan:0,Michael:0,KayKay:0,Lauren:0};
-  let prevLastPlace = null;
-
-  DAYS.forEach((day,idx) => {
-    const d = state.days[day.date];
-    if(!d) return;
-    const steps = d.steps || {};
-    const submitted = PLAYERS.filter(p => steps[p] !== null && steps[p] !== undefined);
-    if(submitted.length === 0) return;
-
-    if(day.mode === 'sprint'){
-      const winner = submitted.reduce((a,b) => steps[a] >= steps[b] ? a : b);
-      // find last place
-      const sorted = [...submitted].sort((a,b) => steps[a]-steps[b]);
-      prevLastPlace = sorted[0];
-      // ties
-      const maxSteps = steps[winner];
-      const winners = submitted.filter(p => steps[p] === maxSteps);
-      winners.forEach(w => pts[w] += 1/winners.length);
-
-    } else if(day.mode === 'comeback'){
-      const adjusted = {};
-      submitted.forEach(p => {
-        adjusted[p] = steps[p] + (p === prevLastPlace ? 2000 : 0);
-      });
-      const combackKid = prevLastPlace;
-      const combackKidAdj = adjusted[combackKid] || 0;
-      // Sort everyone by adjusted steps
-      const sortedAdj = [...submitted].sort((a,b) => adjusted[b]-adjusted[a]);
-      const lastPlace = sortedAdj[sortedAdj.length-1];
-      const firstPlace = sortedAdj[0];
-      // Everyone else earns 1 pt if they beat Comeback Kid's adjusted total
-      submitted.forEach(p => {
-        if(p !== combackKid && adjusted[p] > combackKidAdj){
-          pts[p] += 1;
-        }
-      });
-      // Comeback Kid scoring
-      if(combackKid){
-        if(firstPlace === combackKid){
-          pts[combackKid] += 2; // first place
-        } else if(lastPlace !== combackKid){
-          pts[combackKid] += 1; // didn't finish last
-        }
-      }
-      prevLastPlace = lastPlace;
-
-    } else if(day.mode === 'priceisright'){
-      const target = d.target;
-      if(!target) return;
-      const eligible = submitted.filter(p => steps[p] <= target);
-      if(eligible.length === 0) return;
-      const closest = eligible.reduce((a,b) => (target-steps[a]) <= (target-steps[b]) ? a : b);
-      const minDiff = target - steps[closest];
-      const winners = eligible.filter(p => (target-steps[p]) === minDiff);
-      winners.forEach(w => pts[w] += 1/winners.length);
-      const sorted = [...submitted].sort((a,b) => steps[a]-steps[b]);
-      prevLastPlace = sorted[0];
-
-    } else if(day.mode === 'sniper'){
-      // day point — highest steps
-      const maxSteps = Math.max(...submitted.map(p=>steps[p]));
-      const dayWinners = submitted.filter(p => steps[p] === maxSteps);
-      dayWinners.forEach(w => pts[w] += 1/dayWinners.length);
-      // bonus points — sniper
-      const targets = d.targets || {};
-      submitted.forEach(p => {
-        const myTarget = targets[p];
-        if(myTarget && steps[p] !== null && steps[myTarget] !== null && steps[p] > steps[myTarget]){
-          pts[p] += 0.5;
-        }
-      });
-      const sorted = [...submitted].sort((a,b) => steps[a]-steps[b]);
-      prevLastPlace = sorted[0];
-
-    } else if(day.mode === 'blindfold'){
-      const maxSteps = Math.max(...submitted.map(p=>steps[p]));
-      const winners = submitted.filter(p => steps[p] === maxSteps);
-      winners.forEach(w => pts[w] += 1/winners.length);
-      const sorted = [...submitted].sort((a,b) => steps[a]-steps[b]);
-      prevLastPlace = sorted[0];
+  // Days 1-4: eliminate one per day only if ALL active players have submitted
+  for(let i=0;i<4;i++){
+    const day=DAYS[i];
+    const steps=getSteps(day.date);
+    const submitted=remaining.filter(p=>steps[p]!==null&&steps[p]!==undefined);
+    // Only eliminate if ALL remaining players have submitted
+    if(submitted.length<remaining.length) break;
+    const minSteps=Math.min(...submitted.map(p=>steps[p]));
+    const loser=submitted.find(p=>steps[p]===minSteps);
+    if(loser){
+      eliminated.push({name:loser,day:i+1,date:day.date,steps:steps[loser]});
+      remaining=remaining.filter(p=>p!==loser);
     }
-  });
-
-  return pts;
-}
-
-function getAdjustedSteps(dayData, mode, prevLastPlace){
-  const steps = dayData.steps || {};
-  if(mode !== 'comeback') return steps;
-  const adj = {};
-  PLAYERS.forEach(p => {
-    if(steps[p] !== null && steps[p] !== undefined)
-      adj[p] = steps[p] + (p === prevLastPlace ? 2000 : 0);
-  });
-  return adj;
-}
-
-// ---- RENDER ----
-function renderModeCard(){
-  const day = getTodayDay();
-  const card = document.getElementById('modeCard');
-  card.className = 'mode-card ' + day.color;
-  document.getElementById('modeDate').textContent = day.label;
-  document.getElementById('modeName').textContent = day.name;
-  document.getElementById('modeDesc').textContent = day.desc;
-
-  const targetEl = document.getElementById('modeTarget');
-  if(day.mode === 'priceisright' && state){
-    const d = state.days[day.date];
-    const allSubmitted = PLAYERS.every(p => d && d.steps && d.steps[p] !== null && d.steps[p] !== undefined);
-    if(d && d.target && allSubmitted){
-      targetEl.style.display = 'inline-block';
-      targetEl.className = 'mode-target';
-      targetEl.textContent = 'Target: ' + d.target.toLocaleString() + ' steps';
-    } else {
-      targetEl.style.display = 'inline-block';
-      targetEl.className = 'mode-target hidden';
-      targetEl.textContent = 'Target reveals when all steps are submitted';
-    }
-  } else {
-    targetEl.style.display = 'none';
   }
+
+  const final2=remaining.length===2?[...remaining]:remaining.length<2?[...remaining]:[];
+
+  // Redemption: only calculate if all 4 eliminations are done
+  let redeemPlayer=null;
+  if(eliminated.length>=4){
+    const avgs=eliminated.map(e=>{
+      let total=0,count=0;
+      DAYS.slice(0,4).forEach(d=>{
+        const s=getSteps(d.date);
+        if(s[e.name]!==null&&s[e.name]!==undefined){total+=s[e.name];count++;}
+      });
+      return{...e,avg:count>0?total/count:0,total:DAYS.slice(0,4).reduce((acc,d)=>{const s=getSteps(d.date);return acc+(s[e.name]||0);},0)};
+    });
+    avgs.sort((a,b)=>b.avg-a.avg||b.total-a.total);
+    redeemPlayer=avgs[0];
+  }
+
+  // Day 5: only if redeemPlayer set and ALL day5 competitors submitted
+  let day5Elim=null;
+  let day6competitors=[...final2];
+  if(redeemPlayer&&final2.length===2){
+    const day5competitors=[...final2,redeemPlayer.name];
+    const day5steps=getSteps('2026-05-08');
+    const day5submitted=day5competitors.filter(p=>day5steps[p]!==null&&day5steps[p]!==undefined);
+    if(day5submitted.length===day5competitors.length){
+      const minDay5=Math.min(...day5submitted.map(p=>day5steps[p]));
+      day5Elim=day5submitted.find(p=>day5steps[p]===minDay5);
+      day6competitors=day5competitors.filter(p=>p!==day5Elim);
+    }
+  }
+
+  // Champion: only if all day6 competitors submitted
+  let champion=null;
+  if(day6competitors.length===2){
+    const day6steps=getSteps('2026-05-09');
+    const day6submitted=day6competitors.filter(p=>day6steps[p]!==null&&day6steps[p]!==undefined);
+    if(day6submitted.length===day6competitors.length){
+      const maxDay6=Math.max(...day6submitted.map(p=>day6steps[p]));
+      champion=day6submitted.find(p=>day6steps[p]===maxDay6);
+    }
+  }
+
+  return{eliminated,remaining,redeemPlayer,day5Elim,day6competitors,champion};
 }
 
-function renderLeaderboard(){
-  if(!state) return;
-  const pts = computePoints(state);
-  const totalSteps = {};
-  PLAYERS.forEach(p => {
-    totalSteps[p] = DAYS.reduce((s,day) => {
-      const d = state.days[day.date];
-      return s + (d && d.steps && d.steps[p] ? d.steps[p] : 0);
-    }, 0);
-  });
-  const sorted = [...PLAYERS].sort((a,b) => pts[b]-pts[a] || totalSteps[b]-totalSteps[a]);
-  const lb = document.getElementById('leaderboard');
-  lb.innerHTML = '';
-  sorted.forEach((p,i) => {
-    const div = document.createElement('div');
-    div.className = 'lb-item' + (i===0 && pts[p]>0 ? ' leader' : '');
-    div.innerHTML = `
-      <div class="lb-rank">${i+1}</div>
-      ${photoEl(p,'lb-photo',38)}
-      <div class="lb-name">${p}</div>
-      <div class="lb-steps">${totalSteps[p].toLocaleString()} steps</div>
-      <div><div class="lb-points">${pts[p] % 1 === 0 ? pts[p] : pts[p].toFixed(1)}</div><div class="lb-pts-label">pts</div></div>
+function getTotals(){
+  return PLAYERS.reduce((acc,p)=>{
+    acc[p]=DAYS.reduce((s,d)=>{const steps=getSteps(d.date);return s+(steps[p]||0);},0);
+    return acc;
+  },{});
+}
+
+// ── RENDER ──
+function renderDayCard(){
+  const today=getTodayDate();
+  const day=getTodayDay();
+  const card=document.getElementById('dayCard');
+  const isFuture=today<DAYS[0].date;
+  const isPast=today>DAYS[DAYS.length-1].date;
+  card.className='day-card '+(isFuture?'day-upcoming':isPast?'day-done':day.cls);
+  document.getElementById('dayTag').textContent=day.tag+' · '+day.label;
+  document.getElementById('dayName').textContent=day.name;
+  document.getElementById('dayDesc').textContent=day.desc;
+  document.querySelector('.torch-icon').textContent=day.emoji||'🔥';
+}
+
+function renderStandings(){
+  const gs=getGameState();
+  const totals=getTotals();
+  const elimNames=gs.eliminated.map(e=>e.name);
+  const today=getTodayDate();
+
+  const sorted=[...PLAYERS].sort((a,b)=>totals[b]-totals[a]);
+  const container=document.getElementById('standings');
+  container.innerHTML='';
+
+  sorted.forEach((p,i)=>{
+    const isElim=elimNames.includes(p)&&p!==gs.redeemPlayer?.name;
+    const isDay5Elim=gs.day5Elim===p;
+    const isChamp=gs.champion===p;
+    const isRedeemer=gs.redeemPlayer?.name===p&&today>='2026-05-08'&&!isDay5Elim&&!isChamp;
+    const isAlive=!isElim&&!isDay5Elim;
+    const elimInfo=gs.eliminated.find(e=>e.name===p);
+
+    let rowClass='player-row';
+    let status='';
+    if(isChamp){rowClass+=' champion';status='🏆 Survivor Champion';}
+    else if(isDay5Elim){rowClass+=' eliminated';status='Eliminated — Day 5';}
+    else if(isRedeemer){rowClass+=' redemption-candidate';status='⚡ Returned from Redemption';}
+    else if(isElim){rowClass+=' eliminated';status=`🗳️ Eliminated — Day ${elimInfo?.day||'?'}`;}
+    else{rowClass+=' alive';status='Still in the game 🌴';}
+
+    const days=DAYS.filter(d=>{const s=getSteps(d.date);return s[p]!==null&&s[p]!==undefined;}).length;
+    const avgVal=days>0?Math.round(totals[p]/days).toLocaleString():'—';
+
+    const div=document.createElement('div');
+    div.className=rowClass;
+    div.innerHTML=`
+      <div class="player-rank">${i+1}</div>
+      ${photoEl(p,'player-photo',40)}
+      <div><div class="player-name">${p}</div><div class="player-status">${status}</div></div>
+      <div><div class="player-total">${totals[p].toLocaleString()}</div><div class="player-avg">${avgVal}/day avg</div></div>
     `;
-    lb.appendChild(div);
+    container.appendChild(div);
   });
 }
 
-function renderDayHistory(){
-  if(!state) return;
-  const hist = document.getElementById('dayHistory');
-  hist.innerHTML = '';
-  let prevLastPlace = null;
+function renderRedemption(){
+  const gs=getGameState();
+  const card=document.getElementById('redemptionCard');
+  const today=getTodayDate();
+  if(gs.eliminated.length<4||today<'2026-05-08'){card.classList.remove('show');return;}
+  card.classList.add('show');
+  const rows=document.getElementById('redemptionRows');
+  rows.innerHTML='';
+  const avgs=gs.eliminated.map(e=>{
+    let total=0,count=0;
+    DAYS.slice(0,4).forEach(d=>{const s=getSteps(d.date);if(s[e.name]!==null&&s[e.name]!==undefined){total+=s[e.name];count++;}});
+    return{...e,avg:count>0?total/count:0};
+  });
+  avgs.sort((a,b)=>b.avg-a.avg);
+  avgs.forEach((e,i)=>{
+    const div=document.createElement('div');
+    div.className='redemption-row'+(i===0?' leader':'');
+    div.innerHTML=`${photoEl(e.name,'hist-photo',28)}<span style="font-size:.85rem;font-family:'Cinzel',serif;font-weight:700">${e.name}</span>${i===0?'<span class="redeem-badge">RETURNING</span>':''}<span class="redemption-avg">${Math.round(e.avg).toLocaleString()}/day</span>`;
+    rows.appendChild(div);
+  });
+}
 
-  DAYS.forEach(day => {
-    const d = state.days[day.date];
-    const submitted = d && d.steps ? PLAYERS.filter(p => d.steps[p] !== null && d.steps[p] !== undefined) : [];
-    if(submitted.length === 0) return;
+function renderTribalPending(){
+  const today=getTodayDate();
+  const dayIdx=DAYS.findIndex(d=>d.date===today);
+  if(dayIdx<0||dayIdx>=4){document.getElementById('tribalCard').classList.remove('show');return;}
+  const day=DAYS[dayIdx];
+  const gs=getGameState();
+  const steps=getSteps(today);
+  // Determine who's active today
+  const elimSoFar=gs.eliminated.map(e=>e.name);
+  const active=PLAYERS.filter(p=>!elimSoFar.includes(p)||gs.redeemPlayer?.name===p);
+  const submitted=active.filter(p=>steps[p]!==null&&steps[p]!==undefined);
+  const notYet=active.filter(p=>steps[p]===null||steps[p]===undefined);
+  const card=document.getElementById('tribalCard');
+  if(notYet.length>0&&submitted.length>0){
+    card.classList.add('show');
+    document.getElementById('tribalPending').textContent=`Waiting on: ${notYet.join(', ')}`;
+  } else {
+    card.classList.remove('show');
+  }
+}
 
-    const adjSteps = getAdjustedSteps(d, day.mode, prevLastPlace);
-    const useSteps = Object.keys(adjSteps).length > 0 ? adjSteps : d.steps;
+function renderHistory(){
+  const hist=document.getElementById('dayHistory');
+  const divider=document.getElementById('historyDivider');
+  hist.innerHTML='';
+  let hasAny=false;
+  const gs=getGameState();
+  const elimByDay={};
+  gs.eliminated.forEach(e=>{elimByDay[e.date]=e.name;});
 
-    // figure winner for this day
-    let dayWinner = null;
-    if(day.mode === 'priceisright' && d.target){
-      const eligible = submitted.filter(p => d.steps[p] <= d.target);
-      if(eligible.length) dayWinner = eligible.reduce((a,b) => (d.target-d.steps[a]) <= (d.target-d.steps[b]) ? a : b);
-    } else if(submitted.length) {
-      const maxS = Math.max(...submitted.map(p => useSteps[p]||0));
-      dayWinner = submitted.find(p => useSteps[p] === maxS);
-    }
+  DAYS.forEach((day,idx)=>{
+    const steps=getSteps(day.date);
+    const submitted=PLAYERS.filter(p=>steps[p]!==null&&steps[p]!==undefined);
+    if(!submitted.length) return;
+    hasAny=true;
 
-    // track last place
-    const sortedSubmitted = [...submitted].sort((a,b) => (useSteps[a]||0)-(useSteps[b]||0));
-    prevLastPlace = sortedSubmitted[0];
+    // Figure out who was active this day
+    const prevElim=gs.eliminated.filter(e=>e.day<=idx).map(e=>e.name);
+    const active=PLAYERS.filter(p=>!prevElim.includes(p));
+    const allIn=active.every(p=>steps[p]!==null&&steps[p]!==undefined);
+    const elimPlayer=allIn?elimByDay[day.date]:null;
+    const sorted=[...submitted].sort((a,b)=>steps[b]-steps[a]);
+    const winner=sorted[0];
 
-    const item = document.createElement('div');
-    item.className = 'day-hist-item';
-    const sortedBySteps = [...submitted].sort((a,b) => (useSteps[b]||0)-(useSteps[a]||0));
-    const rows = sortedBySteps.map(p => {
-      const isWinner = p === dayWinner;
-      const adj = day.mode==='comeback' && p===getCombackKid() ? ' +2k' : '';
-      const sniperBonus = day.mode==='sniper' && d.targets && d.targets[p] && d.steps[d.targets[p]] !== null && d.steps[p] > d.steps[d.targets[p]] ? ' +0.5🎯' : '';
-      return `<div class="day-hist-row">
-        ${photoEl(p,'day-hist-photo',24)}
-        <span class="day-hist-pname${isWinner?' winner':''}">${p}${adj}</span>
-        <span class="day-hist-psteps">${(useSteps[p]||0).toLocaleString()}</span>
-        <span class="day-hist-ppts">${isWinner?'★':''}${sniperBonus}</span>
+    const item=document.createElement('div');
+    item.className='hist-item';
+    const rows=sorted.map(p=>{
+      const isOut=p===elimPlayer;
+      const isTop=p===winner&&!isOut;
+      return `<div class="hist-row">
+        ${photoEl(p,'hist-photo',24)}
+        <span class="hist-name${isTop?' top':''}${isOut?' out':''}">${p}</span>
+        <span class="hist-steps">${steps[p].toLocaleString()}</span>
+        ${isOut?'<span class="hist-badge b-elim">ELIMINATED</span>':''}
+        ${isTop?'<span class="hist-badge b-top">HIGHEST</span>':''}
+        ${!allIn?'<span class="hist-badge b-pending">pending</span>':''}
       </div>`;
     }).join('');
 
-    item.innerHTML = `
-      <div class="day-hist-header">
-        <div>
-          <div class="day-hist-name">${day.name}</div>
-          <div class="day-hist-mode">${day.label}</div>
-        </div>
-        ${dayWinner ? `<div class="day-hist-winner">★ ${dayWinner}</div>` : ''}
+    item.innerHTML=`
+      <div class="hist-header">
+        <div><div class="hist-day">${day.emoji} ${day.tag} — ${day.name}</div><div class="hist-date">${day.label}</div></div>
+        ${elimPlayer?`<div class="hist-elim">🗳️ ${elimPlayer} eliminated</div>`:!allIn?'<div style="font-size:.7rem;color:var(--muted)">Votes pending...</div>':''}
       </div>
-      <div class="day-hist-rows">${rows}</div>
-    `;
+      <div class="hist-rows">${rows}</div>`;
     hist.appendChild(item);
   });
+  divider.style.display=hasAny?'flex':'none';
 }
 
 function renderEntryRows(){
-  const today = getTodayDate();
-  const hintEl = document.getElementById('entryHint');
-  if(hintEl){
-    if(today === '2026-04-29'){
-      hintEl.textContent = 'Wednesday special: only the organizer can enter steps today. Use PIN 0911.';
-      hintEl.style.color = 'var(--blue)';
-    } else {
-      hintEl.textContent = 'Enter your steps and PIN 5678 to submit.';
-      hintEl.style.color = '';
-    }
-  }
-  const day = getTodayDay();
-  const d = state && state.days[today] ? state.days[today] : {steps:{}};
-  const rows = document.getElementById('entryRows');
-  rows.innerHTML = '';
-  PLAYERS.forEach(p => {
-    const hasVal = d.steps && d.steps[p] !== null && d.steps[p] !== undefined;
-    const row = document.createElement('div');
-    row.className = 'entry-row';
-    row.innerHTML = `
+  const today=getTodayDate();
+  const gs=getGameState();
+  const elimNames=gs.eliminated.map(e=>e.name).filter(n=>n!==gs.redeemPlayer?.name);
+  const dayData=state&&state.days[today]?state.days[today]:{steps:{}};
+  const container=document.getElementById('entryRows');
+  container.innerHTML='';
+  PLAYERS.forEach(p=>{
+    const hasVal=dayData.steps&&dayData.steps[p]!==null&&dayData.steps[p]!==undefined;
+    const isElim=elimNames.includes(p);
+    const row=document.createElement('div');
+    row.className='entry-row'+(isElim?' elim-row':'');
+    row.innerHTML=`
       <div class="entry-row-top">
         ${photoEl(p,'entry-photo',36)}
-        <div class="entry-name">${p}${day.mode==='comeback' && state && getCombackKid()=== p ? ' <span style="font-size:.65rem;color:var(--green);">+2,000</span>' : ''}</div>
-        ${hasVal ? `<span class="entry-submitted">✓ ${d.steps[p].toLocaleString()}</span>` : ''}
-        <input class="entry-input" id="steps-${p}" type="number" min="0" placeholder="steps" value="${hasVal ? d.steps[p] : ''}">
+        <div class="entry-name">${p}${isElim?' <span class="entry-elim-tag">Eliminated</span>':''}</div>
+        ${hasVal?`<span class="entry-submitted">✓ ${dayData.steps[p].toLocaleString()}</span>`:''}
+        <input class="entry-input" id="steps-${p}" type="number" min="0" placeholder="steps" value="${hasVal?dayData.steps[p]:''}">
       </div>
       <div class="pin-row">
         <span class="pin-label">PIN:</span>
         <input class="pin-input" id="pin-${p}" type="password" maxlength="4" placeholder="••••">
         <span class="pin-err" id="err-${p}"></span>
-      </div>
-    `;
-    rows.appendChild(row);
-  });
-}
-
-function getCombackKid(){
-  if(!state) return null;
-  const sprintDay = state.days['2026-04-27'];
-  if(!sprintDay || !sprintDay.steps) return null;
-  const submitted = PLAYERS.filter(p => sprintDay.steps[p] !== null && sprintDay.steps[p] !== undefined);
-  if(!submitted.length) return null;
-  return submitted.reduce((a,b) => sprintDay.steps[a] <= sprintDay.steps[b] ? a : b);
-}
-
-function renderSniperCard(){
-  const today = getTodayDate();
-  const day = getTodayDay();
-  if(day.mode !== 'sniper'){
-    document.getElementById('sniperCard').style.display='none';
-    return;
-  }
-  document.getElementById('sniperCard').style.display='block';
-  const d = state && state.days[today] ? state.days[today] : {};
-  const targets = d.targets || {};
-  const allSubmitted = PLAYERS.every(p => targets[p]);
-  const rows = document.getElementById('sniperRows');
-  rows.innerHTML = '';
-  PLAYERS.forEach(p => {
-    const done = !!targets[p];
-    const row = document.createElement('div');
-    row.className = 'sniper-row';
-    row.innerHTML = `
-      <div class="sniper-row-top">
-        ${photoEl(p,'entry-photo',36)}
-        <div class="entry-name">${p}</div>
-        ${done ? `<span class="sniper-submitted">✓ Locked</span>` : ''}
-      </div>
-      ${!done ? `
-      <div class="pin-row" style="margin-top:7px">
-        <span class="pin-label">PIN:</span>
-        <input class="pin-input" id="sniper-pin-${p}" type="password" maxlength="4" placeholder="••••">
-        <select class="sniper-select" id="sniper-target-${p}" style="margin-left:6px">
-          <option value="">Pick target...</option>
-          ${PLAYERS.filter(x=>x!==p).map(x=>`<option value="${x}">${x}</option>`).join('')}
-        </select>
-        <span class="pin-err" id="sniper-err-${p}"></span>
-      </div>` : ''}
-    `;
-    rows.appendChild(row);
-  });
-
-  // reveal if all submitted
-  const revealCard = document.getElementById('sniperRevealCard');
-  const revealRows = document.getElementById('sniperRevealRows');
-  if(allSubmitted){
-    revealCard.classList.add('show');
-    revealRows.innerHTML = PLAYERS.map(p => {
-      const target = targets[p];
-      const hitBonus = d.steps && d.steps[p] !== null && d.steps[target] !== null && d.steps[p] > d.steps[target];
-      return `<div class="reveal-row">
-        ${photoEl(p,'',24)} <span style="font-size:.85rem;font-weight:600">${p}</span>
-        <span class="reveal-arrow">→</span>
-        ${photoEl(target,'',24)} <span style="font-size:.85rem">${target}</span>
-        ${hitBonus ? '<span class="reveal-bonus">+0.5 pts 🎯</span>' : ''}
       </div>`;
-    }).join('');
-  } else {
-    revealCard.classList.remove('show');
-  }
-}
-
-function checkAdminPin(){
-  const pin = document.getElementById('adminPinInput').value;
-  const form = document.getElementById('adminForm');
-  if(pin === '5678'){
-    form.classList.add('show');
-    document.getElementById('adminErr') && (document.getElementById('adminErr').textContent = '');
-  } else {
-    form.classList.remove('show');
-  }
-}
-
-async function submitAdminEntry(){
-  const day = document.getElementById('adminDay').value;
-  const player = document.getElementById('adminPlayer').value;
-  const steps = document.getElementById('adminSteps').value;
-  const errEl = document.getElementById('adminErr');
-  const successEl = document.getElementById('adminSuccess');
-  errEl.textContent = '';
-  successEl.textContent = '';
-  if(!day || !player || steps === ''){
-    errEl.textContent = 'Please select a day, player and enter steps.';
-    return;
-  }
-  if(!state.days[day]){
-    errEl.textContent = 'Day not found in data.';
-    return;
-  }
-  state.days[day].steps[player] = parseInt(steps) || 0;
-  await saveToStorage();
-  successEl.textContent = player + '\'s steps updated for ' + day + ' ✓';
-  document.getElementById('adminSteps').value = '';
-  renderAll();
+    container.appendChild(row);
+  });
 }
 
 function renderOverview(){
-  const today = getTodayDate();
-  const list = document.getElementById('overviewList');
-  if(!list) return;
-  const emojis = {sprint:'🏃',comeback:'🔄',priceisright:'💰',sniper:'🎯',blindfold:'🙈'};
-  list.innerHTML = '';
-  DAYS.forEach(day => {
-    const isToday = day.date === today;
-    const isPast = day.date < today;
-    const d = state && state.days[day.date];
-    const allDone = d && PLAYERS.every(p => d.steps && d.steps[p] !== null && d.steps[p] !== undefined);
-    const div = document.createElement('div');
-    div.className = 'ov-item' + (isToday ? ' today' : '');
-    let badge = '';
-    if(isToday) badge = '<span class="ov-badge today-badge">Today</span>';
-    else if(allDone) badge = '<span class="ov-badge done-badge">✓ Complete</span>';
-    else if(isPast) badge = '<span class="ov-badge done-badge">✓ Done</span>';
-    else badge = '<span class="ov-badge upcoming-badge">Upcoming</span>';
-    div.innerHTML = '<div class="ov-dot '+day.mode+'">'+emojis[day.mode]+'</div><div class="ov-info"><div class="ov-date">'+day.label+'</div><div class="ov-name">'+day.name+'</div><div class="ov-desc">'+day.desc+'</div>'+badge+'</div>';
+  const today=getTodayDate();
+  const list=document.getElementById('overviewList');
+  list.innerHTML='';
+  DAYS.forEach(day=>{
+    const isToday=day.date===today;
+    const isPast=day.date<today;
+    const div=document.createElement('div');
+    div.className='ov-item'+(isToday?' ov-today':'');
+    const badge=isToday?'<span class="ov-badge b-ov-today">Today</span>':isPast?'<span class="ov-badge b-ov-done">✓ Complete</span>':'<span class="ov-badge b-ov-upcoming">Upcoming</span>';
+    div.innerHTML=`<div class="ov-dot">${day.emoji}</div><div class="ov-info"><div class="ov-date">${day.label}</div><div class="ov-name">${day.tag} — ${day.name}</div><div class="ov-desc">${day.desc}</div>${badge}</div>`;
     list.appendChild(div);
   });
 }
 
-function renderAll(){
-  renderModeCard();
-  renderLeaderboard();
-  renderDayHistory();
-  renderEntryRows();
-  renderSniperCard();
-  renderOverview();
+function renderChampion(){
+  const gs=getGameState();
+  const msg=document.getElementById('championMsg');
+  const today=getTodayDate();
+  if(gs.champion&&today>='2026-05-09'){
+    msg.classList.add('show');
+    msg.innerHTML=`🏆 ${gs.champion} HAS SURVIVED 🏆<br><span style="font-size:.8rem;font-weight:400;color:var(--muted)">The tribe has spoken.</span>`;
+  } else msg.classList.remove('show');
 }
 
-// ---- STORAGE ----
+function renderAll(){
+  renderDayCard();
+  renderStandings();
+  renderRedemption();
+  renderTribalPending();
+  renderHistory();
+  renderEntryRows();
+  renderOverview();
+  renderChampion();
+  if(lastUpdatedTime){
+    const d=new Date(lastUpdatedTime);
+    document.getElementById('lastUpdated').textContent=`Last updated: ${d.toLocaleDateString('en-US',{month:'short',day:'numeric'})} at ${d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}`;
+  }
+}
+
+// ── STORAGE ──
 async function loadFromStorage(){
   setSyncStatus('saving','Loading...');
   try{
-    const r = await fetch(BIN_URL+'/latest',{headers:{'X-Master-Key':API_KEY,'X-Bin-Meta':'false'}});
-    const data = await r.json();
-    state = data;
-    if(state.updatedAt) lastUpdatedTime = state.updatedAt;
+    const r=await fetch(BIN_URL+'/latest',{headers:{'X-Master-Key':API_KEY,'X-Bin-Meta':'false'}});
+    const data=await r.json();
+    state=data;
+    if(state.updatedAt)lastUpdatedTime=state.updatedAt;
     setSyncStatus('live','Live');
   }catch(e){
-    // init blank state
-    state = {days:{},updatedAt:''};
-    DAYS.forEach(d => {
-      state.days[d.date] = {mode:d.mode,steps:{Shania:null,Chris:null,Jordan:null,Michael:null,KayKay:null,Lauren:null},locked:false};
-      if(d.mode==='priceisright') state.days[d.date].target = Math.floor(Math.random()*(12000-5000)+5000);
-      if(d.mode==='sniper') state.days[d.date].targets = {Shania:null,Chris:null,Jordan:null,Michael:null,KayKay:null,Lauren:null};
-    });
-    setSyncStatus('error','Offline — changes may not save');
-  }
-  // ensure price is right target exists
-  if(state && state.days && state.days['2026-04-29'] && !state.days['2026-04-29'].target){
-    state.days['2026-04-29'].target = Math.floor(Math.random()*(20000-7500)+7500);
+    state={days:{},updatedAt:''};
+    DAYS.forEach(d=>{state.days[d.date]={steps:{Shania:null,Chris:null,Jordan:null,Michael:null,KayKay:null,Lauren:null}};});
+    setSyncStatus('error','Offline');
   }
   renderAll();
 }
@@ -724,82 +683,60 @@ async function saveToStorage(){
   setSyncStatus('saving','Saving...');
   document.getElementById('submitBtn').disabled=true;
   try{
-    state.updatedAt = new Date().toISOString();
+    state.updatedAt=new Date().toISOString();
     await fetch(BIN_URL,{method:'PUT',headers:{'Content-Type':'application/json','X-Master-Key':API_KEY},body:JSON.stringify(state)});
-    lastUpdatedTime = state.updatedAt;
+    lastUpdatedTime=state.updatedAt;
     setSyncStatus('live','Saved ✓');
     setTimeout(()=>setSyncStatus('live','Live'),2500);
-  }catch(e){
-    setSyncStatus('error','Save failed');
-  }
+  }catch(e){setSyncStatus('error','Save failed');}
   document.getElementById('submitBtn').disabled=false;
-  if(lastUpdatedTime){
-    const d=new Date(lastUpdatedTime);
-    document.getElementById('lastUpdated').textContent='Last updated: '+d.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' at '+d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
-  }
   renderAll();
 }
 
-// ---- ACTIONS ----
 async function submitSteps(){
-  const today = getTodayDate();
-  if(!state.days[today]) return;
-  let anyChange = false;
-  let allValid = true;
-  PLAYERS.forEach(p => {
-    const stepsEl = document.getElementById('steps-'+p);
-    const pinEl = document.getElementById('pin-'+p);
-    const errEl = document.getElementById('err-'+p);
-    const val = stepsEl ? stepsEl.value : '';
-    const pin = pinEl ? pinEl.value : '';
-    if(val !== '' && pin !== ''){
-      if(!validatePin(p, pin)){
-        errEl.textContent = 'Wrong PIN';
-        allValid = false;
-      } else {
-        errEl.textContent = '';
-        state.days[today].steps[p] = parseInt(val) || 0;
-        anyChange = true;
-      }
+  const today=getTodayDate();
+  if(!state.days[today])state.days[today]={steps:{Shania:null,Chris:null,Jordan:null,Michael:null,KayKay:null,Lauren:null}};
+  let anyChange=false;
+  PLAYERS.forEach(p=>{
+    const stepsEl=document.getElementById('steps-'+p);
+    const pinEl=document.getElementById('pin-'+p);
+    const errEl=document.getElementById('err-'+p);
+    if(!stepsEl||!pinEl) return;
+    const val=stepsEl.value,pin=pinEl.value;
+    if(val!==''&&pin!==''){
+      if(pin!==PIN){errEl.textContent='Wrong PIN';}
+      else{errEl.textContent='';state.days[today].steps[p]=parseInt(val)||0;anyChange=true;}
     }
   });
-  if(anyChange) await saveToStorage();
+  if(anyChange)await saveToStorage();
 }
 
-async function submitSniperTargets(){
-  const today = getTodayDate();
-  if(!state.days[today] || !state.days[today].targets) return;
-  let anyChange = false;
-  PLAYERS.forEach(p => {
-    const pinEl = document.getElementById('sniper-pin-'+p);
-    const targetEl = document.getElementById('sniper-target-'+p);
-    const errEl = document.getElementById('sniper-err-'+p);
-    if(!pinEl || !targetEl) return;
-    const pin = pinEl.value;
-    const target = targetEl.value;
-    if(pin && target){
-      if(!validatePin(p, pin)){
-        if(errEl) errEl.textContent = 'Wrong PIN';
-      } else {
-        if(errEl) errEl.textContent = '';
-        state.days[today].targets[p] = target;
-        anyChange = true;
-      }
-    }
-  });
-  if(anyChange) await saveToStorage();
+function checkAdminPin(){
+  const pin=document.getElementById('adminPinInput').value;
+  document.getElementById('adminForm').classList[pin===PIN?'add':'remove']('show');
 }
 
-// Auto-refresh every 30s
+async function submitAdminEntry(){
+  const day=document.getElementById('adminDay').value;
+  const player=document.getElementById('adminPlayer').value;
+  const steps=document.getElementById('adminSteps').value;
+  const errEl=document.getElementById('adminErr');
+  const successEl=document.getElementById('adminSuccess');
+  errEl.textContent='';successEl.textContent='';
+  if(!day||!player||steps===''){errEl.textContent='Please select a day, player and enter steps.';return;}
+  if(!state.days[day])state.days[day]={steps:{Shania:null,Chris:null,Jordan:null,Michael:null,KayKay:null,Lauren:null}};
+  state.days[day].steps[player]=parseInt(steps)||0;
+  await saveToStorage();
+  successEl.textContent=`${player}'s steps updated ✓`;
+  document.getElementById('adminSteps').value='';
+  renderAll();
+}
+
 setInterval(async()=>{
   try{
     const r=await fetch(BIN_URL+'/latest',{headers:{'X-Master-Key':API_KEY,'X-Bin-Meta':'false'}});
     const data=await r.json();
-    if(data.updatedAt!==lastUpdatedTime){
-      state=data;
-      lastUpdatedTime=data.updatedAt;
-      renderAll();
-    }
+    if(data.updatedAt!==lastUpdatedTime){state=data;lastUpdatedTime=data.updatedAt;renderAll();}
   }catch(e){}
 },30000);
 
