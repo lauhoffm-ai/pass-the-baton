@@ -167,6 +167,20 @@
 
   .last-updated{font-size:.68rem;color:var(--muted);text-align:center;margin-top:10px;}
 
+  /* SINGLE PIN FIELD */
+  .pin-unlock-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;background:var(--card2);border-radius:10px;padding:10px 14px;border:1px solid var(--border);}
+  .pin-unlock-label{font-size:.78rem;color:var(--muted);flex-shrink:0;}
+  .pin-unlock-input{background:rgba(138,125,90,.1);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.9rem;padding:6px 10px;width:80px;outline:none;text-align:center;letter-spacing:.25em;}
+  .pin-unlock-input.unlocked{border-color:var(--green2);background:rgba(74,140,63,.08);}
+  .pin-unlock-status{font-size:.72rem;color:var(--muted);}
+  .pin-unlock-status.ok{color:var(--green2);}
+  .pin-unlock-status.err{color:var(--red2);}
+
+  /* INLINE TRIBE PICKER IN ELIM SLOTS */
+  .elim-slot-tribe{margin-top:4px;width:100%;}
+  .elim-slot-tribe select{background:rgba(201,149,42,.07);border:1px solid rgba(201,149,42,.2);border-radius:6px;color:var(--gold2);font-family:'DM Sans',sans-serif;font-size:.62rem;padding:3px 4px;outline:none;width:100%;text-align:center;}
+  .elim-slot-tribe-pledged{font-size:.62rem;color:var(--gold2);font-family:'Cinzel',serif;text-align:center;background:rgba(201,149,42,.08);border-radius:6px;padding:2px 4px;margin-top:2px;}
+
   /* TRIBE PLEDGE */
   .tribe-members{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;}
   .tribe-member-bubble{display:flex;align-items:center;gap:4px;background:rgba(201,149,42,.08);border:1px solid rgba(201,149,42,.2);border-radius:20px;padding:3px 8px 3px 4px;}
@@ -224,7 +238,7 @@
     <div class="hype-row">
       <div id="hypePhoto"><div class="hype-photo-empty">🎤</div></div>
       <div class="hype-info">
-        <div class="hype-tag">🎤 Leading for Hype Man (not final)</div>
+        <div class="hype-tag">🎤 Next Week's Hype Man</div>
         <div class="hype-name" id="hypeName">—</div>
         <div class="hype-steps" id="hypeSteps">No steps logged yet</div>
       </div>
@@ -259,7 +273,12 @@
   <div class="tribal-div"><span class="tribal-label">Cast Your Steps</span></div>
   <div class="entry-card">
     <div class="entry-title">🔥 Cast Your Steps</div>
-    <p class="entry-hint">Enter your daily steps and secret PIN to submit.</p>
+    <p class="entry-hint">Enter the tribe PIN to unlock, then log your steps.</p>
+    <div class="pin-unlock-row">
+      <span class="pin-unlock-label">Tribe PIN:</span>
+      <input class="pin-unlock-input" type="password" id="globalPin" maxlength="4" placeholder="••••" oninput="checkGlobalPin()">
+      <span class="pin-unlock-status" id="globalPinStatus">Enter PIN to submit</span>
+    </div>
     <div class="entry-rows" id="entryRows"></div>
     <button class="submit-btn" id="submitBtn" onclick="submitSteps()">THE TRIBE HAS SPOKEN</button>
     <div class="champion-msg" id="championMsg"></div>
@@ -589,63 +608,32 @@ function renderHistory(){
   divider.style.display=hasAny?'flex':'none';
 }
 
+function checkGlobalPin(){
+  const pin=document.getElementById('globalPin').value;
+  const status=document.getElementById('globalPinStatus');
+  if(pin===PIN){status.textContent='✓ Unlocked';status.className='pin-unlock-status ok';document.getElementById('globalPin').className='pin-unlock-input unlocked';}
+  else{status.textContent='Enter PIN to submit';status.className='pin-unlock-status';document.getElementById('globalPin').className='pin-unlock-input';}
+}
+
 function renderEntryRows(){
   const today=getTodayDate();
   const gs=getGameState();
   const elimNames=gs.eliminated.map(e=>e.name).filter(n=>n!==gs.redeemPlayer?.name);
   const dayData=state&&state.days[today]?state.days[today]:{steps:{}};
-  const pledges=state&&state.pledges?state.pledges:{};
-  const remaining=PLAYERS.filter(p=>!elimNames.includes(p));
   const container=document.getElementById('entryRows');
   container.innerHTML='';
   PLAYERS.forEach(p=>{
     const hasVal=dayData.steps&&dayData.steps[p]!==null&&dayData.steps[p]!==undefined;
     const isElim=elimNames.includes(p);
-    const myPledge=pledges[p];
-    // Check if pledged player is still active — if not, need to re-pledge
-    const pledgeValid=myPledge&&remaining.includes(myPledge);
     const row=document.createElement('div');
-
-    if(isElim){
-      row.className='entry-row elim-pledge';
-      const pledgeOptions=remaining.map(r=>`<option value="${r}" ${myPledge===r?'selected':''}>${r}</option>`).join('');
-      row.innerHTML=`
-        <div class="entry-row-top">
-          ${photoEl(p,36)}
-          <div>
-            <div class="entry-name">${p}</div>
-            <div style="font-size:.65rem;color:var(--red2);margin-top:1px;">🗳️ Eliminated — join a tribe</div>
-          </div>
-          ${pledgeValid?`<span class="pledge-submitted">🤝 ${myPledge}'s Tribe</span>`:''}
-        </div>
-        ${!pledgeValid?`
-        <div class="pledge-row">
-          <select class="pledge-select" id="pledge-select-${p}">
-            <option value="">Choose your tribe...</option>
-            ${pledgeOptions}
-          </select>
-          <div class="pin-row" style="margin-top:0">
-            <input class="pin-input" id="pledge-pin-${p}" type="password" maxlength="4" placeholder="••••">
-          </div>
-          <button class="pledge-btn" onclick="submitPledge('${p}')">JOIN</button>
-        </div>
-        <div class="pledge-err" id="pledge-err-${p}"></div>`:''}
-      `;
-    } else {
-      row.className='entry-row';
-      row.innerHTML=`
-        <div class="entry-row-top">
-          ${photoEl(p,36)}
-          <div class="entry-name">${p}</div>
-          ${hasVal?`<span class="entry-submitted">✓ ${dayData.steps[p].toLocaleString()}</span>`:''}
-          <input class="entry-input" id="steps-${p}" type="number" min="0" placeholder="steps" value="${hasVal?dayData.steps[p]:''}">
-        </div>
-        <div class="pin-row">
-          <span class="pin-label">PIN:</span>
-          <input class="pin-input" id="pin-${p}" type="password" maxlength="4" placeholder="••••">
-          <span class="pin-err" id="err-${p}"></span>
-        </div>`;
-    }
+    row.className='entry-row'+(isElim?' elim-row':'');
+    row.innerHTML=`
+      <div class="entry-row-top">
+        ${photoEl(p,36)}
+        <div class="entry-name">${p}${isElim?'<span class="entry-elim-tag" style="margin-left:6px">Eliminated</span>':''}</div>
+        ${hasVal?`<span class="entry-submitted">✓ ${dayData.steps[p].toLocaleString()}</span>`:''}
+        <input class="entry-input" id="steps-${p}" type="number" min="0" placeholder="steps" value="${hasVal?dayData.steps[p]:''}">
+      </div>`;
     container.appendChild(row);
   });
 }
@@ -675,6 +663,19 @@ function renderChampion(){
   } else msg.classList.remove('show');
 }
 
+async function quickPledge(player, target){
+  if(!target) return;
+  const pin=document.getElementById('globalPin').value;
+  if(pin!==PIN){
+    // If PIN not entered, prompt
+    const entered=prompt('Enter tribe PIN to pledge:');
+    if(entered!==PIN){alert('Wrong PIN');return;}
+  }
+  if(!state.pledges)state.pledges={};
+  state.pledges[player]=target;
+  await saveToStorage();
+}
+
 async function submitPledge(player){
   const selectEl=document.getElementById('pledge-select-'+player);
   const pinEl=document.getElementById('pledge-pin-'+player);
@@ -697,15 +698,29 @@ function renderTribalRecord(){
   slots.innerHTML = '';
 
   // 5 elimination slots (Days 1-5)
+  const pledges=state&&state.pledges?state.pledges:{};
+  const remaining=PLAYERS.filter(p=>!gs.eliminated.map(e=>e.name).includes(p));
   for(let i = 0; i < 5; i++){
     const elim = gs.eliminated[i];
     const div = document.createElement('div');
     div.className = 'elim-slot ' + (elim ? 'filled' : 'empty');
     if(elim){
+      const myPledge=pledges[elim.name];
+      const pledgeValid=myPledge&&remaining.includes(myPledge);
+      const pledgeOptions=remaining.map(r=>`<option value="${r}" ${myPledge===r?'selected':''}>${r}</option>`).join('');
       div.innerHTML = `
         ${photoEl(elim.name, 44)}
         <div class="elim-slot-label">Day ${elim.day}</div>
-        <div class="elim-slot-name">${elim.name}</div>`;
+        <div class="elim-slot-name">${elim.name}</div>
+        <div class="elim-slot-tribe">
+          ${pledgeValid
+            ? `<div class="elim-slot-tribe-pledged">🤝 ${myPledge}</div>`
+            : `<select onchange="quickPledge('${elim.name}', this.value)">
+                <option value="">Join tribe...</option>
+                ${pledgeOptions}
+               </select>`
+          }
+        </div>`;
     } else {
       div.innerHTML = `
         <div class="elim-slot-empty">🕯️</div>
@@ -725,7 +740,7 @@ function renderTribalRecord(){
   }
   const hyped = withSteps.reduce((a,b) => totals[a] <= totals[b] ? a : b);
   document.getElementById('hypeName').textContent = hyped;
-  document.getElementById('hypeSteps').textContent = totals[hyped].toLocaleString() + ' total steps so far — not final until Sunday';
+  document.getElementById('hypeSteps').textContent = totals[hyped].toLocaleString() + ' total steps so far';
   document.getElementById('hypePhoto').innerHTML = photoEl(hyped, 44).replace('style="', 'class="hype-photo" style="');
 }
 
@@ -772,18 +787,19 @@ async function saveToStorage(){
 
 async function submitSteps(){
   const today=getTodayDate();
+  const pin=document.getElementById('globalPin').value;
+  if(pin!==PIN){
+    document.getElementById('globalPinStatus').textContent='Wrong PIN — try again';
+    document.getElementById('globalPinStatus').className='pin-unlock-status err';
+    return;
+  }
   if(!state.days[today])state.days[today]={steps:EMPTY_STEPS()};
   let anyChange=false;
   PLAYERS.forEach(p=>{
     const stepsEl=document.getElementById('steps-'+p);
-    const pinEl=document.getElementById('pin-'+p);
-    const errEl=document.getElementById('err-'+p);
-    if(!stepsEl||!pinEl) return;
-    const val=stepsEl.value,pin=pinEl.value;
-    if(val!==''&&pin!==''){
-      if(pin!==PIN){errEl.textContent='Wrong PIN';}
-      else{errEl.textContent='';state.days[today].steps[p]=parseInt(val)||0;anyChange=true;}
-    }
+    if(!stepsEl) return;
+    const val=stepsEl.value;
+    if(val!==''){state.days[today].steps[p]=parseInt(val)||0;anyChange=true;}
   });
   if(anyChange)await saveToStorage();
 }
