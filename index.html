@@ -224,7 +224,7 @@
     <div class="hype-row">
       <div id="hypePhoto"><div class="hype-photo-empty">🎤</div></div>
       <div class="hype-info">
-        <div class="hype-tag">🎤 Next Week's Hype Man</div>
+        <div class="hype-tag">🎤 Leading for Hype Man</div>
         <div class="hype-name" id="hypeName">—</div>
         <div class="hype-steps" id="hypeSteps">No steps logged yet</div>
       </div>
@@ -725,7 +725,7 @@ function renderTribalRecord(){
   }
   const hyped = withSteps.reduce((a,b) => totals[a] <= totals[b] ? a : b);
   document.getElementById('hypeName').textContent = hyped;
-  document.getElementById('hypeSteps').textContent = totals[hyped].toLocaleString() + ' total steps so far';
+  document.getElementById('hypeSteps').textContent = totals[hyped].toLocaleString() + ' total steps so far — not final until Sunday';
   document.getElementById('hypePhoto').innerHTML = photoEl(hyped, 44).replace('style="', 'class="hype-photo" style="');
 }
 
