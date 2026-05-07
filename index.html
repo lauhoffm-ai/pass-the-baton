@@ -633,13 +633,26 @@ function renderHistory(){
 
     const item=document.createElement('div');
     item.className='hist-item';
+    // Calculate alliance boost for this day if Day 3+
+    const pledges=state&&state.pledges?state.pledges:{};
+    const dayBoosts={};
+    if(day.date>='2026-05-06'){
+      Object.entries(pledges).forEach(([pledger,target])=>{
+        if(steps[pledger]){
+          dayBoosts[target]=(dayBoosts[target]||0)+Math.floor(steps[pledger]*0.1);
+        }
+      });
+    }
+
     const rows=sorted.map(p=>{
       const isOut=p===elimPlayer;
       const isTop=p===winner&&!isOut;
+      const boost=dayBoosts[p]||0;
+      const boostedSteps=(steps[p]||0)+boost;
       return `<div class="hist-row">
         ${photoEl(p,24)}
         <span class="hist-name${isTop?' top':''}${isOut?' out':''}">${p}</span>
-        <span class="hist-steps">${steps[p].toLocaleString()}</span>
+        <span class="hist-steps">${boostedSteps.toLocaleString()}${boost>0?` <span style="font-size:.62rem;color:var(--gold)">+${boost.toLocaleString()}</span>`:''}</span>
         ${isOut?'<span class="hist-badge b-elim">ELIMINATED</span>':''}
         ${isTop?'<span class="hist-badge b-top">HIGHEST</span>':''}
       </div>`;
