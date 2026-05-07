@@ -407,6 +407,7 @@ function getGameState(){
   if(eliminated.length>=5){
     const avgs=eliminated.map(e=>{
       let total=0,count=0;
+      // Raw steps only for redemption calculation
       DAYS.slice(0,5).forEach(d=>{
         const s=getSteps(d.date);
         if(s[e.name]!==null&&s[e.name]!==undefined){total+=s[e.name];count++;}
@@ -446,11 +447,51 @@ function getGameState(){
   return{eliminated,remaining,redeemPlayer,day6Elim,day7competitors,champion};
 }
 
-function getTotals(){
+function getRawTotals(){
+  // Raw steps only — used for redemption and hype man calculations
   return PLAYERS.reduce((acc,p)=>{
     acc[p]=DAYS.reduce((s,d)=>{const steps=getSteps(d.date);return s+(steps[p]||0);},0);
     return acc;
   },{});
+}
+
+function getTotals(){
+  // Boosted totals — includes 10% alliance contribution from Day 3 forward
+  const raw=getRawTotals();
+  const pledges=state&&state.pledges?state.pledges:{};
+  const ALLIANCE_START='2026-05-06'; // Day 3
+  const boosted={...raw};
+
+  // For each day from Day 3 forward, add 10% of eliminated pledgers' steps to their target
+  DAYS.forEach(d=>{
+    if(d.date<ALLIANCE_START) return;
+    const steps=getSteps(d.date);
+    // For each pledge, add 10% of pledger's steps to target
+    Object.entries(pledges).forEach(([pledger,target])=>{
+      if(steps[pledger]&&steps[target]!==undefined){
+        boosted[target]=(boosted[target]||0)+Math.floor(steps[pledger]*0.1);
+      }
+    });
+  });
+
+  return boosted;
+}
+
+function getAllianceBoostForPlayer(player){
+  // Returns total alliance boost for a player across Day 3+ for display
+  const pledges=state&&state.pledges?state.pledges:{};
+  const ALLIANCE_START='2026-05-06';
+  let boost=0;
+  DAYS.forEach(d=>{
+    if(d.date<ALLIANCE_START) return;
+    const steps=getSteps(d.date);
+    Object.entries(pledges).forEach(([pledger,target])=>{
+      if(target===player&&steps[pledger]){
+        boost+=Math.floor(steps[pledger]*0.1);
+      }
+    });
+  });
+  return boost;
 }
 
 // ── RENDER ──
@@ -504,6 +545,8 @@ function renderStandings(){
       </div>`).join('');
     const tribeHtml=tribeMembers.length>0?`<div class="tribe-members">${tribeBubbles}</div>`:'';
 
+    const boost=getAllianceBoostForPlayer(p);
+    const boostHtml=boost>0?`<div style="font-size:.65rem;color:var(--gold);margin-top:1px;">+${boost.toLocaleString()} from allies</div>`:'';
     const div=document.createElement('div');
     div.className=rowClass;
     div.innerHTML=`
@@ -514,7 +557,11 @@ function renderStandings(){
         <div class="player-status">${status}</div>
         ${tribeHtml}
       </div>
-      <div><div class="player-total">${totals[p].toLocaleString()}</div><div class="player-avg">${avgVal}/day avg</div></div>`;
+      <div style="text-align:right">
+        <div class="player-total">${totals[p].toLocaleString()}</div>
+        ${boostHtml}
+        <div class="player-avg">${avgVal}/day avg</div>
+      </div>`;
     container.appendChild(div);
   });
 }
@@ -529,6 +576,7 @@ function renderRedemption(){
   rows.innerHTML='';
   const avgs=gs.eliminated.map(e=>{
     let total=0,count=0;
+    // Use RAW steps only for redemption — no alliance boost
     DAYS.slice(0,5).forEach(d=>{const s=getSteps(d.date);if(s[e.name]!==null&&s[e.name]!==undefined){total+=s[e.name];count++;}});
     return{...e,avg:count>0?total/count:0};
   });
