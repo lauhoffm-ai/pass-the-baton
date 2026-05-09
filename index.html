@@ -537,7 +537,9 @@ function renderStandings(){
 
     // Tribe members pledged to this player
     const pledges=state&&state.pledges?state.pledges:{};
-    const tribeMembers=Object.entries(pledges).filter(([k,v])=>v===p).map(([k])=>k);
+    // Only show tribe members who are actually eliminated (not active players)
+    const allElimNames=gs.eliminated.map(e=>e.name);
+    const tribeMembers=Object.entries(pledges).filter(([k,v])=>v===p&&allElimNames.includes(k)).map(([k])=>k);
     const tribeBubbles=tribeMembers.map(m=>`
       <div class="tribe-member-bubble">
         ${photoEl(m,20)}
@@ -724,6 +726,17 @@ function renderChampion(){
   } else msg.classList.remove('show');
 }
 
+async function clearPledge(player){
+  const pin=document.getElementById('globalPin').value;
+  if(pin!==PIN){
+    const entered=prompt('Enter tribe PIN to switch:');
+    if(entered!==PIN){alert('Wrong PIN');return;}
+  }
+  if(!state.pledges)state.pledges={};
+  delete state.pledges[player];
+  await saveToStorage();
+}
+
 async function quickPledge(player, target){
   if(!target) return;
   const pin=document.getElementById('globalPin').value;
@@ -760,24 +773,37 @@ function renderTribalRecord(){
 
   // 5 elimination slots (Days 1-5)
   const pledges=state&&state.pledges?state.pledges:{};
-  const remaining=PLAYERS.filter(p=>!gs.eliminated.map(e=>e.name).includes(p));
+  const redeemName=gs.redeemPlayer?gs.redeemPlayer.name:null;
+  // Active players available to pledge to = remaining + redeemed player
+  const elimNames=gs.eliminated.map(e=>e.name);
+  const trulyActive=PLAYERS.filter(p=>!elimNames.includes(p));
+  const pledgeTargets=redeemName?[...trulyActive,redeemName]:trulyActive;
+
   for(let i = 0; i < 5; i++){
     const elim = gs.eliminated[i];
     const div = document.createElement('div');
     div.className = 'elim-slot ' + (elim ? 'filled' : 'empty');
     if(elim){
+      const isRedeemed=elim.name===redeemName;
       const myPledge=pledges[elim.name];
-      const pledgeValid=myPledge&&remaining.includes(myPledge);
-      const pledgeOptions=remaining.map(r=>`<option value="${r}" ${myPledge===r?'selected':''}>${r}</option>`).join('');
+      // Pledge is valid if target is still active or is the redeemed player
+      const pledgeValid=myPledge&&pledgeTargets.includes(myPledge);
+      // Always allow re-pledge on redemption day so people can switch to support Chris
+      const today=getTodayDate();
+      const isRedemptionDay=today==='2026-05-09';
+      const pledgeOptions=pledgeTargets
+        .filter(r=>r!==elim.name)
+        .map(r=>`<option value="${r}" ${myPledge===r?'selected':''}>${r}${r===redeemName?' ⚡':''}</option>`).join('');
+
       div.innerHTML = `
         ${photoEl(elim.name, 44)}
-        <div class="elim-slot-label">Day ${elim.day}</div>
-        <div class="elim-slot-name">${elim.name}</div>
+        <div class="elim-slot-label">${isRedeemed?'RETURNED':'Day '+elim.day}</div>
+        <div class="elim-slot-name" style="${isRedeemed?'color:var(--gold2)':''}">${elim.name}${isRedeemed?' ⚡':''}</div>
         <div class="elim-slot-tribe">
-          ${pledgeValid
-            ? `<div class="elim-slot-tribe-pledged">🤝 ${myPledge}</div>`
+          ${pledgeValid&&!isRedemptionDay
+            ? `<div class="elim-slot-tribe-pledged" style="cursor:pointer" onclick="clearPledge('${elim.name}')">🤝 ${myPledge}</div>`
             : `<select onchange="quickPledge('${elim.name}', this.value)">
-                <option value="">Join tribe...</option>
+                <option value="">${pledgeValid?'Switch tribe...':'Join tribe...'}</option>
                 ${pledgeOptions}
                </select>`
           }
