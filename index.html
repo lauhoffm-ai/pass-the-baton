@@ -457,20 +457,34 @@ function getRawTotals(){
   },{});
 }
 
+function getEliminationDateMap(){
+  // Returns {playerName: eliminationDate} for all eliminated players
+  const gs=getGameState();
+  const map={};
+  gs.eliminated.forEach(e=>{ map[e.name]=e.date; });
+  return map;
+}
+
 function getTotals(){
-  // Boosted totals — includes 10% alliance contribution from Day 3 forward
+  // Boosted totals — includes 10% alliance contribution
+  // Rule: only count pledger steps on days AFTER their elimination day
   const raw=getRawTotals();
   const pledges=state&&state.pledges?state.pledges:{};
-  const ALLIANCE_START='2026-05-06'; // Day 3
+  const ALLIANCE_START='2026-05-06';
+  const elimDates=getEliminationDateMap();
+  const redeemName=getGameState().redeemPlayer?getGameState().redeemPlayer.name:null;
   const boosted={...raw};
 
-  // For each day from Day 3 forward, add 10% of eliminated pledgers' steps to their target
   DAYS.forEach(d=>{
     if(d.date<ALLIANCE_START) return;
     const steps=getSteps(d.date);
-    // For each pledge, add 10% of pledger's steps to target
     Object.entries(pledges).forEach(([pledger,target])=>{
-      if(steps[pledger]&&steps[target]!==undefined){
+      // Skip redeemed player — they're back competing, no boost
+      if(pledger===redeemName) return;
+      const elimDate=elimDates[pledger];
+      // Only count steps from days AFTER elimination day
+      if(!elimDate||d.date<=elimDate) return;
+      if(steps[pledger]&&steps[pledger]>0){
         boosted[target]=(boosted[target]||0)+Math.floor(steps[pledger]*0.1);
       }
     });
@@ -480,15 +494,21 @@ function getTotals(){
 }
 
 function getAllianceBoostForPlayer(player){
-  // Returns total alliance boost for a player across Day 3+ for display
+  // Returns total alliance boost for display
   const pledges=state&&state.pledges?state.pledges:{};
   const ALLIANCE_START='2026-05-06';
+  const elimDates=getEliminationDateMap();
+  const redeemName=getGameState().redeemPlayer?getGameState().redeemPlayer.name:null;
   let boost=0;
   DAYS.forEach(d=>{
     if(d.date<ALLIANCE_START) return;
     const steps=getSteps(d.date);
     Object.entries(pledges).forEach(([pledger,target])=>{
-      if(target===player&&steps[pledger]){
+      if(pledger===redeemName) return;
+      if(target!==player) return;
+      const elimDate=elimDates[pledger];
+      if(!elimDate||d.date<=elimDate) return;
+      if(steps[pledger]&&steps[pledger]>0){
         boost+=Math.floor(steps[pledger]*0.1);
       }
     });
@@ -539,9 +559,12 @@ function renderStandings(){
 
     // Tribe members pledged to this player
     const pledges=state&&state.pledges?state.pledges:{};
-    // Only show tribe members who are actually eliminated (not active players)
     const allElimNames=gs.eliminated.map(e=>e.name);
-    const tribeMembers=Object.entries(pledges).filter(([k,v])=>v===p&&allElimNames.includes(k)).map(([k])=>k);
+    const redeemName=gs.redeemPlayer?gs.redeemPlayer.name:null;
+    // Exclude redeemed player from tribe bubbles — they're back in the game
+    const tribeMembers=Object.entries(pledges)
+      .filter(([k,v])=>v===p&&allElimNames.includes(k)&&k!==redeemName)
+      .map(([k])=>k);
     const tribeBubbles=tribeMembers.map(m=>`
       <div class="tribe-member-bubble">
         ${photoEl(m,20)}
@@ -638,11 +661,17 @@ function renderHistory(){
     const item=document.createElement('div');
     item.className='hist-item';
     // Calculate alliance boost for this day if Day 3+
+    // Only count steps from days AFTER the pledger's elimination day
     const pledges=state&&state.pledges?state.pledges:{};
+    const elimDatesH=getEliminationDateMap();
+    const redeemNameH=gs.redeemPlayer?gs.redeemPlayer.name:null;
     const dayBoosts={};
     if(day.date>='2026-05-06'){
       Object.entries(pledges).forEach(([pledger,target])=>{
-        if(steps[pledger]){
+        if(pledger===redeemNameH) return;
+        const elimDate=elimDatesH[pledger];
+        if(!elimDate||day.date<=elimDate) return;
+        if(steps[pledger]&&steps[pledger]>0){
           dayBoosts[target]=(dayBoosts[target]||0)+Math.floor(steps[pledger]*0.1);
         }
       });
