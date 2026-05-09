@@ -444,6 +444,8 @@ function getGameState(){
     }
   }
 
+  // Add day6 eliminated player to eliminated list for pledge/display purposes
+  if(day6Elim) eliminated.push({name:day6Elim,day:6,date:'2026-05-09',steps:getSteps('2026-05-09')[day6Elim]||0});
   return{eliminated,remaining,redeemPlayer,day6Elim,day7competitors,champion};
 }
 
@@ -779,7 +781,7 @@ function renderTribalRecord(){
   const trulyActive=PLAYERS.filter(p=>!elimNames.includes(p));
   const pledgeTargets=redeemName?[...trulyActive,redeemName]:trulyActive;
 
-  for(let i = 0; i < 5; i++){
+  for(let i = 0; i < 6; i++){
     const elim = gs.eliminated[i];
     const div = document.createElement('div');
     div.className = 'elim-slot ' + (elim ? 'filled' : 'empty');
@@ -799,7 +801,7 @@ function renderTribalRecord(){
         ${photoEl(elim.name, 44)}
         <div class="elim-slot-label">${isRedeemed?'RETURNED':'Day '+elim.day}</div>
         <div class="elim-slot-name" style="${isRedeemed?'color:var(--gold2)':''}">${elim.name}${isRedeemed?' ⚡':''}</div>
-        <div class="elim-slot-tribe">
+        ${isRedeemed ? '' : `<div class="elim-slot-tribe">
           ${pledgeValid&&!isRedemptionDay
             ? `<div class="elim-slot-tribe-pledged" style="cursor:pointer" onclick="clearPledge('${elim.name}')">🤝 ${myPledge}</div>`
             : `<select onchange="quickPledge('${elim.name}', this.value)">
@@ -807,7 +809,7 @@ function renderTribalRecord(){
                 ${pledgeOptions}
                </select>`
           }
-        </div>`;
+        </div>`}`;
     } else {
       div.innerHTML = `
         <div class="elim-slot-empty">🕯️</div>
