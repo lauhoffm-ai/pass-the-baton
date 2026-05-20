@@ -102,27 +102,23 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
 /* MAP */
 .map-wrap{position:relative;padding:8px 0;}
 .trail-outer{width:100%;overflow-x:scroll;-webkit-overflow-scrolling:touch;padding-bottom:6px;}
-.trail-map{position:relative;height:200px;margin:8px 0;min-width:900px;width:900px;}
-.tl{position:absolute;top:100px;left:20px;right:20px;height:3px;background:var(--gk);}
-.pm{position:absolute;top:100px;left:20px;height:3px;transition:width .5s;max-width:860px;}
-.pm.mud{margin-top:-4px;background:var(--amb);box-shadow:0 0 8px var(--amb);}
-.pm.dust{margin-top:4px;background:var(--cyn);box-shadow:0 0 8px var(--cyn);}
-.wg{position:absolute;font-size:22px;transition:left .5s;z-index:10;}
-.wg.mud{top:68px;color:var(--amb);filter:drop-shadow(0 0 6px var(--amb));}
-.wg.dust{top:108px;color:var(--cyn);filter:drop-shadow(0 0 6px var(--cyn));}
-.lm{position:absolute;font-size:18px;z-index:5;transform:translateX(-50%);}
-.lm-l{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:8px;
-  color:var(--gd);white-space:nowrap;text-align:center;line-height:1.4;font-family:var(--mn);}
-.lm-b{position:absolute;top:22px;left:50%;transform:translateX(-50%);font-size:9px;
-  color:var(--g);white-space:nowrap;font-family:var(--px);}
-.lm-icon{position:absolute;top:0;left:50%;transform:translateX(-50%);}
-.lm.hit-mud .lm-icon{filter:drop-shadow(0 0 5px var(--amb));}
-.lm.hit-dust .lm-icon{filter:drop-shadow(0 0 5px var(--cyn));}
+.trail-map{position:relative;height:160px;margin:4px 0;min-width:900px;width:900px;background:rgba(0,255,65,0.02);}
+.tl{position:absolute;top:80px;left:20px;width:860px;height:3px;background:var(--gk);}
+.pm{position:absolute;top:80px;left:20px;height:3px;transition:width .3s;}
+.pm.mud{margin-top:-3px;background:var(--amb);box-shadow:0 0 8px var(--amb);}
+.pm.dust{margin-top:3px;background:var(--cyn);box-shadow:0 0 8px var(--cyn);}
+.wg{position:absolute;font-size:20px;transition:left .3s;z-index:10;}
+.wg.mud{top:52px;color:var(--amb);filter:drop-shadow(0 0 6px var(--amb));}
+.wg.dust{top:92px;color:var(--cyn);filter:drop-shadow(0 0 6px var(--cyn));}
+.lm{position:absolute;top:62px;font-size:16px;z-index:5;text-align:center;width:60px;margin-left:-30px;}
+.lm-l{display:block;font-size:8px;color:var(--gd);white-space:nowrap;margin-bottom:2px;font-family:var(--mn);}
+.lm-icon{display:block;font-size:16px;line-height:1;}
+.lm-b{display:block;font-size:7px;color:var(--g);white-space:nowrap;margin-top:2px;font-family:var(--px);}
+.lm.hit-mud .lm-icon{text-shadow:0 0 8px var(--amb);}
+.lm.hit-dust .lm-icon{text-shadow:0 0 8px var(--cyn);}
 .lm.hit-both{opacity:.4;}
-.lm-start{position:absolute;left:4px;top:88px;font-size:10px;color:var(--gd);font-family:var(--mn);}
-.lm-end{position:absolute;right:4px;top:88px;font-size:10px;color:var(--gd);font-family:var(--mn);text-align:right;}
-.te{display:flex;justify-content:space-between;font-size:11px;color:var(--gk);padding:0 2px;margin-top:2px;}
-.wleg{display:flex;gap:14px;justify-content:center;margin-top:6px;font-size:16px;}
+.te{display:flex;justify-content:space-between;font-size:11px;color:var(--gk);padding:0 4px;margin-top:4px;}
+.wleg{display:flex;gap:14px;justify-content:center;margin-top:6px;font-size:15px;}
 .wleg .mud{color:var(--amb);}
 .wleg .dust{color:var(--cyn);}
 .map-scroll-hint{font-size:12px;color:var(--gk);text-align:center;margin-top:2px;}
@@ -273,10 +269,10 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
       <div class="trail-outer">
       <div class="trail-map" id="trailMap">
         <div class="tl"></div>
-        <div class="pm mud" id="pmMud" style="width:0%"></div>
-        <div class="pm dust" id="pmDust" style="width:0%"></div>
-        <div class="wg mud" id="wgMud" style="left:0%">&#128002;</div>
-        <div class="wg dust" id="wgDust" style="left:0%">&#128014;</div>
+        <div class="pm mud" id="pmMud" style="width:0px"></div>
+        <div class="pm dust" id="pmDust" style="width:0px"></div>
+        <div class="wg mud" id="wgMud" style="left:20px">&#128002;</div>
+        <div class="wg dust" id="wgDust" style="left:20px">&#128014;</div>
       </div>
       </div><!-- trail-outer -->
       <div class="map-scroll-hint">&#8592; SCROLL TO SEE FULL TRAIL &#8594;</div>
@@ -1074,18 +1070,17 @@ function renderMap(mudM,dustM){
     const div=document.createElement('div');
     div.className=cls;
     div.style.left=px+'px';
-    div.style.top='82px';
-    const lbl=document.createElement('div');lbl.className='lm-l';lbl.textContent=lm.name;div.appendChild(lbl);
-    const ico=document.createElement('div');ico.className='lm-icon';ico.textContent=lm.icon;div.appendChild(ico);
-    const bon=document.createElement('div');bon.className='lm-b';bon.textContent='+'+lm.bonus+'mi';div.appendChild(bon);
+    const lbl=document.createElement('span');lbl.className='lm-l';lbl.textContent=lm.name;div.appendChild(lbl);
+    const ico=document.createElement('span');ico.className='lm-icon';ico.textContent=lm.icon;div.appendChild(ico);
+    const bon=document.createElement('span');bon.className='lm-b';bon.textContent='+'+lm.bonus+'mi';div.appendChild(bon);
     map.appendChild(div);
   });
   const mudPx=Math.min((mudM/TRAIL)*mapW,mapW-5);
   const dustPx=Math.min((dustM/TRAIL)*mapW,mapW-5);
   document.getElementById('pmMud').style.width=mudPx+'px';
   document.getElementById('pmDust').style.width=dustPx+'px';
-  document.getElementById('wgMud').style.left=(mapOff+mudPx-10)+'px';
-  document.getElementById('wgDust').style.left=(mapOff+dustPx-10)+'px';
+  document.getElementById('wgMud').style.left=(mapOff+mudPx)+'px';
+  document.getElementById('wgDust').style.left=(mapOff+dustPx)+'px';
 
     const mf=state.teams.mud.frozenUntilSteps>0,df=state.teams.dust.frozenUntilSteps>0;
   document.getElementById('mudFrz').style.display=mf?'block':'none';
