@@ -1374,15 +1374,34 @@ function startRefresh() {
 // INIT
 // ============================================================
 async function init() {
-  state=await loadBin();
-  if(!state?.version) {
-    document.getElementById('draftScreen').classList.remove('hidden'); return;
-  }
-  if(!state.draftDone) {
-    document.getElementById('draftScreen').classList.remove('hidden');
-    if(state.draftOrder?.length) { document.getElementById('draftBtns').style.display='none'; document.getElementById('replayArea').style.display='block'; }
+  // Show draft screen immediately while loading
+  document.getElementById('draftScreen').classList.remove('hidden');
+
+  let raw = await loadBin();
+
+  // Auto-init if bin is empty, missing, or incompatible version
+  if(!raw || !raw.version || raw.version < 2) {
+    const log = document.getElementById('draftLog');
+    log.innerHTML = '<div class="dl">> INITIALIZING TRAIL DATA...</div><div class="dl blink">> _</div>';
+    state = defaultState();
+    await saveAll(state, true); // skip GitHub backup on init
+    log.innerHTML = '<div class="dl">> ✅ TRAIL INITIALIZED</div><div class="dl">> 7 PIONEERS READY</div><div class="dl">> AWAITING WAGON ASSIGNMENT</div><div class="dl blink">> _</div>';
     return;
   }
+
+  state = raw;
+
+  // Draft not done yet
+  if(!state.draftDone) {
+    document.getElementById('draftScreen').classList.remove('hidden');
+    if(state.draftOrder?.length) {
+      document.getElementById('draftBtns').style.display='none';
+      document.getElementById('replayArea').style.display='block';
+    }
+    return;
+  }
+
+  // All good — go to dashboard
   document.getElementById('draftScreen').classList.add('hidden');
   document.getElementById('mainDash').style.display='block';
   render(); startRefresh();
