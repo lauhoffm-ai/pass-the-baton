@@ -101,23 +101,23 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
 
 /* MAP */
 .map-wrap{position:relative;padding:8px 0;}
-.trail-outer{width:100%;overflow-x:scroll;-webkit-overflow-scrolling:touch;padding-bottom:6px;}
-.trail-map{position:relative;height:160px;margin:4px 0;min-width:900px;width:900px;background:rgba(0,255,65,0.02);}
-.tl{position:absolute;top:80px;left:20px;width:860px;height:3px;background:var(--gk);}
-.pm{position:absolute;top:80px;left:20px;height:3px;transition:width .3s;}
-.pm.mud{margin-top:-3px;background:var(--amb);box-shadow:0 0 8px var(--amb);}
-.pm.dust{margin-top:3px;background:var(--cyn);box-shadow:0 0 8px var(--cyn);}
-.wg{position:absolute;font-size:20px;transition:left .3s;z-index:10;}
-.wg.mud{top:52px;color:var(--amb);filter:drop-shadow(0 0 6px var(--amb));}
-.wg.dust{top:92px;color:var(--cyn);filter:drop-shadow(0 0 6px var(--cyn));}
-.lm{position:absolute;top:62px;font-size:16px;z-index:5;text-align:center;width:60px;margin-left:-30px;}
-.lm-l{display:block;font-size:8px;color:var(--gd);white-space:nowrap;margin-bottom:2px;font-family:var(--mn);}
-.lm-icon{display:block;font-size:16px;line-height:1;}
-.lm-b{display:block;font-size:7px;color:var(--g);white-space:nowrap;margin-top:2px;font-family:var(--px);}
-.lm.hit-mud .lm-icon{text-shadow:0 0 8px var(--amb);}
-.lm.hit-dust .lm-icon{text-shadow:0 0 8px var(--cyn);}
-.lm.hit-both{opacity:.4;}
-.te{display:flex;justify-content:space-between;font-size:11px;color:var(--gk);padding:0 4px;margin-top:4px;}
+.trail-outer{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.trail-map{position:relative;height:160px;min-width:860px;}
+.tl{position:absolute;top:78px;left:0;right:0;height:3px;background:var(--gk);}
+.pm{position:absolute;top:78px;left:0;height:3px;transition:width .3s;}
+.pm.mud{margin-top:-3px;background:var(--amb);box-shadow:0 0 6px var(--amb);}
+.pm.dust{margin-top:3px;background:var(--cyn);box-shadow:0 0 6px var(--cyn);}
+.wg{position:absolute;font-size:20px;z-index:10;}
+.wg.mud{top:50px;color:var(--amb);filter:drop-shadow(0 0 4px var(--amb));}
+.wg.dust{top:90px;color:var(--cyn);filter:drop-shadow(0 0 4px var(--cyn));}
+.lm{position:absolute;top:60px;width:56px;margin-left:-28px;text-align:center;z-index:5;}
+.lm-l{display:block;font-size:8px;color:var(--gd);white-space:nowrap;line-height:1.3;font-family:var(--mn);}
+.lm-icon{display:block;font-size:15px;line-height:1.2;}
+.lm-b{display:block;font-size:7px;color:var(--g);white-space:nowrap;font-family:var(--px);}
+.lm.hit-mud .lm-icon{text-shadow:0 0 6px var(--amb);}
+.lm.hit-dust .lm-icon{text-shadow:0 0 6px var(--cyn);}
+.lm.hit-both{opacity:.35;}
+.te{display:flex;justify-content:space-between;font-size:11px;color:var(--gk);padding:0 2px;margin-top:4px;}
 .wleg{display:flex;gap:14px;justify-content:center;margin-top:6px;font-size:15px;}
 .wleg .mud{color:var(--amb);}
 .wleg .dust{color:var(--cyn);}
@@ -269,10 +269,10 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
       <div class="trail-outer">
       <div class="trail-map" id="trailMap">
         <div class="tl"></div>
-        <div class="pm mud" id="pmMud" style="width:0px"></div>
-        <div class="pm dust" id="pmDust" style="width:0px"></div>
-        <div class="wg mud" id="wgMud" style="left:20px">&#128002;</div>
-        <div class="wg dust" id="wgDust" style="left:20px">&#128014;</div>
+        <div class="pm mud" id="pmMud" style="width:0%"></div>
+        <div class="pm dust" id="pmDust" style="width:0%"></div>
+        <div class="wg mud" id="wgMud" style="left:0%">&#128002;</div>
+        <div class="wg dust" id="wgDust" style="left:0%">&#128014;</div>
       </div>
       </div><!-- trail-outer -->
       <div class="map-scroll-hint">&#8592; SCROLL TO SEE FULL TRAIL &#8594;</div>
@@ -1061,7 +1061,7 @@ function renderMap(mudM,dustM){
   map.querySelectorAll('.lm').forEach(e=>e.remove());
   const mapW=860, mapOff=20;
   LMS.forEach(lm=>{
-    const px=mapOff+(lm.mile/TRAIL)*mapW;
+    const px=((lm.mile/TRAIL)*100)+'%';
     const mudHit=mudM>=lm.mile, dustHit=dustM>=lm.mile;
     let cls='lm';
     if(mudHit&&dustHit)cls+=' hit-both';
@@ -1069,18 +1069,17 @@ function renderMap(mudM,dustM){
     else if(dustHit)cls+=' hit-dust';
     const div=document.createElement('div');
     div.className=cls;
-    div.style.left=px+'px';
+    div.style.left=px;
     const lbl=document.createElement('span');lbl.className='lm-l';lbl.textContent=lm.name;div.appendChild(lbl);
     const ico=document.createElement('span');ico.className='lm-icon';ico.textContent=lm.icon;div.appendChild(ico);
     const bon=document.createElement('span');bon.className='lm-b';bon.textContent='+'+lm.bonus+'mi';div.appendChild(bon);
     map.appendChild(div);
   });
-  const mudPx=Math.min((mudM/TRAIL)*mapW,mapW-5);
-  const dustPx=Math.min((dustM/TRAIL)*mapW,mapW-5);
-  document.getElementById('pmMud').style.width=mudPx+'px';
-  document.getElementById('pmDust').style.width=dustPx+'px';
-  document.getElementById('wgMud').style.left=(mapOff+mudPx)+'px';
-  document.getElementById('wgDust').style.left=(mapOff+dustPx)+'px';
+  const pct=m=>Math.min((m/TRAIL)*100,99)+'%';
+  document.getElementById('pmMud').style.width=pct(mudM);
+  document.getElementById('pmDust').style.width=pct(dustM);
+  document.getElementById('wgMud').style.left=pct(mudM);
+  document.getElementById('wgDust').style.left=pct(dustM);
 
     const mf=state.teams.mud.frozenUntilSteps>0,df=state.teams.dust.frozenUntilSteps>0;
   document.getElementById('mudFrz').style.display=mf?'block':'none';
@@ -1416,7 +1415,34 @@ async function init(){
   if(!raw||!raw.version||raw.version<4){
     state=defaultState();
     await saveAll(state,true);
-  }else{state=raw;}
+  }else{
+    state=raw;
+    // Always ensure all 7 players exist in state regardless of stored version
+    let playersMissing=false;
+    PLAYERS.forEach(p=>{
+      if(!state.players[p.id]){
+        state.players[p.id]={steps:{},totalSteps:0};
+        playersMissing=true;
+      }
+      if(!state.players[p.id].steps){
+        state.players[p.id].steps={};
+        playersMissing=true;
+      }
+    });
+    // Ensure teams object has all required fields
+    ['mud','dust'].forEach(team=>{
+      if(!state.teams[team].frozenDates)state.teams[team].frozenDates=[];
+      if(!state.teams[team].liftSubs)state.teams[team].liftSubs={};
+      if(!state.teams[team].axleSubs)state.teams[team].axleSubs={};
+      if(!state.teams[team].pioneerEarned)state.teams[team].pioneerEarned=[];
+      if(!state.closedCycles)state.closedCycles=[];
+      if(!state.mileAdj)state.mileAdj=[];
+      if(!state.deadWeight)state.deadWeight={};
+      if(!state.history)state.history=[];
+      if(!state.landmarksHit)state.landmarksHit={mud:[],dust:[]};
+    });
+    if(playersMissing)await saveAll(state,true);
+  }
   render();startRefresh();
 }
 
