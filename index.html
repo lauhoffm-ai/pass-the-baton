@@ -1374,37 +1374,50 @@ function startRefresh() {
 // INIT
 // ============================================================
 async function init() {
-  // Show draft screen immediately while loading
+  // Always show draft screen while we figure out state
   document.getElementById('draftScreen').classList.remove('hidden');
+  document.getElementById('draftBtns').style.display='block';
+  document.getElementById('draftPinArea').style.display='none';
+  document.getElementById('draftConfirmArea').style.display='none';
+  document.getElementById('replayArea').style.display='none';
 
-  let raw = await loadBin();
+  const log = document.getElementById('draftLog');
+  log.innerHTML = '<div class="dl">> LOADING TRAIL DATA...</div><div class="dl blink">> _</div>';
 
-  // Auto-init if bin is empty, missing, or incompatible version
+  let raw = null;
+  try { raw = await loadBin(); } catch(e) { raw = null; }
+
+  // Auto-init if bin is empty, missing, or incompatible
   if(!raw || !raw.version || raw.version < 2) {
-    const log = document.getElementById('draftLog');
     log.innerHTML = '<div class="dl">> INITIALIZING TRAIL DATA...</div><div class="dl blink">> _</div>';
     state = defaultState();
-    await saveAll(state, true); // skip GitHub backup on init
+    try { await saveAll(state, true); } catch(e) { console.warn('Init save failed', e); }
     log.innerHTML = '<div class="dl">> ✅ TRAIL INITIALIZED</div><div class="dl">> 7 PIONEERS READY</div><div class="dl">> AWAITING WAGON ASSIGNMENT</div><div class="dl blink">> _</div>';
+    document.getElementById('draftBtns').style.display='block';
     return;
   }
 
   state = raw;
 
-  // Draft not done yet
-  if(!state.draftDone) {
-    document.getElementById('draftScreen').classList.remove('hidden');
-    if(state.draftOrder?.length) {
-      document.getElementById('draftBtns').style.display='none';
-      document.getElementById('replayArea').style.display='block';
-    }
+  // Challenge already running — go straight to dashboard
+  if(state.draftDone) {
+    document.getElementById('draftScreen').classList.add('hidden');
+    document.getElementById('mainDash').style.display='block';
+    render(); startRefresh();
     return;
   }
 
-  // All good — go to dashboard
-  document.getElementById('draftScreen').classList.add('hidden');
-  document.getElementById('mainDash').style.display='block';
-  render(); startRefresh();
+  // Draft was done but not confirmed (has order stored)
+  if(state.draftOrder && state.draftOrder.length > 0) {
+    log.innerHTML = '<div class="dl">> DRAFT PREVIOUSLY RUN</div><div class="dl">> REPLAY OR ENTER TRAIL</div>';
+    document.getElementById('draftBtns').style.display='none';
+    document.getElementById('replayArea').style.display='block';
+    return;
+  }
+
+  // Fresh state, draft not started — show button
+  log.innerHTML = '<div class="dl">> 7 PIONEERS READY</div><div class="dl">> AWAITING WAGON ASSIGNMENT</div><div class="dl blink">> _</div>';
+  document.getElementById('draftBtns').style.display='block';
 }
 
 window.onload=init;
