@@ -101,33 +101,37 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
 
 /* MAP */
 .map-wrap{position:relative;padding:8px 0;}
-.trail-map{position:relative;height:120px;margin:8px 0;}
-.tl{position:absolute;top:50%;left:0;right:0;height:2px;background:var(--gk);transform:translateY(-50%);}
-.pm{position:absolute;top:50%;left:0;height:2px;transition:width .5s;}
-.pm.mud{margin-top:-3px;background:var(--amb);box-shadow:0 0 6px var(--amb);}
-.pm.dust{margin-top:3px;background:var(--cyn);box-shadow:0 0 6px var(--cyn);}
-.wg{position:absolute;top:50%;font-size:16px;transform:translateY(-50%);transition:left .5s;z-index:10;}
-.wg.mud{margin-top:-14px;color:var(--amb);}
-.wg.dust{margin-top:10px;color:var(--cyn);}
-.lm{position:absolute;top:50%;transform:translate(-50%,-50%);font-size:12px;z-index:5;}
-.lm-l{position:absolute;top:-24px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--gd);white-space:nowrap;}
-.lm-b{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--g);white-space:nowrap;}
-.lm.done{opacity:.35;}
-.te{display:flex;justify-content:space-between;font-size:11px;color:var(--gk);padding:0 2px;}
+.trail-outer{width:100%;overflow-x:auto;padding-bottom:4px;}
+.trail-map{position:relative;height:180px;margin:8px 0;min-width:600px;}
+.tl{position:absolute;top:50%;left:0;right:0;height:3px;background:var(--gk);transform:translateY(-50%);}
+.pm{position:absolute;top:50%;left:0;height:3px;transition:width .5s;}
+.pm.mud{margin-top:-4px;background:var(--amb);box-shadow:0 0 8px var(--amb);}
+.pm.dust{margin-top:4px;background:var(--cyn);box-shadow:0 0 8px var(--cyn);}
+.wg{position:absolute;top:50%;font-size:20px;transform:translateY(-50%);transition:left .5s;z-index:10;}
+.wg.mud{margin-top:-18px;color:var(--amb);filter:drop-shadow(0 0 4px var(--amb));}
+.wg.dust{margin-top:14px;color:var(--cyn);filter:drop-shadow(0 0 4px var(--cyn));}
+.lm{position:absolute;top:50%;transform:translate(-50%,-50%);font-size:16px;z-index:5;cursor:default;}
+.lm-l{position:absolute;top:-36px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--gd);white-space:nowrap;text-align:center;line-height:1.3;}
+.lm-b{position:absolute;bottom:-26px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--g);white-space:nowrap;font-family:var(--px);}
+.lm.hit-mud{filter:drop-shadow(0 0 4px var(--amb));}
+.lm.hit-dust{filter:drop-shadow(0 0 4px var(--cyn));}
+.lm.hit-both{opacity:.4;}
+.te{display:flex;justify-content:space-between;font-size:11px;color:var(--gk);padding:0 2px;margin-top:4px;}
 .wleg{display:flex;gap:14px;justify-content:center;margin-top:6px;font-size:14px;}
 .wleg .mud{color:var(--amb);}
 .wleg .dust{color:var(--cyn);}
+.map-scroll-hint{font-size:12px;color:var(--gk);text-align:center;margin-top:4px;}
 
 /* PLAYERS */
 .thdr{font-family:var(--px);font-size:6px;padding:6px 10px;margin-bottom:6px;}
 .thdr.mud{background:rgba(255,176,0,.1);border-left:3px solid var(--amb);color:var(--amb);}
 .thdr.dust{background:rgba(0,255,255,.1);border-left:3px solid var(--cyn);color:var(--cyn);}
 .pg{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px;}
-.pc{border:1px solid var(--gk);background:var(--gf);padding:7px;position:relative;overflow:hidden;}
+.pc{border:1px solid var(--gk);background:var(--gf);padding:8px;position:relative;overflow:hidden;text-align:center;}
 .pc.at-risk{border-color:var(--yel);animation:pulseY 1.5s ease-in-out infinite;}
 .pc.dead-wt{border-color:var(--red);box-shadow:0 0 10px rgba(255,51,51,.5);}
-.pp-w{position:relative;width:60px;height:60px;margin:0 auto 5px;}
-.pp{width:60px;height:60px;object-fit:cover;border:2px solid var(--gk);display:block;image-rendering:pixelated;}
+.pp-w{position:relative;width:70px;height:70px;margin:0 auto 6px;}
+.pp{width:70px;height:70px;object-fit:cover;border:2px solid var(--gk);display:block;border-radius:2px;}
 .pc.at-risk .pp{border-color:var(--yel);filter:sepia(.3) saturate(1.5);}
 .pc.dead-wt .pp{filter:grayscale(100%);border-color:var(--red);}
 .pbg{position:absolute;top:-3px;right:-3px;font-size:14px;z-index:5;}
@@ -261,6 +265,7 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
   <div class="sec">
     <div class="sec-ttl">> TRAIL MAP &#8212; 1,500 MILES</div>
     <div class="map-wrap">
+      <div class="trail-outer">
       <div class="trail-map" id="trailMap">
         <div class="tl"></div>
         <div class="pm mud" id="pmMud" style="width:0%"></div>
@@ -268,6 +273,8 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
         <div class="wg mud" id="wgMud" style="left:0%">&#128002;</div>
         <div class="wg dust" id="wgDust" style="left:0%">&#128014;</div>
       </div>
+      </div><!-- trail-outer -->
+      <div class="map-scroll-hint">&#8592; SCROLL TO SEE FULL TRAIL &#8594;</div>
       <div class="te"><span>INDEPENDENCE</span><span>OREGON CITY</span></div>
       <div class="wleg"><span class="mud">&#128002; MUD &amp; MUSCLE</span><span class="dust">&#128014; DUST &amp; GLORY</span></div>
     </div>
@@ -368,7 +375,7 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
 
     <!-- MANUAL MILE ADJUSTMENT -->
     <div class="as">
-      <div class="ast">> MANUAL MILE ADJUSTMENT</div>
+      <div class="ast">> MANUAL OVERRIDE — ADMIN USE ONLY</div>
       <div class="ar"><label class="al">WAGON</label>
         <select id="aAt" class="asel">
           <option value="mud">&#128002; MUD &amp; MUSCLE</option>
@@ -383,9 +390,9 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
 
     <!-- FORCE CLOSE CYCLE -->
     <div class="as">
-      <div class="ast">> CYCLE MANAGEMENT</div>
+      <div class="ast">> CYCLE MANAGEMENT — PAST CYCLES ONLY</div>
       <div style="font-size:14px;color:var(--gd);margin-bottom:8px;" id="cycleStatusTxt">CHECKING CYCLE STATUS...</div>
-      <button class="ab warn" id="forceCloseBtn" onclick="forceCloseCycle()">[FORCE CLOSE CURRENT CYCLE]</button>
+      <button class="ab warn" id="forceCloseBtn" onclick="forceCloseCycle()">[FORCE CLOSE PENDING CYCLE]</button>
       <div class="am" id="fcMsg"></div>
     </div>
 
@@ -935,6 +942,7 @@ function renderCycleWarn(ci){
 // ── CARD REVEAL ───────────────────────────────────────────
 async function revealCard(team){
   if(!state||state.cards[team].revealed)return;
+  if(ld()<START){alert('THE TRAIL OPENS MAY 21 — COME BACK TOMORROW PIONEER!');return;}
   const ci=getCycleInfo();
   if(ci.cycle===state.prairieFireCycle&&!state.prairieFireFired){
     state.cards.mud={cardId:'prairie_fire',revealed:true,cycleNum:ci.cycle};
@@ -1052,11 +1060,16 @@ function renderMap(mudM,dustM){
   map.querySelectorAll('.lm').forEach(e=>e.remove());
   LMS.forEach(lm=>{
     const pct=(lm.mile/TRAIL)*100;
-    const done=mudM>=lm.mile&&dustM>=lm.mile;
+    const mudHit=mudM>=lm.mile, dustHit=dustM>=lm.mile;
+    let cls='lm';
+    if(mudHit&&dustHit)cls+=' hit-both';
+    else if(mudHit)cls+=' hit-mud';
+    else if(dustHit)cls+=' hit-dust';
     const el=document.createElement('div');
-    el.className='lm'+(done?' done':'');
+    el.className=cls;
     el.style.left=pct+'%';
-    el.innerHTML=`<div class="lm-l">${lm.name}</div>${lm.icon}<div class="lm-b">+${lm.bonus}mi</div>`;
+    const hitTxt=mudHit&&dustHit?'BOTH HIT':mudHit?'&#128002; HIT':dustHit?'&#128014; HIT':'';
+    el.innerHTML=`<div class="lm-l">${lm.name}<br>${hitTxt}</div>${lm.icon}<div class="lm-b">+${lm.bonus}mi</div>`;
     map.appendChild(el);
   });
   const mp=Math.min((mudM/TRAIL)*100,97),dp=Math.min((dustM/TRAIL)*100,97);
@@ -1075,6 +1088,8 @@ function cDesc(c,t){return typeof c.desc==='function'?c.desc(t):c.desc;}
 function cGoal(c,t){return typeof c.goal==='function'?c.goal(t):c.goal;}
 
 function renderCards(ci){
+  // Hide reveal buttons entirely before challenge starts
+  const challengeStarted=ld()>=START;
   ['mud','dust'].forEach(team=>{
     const cd=state.cards[team];
     const evEl=document.getElementById(team+'Ev');
@@ -1086,8 +1101,13 @@ function renderCards(ci){
     const pe=(state.teams[team].pioneerEarned||[]).includes(ci.cycle);
     pionEl.textContent=pe?'EARNED':'WEEKLY';pionEl.className=pe?'rw-c':'rw-a';
     if(!cd.revealed||cd.cycleNum!==ci.cycle){
-      btn.style.display='block';
-      evEl.innerHTML='<div class="en" style="color:var(--gd);">[UNREVEALED]</div><div class="ed">Tap reveal to draw event</div>';
+      if(!challengeStarted){
+        btn.style.display='none';
+        evEl.innerHTML='<div class="en" style="color:var(--gd);">[TRAIL NOT YET OPEN]</div><div class="ed">FIRST CARD REVEALS ON MAY 21</div>';
+      }else{
+        btn.style.display='block';
+        evEl.innerHTML='<div class="en" style="color:var(--gd);">[UNREVEALED]</div><div class="ed">Tap reveal to draw event</div>';
+      }
       return;
     }
     btn.style.display='none';
@@ -1142,6 +1162,7 @@ function renderPlayers(ci){
     document.getElementById(team+'Avg').textContent=cnt?Math.round((tt/cnt)*3).toLocaleString():'0';
     members.forEach(pid=>{
       const pi=PLAYERS.find(p=>p.id===pid);if(!pi)return;
+      if(!state.players[pid])state.players[pid]={steps:{},totalSteps:0};
       const ts=state.players[pid]?.steps?.[today];
       const tot=Object.values(state.players[pid]?.steps||{}).reduce((a,b)=>a+b,0);
       const dw=state.deadWeight?.[pid]||0;
@@ -1217,20 +1238,37 @@ function popMvp(){
 function updateCycleStatus(){
   const ci=getCycleInfo();
   const statusEl=document.getElementById('cycleStatusTxt');
+  const btn=document.getElementById('forceCloseBtn');
+  // Only look at cycles BEFORE the current one
   const pending=[];
-  for(let c=1;c<ci.cycle;c++){if(!(state.closedCycles||[]).includes(c))pending.push(c);}
-  if(pending.length===0){statusEl.textContent='ALL CYCLES CLOSED. CURRENT CYCLE: '+ci.cycle+' ('+ci.daysLeft+' DAYS LEFT)';}
-  else{
-    const c=pending[0];const missing=missingPlayers(c);
-    statusEl.textContent=`CYCLE ${c} PENDING. MISSING: ${missing.length>0?missing.join(', '):'NONE — READY TO CLOSE'}`;
+  for(let cyc=1;cyc<ci.cycle;cyc++){
+    if(!(state.closedCycles||[]).includes(cyc))pending.push(cyc);
+  }
+  // Show recently closed cycles
+  const recentClosed=(state.closedCycles||[]).slice(-3);
+  const closedTxt=recentClosed.length>0?` | RECENTLY CLOSED: CYCLES ${recentClosed.join(', ')}`:'';
+  if(pending.length===0){
+    statusEl.textContent='ALL PAST CYCLES CLOSED'+closedTxt+'. CURRENT: CYCLE '+ci.cycle+' ('+ci.daysLeft+' DAYS LEFT)';
+    btn.disabled=true;
+  }else{
+    const p=pending[0];
+    const missing=missingPlayers(p);
+    statusEl.textContent=`CYCLE ${p} PENDING${closedTxt}. MISSING DATA: ${missing.length>0?missing.join(', '):'NONE — READY TO CLOSE'}`;
+    btn.disabled=false;
   }
 }
 async function forceCloseCycle(){
   const msg=document.getElementById('fcMsg');
   const ci=getCycleInfo();
+  // Only close PAST cycles — never the current active cycle
   let target=null;
-  for(let c=1;c<ci.cycle;c++){if(!(state.closedCycles||[]).includes(c)){target=c;break;}}
-  if(!target){msg.textContent='NO PENDING CYCLES TO CLOSE';msg.className='am err';return;}
+  for(let cyc=1;cyc<ci.cycle;cyc++){
+    if(!(state.closedCycles||[]).includes(cyc)){target=cyc;break;}
+  }
+  if(!target){
+    msg.textContent='NO PAST CYCLES PENDING — CURRENT CYCLE '+ci.cycle+' CANNOT BE FORCE CLOSED';
+    msg.className='am err';return;
+  }
   msg.textContent='CLOSING CYCLE '+target+'...';msg.className='am';
   closeCycle(target,true);
   const mudM=totalMiles('mud'),dustM=totalMiles('dust');
@@ -1238,7 +1276,7 @@ async function forceCloseCycle(){
   checkLms('dust',state.teams.dust.miles||0,dustM);
   state.teams.mud.miles=mudM;state.teams.dust.miles=dustM;
   await saveAll(state);render();updateCycleStatus();
-  msg.textContent='CYCLE '+target+' CLOSED AND RESULTS APPLIED';msg.className='am ok';
+  msg.textContent='CYCLE '+target+' CLOSED — RESULTS APPLIED';msg.className='am ok';
 }
 
 async function logSteps(){
@@ -1248,6 +1286,7 @@ async function logSteps(){
   const msg=document.getElementById('stMsg');
   if(!pid||!date||isNaN(steps)){msg.textContent='FILL ALL FIELDS';msg.className='am err';return;}
   if(steps<0||steps>100000){msg.textContent='INVALID STEPS';msg.className='am err';return;}
+  if(date<START){msg.textContent='CANNOT LOG STEPS BEFORE CHALLENGE START (MAY 21)';msg.className='am err';return;}
   msg.textContent='SAVING...';msg.className='am';
   if(!state.players[pid])state.players[pid]={steps:{},totalSteps:0};
   const team=teamOf(pid);
