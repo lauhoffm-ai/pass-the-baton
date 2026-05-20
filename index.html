@@ -458,16 +458,16 @@ const PHOTOS={
 };
 
 const LMS=[
-  {mile:250, name:'PLATTE RIVER', icon:'&#128758;',bonus:20},
-  {mile:350, name:'CHIMNEY ROCK', icon:'&#127956;&#65039;',bonus:25},
-  {mile:450, name:'FT. LARAMIE',  icon:'&#127984;&#65039;',bonus:20},
-  {mile:600, name:'SWEETWATER',   icon:'&#128758;',bonus:25},
-  {mile:700, name:'INDEP. ROCK',  icon:'&#127956;&#65039;',bonus:30},
-  {mile:850, name:'SOUTH PASS',   icon:'&#127956;&#65039;',bonus:25},
-  {mile:1000,name:'FT. BRIDGER',  icon:'&#127984;&#65039;',bonus:20},
-  {mile:1150,name:'SNAKE RIVER',  icon:'&#128758;',bonus:30},
-  {mile:1300,name:'BLUE MTNS',    icon:'&#127956;&#65039;',bonus:25},
-  {mile:1400,name:'COLUMBIA',     icon:'&#128758;',bonus:40}
+  {mile:250, name:'PLATTE RIVER', icon:'🛶',bonus:20},
+  {mile:350, name:'CHIMNEY ROCK', icon:'⛰️',bonus:25},
+  {mile:450, name:'FT. LARAMIE',  icon:'🏰',bonus:20},
+  {mile:600, name:'SWEETWATER',   icon:'🛶',bonus:25},
+  {mile:700, name:'INDEP. ROCK',  icon:'⛰️',bonus:30},
+  {mile:850, name:'SOUTH PASS',   icon:'⛰️',bonus:25},
+  {mile:1000,name:'FT. BRIDGER',  icon:'🏰',bonus:20},
+  {mile:1150,name:'SNAKE RIVER',  icon:'🛶',bonus:30},
+  {mile:1300,name:'BLUE MTNS',    icon:'⛰️',bonus:25},
+  {mile:1400,name:'COLUMBIA',     icon:'🛶',bonus:40}
 ];
 
 const COMMON=[
@@ -1062,15 +1062,8 @@ function render(){
 
 function renderMap(mudM,dustM){
   const map=document.getElementById('trailMap');
-  map.querySelectorAll('.lm,.lm-start,.lm-end').forEach(e=>e.remove());
-
-  // Map is 900px wide with 20px padding on each side = 860px usable
+  map.querySelectorAll('.lm').forEach(e=>e.remove());
   const mapW=860, mapOff=20;
-
-  // Start/end labels
-  const sl=document.createElement('div');sl.className='lm-start';sl.textContent='INDEPENDENCE';map.appendChild(sl);
-  const el=document.createElement('div');el.className='lm-end';el.textContent='OREGON CITY';map.appendChild(el);
-
   LMS.forEach(lm=>{
     const px=mapOff+(lm.mile/TRAIL)*mapW;
     const mudHit=mudM>=lm.mile, dustHit=dustM>=lm.mile;
@@ -1082,19 +1075,19 @@ function renderMap(mudM,dustM){
     div.className=cls;
     div.style.left=px+'px';
     div.style.top='82px';
-    const hitTxt=mudHit&&dustHit?'BOTH':mudHit?'&#128002;':dustHit?'&#128014;':'';
-    div.innerHTML=`<div class="lm-l">${lm.name}${hitTxt?'<br>'+hitTxt:''}</div><div class="lm-icon">${lm.icon}</div><div class="lm-b">+${lm.bonus}mi</div>`;
+    const lbl=document.createElement('div');lbl.className='lm-l';lbl.textContent=lm.name;div.appendChild(lbl);
+    const ico=document.createElement('div');ico.className='lm-icon';ico.textContent=lm.icon;div.appendChild(ico);
+    const bon=document.createElement('div');bon.className='lm-b';bon.textContent='+'+lm.bonus+'mi';div.appendChild(bon);
     map.appendChild(div);
   });
-
-  // Progress bars and wagons (860px usable)
-  const mudPx=Math.min((mudM/TRAIL)*mapW,mapW-10);
-  const dustPx=Math.min((dustM/TRAIL)*mapW,mapW-10);
+  const mudPx=Math.min((mudM/TRAIL)*mapW,mapW-5);
+  const dustPx=Math.min((dustM/TRAIL)*mapW,mapW-5);
   document.getElementById('pmMud').style.width=mudPx+'px';
   document.getElementById('pmDust').style.width=dustPx+'px';
-  document.getElementById('wgMud').style.left=(mapOff+mudPx)+'px';
-  document.getElementById('wgDust').style.left=(mapOff+dustPx)+'px';
-  const mf=state.teams.mud.frozenUntilSteps>0,df=state.teams.dust.frozenUntilSteps>0;
+  document.getElementById('wgMud').style.left=(mapOff+mudPx-10)+'px';
+  document.getElementById('wgDust').style.left=(mapOff+dustPx-10)+'px';
+
+    const mf=state.teams.mud.frozenUntilSteps>0,df=state.teams.dust.frozenUntilSteps>0;
   document.getElementById('mudFrz').style.display=mf?'block':'none';
   document.getElementById('dustFrz').style.display=df?'block':'none';
   if(mf){const t=TEAMS.mud.members.reduce((s,pid)=>s+(state.players[pid]?.steps?.[ld()]||0),0);document.getElementById('mudFrzG').textContent=state.teams.mud.frozenUntilSteps.toLocaleString();document.getElementById('mudFrzP').textContent=t.toLocaleString();}
@@ -1167,13 +1160,10 @@ function renderCards(ci){
 
 function renderPlayers(ci){
   const today=ld();
-  // Ensure all players exist in state
-  PLAYERS.forEach(p=>{if(!state.players[p.id])state.players[p.id]={steps:{},totalSteps:0};});
-  // Dead weight: find lowest stepper today
-  const ds=[];
-  PLAYERS.forEach(p=>{const s=state.players[p.id].steps[today];if(s!==undefined&&s!==null)ds.push({id:p.id,s});});
-  const minS=ds.length?Math.min(...ds.map(x=>x.s)):null;
-
+  PLAYERS.forEach(p=>{
+    if(!state.players[p.id])state.players[p.id]={steps:{},totalSteps:0};
+    if(!state.players[p.id].steps)state.players[p.id].steps={};
+  });
   ['mud','dust'].forEach(team=>{
     const members=TEAMS[team].members;
     const container=document.getElementById(team+'Pg');
@@ -1181,38 +1171,39 @@ function renderPlayers(ci){
     container.innerHTML='';
     let tt=0,cnt=0;
     members.forEach(pid=>{
-      const s=state.players[pid]?.steps?.[today];
+      const s=state.players[pid].steps[today];
       if(s!==undefined&&s!==null){tt+=s;cnt++;}
     });
-    document.getElementById(team+'Avg').textContent=cnt?Math.round((tt/cnt)*3).toLocaleString():'0';
-
+    const avgEl=document.getElementById(team+'Avg');
+    if(avgEl)avgEl.textContent=cnt?Math.round((tt/cnt)*3).toLocaleString():'0';
     members.forEach(pid=>{
       const pi=PLAYERS.find(p=>p.id===pid);
-      if(!pi){console.warn('Player not found:',pid);return;}
-      const playerState=state.players[pid]||{steps:{},totalSteps:0};
-      const ts=playerState.steps?.[today];
-      const tot=Object.values(playerState.steps||{}).reduce((a,b)=>a+b,0);
-      const dw=state.deadWeight?.[pid]||0;
+      if(!pi)return;
+      const pSt=state.players[pid];
+      const todayS=pSt.steps[today];
+      const totalS=Object.values(pSt.steps).reduce((a,b)=>a+(b||0),0);
+      const dw=(state.deadWeight&&state.deadWeight[pid])||0;
       const isMvp=state.teams[team].mvpThisCycle===pid;
-      const isDy=state.dysentery?.revealDate===today&&state.dysentery?.[team+'Player']===pid;
-      const photo=PHOTOS[pid]||'';
-      let cls='pc',badge='',banner='';
-      if(dw>=3){cls+=' dead-wt';badge='<div class="pbg">&#128128;</div>';banner='<div class="dw-b">&#128128; DEAD WEIGHT &#128128;</div>';}
-      else if(dw===2){cls+=' at-risk';badge='<div class="pbg blink">&#9888;&#65039;</div>';banner='<div class="ar-b">&#9888;&#65039; AT RISK</div>';}
-      const html=`<div class="${cls}">
-        <div class="pp-w">
-          <img class="pp" src="${photo}" alt="${pi.display}" onerror="this.style.display='none'">
-          ${badge}
-        </div>
-        <div class="pn">${pi.name}</div>
-        <div class="ps">${ts!==undefined&&ts!==null?Number(ts).toLocaleString():'---'}</div>
-        <div class="psl">TODAY</div>
-        <div class="pt">TOTAL: ${tot.toLocaleString()}</div>
-        ${isMvp?'<div class="mvp-b">&#11088; MVP +1K/DAY</div>':''}
-        ${banner}
-        ${isDy?'<div class="dy-b">&#129314; HAD DYSENTERY YESTERDAY</div>':''}
-      </div>`;
-      container.innerHTML+=html;
+      const isDy=state.dysentery&&state.dysentery.revealDate===today&&state.dysentery[team+'Player']===pid;
+      const card=document.createElement('div');
+      card.className='pc'+(dw>=3?' dead-wt':dw===2?' at-risk':'');
+      const wrap=document.createElement('div');wrap.className='pp-w';
+      const img=document.createElement('img');img.className='pp';
+      img.src=PHOTOS[pid]||'';img.alt=pi.display;
+      wrap.appendChild(img);
+      card.appendChild(wrap);
+      const nm=document.createElement('div');nm.className='pn';nm.textContent=pi.name;card.appendChild(nm);
+      const st=document.createElement('div');st.className='ps';
+      st.textContent=(todayS!==undefined&&todayS!==null)?Number(todayS).toLocaleString():'---';
+      card.appendChild(st);
+      const sl=document.createElement('div');sl.className='psl';sl.textContent='TODAY';card.appendChild(sl);
+      const tot=document.createElement('div');tot.className='pt';
+      tot.textContent='TOTAL: '+totalS.toLocaleString();card.appendChild(tot);
+      if(isMvp){const mv=document.createElement('div');mv.className='mvp-b';mv.textContent='⭐ MVP +1K/DAY';card.appendChild(mv);}
+      if(dw>=3){const bn=document.createElement('div');bn.className='dw-b';bn.textContent='💀 DEAD WEIGHT 💀';card.appendChild(bn);}
+      else if(dw===2){const bn=document.createElement('div');bn.className='ar-b';bn.textContent='⚠️ AT RISK';card.appendChild(bn);}
+      if(isDy){const dy=document.createElement('div');dy.className='dy-b';dy.textContent='🤢 HAD DYSENTERY YESTERDAY';card.appendChild(dy);}
+      container.appendChild(card);
     });
   });
 }
