@@ -1330,20 +1330,39 @@ function redrawTeams() {
   executeDraft();
 }
 async function confirmTeams() {
+  const log = document.getElementById('draftLog');
+  log.innerHTML += '<div class="dl">> LOCKING IN TEAMS...</div>';
+  document.getElementById('draftConfirmArea').style.display='none';
+
   const players={};
   [...draftAssignment.mud,...draftAssignment.dust].forEach(p=>{
     players[p.id]={steps:{},totalSteps:0,dwStreak:0};
   });
+
   const s=defaultState();
   s.draftDone=true;
   s.draftOrder=draftAssignment.order;
   s.teams.mud.members=draftAssignment.mud.map(p=>p.id);
   s.teams.dust.members=draftAssignment.dust.map(p=>p.id);
   s.players=players;
-  await saveAll(s);
+
+  const saved = await saveBin(s);
+  if(!saved) {
+    log.innerHTML += '<div class="dl" style="color:var(--red);">> SAVE FAILED — TRY AGAIN</div>';
+    document.getElementById('draftConfirmArea').style.display='block';
+    return;
+  }
+
+  backupToGithub(s).catch(e=>console.warn('Backup failed',e));
   state=s;
-  document.getElementById('draftConfirmArea').style.display='none';
-  document.getElementById('replayArea').style.display='block';
+  log.innerHTML += '<div class="dl">> TEAMS LOCKED IN!</div><div class="dl">> ENTERING TRAIL...</div>';
+
+  setTimeout(()=>{
+    document.getElementById('draftScreen').classList.add('hidden');
+    document.getElementById('mainDash').style.display='block';
+    render();
+    startRefresh();
+  }, 1500);
 }
 function replayDraft() {
   if(!state?.draftOrder) return;
