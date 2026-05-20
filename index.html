@@ -102,18 +102,18 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
 /* MAP */
 .map-wrap{position:relative;padding:8px 0;}
 .trail-outer{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
-.trail-map{position:relative;height:160px;min-width:860px;}
-.tl{position:absolute;top:78px;left:0;right:0;height:3px;background:var(--gk);}
-.pm{position:absolute;top:78px;left:0;height:3px;transition:width .3s;}
+.trail-map{position:relative;height:180px;min-width:860px;}
+.tl{position:absolute;top:100px;left:0;right:0;height:3px;background:var(--gk);}
+.pm{position:absolute;top:100px;left:0;height:3px;transition:width .3s;}
 .pm.mud{margin-top:-3px;background:var(--amb);box-shadow:0 0 6px var(--amb);}
 .pm.dust{margin-top:3px;background:var(--cyn);box-shadow:0 0 6px var(--cyn);}
 .wg{position:absolute;font-size:20px;z-index:10;}
-.wg.mud{top:50px;color:var(--amb);filter:drop-shadow(0 0 4px var(--amb));}
-.wg.dust{top:90px;color:var(--cyn);filter:drop-shadow(0 0 4px var(--cyn));}
-.lm{position:absolute;top:60px;width:56px;margin-left:-28px;text-align:center;z-index:5;}
-.lm-l{display:block;font-size:8px;color:var(--gd);white-space:nowrap;line-height:1.3;font-family:var(--mn);}
-.lm-icon{display:block;font-size:15px;line-height:1.2;}
-.lm-b{display:block;font-size:7px;color:var(--g);white-space:nowrap;font-family:var(--px);}
+.wg.mud{top:72px;color:var(--amb);filter:drop-shadow(0 0 4px var(--amb));}
+.wg.dust{top:110px;color:var(--cyn);filter:drop-shadow(0 0 4px var(--cyn));}
+.lm{position:absolute;top:8px;width:60px;margin-left:-30px;text-align:center;z-index:5;display:flex;flex-direction:column;align-items:center;gap:1px;}
+.lm-l{font-size:8px;color:var(--gd);white-space:nowrap;line-height:1.3;font-family:var(--mn);order:1;}
+.lm-icon{font-size:18px;line-height:1;order:2;}
+.lm-b{font-size:8px;color:var(--g);white-space:nowrap;font-family:var(--mn);order:3;}
 .lm.hit-mud .lm-icon{text-shadow:0 0 6px var(--amb);}
 .lm.hit-dust .lm-icon{text-shadow:0 0 6px var(--cyn);}
 .lm.hit-both{opacity:.35;}
@@ -1070,6 +1070,7 @@ function renderMap(mudM,dustM){
     const div=document.createElement('div');
     div.className=cls;
     div.style.left=px;
+    // top is set by CSS .lm{top:8px}
     const lbl=document.createElement('span');lbl.className='lm-l';lbl.textContent=lm.name;div.appendChild(lbl);
     const ico=document.createElement('span');ico.className='lm-icon';ico.textContent=lm.icon;div.appendChild(ico);
     const bon=document.createElement('span');bon.className='lm-b';bon.textContent='+'+lm.bonus+'mi';div.appendChild(bon);
