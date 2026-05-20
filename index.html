@@ -1172,7 +1172,10 @@ function renderPlayers(ci){
     if(avgEl)avgEl.textContent=cnt?Math.round((tt/cnt)*3).toLocaleString():'0';
     members.forEach(pid=>{
       const pi=PLAYERS.find(p=>p.id===pid);
-      if(!pi)return;
+      if(!pi){console.warn('No player info for',pid);return;}
+      // Always ensure player exists in state
+      if(!state.players[pid])state.players[pid]={steps:{},totalSteps:0};
+      if(!state.players[pid].steps)state.players[pid].steps={};
       const pSt=state.players[pid];
       const todayS=pSt.steps[today];
       const totalS=Object.values(pSt.steps).reduce((a,b)=>a+(b||0),0);
@@ -1397,9 +1400,16 @@ async function resetAll(){
   const msg=document.getElementById('rstMsg');
   msg.textContent='RESETTING...';msg.className='am';
   state=defaultState();
-  await saveAll(state,true);
-  msg.textContent='RESET DONE. RELOADING...';msg.className='am ok';
-  setTimeout(()=>location.reload(),1500);
+  // Save directly to JSONBin only - skip GitHub backup during reset
+  const ok=await saveBin(state);
+  if(ok){
+    msg.textContent='RESET DONE. RELOADING...';msg.className='am ok';
+    // Backup to GitHub async after page would reload anyway
+    backupGH(state).catch(()=>{});
+    setTimeout(()=>location.reload(),1200);
+  }else{
+    msg.textContent='SAVE FAILED - TRY AGAIN';msg.className='am err';
+  }
 }
 
 // ── REFRESH ───────────────────────────────────────────────
