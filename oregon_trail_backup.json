@@ -4,9 +4,16 @@
   "prairieFireCycle": 10,
   "prairieFireFired": false,
   "closedCycles": [],
-  "mileAdj": [],
+  "mileAdj": [
+    {
+      "team": "mud",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: MICHAEL",
+      "date": "2026-05-21"
+    }
+  ],
   "deadWeight": {
-    "michael": 2,
+    "michael": 0,
     "jordan": 0,
     "shania": 0,
     "chris": 0,
@@ -23,10 +30,23 @@
     "mud": [],
     "dust": []
   },
-  "history": [],
+  "history": [
+    {
+      "cycle": 1,
+      "dateRange": "MAY 21",
+      "events": [
+        {
+          "team": "mud",
+          "text": "DEAD WEIGHT: MICHAEL",
+          "miles": -10,
+          "cls": "hn"
+        }
+      ]
+    }
+  ],
   "teams": {
     "mud": {
-      "miles": 7,
+      "miles": 0,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -67,9 +87,9 @@
   "players": {
     "michael": {
       "steps": {
-        "2026-05-21": 10000
+        "2026-05-21": 671
       },
-      "totalSteps": 10000
+      "totalSteps": 671
     },
     "jordan": {
       "steps": {},
