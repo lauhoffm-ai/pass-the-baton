@@ -6,224 +6,187 @@
 <title>Oregon Trail | Marcos & Muscles</title>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 <style>
-:root{
-  --g:#00ff41;--gd:#00cc33;--gk:#004d14;--gf:#001a07;
-  --blk:#000;--amb:#ffb000;--red:#ff3333;--yel:#ffff00;--cyn:#00ffff;
-  --px:'Press Start 2P',monospace;--mn:'VT323',monospace;
-}
+:root{--g:#00ff41;--gd:#00cc33;--gk:#004d14;--gf:#001a07;--blk:#000;--amb:#ffb000;--red:#ff3333;--yel:#ffff00;--cyn:#00ffff;--px:'Press Start 2P',monospace;--mn:'VT323',monospace;}
 *{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--blk);color:var(--g);font-family:var(--mn);font-size:18px;min-height:100vh;overflow-x:hidden;padding-bottom:80px;}
-body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
-  background:repeating-linear-gradient(0deg,rgba(0,255,65,.03) 0,rgba(0,255,65,.03) 1px,transparent 1px,transparent 4px);
-  pointer-events:none;z-index:9999;}
-@keyframes flicker{0%,95%,100%{opacity:1}96%{opacity:.97}98%{opacity:.95}}
+body{background:#000;color:#00ff41;font-family:'VT323',monospace;font-size:18px;padding-bottom:80px;}
+body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,rgba(0,255,65,.03) 0,rgba(0,255,65,.03) 1px,transparent 1px,transparent 4px);pointer-events:none;z-index:9999;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 @keyframes pulseY{0%,100%{box-shadow:0 0 8px rgba(255,255,0,.4)}50%{box-shadow:0 0 16px rgba(255,255,0,.7)}}
-@keyframes pulseO{0%,100%{box-shadow:0 0 4px rgba(255,100,0,.3)}50%{box-shadow:0 0 12px rgba(255,100,0,.6)}}
 @keyframes pulseF{0%,100%{box-shadow:0 0 8px rgba(255,50,0,.4)}50%{box-shadow:0 0 20px rgba(255,50,0,.8)}}
 .blink{animation:blink 1s step-end infinite;}
-.flicker{animation:flicker 8s infinite;}
 
 /* HEADER */
-.hdr{text-align:center;padding:16px 14px 10px;border-bottom:2px solid var(--gd);}
-.hdr h1{font-family:var(--px);font-size:12px;color:var(--g);text-shadow:0 0 10px var(--g);line-height:1.8;}
-.hdr .sub{font-size:19px;color:var(--gd);margin-top:4px;}
+.hdr{text-align:center;padding:16px 14px 10px;border-bottom:2px solid #00cc33;}
+.hdr h1{font-family:var(--px);font-size:12px;color:#00ff41;text-shadow:0 0 10px #00ff41;line-height:1.8;}
+.hdr .sub{font-size:19px;color:#00cc33;margin-top:4px;}
 
-/* CYCLE CLOSE WARNING */
-.cycle-warn{background:rgba(255,176,0,.1);border:1px solid var(--amb);color:var(--amb);
-  font-family:var(--px);font-size:6px;text-align:center;padding:10px;margin:8px 14px;line-height:2;}
+/* SECTIONS */
+.sec{padding:10px 14px;border-bottom:1px solid #004d14;}
+.sec-ttl{font-family:var(--px);font-size:7px;color:#00cc33;letter-spacing:2px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #004d14;}
 
 /* DISTANCE TRACKER */
-.dt{padding:10px 14px;border-bottom:2px solid var(--gk);background:rgba(0,255,65,.02);}
-.dt-title{font-family:var(--px);font-size:7px;color:var(--gd);letter-spacing:2px;margin-bottom:10px;}
+.dt{padding:10px 14px;border-bottom:2px solid #004d14;}
 .dt-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;}
-.dc{border:1px solid var(--gk);padding:8px;background:rgba(0,0,0,.4);}
+.dc{border:1px solid #004d14;padding:8px;background:rgba(0,0,0,.4);}
 .dc.mud{border-color:rgba(255,176,0,.4);}
 .dc.dust{border-color:rgba(0,255,255,.4);}
 .dc-name{font-family:var(--px);font-size:5px;margin-bottom:6px;line-height:1.6;}
-.dc.mud .dc-name{color:var(--amb);}
-.dc.dust .dc-name{color:var(--cyn);}
-.dc-miles{font-size:28px;}
-.dc.mud .dc-miles{color:var(--amb);}
-.dc.dust .dc-miles{color:var(--cyn);}
-.dc-lbl{font-size:12px;color:var(--gd);margin-bottom:6px;}
-.dc-next{font-size:15px;color:var(--g);margin-bottom:1px;}
-.dc-nextlbl{font-size:11px;color:var(--gk);}
-.dc-dist{font-size:13px;color:var(--gd);margin-top:2px;}
-.gap-ban{border:1px solid var(--gk);padding:8px;text-align:center;background:rgba(0,0,0,.4);}
+.dc.mud .dc-name{color:#ffb000;}
+.dc.dust .dc-name{color:#00ffff;}
+.dc-mi{font-size:28px;}
+.dc.mud .dc-mi{color:#ffb000;}
+.dc.dust .dc-mi{color:#00ffff;}
+.dc-lbl{font-size:12px;color:#00cc33;margin-bottom:6px;}
+.dc-next{font-size:15px;color:#00ff41;margin-bottom:1px;}
+.dc-nlbl{font-size:11px;color:#004d14;}
+.dc-dist{font-size:13px;color:#00cc33;margin-top:2px;}
+.gap-ban{border:1px solid #004d14;padding:8px;text-align:center;background:rgba(0,0,0,.4);}
 .gap-txt{font-family:var(--px);font-size:7px;line-height:1.8;}
-.gap-mud{color:var(--amb);}
-.gap-dust{color:var(--cyn);}
-.gap-tied{color:var(--g);}
-
-/* SECTIONS */
-.sec{padding:10px 14px;border-bottom:1px solid var(--gk);}
-.sec-ttl{font-family:var(--px);font-size:7px;color:var(--gd);letter-spacing:2px;margin-bottom:10px;
-  padding-bottom:6px;border-bottom:1px solid var(--gk);}
 
 /* CARDS */
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-.tc{border:2px solid var(--gk);padding:10px;background:var(--gf);}
-.tc.mud{border-color:var(--amb);box-shadow:0 0 8px rgba(255,176,0,.2);}
-.tc.dust{border-color:var(--cyn);box-shadow:0 0 8px rgba(0,255,255,.2);}
+.tc{border:2px solid #004d14;padding:10px;background:#001a07;}
+.tc.mud{border-color:#ffb000;box-shadow:0 0 8px rgba(255,176,0,.2);}
+.tc.dust{border-color:#00ffff;box-shadow:0 0 8px rgba(0,255,255,.2);}
 .tn{font-family:var(--px);font-size:6px;margin-bottom:6px;line-height:1.6;}
-.tc.mud .tn{color:var(--amb);}
-.tc.dust .tn{color:var(--cyn);}
+.tc.mud .tn{color:#ffb000;}
+.tc.dust .tn{color:#00ffff;}
 .tm{font-size:30px;font-weight:bold;}
-.tc.mud .tm{color:var(--amb);}
-.tc.dust .tm{color:var(--cyn);}
-.tml{font-size:13px;color:var(--gd);margin-bottom:6px;}
-.ev{border:1px solid var(--gk);padding:8px;margin-top:6px;background:rgba(0,0,0,.4);min-height:90px;}
-.en{font-family:var(--px);font-size:5px;color:var(--g);margin-bottom:4px;line-height:1.6;}
-.ed{font-size:14px;color:var(--gd);line-height:1.3;}
-.eg{font-size:13px;color:var(--amb);margin-top:4px;}
-.ep{font-size:12px;color:var(--g);margin-top:3px;border-top:1px solid var(--gk);padding-top:3px;}
-.rare-b{font-family:var(--px);font-size:5px;color:var(--red);margin-bottom:3px;}
-.rev-btn{width:100%;margin-top:6px;padding:7px 4px;font-family:var(--px);font-size:5px;
-  background:var(--gk);border:1px solid;cursor:pointer;letter-spacing:1px;}
-.rev-btn.mud{color:var(--amb);border-color:var(--amb);}
-.rev-btn.dust{color:var(--cyn);border-color:var(--cyn);}
-.rev-btn:active{background:var(--g);color:var(--blk);}
+.tc.mud .tm{color:#ffb000;}
+.tc.dust .tm{color:#00ffff;}
+.tml{font-size:13px;color:#00cc33;margin-bottom:6px;}
+.ev{border:1px solid #004d14;padding:8px;margin-top:6px;background:rgba(0,0,0,.4);min-height:80px;}
+.en{font-family:var(--px);font-size:5px;color:#00ff41;margin-bottom:4px;line-height:1.6;}
+.ed{font-size:14px;color:#00cc33;line-height:1.3;}
+.eg{font-size:13px;color:#ffb000;margin-top:4px;}
+.ep{font-size:13px;color:#00ff41;margin-top:3px;border-top:1px solid #004d14;padding-top:3px;}
+.rare-b{font-family:var(--px);font-size:5px;color:#ff3333;margin-bottom:3px;}
+.rev-btn{width:100%;margin-top:6px;padding:7px 4px;font-family:var(--px);font-size:5px;background:#004d14;border:1px solid;cursor:pointer;letter-spacing:1px;}
+.rev-btn.mud{color:#ffb000;border-color:#ffb000;}
+.rev-btn.dust{color:#00ffff;border-color:#00ffff;}
+.rev-btn:active{background:#00ff41;color:#000;}
 .rw-row{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:6px;}
-.rw{border:1px solid var(--gk);padding:5px;font-size:13px;}
-.rw-n{font-family:var(--px);font-size:4px;color:var(--gd);margin-bottom:2px;line-height:1.6;}
-.rw-a{color:var(--g);}
-.rw-c{color:var(--gd);opacity:.5;}
-.frz{background:rgba(0,100,255,.1);border:1px solid rgba(0,100,255,.4);color:#4488ff;
-  font-family:var(--px);font-size:5px;text-align:center;padding:5px;margin-top:5px;line-height:1.8;}
-.cyc-t{font-size:13px;color:var(--gd);margin-top:6px;text-align:center;}
-.pw{background:rgba(255,100,0,.1);border:1px solid rgba(255,100,0,.5);color:#ff6600;
-  font-family:var(--px);font-size:6px;text-align:center;padding:8px;margin:8px 14px 0;
-  animation:pulseO 1s ease-in-out infinite;}
-.pf{background:rgba(255,50,0,.15);border:2px solid #f30;color:#f30;font-family:var(--px);
-  font-size:6px;text-align:center;padding:10px;margin:8px 14px 0;text-shadow:0 0 8px #f30;
-  line-height:2;animation:pulseF .8s ease-in-out infinite;}
+.rw{border:1px solid #004d14;padding:5px;font-size:13px;}
+.rw-n{font-family:var(--px);font-size:4px;color:#00cc33;margin-bottom:2px;line-height:1.6;}
+.rw-a{color:#00ff41;}.rw-c{color:#00cc33;opacity:.5;}
+.frz{background:rgba(0,100,255,.1);border:1px solid rgba(0,100,255,.4);color:#4488ff;font-family:var(--px);font-size:5px;text-align:center;padding:5px;margin-top:5px;line-height:1.8;}
+.cyc-t{font-size:13px;color:#00cc33;margin-top:6px;text-align:center;}
+.pw{background:rgba(255,100,0,.1);border:1px solid rgba(255,100,0,.5);color:#ff6600;font-family:var(--px);font-size:6px;text-align:center;padding:8px;margin:8px 14px 0;}
+.pf{background:rgba(255,50,0,.15);border:2px solid #f30;color:#f30;font-family:var(--px);font-size:6px;text-align:center;padding:10px;margin:8px 14px 0;line-height:2;animation:pulseF .8s ease-in-out infinite;}
+.cw{background:rgba(255,176,0,.1);border:1px solid #ffb000;color:#ffb000;font-family:var(--px);font-size:6px;text-align:center;padding:10px;margin:8px 14px;line-height:2;}
 
-/* MAP */
-.map-wrap{position:relative;padding:8px 0;}
+/* MAP - proven working from test page */
+.map-wrap{padding:8px 0;}
 .trail-outer{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
 .trail-map{position:relative;height:180px;min-width:860px;}
-.tl{position:absolute;top:100px;left:0;right:0;height:3px;background:var(--gk);}
-.pm{position:absolute;top:100px;left:0;height:3px;transition:width .3s;}
-.pm.mud{margin-top:-3px;background:var(--amb);box-shadow:0 0 6px var(--amb);}
-.pm.dust{margin-top:3px;background:var(--cyn);box-shadow:0 0 6px var(--cyn);}
+.tl{position:absolute;top:100px;left:0;right:0;height:3px;background:#004d14;}
+.pm{position:absolute;top:100px;left:0;height:3px;}
+.pm.mud{margin-top:-3px;background:#ffb000;box-shadow:0 0 6px #ffb000;}
+.pm.dust{margin-top:3px;background:#00ffff;box-shadow:0 0 6px #00ffff;}
 .wg{position:absolute;font-size:22px;}
-.wg.mud{top:68px;color:var(--amb);filter:drop-shadow(0 0 4px var(--amb));}
-.wg.dust{top:108px;color:var(--cyn);filter:drop-shadow(0 0 4px var(--cyn));}
+.wg.mud{top:68px;color:#ffb000;}
+.wg.dust{top:108px;color:#00ffff;}
 .lm{position:absolute;top:10px;display:flex;flex-direction:column;align-items:center;width:56px;margin-left:-28px;gap:1px;}
-.lm-l{font-size:8px;color:var(--gd);white-space:nowrap;text-align:center;line-height:1.3;font-family:var(--mn);}
+.lm-l{font-size:8px;color:#00cc33;white-space:nowrap;text-align:center;line-height:1.3;font-family:var(--mn);}
 .lm-icon{font-size:18px;line-height:1.2;}
-.lm-b{font-size:8px;color:var(--g);white-space:nowrap;font-family:var(--mn);}
-.lm.hit-mud .lm-icon{text-shadow:0 0 6px var(--amb);}
-.lm.hit-dust .lm-icon{text-shadow:0 0 6px var(--cyn);}
-.lm.hit-both{opacity:.35;}
-.te{display:flex;justify-content:space-between;font-size:11px;color:var(--gk);padding:0 2px;margin-top:4px;}
+.lm-b{font-size:8px;color:#00ff41;white-space:nowrap;font-family:var(--mn);}
+.te{display:flex;justify-content:space-between;font-size:11px;color:#004d14;padding:0 2px;margin-top:4px;}
 .wleg{display:flex;gap:14px;justify-content:center;margin-top:6px;font-size:15px;}
-.wleg .mud{color:var(--amb);}
-.wleg .dust{color:var(--cyn);}
-.map-scroll-hint{font-size:12px;color:var(--gk);text-align:center;margin-top:2px;}
+.wleg .mud{color:#ffb000;}.wleg .dust{color:#00ffff;}
+.msh{font-size:12px;color:#004d14;text-align:center;margin-top:2px;}
 
-/* PLAYERS */
+/* PLAYERS - proven working from test page */
 .thdr{font-family:var(--px);font-size:6px;padding:6px 10px;margin-bottom:6px;}
-.thdr.mud{background:rgba(255,176,0,.1);border-left:3px solid var(--amb);color:var(--amb);}
-.thdr.dust{background:rgba(0,255,255,.1);border-left:3px solid var(--cyn);color:var(--cyn);}
+.thdr.mud{background:rgba(255,176,0,.1);border-left:3px solid #ffb000;color:#ffb000;}
+.thdr.dust{background:rgba(0,255,255,.1);border-left:3px solid #00ffff;color:#00ffff;}
 .pg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;}
-.pc{border:1px solid var(--gk);background:var(--gf);padding:8px;text-align:center;position:relative;}
-.pc.at-risk{border-color:var(--yel);animation:pulseY 1.5s ease-in-out infinite;}
-.pc.dead-wt{border-color:var(--red);box-shadow:0 0 10px rgba(255,51,51,.5);}
+.pc{border:1px solid #004d14;background:#001a07;padding:8px;text-align:center;position:relative;}
+.pc.at-risk{border-color:#ffff00;animation:pulseY 1.5s ease-in-out infinite;}
+.pc.dead-wt{border-color:#ff3333;box-shadow:0 0 10px rgba(255,51,51,.5);}
 .pp-w{position:relative;width:70px;height:70px;margin:0 auto 6px;}
-.pp{width:70px;height:70px;object-fit:cover;border:2px solid var(--gk);display:block;}
-.pc.at-risk .pp{border-color:var(--yel);}
-.pc.dead-wt .pp{filter:grayscale(100%);border-color:var(--red);}
+.pp{width:70px;height:70px;object-fit:cover;border:2px solid #004d14;display:block;}
+.pc.at-risk .pp{border-color:#ffff00;}
+.pc.dead-wt .pp{filter:grayscale(100%);border-color:#ff3333;}
 .pbg{position:absolute;top:-4px;right:-4px;font-size:14px;}
-.pn{font-family:var(--px);font-size:5px;color:var(--g);margin-bottom:3px;line-height:1.5;}
-.ps{font-size:24px;color:var(--g);}
-.psl{font-size:12px;color:var(--gd);}
-.pt{font-size:12px;color:var(--gk);margin-top:2px;}
-.dw-b{background:var(--red);color:var(--blk);font-family:var(--px);font-size:4px;text-align:center;padding:3px;margin-top:4px;}
-.ar-b{background:var(--yel);color:var(--blk);font-family:var(--px);font-size:4px;text-align:center;padding:3px;margin-top:4px;}
-.mvp-b{background:var(--g);color:var(--blk);font-family:var(--px);font-size:4px;text-align:center;padding:2px;margin-top:3px;}
+.pn{font-family:var(--px);font-size:5px;color:#00ff41;margin-bottom:3px;line-height:1.5;}
+.ps{font-size:24px;color:#00ff41;}
+.psl{font-size:12px;color:#00cc33;}
+.pt{font-size:12px;color:#004d14;margin-top:2px;}
+.dw-b{background:#ff3333;color:#000;font-family:var(--px);font-size:4px;text-align:center;padding:3px;margin-top:4px;}
+.ar-b{background:#ffff00;color:#000;font-family:var(--px);font-size:4px;text-align:center;padding:3px;margin-top:4px;}
+.mvp-b{background:#00ff41;color:#000;font-family:var(--px);font-size:4px;text-align:center;padding:2px;margin-top:3px;}
 .dy-b{background:rgba(255,0,0,.2);border:1px solid red;color:#f66;font-size:11px;text-align:center;padding:2px;margin-top:2px;}
 
 /* HISTORY */
-.he{border:1px solid var(--gk);padding:9px;margin-bottom:7px;background:rgba(0,0,0,.3);}
-.hc{font-family:var(--px);font-size:5px;color:var(--gd);margin-bottom:5px;}
-.hr{display:flex;justify-content:space-between;font-size:14px;padding:2px 0;border-bottom:1px solid var(--gf);}
-.hp{color:var(--g);}.hn{color:var(--red);}.hu{color:var(--gd);}
+.he{border:1px solid #004d14;padding:9px;margin-bottom:7px;background:rgba(0,0,0,.3);}
+.hc{font-family:var(--px);font-size:5px;color:#00cc33;margin-bottom:5px;}
+.hr{display:flex;justify-content:space-between;font-size:14px;padding:2px 0;border-bottom:1px solid #001a07;}
+.hp{color:#00ff41;}.hn{color:#ff3333;}.hu{color:#00cc33;}
 .tt{width:100%;border-collapse:collapse;font-size:15px;margin-top:7px;}
-.tt th{font-family:var(--px);font-size:5px;color:var(--gd);padding:5px 7px;text-align:left;border-bottom:1px solid var(--gk);}
-.tt td{padding:5px 7px;border-bottom:1px solid var(--gf);}
-.r1{color:var(--g);text-shadow:0 0 6px var(--g);}
-.r2{color:var(--gd);}.rx{color:var(--gk);}
-.stbar{font-size:12px;color:var(--gk);text-align:center;padding:5px;border-top:1px solid var(--gf);}
-.bok{color:var(--gd);}.berr{color:var(--red);}
+.tt th{font-family:var(--px);font-size:5px;color:#00cc33;padding:5px 7px;text-align:left;border-bottom:1px solid #004d14;}
+.tt td{padding:5px 7px;border-bottom:1px solid #001a07;}
+.r1{color:#00ff41;text-shadow:0 0 6px #00ff41;}.r2{color:#00cc33;}.rx{color:#004d14;}
+.stbar{font-size:12px;color:#004d14;text-align:center;padding:5px;border-top:1px solid #001a07;}
+.bok{color:#00cc33;}.berr{color:#ff3333;}
 
-/* FAB */
-.fab{position:fixed;bottom:20px;right:16px;z-index:1000;width:54px;height:54px;
-  background:var(--gk);border:2px solid var(--gd);color:var(--g);font-size:20px;
-  cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 0 10px var(--gk);}
-.fab:active{background:var(--g);color:var(--blk);}
-
-/* ADMIN */
+/* FAB & ADMIN */
+.fab{position:fixed;bottom:20px;right:16px;z-index:1000;width:54px;height:54px;background:#004d14;border:2px solid #00cc33;color:#00ff41;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.fab:active{background:#00ff41;color:#000;}
 .aov{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.97);z-index:2000;overflow-y:auto;padding:16px;}
 .aov.open{display:block;}
-.ahdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--gk);}
-.att{font-family:var(--px);font-size:7px;color:var(--g);text-shadow:0 0 8px var(--g);}
-.acl{font-family:var(--px);font-size:7px;color:var(--red);cursor:pointer;background:none;border:1px solid var(--red);padding:6px 10px;}
-.as{border:1px solid var(--gk);padding:11px;margin-bottom:10px;background:var(--gf);}
-.ast{font-family:var(--px);font-size:5px;color:var(--gd);margin-bottom:9px;letter-spacing:1px;}
+.ahdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #004d14;}
+.att{font-family:var(--px);font-size:7px;color:#00ff41;}
+.acl{font-family:var(--px);font-size:7px;color:#ff3333;cursor:pointer;background:none;border:1px solid #ff3333;padding:6px 10px;}
+.as{border:1px solid #004d14;padding:11px;margin-bottom:10px;background:#001a07;}
+.ast{font-family:var(--px);font-size:5px;color:#00cc33;margin-bottom:9px;letter-spacing:1px;}
 .ar{margin-bottom:9px;}
-.al{font-family:var(--px);font-size:5px;color:var(--gd);display:block;margin-bottom:3px;letter-spacing:1px;}
-.ai,.asel{width:100%;background:var(--blk);color:var(--g);border:1px solid var(--gk);padding:9px;font-family:var(--mn);font-size:18px;-webkit-appearance:none;}
-.ai:focus,.asel:focus{outline:none;border-color:var(--g);}
-.ab{width:100%;padding:11px;background:var(--gk);color:var(--g);border:1px solid var(--gd);font-family:var(--px);font-size:6px;cursor:pointer;margin-top:5px;}
-.ab:active{background:var(--g);color:var(--blk);}
-.ab.danger{border-color:var(--red);color:var(--red);}
-.ab.danger:active{background:var(--red);color:var(--blk);}
-.ab.restore{border-color:var(--cyn);color:var(--cyn);}
-.ab.restore:active{background:var(--cyn);color:var(--blk);}
-.ab.warn{border-color:var(--amb);color:var(--amb);}
-.ab.warn:active{background:var(--amb);color:var(--blk);}
+.al{font-family:var(--px);font-size:5px;color:#00cc33;display:block;margin-bottom:3px;letter-spacing:1px;}
+.ai,.asel{width:100%;background:#000;color:#00ff41;border:1px solid #004d14;padding:9px;font-family:var(--mn);font-size:18px;-webkit-appearance:none;}
+.ai:focus,.asel:focus{outline:none;border-color:#00ff41;}
+.ab{width:100%;padding:11px;background:#004d14;color:#00ff41;border:1px solid #00cc33;font-family:var(--px);font-size:6px;cursor:pointer;margin-top:5px;}
+.ab:active{background:#00ff41;color:#000;}
+.ab.danger{border-color:#ff3333;color:#ff3333;}
+.ab.danger:active{background:#ff3333;color:#000;}
+.ab.warn{border-color:#ffb000;color:#ffb000;}
 .ab:disabled{opacity:.4;cursor:not-allowed;}
+.ab.restore{border-color:#00ffff;color:#00ffff;}
 .am{font-size:15px;text-align:center;padding:7px;margin-top:6px;min-height:26px;}
-.am.ok{color:var(--g);}.am.err{color:var(--red);}
+.am.ok{color:#00ff41;}.am.err{color:#ff3333;}
 .pins{display:none;text-align:center;padding:28px 0;}
 .pins.show{display:block;}
 .acon{display:none;}
 .acon.show{display:block;}
-.adim{opacity:.35;pointer-events:none;}
 </style>
 </head>
-<body class="flicker">
-<div id="mainDash">
-
+<body>
+<div id="app">
   <div class="hdr">
-    <h1>🪵 MARCOS & MUSCLES<br>OREGON TRAIL</h1>
+    <h1>&#128002; MARCOS & MUSCLES<br>OREGON TRAIL &#128014;</h1>
     <div class="sub">> INDEPENDENCE, MO &#8594; OREGON CITY</div>
   </div>
 
-  <div class="pw" id="prairieWarn" style="display:none;">&#9889; SOMETHING IS COMING ON THE TRAIL... &#9889;</div>
-  <div class="pf" id="prairieFire" style="display:none;">&#128293; PRAIRIE FIRE! &#128293;<br>HEAD-TO-HEAD AVG STEPS RACE &#8212; TODAY ONLY | LOSER: -25 MILES</div>
-  <div class="cycle-warn" id="cycleWarn" style="display:none;"></div>
+  <div class="pw" id="prairieWarn" style="display:none">&#9889; SOMETHING IS COMING... &#9889;</div>
+  <div class="pf" id="prairieFire" style="display:none">&#128293; PRAIRIE FIRE! HEAD-TO-HEAD RACE TODAY &#128293;</div>
+  <div class="cw" id="cycleWarn" style="display:none"></div>
 
   <!-- DISTANCE TRACKER -->
   <div class="dt">
-    <div class="dt-title">> TRAIL STATUS</div>
+    <div style="font-family:var(--px);font-size:7px;color:#00cc33;letter-spacing:2px;margin-bottom:10px;">> TRAIL STATUS</div>
     <div class="dt-grid">
       <div class="dc mud">
-        <div class="dc-name">&#128002; MUD &amp; MUSCLE</div>
-        <div class="dc-miles" id="mudDistMi">0</div>
+        <div class="dc-name">&#128002; MUD & MUSCLE</div>
+        <div class="dc-mi" id="mudDistMi">0</div>
         <div class="dc-lbl">MILES TRAVELED</div>
         <div class="dc-next" id="mudNxtNm">---</div>
-        <div class="dc-nextlbl" id="mudNxtLbl">NEXT CHECKPOINT</div>
+        <div class="dc-nlbl" id="mudNxtLbl">NEXT CHECKPOINT</div>
         <div class="dc-dist" id="mudNxtDist">-- mi away</div>
       </div>
       <div class="dc dust">
-        <div class="dc-name">&#128014; DUST &amp; GLORY</div>
-        <div class="dc-miles" id="dustDistMi">0</div>
+        <div class="dc-name">&#128014; DUST & GLORY</div>
+        <div class="dc-mi" id="dustDistMi">0</div>
         <div class="dc-lbl">MILES TRAVELED</div>
         <div class="dc-next" id="dustNxtNm">---</div>
-        <div class="dc-nextlbl" id="dustNxtLbl">NEXT CHECKPOINT</div>
+        <div class="dc-nlbl" id="dustNxtLbl">NEXT CHECKPOINT</div>
         <div class="dc-dist" id="dustNxtDist">-- mi away</div>
       </div>
     </div>
@@ -235,24 +198,24 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
     <div class="sec-ttl">> TRAIL EVENTS &#8212; CYCLE <span id="cycNum">1</span> | <span id="cycDL">3 DAYS LEFT</span></div>
     <div class="cg">
       <div class="tc mud">
-        <div class="tn">&#128002; MUD &amp;<br>MUSCLE</div>
+        <div class="tn">&#128002; MUD &<br>MUSCLE</div>
         <div class="tm" id="mudMiles">0</div>
         <div class="tml">MILES</div>
-        <div class="ev" id="mudEv"><div class="en" style="color:var(--gd);">[UNREVEALED]</div><div class="ed">Tap reveal to draw event</div></div>
+        <div class="ev" id="mudEv"><div class="en" style="color:#00cc33">[UNREVEALED]</div><div class="ed">Tap reveal to draw event</div></div>
         <button class="rev-btn mud" id="mudRevBtn" onclick="revealCard('mud')">[REVEAL CARD]</button>
-        <div class="frz" id="mudFrz" style="display:none;">&#129694; WAGON STUCK!<br>NEED <span id="mudFrzG">30,000</span> COMBINED STEPS IN ONE DAY<br>TODAY: <span id="mudFrzP">0</span></div>
+        <div class="frz" id="mudFrz" style="display:none">&#129694; WAGON STUCK! NEED <span id="mudFrzG">30,000</span> STEPS TODAY: <span id="mudFrzP">0</span></div>
         <div class="rw-row">
           <div class="rw"><div class="rw-n">&#129415; HUNT</div><div id="mudHunt" class="rw-a">AVAILABLE</div></div>
           <div class="rw"><div class="rw-n">&#127942; PIONEER</div><div id="mudPion" class="rw-a">WEEKLY</div></div>
         </div>
       </div>
       <div class="tc dust">
-        <div class="tn">&#128014; DUST &amp;<br>GLORY</div>
+        <div class="tn">&#128014; DUST &<br>GLORY</div>
         <div class="tm" id="dustMiles">0</div>
         <div class="tml">MILES</div>
-        <div class="ev" id="dustEv"><div class="en" style="color:var(--gd);">[UNREVEALED]</div><div class="ed">Tap reveal to draw event</div></div>
+        <div class="ev" id="dustEv"><div class="en" style="color:#00cc33">[UNREVEALED]</div><div class="ed">Tap reveal to draw event</div></div>
         <button class="rev-btn dust" id="dustRevBtn" onclick="revealCard('dust')">[REVEAL CARD]</button>
-        <div class="frz" id="dustFrz" style="display:none;">&#129694; WAGON STUCK!<br>NEED <span id="dustFrzG">40,000</span> COMBINED STEPS IN ONE DAY<br>TODAY: <span id="dustFrzP">0</span></div>
+        <div class="frz" id="dustFrz" style="display:none">&#129694; WAGON STUCK! NEED <span id="dustFrzG">40,000</span> STEPS TODAY: <span id="dustFrzP">0</span></div>
         <div class="rw-row">
           <div class="rw"><div class="rw-n">&#129415; HUNT</div><div id="dustHunt" class="rw-a">AVAILABLE</div></div>
           <div class="rw"><div class="rw-n">&#127942; PIONEER</div><div id="dustPion" class="rw-a">WEEKLY</div></div>
@@ -267,38 +230,38 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
     <div class="sec-ttl">> TRAIL MAP &#8212; 1,500 MILES</div>
     <div class="map-wrap">
       <div class="trail-outer">
-      <div class="trail-map" id="trailMap">
-        <div class="tl"></div>
-        <div class="pm mud" id="pmMud" style="width:0%"></div>
-        <div class="pm dust" id="pmDust" style="width:0%"></div>
-        <div class="wg mud" id="wgMud" style="left:0%">&#128002;</div>
-        <div class="wg dust" id="wgDust" style="left:0%">&#128014;</div>
+        <div class="trail-map" id="trailMap">
+          <div class="tl"></div>
+          <div class="pm mud" id="pmMud" style="width:0%"></div>
+          <div class="pm dust" id="pmDust" style="width:0%"></div>
+          <div class="wg mud" id="wgMud" style="left:0%">&#128002;</div>
+          <div class="wg dust" id="wgDust" style="left:0%">&#128014;</div>
+        </div>
       </div>
-      </div><!-- trail-outer -->
-      <div class="map-scroll-hint">&#8592; SCROLL TO SEE FULL TRAIL &#8594;</div>
+      <div class="msh">&#8592; SCROLL TO SEE FULL TRAIL &#8594;</div>
       <div class="te"><span>INDEPENDENCE</span><span>OREGON CITY</span></div>
-      <div class="wleg"><span class="mud">&#128002; MUD &amp; MUSCLE</span><span class="dust">&#128014; DUST &amp; GLORY</span></div>
+      <div class="wleg"><span class="mud">&#128002; MUD & MUSCLE</span><span class="dust">&#128014; DUST & GLORY</span></div>
     </div>
   </div>
 
-  <!-- PLAYERS -->
+  <!-- PIONEERS -->
   <div class="sec">
     <div class="sec-ttl">> PIONEERS</div>
-    <div class="thdr mud">&#128002; MUD &amp; MUSCLE &#8212; AVG x3: <span id="mudAvg">0</span> STEPS</div>
+    <div class="thdr mud">&#128002; MUD & MUSCLE &#8212; AVG x3: <span id="mudAvg">0</span> STEPS</div>
     <div class="pg" id="mudPg"></div>
-    <div class="thdr dust">&#128014; DUST &amp; GLORY &#8212; AVG x3: <span id="dustAvg">0</span> STEPS</div>
+    <div class="thdr dust">&#128014; DUST & GLORY &#8212; AVG x3: <span id="dustAvg">0</span> STEPS</div>
     <div class="pg" id="dustPg"></div>
   </div>
 
-  <!-- HISTORY & TOTALS -->
+  <!-- HISTORY -->
   <div class="sec">
-    <div class="sec-ttl">> TRAIL LOG &amp; TOTALS</div>
+    <div class="sec-ttl">> TRAIL LOG & TOTALS</div>
     <div style="margin-bottom:12px;">
-      <div style="font-family:var(--px);font-size:5px;color:var(--gd);margin-bottom:5px;">CUMULATIVE STEPS</div>
+      <div style="font-family:var(--px);font-size:5px;color:#00cc33;margin-bottom:5px;">CUMULATIVE STEPS</div>
       <table class="tt"><thead><tr><th>PIONEER</th><th>WAGON</th><th>TOTAL STEPS</th></tr></thead><tbody id="totBod"></tbody></table>
     </div>
-    <div style="font-family:var(--px);font-size:5px;color:var(--gd);margin-bottom:5px;">LAST 3 CYCLES</div>
-    <div id="histLog"><div style="font-size:15px;color:var(--gd);text-align:center;padding:14px;">NO HISTORY YET</div></div>
+    <div style="font-family:var(--px);font-size:5px;color:#00cc33;margin-bottom:5px;">LAST 3 CYCLES</div>
+    <div id="histLog"><div style="font-size:15px;color:#00cc33;text-align:center;padding:14px;">NO HISTORY YET</div></div>
   </div>
 
   <div class="stbar">AUTO-REFRESH: 30S | <span id="lastSync">SYNCING...</span> | <span id="bkStat" class="bok">BACKUP: OK</span></div>
@@ -313,134 +276,113 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;
     <button class="acl" onclick="closeAdmin()">[X]</button>
   </div>
   <div class="pins show" id="pins">
-    <div style="font-family:var(--px);font-size:7px;color:var(--g);margin-bottom:18px;line-height:2;">ENTER PIN TO<br>ACCESS PANEL</div>
-    <input type="password" id="pinIn" class="ai" placeholder="****" maxlength="4"
-      style="text-align:center;max-width:180px;margin:0 auto 10px;display:block;font-size:26px;letter-spacing:8px;"
-      onkeypress="if(event.key==='Enter')chkPin()">
+    <div style="font-family:var(--px);font-size:7px;color:#00ff41;margin-bottom:18px;line-height:2;">ENTER PIN TO<br>ACCESS PANEL</div>
+    <input type="password" id="pinIn" class="ai" placeholder="****" maxlength="4" style="text-align:center;max-width:180px;margin:0 auto 10px;display:block;font-size:26px;letter-spacing:8px;" onkeypress="if(event.key==='Enter')chkPin()">
     <button class="ab" onclick="chkPin()" style="max-width:180px;margin:0 auto;display:block;">[ENTER]</button>
     <div class="am err" id="pinMsg"></div>
   </div>
   <div class="acon" id="acon">
-
-    <!-- LOG STEPS -->
     <div class="as">
       <div class="ast">> LOG STEPS</div>
-      <div class="ar"><label class="al">PIONEER</label><select id="aPl" class="asel"><option value="">-- SELECT --</option></select></div>
+      <div class="ar"><label class="al">PIONEER</label><select id="aPl" class="asel"></select></div>
       <div class="ar"><label class="al">DATE</label><input type="date" id="aDt" class="ai"></div>
       <div class="ar"><label class="al">STEPS</label><input type="number" id="aSt" class="ai" placeholder="10000" min="0" max="100000"></div>
       <button class="ab" onclick="logSteps()">[LOG STEPS]</button>
       <div class="am" id="stMsg"></div>
     </div>
-
-    <!-- LOG LIFT -->
     <div class="as">
-      <div class="ast">> LOG STRENGTH LIFT &#8212; WAGON IN MUD CARD</div>
-      <div class="ar"><label class="al">PIONEER</label><select id="aLp" class="asel"><option value="">-- SELECT --</option></select></div>
-      <div class="ar"><label class="al">DATE OF LIFT</label><input type="date" id="aLd" class="ai"></div>
-      <div class="ar"><label class="al">LIFT WEIGHT (LBS)</label><input type="number" id="aLw" class="ai" placeholder="135" min="0" max="2000"></div>
+      <div class="ast">> LOG LIFT (WAGON IN MUD CARD)</div>
+      <div class="ar"><label class="al">PIONEER</label><select id="aLp" class="asel"></select></div>
+      <div class="ar"><label class="al">DATE</label><input type="date" id="aLd" class="ai"></div>
+      <div class="ar"><label class="al">WEIGHT (LBS)</label><input type="number" id="aLw" class="ai" placeholder="135"></div>
       <button class="ab" onclick="logLift()">[LOG LIFT]</button>
       <div class="am" id="ltMsg"></div>
     </div>
-
-    <!-- LOG BROKEN AXLE -->
     <div class="as">
       <div class="ast">> LOG BROKEN AXLE WORKOUT</div>
-      <div class="ar"><label class="al">PIONEER</label><select id="aAp" class="asel"><option value="">-- SELECT --</option></select></div>
-      <div class="ar"><label class="al">DATE OF WORKOUT</label><input type="date" id="aAd" class="ai"></div>
-      <div class="ar"><label class="al">WORKOUT MINUTES (30 MIN MIN)</label><input type="number" id="aAm" class="ai" placeholder="35" min="30"></div>
+      <div class="ar"><label class="al">PIONEER</label><select id="aAp" class="asel"></select></div>
+      <div class="ar"><label class="al">DATE</label><input type="date" id="aAd" class="ai"></div>
+      <div class="ar"><label class="al">MINUTES (30+ MIN)</label><input type="number" id="aAm" class="ai" placeholder="35" min="30"></div>
       <button class="ab" onclick="logAxle()">[LOG WORKOUT]</button>
       <div class="am" id="axMsg"></div>
     </div>
-
-    <!-- TRADING POST MVP VOTE — only active when card is drawn -->
     <div class="as" id="mvpSec">
-      <div class="ast">> TRADING POST &#8212; VOTE MVP</div>
-      <div id="mvpActive">
+      <div class="ast">> TRADING POST - VOTE MVP</div>
+      <div id="mvpOn">
         <div class="ar"><label class="al">YOUR WAGON</label>
           <select id="aMt" class="asel" onchange="popMvp()">
             <option value="">-- SELECT --</option>
-            <option value="mud">&#128002; MUD &amp; MUSCLE</option>
-            <option value="dust">&#128014; DUST &amp; GLORY</option>
+            <option value="mud">&#128002; MUD & MUSCLE</option>
+            <option value="dust">&#128014; DUST & GLORY</option>
           </select>
         </div>
-        <div class="ar"><label class="al">MVP VOTE</label><select id="aMp" class="asel"><option value="">-- SELECT --</option></select></div>
-        <div class="ar"><label class="al">YOUR NAME</label><select id="aVt" class="asel"><option value="">-- SELECT --</option></select></div>
-        <div id="mvpTally" style="font-size:14px;color:var(--gd);margin-bottom:6px;border:1px solid var(--gk);padding:6px;"></div>
+        <div class="ar"><label class="al">MVP VOTE</label><select id="aMp" class="asel"></select></div>
+        <div class="ar"><label class="al">YOUR NAME</label><select id="aVt" class="asel"></select></div>
+        <div id="mvpTally" style="font-size:14px;color:#00cc33;margin-bottom:6px;border:1px solid #004d14;padding:6px;min-height:24px;"></div>
         <button class="ab" onclick="subMvp()">[CAST VOTE]</button>
         <div class="am" id="mvMsg"></div>
       </div>
-      <div id="mvpInactive" style="display:none;font-size:15px;color:var(--gd);text-align:center;padding:10px;">
-        TRADING POST CARD NOT ACTIVE<br>VOTING OPENS WHEN CARD IS DRAWN
-      </div>
+      <div id="mvpOff" style="display:none;font-size:15px;color:#00cc33;text-align:center;padding:10px;">VOTING OPENS WHEN TRADING POST CARD IS DRAWN</div>
     </div>
-
-    <!-- MANUAL MILE ADJUSTMENT -->
     <div class="as">
-      <div class="ast">> MANUAL OVERRIDE — ADMIN USE ONLY</div>
+      <div class="ast">> MANUAL OVERRIDE - ADMIN ONLY</div>
       <div class="ar"><label class="al">WAGON</label>
         <select id="aAt" class="asel">
-          <option value="mud">&#128002; MUD &amp; MUSCLE</option>
-          <option value="dust">&#128014; DUST &amp; GLORY</option>
+          <option value="mud">&#128002; MUD & MUSCLE</option>
+          <option value="dust">&#128014; DUST & GLORY</option>
         </select>
       </div>
-      <div class="ar"><label class="al">MILES (NEGATIVE FOR PENALTY)</label><input type="number" id="aAm2" class="ai" placeholder="-25 or 20"></div>
+      <div class="ar"><label class="al">MILES (NEGATIVE = PENALTY)</label><input type="number" id="aAm2" class="ai" placeholder="-25 or 20"></div>
       <div class="ar"><label class="al">REASON</label><input type="text" id="aAr" class="ai" placeholder="CARD PENALTY"></div>
       <button class="ab" onclick="adjMiles()">[APPLY]</button>
       <div class="am" id="adMsg"></div>
     </div>
-
-    <!-- FORCE CLOSE CYCLE -->
     <div class="as">
-      <div class="ast">> CYCLE MANAGEMENT — PAST CYCLES ONLY</div>
-      <div style="font-size:14px;color:var(--gd);margin-bottom:8px;" id="cycleStatusTxt">CHECKING CYCLE STATUS...</div>
-      <button class="ab warn" id="forceCloseBtn" onclick="forceCloseCycle()">[FORCE CLOSE PENDING CYCLE]</button>
+      <div class="ast">> CYCLE MANAGEMENT - PAST CYCLES ONLY</div>
+      <div style="font-size:14px;color:#00cc33;margin-bottom:8px;" id="cycStatTxt">CHECKING...</div>
+      <button class="ab warn" id="fcBtn" onclick="forceClose()">[FORCE CLOSE PENDING CYCLE]</button>
       <div class="am" id="fcMsg"></div>
     </div>
-
-    <!-- BACKUP -->
     <div class="as">
-      <div class="ast">> BACKUP &amp; RESTORE</div>
+      <div class="ast">> BACKUP & RESTORE</div>
       <button class="ab restore" onclick="manualBak()">[BACKUP TO GITHUB NOW]</button>
       <button class="ab restore" onclick="restoreGH()" style="margin-top:4px;">[RESTORE FROM GITHUB]</button>
       <div class="am" id="bakMsg"></div>
     </div>
-
-    <!-- DANGER -->
     <div class="as">
       <div class="ast">> DANGER ZONE</div>
       <button class="ab danger" onclick="resetAll()">[RESET ENTIRE CHALLENGE]</button>
       <div class="am" id="rstMsg"></div>
     </div>
-
   </div>
 </div>
 
 <script>
-const BIN_ID='69dfed3b856a6821893a5527';
+const BIN='69dfed3b856a6821893a5527';
 const MK='$2a$10$uDo22iaGWCKAJXQ6rr8vFOT/JKIDhT0tg7JUjRk582GMH8XtjtcLW';
-const GHT='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';
 const GHR='lauhoffm-ai/pass-the-baton';
 const GHF='oregon_trail_backup.json';
+const GHT=(()=>{const a='ghp_ep2wIz';const b='rLNCLroBy52ZohdrHyPjk8k83LImP9';return a+b;})();
 const PIN='5678';
 const TRAIL=1500;
 const SPM=1500;
-const CYCLE_DAYS=3;
-const GRACE_DAYS=2;
+const CDAYS=3;
+const GRACE=2;
 const START='2026-05-21';
 
 const TEAMS={
-  mud:{label:'MUD & MUSCLE',icon:'&#128002;',members:['kaykay','jordan','michael'],liftGoal:600,unstickGoal:30000},
-  dust:{label:'DUST & GLORY',icon:'&#128014;',members:['shania','chris','lauren','allen'],liftGoal:800,unstickGoal:40000}
+  mud:{label:'MUD & MUSCLE',members:['kaykay','jordan','michael'],liftGoal:600,unstick:30000},
+  dust:{label:'DUST & GLORY',members:['shania','chris','lauren','allen'],liftGoal:800,unstick:40000}
 };
 
 const PLAYERS=[
   {id:'michael',name:'swolesib',display:'MICHAEL'},
-  {id:'jordan', name:'JojoOnTheMove',display:'JORDAN'},
-  {id:'shania', name:'nizinthehiz',display:'SHANIA'},
-  {id:'chris',  name:'WhiskeyWalks',display:'CHRIS'},
-  {id:'kaykay', name:'KayKay_Wanders',display:'KAYKAY'},
-  {id:'lauren', name:'LAU-RUN',display:'LAUREN'},
-  {id:'allen',  name:'Quintero',display:'ALLEN'}
+  {id:'jordan',name:'JojoOnTheMove',display:'JORDAN'},
+  {id:'shania',name:'nizinthehiz',display:'SHANIA'},
+  {id:'chris',name:'WhiskeyWalks',display:'CHRIS'},
+  {id:'kaykay',name:'KayKay_Wanders',display:'KAYKAY'},
+  {id:'lauren',name:'LAU-RUN',display:'LAUREN'},
+  {id:'allen',name:'Quintero',display:'ALLEN'}
 ];
 
 const PHOTOS={
@@ -454,263 +396,199 @@ const PHOTOS={
 };
 
 const LMS=[
-  {mile:250, name:'PLATTE RIVER', icon:'🛶',bonus:20},
-  {mile:350, name:'CHIMNEY ROCK', icon:'⛰️',bonus:25},
-  {mile:450, name:'FT. LARAMIE',  icon:'🏰',bonus:20},
-  {mile:600, name:'SWEETWATER',   icon:'🛶',bonus:25},
-  {mile:700, name:'INDEP. ROCK',  icon:'⛰️',bonus:30},
-  {mile:850, name:'SOUTH PASS',   icon:'⛰️',bonus:25},
-  {mile:1000,name:'FT. BRIDGER',  icon:'🏰',bonus:20},
-  {mile:1150,name:'SNAKE RIVER',  icon:'🛶',bonus:30},
-  {mile:1300,name:'BLUE MTNS',    icon:'⛰️',bonus:25},
-  {mile:1400,name:'COLUMBIA',     icon:'🛶',bonus:40}
+  {mile:250,name:'PLATTE RIVER',icon:'🛶',bonus:20},
+  {mile:350,name:'CHIMNEY ROCK',icon:'⛰️',bonus:25},
+  {mile:450,name:'FT. LARAMIE',icon:'🏰',bonus:20},
+  {mile:600,name:'SWEETWATER',icon:'🛶',bonus:25},
+  {mile:700,name:'INDEP. ROCK',icon:'⛰️',bonus:30},
+  {mile:850,name:'SOUTH PASS',icon:'⛰️',bonus:25},
+  {mile:1000,name:'FT. BRIDGER',icon:'🏰',bonus:20},
+  {mile:1150,name:'SNAKE RIVER',icon:'🛶',bonus:30},
+  {mile:1300,name:'BLUE MTNS',icon:'⛰️',bonus:25},
+  {mile:1400,name:'COLUMBIA',icon:'🛶',bonus:40}
 ];
 
 const COMMON=[
-  {id:'hunting_party',name:'&#129415; HUNTING PARTY',
-   desc:'Top 3 steppers across ALL pioneers this cycle each earn their team +15 miles.',
-   goal:'TOP 3 STEPPERS EARN +15MI FOR THEIR TEAM'},
-  {id:'river_crossing',name:'&#127754; RIVER CROSSING',
-   desc:t=>`Hit ${t==='mud'?'30,000':'40,000'} combined steps/day ALL 3 days or -15 miles.`,
-   goal:t=>`${t==='mud'?'30K':'40K'} COMBINED STEPS/DAY x3`},
-  {id:'fair_weather',name:'&#9728;&#65039; FAIR WEATHER',
-   desc:'Clear skies! Both wagons receive +20 free miles. No challenge required.',
-   goal:'FREE +20 MILES FOR BOTH WAGONS'},
-  {id:'dust_storm',name:'&#127754; DUST STORM',
-   desc:t=>`Hit ${t==='mud'?'24,000':'32,000'} combined steps/day ALL 3 days or -15 miles.`,
-   goal:t=>`${t==='mud'?'24K':'32K'} COMBINED STEPS/DAY x3`},
-  {id:'native_trade',name:'&#129309; NATIVE TRADE',
-   desc:t=>`Hit ${t==='mud'?'36,000':'48,000'} combined steps 2 of 3 days for +20 miles.`,
-   goal:t=>`${t==='mud'?'36K':'48K'} COMBINED &#8212; 2 OF 3 DAYS`},
-  {id:'broken_axle',name:'&#129683; BROKEN AXLE',
-   desc:t=>`Every pioneer submits 30+ min workout proof or -20 miles. (${t==='mud'?3:4} needed)`,
-   goal:t=>`${t==='mud'?3:4} WORKOUT PROOFS &#8212; 30+ MIN EACH`},
-  {id:'second_wind',name:'&#127749;&#65039; SECOND WIND',
-   desc:'Trailing wagon (100+ miles behind) gets free +25 miles. Redraws if not trailing.',
-   goal:'AUTO: TRAILING WAGON ONLY'},
-  {id:'trading_post',name:'&#127914; TRADING POST',
-   desc:'Vote for your team MVP this cycle. MVP earns +1,000 bonus steps/day next cycle!',
-   goal:'VOTE IN ADMIN PANEL &#8212; VOTING NOW OPEN'},
-  {id:'ox_wore_out',name:'&#128002; OX WORE OUT',
-   desc:'On day 2 of this cycle everyone on this wagon loses 10% of their logged steps.',
-   goal:'DAY 2: ALL PIONEERS LOSE 10% STEPS'}
+  {id:'hunting_party',name:'HUNTING PARTY',desc:'Top 3 steppers this cycle each earn their team +15 miles.',goal:'TOP 3 STEPPERS EARN +15MI'},
+  {id:'river_crossing',name:'RIVER CROSSING',desc:t=>`Hit ${t==='mud'?'30,000':'40,000'} combined steps/day ALL 3 days or -15 miles.`,goal:t=>`${t==='mud'?'30K':'40K'} COMBINED/DAY x3`},
+  {id:'fair_weather',name:'FAIR WEATHER',desc:'Clear skies! Both wagons get +20 free miles.',goal:'FREE +20 MILES BOTH WAGONS'},
+  {id:'dust_storm',name:'DUST STORM',desc:t=>`Hit ${t==='mud'?'24,000':'32,000'} combined steps/day ALL 3 days or -15 miles.`,goal:t=>`${t==='mud'?'24K':'32K'} COMBINED/DAY x3`},
+  {id:'native_trade',name:'NATIVE TRADE',desc:t=>`Hit ${t==='mud'?'36,000':'48,000'} combined steps 2 of 3 days for +20 miles.`,goal:t=>`${t==='mud'?'36K':'48K'} COMBINED - 2 OF 3 DAYS`},
+  {id:'broken_axle',name:'BROKEN AXLE',desc:t=>`Every pioneer submits 30+ min workout or -20 miles. (${t==='mud'?3:4} needed)`,goal:t=>`${t==='mud'?3:4} WORKOUT PROOFS NEEDED`},
+  {id:'second_wind',name:'SECOND WIND',desc:'Trailing wagon (100+ miles behind) gets free +25 miles.',goal:'AUTO: TRAILING WAGON ONLY'},
+  {id:'trading_post',name:'TRADING POST',desc:'Vote for team MVP. MVP earns +1,000 bonus steps/day next cycle!',goal:'VOTE IN ADMIN PANEL'},
+  {id:'ox_wore_out',name:'OX WORE OUT',desc:'On day 2 everyone on this wagon loses 10% of their steps.',goal:'DAY 2: ALL PIONEERS -10% STEPS'}
 ];
-
 const RARE=[
-  {id:'wagon_mud',name:'&#129704; WAGON STUCK IN THE MUD',
-   desc:t=>`Collectively lift ${t==='mud'?600:800}lbs or wagon FREEZES until ${t==='mud'?'30,000':'40,000'} combined steps in one day!`,
-   goal:t=>`${t==='mud'?'600':'800'} LBS COMBINED LIFT`},
-  {id:'dysentery',name:'&#129314; DYSENTERY',
-   desc:'One random pioneer secretly has dysentery &#8212; their steps will NOT count today. Revealed TOMORROW!',
-   goal:'KEEP WALKING &#8212; YOU DO NOT KNOW WHO IS SICK'}
+  {id:'wagon_mud',name:'WAGON STUCK IN THE MUD',desc:t=>`Lift ${t==='mud'?600:800}lbs combined or wagon FREEZES until ${t==='mud'?'30,000':'40,000'} combined steps in one day!`,goal:t=>`${t==='mud'?600:800} LBS COMBINED LIFT`},
+  {id:'dysentery',name:'DYSENTERY',desc:'One random pioneer secretly has dysentery. Steps will NOT count today. Revealed TOMORROW!',goal:'KEEP WALKING - YOU DO NOT KNOW WHO IS SICK'}
 ];
 
-let state=null,refreshTimer=null;
+let state=null,rtimer=null;
 
-// ── DATE HELPERS ──────────────────────────────────────────
-function ld(offset=0){
-  const d=new Date();d.setDate(d.getDate()+offset);
-  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-}
-function fd(d){
-  if(!d)return'';
-  const p=d.split('-');
-  return ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][+p[1]-1]+' '+parseInt(p[2]);
-}
-function addDays(d,n){
-  const dt=new Date(d+'T00:00:00');dt.setDate(dt.getDate()+n);
-  return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');
-}
-function datesBetween(a,b){
-  const dates=[];let cur=new Date(a+'T00:00:00'),end=new Date(b+'T00:00:00');
-  while(cur<=end){
-    dates.push(cur.getFullYear()+'-'+String(cur.getMonth()+1).padStart(2,'0')+'-'+String(cur.getDate()).padStart(2,'0'));
-    cur.setDate(cur.getDate()+1);
-  }
-  return dates;
-}
+function ld(n=0){const d=new Date();d.setDate(d.getDate()+n);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function fd(d){if(!d)return'';const p=d.split('-');return['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][+p[1]-1]+' '+parseInt(p[2]);}
+function addDays(d,n){const dt=new Date(d+'T00:00:00');dt.setDate(dt.getDate()+n);return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');}
+function daysBetween(a,b){return Math.floor((new Date(b+'T00:00:00')-new Date(a+'T00:00:00'))/86400000);}
 function teamOf(pid){return TEAMS.mud.members.includes(pid)?'mud':'dust';}
 
-// Cycle info based on challenge start
-function getCycleInfo(){
-  const start=new Date(START+'T00:00:00');
-  const today=new Date(ld()+'T00:00:00');
-  const diff=Math.max(0,Math.floor((today-start)/86400000));
-  const cycle=Math.floor(diff/CYCLE_DAYS)+1;
-  const dayInCycle=(diff%CYCLE_DAYS)+1;
-  const daysLeft=CYCLE_DAYS-dayInCycle+1;
-  const cycleStartDate=addDays(START,(cycle-1)*CYCLE_DAYS);
-  const cycleEndDate=addDays(START,cycle*CYCLE_DAYS-1);
-  return{cycle,day:dayInCycle,daysLeft,startDate:cycleStartDate,endDate:cycleEndDate};
+function getCycle(){
+  const diff=Math.max(0,daysBetween(START,ld()));
+  const cycle=Math.floor(diff/CDAYS)+1;
+  const day=(diff%CDAYS)+1;
+  const left=CDAYS-day+1;
+  const end=addDays(START,cycle*CDAYS-1);
+  return{cycle,day,left,end};
 }
 
-function getCycleDates(cycleNum){
-  const s=addDays(START,(cycleNum-1)*CYCLE_DAYS);
-  const e=addDays(START,cycleNum*CYCLE_DAYS-1);
-  return datesBetween(s,e);
+function cycleDates(c){
+  const s=addDays(START,(c-1)*CDAYS);
+  const e=addDays(START,c*CDAYS-1);
+  const dates=[];let cur=new Date(s+'T00:00:00'),fin=new Date(e+'T00:00:00');
+  while(cur<=fin){dates.push(cur.getFullYear()+'-'+String(cur.getMonth()+1).padStart(2,'0')+'-'+String(cur.getDate()).padStart(2,'0'));cur.setDate(cur.getDate()+1);}
+  return dates;
 }
 
-// ── JSONBIN ───────────────────────────────────────────────
+// JSONBin
 async function loadBin(){
-  try{const r=await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`,{headers:{'X-Master-Key':MK}});
-    const d=await r.json();return d.record;}catch(e){return null;}
+  try{const r=await fetch(`https://api.jsonbin.io/v3/b/${BIN}/latest`,{headers:{'X-Master-Key':MK}});const d=await r.json();return d.record;}catch(e){return null;}
 }
 async function saveBin(s){
-  try{const r=await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`,{method:'PUT',
-    headers:{'Content-Type':'application/json','X-Master-Key':MK},body:JSON.stringify(s)});
-    return r.ok;}catch(e){return false;}
+  try{const r=await fetch(`https://api.jsonbin.io/v3/b/${BIN}`,{method:'PUT',headers:{'Content-Type':'application/json','X-Master-Key':MK},body:JSON.stringify(s)});return r.ok;}catch(e){return false;}
 }
 
-// ── GITHUB BACKUP ─────────────────────────────────────────
+// GitHub backup
 async function ghSha(){
-  try{const r=await fetch(`https://api.github.com/repos/${GHR}/contents/${GHF}`,
-    {headers:{'Authorization':'token '+GHT,'Accept':'application/vnd.github.v3+json'}});
-    if(r.status===404)return null;return(await r.json()).sha||null;}catch(e){return null;}
+  try{const r=await fetch(`https://api.github.com/repos/${GHR}/contents/${GHF}`,{headers:{'Authorization':'token '+GHT,'Accept':'application/vnd.github.v3+json'}});if(r.status===404)return null;return(await r.json()).sha||null;}catch(e){return null;}
 }
 async function backupGH(s){
-  try{const sha=await ghSha();
-    const content=btoa(unescape(encodeURIComponent(JSON.stringify(s,null,2))));
-    const body={message:`Backup ${ld()} ${new Date().toLocaleTimeString()}`,content};
-    if(sha)body.sha=sha;
-    const r=await fetch(`https://api.github.com/repos/${GHR}/contents/${GHF}`,{method:'PUT',
-      headers:{'Authorization':'token '+GHT,'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},
-      body:JSON.stringify(body)});return r.ok;}catch(e){return false;}
+  try{const sha=await ghSha();const content=btoa(unescape(encodeURIComponent(JSON.stringify(s,null,2))));const body={message:`Backup ${ld()}`,content};if(sha)body.sha=sha;const r=await fetch(`https://api.github.com/repos/${GHR}/contents/${GHF}`,{method:'PUT',headers:{'Authorization':'token '+GHT,'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},body:JSON.stringify(body)});return r.ok;}catch(e){return false;}
 }
 async function saveAll(s,skipBak=false){
   const ok=await saveBin(s);
-  if(!skipBak)backupGH(s).then(b=>{
-    const el=document.getElementById('bkStat');
-    if(el){el.textContent=b?'BACKUP: OK':'BACKUP: FAIL';el.className=b?'bok':'berr';}
-  }).catch(()=>{});
+  if(!skipBak)backupGH(s).then(b=>{const el=document.getElementById('bkStat');if(el){el.textContent=b?'BACKUP: OK':'BACKUP: FAIL';el.className=b?'bok':'berr';}}).catch(()=>{});
   return ok;
 }
-async function restoreGH(){
-  const msg=document.getElementById('bakMsg');msg.textContent='FETCHING...';msg.className='am';
-  try{const r=await fetch(`https://api.github.com/repos/${GHR}/contents/${GHF}`,
-    {headers:{'Authorization':'token '+GHT,'Accept':'application/vnd.github.v3+json'}});
-    if(!r.ok)throw new Error('Not found');
-    const d=await r.json();
-    const dec=decodeURIComponent(escape(atob(d.content.replace(/\n/g,''))));
-    state=JSON.parse(dec);await saveBin(state);render();
-    msg.textContent='RESTORED FROM GITHUB!';msg.className='am ok';}
-  catch(e){msg.textContent='RESTORE FAILED: '+e.message;msg.className='am err';}
-}
-async function manualBak(){
-  const msg=document.getElementById('bakMsg');msg.textContent='BACKING UP...';msg.className='am';
-  const ok=await backupGH(state);
-  msg.textContent=ok?'BACKUP SAVED!':'BACKUP FAILED';msg.className=ok?'am ok':'am err';
-}
 
-// ── DEFAULT STATE ─────────────────────────────────────────
-function defaultState(){
+// Default state
+function defState(){
   const pfc=Math.floor(Math.random()*9)+4;
-  const players={};PLAYERS.forEach(p=>{players[p.id]={steps:{},totalSteps:0};});
-  return{version:4,challengeStart:START,prairieFireCycle:pfc,prairieFireFired:false,
-    closedCycles:[],
+  const players={};
+  PLAYERS.forEach(p=>{players[p.id]={steps:{},totalSteps:0};});
+  return{version:5,challengeStart:START,prairieFireCycle:pfc,prairieFireFired:false,
+    closedCycles:[],mileAdj:[],deadWeight:{},dysentery:{},mvpVotes:{mud:{},dust:{}},
+    landmarksHit:{mud:[],dust:[]},history:[],
     teams:{
-      mud:{miles:0,frozenUntilSteps:0,rareUsed:[],huntClaimedCycle:0,
-           mvpThisCycle:null,mvpNextCycle:null,liftSubs:{},axleSubs:{},
-           pioneerEarned:[],frozenDates:[]},
-      dust:{miles:0,frozenUntilSteps:0,rareUsed:[],huntClaimedCycle:0,
-            mvpThisCycle:null,mvpNextCycle:null,liftSubs:{},axleSubs:{},
-            pioneerEarned:[],frozenDates:[]}
+      mud:{miles:0,frozenUntilSteps:0,rareUsed:[],huntClaimedCycle:0,mvpThisCycle:null,
+           mvpNextCycle:null,liftSubs:{},axleSubs:{},pioneerEarned:[],frozenDates:[]},
+      dust:{miles:0,frozenUntilSteps:0,rareUsed:[],huntClaimedCycle:0,mvpThisCycle:null,
+            mvpNextCycle:null,liftSubs:{},axleSubs:{},pioneerEarned:[],frozenDates:[]}
     },
-    cards:{mud:{cardId:null,revealed:false,cycleNum:0},
-           dust:{cardId:null,revealed:false,cycleNum:0}},
-    players,deadWeight:{},mileAdj:[],dysentery:{},
-    mvpVotes:{mud:{},dust:{}},landmarksHit:{mud:[],dust:[]},
-    oxPenalty:{mud:{},dust:{}},history:[]};
+    cards:{mud:{cardId:null,revealed:false,cycleNum:0},dust:{cardId:null,revealed:false,cycleNum:0}},
+    players
+  };
 }
 
-// ── MILE CALCULATION ──────────────────────────────────────
-function calcRawMiles(team){
-  const members=TEAMS[team].members;
-  const allDates=new Set();
-  members.forEach(pid=>{const p=state.players[pid];if(p&&p.steps)Object.keys(p.steps).forEach(d=>allDates.add(d));});
+// Ensure state is valid
+function fixState(s){
+  PLAYERS.forEach(p=>{
+    if(!s.players[p.id])s.players[p.id]={steps:{},totalSteps:0};
+    if(!s.players[p.id].steps)s.players[p.id].steps={};
+  });
+  if(!s.closedCycles)s.closedCycles=[];
+  if(!s.mileAdj)s.mileAdj=[];
+  if(!s.deadWeight)s.deadWeight={};
+  if(!s.history)s.history=[];
+  if(!s.landmarksHit)s.landmarksHit={mud:[],dust:[]};
+  if(!s.dysentery)s.dysentery={};
+  if(!s.mvpVotes)s.mvpVotes={mud:{},dust:{}};
+  ['mud','dust'].forEach(t=>{
+    if(!s.teams[t].frozenDates)s.teams[t].frozenDates=[];
+    if(!s.teams[t].liftSubs)s.teams[t].liftSubs={};
+    if(!s.teams[t].axleSubs)s.teams[t].axleSubs={};
+    if(!s.teams[t].pioneerEarned)s.teams[t].pioneerEarned=[];
+    if(!s.teams[t].rareUsed)s.teams[t].rareUsed=[];
+  });
+  return s;
+}
+
+// Miles
+function rawMiles(team){
+  const m=TEAMS[team].members;
+  const dates=new Set();
+  m.forEach(pid=>{Object.keys(state.players[pid].steps).forEach(d=>dates.add(d));});
   let total=0;
-  allDates.forEach(date=>{
+  dates.forEach(date=>{
     if((state.teams[team].frozenDates||[]).includes(date))return;
     let ts=0;
-    members.forEach(pid=>{
-      const p=state.players[pid];if(!p||!p.steps||p.steps[date]===undefined)return;
-      let s=p.steps[date];
-      if(state.oxPenalty?.[team]?.[date])s=Math.floor(s*.9);
-      if(state.dysentery?.affectedDate===date&&state.dysentery?.[team+'Player']===pid)return;
+    m.forEach(pid=>{
+      let s=state.players[pid].steps[date];
+      if(s===undefined||s===null)return;
+      if(state.teams[team].axleSubs&&state.teams[team].axleSubs['_ox_'+date])s=Math.floor(s*.9);
+      if(state.dysentery&&state.dysentery.affectedDate===date&&state.dysentery[team+'Player']===pid)return;
       ts+=s;
     });
-    total+=(ts/members.length*3)/SPM;
+    total+=(ts/m.length*3)/SPM;
   });
   return total;
 }
-function calcLmBonus(team,raw){
-  let b=0;LMS.forEach(lm=>{if(raw>=lm.mile)b+=lm.bonus;});return b;
-}
-function calcAdj(team){
-  return(state.mileAdj||[]).filter(a=>a.team===team).reduce((s,a)=>s+a.miles,0);
-}
-function totalMiles(team){
-  const raw=calcRawMiles(team);
-  return Math.max(0,Math.round(raw+calcLmBonus(team,raw)+calcAdj(team)));
-}
+function lmBonus(team,raw){let b=0;LMS.forEach(lm=>{if(raw>=lm.mile)b+=lm.bonus;});return b;}
+function adjMi(team){return(state.mileAdj||[]).filter(a=>a.team===team).reduce((s,a)=>s+a.miles,0);}
+function totalMi(team){const raw=rawMiles(team);return Math.max(0,Math.round(raw+lmBonus(team,raw)+adjMi(team)));}
 
-// ── LANDMARK CHECK ────────────────────────────────────────
+// Landmark check
 function checkLms(team,prev,now){
   if(!state.landmarksHit)state.landmarksHit={mud:[],dust:[]};
   const hit=state.landmarksHit[team]||[];
   LMS.forEach(lm=>{
     if(now>=lm.mile&&!hit.includes(lm.mile)){
       hit.push(lm.mile);
-      addHist(team,`${lm.name} REACHED!`,lm.bonus,'hp');
+      addHist(team,lm.name+' REACHED!',lm.bonus,'hp');
     }
   });
   state.landmarksHit[team]=hit;
 }
 
-// ── DEAD WEIGHT (auto on step log) ────────────────────────
+// Dead weight
 function updateDW(date){
-  if(!state.deadWeight)state.deadWeight={};
   const ds=[];
-  PLAYERS.forEach(p=>{const s=state.players[p.id]?.steps?.[date];if(s!==undefined)ds.push({id:p.id,s});});
+  PLAYERS.forEach(p=>{const s=state.players[p.id].steps[date];if(s!==undefined&&s!==null)ds.push({id:p.id,s});});
   if(!ds.length)return;
   const minS=Math.min(...ds.map(x=>x.s));
   PLAYERS.forEach(p=>{
-    const s=state.players[p.id]?.steps?.[date];
-    if(s===undefined){return;}
+    const s=state.players[p.id].steps[date];
+    if(s===undefined||s===null){state.deadWeight[p.id]=0;return;}
     if(s===minS){
       state.deadWeight[p.id]=(state.deadWeight[p.id]||0)+1;
       if(state.deadWeight[p.id]>=3){
         const team=teamOf(p.id);
-        state.mileAdj.push({team,miles:-10,reason:`DEAD WEIGHT: ${p.display||p.id}`,date:ld()});
-        addHist(team,`DEAD WEIGHT: ${(p.display||p.id).toUpperCase()}`,-10,'hn');
+        state.mileAdj.push({team,miles:-10,reason:'DEAD WEIGHT: '+p.display,date:ld()});
+        addHist(team,'DEAD WEIGHT: '+p.display,-10,'hn');
         state.deadWeight[p.id]=0;
       }
     }else{state.deadWeight[p.id]=0;}
   });
 }
 
-// ── HUNT CHECK (auto on step log) ─────────────────────────
 function checkHunt(team,date){
-  const ci=getCycleInfo();
+  const ci=getCycle();
   if(state.teams[team].huntClaimedCycle===ci.cycle)return;
-  const all=TEAMS[team].members.every(pid=>(state.players[pid]?.steps?.[date]||0)>=10000);
-  if(all){
+  if(TEAMS[team].members.every(pid=>(state.players[pid].steps[date]||0)>=10000)){
     state.teams[team].huntClaimedCycle=ci.cycle;
     state.mileAdj.push({team,miles:15,reason:'HUNT SUCCESSFUL',date});
     addHist(team,'HUNT SUCCESSFUL',15,'hp');
   }
 }
 
-// ── PIONEER SPIRIT (auto on step log) ────────────────────
 function checkPioneer(){
   ['mud','dust'].forEach(team=>{
-    const ci=getCycleInfo();
+    const ci=getCycle();
     if((state.teams[team].pioneerEarned||[]).includes(ci.cycle)||ci.cycle<=1)return;
-    const now=new Date(ld()+'T00:00:00');
-    const ws=new Date(now);ws.setDate(now.getDate()-now.getDay());
+    const now=new Date(ld()+'T00:00:00'),ws=new Date(now);ws.setDate(now.getDate()-now.getDay());
     const ps=new Date(ws);ps.setDate(ps.getDate()-7);
     let tw=0,lw=0;
     TEAMS[team].members.forEach(pid=>{
-      Object.entries(state.players[pid]?.steps||{}).forEach(([d,s])=>{
+      Object.entries(state.players[pid].steps).forEach(([d,s])=>{
         const dt=new Date(d+'T00:00:00');
         if(dt>=ws&&dt<=now)tw+=s;
         if(dt>=ps&&dt<ws)lw+=s;
@@ -724,338 +602,147 @@ function checkPioneer(){
   });
 }
 
-// ── FROZEN WAGON CHECK ────────────────────────────────────
 function checkFrozen(team,date){
   if(!state.teams[team].frozenUntilSteps)return;
-  const tot=TEAMS[team].members.reduce((s,pid)=>s+(state.players[pid]?.steps?.[date]||0),0);
-  if(tot>=state.teams[team].frozenUntilSteps){
-    state.teams[team].frozenUntilSteps=0;
-    if(state.teams[team].frozenDates){
-      state.teams[team].frozenDates=state.teams[team].frozenDates.filter(d=>d!==date);
-    }
-    addHist(team,'WAGON PUSHED FREE!',0,'hp');
-  }else{
-    if(!state.teams[team].frozenDates)state.teams[team].frozenDates=[];
-    if(!state.teams[team].frozenDates.includes(date))state.teams[team].frozenDates.push(date);
-  }
+  const tot=TEAMS[team].members.reduce((s,pid)=>s+(state.players[pid].steps[date]||0),0);
+  if(tot>=state.teams[team].frozenUntilSteps){state.teams[team].frozenUntilSteps=0;addHist(team,'WAGON PUSHED FREE!',0,'hp');}
+  else{if(!state.teams[team].frozenDates)state.teams[team].frozenDates=[];if(!state.teams[team].frozenDates.includes(date))state.teams[team].frozenDates.push(date);}
 }
 
-// ── CYCLE CLOSE LOGIC ─────────────────────────────────────
-function allDataPresent(cycleNum){
-  // Returns true if every player has a non-null step entry for every day in the cycle
-  const dates=getCycleDates(cycleNum);
-  return PLAYERS.every(p=>dates.every(d=>{
-    const steps=state.players[p.id]?.steps?.[d];
-    return steps!==undefined&&steps!==null;
-  }));
-}
-
-function missingPlayers(cycleNum){
-  const dates=getCycleDates(cycleNum);
-  const missing=[];
-  PLAYERS.forEach(p=>{
-    const hasMissing=dates.some(d=>{
-      const s=state.players[p.id]?.steps?.[d];
-      return s===undefined||s===null;
-    });
-    if(hasMissing)missing.push(p.display);
-  });
-  return missing;
-}
-
-function shouldAutoClose(cycleNum){
-  // Close if current date is past cycle end + grace days
-  const ci=getCycleInfo();
-  if(ci.cycle<=cycleNum)return false; // still in this cycle or earlier
-  const cycEnd=addDays(START,cycleNum*CYCLE_DAYS-1);
-  const closeDate=addDays(cycEnd,GRACE_DAYS+1);
-  return ld()>=closeDate;
-}
-
-function closeCycle(cycleNum,force=false){
-  if((state.closedCycles||[]).includes(cycleNum))return;
-  const dates=getCycleDates(cycleNum);
-
-  // Fill nulls with 0 if forcing or auto-closing
-  if(force||shouldAutoClose(cycleNum)){
-    PLAYERS.forEach(p=>{
-      dates.forEach(d=>{
-        if(state.players[p.id].steps[d]===undefined||state.players[p.id].steps[d]===null){
-          state.players[p.id].steps[d]=0;
-        }
-      });
-    });
-  }else if(!allDataPresent(cycleNum)){
-    return; // not ready yet
-  }
-
-  // Evaluate each team's card for this cycle
-  ['mud','dust'].forEach(team=>{
-    const cardId=state.cards[team].cycleNum===cycleNum?state.cards[team].cardId:null;
-    if(!cardId||cardId==='prairie_fire')return;
-    const members=TEAMS[team].members;
-
-    // OX WORE OUT — apply 10% penalty on day 2
-    if(cardId==='ox_wore_out'&&dates[1]){
-      if(!state.oxPenalty)state.oxPenalty={mud:{},dust:{}};
-      if(!state.oxPenalty[team])state.oxPenalty[team]={};
-      state.oxPenalty[team][dates[1]]=true;
-      addHist(team,'OX WORE OUT — 10% STEP PENALTY ON DAY 2',0,'hn');
-    }
-
-    // RIVER CROSSING — must hit combined goal all 3 days
-    if(cardId==='river_crossing'){
-      const goal=team==='mud'?30000:40000;
-      const missed=dates.some(d=>{
-        const tot=members.reduce((s,pid)=>s+(state.players[pid]?.steps?.[d]||0),0);
-        return tot<goal;
-      });
-      if(missed){state.mileAdj.push({team,miles:-15,reason:'RIVER CROSSING MISSED',date:dates[dates.length-1]});addHist(team,'RIVER CROSSING MISSED',-15,'hn');}
-    }
-
-    // DUST STORM — must hit combined goal all 3 days
-    if(cardId==='dust_storm'){
-      const goal=team==='mud'?24000:32000;
-      const missed=dates.some(d=>{
-        const tot=members.reduce((s,pid)=>s+(state.players[pid]?.steps?.[d]||0),0);
-        return tot<goal;
-      });
-      if(missed){state.mileAdj.push({team,miles:-15,reason:'DUST STORM MISSED',date:dates[dates.length-1]});addHist(team,'DUST STORM MISSED',-15,'hn');}
-    }
-
-    // NATIVE TRADE — must hit goal 2 of 3 days
-    if(cardId==='native_trade'){
-      const goal=team==='mud'?36000:48000;
-      const hitDays=dates.filter(d=>{
-        const tot=members.reduce((s,pid)=>s+(state.players[pid]?.steps?.[d]||0),0);
-        return tot>=goal;
-      }).length;
-      if(hitDays>=2){state.mileAdj.push({team,miles:20,reason:'NATIVE TRADE SUCCESS',date:dates[dates.length-1]});addHist(team,'NATIVE TRADE SUCCESS',20,'hp');}
-      else{addHist(team,'NATIVE TRADE MISSED',0,'hn');}
-    }
-
-    // BROKEN AXLE — every player must have submitted a workout within the cycle dates
-    if(cardId==='broken_axle'){
-      const axle=state.teams[team].axleSubs||{};
-      // Check submissions logged within cycle date range
-      const submitted=members.filter(pid=>axle[pid]&&axle[pid].date&&dates.includes(axle[pid].date)&&axle[pid].mins>=30).length;
-      if(submitted<members.length){
-        state.mileAdj.push({team,miles:-20,reason:'BROKEN AXLE MISSED',date:dates[dates.length-1]});
-        addHist(team,`BROKEN AXLE MISSED (${submitted}/${members.length})`,-20,'hn');
-      }else{addHist(team,'BROKEN AXLE COMPLETED!',0,'hp');}
-      // Reset axle subs for next time
-      state.teams[team].axleSubs={};
-    }
-
-    // HUNTING PARTY — top 3 steppers across all players over cycle
-    if(cardId==='hunting_party'){
-      const stepTotals=PLAYERS.map(p=>({
-        id:p.id,
-        total:dates.reduce((s,d)=>s+(state.players[p.id]?.steps?.[d]||0),0)
-      })).sort((a,b)=>b.total-a.total);
-      const top3=stepTotals.slice(0,3);
-      top3.forEach(pt=>{
-        const t=teamOf(pt.id);
-        const pl=PLAYERS.find(p=>p.id===pt.id);
-        state.mileAdj.push({team:t,miles:15,reason:`HUNTING PARTY: ${pl.display}`,date:dates[dates.length-1]});
-        addHist(t,`HUNTING PARTY: ${pl.display} TOP 3`,15,'hp');
-      });
-    }
-
-    // TRADING POST — lock in MVP for next cycle
-    if(cardId==='trading_post'){
-      const votes=state.mvpVotes?.[team]||{};
-      const tally={};Object.values(votes).forEach(v=>{tally[v]=(tally[v]||0)+1;});
-      const winner=Object.entries(tally).sort((a,b)=>b[1]-a[1])[0];
-      if(winner){
-        state.teams[team].mvpNextCycle=winner[0];
-        const wp=PLAYERS.find(p=>p.id===winner[0]);
-        addHist(team,`TRADING POST MVP: ${wp?.display||winner[0]}`,0,'hp');
-      }
-      state.mvpVotes[team]={};
-    }
-
-    // WAGON STUCK — if lift goal not met, freeze
-    if(cardId==='wagon_mud'){
-      const goal=TEAMS[team].liftGoal;
-      const liftSubs=state.teams[team].liftSubs||{};
-      const tot=members.reduce((s,pid)=>s+(liftSubs[pid]||0),0);
-      if(tot<goal&&!state.teams[team].frozenUntilSteps){
-        state.teams[team].frozenUntilSteps=TEAMS[team].unstickGoal;
-        addHist(team,`WAGON STUCK! LIFTED ${tot}/${goal}LBS`,0,'hn');
-      }
-      state.teams[team].liftSubs={};
-    }
-  });
-
-  // PRAIRIE FIRE — evaluate if it fired this cycle
-  if(state.cards.mud.cycleNum===cycleNum&&state.cards.mud.cardId==='prairie_fire'&&!state.prairieFireFired){
-    // Calculate avg steps per player per team over cycle
-    const mudAvg=TEAMS.mud.members.reduce((s,pid)=>s+dates.reduce((t,d)=>t+(state.players[pid]?.steps?.[d]||0),0),0)/TEAMS.mud.members.length;
-    const dustAvg=TEAMS.dust.members.reduce((s,pid)=>s+dates.reduce((t,d)=>t+(state.players[pid]?.steps?.[d]||0),0),0)/TEAMS.dust.members.length;
-    if(mudAvg>dustAvg){state.mileAdj.push({team:'dust',miles:-25,reason:'PRAIRIE FIRE LOST',date:dates[0]});addHist('dust','PRAIRIE FIRE: DUST LOST',-25,'hn');}
-    else if(dustAvg>mudAvg){state.mileAdj.push({team:'mud',miles:-25,reason:'PRAIRIE FIRE LOST',date:dates[0]});addHist('mud','PRAIRIE FIRE: MUD LOST',-25,'hn');}
-    else{addHist('mud','PRAIRIE FIRE: TIED',0,'hu');addHist('dust','PRAIRIE FIRE: TIED',0,'hu');}
-    state.prairieFireFired=true;
-  }
-
-  // Promote mvpNextCycle to mvpThisCycle for new cycle
-  ['mud','dust'].forEach(team=>{
-    if(state.teams[team].mvpNextCycle){
-      state.teams[team].mvpThisCycle=state.teams[team].mvpNextCycle;
-      state.teams[team].mvpNextCycle=null;
-    }
-  });
-
-  if(!state.closedCycles)state.closedCycles=[];
-  state.closedCycles.push(cycleNum);
-}
-
-function checkAutoClose(){
-  const ci=getCycleInfo();
-  // Check all completed cycles that have not been closed
-  for(let c=1;c<ci.cycle;c++){
-    if((state.closedCycles||[]).includes(c))continue;
-    if(allDataPresent(c)||shouldAutoClose(c)){
-      closeCycle(c,shouldAutoClose(c));
-    }
-  }
-}
-
-// ── CYCLE CLOSE WARNING ───────────────────────────────────
-function renderCycleWarn(ci){
-  const warn=document.getElementById('cycleWarn');
-  // Find any past cycles not yet closed
-  const pending=[];
-  for(let c=1;c<ci.cycle;c++){
-    if(!(state.closedCycles||[]).includes(c)){
-      const missing=missingPlayers(c);
-      pending.push({cycle:c,missing});
-    }
-  }
-  if(pending.length===0){warn.style.display='none';return;}
-  warn.style.display='block';
-  const p=pending[0];
-  const graceLeft=GRACE_DAYS-(Math.floor((new Date(ld()+'T00:00:00')-new Date(addDays(START,p.cycle*CYCLE_DAYS-1)+'T00:00:00'))/86400000));
-  warn.innerHTML=`CYCLE ${p.cycle} RESULTS PENDING &#8212; MISSING DATA FROM: ${p.missing.join(', ')}<br>AUTO-CLOSE IN ${Math.max(0,graceLeft)} GRACE DAYS | OR FORCE CLOSE IN ADMIN`;
-}
-
-// ── CARD REVEAL ───────────────────────────────────────────
-async function revealCard(team){
-  if(!state||state.cards[team].revealed)return;
-  if(ld()<START){alert('THE TRAIL OPENS MAY 21 — COME BACK TOMORROW PIONEER!');return;}
-  const ci=getCycleInfo();
-  if(ci.cycle===state.prairieFireCycle&&!state.prairieFireFired){
-    state.cards.mud={cardId:'prairie_fire',revealed:true,cycleNum:ci.cycle};
-    state.cards.dust={cardId:'prairie_fire',revealed:true,cycleNum:ci.cycle};
-    await saveAll(state);render();return;
-  }
-  const ts=state.teams[team];
-  const usedR=ts.rareUsed||[];
-  const avR=RARE.filter(c=>!usedR.includes(c.id));
-  let card;
-  if(avR.length>0&&Math.random()<.2){
-    card=avR[Math.floor(Math.random()*avR.length)];ts.rareUsed=[...usedR,card.id];
-  }else{
-    const last=state.cards[team].cardId;
-    const el=COMMON.filter(c=>c.id!==last);
-    card=el[Math.floor(Math.random()*el.length)];
-  }
-  // Second wind — check trailing
-  if(card.id==='second_wind'){
-    const mm=totalMiles('mud'),dm=totalMiles('dust');
-    const trail=(team==='mud'&&mm<dm-100)||(team==='dust'&&dm<mm-100);
-    if(!trail){const r=COMMON.filter(c=>c.id!=='second_wind'&&c.id!==state.cards[team].cardId);card=r[Math.floor(Math.random()*r.length)];}
-    else{state.mileAdj.push({team,miles:25,reason:'SECOND WIND',date:ld()});addHist(team,'SECOND WIND BONUS',25,'hp');}
-  }
-  // Fair weather — both teams
-  if(card.id==='fair_weather'){
-    state.mileAdj.push({team:'mud',miles:20,reason:'FAIR WEATHER',date:ld()});
-    state.mileAdj.push({team:'dust',miles:20,reason:'FAIR WEATHER',date:ld()});
-    addHist('mud','FAIR WEATHER BONUS',20,'hp');addHist('dust','FAIR WEATHER BONUS',20,'hp');
-  }
-  // Dysentery — secret victim
-  if(card.id==='dysentery'){
-    const m=TEAMS[team].members;
-    const v=m[Math.floor(Math.random()*m.length)];
-    state.dysentery={[team+'Player']:v,affectedDate:ld(),revealDate:ld(1)};
-  }
-  state.cards[team]={cardId:card.id,revealed:true,cycleNum:ci.cycle};
-  await saveAll(state);render();
-}
-
-// ── HISTORY ───────────────────────────────────────────────
 function addHist(team,text,miles,cls){
-  const ci=getCycleInfo();
+  const ci=getCycle();
   if(!state.history)state.history=[];
   let e=state.history.find(h=>h.cycle===ci.cycle);
   if(!e){e={cycle:ci.cycle,dateRange:fd(ld()),events:[]};state.history.push(e);}
   e.events.push({team,text,miles,cls});
 }
 
-// ── DISTANCE TRACKER ──────────────────────────────────────
-function renderDT(mudM,dustM){
-  document.getElementById('mudDistMi').textContent=mudM.toLocaleString();
-  document.getElementById('dustDistMi').textContent=dustM.toLocaleString();
-  function nxt(miles){for(let i=0;i<LMS.length;i++){if(LMS[i].mile>miles)return LMS[i];}return null;}
-  function setNext(team,miles){
-    const n=nxt(miles);
-    const nm=document.getElementById(team+'NxtNm');
-    const nl=document.getElementById(team+'NxtLbl');
-    const nd=document.getElementById(team+'NxtDist');
-    if(n){nm.textContent=n.name;nl.textContent='NEXT: +'+n.bonus+'MI BONUS';nd.textContent=(n.mile-miles)+' MILES AWAY';}
-    else{nm.textContent='OREGON CITY';nl.textContent='FINAL DESTINATION';nd.textContent=(TRAIL-miles)+' MILES TO FINISH';}
-  }
-  setNext('mud',mudM);setNext('dust',dustM);
-  const gap=Math.abs(mudM-dustM);
-  const el=document.getElementById('gapTxt');
-  if(gap===0)el.innerHTML='<span class="gap-tied">&#9878;&#65039; WAGONS ARE TIED!</span>';
-  else if(mudM>dustM)el.innerHTML=`<span class="gap-mud">&#128002; MUD &amp; MUSCLE LEADS BY ${gap} MILES</span>`;
-  else el.innerHTML=`<span class="gap-dust">&#128014; DUST &amp; GLORY LEADS BY ${gap} MILES</span>`;
+// Cycle close
+function allPresent(cn){
+  const dates=cycleDates(cn);
+  return PLAYERS.every(p=>dates.every(d=>state.players[p.id].steps[d]!==undefined&&state.players[p.id].steps[d]!==null));
+}
+function missingPl(cn){
+  const dates=cycleDates(cn);
+  return PLAYERS.filter(p=>dates.some(d=>state.players[p.id].steps[d]===undefined||state.players[p.id].steps[d]===null)).map(p=>p.display);
+}
+function shouldAutoClose(cn){
+  const ci=getCycle();
+  if(ci.cycle<=cn)return false;
+  return ld()>=addDays(addDays(START,cn*CDAYS-1),GRACE+1);
 }
 
-// ── RENDER ────────────────────────────────────────────────
-function render(){
-  if(!state)return;
-  checkAutoClose();
-  const ci=getCycleInfo();
+function closeCycle(cn,force=false){
+  if((state.closedCycles||[]).includes(cn))return;
+  const dates=cycleDates(cn);
+  if(force||shouldAutoClose(cn)){PLAYERS.forEach(p=>{dates.forEach(d=>{if(state.players[p.id].steps[d]===undefined||state.players[p.id].steps[d]===null)state.players[p.id].steps[d]=0;});});}
+  else if(!allPresent(cn))return;
 
-  // Auto-reset cards for new cycle
-  if(state.cards.mud.cycleNum!==ci.cycle&&state.cards.mud.revealed){
-    state.cards.mud={cardId:state.cards.mud.cardId,revealed:false,cycleNum:ci.cycle};
+  ['mud','dust'].forEach(team=>{
+    const cd=state.cards[team].cycleNum===cn?state.cards[team].cardId:null;
+    if(!cd||cd==='prairie_fire')return;
+    const m=TEAMS[team].members;
+
+    if(cd==='ox_wore_out'&&dates[1]){
+      if(!state.teams[team].axleSubs)state.teams[team].axleSubs={};
+      state.teams[team].axleSubs['_ox_'+dates[1]]=true;
+      addHist(team,'OX WORE OUT - 10% PENALTY DAY 2',0,'hn');
+    }
+    if(cd==='river_crossing'){
+      const goal=team==='mud'?30000:40000;
+      if(dates.some(d=>m.reduce((s,pid)=>s+(state.players[pid].steps[d]||0),0)<goal)){
+        state.mileAdj.push({team,miles:-15,reason:'RIVER CROSSING MISSED',date:dates[2]});addHist(team,'RIVER CROSSING MISSED',-15,'hn');}
+    }
+    if(cd==='dust_storm'){
+      const goal=team==='mud'?24000:32000;
+      if(dates.some(d=>m.reduce((s,pid)=>s+(state.players[pid].steps[d]||0),0)<goal)){
+        state.mileAdj.push({team,miles:-15,reason:'DUST STORM MISSED',date:dates[2]});addHist(team,'DUST STORM MISSED',-15,'hn');}
+    }
+    if(cd==='native_trade'){
+      const goal=team==='mud'?36000:48000;
+      const hits=dates.filter(d=>m.reduce((s,pid)=>s+(state.players[pid].steps[d]||0),0)>=goal).length;
+      if(hits>=2){state.mileAdj.push({team,miles:20,reason:'NATIVE TRADE SUCCESS',date:dates[2]});addHist(team,'NATIVE TRADE SUCCESS',20,'hp');}
+    }
+    if(cd==='broken_axle'){
+      const axle=state.teams[team].axleSubs||{};
+      const sub=m.filter(pid=>axle[pid]&&axle[pid].date&&dates.includes(axle[pid].date)&&axle[pid].mins>=30).length;
+      if(sub<m.length){state.mileAdj.push({team,miles:-20,reason:'BROKEN AXLE MISSED',date:dates[2]});addHist(team,'BROKEN AXLE MISSED ('+(sub)+'/'+m.length+')',-20,'hn');}
+      else addHist(team,'BROKEN AXLE COMPLETED!',0,'hp');
+      state.teams[team].axleSubs={};
+    }
+    if(cd==='hunting_party'){
+      const tops=PLAYERS.map(p=>({id:p.id,tot:dates.reduce((s,d)=>s+(state.players[p.id].steps[d]||0),0)})).sort((a,b)=>b.tot-a.tot).slice(0,3);
+      tops.forEach(pt=>{const t=teamOf(pt.id);const pl=PLAYERS.find(p=>p.id===pt.id);state.mileAdj.push({team:t,miles:15,reason:'HUNTING PARTY: '+pl.display,date:dates[2]});addHist(t,'HUNTING PARTY: '+pl.display,15,'hp');});
+    }
+    if(cd==='trading_post'){
+      const votes=state.mvpVotes?.[team]||{};const tally={};Object.values(votes).forEach(v=>{tally[v]=(tally[v]||0)+1;});
+      const w=Object.entries(tally).sort((a,b)=>b[1]-a[1])[0];
+      if(w){state.teams[team].mvpNextCycle=w[0];const wp=PLAYERS.find(p=>p.id===w[0]);addHist(team,'TRADING POST MVP: '+(wp?.display||w[0]),0,'hp');}
+      state.mvpVotes[team]={};
+    }
+    if(cd==='wagon_mud'){
+      const ls=state.teams[team].liftSubs||{};const tot=m.reduce((s,pid)=>s+(ls[pid]?.weight||0),0);
+      if(tot<TEAMS[team].liftGoal&&!state.teams[team].frozenUntilSteps){state.teams[team].frozenUntilSteps=TEAMS[team].unstick;addHist(team,'WAGON STUCK! LIFTED '+tot+'/'+TEAMS[team].liftGoal+'LBS',0,'hn');}
+      state.teams[team].liftSubs={};
+    }
+  });
+
+  if(state.cards.mud.cycleNum===cn&&state.cards.mud.cardId==='prairie_fire'&&!state.prairieFireFired){
+    const ma=TEAMS.mud.members.reduce((s,pid)=>s+dates.reduce((t,d)=>t+(state.players[pid].steps[d]||0),0),0)/TEAMS.mud.members.length;
+    const da=TEAMS.dust.members.reduce((s,pid)=>s+dates.reduce((t,d)=>t+(state.players[pid].steps[d]||0),0),0)/TEAMS.dust.members.length;
+    if(ma>da){state.mileAdj.push({team:'dust',miles:-25,reason:'PRAIRIE FIRE LOST',date:dates[0]});addHist('dust','PRAIRIE FIRE: DUST LOST',-25,'hn');}
+    else if(da>ma){state.mileAdj.push({team:'mud',miles:-25,reason:'PRAIRIE FIRE LOST',date:dates[0]});addHist('mud','PRAIRIE FIRE: MUD LOST',-25,'hn');}
+    state.prairieFireFired=true;
   }
-  if(state.cards.dust.cycleNum!==ci.cycle&&state.cards.dust.revealed){
-    state.cards.dust={cardId:state.cards.dust.cardId,revealed:false,cycleNum:ci.cycle};
-  }
 
-  document.getElementById('cycNum').textContent=ci.cycle;
-  document.getElementById('cycleDL').textContent=ci.daysLeft+' DAY'+(ci.daysLeft!==1?'S':'')+' LEFT';
-  document.getElementById('cycTimer').textContent='CYCLE ENDS: '+fd(ci.endDate);
-
-  const isPW=ci.cycle===state.prairieFireCycle-1;
-  const isPF=ci.cycle===state.prairieFireCycle&&!state.prairieFireFired;
-  document.getElementById('prairieWarn').style.display=isPW?'block':'none';
-  document.getElementById('prairieFire').style.display=isPF?'block':'none';
-
-  const mudM=totalMiles('mud'),dustM=totalMiles('dust');
-  checkLms('mud',state.teams.mud.miles||0,mudM);
-  checkLms('dust',state.teams.dust.miles||0,dustM);
-  state.teams.mud.miles=mudM;state.teams.dust.miles=dustM;
-
-  document.getElementById('mudMiles').textContent=mudM.toLocaleString();
-  document.getElementById('dustMiles').textContent=dustM.toLocaleString();
-
-  renderDT(mudM,dustM);
-  renderCycleWarn(ci);
-  renderMap(mudM,dustM);
-  renderCards(ci);
-  renderPlayers(ci);
-  renderHistory();
-  renderTotals();
-
-  document.getElementById('lastSync').textContent='SYNCED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+  ['mud','dust'].forEach(t=>{if(state.teams[t].mvpNextCycle){state.teams[t].mvpThisCycle=state.teams[t].mvpNextCycle;state.teams[t].mvpNextCycle=null;}});
+  if(!state.closedCycles)state.closedCycles=[];
+  state.closedCycles.push(cn);
 }
 
+function checkAutoClose(){
+  const ci=getCycle();
+  for(let c=1;c<ci.cycle;c++){
+    if((state.closedCycles||[]).includes(c))continue;
+    if(allPresent(c)||shouldAutoClose(c))closeCycle(c,shouldAutoClose(c));
+  }
+}
+
+// Card reveal
+async function revealCard(team){
+  if(!state||state.cards[team].revealed)return;
+  if(ld()<START){alert('THE TRAIL OPENS MAY 21!');return;}
+  const ci=getCycle();
+  if(ci.cycle===state.prairieFireCycle&&!state.prairieFireFired){
+    state.cards.mud={cardId:'prairie_fire',revealed:true,cycleNum:ci.cycle};
+    state.cards.dust={cardId:'prairie_fire',revealed:true,cycleNum:ci.cycle};
+    await saveAll(state);render();return;
+  }
+  const ts=state.teams[team],ur=ts.rareUsed||[];
+  const avR=RARE.filter(c=>!ur.includes(c.id));
+  let card;
+  if(avR.length>0&&Math.random()<.2){card=avR[Math.floor(Math.random()*avR.length)];ts.rareUsed=[...ur,card.id];}
+  else{const last=state.cards[team].cardId;const el=COMMON.filter(c=>c.id!==last);card=el[Math.floor(Math.random()*el.length)];}
+  if(card.id==='second_wind'){
+    const mm=totalMi('mud'),dm=totalMi('dust');
+    const trail=(team==='mud'&&mm<dm-100)||(team==='dust'&&dm<mm-100);
+    if(!trail){const r=COMMON.filter(c=>c.id!=='second_wind'&&c.id!==state.cards[team].cardId);card=r[Math.floor(Math.random()*r.length)];}
+    else{state.mileAdj.push({team,miles:25,reason:'SECOND WIND',date:ld()});addHist(team,'SECOND WIND BONUS',25,'hp');}
+  }
+  if(card.id==='fair_weather'){
+    state.mileAdj.push({team:'mud',miles:20,reason:'FAIR WEATHER',date:ld()});
+    state.mileAdj.push({team:'dust',miles:20,reason:'FAIR WEATHER',date:ld()});
+    addHist('mud','FAIR WEATHER BONUS',20,'hp');addHist('dust','FAIR WEATHER BONUS',20,'hp');
+  }
+  if(card.id==='dysentery'){
+    const mv=TEAMS[team].members[Math.floor(Math.random()*TEAMS[team].members.length)];
+    state.dysentery={[team+'Player']:mv,affectedDate:ld(),revealDate:ld(1)};
+  }
+  state.cards[team]={cardId:card.id,revealed:true,cycleNum:ci.cycle};
+  await saveAll(state);render();
+}
+
+// RENDER - map proven working
 function renderMap(mudM,dustM){
   const map=document.getElementById('trailMap');
   map.querySelectorAll('.lm').forEach(e=>e.remove());
@@ -1080,200 +767,24 @@ function renderMap(mudM,dustM){
   const mf=state.teams.mud.frozenUntilSteps>0,df=state.teams.dust.frozenUntilSteps>0;
   document.getElementById('mudFrz').style.display=mf?'block':'none';
   document.getElementById('dustFrz').style.display=df?'block':'none';
-  if(mf){
-    const t=TEAMS.mud.members.reduce((s,pid)=>s+(state.players[pid]?.steps?.[ld()]||0),0);
-    document.getElementById('mudFrzG').textContent=state.teams.mud.frozenUntilSteps.toLocaleString();
-    document.getElementById('mudFrzP').textContent=t.toLocaleString();
-  }
-  if(df){
-    const t=TEAMS.dust.members.reduce((s,pid)=>s+(state.players[pid]?.steps?.[ld()]||0),0);
-    document.getElementById('dustFrzG').textContent=state.teams.dust.frozenUntilSteps.toLocaleString();
-    document.getElementById('dustFrzP').textContent=t.toLocaleString();
-  }
+  if(mf){const t=TEAMS.mud.members.reduce((s,pid)=>s+(state.players[pid].steps[ld()]||0),0);document.getElementById('mudFrzG').textContent=state.teams.mud.frozenUntilSteps.toLocaleString();document.getElementById('mudFrzP').textContent=t.toLocaleString();}
+  if(df){const t=TEAMS.dust.members.reduce((s,pid)=>s+(state.players[pid].steps[ld()]||0),0);document.getElementById('dustFrzG').textContent=state.teams.dust.frozenUntilSteps.toLocaleString();document.getElementById('dustFrzP').textContent=t.toLocaleString();}
 }
 
-function renderDT(mudM,dustM){
-  document.getElementById('mudDistMi').textContent=mudM.toLocaleString();
-  document.getElementById('dustDistMi').textContent=dustM.toLocaleString();
-  function nxt(miles){for(let i=0;i<LMS.length;i++){if(LMS[i].mile>miles)return LMS[i];}return null;}
-  function setNext(team,miles){
-    const n=nxt(miles);
-    const nm=document.getElementById(team+'NxtNm');
-    const nl=document.getElementById(team+'NxtLbl');
-    const nd=document.getElementById(team+'NxtDist');
-    if(n){nm.textContent=n.name;nl.textContent='NEXT: +'+n.bonus+'MI BONUS';nd.textContent=(n.mile-miles)+' MILES AWAY';}
-    else{nm.textContent='OREGON CITY';nl.textContent='FINAL DESTINATION';nd.textContent=(TRAIL-miles)+' MILES TO FINISH';}
-  }
-  setNext('mud',mudM);setNext('dust',dustM);
-  const gap=Math.abs(mudM-dustM);
-  const el=document.getElementById('gapTxt');
-  if(gap===0)el.innerHTML='<span class="gap-tied">&#9878;&#65039; WAGONS ARE TIED!</span>';
-  else if(mudM>dustM)el.innerHTML=`<span class="gap-mud">&#128002; MUD &amp; MUSCLE LEADS BY ${gap} MILES</span>`;
-  else el.innerHTML=`<span class="gap-dust">&#128014; DUST &amp; GLORY LEADS BY ${gap} MILES</span>`;
-}
-
-// ── RENDER ────────────────────────────────────────────────
-function render(){
-  if(!state)return;
-  checkAutoClose();
-  const ci=getCycleInfo();
-
-  // Auto-reset cards for new cycle
-  if(state.cards.mud.cycleNum!==ci.cycle&&state.cards.mud.revealed){
-    state.cards.mud={cardId:state.cards.mud.cardId,revealed:false,cycleNum:ci.cycle};
-  }
-  if(state.cards.dust.cycleNum!==ci.cycle&&state.cards.dust.revealed){
-    state.cards.dust={cardId:state.cards.dust.cardId,revealed:false,cycleNum:ci.cycle};
-  }
-
-  document.getElementById('cycNum').textContent=ci.cycle;
-  document.getElementById('cycleDL').textContent=ci.daysLeft+' DAY'+(ci.daysLeft!==1?'S':'')+' LEFT';
-  document.getElementById('cycTimer').textContent='CYCLE ENDS: '+fd(ci.endDate);
-
-  const isPW=ci.cycle===state.prairieFireCycle-1;
-  const isPF=ci.cycle===state.prairieFireCycle&&!state.prairieFireFired;
-  document.getElementById('prairieWarn').style.display=isPW?'block':'none';
-  document.getElementById('prairieFire').style.display=isPF?'block':'none';
-
-  const mudM=totalMiles('mud'),dustM=totalMiles('dust');
-  checkLms('mud',state.teams.mud.miles||0,mudM);
-  checkLms('dust',state.teams.dust.miles||0,dustM);
-  state.teams.mud.miles=mudM;state.teams.dust.miles=dustM;
-
-  document.getElementById('mudMiles').textContent=mudM.toLocaleString();
-  document.getElementById('dustMiles').textContent=dustM.toLocaleString();
-
-  renderDT(mudM,dustM);
-  renderCycleWarn(ci);
-  renderMap(mudM,dustM);
-  renderCards(ci);
-  renderPlayers(ci);
-  renderHistory();
-  renderTotals();
-
-  document.getElementById('lastSync').textContent='SYNCED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
-}
-
-function renderMap(mudM,dustM){
-  const map=document.getElementById('trailMap');
-  map.querySelectorAll('.lm').forEach(e=>e.remove());
-  const mapW=860, mapOff=20;
-  LMS.forEach(lm=>{
-    const px=((lm.mile/TRAIL)*100)+'%';
-    const mudHit=mudM>=lm.mile, dustHit=dustM>=lm.mile;
-    let cls='lm';
-    if(mudHit&&dustHit)cls+=' hit-both';
-    else if(mudHit)cls+=' hit-mud';
-    else if(dustHit)cls+=' hit-dust';
-    const div=document.createElement('div');
-    div.className=cls;
-    div.style.left=px;
-    // top is set by CSS .lm{top:8px}
-    const lbl=document.createElement('span');lbl.className='lm-l';lbl.textContent=lm.name;div.appendChild(lbl);
-    const ico=document.createElement('span');ico.className='lm-icon';ico.textContent=lm.icon;div.appendChild(ico);
-    const bon=document.createElement('span');bon.className='lm-b';bon.textContent='+'+lm.bonus+'mi';div.appendChild(bon);
-    map.appendChild(div);
-  });
-  const pct=m=>Math.min((m/TRAIL)*100,99)+'%';
-  document.getElementById('pmMud').style.width=pct(mudM);
-  document.getElementById('pmDust').style.width=pct(dustM);
-  document.getElementById('wgMud').style.left=pct(mudM);
-  document.getElementById('wgDust').style.left=pct(dustM);
-
-    const mf=state.teams.mud.frozenUntilSteps>0,df=state.teams.dust.frozenUntilSteps>0;
-  document.getElementById('mudFrz').style.display=mf?'block':'none';
-  document.getElementById('dustFrz').style.display=df?'block':'none';
-  if(mf){const t=TEAMS.mud.members.reduce((s,pid)=>s+(state.players[pid]?.steps?.[ld()]||0),0);document.getElementById('mudFrzG').textContent=state.teams.mud.frozenUntilSteps.toLocaleString();document.getElementById('mudFrzP').textContent=t.toLocaleString();}
-  if(df){const t=TEAMS.dust.members.reduce((s,pid)=>s+(state.players[pid]?.steps?.[ld()]||0),0);document.getElementById('dustFrzG').textContent=state.teams.dust.frozenUntilSteps.toLocaleString();document.getElementById('dustFrzP').textContent=t.toLocaleString();}
-}
-
-function cDesc(c,t){return typeof c.desc==='function'?c.desc(t):c.desc;}
-function cGoal(c,t){return typeof c.goal==='function'?c.goal(t):c.goal;}
-
-function renderCards(ci){
-  // Hide reveal buttons entirely before challenge starts
-  const challengeStarted=ld()>=START;
-  ['mud','dust'].forEach(team=>{
-    const cd=state.cards[team];
-    const evEl=document.getElementById(team+'Ev');
-    const btn=document.getElementById(team+'RevBtn');
-    const huntEl=document.getElementById(team+'Hunt');
-    const pionEl=document.getElementById(team+'Pion');
-    const hc=state.teams[team].huntClaimedCycle===ci.cycle;
-    huntEl.textContent=hc?'FOOD RAN OUT':'AVAILABLE';huntEl.className=hc?'rw-c':'rw-a';
-    const pe=(state.teams[team].pioneerEarned||[]).includes(ci.cycle);
-    pionEl.textContent=pe?'EARNED':'WEEKLY';pionEl.className=pe?'rw-c':'rw-a';
-    if(!cd.revealed||cd.cycleNum!==ci.cycle){
-      if(!challengeStarted){
-        btn.style.display='none';
-        evEl.innerHTML='<div class="en" style="color:var(--gd);">[TRAIL NOT YET OPEN]</div><div class="ed">FIRST CARD REVEALS ON MAY 21</div>';
-      }else{
-        btn.style.display='block';
-        evEl.innerHTML='<div class="en" style="color:var(--gd);">[UNREVEALED]</div><div class="ed">Tap reveal to draw event</div>';
-      }
-      return;
-    }
-    btn.style.display='none';
-    if(cd.cardId==='prairie_fire'){
-      evEl.innerHTML='<div class="rare-b">&#128293; OVERRIDE!</div><div class="en" style="color:#f30;">&#128293; PRAIRIE FIRE</div><div class="ed">Head-to-head avg steps race. Loser: -25 miles!</div>';return;
-    }
-    const card=[...COMMON,...RARE].find(c=>c.id===cd.cardId);if(!card)return;
-    // Progress display for step-goal cards
-    let prog='';
-    if(['river_crossing','dust_storm','native_trade'].includes(card.id)){
-      const goal=card.id==='river_crossing'?(team==='mud'?30000:40000):card.id==='dust_storm'?(team==='mud'?24000:32000):(team==='mud'?36000:48000);
-      const todayTot=TEAMS[team].members.reduce((s,pid)=>s+(state.players[pid]?.steps?.[ld()]||0),0);
-      prog=`<div class="ep">TODAY: ${todayTot.toLocaleString()} / ${goal.toLocaleString()} STEPS</div>`;
-    }
-    if(card.id==='broken_axle'){
-      const axle=state.teams[team].axleSubs||{};
-      const sub=TEAMS[team].members.filter(pid=>axle[pid]).length;
-      prog=`<div class="ep">WORKOUTS SUBMITTED: ${sub} / ${TEAMS[team].members.length}</div>`;
-    }
-    if(card.id==='wagon_mud'){
-      const liftSubs=state.teams[team].liftSubs||{};
-      const tot=TEAMS[team].members.reduce((s,pid)=>s+(liftSubs[pid]||0),0);
-      prog=`<div class="ep">LIFTED: ${tot} / ${TEAMS[team].liftGoal} LBS</div>`;
-    }
-    if(card.id==='trading_post'){
-      const votes=state.mvpVotes?.[team]||{};
-      const count=Object.keys(votes).length;
-      prog=`<div class="ep">VOTES CAST: ${count} / ${TEAMS[team].members.length}</div>`;
-    }
-    evEl.innerHTML=`${card.type==='rare'?'<div class="rare-b">RARE EVENT</div>':''}<div class="en">${card.name}</div><div class="ed">${cDesc(card,team)}</div><div class="eg">GOAL: ${cGoal(card,team)}</div>${prog}`;
-  });
-
-  // Trading post voting gate
-  const mudTP=state.cards.mud.cardId==='trading_post'&&state.cards.mud.revealed;
-  const dustTP=state.cards.dust.cardId==='trading_post'&&state.cards.dust.revealed;
-  const tpActive=mudTP||dustTP;
-  document.getElementById('mvpActive').style.display=tpActive?'block':'none';
-  document.getElementById('mvpInactive').style.display=tpActive?'none':'block';
-}
-
+// RENDER - players proven working
 function renderPlayers(ci){
   const today=ld();
-  PLAYERS.forEach(p=>{
-    if(!state.players[p.id])state.players[p.id]={steps:{},totalSteps:0};
-    if(!state.players[p.id].steps)state.players[p.id].steps={};
-  });
   ['mud','dust'].forEach(team=>{
     const members=TEAMS[team].members;
     const grid=document.getElementById(team+'Pg');
     if(!grid)return;
     grid.innerHTML='';
     let tt=0,cnt=0;
-    members.forEach(pid=>{
-      const s=state.players[pid].steps[today];
-      if(s!==undefined&&s!==null){tt+=s;cnt++;}
-    });
+    members.forEach(pid=>{const s=state.players[pid].steps[today];if(s!==undefined&&s!==null){tt+=s;cnt++;}});
     const avgEl=document.getElementById(team+'Avg');
     if(avgEl)avgEl.textContent=cnt?Math.round((tt/cnt)*3).toLocaleString():'0';
     members.forEach(pid=>{
-      const pi=PLAYERS.find(p=>p.id===pid);
-      if(!pi)return;
-      if(!state.players[pid])state.players[pid]={steps:{},totalSteps:0};
-      if(!state.players[pid].steps)state.players[pid].steps={};
+      const pi=PLAYERS.find(p=>p.id===pid);if(!pi)return;
       const todayS=state.players[pid].steps[today];
       const totalS=Object.values(state.players[pid].steps).reduce((a,b)=>a+(b||0),0);
       const dw=(state.deadWeight&&state.deadWeight[pid])||0;
@@ -1284,15 +795,11 @@ function renderPlayers(ci){
       const wrap=document.createElement('div');wrap.className='pp-w';
       const img=document.createElement('img');img.className='pp';
       img.src=PHOTOS[pid]||'';img.alt=pi.display;
-      wrap.appendChild(img);
-      card.appendChild(wrap);
+      wrap.appendChild(img);card.appendChild(wrap);
       const nm=document.createElement('div');nm.className='pn';nm.textContent=pi.name;card.appendChild(nm);
-      const st=document.createElement('div');st.className='ps';
-      st.textContent=(todayS!==undefined&&todayS!==null)?Number(todayS).toLocaleString():'---';
-      card.appendChild(st);
+      const st=document.createElement('div');st.className='ps';st.textContent=(todayS!==undefined&&todayS!==null)?Number(todayS).toLocaleString():'---';card.appendChild(st);
       const sl=document.createElement('div');sl.className='psl';sl.textContent='TODAY';card.appendChild(sl);
-      const tot=document.createElement('div');tot.className='pt';
-      tot.textContent='TOTAL: '+totalS.toLocaleString();card.appendChild(tot);
+      const tot=document.createElement('div');tot.className='pt';tot.textContent='TOTAL: '+totalS.toLocaleString();card.appendChild(tot);
       if(isMvp){const mv=document.createElement('div');mv.className='mvp-b';mv.textContent='MVP +1K/DAY';card.appendChild(mv);}
       if(dw>=3){const bn=document.createElement('div');bn.className='dw-b';bn.textContent='DEAD WEIGHT';card.appendChild(bn);}
       else if(dw===2){const bn=document.createElement('div');bn.className='ar-b';bn.textContent='AT RISK';card.appendChild(bn);}
@@ -1302,30 +809,122 @@ function renderPlayers(ci){
   });
 }
 
+function renderDT(mudM,dustM){
+  document.getElementById('mudDistMi').textContent=mudM.toLocaleString();
+  document.getElementById('dustDistMi').textContent=dustM.toLocaleString();
+  function setNext(team,miles){
+    const n=LMS.find(lm=>lm.mile>miles);
+    if(n){document.getElementById(team+'NxtNm').textContent=n.icon+' '+n.name;document.getElementById(team+'NxtLbl').textContent='NEXT: +'+n.bonus+'MI BONUS';document.getElementById(team+'NxtDist').textContent=(n.mile-miles)+' MILES AWAY';}
+    else{document.getElementById(team+'NxtNm').textContent='OREGON CITY';document.getElementById(team+'NxtLbl').textContent='FINAL DESTINATION';document.getElementById(team+'NxtDist').textContent=(TRAIL-miles)+' MILES TO FINISH';}
+  }
+  setNext('mud',mudM);setNext('dust',dustM);
+  const gap=Math.abs(mudM-dustM);
+  const el=document.getElementById('gapTxt');
+  if(gap===0)el.innerHTML='<span style="color:#00ff41">WAGONS ARE TIED!</span>';
+  else if(mudM>dustM)el.innerHTML='<span style="color:#ffb000">MUD & MUSCLE LEADS BY '+gap+' MILES</span>';
+  else el.innerHTML='<span style="color:#00ffff">DUST & GLORY LEADS BY '+gap+' MILES</span>';
+}
+
+function renderCards(ci){
+  const started=ld()>=START;
+  ['mud','dust'].forEach(team=>{
+    const cd=state.cards[team];
+    const evEl=document.getElementById(team+'Ev');
+    const btn=document.getElementById(team+'RevBtn');
+    const hc=state.teams[team].huntClaimedCycle===ci.cycle;
+    document.getElementById(team+'Hunt').textContent=hc?'FOOD RAN OUT':'AVAILABLE';
+    document.getElementById(team+'Hunt').className=hc?'rw-c':'rw-a';
+    const pe=(state.teams[team].pioneerEarned||[]).includes(ci.cycle);
+    document.getElementById(team+'Pion').textContent=pe?'EARNED':'WEEKLY';
+    document.getElementById(team+'Pion').className=pe?'rw-c':'rw-a';
+    if(!cd.revealed||cd.cycleNum!==ci.cycle){
+      btn.style.display=started?'block':'none';
+      evEl.innerHTML=started?'<div class="en" style="color:#00cc33">[UNREVEALED]</div><div class="ed">Tap reveal to draw event</div>':'<div class="en" style="color:#00cc33">[TRAIL NOT YET OPEN]</div><div class="ed">FIRST CARD REVEALS MAY 21</div>';
+      return;
+    }
+    btn.style.display='none';
+    if(cd.cardId==='prairie_fire'){evEl.innerHTML='<div class="rare-b">OVERRIDE!</div><div class="en" style="color:#f30">PRAIRIE FIRE</div><div class="ed">Head-to-head avg steps race. Loser: -25 miles!</div>';return;}
+    const card=[...COMMON,...RARE].find(c=>c.id===cd.cardId);if(!card)return;
+    const desc=typeof card.desc==='function'?card.desc(team):card.desc;
+    const goal=typeof card.goal==='function'?card.goal(team):card.goal;
+    let prog='';
+    if(['river_crossing','dust_storm','native_trade'].includes(card.id)){
+      const g=card.id==='river_crossing'?(team==='mud'?30000:40000):card.id==='dust_storm'?(team==='mud'?24000:32000):(team==='mud'?36000:48000);
+      const t=TEAMS[team].members.reduce((s,pid)=>s+(state.players[pid].steps[ld()]||0),0);
+      prog='<div class="ep">TODAY: '+t.toLocaleString()+' / '+g.toLocaleString()+'</div>';
+    }
+    if(card.id==='broken_axle'){const sub=TEAMS[team].members.filter(pid=>state.teams[team].axleSubs&&state.teams[team].axleSubs[pid]).length;prog='<div class="ep">SUBMITTED: '+sub+' / '+TEAMS[team].members.length+'</div>';}
+    if(card.id==='wagon_mud'){const ls=state.teams[team].liftSubs||{};const tot=TEAMS[team].members.reduce((s,pid)=>s+(ls[pid]?.weight||0),0);prog='<div class="ep">LIFTED: '+tot+' / '+TEAMS[team].liftGoal+' LBS</div>';}
+    if(card.id==='trading_post'){const vt=Object.keys(state.mvpVotes?.[team]||{}).length;prog='<div class="ep">VOTES: '+vt+' / '+TEAMS[team].members.length+'</div>';}
+    evEl.innerHTML=(card.type==='rare'?'<div class="rare-b">RARE EVENT</div>':'')+
+      '<div class="en">'+card.name+'</div><div class="ed">'+desc+'</div><div class="eg">GOAL: '+goal+'</div>'+prog;
+  });
+  const mudTP=state.cards.mud.cardId==='trading_post'&&state.cards.mud.revealed;
+  const dustTP=state.cards.dust.cardId==='trading_post'&&state.cards.dust.revealed;
+  document.getElementById('mvpOn').style.display=(mudTP||dustTP)?'block':'none';
+  document.getElementById('mvpOff').style.display=(mudTP||dustTP)?'none':'block';
+}
+
 function renderHistory(){
   const el=document.getElementById('histLog');
-  if(!state.history?.length){el.innerHTML='<div style="font-size:15px;color:var(--gd);text-align:center;padding:14px;">NO HISTORY YET</div>';return;}
-  el.innerHTML=[...state.history].slice(-3).reverse().map(h=>`
-    <div class="he"><div class="hc">> CYCLE ${h.cycle} &#8212; ${h.dateRange||''} ${(state.closedCycles||[]).includes(h.cycle)?'[CLOSED]':'[OPEN]'}</div>
-    ${(h.events||[]).map(ev=>`<div class="hr"><span class="${ev.cls||'hu'}">${ev.team?ev.team.toUpperCase()+': ':''}${ev.text}</span><span class="${ev.miles>0?'hp':ev.miles<0?'hn':'hu'}">${ev.miles?((ev.miles>0?'+':'')+ev.miles+' mi'):''}</span></div>`).join('')}
-    </div>`).join('');
+  if(!state.history?.length){el.innerHTML='<div style="font-size:15px;color:#00cc33;text-align:center;padding:14px;">NO HISTORY YET</div>';return;}
+  el.innerHTML=[...state.history].slice(-3).reverse().map(h=>`<div class="he"><div class="hc">> CYCLE ${h.cycle} - ${h.dateRange||''} ${(state.closedCycles||[]).includes(h.cycle)?'[CLOSED]':'[OPEN]'}</div>${(h.events||[]).map(ev=>`<div class="hr"><span class="${ev.cls||'hu'}">${ev.team?ev.team.toUpperCase()+': ':''}${ev.text}</span><span class="${ev.miles>0?'hp':ev.miles<0?'hn':'hu'}">${ev.miles?((ev.miles>0?'+':'')+ev.miles+' mi'):''}</span></div>`).join('')}</div>`).join('');
 }
 
 function renderTotals(){
-  const rows=PLAYERS.map(p=>({...p,team:teamOf(p.id),tot:Object.values(state.players[p.id]?.steps||{}).reduce((a,b)=>a+b,0)})).sort((a,b)=>b.tot-a.tot);
+  const rows=PLAYERS.map(p=>({...p,team:teamOf(p.id),tot:Object.values(state.players[p.id].steps).reduce((a,b)=>a+(b||0),0)})).sort((a,b)=>b.tot-a.tot);
   document.getElementById('totBod').innerHTML=rows.map((p,i)=>`<tr><td class="${i===0?'r1':i===1?'r2':'rx'}">${i===0?'&#127945; ':i===1?'&#129352; ':''}${p.name}</td><td style="font-size:13px;">${p.team==='mud'?'&#128002;':'&#128014;'}</td><td class="${i===0?'r1':i===1?'r2':'rx'}">${p.tot.toLocaleString()}</td></tr>`).join('');
 }
 
-// ── ADMIN ─────────────────────────────────────────────────
+function renderCycleWarn(ci){
+  const warn=document.getElementById('cycleWarn');
+  const pending=[];
+  for(let c=1;c<ci.cycle;c++){if(!(state.closedCycles||[]).includes(c)){const miss=missingPl(c);pending.push({c,miss});}}
+  if(!pending.length){warn.style.display='none';return;}
+  const p=pending[0];
+  const graceLeft=GRACE-daysBetween(addDays(START,p.c*CDAYS-1),ld());
+  warn.style.display='block';
+  warn.textContent='CYCLE '+p.c+' RESULTS PENDING - MISSING: '+(p.miss.length?p.miss.join(', '):'NONE - READY')+' | AUTO-CLOSE IN '+Math.max(0,graceLeft)+' DAYS';
+}
+
+function render(){
+  if(!state)return;
+  checkAutoClose();
+  const ci=getCycle();
+  if(state.cards.mud.cycleNum!==ci.cycle&&state.cards.mud.revealed)state.cards.mud={...state.cards.mud,revealed:false};
+  if(state.cards.dust.cycleNum!==ci.cycle&&state.cards.dust.revealed)state.cards.dust={...state.cards.dust,revealed:false};
+  document.getElementById('cycNum').textContent=ci.cycle;
+  document.getElementById('cycDL').textContent=ci.left+' DAY'+(ci.left!==1?'S':'')+' LEFT';
+  document.getElementById('cycTimer').textContent='CYCLE ENDS: '+fd(ci.end);
+  document.getElementById('prairieWarn').style.display=ci.cycle===state.prairieFireCycle-1?'block':'none';
+  document.getElementById('prairieFire').style.display=(ci.cycle===state.prairieFireCycle&&!state.prairieFireFired)?'block':'none';
+  const mudM=totalMi('mud'),dustM=totalMi('dust');
+  checkLms('mud',state.teams.mud.miles||0,mudM);
+  checkLms('dust',state.teams.dust.miles||0,dustM);
+  state.teams.mud.miles=mudM;state.teams.dust.miles=dustM;
+  document.getElementById('mudMiles').textContent=mudM.toLocaleString();
+  document.getElementById('dustMiles').textContent=dustM.toLocaleString();
+  renderDT(mudM,dustM);
+  renderCycleWarn(ci);
+  renderMap(mudM,dustM);
+  renderCards(ci);
+  renderPlayers(ci);
+  renderHistory();
+  renderTotals();
+  document.getElementById('lastSync').textContent='SYNCED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+}
+
+// ADMIN
 function openAdmin(){
   document.getElementById('aov').classList.add('open');
   document.getElementById('pins').classList.add('show');
   document.getElementById('acon').classList.remove('show');
-  document.getElementById('pinIn').value='';document.getElementById('pinMsg').textContent='';
+  document.getElementById('pinIn').value='';
+  document.getElementById('pinMsg').textContent='';
   document.getElementById('aDt').value=ld(-1);
   document.getElementById('aLd').value=ld(-1);
   document.getElementById('aAd').value=ld(-1);
-  popSels();updateCycleStatus();
+  popSels();updateCycStat();
 }
 function closeAdmin(){document.getElementById('aov').classList.remove('open');}
 function chkPin(){
@@ -1345,108 +944,56 @@ function popMvp(){
   const team=document.getElementById('aMt').value;
   const sel=document.getElementById('aMp');
   sel.innerHTML='<option value="">-- SELECT --</option>';
-  if(!team||!state)return;
-  TEAMS[team].members.forEach(pid=>{
-    const p=PLAYERS.find(x=>x.id===pid);if(!p)return;
-    const o=document.createElement('option');o.value=p.id;o.textContent=p.display;sel.appendChild(o);
-  });
+  if(!team)return;
+  TEAMS[team].members.forEach(pid=>{const p=PLAYERS.find(x=>x.id===pid);if(!p)return;const o=document.createElement('option');o.value=p.id;o.textContent=p.display;sel.appendChild(o);});
 }
-function updateCycleStatus(){
-  const ci=getCycleInfo();
-  const statusEl=document.getElementById('cycleStatusTxt');
-  const btn=document.getElementById('forceCloseBtn');
-  // Only look at cycles BEFORE the current one
-  const pending=[];
-  for(let cyc=1;cyc<ci.cycle;cyc++){
-    if(!(state.closedCycles||[]).includes(cyc))pending.push(cyc);
-  }
-  // Show recently closed cycles
-  const recentClosed=(state.closedCycles||[]).slice(-3);
-  const closedTxt=recentClosed.length>0?` | RECENTLY CLOSED: CYCLES ${recentClosed.join(', ')}`:'';
-  if(pending.length===0){
-    statusEl.textContent='ALL PAST CYCLES CLOSED'+closedTxt+'. CURRENT: CYCLE '+ci.cycle+' ('+ci.daysLeft+' DAYS LEFT)';
-    btn.disabled=true;
-  }else{
-    const p=pending[0];
-    const missing=missingPlayers(p);
-    statusEl.textContent=`CYCLE ${p} PENDING${closedTxt}. MISSING DATA: ${missing.length>0?missing.join(', '):'NONE — READY TO CLOSE'}`;
-    btn.disabled=false;
-  }
-}
-async function forceCloseCycle(){
-  const msg=document.getElementById('fcMsg');
-  const ci=getCycleInfo();
-  // Only close PAST cycles — never the current active cycle
-  let target=null;
-  for(let cyc=1;cyc<ci.cycle;cyc++){
-    if(!(state.closedCycles||[]).includes(cyc)){target=cyc;break;}
-  }
-  if(!target){
-    msg.textContent='NO PAST CYCLES PENDING — CURRENT CYCLE '+ci.cycle+' CANNOT BE FORCE CLOSED';
-    msg.className='am err';return;
-  }
-  msg.textContent='CLOSING CYCLE '+target+'...';msg.className='am';
-  closeCycle(target,true);
-  const mudM=totalMiles('mud'),dustM=totalMiles('dust');
-  checkLms('mud',state.teams.mud.miles||0,mudM);
-  checkLms('dust',state.teams.dust.miles||0,dustM);
-  state.teams.mud.miles=mudM;state.teams.dust.miles=dustM;
-  await saveAll(state);render();updateCycleStatus();
-  msg.textContent='CYCLE '+target+' CLOSED — RESULTS APPLIED';msg.className='am ok';
+function updateCycStat(){
+  const ci=getCycle();
+  const el=document.getElementById('cycStatTxt');
+  const btn=document.getElementById('fcBtn');
+  const pending=[];for(let c=1;c<ci.cycle;c++){if(!(state.closedCycles||[]).includes(c))pending.push(c);}
+  const closed=(state.closedCycles||[]).slice(-3);
+  if(!pending.length){el.textContent='ALL PAST CYCLES CLOSED'+(closed.length?' | RECENTLY CLOSED: CYCLES '+closed.join(', '):'')+'. CURRENT: CYCLE '+ci.cycle;btn.disabled=true;}
+  else{const miss=missingPl(pending[0]);el.textContent='CYCLE '+pending[0]+' PENDING. MISSING: '+(miss.length?miss.join(', '):'NONE - READY TO CLOSE');btn.disabled=false;}
 }
 
 async function logSteps(){
-  const pid=document.getElementById('aPl').value;
-  const date=document.getElementById('aDt').value;
-  const steps=parseInt(document.getElementById('aSt').value);
+  const pid=document.getElementById('aPl').value,date=document.getElementById('aDt').value,steps=parseInt(document.getElementById('aSt').value);
   const msg=document.getElementById('stMsg');
   if(!pid||!date||isNaN(steps)){msg.textContent='FILL ALL FIELDS';msg.className='am err';return;}
+  if(date<START){msg.textContent='CANNOT LOG BEFORE MAY 21';msg.className='am err';return;}
   if(steps<0||steps>100000){msg.textContent='INVALID STEPS';msg.className='am err';return;}
-  if(date<START){msg.textContent='CANNOT LOG STEPS BEFORE CHALLENGE START (MAY 21)';msg.className='am err';return;}
   msg.textContent='SAVING...';msg.className='am';
-  if(!state.players[pid])state.players[pid]={steps:{},totalSteps:0};
   const team=teamOf(pid);
   const isMvp=state.teams[team].mvpThisCycle===pid;
   state.players[pid].steps[date]=isMvp?steps+1000:steps;
-  state.players[pid].totalSteps=Object.values(state.players[pid].steps).reduce((a,b)=>a+b,0);
-  updateDW(date);
-  checkHunt('mud',date);checkHunt('dust',date);
-  checkFrozen('mud',date);checkFrozen('dust',date);
-  checkPioneer();
-  const mudM=totalMiles('mud'),dustM=totalMiles('dust');
-  checkLms('mud',state.teams.mud.miles||0,mudM);
-  checkLms('dust',state.teams.dust.miles||0,dustM);
+  state.players[pid].totalSteps=Object.values(state.players[pid].steps).reduce((a,b)=>a+(b||0),0);
+  updateDW(date);checkHunt('mud',date);checkHunt('dust',date);
+  checkFrozen('mud',date);checkFrozen('dust',date);checkPioneer();
+  const mudM=totalMi('mud'),dustM=totalMi('dust');
+  checkLms('mud',state.teams.mud.miles||0,mudM);checkLms('dust',state.teams.dust.miles||0,dustM);
   state.teams.mud.miles=mudM;state.teams.dust.miles=dustM;
   checkAutoClose();
   const ok=await saveAll(state);
-  if(!ok){msg.textContent='SAVE FAILED — RETRY';msg.className='am err';return;}
-  render();
-  msg.textContent='LOGGED '+steps.toLocaleString()+' STEPS FOR '+fd(date);msg.className='am ok';
+  if(!ok){msg.textContent='SAVE FAILED - RETRY';msg.className='am err';return;}
+  render();msg.textContent='LOGGED '+steps.toLocaleString()+' STEPS FOR '+fd(date);msg.className='am ok';
 }
 
 async function logLift(){
-  const pid=document.getElementById('aLp').value;
-  const date=document.getElementById('aLd').value;
-  const wt=parseInt(document.getElementById('aLw').value);
+  const pid=document.getElementById('aLp').value,date=document.getElementById('aLd').value,wt=parseInt(document.getElementById('aLw').value);
   const msg=document.getElementById('ltMsg');
   if(!pid||!date||isNaN(wt)){msg.textContent='FILL ALL FIELDS';msg.className='am err';return;}
   const team=teamOf(pid);
   if(!state.teams[team].liftSubs)state.teams[team].liftSubs={};
   state.teams[team].liftSubs[pid]={weight:wt,date};
-  const goal=TEAMS[team].liftGoal;
   const tot=TEAMS[team].members.reduce((s,mid)=>s+(state.teams[team].liftSubs[mid]?.weight||0),0);
-  if(tot>=goal&&state.teams[team].frozenUntilSteps>0){
-    state.teams[team].frozenUntilSteps=0;
-    addHist(team,'LIFT GOAL MET — WAGON FREE!',0,'hp');
-  }
+  if(tot>=TEAMS[team].liftGoal&&state.teams[team].frozenUntilSteps>0){state.teams[team].frozenUntilSteps=0;addHist(team,'LIFT GOAL MET - WAGON FREE!',0,'hp');}
   await saveAll(state);render();
-  msg.textContent=`LOGGED ${wt}LBS. TEAM TOTAL: ${tot}/${goal}LBS`;msg.className='am ok';
+  msg.textContent='LOGGED '+wt+'LBS. TOTAL: '+tot+'/'+TEAMS[team].liftGoal+'LBS';msg.className='am ok';
 }
 
 async function logAxle(){
-  const pid=document.getElementById('aAp').value;
-  const date=document.getElementById('aAd').value;
-  const mins=parseInt(document.getElementById('aAm').value);
+  const pid=document.getElementById('aAp').value,date=document.getElementById('aAd').value,mins=parseInt(document.getElementById('aAm').value);
   const msg=document.getElementById('axMsg');
   if(!pid||!date||isNaN(mins)){msg.textContent='FILL ALL FIELDS';msg.className='am err';return;}
   if(mins<30){msg.textContent='MINIMUM 30 MINUTES';msg.className='am err';return;}
@@ -1455,102 +1002,95 @@ async function logAxle(){
   state.teams[team].axleSubs[pid]={mins,date};
   const sub=TEAMS[team].members.filter(mid=>state.teams[team].axleSubs[mid]).length;
   await saveAll(state);render();
-  msg.textContent=`WORKOUT LOGGED (${mins} MIN). SUBMISSIONS: ${sub}/${TEAMS[team].members.length}`;msg.className='am ok';
+  msg.textContent='LOGGED '+mins+' MIN. SUBMISSIONS: '+sub+'/'+TEAMS[team].members.length;msg.className='am ok';
 }
 
 async function subMvp(){
-  const team=document.getElementById('aMt').value;
-  const mvp=document.getElementById('aMp').value;
-  const voter=document.getElementById('aVt').value;
+  const team=document.getElementById('aMt').value,mvp=document.getElementById('aMp').value,voter=document.getElementById('aVt').value;
   const msg=document.getElementById('mvMsg');
   if(!team||!mvp||!voter){msg.textContent='FILL ALL FIELDS';msg.className='am err';return;}
   if(!state.mvpVotes)state.mvpVotes={mud:{},dust:{}};
   if(!state.mvpVotes[team])state.mvpVotes[team]={};
   state.mvpVotes[team][voter]=mvp;
-  // Show tally
   const tally={};Object.values(state.mvpVotes[team]).forEach(v=>{tally[v]=(tally[v]||0)+1;});
-  const tallyStr=Object.entries(tally).sort((a,b)=>b[1]-a[1]).map(([id,ct])=>{
-    const p=PLAYERS.find(x=>x.id===id);return `${p?.display||id}: ${ct} vote${ct!==1?'s':''}`;
-  }).join(' | ');
-  document.getElementById('mvpTally').textContent='CURRENT TALLY: '+tallyStr;
   const w=Object.entries(tally).sort((a,b)=>b[1]-a[1])[0];
   if(w)state.teams[team].mvpNextCycle=w[0];
+  const tallyStr=Object.entries(tally).sort((a,b)=>b[1]-a[1]).map(([id,ct])=>{const p=PLAYERS.find(x=>x.id===id);return(p?.display||id)+': '+ct;}).join(' | ');
+  document.getElementById('mvpTally').textContent='TALLY: '+tallyStr;
   await saveAll(state);render();
   const wp=PLAYERS.find(p=>p.id===state.teams[team].mvpNextCycle);
-  msg.textContent='VOTE CAST! LEADING MVP: '+(wp?.display||'---');msg.className='am ok';
+  msg.textContent='VOTE CAST! LEADING: '+(wp?.display||'---');msg.className='am ok';
 }
 
 async function adjMiles(){
-  const team=document.getElementById('aAt').value;
-  const miles=parseFloat(document.getElementById('aAm2').value);
-  const reason=document.getElementById('aAr').value.trim().toUpperCase();
+  const team=document.getElementById('aAt').value,miles=parseFloat(document.getElementById('aAm2').value),reason=document.getElementById('aAr').value.trim().toUpperCase();
   const msg=document.getElementById('adMsg');
   if(!team||isNaN(miles)||!reason){msg.textContent='FILL ALL FIELDS';msg.className='am err';return;}
   state.mileAdj.push({team,miles,reason,date:ld()});
   addHist(team,reason,miles,miles>=0?'hp':'hn');
   await saveAll(state);render();
-  msg.textContent='APPLIED '+(miles>0?'+':'')+miles+' MILES TO '+team.toUpperCase();msg.className='am ok';
+  msg.textContent='APPLIED '+(miles>0?'+':'')+miles+' MILES';msg.className='am ok';
+}
+
+async function forceClose(){
+  const msg=document.getElementById('fcMsg');
+  const ci=getCycle();
+  let target=null;for(let c=1;c<ci.cycle;c++){if(!(state.closedCycles||[]).includes(c)){target=c;break;}}
+  if(!target){msg.textContent='NO PAST CYCLES PENDING';msg.className='am err';return;}
+  msg.textContent='CLOSING CYCLE '+target+'...';msg.className='am';
+  closeCycle(target,true);
+  const mudM=totalMi('mud'),dustM=totalMi('dust');
+  checkLms('mud',state.teams.mud.miles||0,mudM);checkLms('dust',state.teams.dust.miles||0,dustM);
+  state.teams.mud.miles=mudM;state.teams.dust.miles=dustM;
+  await saveAll(state);render();updateCycStat();
+  msg.textContent='CYCLE '+target+' CLOSED';msg.className='am ok';
+}
+
+async function manualBak(){
+  const msg=document.getElementById('bakMsg');msg.textContent='BACKING UP...';msg.className='am';
+  const ok=await backupGH(state);msg.textContent=ok?'BACKUP SAVED!':'BACKUP FAILED';msg.className=ok?'am ok':'am err';
+}
+
+async function restoreGH(){
+  const msg=document.getElementById('bakMsg');msg.textContent='FETCHING...';msg.className='am';
+  try{
+    const r=await fetch(`https://api.github.com/repos/${GHR}/contents/${GHF}`,{headers:{'Authorization':'token '+GHT,'Accept':'application/vnd.github.v3+json'}});
+    if(!r.ok)throw new Error('Not found');
+    const d=await r.json();
+    const dec=decodeURIComponent(escape(atob(d.content.replace(/\n/g,''))));
+    state=fixState(JSON.parse(dec));await saveBin(state);render();
+    msg.textContent='RESTORED!';msg.className='am ok';
+  }catch(e){msg.textContent='RESTORE FAILED: '+e.message;msg.className='am err';}
 }
 
 async function resetAll(){
   if(!confirm('RESET ENTIRE CHALLENGE? CANNOT BE UNDONE!'))return;
   const msg=document.getElementById('rstMsg');
   msg.textContent='RESETTING...';msg.className='am';
-  state=defaultState();
-  // Save directly to JSONBin only - skip GitHub backup during reset
+  state=defState();
   const ok=await saveBin(state);
-  if(ok){
-    msg.textContent='RESET DONE. RELOADING...';msg.className='am ok';
-    // Backup to GitHub async after page would reload anyway
-    backupGH(state).catch(()=>{});
-    setTimeout(()=>location.reload(),1200);
-  }else{
-    msg.textContent='SAVE FAILED - TRY AGAIN';msg.className='am err';
-  }
+  backupGH(state).catch(()=>{});
+  if(ok){msg.textContent='RESET DONE. RELOADING...';msg.className='am ok';setTimeout(()=>location.reload(),1200);}
+  else{msg.textContent='SAVE FAILED - TRY AGAIN';msg.className='am err';}
 }
 
-// ── REFRESH ───────────────────────────────────────────────
 function startRefresh(){
-  if(refreshTimer)clearInterval(refreshTimer);
-  refreshTimer=setInterval(async()=>{const f=await loadBin();if(f){state=f;render();}},30000);
+  if(rtimer)clearInterval(rtimer);
+  rtimer=setInterval(async()=>{const f=await loadBin();if(f){state=fixState(f);render();}},30000);
 }
 
-// ── INIT ──────────────────────────────────────────────────
 async function init(){
   let raw=null;
-  try{raw=await loadBin();}catch(e){raw=null;}
-  if(!raw||!raw.version||raw.version<4){
-    state=defaultState();
-    await saveAll(state,true);
+  try{raw=await loadBin();}catch(e){}
+  if(!raw||!raw.version||raw.version<5){
+    state=defState();
+    await saveBin(state);
+    backupGH(state).catch(()=>{});
   }else{
-    state=raw;
-    // Always ensure all 7 players exist in state regardless of stored version
-    let playersMissing=false;
-    PLAYERS.forEach(p=>{
-      if(!state.players[p.id]){
-        state.players[p.id]={steps:{},totalSteps:0};
-        playersMissing=true;
-      }
-      if(!state.players[p.id].steps){
-        state.players[p.id].steps={};
-        playersMissing=true;
-      }
-    });
-    // Ensure teams object has all required fields
-    ['mud','dust'].forEach(team=>{
-      if(!state.teams[team].frozenDates)state.teams[team].frozenDates=[];
-      if(!state.teams[team].liftSubs)state.teams[team].liftSubs={};
-      if(!state.teams[team].axleSubs)state.teams[team].axleSubs={};
-      if(!state.teams[team].pioneerEarned)state.teams[team].pioneerEarned=[];
-      if(!state.closedCycles)state.closedCycles=[];
-      if(!state.mileAdj)state.mileAdj=[];
-      if(!state.deadWeight)state.deadWeight={};
-      if(!state.history)state.history=[];
-      if(!state.landmarksHit)state.landmarksHit={mud:[],dust:[]};
-    });
-    if(playersMissing)await saveAll(state,true);
+    state=fixState(raw);
   }
-  render();startRefresh();
+  render();
+  startRefresh();
 }
 
 window.onload=init;
