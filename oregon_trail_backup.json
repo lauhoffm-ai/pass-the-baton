@@ -6,7 +6,7 @@
   "closedCycles": [],
   "mileAdj": [],
   "deadWeight": {
-    "michael": 1,
+    "michael": 2,
     "jordan": 0,
     "shania": 0,
     "chris": 0,
@@ -26,7 +26,7 @@
   "history": [],
   "teams": {
     "mud": {
-      "miles": 0,
+      "miles": 7,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -67,9 +67,9 @@
   "players": {
     "michael": {
       "steps": {
-        "2026-05-21": 671
+        "2026-05-21": 10000
       },
-      "totalSteps": 671
+      "totalSteps": 10000
     },
     "jordan": {
       "steps": {},
