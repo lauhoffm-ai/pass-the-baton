@@ -473,7 +473,15 @@ async function loadBin(){
   try{const r=await fetch(`https://api.jsonbin.io/v3/b/${BIN}/latest`,{headers:{'X-Master-Key':MK}});const d=await r.json();return d.record;}catch(e){return null;}
 }
 async function saveBin(s){
-  try{const r=await fetch(`https://api.jsonbin.io/v3/b/${BIN}`,{method:'PUT',headers:{'Content-Type':'application/json','X-Master-Key':MK},body:JSON.stringify(s)});return r.ok;}catch(e){return false;}
+  try{
+    const r=await fetch(`https://api.jsonbin.io/v3/b/${BIN}`,{method:'PUT',headers:{'Content-Type':'application/json','X-Master-Key':MK},body:JSON.stringify(s)});
+    const el=document.getElementById('lastSync');
+    if(el){el.textContent=r.ok?'SAVED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'}):'SAVE FAILED!';}
+    return r.ok;
+  }catch(e){
+    const el=document.getElementById('lastSync');if(el)el.textContent='SAVE ERROR!';
+    return false;
+  }
 }
 
 // GitHub backup
@@ -485,6 +493,7 @@ async function backupGH(s){
 }
 async function saveAll(s,skipBak=false){
   const ok=await saveBin(s);
+  if(ok)lastSaveTime=Date.now();
   if(!skipBak)backupGH(s).then(b=>{const el=document.getElementById('bkStat');if(el){el.textContent=b?'BACKUP: OK':'BACKUP: FAIL';el.className=b?'bok':'berr';}}).catch(()=>{});
   return ok;
 }
@@ -1021,7 +1030,6 @@ async function logSteps(){
   const mudM=totalMi('mud'),dustM=totalMi('dust');
   checkLms('mud',state.teams.mud.miles||0,mudM);checkLms('dust',state.teams.dust.miles||0,dustM);
   state.teams.mud.miles=mudM;state.teams.dust.miles=dustM;
-  checkAutoClose();
   const ok=await saveAll(state);
   if(!ok){msg.textContent='SAVE FAILED - RETRY';msg.className='am err';return;}
   render();msg.textContent='LOGGED '+steps.toLocaleString()+' STEPS FOR '+fd(date);msg.className='am ok';
@@ -1122,9 +1130,15 @@ async function resetAll(){
   else{msg.textContent='SAVE FAILED - TRY AGAIN';msg.className='am err';}
 }
 
+let lastSaveTime=0;
 function startRefresh(){
   if(rtimer)clearInterval(rtimer);
-  rtimer=setInterval(async()=>{const f=await loadBin();if(f){state=fixState(f);render();}},30000);
+  rtimer=setInterval(async()=>{
+    // Don't overwrite if we saved within last 10 seconds
+    if(Date.now()-lastSaveTime<60000)return;
+    const f=await loadBin();
+    if(f){state=fixState(f);render();}
+  },30000);
 }
 
 async function init(){
