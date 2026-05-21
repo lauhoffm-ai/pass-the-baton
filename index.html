@@ -78,20 +78,39 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:
 /* MAP - proven working from test page */
 .map-wrap{padding:8px 0;}
 .trail-outer{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
-.trail-map{position:relative;height:180px;min-width:860px;}
-.tl{position:absolute;top:100px;left:0;right:0;height:3px;background:#004d14;}
-.pm{position:absolute;top:100px;left:0;height:3px;}
-.pm.mud{margin-top:-3px;background:#ffb000;box-shadow:0 0 6px #ffb000;}
-.pm.dust{margin-top:3px;background:#00ffff;box-shadow:0 0 6px #00ffff;}
-.wg{position:absolute;font-size:22px;}
-.wg.mud{top:68px;color:#ffb000;}
-.wg.dust{top:108px;color:#00ffff;}
-.lm{position:absolute;top:10px;display:flex;flex-direction:column;align-items:center;width:56px;margin-left:-28px;gap:1px;}
-.lm-l{font-size:8px;color:#00cc33;white-space:nowrap;text-align:center;line-height:1.3;font-family:var(--mn);}
-.lm-icon{font-size:18px;line-height:1.2;}
-.lm-b{font-size:8px;color:#00ff41;white-space:nowrap;font-family:var(--mn);}
-.te{display:flex;justify-content:space-between;font-size:11px;color:#004d14;padding:0 2px;margin-top:4px;}
-.wleg{display:flex;gap:14px;justify-content:center;margin-top:6px;font-size:15px;}
+.trail-map{position:relative;height:260px;min-width:960px;}
+.tl{position:absolute;top:130px;left:0;right:0;height:3px;background:#004d14;}
+.pm{position:absolute;top:130px;left:0;height:3px;}
+.pm.mud{margin-top:-3px;background:#ffb000;box-shadow:0 0 8px #ffb000;}
+.pm.dust{margin-top:3px;background:#00ffff;box-shadow:0 0 8px #00ffff;}
+.wg{position:absolute;font-size:26px;}
+.wg.mud{top:92px;color:#ffb000;filter:drop-shadow(0 0 6px #ffb000);}
+.wg.dust{top:136px;color:#00ffff;filter:drop-shadow(0 0 6px #00ffff);}
+/* ABOVE trail landmarks */
+.lm-above{position:absolute;display:flex;flex-direction:column;align-items:center;width:70px;margin-left:-35px;bottom:134px;}
+.lm-above .lm-name{font-size:11px;white-space:nowrap;text-align:center;line-height:1.3;font-family:var(--mn);margin-bottom:2px;}
+.lm-above .lm-icon{font-size:24px;line-height:1;}
+.lm-above .lm-bonus{font-size:11px;white-space:nowrap;font-family:var(--mn);margin-top:1px;}
+.lm-above .lm-stem{width:1px;height:14px;margin-top:3px;}
+/* BELOW trail landmarks */
+.lm-below{position:absolute;display:flex;flex-direction:column;align-items:center;width:70px;margin-left:-35px;top:134px;}
+.lm-below .lm-stem{width:1px;height:14px;margin-bottom:3px;}
+.lm-below .lm-icon{font-size:24px;line-height:1;}
+.lm-below .lm-name{font-size:11px;white-space:nowrap;text-align:center;line-height:1.3;font-family:var(--mn);margin-top:2px;}
+.lm-below .lm-bonus{font-size:11px;white-space:nowrap;font-family:var(--mn);margin-top:1px;}
+/* Color by type */
+.lm-river .lm-name{color:#00ffff;}.lm-river .lm-bonus{color:#00ffff;}.lm-river .lm-stem{background:#00ffff;}
+.lm-fort .lm-name{color:#ffb000;}.lm-fort .lm-bonus{color:#ffb000;}.lm-fort .lm-stem{background:#ffb000;}
+.lm-land .lm-name{color:#00ff41;}.lm-land .lm-bonus{color:#00ff41;}.lm-land .lm-stem{background:#00ff41;}
+/* Hit states */
+.lm-hit-mud .lm-icon{filter:drop-shadow(0 0 6px #ffb000);}
+.lm-hit-dust .lm-icon{filter:drop-shadow(0 0 6px #00ffff);}
+.lm-hit-both{opacity:.4;}
+/* Start/end labels */
+.trail-start{position:absolute;left:4px;top:118px;font-size:13px;color:#004d14;font-family:var(--mn);}
+.trail-end{position:absolute;right:4px;top:118px;font-size:13px;color:#004d14;font-family:var(--mn);}
+.te{display:none;}
+.wleg{display:flex;gap:14px;justify-content:center;margin-top:8px;font-size:16px;}
 .wleg .mud{color:#ffb000;}.wleg .dust{color:#00ffff;}
 .msh{font-size:12px;color:#004d14;text-align:center;margin-top:2px;}
 
@@ -396,16 +415,16 @@ const PHOTOS={
 };
 
 const LMS=[
-  {mile:250,name:'PLATTE RIVER',icon:'🛶',bonus:20},
-  {mile:350,name:'CHIMNEY ROCK',icon:'⛰️',bonus:25},
-  {mile:450,name:'FT. LARAMIE',icon:'🏰',bonus:20},
-  {mile:600,name:'SWEETWATER',icon:'🛶',bonus:25},
-  {mile:700,name:'INDEP. ROCK',icon:'⛰️',bonus:30},
-  {mile:850,name:'SOUTH PASS',icon:'⛰️',bonus:25},
-  {mile:1000,name:'FT. BRIDGER',icon:'🏰',bonus:20},
-  {mile:1150,name:'SNAKE RIVER',icon:'🛶',bonus:30},
-  {mile:1300,name:'BLUE MTNS',icon:'⛰️',bonus:25},
-  {mile:1400,name:'COLUMBIA',icon:'🛶',bonus:40}
+  {mile:250, name:'PLATTE RIVER', icon:'🛶',bonus:20,type:'river'},
+  {mile:350, name:'CHIMNEY ROCK', icon:'⛰️',bonus:25,type:'land'},
+  {mile:450, name:'FT. LARAMIE',  icon:'🏰',bonus:20,type:'fort'},
+  {mile:600, name:'SWEETWATER',   icon:'🛶',bonus:25,type:'river'},
+  {mile:700, name:'INDEP. ROCK',  icon:'⛰️',bonus:30,type:'land'},
+  {mile:850, name:'SOUTH PASS',   icon:'⛰️',bonus:25,type:'land'},
+  {mile:1000,name:'FT. BRIDGER',  icon:'🏰',bonus:20,type:'fort'},
+  {mile:1150,name:'SNAKE RIVER',  icon:'🛶',bonus:30,type:'river'},
+  {mile:1300,name:'BLUE MTNS',    icon:'⛰️',bonus:25,type:'land'},
+  {mile:1400,name:'COLUMBIA',     icon:'🛶',bonus:40,type:'river'}
 ];
 
 const COMMON=[
@@ -745,68 +764,50 @@ async function revealCard(team){
 // RENDER - map proven working
 function renderMap(mudM,dustM){
   const map=document.getElementById('trailMap');
-  map.querySelectorAll('.lm').forEach(e=>e.remove());
-  LMS.forEach(lm=>{
-    const pct=(lm.mile/TRAIL*100).toFixed(1)+'%';
+  map.querySelectorAll('.lm-above,.lm-below,.trail-start,.trail-end').forEach(e=>e.remove());
+
+  // Start/end labels
+  const sl=document.createElement('div');sl.className='trail-start';sl.textContent='INDEPENDENCE';map.appendChild(sl);
+  const el=document.createElement('div');el.className='trail-end';el.textContent='OREGON CITY';map.appendChild(el);
+
+  // Map is 960px wide, landmarks use percentage
+  LMS.forEach((lm,idx)=>{
+    const pct=(lm.mile/TRAIL*100).toFixed(2)+'%';
+    const above=idx%2===0; // alternate above/below
     const mudHit=mudM>=lm.mile,dustHit=dustM>=lm.mile;
-    let cls='lm';
-    if(mudHit&&dustHit)cls+=' hit-both';
-    else if(mudHit)cls+=' hit-mud';
-    else if(dustHit)cls+=' hit-dust';
+    let typeCls=lm.type==='river'?'lm-river':lm.type==='fort'?'lm-fort':'lm-land';
+    let hitCls=mudHit&&dustHit?' lm-hit-both':mudHit?' lm-hit-mud':dustHit?' lm-hit-dust':'';
     const div=document.createElement('div');
-    div.className=cls;
+    div.className=(above?'lm-above':'lm-below')+' '+typeCls+hitCls;
     div.style.left=pct;
-    div.innerHTML='<span class="lm-l">'+lm.name+'</span><span class="lm-icon">'+lm.icon+'</span><span class="lm-b">+'+lm.bonus+'mi</span>';
+
+    if(above){
+      // name, icon, stem — top to bottom
+      const nm=document.createElement('div');nm.className='lm-name';nm.textContent=lm.name;div.appendChild(nm);
+      const bn=document.createElement('div');bn.className='lm-bonus';bn.textContent='+'+lm.bonus+'mi';div.appendChild(bn);
+      const ic=document.createElement('div');ic.className='lm-icon';ic.textContent=lm.icon;div.appendChild(ic);
+      const st=document.createElement('div');st.className='lm-stem';div.appendChild(st);
+    }else{
+      // stem, icon, name — top to bottom
+      const st=document.createElement('div');st.className='lm-stem';div.appendChild(st);
+      const ic=document.createElement('div');ic.className='lm-icon';ic.textContent=lm.icon;div.appendChild(ic);
+      const nm=document.createElement('div');nm.className='lm-name';nm.textContent=lm.name;div.appendChild(nm);
+      const bn=document.createElement('div');bn.className='lm-bonus';bn.textContent='+'+lm.bonus+'mi';div.appendChild(bn);
+    }
     map.appendChild(div);
   });
+
   const pct=m=>Math.min(m/TRAIL*100,99)+'%';
   document.getElementById('pmMud').style.width=pct(mudM);
   document.getElementById('pmDust').style.width=pct(dustM);
   document.getElementById('wgMud').style.left=pct(mudM);
   document.getElementById('wgDust').style.left=pct(dustM);
+
   const mf=state.teams.mud.frozenUntilSteps>0,df=state.teams.dust.frozenUntilSteps>0;
   document.getElementById('mudFrz').style.display=mf?'block':'none';
   document.getElementById('dustFrz').style.display=df?'block':'none';
   if(mf){const t=TEAMS.mud.members.reduce((s,pid)=>s+(state.players[pid].steps[ld()]||0),0);document.getElementById('mudFrzG').textContent=state.teams.mud.frozenUntilSteps.toLocaleString();document.getElementById('mudFrzP').textContent=t.toLocaleString();}
   if(df){const t=TEAMS.dust.members.reduce((s,pid)=>s+(state.players[pid].steps[ld()]||0),0);document.getElementById('dustFrzG').textContent=state.teams.dust.frozenUntilSteps.toLocaleString();document.getElementById('dustFrzP').textContent=t.toLocaleString();}
-}
-
-// RENDER - players proven working
-function renderPlayers(ci){
-  const today=ld();
-  ['mud','dust'].forEach(team=>{
-    const members=TEAMS[team].members;
-    const grid=document.getElementById(team+'Pg');
-    if(!grid)return;
-    grid.innerHTML='';
-    let tt=0,cnt=0;
-    members.forEach(pid=>{const s=state.players[pid].steps[today];if(s!==undefined&&s!==null){tt+=s;cnt++;}});
-    const avgEl=document.getElementById(team+'Avg');
-    if(avgEl)avgEl.textContent=cnt?Math.round((tt/cnt)*3).toLocaleString():'0';
-    members.forEach(pid=>{
-      const pi=PLAYERS.find(p=>p.id===pid);if(!pi)return;
-      const todayS=state.players[pid].steps[today];
-      const totalS=Object.values(state.players[pid].steps).reduce((a,b)=>a+(b||0),0);
-      const dw=(state.deadWeight&&state.deadWeight[pid])||0;
-      const isMvp=state.teams[team].mvpThisCycle===pid;
-      const isDy=state.dysentery&&state.dysentery.revealDate===today&&state.dysentery[team+'Player']===pid;
-      const card=document.createElement('div');
-      card.className='pc'+(dw>=3?' dead-wt':dw===2?' at-risk':'');
-      const wrap=document.createElement('div');wrap.className='pp-w';
-      const img=document.createElement('img');img.className='pp';
-      img.src=PHOTOS[pid]||'';img.alt=pi.display;
-      wrap.appendChild(img);card.appendChild(wrap);
-      const nm=document.createElement('div');nm.className='pn';nm.textContent=pi.name;card.appendChild(nm);
-      const st=document.createElement('div');st.className='ps';st.textContent=(todayS!==undefined&&todayS!==null)?Number(todayS).toLocaleString():'---';card.appendChild(st);
-      const sl=document.createElement('div');sl.className='psl';sl.textContent='TODAY';card.appendChild(sl);
-      const tot=document.createElement('div');tot.className='pt';tot.textContent='TOTAL: '+totalS.toLocaleString();card.appendChild(tot);
-      if(isMvp){const mv=document.createElement('div');mv.className='mvp-b';mv.textContent='MVP +1K/DAY';card.appendChild(mv);}
-      if(dw>=3){const bn=document.createElement('div');bn.className='dw-b';bn.textContent='DEAD WEIGHT';card.appendChild(bn);}
-      else if(dw===2){const bn=document.createElement('div');bn.className='ar-b';bn.textContent='AT RISK';card.appendChild(bn);}
-      if(isDy){const dy=document.createElement('div');dy.className='dy-b';dy.textContent='HAD DYSENTERY YESTERDAY';card.appendChild(dy);}
-      grid.appendChild(card);
-    });
-  });
 }
 
 function renderDT(mudM,dustM){
