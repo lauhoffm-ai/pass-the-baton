@@ -44,9 +44,9 @@
   },
   "cards": {
     "mud": {
-      "cardId": null,
-      "revealed": false,
-      "cycleNum": 0
+      "cardId": "river_crossing",
+      "revealed": true,
+      "cycleNum": 1
     },
     "dust": {
       "cardId": null,
