@@ -1,0 +1,87 @@
+{
+  "version": 5,
+  "challengeStart": "2026-05-21",
+  "prairieFireCycle": 5,
+  "prairieFireFired": false,
+  "closedCycles": [],
+  "mileAdj": [],
+  "deadWeight": {},
+  "dysentery": {},
+  "mvpVotes": {
+    "mud": {},
+    "dust": {}
+  },
+  "landmarksHit": {
+    "mud": [],
+    "dust": []
+  },
+  "history": [],
+  "teams": {
+    "mud": {
+      "miles": 0,
+      "frozenUntilSteps": 0,
+      "rareUsed": [],
+      "huntClaimedCycle": 0,
+      "mvpThisCycle": null,
+      "mvpNextCycle": null,
+      "liftSubs": {},
+      "axleSubs": {},
+      "pioneerEarned": [],
+      "frozenDates": []
+    },
+    "dust": {
+      "miles": 0,
+      "frozenUntilSteps": 0,
+      "rareUsed": [],
+      "huntClaimedCycle": 0,
+      "mvpThisCycle": null,
+      "mvpNextCycle": null,
+      "liftSubs": {},
+      "axleSubs": {},
+      "pioneerEarned": [],
+      "frozenDates": []
+    }
+  },
+  "cards": {
+    "mud": {
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 0
+    },
+    "dust": {
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 0
+    }
+  },
+  "players": {
+    "michael": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "jordan": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "shania": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "chris": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "kaykay": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "lauren": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "allen": {
+      "steps": {},
+      "totalSteps": 0
+    }
+  }
+}
