@@ -4,20 +4,7 @@
   "prairieFireCycle": 10,
   "prairieFireFired": false,
   "closedCycles": [],
-  "mileAdj": [
-    {
-      "team": "mud",
-      "miles": 20,
-      "reason": "FAIR WEATHER",
-      "date": "2026-05-21"
-    },
-    {
-      "team": "dust",
-      "miles": 20,
-      "reason": "FAIR WEATHER",
-      "date": "2026-05-21"
-    }
-  ],
+  "mileAdj": [],
   "deadWeight": {},
   "dysentery": {},
   "mvpVotes": {
@@ -28,29 +15,10 @@
     "mud": [],
     "dust": []
   },
-  "history": [
-    {
-      "cycle": 1,
-      "dateRange": "MAY 21",
-      "events": [
-        {
-          "team": "mud",
-          "text": "FAIR WEATHER BONUS",
-          "miles": 20,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "FAIR WEATHER BONUS",
-          "miles": 20,
-          "cls": "hp"
-        }
-      ]
-    }
-  ],
+  "history": [],
   "teams": {
     "mud": {
-      "miles": 20,
+      "miles": 0,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -64,7 +32,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 20,
+      "miles": 0,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -83,7 +51,7 @@
       "cycleNum": 1
     },
     "dust": {
-      "cardId": "fair_weather",
+      "cardId": "broken_axle",
       "revealed": true,
       "cycleNum": 1
     }
