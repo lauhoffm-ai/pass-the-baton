@@ -5,7 +5,15 @@
   "prairieFireFired": false,
   "closedCycles": [],
   "mileAdj": [],
-  "deadWeight": {},
+  "deadWeight": {
+    "michael": 1,
+    "jordan": 0,
+    "shania": 0,
+    "chris": 0,
+    "kaykay": 0,
+    "lauren": 0,
+    "allen": 0
+  },
   "dysentery": {},
   "mvpVotes": {
     "mud": {},
@@ -18,7 +26,7 @@
   "history": [],
   "teams": {
     "mud": {
-      "miles": 0,
+      "miles": 5,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -56,8 +64,10 @@
   },
   "players": {
     "michael": {
-      "steps": {},
-      "totalSteps": 0
+      "steps": {
+        "2026-05-21": 8165
+      },
+      "totalSteps": 8165
     },
     "jordan": {
       "steps": {},
