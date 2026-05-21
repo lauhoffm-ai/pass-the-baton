@@ -5,7 +5,15 @@
   "prairieFireFired": false,
   "closedCycles": [],
   "mileAdj": [],
-  "deadWeight": {},
+  "deadWeight": {
+    "michael": 1,
+    "jordan": 0,
+    "shania": 0,
+    "chris": 0,
+    "kaykay": 0,
+    "lauren": 0,
+    "allen": 0
+  },
   "dysentery": {},
   "mvpVotes": {
     "mud": {},
@@ -58,8 +66,10 @@
   },
   "players": {
     "michael": {
-      "steps": {},
-      "totalSteps": 0
+      "steps": {
+        "2026-05-21": 671
+      },
+      "totalSteps": 671
     },
     "jordan": {
       "steps": {},
