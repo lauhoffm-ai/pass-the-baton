@@ -20,7 +20,9 @@
     "mud": {
       "miles": 0,
       "frozenUntilSteps": 0,
-      "rareUsed": [],
+      "rareUsed": [
+        "wagon_mud"
+      ],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
@@ -44,9 +46,9 @@
   },
   "cards": {
     "mud": {
-      "cardId": null,
-      "revealed": false,
-      "cycleNum": 0
+      "cardId": "wagon_mud",
+      "revealed": true,
+      "cycleNum": 1
     },
     "dust": {
       "cardId": null,
