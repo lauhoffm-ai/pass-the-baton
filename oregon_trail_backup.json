@@ -1,26 +1,11 @@
 {
   "version": 5,
   "challengeStart": "2026-05-21",
-  "prairieFireCycle": 10,
+  "prairieFireCycle": 5,
   "prairieFireFired": false,
   "closedCycles": [],
-  "mileAdj": [
-    {
-      "team": "mud",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: MICHAEL",
-      "date": "2026-05-21"
-    }
-  ],
-  "deadWeight": {
-    "michael": 0,
-    "jordan": 0,
-    "shania": 0,
-    "chris": 0,
-    "kaykay": 0,
-    "lauren": 0,
-    "allen": 0
-  },
+  "mileAdj": [],
+  "deadWeight": {},
   "dysentery": {},
   "mvpVotes": {
     "mud": {},
@@ -30,27 +15,12 @@
     "mud": [],
     "dust": []
   },
-  "history": [
-    {
-      "cycle": 1,
-      "dateRange": "MAY 21",
-      "events": [
-        {
-          "team": "mud",
-          "text": "DEAD WEIGHT: MICHAEL",
-          "miles": -10,
-          "cls": "hn"
-        }
-      ]
-    }
-  ],
+  "history": [],
   "teams": {
     "mud": {
       "miles": 0,
       "frozenUntilSteps": 0,
-      "rareUsed": [
-        "wagon_mud"
-      ],
+      "rareUsed": [],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
@@ -74,22 +44,20 @@
   },
   "cards": {
     "mud": {
-      "cardId": "wagon_mud",
-      "revealed": true,
-      "cycleNum": 1
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 0
     },
     "dust": {
-      "cardId": "broken_axle",
-      "revealed": true,
-      "cycleNum": 1
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 0
     }
   },
   "players": {
     "michael": {
-      "steps": {
-        "2026-05-21": 671
-      },
-      "totalSteps": 671
+      "steps": {},
+      "totalSteps": 0
     },
     "jordan": {
       "steps": {},
