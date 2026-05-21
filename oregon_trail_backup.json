@@ -6,7 +6,11 @@
   "closedCycles": [],
   "mileAdj": [],
   "deadWeight": {},
-  "dysentery": {},
+  "dysentery": {
+    "dustPlayer": "chris",
+    "affectedDate": "2026-05-21",
+    "revealDate": "2026-05-22"
+  },
   "mvpVotes": {
     "mud": {},
     "dust": {}
@@ -32,7 +36,9 @@
     "dust": {
       "miles": 0,
       "frozenUntilSteps": 0,
-      "rareUsed": [],
+      "rareUsed": [
+        "dysentery"
+      ],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
@@ -49,9 +55,9 @@
       "cycleNum": 1
     },
     "dust": {
-      "cardId": null,
-      "revealed": false,
-      "cycleNum": 0
+      "cardId": "dysentery",
+      "revealed": true,
+      "cycleNum": 1
     }
   },
   "players": {
