@@ -1,24 +1,12 @@
 {
   "version": 5,
   "challengeStart": "2026-05-21",
-  "prairieFireCycle": 5,
+  "prairieFireCycle": 12,
   "prairieFireFired": false,
   "closedCycles": [],
   "mileAdj": [],
-  "deadWeight": {
-    "michael": 1,
-    "jordan": 0,
-    "shania": 0,
-    "chris": 0,
-    "kaykay": 0,
-    "lauren": 0,
-    "allen": 0
-  },
-  "dysentery": {
-    "dustPlayer": "chris",
-    "affectedDate": "2026-05-21",
-    "revealDate": "2026-05-22"
-  },
+  "deadWeight": {},
+  "dysentery": {},
   "mvpVotes": {
     "mud": {},
     "dust": {}
@@ -30,7 +18,7 @@
   "history": [],
   "teams": {
     "mud": {
-      "miles": 1,
+      "miles": 0,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -44,9 +32,7 @@
     "dust": {
       "miles": 0,
       "frozenUntilSteps": 0,
-      "rareUsed": [
-        "dysentery"
-      ],
+      "rareUsed": [],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
@@ -58,22 +44,20 @@
   },
   "cards": {
     "mud": {
-      "cardId": "river_crossing",
-      "revealed": true,
-      "cycleNum": 1
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 0
     },
     "dust": {
-      "cardId": "dysentery",
-      "revealed": true,
-      "cycleNum": 1
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 0
     }
   },
   "players": {
     "michael": {
-      "steps": {
-        "2026-05-21": 1217
-      },
-      "totalSteps": 1217
+      "steps": {},
+      "totalSteps": 0
     },
     "jordan": {
       "steps": {},
