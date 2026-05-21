@@ -888,6 +888,53 @@ function renderCycleWarn(ci){
   warn.textContent='CYCLE '+p.c+' RESULTS PENDING - MISSING: '+(p.miss.length?p.miss.join(', '):'NONE - READY')+' | AUTO-CLOSE IN '+Math.max(0,graceLeft)+' DAYS';
 }
 
+function renderPlayers(ci){
+  const today=ld();
+  ['mud','dust'].forEach(team=>{
+    const members=TEAMS[team].members;
+    const grid=document.getElementById(team+'Pg');
+    if(!grid)return;
+    grid.innerHTML='';
+    let tt=0,cnt=0;
+    members.forEach(pid=>{
+      if(!state.players[pid])state.players[pid]={steps:{},totalSteps:0};
+      if(!state.players[pid].steps)state.players[pid].steps={};
+      const s=state.players[pid].steps[today];
+      if(s!==undefined&&s!==null){tt+=s;cnt++;}
+    });
+    const avgEl=document.getElementById(team+'Avg');
+    if(avgEl)avgEl.textContent=cnt?Math.round((tt/cnt)*3).toLocaleString():'0';
+    members.forEach(pid=>{
+      const pi=PLAYERS.find(p=>p.id===pid);if(!pi)return;
+      if(!state.players[pid])state.players[pid]={steps:{},totalSteps:0};
+      if(!state.players[pid].steps)state.players[pid].steps={};
+      const todayS=state.players[pid].steps[today];
+      const totalS=Object.values(state.players[pid].steps).reduce((a,b)=>a+(b||0),0);
+      const dw=(state.deadWeight&&state.deadWeight[pid])||0;
+      const isMvp=state.teams[team].mvpThisCycle===pid;
+      const isDy=state.dysentery&&state.dysentery.revealDate===today&&state.dysentery[team+'Player']===pid;
+      const card=document.createElement('div');
+      card.className='pc'+(dw>=3?' dead-wt':dw===2?' at-risk':'');
+      const wrap=document.createElement('div');wrap.className='pp-w';
+      const img=document.createElement('img');img.className='pp';
+      img.src=PHOTOS[pid]||'';img.alt=pi.display;
+      wrap.appendChild(img);card.appendChild(wrap);
+      const nm=document.createElement('div');nm.className='pn';nm.textContent=pi.name;card.appendChild(nm);
+      const st=document.createElement('div');st.className='ps';
+      st.textContent=(todayS!==undefined&&todayS!==null)?Number(todayS).toLocaleString():'---';
+      card.appendChild(st);
+      const sl=document.createElement('div');sl.className='psl';sl.textContent='TODAY';card.appendChild(sl);
+      const tot=document.createElement('div');tot.className='pt';
+      tot.textContent='TOTAL: '+totalS.toLocaleString();card.appendChild(tot);
+      if(isMvp){const mv=document.createElement('div');mv.className='mvp-b';mv.textContent='MVP +1K/DAY';card.appendChild(mv);}
+      if(dw>=3){const bn=document.createElement('div');bn.className='dw-b';bn.textContent='DEAD WEIGHT';card.appendChild(bn);}
+      else if(dw===2){const bn=document.createElement('div');bn.className='ar-b';bn.textContent='AT RISK';card.appendChild(bn);}
+      if(isDy){const dy=document.createElement('div');dy.className='dy-b';dy.textContent='HAD DYSENTERY YESTERDAY';card.appendChild(dy);}
+      grid.appendChild(card);
+    });
+  });
+}
+
 function render(){
   if(!state)return;
   checkAutoClose();
