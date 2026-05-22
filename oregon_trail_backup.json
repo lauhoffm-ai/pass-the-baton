@@ -17,8 +17,8 @@
     "jordan": 0,
     "shania": 0,
     "chris": 0,
-    "kaykay": 2,
-    "lauren": 0,
+    "kaykay": 0,
+    "lauren": 1,
     "allen": 0
   },
   "dysentery": {},
@@ -58,7 +58,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 10,
+      "miles": 13,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -112,8 +112,10 @@
       "totalSteps": 7445
     },
     "lauren": {
-      "steps": {},
-      "totalSteps": 0
+      "steps": {
+        "2026-05-21": 6390
+      },
+      "totalSteps": 6390
     },
     "allen": {
       "steps": {},
