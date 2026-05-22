@@ -22,6 +22,12 @@
       "miles": -10,
       "reason": "REMOVE CORRECTION - PENALTIES ALREADY CLEANED",
       "date": "2026-05-22"
+    },
+    {
+      "team": "dust",
+      "miles": -30,
+      "reason": "REMOVE CORRECTION - PENALTIES ALREADY CLEANED",
+      "date": "2026-05-22"
     }
   ],
   "deadWeight": {
@@ -64,6 +70,12 @@
           "text": "REMOVE CORRECTION - PENALTIES ALREADY CLEANED",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "REMOVE CORRECTION - PENALTIES ALREADY CLEANED",
+          "miles": -30,
+          "cls": "hn"
         }
       ]
     }
@@ -82,7 +94,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 52,
+      "miles": 22,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
