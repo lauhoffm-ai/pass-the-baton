@@ -6,12 +6,12 @@
   "closedCycles": [],
   "mileAdj": [],
   "deadWeight": {
-    "michael": 0,
+    "michael": 2,
     "jordan": 0,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "lauren": 1,
+    "lauren": 0,
     "allen": 0
   },
   "dysentery": {},
@@ -26,7 +26,7 @@
   "history": [],
   "teams": {
     "mud": {
-      "miles": 5,
+      "miles": 9,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -38,7 +38,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 3,
+      "miles": 0,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -65,9 +65,9 @@
   "players": {
     "michael": {
       "steps": {
-        "2026-05-21": 8165
+        "2026-05-21": 13311
       },
-      "totalSteps": 8165
+      "totalSteps": 13311
     },
     "jordan": {
       "steps": {},
@@ -86,10 +86,8 @@
       "totalSteps": 0
     },
     "lauren": {
-      "steps": {
-        "2026-05-21": 6221
-      },
-      "totalSteps": 6221
+      "steps": {},
+      "totalSteps": 0
     },
     "allen": {
       "steps": {},
