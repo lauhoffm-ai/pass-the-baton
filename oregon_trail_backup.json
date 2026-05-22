@@ -36,7 +36,7 @@
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "lauren": 1,
+    "lauren": 2,
     "allen": 0
   },
   "dysentery": {},
@@ -82,7 +82,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 18,
+      "miles": 19,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -145,9 +145,9 @@
     },
     "kaykay": {
       "steps": {
-        "2026-05-21": 7445
+        "2026-05-21": 8199
       },
-      "totalSteps": 7445
+      "totalSteps": 8199
     },
     "lauren": {
       "steps": {
