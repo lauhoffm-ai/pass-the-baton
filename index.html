@@ -523,6 +523,12 @@ function fixState(s){
     if(!s.players[p.id])s.players[p.id]={steps:{},totalSteps:0};
     if(!s.players[p.id].steps)s.players[p.id].steps={};
   });
+  // Remove any dead weight penalties applied before all players logged
+  // (these are spurious penalties from day 1)
+  if(s.mileAdj)s.mileAdj=s.mileAdj.filter(a=>!a.reason||!a.reason.startsWith('DEAD WEIGHT'));
+  if(s.history)s.history.forEach(h=>{if(h.events)h.events=h.events.filter(e=>!e.text||!e.text.startsWith('DEAD WEIGHT'));});
+  // Reset all dead weight streaks - they'll rebuild correctly
+  if(s.deadWeight)Object.keys(s.deadWeight).forEach(k=>s.deadWeight[k]=0);
   if(!s.closedCycles)s.closedCycles=[];
   if(!s.mileAdj)s.mileAdj=[];
   if(!s.deadWeight)s.deadWeight={};
@@ -579,19 +585,21 @@ function checkLms(team,prev,now){
 
 // Dead weight
 function updateDW(date){
+  // Only evaluate dead weight if ALL 7 players have logged for this date
   const ds=[];
   PLAYERS.forEach(p=>{const s=state.players[p.id].steps[date];if(s!==undefined&&s!==null)ds.push({id:p.id,s});});
-  if(!ds.length)return;
+  // Require all players to have logged before evaluating
+  if(ds.length<PLAYERS.length)return;
   const minS=Math.min(...ds.map(x=>x.s));
   PLAYERS.forEach(p=>{
     const s=state.players[p.id].steps[date];
-    if(s===undefined||s===null){state.deadWeight[p.id]=0;return;}
     if(s===minS){
       state.deadWeight[p.id]=(state.deadWeight[p.id]||0)+1;
       if(state.deadWeight[p.id]>=3){
         const team=teamOf(p.id);
-        state.mileAdj.push({team,miles:-10,reason:'DEAD WEIGHT: '+p.display,date:ld()});
-        addHist(team,'DEAD WEIGHT: '+p.display,-10,'hn');
+        const pi=PLAYERS.find(x=>x.id===p.id);
+        state.mileAdj.push({team,miles:-10,reason:'DEAD WEIGHT: '+pi.display,date:ld()});
+        addHist(team,'DEAD WEIGHT: '+pi.display,-10,'hn');
         state.deadWeight[p.id]=0;
       }
     }else{state.deadWeight[p.id]=0;}
