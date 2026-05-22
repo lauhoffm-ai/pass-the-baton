@@ -28,6 +28,12 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-22"
+    },
+    {
+      "team": "mud",
+      "miles": 10,
+      "reason": "REMOVE BAD DEAD WEIGHT PENALTY",
+      "date": "2026-05-22"
     }
   ],
   "deadWeight": {
@@ -76,13 +82,19 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "REMOVE BAD DEAD WEIGHT PENALTY",
+          "miles": 10,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 19,
+      "miles": 29,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
