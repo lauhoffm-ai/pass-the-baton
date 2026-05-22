@@ -7,30 +7,6 @@
   "mileAdj": [
     {
       "team": "mud",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: MICHAEL",
-      "date": "2026-05-21"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-21"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-22"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-22"
-    },
-    {
-      "team": "mud",
       "miles": 10,
       "reason": "REMOVE BAD DEAD WEIGHT PENALTY",
       "date": "2026-05-22"
@@ -40,6 +16,12 @@
       "miles": 30,
       "reason": "REMOVE BAD DEAD WEIGHT PENALTIES",
       "date": "2026-05-22"
+    },
+    {
+      "team": "mud",
+      "miles": -10,
+      "reason": "REMOVE CORRECTION - PENALTIES ALREADY CLEANED",
+      "date": "2026-05-22"
     }
   ],
   "deadWeight": {
@@ -48,7 +30,7 @@
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "lauren": 2,
+    "lauren": 0,
     "allen": 0
   },
   "dysentery": {},
@@ -67,30 +49,6 @@
       "events": [
         {
           "team": "mud",
-          "text": "DEAD WEIGHT: MICHAEL",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "mud",
           "text": "REMOVE BAD DEAD WEIGHT PENALTY",
           "miles": 10,
           "cls": "hp"
@@ -100,6 +58,12 @@
           "text": "REMOVE BAD DEAD WEIGHT PENALTIES",
           "miles": 30,
           "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "REMOVE CORRECTION - PENALTIES ALREADY CLEANED",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -118,7 +82,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 22,
+      "miles": 52,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
