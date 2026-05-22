@@ -24,8 +24,8 @@
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "lauren": 0,
-    "allen": 1
+    "lauren": 1,
+    "allen": 0
   },
   "dysentery": {},
   "mvpVotes": {
@@ -125,9 +125,9 @@
     },
     "lauren": {
       "steps": {
-        "2026-05-21": 6413
+        "2026-05-21": 6390
       },
-      "totalSteps": 6413
+      "totalSteps": 6390
     },
     "allen": {
       "steps": {
