@@ -34,6 +34,12 @@
       "miles": 10,
       "reason": "REMOVE BAD DEAD WEIGHT PENALTY",
       "date": "2026-05-22"
+    },
+    {
+      "team": "dust",
+      "miles": 30,
+      "reason": "REMOVE BAD DEAD WEIGHT PENALTIES",
+      "date": "2026-05-22"
     }
   ],
   "deadWeight": {
@@ -88,6 +94,12 @@
           "text": "REMOVE BAD DEAD WEIGHT PENALTY",
           "miles": 10,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "REMOVE BAD DEAD WEIGHT PENALTIES",
+          "miles": 30,
+          "cls": "hp"
         }
       ]
     }
@@ -106,7 +118,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 0,
+      "miles": 22,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
