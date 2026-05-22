@@ -22,6 +22,12 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-22"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-22"
     }
   ],
   "deadWeight": {
@@ -30,7 +36,7 @@
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "lauren": 2,
+    "lauren": 0,
     "allen": 0
   },
   "dysentery": {},
@@ -50,6 +56,12 @@
         {
           "team": "mud",
           "text": "DEAD WEIGHT: MICHAEL",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
         },
@@ -137,9 +149,9 @@
     },
     "lauren": {
       "steps": {
-        "2026-05-21": 6390
+        "2026-05-21": 6412
       },
-      "totalSteps": 6390
+      "totalSteps": 6412
     },
     "allen": {
       "steps": {
