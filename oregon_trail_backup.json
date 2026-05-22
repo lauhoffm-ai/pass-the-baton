@@ -17,7 +17,7 @@
     "jordan": 0,
     "shania": 0,
     "chris": 0,
-    "kaykay": 1,
+    "kaykay": 2,
     "lauren": 0,
     "allen": 0
   },
@@ -58,7 +58,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 0,
+      "miles": 10,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -96,8 +96,10 @@
       "totalSteps": 13789
     },
     "shania": {
-      "steps": {},
-      "totalSteps": 0
+      "steps": {
+        "2026-05-21": 19142
+      },
+      "totalSteps": 19142
     },
     "chris": {
       "steps": {},
