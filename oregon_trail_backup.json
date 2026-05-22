@@ -30,7 +30,7 @@
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "lauren": 1,
+    "lauren": 2,
     "allen": 0
   },
   "dysentery": {},
@@ -143,9 +143,9 @@
     },
     "allen": {
       "steps": {
-        "2026-05-21": 6413
+        "2026-05-21": 8775
       },
-      "totalSteps": 6413
+      "totalSteps": 8775
     }
   }
 }
