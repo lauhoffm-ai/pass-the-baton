@@ -14,10 +14,10 @@
   ],
   "deadWeight": {
     "michael": 0,
-    "jordan": 1,
+    "jordan": 0,
     "shania": 0,
     "chris": 0,
-    "kaykay": 0,
+    "kaykay": 1,
     "lauren": 0,
     "allen": 0
   },
@@ -46,7 +46,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 13,
+      "miles": 18,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -104,8 +104,10 @@
       "totalSteps": 0
     },
     "kaykay": {
-      "steps": {},
-      "totalSteps": 0
+      "steps": {
+        "2026-05-21": 7445
+      },
+      "totalSteps": 7445
     },
     "lauren": {
       "steps": {},
