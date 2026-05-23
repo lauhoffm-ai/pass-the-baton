@@ -34,8 +34,8 @@
     "michael": 0,
     "jordan": 0,
     "shania": 0,
-    "chris": 0,
-    "kaykay": 1,
+    "chris": 1,
+    "kaykay": 0,
     "lauren": 0,
     "allen": 0
   },
@@ -82,7 +82,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 42,
+      "miles": 29,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -94,7 +94,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 22,
+      "miles": 31,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -139,16 +139,16 @@
     },
     "chris": {
       "steps": {
-        "2026-05-21": 8260
+        "2026-05-21": 8260,
+        "2026-05-22": 18320
       },
-      "totalSteps": 8260
+      "totalSteps": 26580
     },
     "kaykay": {
       "steps": {
-        "2026-05-21": 8199,
-        "2026-05-22": 20089
+        "2026-05-21": 8199
       },
-      "totalSteps": 28288
+      "totalSteps": 8199
     },
     "lauren": {
       "steps": {
