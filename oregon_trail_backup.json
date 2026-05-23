@@ -31,7 +31,9 @@
       "michael": "jordan",
       "jordan": "michael"
     },
-    "dust": {}
+    "dust": {
+      "shania": "chris"
+    }
   },
   "landmarksHit": {
     "mud": [],
@@ -74,7 +76,7 @@
       ],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
-      "mvpNextCycle": null,
+      "mvpNextCycle": "chris",
       "liftSubs": {},
       "axleSubs": {},
       "pioneerEarned": [],
