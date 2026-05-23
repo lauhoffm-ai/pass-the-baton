@@ -1,44 +1,11 @@
 {
   "version": 5,
   "challengeStart": "2026-05-21",
-  "prairieFireCycle": 12,
+  "prairieFireCycle": 6,
   "prairieFireFired": false,
   "closedCycles": [],
-  "mileAdj": [
-    {
-      "team": "mud",
-      "miles": 10,
-      "reason": "REMOVE BAD DEAD WEIGHT PENALTY",
-      "date": "2026-05-22"
-    },
-    {
-      "team": "dust",
-      "miles": 30,
-      "reason": "REMOVE BAD DEAD WEIGHT PENALTIES",
-      "date": "2026-05-22"
-    },
-    {
-      "team": "mud",
-      "miles": -10,
-      "reason": "REMOVE CORRECTION - PENALTIES ALREADY CLEANED",
-      "date": "2026-05-22"
-    },
-    {
-      "team": "dust",
-      "miles": -30,
-      "reason": "REMOVE CORRECTION - PENALTIES ALREADY CLEANED",
-      "date": "2026-05-22"
-    }
-  ],
-  "deadWeight": {
-    "michael": 0,
-    "jordan": 0,
-    "shania": 0,
-    "chris": 0,
-    "kaykay": 0,
-    "lauren": 1,
-    "allen": 0
-  },
+  "mileAdj": [],
+  "deadWeight": {},
   "dysentery": {},
   "mvpVotes": {
     "mud": {},
@@ -48,41 +15,10 @@
     "mud": [],
     "dust": []
   },
-  "history": [
-    {
-      "cycle": 1,
-      "dateRange": "MAY 21",
-      "events": [
-        {
-          "team": "mud",
-          "text": "REMOVE BAD DEAD WEIGHT PENALTY",
-          "miles": 10,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "REMOVE BAD DEAD WEIGHT PENALTIES",
-          "miles": 30,
-          "cls": "hp"
-        },
-        {
-          "team": "mud",
-          "text": "REMOVE CORRECTION - PENALTIES ALREADY CLEANED",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "REMOVE CORRECTION - PENALTIES ALREADY CLEANED",
-          "miles": -30,
-          "cls": "hn"
-        }
-      ]
-    }
-  ],
+  "history": [],
   "teams": {
     "mud": {
-      "miles": 49,
+      "miles": 0,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -94,7 +30,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 46,
+      "miles": 0,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -108,64 +44,44 @@
   },
   "cards": {
     "mud": {
-      "cardId": "trading_post",
-      "revealed": true,
-      "cycleNum": 1
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 0
     },
     "dust": {
-      "cardId": "trading_post",
-      "revealed": true,
-      "cycleNum": 1
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 0
     }
   },
   "players": {
     "michael": {
-      "steps": {
-        "2026-05-21": 20821,
-        "2026-05-22": 17163
-      },
-      "totalSteps": 37984
+      "steps": {},
+      "totalSteps": 0
     },
     "jordan": {
-      "steps": {
-        "2026-05-21": 13818,
-        "2026-05-22": 13389
-      },
-      "totalSteps": 27207
+      "steps": {},
+      "totalSteps": 0
     },
     "shania": {
-      "steps": {
-        "2026-05-21": 20272,
-        "2026-05-22": 14181
-      },
-      "totalSteps": 34453
+      "steps": {},
+      "totalSteps": 0
     },
     "chris": {
-      "steps": {
-        "2026-05-21": 8260,
-        "2026-05-22": 18320
-      },
-      "totalSteps": 26580
+      "steps": {},
+      "totalSteps": 0
     },
     "kaykay": {
-      "steps": {
-        "2026-05-21": 8199
-      },
-      "totalSteps": 8199
+      "steps": {},
+      "totalSteps": 0
     },
     "lauren": {
-      "steps": {
-        "2026-05-21": 6412,
-        "2026-05-22": 6131
-      },
-      "totalSteps": 12543
+      "steps": {},
+      "totalSteps": 0
     },
     "allen": {
-      "steps": {
-        "2026-05-21": 8775,
-        "2026-05-22": 10284
-      },
-      "totalSteps": 19059
+      "steps": {},
+      "totalSteps": 0
     }
   }
 }
