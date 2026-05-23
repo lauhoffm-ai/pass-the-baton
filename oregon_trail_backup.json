@@ -18,7 +18,7 @@
   "history": [],
   "teams": {
     "mud": {
-      "miles": 14,
+      "miles": 0,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -30,7 +30,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 3,
+      "miles": 6,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -56,10 +56,8 @@
   },
   "players": {
     "michael": {
-      "steps": {
-        "2026-05-21": 20826
-      },
-      "totalSteps": 20826
+      "steps": {},
+      "totalSteps": 0
     },
     "jordan": {
       "steps": {},
@@ -79,9 +77,10 @@
     },
     "lauren": {
       "steps": {
-        "2026-05-22": 6131
+        "2026-05-22": 6131,
+        "2026-05-21": 6412
       },
-      "totalSteps": 6131
+      "totalSteps": 12543
     },
     "allen": {
       "steps": {},
