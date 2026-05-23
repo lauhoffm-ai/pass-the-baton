@@ -30,7 +30,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 6,
+      "miles": 10,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -74,8 +74,10 @@
       "totalSteps": 0
     },
     "chris": {
-      "steps": {},
-      "totalSteps": 0
+      "steps": {
+        "2026-05-21": 8260
+      },
+      "totalSteps": 8260
     },
     "kaykay": {
       "steps": {},
