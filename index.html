@@ -1164,7 +1164,7 @@ async function init(){
       const before=state.mileAdj.length;
       state.mileAdj=state.mileAdj.filter(a=>!a.reason||!a.reason.startsWith('DEAD WEIGHT'));
       state.history.forEach(h=>{if(h.events)h.events=h.events.filter(e=>!e.text||!e.text.startsWith('DEAD WEIGHT'));});
-      if(state.deadWeight)Object.keys(state.deadWeight).forEach(k=>state.deadWeight[k]=0);
+      // DO NOT reset deadWeight streaks - they are legitimate
       if(state.mileAdj.length!==before){
         // Save the cleanup
         saveBin(state).catch(()=>{});
