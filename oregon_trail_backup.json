@@ -18,7 +18,7 @@
   "history": [],
   "teams": {
     "mud": {
-      "miles": 44,
+      "miles": 49,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -81,8 +81,10 @@
       "totalSteps": 26580
     },
     "kaykay": {
-      "steps": {},
-      "totalSteps": 0
+      "steps": {
+        "2026-05-21": 8555
+      },
+      "totalSteps": 8555
     },
     "lauren": {
       "steps": {
