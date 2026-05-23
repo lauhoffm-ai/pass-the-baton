@@ -18,7 +18,7 @@
   "history": [],
   "teams": {
     "mud": {
-      "miles": 18,
+      "miles": 32,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -56,8 +56,10 @@
   },
   "players": {
     "michael": {
-      "steps": {},
-      "totalSteps": 0
+      "steps": {
+        "2026-05-21": 20826
+      },
+      "totalSteps": 20826
     },
     "jordan": {
       "steps": {
