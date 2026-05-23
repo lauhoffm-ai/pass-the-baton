@@ -18,7 +18,7 @@
   "history": [],
   "teams": {
     "mud": {
-      "miles": 9,
+      "miles": 18,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -61,9 +61,10 @@
     },
     "jordan": {
       "steps": {
-        "2026-05-21": 13873
+        "2026-05-21": 13873,
+        "2026-05-22": 13389
       },
-      "totalSteps": 13873
+      "totalSteps": 27262
     },
     "shania": {
       "steps": {},
