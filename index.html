@@ -771,6 +771,11 @@ async function revealCard(team){
     state.dysentery={[team+'Player']:mv,affectedDate:ld(),revealDate:ld(1)};
   }
   state.cards[team]={cardId:card.id,revealed:true,cycleNum:ci.cycle};
+  // Update other team's cycleNum so it doesn't get wiped on render
+  const other=team==='mud'?'dust':'mud';
+  if(!state.cards[other].cycleNum||state.cards[other].cycleNum===0){
+    state.cards[other].cycleNum=ci.cycle;
+  }
   await saveAll(state);render();
 }
 
@@ -951,8 +956,9 @@ function renderPlayers(ci){
 function render(){
   if(!state)return;
   const ci=getCycle();
-  if(state.cards.mud.cycleNum!==ci.cycle&&state.cards.mud.revealed)state.cards.mud={...state.cards.mud,revealed:false};
-  if(state.cards.dust.cycleNum!==ci.cycle&&state.cards.dust.revealed)state.cards.dust={...state.cards.dust,revealed:false};
+  // Only reset card if it was drawn in a PREVIOUS cycle (not cycle 0 which means legacy data)
+  if(state.cards.mud.cycleNum>0&&state.cards.mud.cycleNum!==ci.cycle&&state.cards.mud.revealed)state.cards.mud={...state.cards.mud,revealed:false};
+  if(state.cards.dust.cycleNum>0&&state.cards.dust.cycleNum!==ci.cycle&&state.cards.dust.revealed)state.cards.dust={...state.cards.dust,revealed:false};
   document.getElementById('cycNum').textContent=ci.cycle;
   document.getElementById('cycDL').textContent=ci.left+' DAY'+(ci.left!==1?'S':'')+' LEFT';
   document.getElementById('cycTimer').textContent='CYCLE ENDS: '+fd(ci.end);
