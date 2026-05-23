@@ -523,12 +523,8 @@ function fixState(s){
     if(!s.players[p.id])s.players[p.id]={steps:{},totalSteps:0};
     if(!s.players[p.id].steps)s.players[p.id].steps={};
   });
-  // Remove any dead weight penalties applied before all players logged
-  // (these are spurious penalties from day 1)
-  if(s.mileAdj)s.mileAdj=s.mileAdj.filter(a=>!a.reason||!a.reason.startsWith('DEAD WEIGHT'));
-  if(s.history)s.history.forEach(h=>{if(h.events)h.events=h.events.filter(e=>!e.text||!e.text.startsWith('DEAD WEIGHT'));});
-  // Reset all dead weight streaks - they'll rebuild correctly
-  if(s.deadWeight)Object.keys(s.deadWeight).forEach(k=>s.deadWeight[k]=0);
+  // Ensure deadWeight object exists
+  if(!s.deadWeight)s.deadWeight={};
   if(!s.closedCycles)s.closedCycles=[];
   if(!s.mileAdj)s.mileAdj=[];
   if(!s.deadWeight)s.deadWeight={};
@@ -954,7 +950,6 @@ function renderPlayers(ci){
 
 function render(){
   if(!state)return;
-  checkAutoClose();
   const ci=getCycle();
   if(state.cards.mud.cycleNum!==ci.cycle&&state.cards.mud.revealed)state.cards.mud={...state.cards.mud,revealed:false};
   if(state.cards.dust.cycleNum!==ci.cycle&&state.cards.dust.revealed)state.cards.dust={...state.cards.dust,revealed:false};
@@ -1158,6 +1153,24 @@ async function init(){
     backupGH(state).catch(()=>{});
   }else{
     state=fixState(raw);
+    // One-time cleanup: remove any dead weight penalties that fired
+    // before all players had logged (day 1 and day 2 spurious penalties)
+    // Only keep dead weight penalties where the reason matches a player
+    // who genuinely had 3 consecutive lowest days
+    const ci=getCycle();
+    if(ci.cycle<=2){
+      // We're still in cycle 1 - strip all dead weight penalties
+      // they cannot legitimately have fired yet (need 3 days)
+      const before=state.mileAdj.length;
+      state.mileAdj=state.mileAdj.filter(a=>!a.reason||!a.reason.startsWith('DEAD WEIGHT'));
+      state.history.forEach(h=>{if(h.events)h.events=h.events.filter(e=>!e.text||!e.text.startsWith('DEAD WEIGHT'));});
+      if(state.deadWeight)Object.keys(state.deadWeight).forEach(k=>state.deadWeight[k]=0);
+      if(state.mileAdj.length!==before){
+        // Save the cleanup
+        saveBin(state).catch(()=>{});
+        backupGH(state).catch(()=>{});
+      }
+    }
   }
   render();
   startRefresh();
