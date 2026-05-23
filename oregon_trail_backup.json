@@ -27,7 +27,9 @@
     "revealDate": "2026-05-24"
   },
   "mvpVotes": {
-    "mud": {},
+    "mud": {
+      "michael": "jordan"
+    },
     "dust": {}
   },
   "landmarksHit": {
@@ -57,7 +59,7 @@
       ],
       "huntClaimedCycle": 1,
       "mvpThisCycle": null,
-      "mvpNextCycle": null,
+      "mvpNextCycle": "jordan",
       "liftSubs": {},
       "axleSubs": {},
       "pioneerEarned": [],
@@ -80,12 +82,12 @@
   },
   "cards": {
     "mud": {
-      "cardId": "dysentery",
+      "cardId": "trading_post",
       "revealed": true,
       "cycleNum": 1
     },
     "dust": {
-      "cardId": "dysentery",
+      "cardId": "trading_post",
       "revealed": true,
       "cycleNum": 1
     }
