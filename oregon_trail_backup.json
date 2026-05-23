@@ -18,10 +18,14 @@
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "lauren": 0,
+    "lauren": 2,
     "allen": 0
   },
-  "dysentery": {},
+  "dysentery": {
+    "mudPlayer": "jordan",
+    "affectedDate": "2026-05-23",
+    "revealDate": "2026-05-24"
+  },
   "mvpVotes": {
     "mud": {},
     "dust": {}
@@ -48,7 +52,9 @@
     "mud": {
       "miles": 78,
       "frozenUntilSteps": 0,
-      "rareUsed": [],
+      "rareUsed": [
+        "dysentery"
+      ],
       "huntClaimedCycle": 1,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
@@ -72,9 +78,9 @@
   },
   "cards": {
     "mud": {
-      "cardId": null,
-      "revealed": false,
-      "cycleNum": 0
+      "cardId": "dysentery",
+      "revealed": true,
+      "cycleNum": 1
     },
     "dust": {
       "cardId": null,
