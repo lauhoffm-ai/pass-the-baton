@@ -28,7 +28,8 @@
   },
   "mvpVotes": {
     "mud": {
-      "michael": "jordan"
+      "michael": "jordan",
+      "jordan": "michael"
     },
     "dust": {}
   },
