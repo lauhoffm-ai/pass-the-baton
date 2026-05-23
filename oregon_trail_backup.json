@@ -10,12 +10,6 @@
       "miles": 15,
       "reason": "HUNT SUCCESSFUL",
       "date": "2026-05-22"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
     }
   ],
   "deadWeight": {
@@ -46,12 +40,6 @@
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
         }
       ]
     }
@@ -70,7 +58,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 36,
+      "miles": 46,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
