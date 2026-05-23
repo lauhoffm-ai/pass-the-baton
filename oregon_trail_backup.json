@@ -36,8 +36,8 @@
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "lauren": 0,
-    "allen": 1
+    "lauren": 1,
+    "allen": 0
   },
   "dysentery": {},
   "mvpVotes": {
@@ -94,7 +94,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 43,
+      "miles": 46,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -155,9 +155,10 @@
     },
     "lauren": {
       "steps": {
-        "2026-05-21": 6412
+        "2026-05-21": 6412,
+        "2026-05-22": 6131
       },
-      "totalSteps": 6412
+      "totalSteps": 12543
     },
     "allen": {
       "steps": {
