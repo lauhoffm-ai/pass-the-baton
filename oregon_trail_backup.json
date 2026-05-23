@@ -12,7 +12,15 @@
       "date": "2026-05-22"
     }
   ],
-  "deadWeight": {},
+  "deadWeight": {
+    "michael": 0,
+    "jordan": 0,
+    "shania": 0,
+    "chris": 0,
+    "kaykay": 0,
+    "lauren": 1,
+    "allen": 0
+  },
   "dysentery": {},
   "mvpVotes": {
     "mud": {},
@@ -50,7 +58,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 29,
+      "miles": 36,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -90,8 +98,10 @@
       "totalSteps": 27262
     },
     "shania": {
-      "steps": {},
-      "totalSteps": 0
+      "steps": {
+        "2026-05-22": 14181
+      },
+      "totalSteps": 14181
     },
     "chris": {
       "steps": {
