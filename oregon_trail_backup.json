@@ -56,7 +56,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 85,
+      "miles": 88,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -109,9 +109,10 @@
     "jordan": {
       "steps": {
         "2026-05-21": 13873,
-        "2026-05-22": 13389
+        "2026-05-22": 13389,
+        "2026-05-23": 4792
       },
-      "totalSteps": 27262
+      "totalSteps": 32054
     },
     "shania": {
       "steps": {
