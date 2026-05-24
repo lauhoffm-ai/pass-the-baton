@@ -22,6 +22,12 @@
       "miles": -10,
       "reason": "LAU-RUN DEAD WEIGHT PENALTY",
       "date": "2026-05-24"
+    },
+    {
+      "team": "dust",
+      "miles": 10,
+      "reason": "LAU-RUN DEAD WEIGHT PENALTY DUPLICATE REMOVAL",
+      "date": "2026-05-24"
     }
   ],
   "deadWeight": {
@@ -80,6 +86,12 @@
           "text": "LAU-RUN DEAD WEIGHT PENALTY",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "LAU-RUN DEAD WEIGHT PENALTY DUPLICATE REMOVAL",
+          "miles": 10,
+          "cls": "hp"
         }
       ]
     }
@@ -101,7 +113,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 33,
+      "miles": 43,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
