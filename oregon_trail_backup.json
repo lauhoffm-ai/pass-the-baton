@@ -28,6 +28,12 @@
       "miles": 10,
       "reason": "LAU-RUN DEAD WEIGHT PENALTY DUPLICATE REMOVAL",
       "date": "2026-05-24"
+    },
+    {
+      "team": "dust",
+      "miles": 1,
+      "reason": "MICHAEL ACCIDENTALLY GAVE ALLEN DYSENTERY 😬",
+      "date": "2026-05-24"
     }
   ],
   "deadWeight": {
@@ -92,6 +98,12 @@
           "text": "LAU-RUN DEAD WEIGHT PENALTY DUPLICATE REMOVAL",
           "miles": 10,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "MICHAEL ACCIDENTALLY GAVE ALLEN DYSENTERY 😬",
+          "miles": 1,
+          "cls": "hp"
         }
       ]
     }
@@ -113,7 +125,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 43,
+      "miles": 44,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
