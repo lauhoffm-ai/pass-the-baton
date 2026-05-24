@@ -10,6 +10,18 @@
       "miles": 15,
       "reason": "HUNT SUCCESSFUL",
       "date": "2026-05-22"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "LAU-RUN DEAD WEIGHT PENALTY",
+      "date": "2026-05-24"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "LAU-RUN DEAD WEIGHT PENALTY",
+      "date": "2026-05-24"
     }
   ],
   "deadWeight": {
@@ -52,6 +64,24 @@
           "cls": "hp"
         }
       ]
+    },
+    {
+      "cycle": 2,
+      "dateRange": "MAY 24",
+      "events": [
+        {
+          "team": "dust",
+          "text": "LAU-RUN DEAD WEIGHT PENALTY",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "LAU-RUN DEAD WEIGHT PENALTY",
+          "miles": -10,
+          "cls": "hn"
+        }
+      ]
     }
   ],
   "teams": {
@@ -71,7 +101,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 53,
+      "miles": 43,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
