@@ -71,7 +71,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 46,
+      "miles": 51,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -123,9 +123,10 @@
     "chris": {
       "steps": {
         "2026-05-21": 8260,
-        "2026-05-22": 18320
+        "2026-05-22": 18320,
+        "2026-05-23": 8556
       },
-      "totalSteps": 26580
+      "totalSteps": 35136
     },
     "kaykay": {
       "steps": {
