@@ -92,9 +92,9 @@
       "cycleNum": 2
     },
     "dust": {
-      "cardId": "trading_post",
-      "revealed": false,
-      "cycleNum": 1
+      "cardId": "ox_wore_out",
+      "revealed": true,
+      "cycleNum": 2
     }
   },
   "players": {
