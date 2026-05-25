@@ -1,138 +1,41 @@
 {
   "version": 5,
   "challengeStart": "2026-05-21",
-  "prairieFireCycle": 6,
+  "prairieFireCycle": 10,
   "prairieFireFired": false,
   "closedCycles": [],
-  "mileAdj": [
-    {
-      "team": "mud",
-      "miles": 15,
-      "reason": "HUNT SUCCESSFUL",
-      "date": "2026-05-22"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "LAU-RUN DEAD WEIGHT PENALTY",
-      "date": "2026-05-24"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "LAU-RUN DEAD WEIGHT PENALTY",
-      "date": "2026-05-24"
-    },
-    {
-      "team": "dust",
-      "miles": 10,
-      "reason": "LAU-RUN DEAD WEIGHT PENALTY DUPLICATE REMOVAL",
-      "date": "2026-05-24"
-    },
-    {
-      "team": "dust",
-      "miles": 1,
-      "reason": "MICHAEL ACCIDENTALLY GAVE ALLEN DYSENTERY 😬",
-      "date": "2026-05-24"
-    }
-  ],
-  "deadWeight": {
-    "michael": 0,
-    "jordan": 0,
-    "shania": 0,
-    "chris": 0,
-    "kaykay": 1,
-    "lauren": 0,
-    "allen": 0
-  },
-  "dysentery": {
-    "dustPlayer": "allen",
-    "affectedDate": "2026-05-23",
-    "revealDate": "2026-05-24"
-  },
+  "mileAdj": [],
+  "deadWeight": {},
+  "dysentery": {},
   "mvpVotes": {
-    "mud": {
-      "michael": "jordan",
-      "jordan": "michael",
-      "kaykay": "jordan"
-    },
-    "dust": {
-      "shania": "chris"
-    }
+    "mud": {},
+    "dust": {}
   },
   "landmarksHit": {
     "mud": [],
     "dust": []
   },
-  "history": [
-    {
-      "cycle": 1,
-      "dateRange": "MAY 23",
-      "events": [
-        {
-          "team": "mud",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        }
-      ]
-    },
-    {
-      "cycle": 2,
-      "dateRange": "MAY 24",
-      "events": [
-        {
-          "team": "dust",
-          "text": "LAU-RUN DEAD WEIGHT PENALTY",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "LAU-RUN DEAD WEIGHT PENALTY",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "LAU-RUN DEAD WEIGHT PENALTY DUPLICATE REMOVAL",
-          "miles": 10,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "MICHAEL ACCIDENTALLY GAVE ALLEN DYSENTERY 😬",
-          "miles": 1,
-          "cls": "hp"
-        }
-      ]
-    }
-  ],
+  "history": [],
   "teams": {
     "mud": {
-      "miles": 89,
+      "miles": 0,
       "frozenUntilSteps": 0,
-      "rareUsed": [
-        "dysentery",
-        "wagon_mud"
-      ],
-      "huntClaimedCycle": 1,
+      "rareUsed": [],
+      "huntClaimedCycle": 0,
       "mvpThisCycle": null,
-      "mvpNextCycle": "jordan",
+      "mvpNextCycle": null,
       "liftSubs": {},
       "axleSubs": {},
       "pioneerEarned": [],
       "frozenDates": []
     },
     "dust": {
-      "miles": 44,
+      "miles": 0,
       "frozenUntilSteps": 0,
-      "rareUsed": [
-        "dysentery"
-      ],
+      "rareUsed": [],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
-      "mvpNextCycle": "chris",
+      "mvpNextCycle": null,
       "liftSubs": {},
       "axleSubs": {},
       "pioneerEarned": [],
@@ -141,72 +44,44 @@
   },
   "cards": {
     "mud": {
-      "cardId": "wagon_mud",
-      "revealed": true,
-      "cycleNum": 2
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 0
     },
     "dust": {
-      "cardId": "ox_wore_out",
-      "revealed": true,
-      "cycleNum": 2
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 0
     }
   },
   "players": {
     "michael": {
-      "steps": {
-        "2026-05-21": 20826,
-        "2026-05-22": 17163,
-        "2026-05-23": 11544
-      },
-      "totalSteps": 49533
+      "steps": {},
+      "totalSteps": 0
     },
     "jordan": {
-      "steps": {
-        "2026-05-21": 13873,
-        "2026-05-22": 13389,
-        "2026-05-23": 4792
-      },
-      "totalSteps": 32054
+      "steps": {},
+      "totalSteps": 0
     },
     "shania": {
-      "steps": {
-        "2026-05-22": 14181,
-        "2026-05-21": 20272,
-        "2026-05-23": 3266
-      },
-      "totalSteps": 37719
+      "steps": {},
+      "totalSteps": 0
     },
     "chris": {
-      "steps": {
-        "2026-05-21": 8260,
-        "2026-05-22": 18320,
-        "2026-05-23": 8556
-      },
-      "totalSteps": 35136
+      "steps": {},
+      "totalSteps": 0
     },
     "kaykay": {
-      "steps": {
-        "2026-05-21": 8555,
-        "2026-05-22": 20089,
-        "2026-05-23": 187
-      },
-      "totalSteps": 28831
+      "steps": {},
+      "totalSteps": 0
     },
     "lauren": {
-      "steps": {
-        "2026-05-22": 6131,
-        "2026-05-21": 6412,
-        "2026-05-23": 889
-      },
-      "totalSteps": 13432
+      "steps": {},
+      "totalSteps": 0
     },
     "allen": {
-      "steps": {
-        "2026-05-21": 8775,
-        "2026-05-22": 10284,
-        "2026-05-23": 2815
-      },
-      "totalSteps": 21874
+      "steps": {},
+      "totalSteps": 0
     }
   }
 }
