@@ -21,7 +21,7 @@
     }
   ],
   "deadWeight": {
-    "lauren": 1,
+    "lauren": 2,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
@@ -92,7 +92,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 47,
+      "miles": 48,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -160,9 +160,10 @@
     "lauren": {
       "steps": {
         "2026-05-21": 6412,
-        "2026-05-22": 6131
+        "2026-05-22": 6131,
+        "2026-05-23": 889
       },
-      "totalSteps": 12543
+      "totalSteps": 13432
     },
     "allen": {
       "steps": {
