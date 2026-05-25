@@ -1153,9 +1153,38 @@ function startRefresh(){
 async function init(){
   let raw=null;
   try{raw=await loadBin();}catch(e){}
-  if(!raw||!raw.version||raw.version<5){
+
+  // ONE-TIME RESTORE: if data is missing or corrupted, write correct current state
+  const needsRestore=!raw||!raw.version||raw.version<5||!raw.players||!raw.players.michael||Object.keys(raw.players.michael?.steps||{}).length===0;
+  if(needsRestore){
     state=defState();
-    await saveBin(state);
+    // Current state as of May 25:
+    // Cycle 1 (May 21-23) = CLOSED, Trading Post was the card
+    // Cycle 2 (May 24-26) = ACTIVE
+    // Mud card: wagon_mud (Wagon Stuck in the Mud) - RARE
+    // Dust card: ox_wore_out
+    // MVPs from Trading Post: Jordan (mud), Shania (dust)
+    state.closedCycles=[1];
+    state.cards.mud={cardId:'wagon_mud',revealed:true,cycleNum:2};
+    state.cards.dust={cardId:'ox_wore_out',revealed:true,cycleNum:2};
+    state.teams.mud.rareUsed=['wagon_mud'];
+    state.teams.mud.mvpThisCycle='jordan';
+    state.teams.dust.mvpThisCycle='shania';
+    state.deadWeight.lauren=2;
+    // Add Trading Post history for cycle 1
+    state.history=[{
+      cycle:1,
+      dateRange:'MAY 21',
+      events:[
+        {team:'mud',text:'TRADING POST MVP: JORDAN',miles:0,cls:'hp'},
+        {team:'dust',text:'TRADING POST MVP: SHANIA',miles:0,cls:'hp'}
+      ]
+    }];
+    const ok=await saveBin(state);
+    if(ok){
+      const el=document.getElementById('lastSync');
+      if(el)el.textContent='STATE RESTORED - PLEASE RE-ENTER STEPS';
+    }
     backupGH(state).catch(()=>{});
   }else{
     state=fixState(raw);
