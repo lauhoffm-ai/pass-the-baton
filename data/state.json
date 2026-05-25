@@ -92,7 +92,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 59,
+      "miles": 61,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -165,9 +165,10 @@
       "steps": {
         "2026-05-21": 6412,
         "2026-05-22": 6131,
-        "2026-05-23": 889
+        "2026-05-23": 889,
+        "2026-05-24": 4635
       },
-      "totalSteps": 13432
+      "totalSteps": 18067
     },
     "allen": {
       "steps": {
