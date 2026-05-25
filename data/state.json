@@ -78,7 +78,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 98,
+      "miles": 107,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -121,9 +121,10 @@
       "steps": {
         "2026-05-21": 20826,
         "2026-05-22": 17163,
-        "2026-05-23": 11684
+        "2026-05-23": 11684,
+        "2026-05-24": 13616
       },
-      "totalSteps": 49673
+      "totalSteps": 63289
     },
     "jordan": {
       "steps": {
