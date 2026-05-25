@@ -1,11 +1,15 @@
 {
   "version": 5,
   "challengeStart": "2026-05-21",
-  "prairieFireCycle": 5,
+  "prairieFireCycle": 8,
   "prairieFireFired": false,
-  "closedCycles": [],
+  "closedCycles": [
+    1
+  ],
   "mileAdj": [],
-  "deadWeight": {},
+  "deadWeight": {
+    "lauren": 2
+  },
   "dysentery": {},
   "mvpVotes": {
     "mud": {},
@@ -15,14 +19,35 @@
     "mud": [],
     "dust": []
   },
-  "history": [],
+  "history": [
+    {
+      "cycle": 1,
+      "dateRange": "MAY 21",
+      "events": [
+        {
+          "team": "mud",
+          "text": "TRADING POST MVP: JORDAN",
+          "miles": 0,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "TRADING POST MVP: SHANIA",
+          "miles": 0,
+          "cls": "hp"
+        }
+      ]
+    }
+  ],
   "teams": {
     "mud": {
       "miles": 14,
       "frozenUntilSteps": 0,
-      "rareUsed": [],
+      "rareUsed": [
+        "wagon_mud"
+      ],
       "huntClaimedCycle": 0,
-      "mvpThisCycle": null,
+      "mvpThisCycle": "jordan",
       "mvpNextCycle": null,
       "liftSubs": {},
       "axleSubs": {},
@@ -34,7 +59,7 @@
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
-      "mvpThisCycle": null,
+      "mvpThisCycle": "shania",
       "mvpNextCycle": null,
       "liftSubs": {},
       "axleSubs": {},
@@ -44,14 +69,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": null,
-      "revealed": false,
-      "cycleNum": 0
+      "cardId": "wagon_mud",
+      "revealed": true,
+      "cycleNum": 2
     },
     "dust": {
-      "cardId": null,
-      "revealed": false,
-      "cycleNum": 0
+      "cardId": "ox_wore_out",
+      "revealed": true,
+      "cycleNum": 2
     }
   },
   "players": {
