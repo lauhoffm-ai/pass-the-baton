@@ -41,7 +41,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 24,
+      "miles": 30,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -103,8 +103,10 @@
       "totalSteps": 0
     },
     "kaykay": {
-      "steps": {},
-      "totalSteps": 0
+      "steps": {
+        "2026-05-21": 8555
+      },
+      "totalSteps": 8555
     },
     "lauren": {
       "steps": {},
