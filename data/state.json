@@ -92,7 +92,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 44,
+      "miles": 46,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -136,9 +136,10 @@
     "shania": {
       "steps": {
         "2026-05-21": 21272,
-        "2026-05-22": 15181
+        "2026-05-22": 15181,
+        "2026-05-23": 4266
       },
-      "totalSteps": 36453
+      "totalSteps": 40719
     },
     "chris": {
       "steps": {
