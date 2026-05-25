@@ -41,7 +41,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 14,
+      "miles": 24,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -87,8 +87,10 @@
       "totalSteps": 20826
     },
     "jordan": {
-      "steps": {},
-      "totalSteps": 0
+      "steps": {
+        "2026-05-21": 14873
+      },
+      "totalSteps": 14873
     },
     "shania": {
       "steps": {
