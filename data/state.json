@@ -1,0 +1,112 @@
+{
+  "version": 5,
+  "challengeStart": "2026-05-21",
+  "prairieFireCycle": 8,
+  "prairieFireFired": false,
+  "closedCycles": [
+    1
+  ],
+  "mileAdj": [],
+  "deadWeight": {
+    "lauren": 2
+  },
+  "dysentery": {},
+  "mvpVotes": {
+    "mud": {},
+    "dust": {}
+  },
+  "landmarksHit": {
+    "mud": [],
+    "dust": []
+  },
+  "history": [
+    {
+      "cycle": 1,
+      "dateRange": "MAY 21",
+      "events": [
+        {
+          "team": "mud",
+          "text": "TRADING POST MVP: JORDAN",
+          "miles": 0,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "TRADING POST MVP: SHANIA",
+          "miles": 0,
+          "cls": "hp"
+        }
+      ]
+    }
+  ],
+  "teams": {
+    "mud": {
+      "miles": 0,
+      "frozenUntilSteps": 0,
+      "rareUsed": [
+        "wagon_mud"
+      ],
+      "huntClaimedCycle": 0,
+      "mvpThisCycle": "jordan",
+      "mvpNextCycle": null,
+      "liftSubs": {},
+      "axleSubs": {},
+      "pioneerEarned": [],
+      "frozenDates": []
+    },
+    "dust": {
+      "miles": 0,
+      "frozenUntilSteps": 0,
+      "rareUsed": [],
+      "huntClaimedCycle": 0,
+      "mvpThisCycle": "shania",
+      "mvpNextCycle": null,
+      "liftSubs": {},
+      "axleSubs": {},
+      "pioneerEarned": [],
+      "frozenDates": []
+    }
+  },
+  "cards": {
+    "mud": {
+      "cardId": "wagon_mud",
+      "revealed": true,
+      "cycleNum": 2
+    },
+    "dust": {
+      "cardId": "ox_wore_out",
+      "revealed": true,
+      "cycleNum": 2
+    }
+  },
+  "players": {
+    "michael": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "jordan": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "shania": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "chris": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "kaykay": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "lauren": {
+      "steps": {},
+      "totalSteps": 0
+    },
+    "allen": {
+      "steps": {},
+      "totalSteps": 0
+    }
+  }
+}
