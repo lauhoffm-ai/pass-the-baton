@@ -24,6 +24,18 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-25"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-26"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-26"
     }
   ],
   "deadWeight": {
@@ -84,13 +96,25 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 138,
+      "miles": 143,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -104,7 +128,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 66,
+      "miles": 48,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -135,9 +159,9 @@
         "2026-05-22": 17163,
         "2026-05-23": 11684,
         "2026-05-24": 13616,
-        "2026-05-25": 9227
+        "2026-05-25": 10895
       },
-      "totalSteps": 72516
+      "totalSteps": 74184
     },
     "jordan": {
       "steps": {
@@ -145,9 +169,9 @@
         "2026-05-22": 14389,
         "2026-05-23": 5888,
         "2026-05-24": 12914,
-        "2026-05-25": 9481
+        "2026-05-25": 11025
       },
-      "totalSteps": 57545
+      "totalSteps": 59089
     },
     "shania": {
       "steps": {
@@ -155,9 +179,9 @@
         "2026-05-22": 15181,
         "2026-05-23": 4266,
         "2026-05-24": 4721,
-        "2026-05-25": 3426
+        "2026-05-25": 4210
       },
-      "totalSteps": 48866
+      "totalSteps": 49650
     },
     "chris": {
       "steps": {
@@ -175,9 +199,9 @@
         "2026-05-22": 20089,
         "2026-05-23": 10767,
         "2026-05-24": 7976,
-        "2026-05-25": 6705
+        "2026-05-25": 11137
       },
-      "totalSteps": 54092
+      "totalSteps": 58524
     },
     "lauren": {
       "steps": {
@@ -185,9 +209,9 @@
         "2026-05-22": 6131,
         "2026-05-23": 889,
         "2026-05-24": 4635,
-        "2026-05-25": 1767
+        "2026-05-25": 3321
       },
-      "totalSteps": 19834
+      "totalSteps": 21388
     },
     "allen": {
       "steps": {
@@ -195,9 +219,9 @@
         "2026-05-22": 10284,
         "2026-05-23": 2815,
         "2026-05-24": 11329,
-        "2026-05-25": 3442
+        "2026-05-25": 5555
       },
-      "totalSteps": 36645
+      "totalSteps": 38758
     }
   }
 }
