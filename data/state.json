@@ -23,10 +23,10 @@
   "deadWeight": {
     "michael": 0,
     "jordan": 0,
-    "shania": 1,
+    "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "lauren": 0,
+    "lauren": 2,
     "allen": 0
   },
   "dysentery": {},
@@ -54,12 +54,6 @@
           "text": "TRADING POST MVP: SHANIA",
           "miles": 0,
           "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
         }
       ]
     },
@@ -72,13 +66,19 @@
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 143,
+      "miles": 145,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -92,7 +92,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 48,
+      "miles": 78,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -123,9 +123,10 @@
         "2026-05-22": 17163,
         "2026-05-23": 11684,
         "2026-05-24": 13616,
-        "2026-05-25": 10895
+        "2026-05-25": 10895,
+        "2026-05-26": 2911
       },
-      "totalSteps": 74184
+      "totalSteps": 77095
     },
     "jordan": {
       "steps": {
