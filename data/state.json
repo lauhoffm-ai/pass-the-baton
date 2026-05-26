@@ -8,12 +8,6 @@
   ],
   "mileAdj": [
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-25"
-    },
-    {
       "team": "mud",
       "miles": 15,
       "reason": "HUNT SUCCESSFUL",
@@ -23,34 +17,16 @@
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-25"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-26"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-26"
-    },
-    {
-      "team": "dust",
-      "miles": 30,
-      "reason": "MICHAEL NEEDS TO FIX THE PENALTY FORMULA APPARENTLY. LAU_RUN REFUND",
-      "date": "2026-05-26"
+      "date": "2026-05-23"
     }
   ],
   "deadWeight": {
-    "lauren": 2,
     "michael": 0,
     "jordan": 0,
-    "shania": 0,
+    "shania": 1,
     "chris": 0,
     "kaykay": 0,
+    "lauren": 0,
     "allen": 0
   },
   "dysentery": {},
@@ -78,6 +54,12 @@
           "text": "TRADING POST MVP: SHANIA",
           "miles": 0,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     },
@@ -86,34 +68,10 @@
       "dateRange": "MAY 25",
       "events": [
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
         },
         {
           "team": "dust",
