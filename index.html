@@ -382,10 +382,11 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:
 </div>
 
 <script>
-const BIN='';// JSONBin retired - using GitHub storage
-const MK='';// JSONBin retired - using GitHub storage
 const GHR='lauhoffm-ai/pass-the-baton';
-const GHF='oregon_trail_backup.json';
+const GH_STATE='data/state.json';
+const GH_BAK='oregon_trail_backup.json';
+const GH_BAK_DIR='backups';
+const GH_BAK_MAX=30;
 const GHT=(()=>{const a='ghp_ep2wIz';const b='rLNCLroBy52ZohdrHyPjk8k83LImP9';return a+b;})();
 const PIN='5678';
 const TRAIL=1500;
@@ -474,8 +475,7 @@ function cycleDates(c){
 }
 
 // GitHub as primary data store
-const GH_STATE='data/state.json';
-const GH_BAK='oregon_trail_backup.json';
+let _stateSha=null;
 
 async function ghGet(path){
   try{
@@ -497,14 +497,9 @@ async function ghPut(path,sha,data,msg){
     return d.content?.sha||null;
   }catch(e){return null;}
 }
-
-// SHA cache so we don't fetch SHA every save
-let _stateSha=null;
-
 async function loadBin(){
   const res=await ghGet(GH_STATE);
   if(res){_stateSha=res.sha;return res.data;}
-  // Fallback to backup file
   const bak=await ghGet(GH_BAK);
   if(bak){_stateSha=null;return bak.data;}
   return null;
@@ -512,105 +507,40 @@ async function loadBin(){
 async function saveBin(s){
   const el=document.getElementById('lastSync');
   try{
-    const newSha=await ghPut(GH_STATE,_stateSha,s);
-    if(newSha){
-      _stateSha=newSha;
-      if(el)el.textContent='SAVED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
-      return true;
-    }else{
-      // SHA might be stale - refetch and retry once
+    let newSha=await ghPut(GH_STATE,_stateSha,s);
+    if(!newSha){
+      // SHA stale — refetch and retry once
       const res=await ghGet(GH_STATE);
-      if(res){
-        _stateSha=res.sha;
-        const retry=await ghPut(GH_STATE,_stateSha,s);
-        if(retry){_stateSha=retry;if(el)el.textContent='SAVED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});return true;}
-      }
-      if(el)el.textContent='SAVE FAILED!';
-      return false;
+      if(res){_stateSha=res.sha;newSha=await ghPut(GH_STATE,_stateSha,s);}
     }
+    if(newSha){_stateSha=newSha;if(el)el.textContent='SAVED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});return true;}
+    if(el)el.textContent='SAVE FAILED!';return false;
   }catch(e){if(el)el.textContent='SAVE ERROR!';return false;}
 }
-// Timestamped backup system — never overwrites, keeps last 30
-const GH_BAK_DIR='backups';
-const GH_BAK_MAX=30;
-
 function bakTimestamp(){
   const d=new Date();
-  return d.getFullYear()+'-'+
-    String(d.getMonth()+1).padStart(2,'0')+'-'+
-    String(d.getDate()).padStart(2,'0')+'_'+
-    String(d.getHours()).padStart(2,'0')+
-    String(d.getMinutes()).padStart(2,'0');
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')+'_'+String(d.getHours()).padStart(2,'0')+String(d.getMinutes()).padStart(2,'0');
 }
-
 async function backupGH(s){
   try{
-    // Write new timestamped file
     const fname=`${GH_BAK_DIR}/state_${bakTimestamp()}.json`;
-    const ok=await ghPut(fname,null,s,`Backup ${ld()}`);
-    if(!ok)return false;
-    // Also keep the legacy single backup in sync for easy manual restore
+    await ghPut(fname,null,s,`Backup ${ld()}`);
     const legRes=await ghGet(GH_BAK);
     await ghPut(GH_BAK,legRes?.sha||null,s,`Backup ${ld()}`);
-    // Prune old backups — keep newest GH_BAK_MAX
     pruneOldBackups().catch(()=>{});
     return true;
   }catch(e){return false;}
 }
-
 async function pruneOldBackups(){
   try{
     const r=await fetch(`https://api.github.com/repos/${GHR}/contents/${GH_BAK_DIR}`,{headers:{'Authorization':'token '+GHT,'Accept':'application/vnd.github.v3+json'}});
     if(!r.ok)return;
     const files=(await r.json()).filter(f=>f.name.endsWith('.json')).sort((a,b)=>a.name<b.name?1:-1);
     if(files.length<=GH_BAK_MAX)return;
-    const toDelete=files.slice(GH_BAK_MAX);
-    for(const f of toDelete){
-      await fetch(`https://api.github.com/repos/${GHR}/contents/${f.path}`,{method:'DELETE',
-        headers:{'Authorization':'token '+GHT,'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},
-        body:JSON.stringify({message:`Prune old backup: ${f.name}`,sha:f.sha})});
+    for(const f of files.slice(GH_BAK_MAX)){
+      await fetch(`https://api.github.com/repos/${GHR}/contents/${f.path}`,{method:'DELETE',headers:{'Authorization':'token '+GHT,'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},body:JSON.stringify({message:`Prune ${f.name}`,sha:f.sha})});
     }
   }catch(e){}
-}
-
-async function loadBackupList(){
-  const msg=document.getElementById('bakMsg');
-  const listDiv=document.getElementById('bakList');
-  const sel=document.getElementById('bakSel');
-  msg.textContent='FETCHING BACKUP LIST...';msg.className='am';
-  listDiv.style.display='block';
-  try{
-    const r=await fetch(`https://api.github.com/repos/${GHR}/contents/${GH_BAK_DIR}`,{headers:{'Authorization':'token '+GHT,'Accept':'application/vnd.github.v3+json'}});
-    if(!r.ok)throw new Error('No backups folder yet');
-    const files=(await r.json()).filter(f=>f.name.endsWith('.json')).sort((a,b)=>a.name<b.name?1:-1);
-    if(!files.length){sel.innerHTML='<option value="">NO BACKUPS FOUND</option>';msg.textContent='NO BACKUPS YET';msg.className='am err';return;}
-    sel.innerHTML=files.map(f=>{
-      // state_2026-05-25_1430.json -> MAY 25 2026 2:30PM
-      const m=f.name.match(/state_(\d{4})-(\d{2})-(\d{2})_(\d{2})(\d{2})\.json/);
-      const months=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-      const label=m?`${months[+m[2]-1]} ${+m[3]} @ ${m[4]}:${m[5]}`:`${f.name}`;
-      return`<option value="${f.path}">${label}</option>`;
-    }).join('');
-    msg.textContent=files.length+' BACKUPS FOUND';msg.className='am ok';
-  }catch(e){
-    sel.innerHTML='<option value="">ERROR LOADING</option>';
-    msg.textContent='FAILED: '+e.message;msg.className='am err';
-  }
-}
-
-async function restoreFromPicker(){
-  const msg=document.getElementById('bakMsg');
-  const path=document.getElementById('bakSel').value;
-  if(!path){msg.textContent='SELECT A BACKUP FIRST';msg.className='am err';return;}
-  msg.textContent='RESTORING...';msg.className='am';
-  try{
-    const res=await ghGet(path);
-    if(!res)throw new Error('Could not read backup');
-    state=fixState(res.data);
-    await saveBin(state);
-    render();
-    msg.textContent='RESTORED! STEPS MAY NEED RE-ENTRY IF OLD BACKUP.';msg.className='am ok';
-  }catch(e){msg.textContent='RESTORE FAILED: '+e.message;msg.className='am err';}
 }
 async function saveAll(s,skipBak=false){
   const ok=await saveBin(s);
@@ -702,48 +632,25 @@ function checkLms(team,prev,now){
 
 // Dead weight
 function updateDW(date){
-  // Recalculate all dead weight streaks from scratch based on full step history
-  // This prevents stacking issues when entering past dates out of order
-
-  // Gather all dates that have been logged by ALL players
-  const allDates=[...new Set(
-    PLAYERS.flatMap(p=>Object.keys(state.players[p.id].steps||{}))
-  )].filter(d=>{
-    // Only include dates where every player has a logged entry
-    return PLAYERS.every(p=>{
-      const s=state.players[p.id].steps[d];
-      return s!==undefined&&s!==null;
-    });
-  }).sort();
-
-  // Reset all streaks and remove previous dead weight mile adjustments
-  // (we'll re-derive them cleanly)
+  // Recalculate all streaks from scratch using full step history
+  const allDates=[...new Set(PLAYERS.flatMap(p=>Object.keys(state.players[p.id].steps||{})))].filter(d=>
+    PLAYERS.every(p=>{const s=state.players[p.id].steps[d];return s!==undefined&&s!==null;})
+  ).sort();
   PLAYERS.forEach(p=>{state.deadWeight[p.id]=0;});
   state.mileAdj=state.mileAdj.filter(a=>!a.reason||!a.reason.startsWith('DEAD WEIGHT'));
-  if(state.history){
-    state.history.forEach(h=>{
-      if(h.events)h.events=h.events.filter(e=>!e.text||!e.text.startsWith('DEAD WEIGHT'));
-    });
-  }
-
-  // Walk through each fully-logged date chronologically
+  if(state.history)state.history.forEach(h=>{if(h.events)h.events=h.events.filter(e=>!e.text||!e.text.startsWith('DEAD WEIGHT'));});
   allDates.forEach(d=>{
-    const entries=PLAYERS.map(p=>({id:p.id,s:state.players[p.id].steps[d]}));
-    const minS=Math.min(...entries.map(x=>x.s));
+    const minS=Math.min(...PLAYERS.map(p=>state.players[p.id].steps[d]));
     PLAYERS.forEach(p=>{
-      const s=state.players[p.id].steps[d];
-      if(s===minS){
+      if(state.players[p.id].steps[d]===minS){
         state.deadWeight[p.id]=(state.deadWeight[p.id]||0)+1;
         if(state.deadWeight[p.id]>=3){
-          const team=teamOf(p.id);
-          const pi=PLAYERS.find(x=>x.id===p.id);
+          const team=teamOf(p.id);const pi=PLAYERS.find(x=>x.id===p.id);
           state.mileAdj.push({team,miles:-10,reason:'DEAD WEIGHT: '+pi.display,date:d});
           addHist(team,'DEAD WEIGHT: '+pi.display,-10,'hn');
           state.deadWeight[p.id]=0;
         }
-      }else{
-        state.deadWeight[p.id]=0;
-      }
+      }else{state.deadWeight[p.id]=0;}
     });
   });
 }
@@ -1263,15 +1170,36 @@ async function manualBak(){
   msg.textContent=ok?'BACKUP SAVED! ('+bakTimestamp()+')':'BACKUP FAILED';
   msg.className=ok?'am ok':'am err';
 }
-
-async function restoreGH(){
-  const msg=document.getElementById('bakMsg');msg.textContent='FETCHING...';msg.className='am';
+async function loadBackupList(){
+  const msg=document.getElementById('bakMsg');
+  const listDiv=document.getElementById('bakList');
+  const sel=document.getElementById('bakSel');
+  msg.textContent='FETCHING BACKUP LIST...';msg.className='am';
+  listDiv.style.display='block';
   try{
-    const res=await ghGet(GH_BAK);
-    if(!res)throw new Error('Backup not found');
-    state=fixState(res.data);
-    await saveBin(state);render();
-    msg.textContent='RESTORED FROM BACKUP!';msg.className='am ok';
+    const r=await fetch(`https://api.github.com/repos/${GHR}/contents/${GH_BAK_DIR}`,{headers:{'Authorization':'token '+GHT,'Accept':'application/vnd.github.v3+json'}});
+    if(!r.ok)throw new Error('No backups folder yet');
+    const files=(await r.json()).filter(f=>f.name.endsWith('.json')).sort((a,b)=>a.name<b.name?1:-1);
+    if(!files.length){sel.innerHTML='<option value="">NO BACKUPS FOUND</option>';msg.textContent='NO BACKUPS YET';msg.className='am err';return;}
+    const months=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    sel.innerHTML=files.map(f=>{
+      const m=f.name.match(/state_(\d{4})-(\d{2})-(\d{2})_(\d{2})(\d{2})\.json/);
+      const label=m?`${months[+m[2]-1]} ${+m[3]} @ ${m[4]}:${m[5]}`:f.name;
+      return`<option value="${f.path}">${label}</option>`;
+    }).join('');
+    msg.textContent=files.length+' BACKUPS FOUND';msg.className='am ok';
+  }catch(e){sel.innerHTML='<option value="">ERROR LOADING</option>';msg.textContent='FAILED: '+e.message;msg.className='am err';}
+}
+async function restoreFromPicker(){
+  const msg=document.getElementById('bakMsg');
+  const path=document.getElementById('bakSel').value;
+  if(!path){msg.textContent='SELECT A BACKUP FIRST';msg.className='am err';return;}
+  msg.textContent='RESTORING...';msg.className='am';
+  try{
+    const res=await ghGet(path);
+    if(!res)throw new Error('Could not read backup');
+    state=fixState(res.data);await saveBin(state);render();
+    msg.textContent='RESTORED!';msg.className='am ok';
   }catch(e){msg.textContent='RESTORE FAILED: '+e.message;msg.className='am err';}
 }
 
@@ -1290,6 +1218,7 @@ let lastSaveTime=0;
 function startRefresh(){
   if(rtimer)clearInterval(rtimer);
   rtimer=setInterval(async()=>{
+    // Don't overwrite if we saved within last 10 seconds
     if(Date.now()-lastSaveTime<60000)return;
     const f=await loadBin();
     if(f){state=fixState(f);render();}
@@ -1301,9 +1230,7 @@ async function init(){
   if(el)el.textContent='LOADING...';
   let raw=null;
   try{raw=await loadBin();}catch(e){}
-
   if(!raw||!raw.version){
-    // No state found - create fresh
     state=defState();
     state.closedCycles=[1];
     state.cards.mud={cardId:'wagon_mud',revealed:true,cycleNum:2};
