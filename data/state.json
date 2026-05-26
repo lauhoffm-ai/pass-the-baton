@@ -30,10 +30,16 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-26"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-26"
     }
   ],
   "deadWeight": {
-    "lauren": 2,
+    "lauren": 0,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
@@ -96,6 +102,12 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -116,7 +128,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 56,
+      "miles": 47,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -207,9 +219,9 @@
         "2026-05-22": 10284,
         "2026-05-23": 2815,
         "2026-05-24": 11329,
-        "2026-05-25": 3442
+        "2026-05-25": 5555
       },
-      "totalSteps": 36645
+      "totalSteps": 38758
     }
   }
 }
