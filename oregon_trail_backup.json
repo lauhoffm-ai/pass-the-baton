@@ -21,15 +21,15 @@
     },
     {
       "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
-      "team": "dust",
       "miles": 15,
       "reason": "PIONEER SPIRIT",
       "date": "2026-05-27"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
     }
   ],
   "deadWeight": {
@@ -87,22 +87,22 @@
       "events": [
         {
           "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
           "text": "PIONEER SPIRIT",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 152,
+      "miles": 157,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -205,9 +205,10 @@
         "2026-05-23": 10767,
         "2026-05-24": 7976,
         "2026-05-25": 6705,
-        "2026-05-26": 9299
+        "2026-05-26": 9299,
+        "2026-05-27": 6994
       },
-      "totalSteps": 63391
+      "totalSteps": 70385
     },
     "lauren": {
       "steps": {
