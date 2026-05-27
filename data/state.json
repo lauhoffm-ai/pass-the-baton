@@ -26,23 +26,23 @@
       "date": "2026-05-27"
     },
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
       "team": "mud",
       "miles": 15,
       "reason": "HUNT SUCCESSFUL",
       "date": "2026-05-25"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
     }
   ],
   "deadWeight": {
-    "lauren": 0,
+    "lauren": 1,
     "michael": 0,
     "jordan": 0,
-    "shania": 2,
+    "shania": 0,
     "chris": 0,
     "kaykay": 0,
     "allen": 0
@@ -110,16 +110,16 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -153,7 +153,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 138,
+      "miles": 148,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -221,9 +221,10 @@
         "2026-05-22": 18320,
         "2026-05-23": 12535,
         "2026-05-24": 10759,
-        "2026-05-25": 17796
+        "2026-05-25": 17796,
+        "2026-05-26": 19728
       },
-      "totalSteps": 67670
+      "totalSteps": 87398
     },
     "kaykay": {
       "steps": {
