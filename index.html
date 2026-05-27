@@ -598,6 +598,12 @@ function fixState(s){
     s.mileAdj.push({team:'dust',miles:-10,reason:'DEAD WEIGHT CYCLE 1 LAUREN',date:'2025-05-23'});
     s.appliedMigrations.push('lauren_dw_cycle1');
   }
+  // Bug #5: MVP badges from Cycle 1 weren't cleared when Cycle 2 closed (mvpNextCycle was null so swap never ran)
+  if(!s.appliedMigrations.includes('clear_stale_mvp_badges')){
+    const ci2=s.closedCycles&&s.closedCycles.length>0;
+    if(ci2){['mud','dust'].forEach(t=>{s.teams[t].mvpThisCycle=s.teams[t].mvpNextCycle||null;s.teams[t].mvpNextCycle=null;});}
+    s.appliedMigrations.push('clear_stale_mvp_badges');
+  }
   // Bug #4: Bad Cycle 3 dead weight penalty for Lauren - cancel miles AND scrub the history log entry
   if(!s.appliedMigrations.includes('remove_bad_dw_cycle3_v2')){
     s.mileAdj.push({team:'dust',miles:10,reason:'REMOVE BAD DEAD WEIGHT CYCLE 3',date:'2025-05-30'});
@@ -802,7 +808,8 @@ function closeCycle(cn,force=false){
     state.prairieFireFired=true;
   }
 
-  ['mud','dust'].forEach(t=>{if(state.teams[t].mvpNextCycle){state.teams[t].mvpThisCycle=state.teams[t].mvpNextCycle;state.teams[t].mvpNextCycle=null;}});
+  // Always clear mvpThisCycle on cycle close — swap in next if voted, otherwise clear
+  ['mud','dust'].forEach(t=>{state.teams[t].mvpThisCycle=state.teams[t].mvpNextCycle||null;state.teams[t].mvpNextCycle=null;});
   if(!state.closedCycles)state.closedCycles=[];
   state.closedCycles.push(cn);
 }
