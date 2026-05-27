@@ -18,34 +18,18 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT CYCLE 1 LAUREN",
-      "date": "2025-05-23"
-    },
-    {
-      "team": "dust",
-      "miles": 10,
-      "reason": "REMOVE BAD DEAD WEIGHT CYCLE 3",
-      "date": "2025-05-30"
     }
   ],
   "deadWeight": {
+    "lauren": 2,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "lauren": 2,
     "allen": 0
   },
-  "dysentery": {
-    "mudPlayer": "michael",
-    "affectedDate": "2026-05-27",
-    "revealDate": "2026-05-28"
-  },
+  "dysentery": {},
   "mvpVotes": {
     "mud": {},
     "dust": {}
@@ -84,30 +68,54 @@
           "cls": "hp"
         }
       ]
+    },
+    {
+      "cycle": 3,
+      "dateRange": "MAY 27",
+      "events": [
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        }
+      ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 145,
+      "miles": 144,
       "frozenUntilSteps": 0,
       "rareUsed": [
-        "wagon_mud",
-        "dysentery"
+        "wagon_mud"
       ],
       "huntClaimedCycle": 2,
-      "mvpThisCycle": null,
+      "mvpThisCycle": "jordan",
       "mvpNextCycle": null,
-      "liftSubs": {},
+      "liftSubs": {
+        "michael": {
+          "weight": 275,
+          "date": "2026-05-25"
+        },
+        "jordan": {
+          "weight": 135,
+          "date": "2026-05-25"
+        },
+        "kaykay": {
+          "weight": 255,
+          "date": "2026-05-25"
+        }
+      },
       "axleSubs": {},
       "pioneerEarned": [],
       "frozenDates": []
     },
     "dust": {
-      "miles": 78,
+      "miles": 74,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
-      "mvpThisCycle": null,
+      "mvpThisCycle": "shania",
       "mvpNextCycle": null,
       "liftSubs": {},
       "axleSubs": {},
@@ -117,14 +125,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "dysentery",
-      "revealed": true,
-      "cycleNum": 3
+      "cardId": "wagon_mud",
+      "revealed": false,
+      "cycleNum": 2
     },
     "dust": {
-      "cardId": "native_trade",
-      "revealed": true,
-      "cycleNum": 3
+      "cardId": "ox_wore_out",
+      "revealed": false,
+      "cycleNum": 2
     }
   },
   "players": {
@@ -134,10 +142,9 @@
         "2026-05-22": 17163,
         "2026-05-23": 11684,
         "2026-05-24": 13616,
-        "2026-05-25": 10895,
-        "2026-05-26": 2911
+        "2026-05-25": 9227
       },
-      "totalSteps": 77095
+      "totalSteps": 72516
     },
     "jordan": {
       "steps": {
@@ -145,9 +152,9 @@
         "2026-05-22": 14389,
         "2026-05-23": 5888,
         "2026-05-24": 12914,
-        "2026-05-25": 11025
+        "2026-05-25": 9481
       },
-      "totalSteps": 59089
+      "totalSteps": 57545
     },
     "shania": {
       "steps": {
@@ -155,9 +162,9 @@
         "2026-05-22": 15181,
         "2026-05-23": 4266,
         "2026-05-24": 4721,
-        "2026-05-25": 4210
+        "2026-05-25": 3426
       },
-      "totalSteps": 49650
+      "totalSteps": 48866
     },
     "chris": {
       "steps": {
@@ -165,9 +172,9 @@
         "2026-05-22": 18320,
         "2026-05-23": 12535,
         "2026-05-24": 10759,
-        "2026-05-25": 16647
+        "2026-05-25": 12811
       },
-      "totalSteps": 66521
+      "totalSteps": 62685
     },
     "kaykay": {
       "steps": {
@@ -175,9 +182,10 @@
         "2026-05-22": 20089,
         "2026-05-23": 10767,
         "2026-05-24": 7976,
-        "2026-05-25": 11137
+        "2026-05-25": 6705,
+        "2026-05-26": 9299
       },
-      "totalSteps": 58524
+      "totalSteps": 63391
     },
     "lauren": {
       "steps": {
@@ -185,9 +193,9 @@
         "2026-05-22": 6131,
         "2026-05-23": 889,
         "2026-05-24": 4635,
-        "2026-05-25": 3321
+        "2026-05-25": 1767
       },
-      "totalSteps": 21388
+      "totalSteps": 19834
     },
     "allen": {
       "steps": {
@@ -195,14 +203,9 @@
         "2026-05-22": 10284,
         "2026-05-23": 2815,
         "2026-05-24": 11329,
-        "2026-05-25": 5555
+        "2026-05-25": 3442
       },
-      "totalSteps": 38758
+      "totalSteps": 36645
     }
-  },
-  "appliedMigrations": [
-    "lauren_dw_cycle1",
-    "clear_stale_mvp_badges",
-    "remove_bad_dw_cycle3_v2"
-  ]
+  }
 }
