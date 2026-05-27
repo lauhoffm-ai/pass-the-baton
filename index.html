@@ -655,7 +655,8 @@ function checkLms(team,prev,now){
 function updateDW(date){
   // Recalculate all streaks from scratch using full step history
   // Only evaluate dates where ALL 7 players have submitted — prevents mid-day false triggers
-  const today=ld();
+  // IMPORTANT: Streak counters reset at cycle boundaries — a low-step tail from Cycle N
+  // does NOT carry into Cycle N+1 and cause a false penalty on day 1 of the new cycle.
   const allDates=[...new Set(PLAYERS.flatMap(p=>Object.keys(state.players[p.id].steps||{})))].filter(d=>{
     const allIn=PLAYERS.every(p=>{const s=state.players[p.id].steps[d];return s!==undefined&&s!==null;});
     if(!allIn)return false; // skip any date where not all 7 have submitted (incl. today mid-day)
@@ -664,7 +665,13 @@ function updateDW(date){
   PLAYERS.forEach(p=>{state.deadWeight[p.id]=0;});
   state.mileAdj=state.mileAdj.filter(a=>!a.reason||!a.reason.startsWith('DEAD WEIGHT'));
   if(state.history)state.history.forEach(h=>{if(h.events)h.events=h.events.filter(e=>!e.text||!e.text.startsWith('DEAD WEIGHT'));});
+  // Helper: which cycle does a date belong to?
+  function cycleOfDate(d){return Math.floor(daysBetween(START,d)/CDAYS)+1;}
+  let prevCycle=null;
   allDates.forEach(d=>{
+    const thisCycle=cycleOfDate(d);
+    // Reset all streak counters when we cross into a new cycle
+    if(thisCycle!==prevCycle){PLAYERS.forEach(p=>{state.deadWeight[p.id]=0;});prevCycle=thisCycle;}
     const minS=Math.min(...PLAYERS.map(p=>state.players[p.id].steps[d]));
     PLAYERS.forEach(p=>{
       if(state.players[p.id].steps[d]===minS){
