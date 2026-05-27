@@ -593,23 +593,22 @@ function fixState(s){
   });
   // ONE-TIME MIGRATIONS — applied once and flagged so they never double-apply
   if(!s.appliedMigrations)s.appliedMigrations=[];
-  // Bug #3: Lauren's Cycle 1 dead weight was wiped during restore — re-apply -10 miles to Dust & Glory
-  if(!s.appliedMigrations.includes('lauren_dw_cycle1')){
-    s.mileAdj.push({team:'dust',miles:-10,reason:'DEAD WEIGHT CYCLE 1 LAUREN',date:'2025-05-23'});
-    s.appliedMigrations.push('lauren_dw_cycle1');
-  }
+  // Bug #3 RETIRED: lauren_dw_cycle1 migration added a duplicate -10 miles — updateDW already
+  // correctly fires the penalty from real step data. Mark as applied so it never runs.
+  if(!s.appliedMigrations.includes('lauren_dw_cycle1')){s.appliedMigrations.push('lauren_dw_cycle1');}
   // Bug #5: MVP badges from Cycle 1 weren't cleared when Cycle 2 closed (mvpNextCycle was null so swap never ran)
   if(!s.appliedMigrations.includes('clear_stale_mvp_badges')){
     const ci2=s.closedCycles&&s.closedCycles.length>0;
     if(ci2){['mud','dust'].forEach(t=>{s.teams[t].mvpThisCycle=s.teams[t].mvpNextCycle||null;s.teams[t].mvpNextCycle=null;});}
     s.appliedMigrations.push('clear_stale_mvp_badges');
   }
-  // Bug #4: Bad Cycle 3 dead weight penalty for Lauren - cancel miles AND scrub the history log entry
-  if(!s.appliedMigrations.includes('remove_bad_dw_cycle3_v2')){
-    s.mileAdj.push({team:'dust',miles:10,reason:'REMOVE BAD DEAD WEIGHT CYCLE 3',date:'2025-05-30'});
-    // Scrub the bad history event so it stops appearing in the trail log
-    if(s.history){s.history.forEach(h=>{if(h.events){h.events=h.events.filter(e=>!(e.team==='dust'&&e.text&&e.text.toUpperCase().includes('DEAD WEIGHT')&&e.text.toUpperCase().includes('LAUREN')));}})}
-    s.appliedMigrations.push('remove_bad_dw_cycle3_v2');
+  // Bug #4 RETIRED: remove_bad_dw_cycle3 is no longer needed — the bad penalty no longer exists
+  // in mileAdj (step data corrections removed it naturally). The +10 offset it added must also be removed.
+  if(!s.appliedMigrations.includes('remove_bad_dw_cycle3_v2')){s.appliedMigrations.push('remove_bad_dw_cycle3_v2');}
+  // Cleanup: remove any stale manual migration mileAdj entries that are no longer valid
+  if(!s.appliedMigrations.includes('cleanup_stale_migrations_v1')){
+    s.mileAdj=s.mileAdj.filter(a=>a.reason!=='DEAD WEIGHT CYCLE 1 LAUREN'&&a.reason!=='REMOVE BAD DEAD WEIGHT CYCLE 3');
+    s.appliedMigrations.push('cleanup_stale_migrations_v1');
   }
   return s;
 }
