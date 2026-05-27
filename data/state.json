@@ -24,6 +24,24 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT CYCLE 1 LAUREN",
+      "date": "2025-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": 10,
+      "reason": "REMOVE BAD DEAD WEIGHT CYCLE 3",
+      "date": "2025-05-30"
+    },
+    {
+      "team": "dust",
+      "miles": 0,
+      "reason": "MILEAGE DEDUCTION HARD CODED FOR LAU-RUN CYCLE 1. -10 REFLECTED IN TOTAL MILES",
+      "date": "2026-05-27"
     }
   ],
   "deadWeight": {
@@ -87,9 +105,9 @@
         },
         {
           "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
+          "text": "MILEAGE DEDUCTION HARD CODED FOR LAU-RUN CYCLE 1. -10 REFLECTED IN TOTAL MILES",
+          "miles": 0,
+          "cls": "hp"
         }
       ]
     }
@@ -102,7 +120,7 @@
         "wagon_mud"
       ],
       "huntClaimedCycle": 3,
-      "mvpThisCycle": "jordan",
+      "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
         "michael": {
@@ -127,7 +145,7 @@
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
-      "mvpThisCycle": "shania",
+      "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {},
       "axleSubs": {},
@@ -226,5 +244,10 @@
       },
       "totalSteps": 46345
     }
-  }
+  },
+  "appliedMigrations": [
+    "lauren_dw_cycle1",
+    "clear_stale_mvp_badges",
+    "remove_bad_dw_cycle3_v2"
+  ]
 }
