@@ -104,6 +104,12 @@
           "cls": "hp"
         },
         {
+          "team": "mud",
+          "text": "HUNT SUCCESSFUL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
@@ -147,7 +153,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 137,
+      "miles": 138,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -249,11 +255,11 @@
         "2026-05-22": 10284,
         "2026-05-23": 2815,
         "2026-05-24": 11329,
-        "2026-05-25": 3442,
+        "2026-05-25": 5555,
         "2026-05-26": 9700,
         "2026-05-27": 14320
       },
-      "totalSteps": 60665
+      "totalSteps": 62778
     }
   },
   "appliedMigrations": [
