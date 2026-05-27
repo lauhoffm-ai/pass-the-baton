@@ -122,9 +122,9 @@
       "cycleNum": 3
     },
     "dust": {
-      "cardId": "ox_wore_out",
-      "revealed": false,
-      "cycleNum": 2
+      "cardId": "native_trade",
+      "revealed": true,
+      "cycleNum": 3
     }
   },
   "players": {
