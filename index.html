@@ -610,6 +610,28 @@ function fixState(s){
     s.mileAdj=s.mileAdj.filter(a=>a.reason!=='DEAD WEIGHT CYCLE 1 LAUREN'&&a.reason!=='REMOVE BAD DEAD WEIGHT CYCLE 3');
     s.appliedMigrations.push('cleanup_stale_migrations_v1');
   }
+  // Cleanup: deduplicate HUNT SUCCESSFUL entries — only keep one per team per cycle date
+  // Multiple re-entries during step corrections caused checkHunt to fire multiple times
+  if(!s.appliedMigrations.includes('dedup_hunt_successful_v1')){
+    const seen={};
+    s.mileAdj=s.mileAdj.filter(a=>{
+      if(a.reason!=='HUNT SUCCESSFUL')return true;
+      const key=a.team+'_'+a.date;
+      if(seen[key])return false;
+      seen[key]=true;return true;
+    });
+    // Also scrub duplicate HUNT SUCCESSFUL history events per cycle
+    if(s.history){s.history.forEach(h=>{
+      const huntSeen={};
+      h.events=(h.events||[]).filter(e=>{
+        if(!e.text||e.text!=='HUNT SUCCESSFUL')return true;
+        const key=(e.team||'')+'_'+h.cycle;
+        if(huntSeen[key])return false;
+        huntSeen[key]=true;return true;
+      });
+    });}
+    s.appliedMigrations.push('dedup_hunt_successful_v1');
+  }
   return s;
 }
 
@@ -1126,8 +1148,9 @@ async function logSteps(){
     ['mud','dust'].forEach(t=>{
       const ci=getCycle();
       if(state.teams[t].huntClaimedCycle===ci.cycle){
-        // Remove the previously awarded hunt bonus for this date before re-checking
-        state.mileAdj=state.mileAdj.filter(a=>!(a.reason==='HUNT SUCCESSFUL'&&a.date===date));
+        // Remove previously awarded hunt bonus from mileAdj AND history before re-checking
+        state.mileAdj=state.mileAdj.filter(a=>!(a.reason==='HUNT SUCCESSFUL'&&a.date===date&&a.team===t));
+        if(state.history){state.history.forEach(h=>{if(h.cycle===ci.cycle&&h.events){h.events=h.events.filter(e=>!(e.text==='HUNT SUCCESSFUL'&&e.team===t));}});}
         state.teams[t].huntClaimedCycle=0;
       }
     });
