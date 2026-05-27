@@ -18,6 +18,18 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT CYCLE 1 LAUREN",
+      "date": "2025-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": 10,
+      "reason": "REMOVE BAD DEAD WEIGHT CYCLE 3",
+      "date": "2025-05-30"
     }
   ],
   "deadWeight": {
@@ -72,14 +84,7 @@
     {
       "cycle": 3,
       "dateRange": "MAY 27",
-      "events": [
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        }
-      ]
+      "events": []
     }
   ],
   "teams": {
@@ -90,7 +95,7 @@
         "wagon_mud"
       ],
       "huntClaimedCycle": 2,
-      "mvpThisCycle": "jordan",
+      "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
         "michael": {
@@ -115,7 +120,7 @@
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
-      "mvpThisCycle": "shania",
+      "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {},
       "axleSubs": {},
@@ -125,9 +130,9 @@
   },
   "cards": {
     "mud": {
-      "cardId": "wagon_mud",
-      "revealed": false,
-      "cycleNum": 2
+      "cardId": "river_crossing",
+      "revealed": true,
+      "cycleNum": 3
     },
     "dust": {
       "cardId": "ox_wore_out",
@@ -207,5 +212,10 @@
       },
       "totalSteps": 36645
     }
-  }
+  },
+  "appliedMigrations": [
+    "lauren_dw_cycle1",
+    "clear_stale_mvp_badges",
+    "remove_bad_dw_cycle3_v2"
+  ]
 }
