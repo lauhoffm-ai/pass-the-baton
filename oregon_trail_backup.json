@@ -35,11 +35,7 @@
     "kaykay": 0,
     "allen": 0
   },
-  "dysentery": {
-    "mudPlayer": "jordan",
-    "affectedDate": "2026-05-27",
-    "revealDate": "2026-05-28"
-  },
+  "dysentery": {},
   "mvpVotes": {
     "mud": {},
     "dust": {}
@@ -100,11 +96,10 @@
   ],
   "teams": {
     "mud": {
-      "miles": 153,
+      "miles": 161,
       "frozenUntilSteps": 0,
       "rareUsed": [
-        "wagon_mud",
-        "dysentery"
+        "wagon_mud"
       ],
       "huntClaimedCycle": 3,
       "mvpThisCycle": "jordan",
@@ -142,9 +137,9 @@
   },
   "cards": {
     "mud": {
-      "cardId": "dysentery",
-      "revealed": true,
-      "cycleNum": 3
+      "cardId": "wagon_mud",
+      "revealed": false,
+      "cycleNum": 2
     },
     "dust": {
       "cardId": "ox_wore_out",
@@ -159,9 +154,10 @@
         "2026-05-22": 17163,
         "2026-05-23": 11684,
         "2026-05-24": 13616,
-        "2026-05-25": 9227
+        "2026-05-25": 9227,
+        "2026-05-26": 11966
       },
-      "totalSteps": 72516
+      "totalSteps": 84482
     },
     "jordan": {
       "steps": {
