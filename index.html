@@ -610,6 +610,14 @@ function fixState(s){
     s.mileAdj=s.mileAdj.filter(a=>a.reason!=='DEAD WEIGHT CYCLE 1 LAUREN'&&a.reason!=='REMOVE BAD DEAD WEIGHT CYCLE 3');
     s.appliedMigrations.push('cleanup_stale_migrations_v1');
   }
+  // Cleanup: remove Pioneer Spirit that fired incorrectly mid-week (not on a Sunday)
+  // Going forward checkPioneer() only runs on Sundays via init()
+  if(!s.appliedMigrations.includes('remove_bad_pioneer_v1')){
+    s.mileAdj=s.mileAdj.filter(a=>a.reason!=='PIONEER SPIRIT');
+    if(s.history){s.history.forEach(h=>{if(h.events)h.events=h.events.filter(e=>!e.text||e.text!=='PIONEER SPIRIT');});}
+    if(s.teams){['mud','dust'].forEach(t=>{if(s.teams[t]){s.teams[t].pioneerEarned=[];}});}
+    s.appliedMigrations.push('remove_bad_pioneer_v1');
+  }
   // Cleanup: deduplicate HUNT SUCCESSFUL entries — only keep one per team per cycle date
   // Multiple re-entries during step corrections caused checkHunt to fire multiple times
   if(!s.appliedMigrations.includes('dedup_hunt_successful_v1')){
@@ -722,19 +730,34 @@ function checkHunt(team,date){
 }
 
 function checkPioneer(){
+  // Pioneer Spirit only evaluates on Sundays (day 0) on page load.
+  // Compares this week's team steps (Mon-Sat) vs last week's (Mon-Sat).
+  // Awarded once per cycle, never fires mid-step-log — only called from init().
+  const today=new Date(ld()+'T00:00:00');
+  if(today.getDay()!==0)return; // only run on Sundays
+  const sundayKey='pioneerCheckedSunday';
+  const thisSunday=ld(); // today is Sunday, use as the key
   ['mud','dust'].forEach(team=>{
     const ci=getCycle();
-    if((state.teams[team].pioneerEarned||[]).includes(ci.cycle)||ci.cycle<=1)return;
-    const now=new Date(ld()+'T00:00:00'),ws=new Date(now);ws.setDate(now.getDate()-now.getDay());
-    const ps=new Date(ws);ps.setDate(ps.getDate()-7);
+    // Skip if already earned this cycle, first cycle, or already checked this Sunday
+    if((state.teams[team].pioneerEarned||[]).includes(ci.cycle))return;
+    if(ci.cycle<=1)return;
+    if((state.teams[team].pioneerCheckedSunday||'')=== thisSunday)return;
+    // This week = last Mon through yesterday (Sat)
+    const sat=new Date(today);sat.setDate(today.getDate()-1); // yesterday = Sat
+    const mon=new Date(today);mon.setDate(today.getDate()-6); // last Mon
+    // Last week = Mon-Sun before that
+    const lastSun=new Date(mon);lastSun.setDate(mon.getDate()-1);
+    const lastMon=new Date(mon);lastMon.setDate(mon.getDate()-7);
     let tw=0,lw=0;
     TEAMS[team].members.forEach(pid=>{
       Object.entries(state.players[pid].steps).forEach(([d,s])=>{
         const dt=new Date(d+'T00:00:00');
-        if(dt>=ws&&dt<=now)tw+=s;
-        if(dt>=ps&&dt<ws)lw+=s;
+        if(dt>=mon&&dt<=sat)tw+=s;
+        if(dt>=lastMon&&dt<=lastSun)lw+=s;
       });
     });
+    state.teams[team].pioneerCheckedSunday=thisSunday; // mark checked regardless of result
     if(lw>0&&tw>lw){
       state.mileAdj.push({team,miles:15,reason:'PIONEER SPIRIT',date:ld()});
       state.teams[team].pioneerEarned=[...(state.teams[team].pioneerEarned||[]),ci.cycle];
@@ -1158,7 +1181,7 @@ async function logSteps(){
   state.players[pid].steps[date]=isMvp?steps+1000:steps;
   state.players[pid].totalSteps=Object.values(state.players[pid].steps).reduce((a,b)=>a+(b||0),0);
   updateDW(date);checkHunt('mud',date);checkHunt('dust',date);
-  checkFrozen('mud',date);checkFrozen('dust',date);checkPioneer();
+  checkFrozen('mud',date);checkFrozen('dust',date);
   const mudM=totalMi('mud'),dustM=totalMi('dust');
   checkLms('mud',state.teams.mud.miles||0,mudM);checkLms('dust',state.teams.dust.miles||0,dustM);
   state.teams.mud.miles=mudM;state.teams.dust.miles=dustM;
@@ -1318,6 +1341,10 @@ async function init(){
   }else{
     state=fixState(raw);
   }
+  // Pioneer Spirit runs on page load — checkPioneer() internally gates to Sundays only
+  const pioneerBefore=JSON.stringify(state.mileAdj);
+  checkPioneer();
+  if(JSON.stringify(state.mileAdj)!==pioneerBefore)await saveAll(state,true);
   render();
   startRefresh();
 }
