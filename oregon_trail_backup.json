@@ -15,21 +15,15 @@
     },
     {
       "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT CYCLE 1 LAUREN",
-      "date": "2025-05-23"
-    },
-    {
-      "team": "dust",
       "miles": 10,
       "reason": "REMOVE BAD DEAD WEIGHT CYCLE 3",
       "date": "2025-05-30"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
     }
   ],
   "deadWeight": {
@@ -84,7 +78,14 @@
     {
       "cycle": 3,
       "dateRange": "MAY 27",
-      "events": []
+      "events": [
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        }
+      ]
     }
   ],
   "teams": {
@@ -116,7 +117,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 74,
+      "miles": 87,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -198,9 +199,10 @@
         "2026-05-22": 6131,
         "2026-05-23": 889,
         "2026-05-24": 4635,
-        "2026-05-25": 1767
+        "2026-05-25": 1767,
+        "2026-05-26": 5047
       },
-      "totalSteps": 19834
+      "totalSteps": 24881
     },
     "allen": {
       "steps": {
