@@ -14,18 +14,6 @@
       "date": "2026-05-22"
     },
     {
-      "team": "dust",
-      "miles": 10,
-      "reason": "REMOVE BAD DEAD WEIGHT CYCLE 3",
-      "date": "2025-05-30"
-    },
-    {
-      "team": "dust",
-      "miles": 15,
-      "reason": "PIONEER SPIRIT",
-      "date": "2026-05-27"
-    },
-    {
       "team": "mud",
       "miles": 15,
       "reason": "HUNT SUCCESSFUL",
@@ -92,24 +80,6 @@
       "dateRange": "MAY 27",
       "events": [
         {
-          "team": "dust",
-          "text": "PIONEER SPIRIT",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
-          "team": "mud",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
-          "team": "mud",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
           "team": "mud",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
@@ -153,7 +123,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 148,
+      "miles": 127,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -161,9 +131,7 @@
       "mvpNextCycle": null,
       "liftSubs": {},
       "axleSubs": {},
-      "pioneerEarned": [
-        3
-      ],
+      "pioneerEarned": [],
       "frozenDates": []
     }
   },
@@ -222,9 +190,10 @@
         "2026-05-23": 12535,
         "2026-05-24": 10759,
         "2026-05-25": 17796,
-        "2026-05-26": 19728
+        "2026-05-26": 19728,
+        "2026-05-27": 7834
       },
-      "totalSteps": 87398
+      "totalSteps": 95232
     },
     "kaykay": {
       "steps": {
@@ -266,6 +235,9 @@
   "appliedMigrations": [
     "lauren_dw_cycle1",
     "clear_stale_mvp_badges",
-    "remove_bad_dw_cycle3_v2"
+    "remove_bad_dw_cycle3_v2",
+    "cleanup_stale_migrations_v1",
+    "remove_bad_pioneer_v1",
+    "dedup_hunt_successful_v1"
   ]
 }
