@@ -598,10 +598,12 @@ function fixState(s){
     s.mileAdj.push({team:'dust',miles:-10,reason:'DEAD WEIGHT CYCLE 1 LAUREN',date:'2025-05-23'});
     s.appliedMigrations.push('lauren_dw_cycle1');
   }
-  // Bug #4: Bad Cycle 3 dead weight penalty for Lauren — cancel it with +10 miles
-  if(!s.appliedMigrations.includes('remove_bad_dw_cycle3')){
+  // Bug #4: Bad Cycle 3 dead weight penalty for Lauren - cancel miles AND scrub the history log entry
+  if(!s.appliedMigrations.includes('remove_bad_dw_cycle3_v2')){
     s.mileAdj.push({team:'dust',miles:10,reason:'REMOVE BAD DEAD WEIGHT CYCLE 3',date:'2025-05-30'});
-    s.appliedMigrations.push('remove_bad_dw_cycle3');
+    // Scrub the bad history event so it stops appearing in the trail log
+    if(s.history){s.history.forEach(h=>{if(h.events){h.events=h.events.filter(e=>!(e.team==='dust'&&e.text&&e.text.toUpperCase().includes('DEAD WEIGHT')&&e.text.toUpperCase().includes('LAUREN')));}})}
+    s.appliedMigrations.push('remove_bad_dw_cycle3_v2');
   }
   return s;
 }
