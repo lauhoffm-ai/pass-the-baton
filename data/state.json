@@ -102,6 +102,10 @@
         "michael": {
           "weight": 275,
           "date": "2026-05-25"
+        },
+        "jordan": {
+          "weight": 135,
+          "date": "2026-05-25"
         }
       },
       "axleSubs": {},
