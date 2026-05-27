@@ -24,6 +24,12 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "PIONEER SPIRIT",
+      "date": "2026-05-27"
     }
   ],
   "deadWeight": {
@@ -84,6 +90,12 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "PIONEER SPIRIT",
+          "miles": 15,
+          "cls": "hp"
         }
       ]
     }
@@ -117,7 +129,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 112,
+      "miles": 135,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -125,7 +137,9 @@
       "mvpNextCycle": null,
       "liftSubs": {},
       "axleSubs": {},
-      "pioneerEarned": [],
+      "pioneerEarned": [
+        3
+      ],
       "frozenDates": []
     }
   },
@@ -214,9 +228,10 @@
         "2026-05-23": 2815,
         "2026-05-24": 11329,
         "2026-05-25": 3442,
-        "2026-05-26": 9700
+        "2026-05-26": 9700,
+        "2026-05-27": 14204
       },
-      "totalSteps": 46345
+      "totalSteps": 60549
     }
   },
   "appliedMigrations": [
