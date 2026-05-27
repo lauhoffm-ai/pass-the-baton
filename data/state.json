@@ -8,12 +8,6 @@
   ],
   "mileAdj": [
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-25"
-    },
-    {
       "team": "mud",
       "miles": 15,
       "reason": "HUNT SUCCESSFUL",
@@ -23,11 +17,11 @@
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-25"
+      "date": "2026-05-23"
     }
   ],
   "deadWeight": {
-    "lauren": 1,
+    "lauren": 2,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
@@ -68,17 +62,17 @@
       "dateRange": "MAY 25",
       "events": [
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
-        },
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "dateRange": "MAY 27",
+      "events": [
         {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
@@ -117,7 +111,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 64,
+      "miles": 75,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -132,12 +126,12 @@
   "cards": {
     "mud": {
       "cardId": "wagon_mud",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 2
     },
     "dust": {
       "cardId": "ox_wore_out",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 2
     }
   },
@@ -198,9 +192,9 @@
         "2026-05-22": 6131,
         "2026-05-23": 889,
         "2026-05-24": 4635,
-        "2026-05-25": 1767
+        "2026-05-25": 3321
       },
-      "totalSteps": 19834
+      "totalSteps": 21388
     },
     "allen": {
       "steps": {
