@@ -27,12 +27,12 @@
     }
   ],
   "deadWeight": {
-    "lauren": 1,
+    "lauren": 0,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
     "chris": 0,
-    "kaykay": 0,
+    "kaykay": 1,
     "allen": 0
   },
   "dysentery": {},
@@ -117,7 +117,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 128,
+      "miles": 139,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -173,9 +173,10 @@
         "2026-05-23": 3266,
         "2026-05-24": 3721,
         "2026-05-25": 3210,
-        "2026-05-26": 29331
+        "2026-05-26": 29331,
+        "2026-05-27": 22000
       },
-      "totalSteps": 75981
+      "totalSteps": 97981
     },
     "chris": {
       "steps": {
