@@ -30,6 +30,12 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-05-25"
     }
   ],
   "deadWeight": {
@@ -47,7 +53,9 @@
     "dust": {}
   },
   "landmarksHit": {
-    "mud": [],
+    "mud": [
+      250
+    ],
     "dust": []
   },
   "history": [
@@ -90,18 +98,30 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "HUNT SUCCESSFUL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "PLATTE RIVER REACHED!",
+          "miles": 20,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 235,
+      "miles": 251,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
       ],
-      "huntClaimedCycle": 0,
+      "huntClaimedCycle": 3,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
@@ -167,12 +187,12 @@
         "2026-05-22": 14389,
         "2026-05-23": 5888,
         "2026-05-24": 11914,
-        "2026-05-25": 9481,
+        "2026-05-25": 10025,
         "2026-05-26": 12027,
         "2026-05-27": 16991,
         "2026-05-28": 14543
       },
-      "totalSteps": 100106
+      "totalSteps": 100650
     },
     "shania": {
       "steps": {
