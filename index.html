@@ -1196,7 +1196,7 @@ async function logSteps(){
   state.players[pid].steps[date]=steps;
   state.players[pid].totalSteps=Object.values(state.players[pid].steps).reduce((a,b)=>a+(b||0),0);
   updateDW(date);checkHunt('mud',date);checkHunt('dust',date);
-  checkFrozen('mud',date);checkFrozen('dust',date);
+  checkFrozen('mud',date);checkFrozen('dust',date);checkAutoClose();
   const mudM=totalMi('mud'),dustM=totalMi('dust');
   checkLms('mud',state.teams.mud.miles||0,mudM);checkLms('dust',state.teams.dust.miles||0,dustM);
   state.teams.mud.miles=mudM;state.teams.dust.miles=dustM;
@@ -1355,6 +1355,7 @@ async function init(){
     if(el)el.textContent='FRESH STATE CREATED - ENTER STEPS IN ADMIN';
   }else{
     state=fixState(raw);
+    checkAutoClose();
   }
   // Pioneer Spirit runs on page load — checkPioneer() internally gates to Sundays only
   const pioneerBefore=JSON.stringify(state.mileAdj);
