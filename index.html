@@ -442,7 +442,7 @@ const COMMON=[
   {id:'native_trade',name:'NATIVE TRADE',desc:t=>`Hit ${t==='mud'?'36,000':'48,000'} combined steps 2 of 3 days for +20 miles.`,goal:t=>`${t==='mud'?'36K':'48K'} COMBINED - 2 OF 3 DAYS`},
   {id:'broken_axle',name:'BROKEN AXLE',desc:t=>`Every pioneer submits 30+ min workout or -20 miles. (${t==='mud'?3:4} needed)`,goal:t=>`${t==='mud'?3:4} WORKOUT PROOFS NEEDED`},
   {id:'second_wind',name:'SECOND WIND',desc:'Trailing wagon (100+ miles behind) gets free +25 miles.',goal:'AUTO: TRAILING WAGON ONLY'},
-  {id:'trading_post',name:'TRADING POST',desc:'Vote for team MVP. MVP earns +1,000 bonus steps/day next cycle!',goal:'VOTE IN ADMIN PANEL'},
+  {id:'trading_post',name:'TRADING POST',desc:'Vote for team MVP. Winner gets +1,000 bonus steps added to every day of this cycle!',goal:'VOTE IN ADMIN PANEL'},
   {id:'ox_wore_out',name:'OX WORE OUT',desc:'On day 2 everyone on this wagon loses 10% of their steps.',goal:'DAY 2: ALL PIONEERS -10% STEPS'}
 ];
 const RARE=[
@@ -593,6 +593,11 @@ function fixState(s){
   });
   // ONE-TIME MIGRATIONS — applied once and flagged so they never double-apply
   if(!s.appliedMigrations)s.appliedMigrations=[];
+  // Cycle 1 MVP bonus was already applied under the old system (Jordan +1k/day, Shania +1k/day May21-23)
+  // Mark as applied so the new retroactive system doesn't double-apply if Cycle 1 is ever re-processed
+  if(!s.appliedMigrations.includes('cycle1_mvp_bonus_already_applied')){
+    s.appliedMigrations.push('cycle1_mvp_bonus_already_applied');
+  }
   // Bug #3 RETIRED: lauren_dw_cycle1 migration added a duplicate -10 miles — updateDW already
   // correctly fires the penalty from real step data. Mark as applied so it never runs.
   if(!s.appliedMigrations.includes('lauren_dw_cycle1')){s.appliedMigrations.push('lauren_dw_cycle1');}
@@ -841,7 +846,18 @@ function closeCycle(cn,force=false){
     if(cd==='trading_post'){
       const votes=state.mvpVotes?.[team]||{};const tally={};Object.values(votes).forEach(v=>{tally[v]=(tally[v]||0)+1;});
       const w=Object.entries(tally).sort((a,b)=>b[1]-a[1])[0];
-      if(w){state.teams[team].mvpNextCycle=w[0];const wp=PLAYERS.find(p=>p.id===w[0]);addHist(team,'TRADING POST MVP: '+(wp?.display||w[0]),0,'hp');}
+      if(w){
+        const wp=PLAYERS.find(p=>p.id===w[0]);
+        // Retroactively add +1,000 to every day of this cycle for the MVP winner
+        dates.forEach(d=>{
+          if(state.players[w[0]]&&state.players[w[0]].steps[d]!==undefined&&state.players[w[0]].steps[d]!==null){
+            state.players[w[0]].steps[d]+=1000;
+          }
+        });
+        // Recalculate totalSteps
+        state.players[w[0]].totalSteps=Object.values(state.players[w[0]].steps).reduce((a,b)=>a+(b||0),0);
+        addHist(team,'TRADING POST MVP: '+(wp?.display||w[0])+' (+1K/DAY THIS CYCLE)',0,'hp');
+      }
       state.mvpVotes[team]={};
     }
     if(cd==='wagon_mud'){
@@ -859,8 +875,7 @@ function closeCycle(cn,force=false){
     state.prairieFireFired=true;
   }
 
-  // Always clear mvpThisCycle on cycle close — swap in next if voted, otherwise clear
-  ['mud','dust'].forEach(t=>{state.teams[t].mvpThisCycle=state.teams[t].mvpNextCycle||null;state.teams[t].mvpNextCycle=null;});
+  // mvpThisCycle and mvpNextCycle no longer used — MVP bonus applied retroactively at vote close
   if(!state.closedCycles)state.closedCycles=[];
   state.closedCycles.push(cn);
 }
@@ -1077,7 +1092,7 @@ function renderPlayers(ci){
       const sl=document.createElement('div');sl.className='psl';sl.textContent='TODAY';card.appendChild(sl);
       const tot=document.createElement('div');tot.className='pt';
       tot.textContent='TOTAL: '+totalS.toLocaleString();card.appendChild(tot);
-      if(isMvp){const mv=document.createElement('div');mv.className='mvp-b';mv.textContent='MVP +1K/DAY';card.appendChild(mv);}
+      if(isMvp){const mv=document.createElement('div');mv.className='mvp-b';mv.textContent='MVP BONUS APPLIED';card.appendChild(mv);}
       if(dw>=3){const bn=document.createElement('div');bn.className='dw-b';bn.textContent='DEAD WEIGHT';card.appendChild(bn);}
       else if(dw===2){const bn=document.createElement('div');bn.className='ar-b';bn.textContent='AT RISK';card.appendChild(bn);}
       if(isDy){const dy=document.createElement('div');dy.className='dy-b';dy.textContent='HAD DYSENTERY YESTERDAY';card.appendChild(dy);}
@@ -1164,7 +1179,6 @@ async function logSteps(){
   if(steps<0||steps>100000){msg.textContent='INVALID STEPS';msg.className='am err';return;}
   msg.textContent='SAVING...';msg.className='am';
   const team=teamOf(pid);
-  const isMvp=state.teams[team].mvpThisCycle===pid;
   // If steps already exist for this date, this is a re-entry — reset hunt so it re-evaluates cleanly
   const isReEntry=state.players[pid].steps[date]!==undefined&&state.players[pid].steps[date]!==null;
   if(isReEntry){
@@ -1178,7 +1192,8 @@ async function logSteps(){
       }
     });
   }
-  state.players[pid].steps[date]=isMvp?steps+1000:steps;
+  // Steps always saved as raw Stridekick numbers — MVP bonus applied retroactively at cycle close
+  state.players[pid].steps[date]=steps;
   state.players[pid].totalSteps=Object.values(state.players[pid].steps).reduce((a,b)=>a+(b||0),0);
   updateDW(date);checkHunt('mud',date);checkHunt('dust',date);
   checkFrozen('mud',date);checkFrozen('dust',date);
