@@ -30,6 +30,12 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-26"
     }
   ],
   "deadWeight": {
@@ -96,6 +102,12 @@
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         },
         {
           "team": "dust",
@@ -207,9 +219,10 @@
         "2026-05-24": 10759,
         "2026-05-25": 12811,
         "2026-05-27": 17226,
-        "2026-05-28": 5002
+        "2026-05-28": 5002,
+        "2026-05-26": 19728
       },
-      "totalSteps": 84913
+      "totalSteps": 104641
     },
     "kaykay": {
       "steps": {
