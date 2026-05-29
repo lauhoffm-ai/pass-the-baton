@@ -92,18 +92,6 @@
       "dateRange": "MAY 27",
       "events": [
         {
-          "team": "mud",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
@@ -120,12 +108,12 @@
   ],
   "teams": {
     "mud": {
-      "miles": 233,
+      "miles": 232,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
       ],
-      "huntClaimedCycle": 3,
+      "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
@@ -150,7 +138,7 @@
       "miles": 162,
       "frozenUntilSteps": 0,
       "rareUsed": [],
-      "huntClaimedCycle": 3,
+      "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {},
@@ -190,13 +178,13 @@
         "2026-05-21": 14873,
         "2026-05-22": 14389,
         "2026-05-23": 5888,
-        "2026-05-24": 12914,
+        "2026-05-24": 11914,
         "2026-05-25": 9481,
         "2026-05-26": 12027,
         "2026-05-27": 16991,
         "2026-05-28": 14543
       },
-      "totalSteps": 101106
+      "totalSteps": 100106
     },
     "shania": {
       "steps": {
