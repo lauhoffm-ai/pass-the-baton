@@ -47,7 +47,11 @@
     "kaykay": 0,
     "allen": 0
   },
-  "dysentery": {},
+  "dysentery": {
+    "mudPlayer": "kaykay",
+    "affectedDate": "2026-05-30",
+    "revealDate": "2026-05-31"
+  },
   "mvpVotes": {
     "mud": {},
     "dust": {}
@@ -125,7 +129,8 @@
       "miles": 268,
       "frozenUntilSteps": 0,
       "rareUsed": [
-        "wagon_mud"
+        "wagon_mud",
+        "dysentery"
       ],
       "huntClaimedCycle": 3,
       "mvpThisCycle": null,
@@ -163,9 +168,9 @@
   },
   "cards": {
     "mud": {
-      "cardId": "river_crossing",
-      "revealed": false,
-      "cycleNum": 3
+      "cardId": "dysentery",
+      "revealed": true,
+      "cycleNum": 4
     },
     "dust": {
       "cardId": "native_trade",
