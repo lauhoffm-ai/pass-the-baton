@@ -26,16 +26,16 @@
       "date": "2026-05-27"
     },
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
       "team": "mud",
       "miles": 15,
       "reason": "HUNT SUCCESSFUL",
       "date": "2026-05-25"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
     }
   ],
   "deadWeight": {
@@ -94,12 +94,6 @@
       "dateRange": "MAY 27",
       "events": [
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
@@ -110,6 +104,18 @@
           "text": "PLATTE RIVER REACHED!",
           "miles": 20,
           "cls": "hp"
+        }
+      ]
+    },
+    {
+      "cycle": 4,
+      "dateRange": "MAY 30",
+      "events": [
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -143,7 +149,7 @@
       "frozenDates": []
     },
     "dust": {
-      "miles": 176,
+      "miles": 185,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -158,12 +164,12 @@
   "cards": {
     "mud": {
       "cardId": "river_crossing",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 3
     },
     "dust": {
       "cardId": "native_trade",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 3
     }
   },
@@ -203,9 +209,10 @@
         "2026-05-25": 3210,
         "2026-05-26": 29331,
         "2026-05-27": 22147,
-        "2026-05-28": 20897
+        "2026-05-28": 20897,
+        "2026-05-29": 19560
       },
-      "totalSteps": 119025
+      "totalSteps": 138585
     },
     "chris": {
       "steps": {
@@ -266,6 +273,7 @@
     "remove_bad_dw_cycle3_v2",
     "cleanup_stale_migrations_v1",
     "remove_bad_pioneer_v1",
-    "dedup_hunt_successful_v1"
+    "dedup_hunt_successful_v1",
+    "cycle1_mvp_bonus_already_applied"
   ]
 }
