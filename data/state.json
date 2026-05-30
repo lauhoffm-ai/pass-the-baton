@@ -156,7 +156,9 @@
     "dust": {
       "miles": 196,
       "frozenUntilSteps": 0,
-      "rareUsed": [],
+      "rareUsed": [
+        "wagon_mud"
+      ],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
@@ -173,9 +175,9 @@
       "cycleNum": 4
     },
     "dust": {
-      "cardId": "native_trade",
-      "revealed": false,
-      "cycleNum": 3
+      "cardId": "wagon_mud",
+      "revealed": true,
+      "cycleNum": 4
     }
   },
   "players": {
