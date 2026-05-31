@@ -36,6 +36,18 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "PIONEER SPIRIT",
+      "date": "2026-05-31"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "PIONEER SPIRIT",
+      "date": "2026-05-31"
     }
   ],
   "deadWeight": {
@@ -120,6 +132,18 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "PIONEER SPIRIT",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "PIONEER SPIRIT",
+          "miles": 15,
+          "cls": "hp"
         }
       ]
     }
@@ -150,8 +174,11 @@
         }
       },
       "axleSubs": {},
-      "pioneerEarned": [],
-      "frozenDates": []
+      "pioneerEarned": [
+        4
+      ],
+      "frozenDates": [],
+      "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
       "miles": 196,
@@ -164,8 +191,11 @@
       "mvpNextCycle": null,
       "liftSubs": {},
       "axleSubs": {},
-      "pioneerEarned": [],
-      "frozenDates": []
+      "pioneerEarned": [
+        4
+      ],
+      "frozenDates": [],
+      "pioneerCheckedSunday": "2026-05-31"
     }
   },
   "cards": {
