@@ -44,16 +44,16 @@
       "date": "2026-05-31"
     },
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
       "team": "mud",
       "miles": 15,
       "reason": "HUNT SUCCESSFUL",
       "date": "2026-05-30"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
     }
   ],
   "deadWeight": {
@@ -146,16 +146,16 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -193,7 +193,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 219,
+      "miles": 222,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -278,9 +278,10 @@
         "2026-05-27": 17226,
         "2026-05-28": 5002,
         "2026-05-26": 19728,
-        "2026-05-29": 11981
+        "2026-05-29": 11981,
+        "2026-05-30": 4754
       },
-      "totalSteps": 121607
+      "totalSteps": 126361
     },
     "kaykay": {
       "steps": {
