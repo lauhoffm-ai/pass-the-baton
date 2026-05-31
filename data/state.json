@@ -32,12 +32,6 @@
       "date": "2026-05-25"
     },
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
       "team": "mud",
       "miles": 15,
       "reason": "PIONEER SPIRIT",
@@ -48,6 +42,12 @@
       "miles": 15,
       "reason": "PIONEER SPIRIT",
       "date": "2026-05-31"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
     }
   ],
   "deadWeight": {
@@ -128,12 +128,6 @@
       "dateRange": "MAY 30",
       "events": [
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "PIONEER SPIRIT",
           "miles": 15,
@@ -144,13 +138,19 @@
           "text": "PIONEER SPIRIT",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 268,
+      "miles": 294,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -181,7 +181,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 196,
+      "miles": 211,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -221,9 +221,10 @@
         "2026-05-27": 15832,
         "2026-05-26": 11966,
         "2026-05-28": 16351,
-        "2026-05-29": 10020
+        "2026-05-29": 10020,
+        "2026-05-30": 17324
       },
-      "totalSteps": 128353
+      "totalSteps": 145677
     },
     "jordan": {
       "steps": {
