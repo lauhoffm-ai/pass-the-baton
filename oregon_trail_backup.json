@@ -193,7 +193,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 222,
+      "miles": 224,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -322,9 +322,10 @@
         "2026-05-26": 9700,
         "2026-05-27": 16402,
         "2026-05-28": 6324,
-        "2026-05-29": 5640
+        "2026-05-29": 5640,
+        "2026-05-30": 4443
       },
-      "totalSteps": 76824
+      "totalSteps": 81267
     }
   },
   "appliedMigrations": [
