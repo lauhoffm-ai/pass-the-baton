@@ -55,7 +55,7 @@
   "deadWeight": {
     "lauren": 2,
     "michael": 0,
-    "jordan": 1,
+    "jordan": 0,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
@@ -148,7 +148,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 249,
+      "miles": 253,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -228,9 +228,9 @@
         "2026-05-26": 12027,
         "2026-05-27": 16991,
         "2026-05-28": 14543,
-        "2026-05-29": 0
+        "2026-05-29": 5473
       },
-      "totalSteps": 100650
+      "totalSteps": 106123
     },
     "shania": {
       "steps": {
