@@ -151,6 +151,12 @@
           "cls": "hn"
         },
         {
+          "team": "mud",
+          "text": "CHIMNEY ROCK REACHED!",
+          "miles": 25,
+          "cls": "hp"
+        },
+        {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
@@ -160,12 +166,6 @@
           "team": "mud",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
-          "cls": "hp"
-        },
-        {
-          "team": "mud",
-          "text": "CHIMNEY ROCK REACHED!",
-          "miles": 25,
           "cls": "hp"
         }
       ]
