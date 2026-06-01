@@ -65,12 +65,12 @@
     }
   ],
   "deadWeight": {
-    "lauren": 1,
+    "lauren": 0,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
     "chris": 0,
-    "kaykay": 0,
+    "kaykay": 1,
     "allen": 0
   },
   "dysentery": {},
@@ -179,7 +179,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 354,
+      "miles": 355,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -315,9 +315,10 @@
         "2026-05-28": 10079,
         "2026-05-29": 10113,
         "2026-05-30": 15060,
-        "2026-05-31": 10373
+        "2026-05-31": 10373,
+        "2026-06-01": 1665
       },
-      "totalSteps": 125300
+      "totalSteps": 126965
     },
     "lauren": {
       "steps": {
