@@ -1335,7 +1335,7 @@ async function resetAll(){
 let lastSaveTime=0;
 function startRefresh(){
   if(rtimer)clearInterval(rtimer);
-  rtimer=setInterval(async()=>{\
+  rtimer=setInterval(async()=>{
     // Don't refresh if a save is in progress or we saved within last 60 seconds
     if(_saving)return;
     if(Date.now()-lastSaveTime<60000)return;
