@@ -56,7 +56,7 @@
     "lauren": 2,
     "michael": 1,
     "jordan": 1,
-    "shania": 1,
+    "shania": 0,
     "chris": 1,
     "kaykay": 1,
     "allen": 1
@@ -176,7 +176,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 201,
+      "miles": 211,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -242,10 +242,10 @@
         "2026-05-26": 29331,
         "2026-05-27": 22147,
         "2026-05-28": 20897,
-        "2026-05-29": 0,
+        "2026-05-29": 19560,
         "2026-05-31": 15070
       },
-      "totalSteps": 134095
+      "totalSteps": 153655
     },
     "chris": {
       "steps": {
