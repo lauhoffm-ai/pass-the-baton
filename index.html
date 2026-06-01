@@ -505,18 +505,28 @@ async function loadBin(){
   if(bak){_stateSha=null;return bak.data;}
   return null;
 }
+let _saving=false; // lock to prevent auto-refresh clobbering SHA during a save
 async function saveBin(s){
   const el=document.getElementById('lastSync');
+  _saving=true;
   try{
+    // Always refetch SHA fresh before writing to avoid stale SHA conflicts
+    const fresh=await ghGet(GH_STATE);
+    if(fresh)_stateSha=fresh.sha;
     let newSha=await ghPut(GH_STATE,_stateSha,s);
     if(!newSha){
-      // SHA stale — refetch and retry once
+      // Second attempt — SHA may have changed between fetch and put
       const res=await ghGet(GH_STATE);
       if(res){_stateSha=res.sha;newSha=await ghPut(GH_STATE,_stateSha,s);}
     }
-    if(newSha){_stateSha=newSha;if(el)el.textContent='SAVED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});return true;}
-    if(el)el.textContent='SAVE FAILED!';return false;
-  }catch(e){if(el)el.textContent='SAVE ERROR!';return false;}
+    if(newSha){
+      _stateSha=newSha;
+      if(el)el.textContent='SAVED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+      _saving=false;return true;
+    }
+    if(el)el.textContent='SAVE FAILED - TRY AGAIN';
+    _saving=false;return false;
+  }catch(e){if(el)el.textContent='SAVE ERROR!';_saving=false;return false;}
 }
 function bakTimestamp(){
   const d=new Date();
@@ -1325,8 +1335,9 @@ async function resetAll(){
 let lastSaveTime=0;
 function startRefresh(){
   if(rtimer)clearInterval(rtimer);
-  rtimer=setInterval(async()=>{
-    // Don't overwrite if we saved within last 10 seconds
+  rtimer=setInterval(async()=>{\
+    // Don't refresh if a save is in progress or we saved within last 60 seconds
+    if(_saving)return;
     if(Date.now()-lastSaveTime<60000)return;
     const f=await loadBin();
     if(f){state=fixState(f);render();}
