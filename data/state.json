@@ -144,12 +144,6 @@
           "cls": "hn"
         },
         {
-          "team": "mud",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
@@ -165,7 +159,7 @@
       "rareUsed": [
         "wagon_mud"
       ],
-      "huntClaimedCycle": 4,
+      "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
