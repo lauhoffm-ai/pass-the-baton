@@ -59,7 +59,7 @@
     }
   ],
   "deadWeight": {
-    "lauren": 1,
+    "lauren": 2,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
@@ -151,16 +151,16 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -195,7 +195,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 236,
+      "miles": 241,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -212,12 +212,12 @@
   },
   "cards": {
     "mud": {
-      "cardId": "broken_axle",
+      "cardId": "dysentery",
       "revealed": true,
       "cycleNum": 4
     },
     "dust": {
-      "cardId": "broken_axle",
+      "cardId": "wagon_mud",
       "revealed": true,
       "cycleNum": 4
     }
@@ -282,9 +282,10 @@
         "2026-05-28": 5002,
         "2026-05-26": 19728,
         "2026-05-29": 12966,
-        "2026-05-30": 4754
+        "2026-05-30": 4754,
+        "2026-05-31": 9988
       },
-      "totalSteps": 127346
+      "totalSteps": 137334
     },
     "kaykay": {
       "steps": {
@@ -344,6 +345,7 @@
     "dedup_hunt_successful_v1",
     "cycle1_mvp_bonus_already_applied",
     "dedup_hunt_successful_v2",
-    "reset_cycle4_cards"
+    "reset_cycle4_cards",
+    "reset_cycle4_cards_v2"
   ]
 }
