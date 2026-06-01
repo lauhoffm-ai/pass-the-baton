@@ -217,8 +217,8 @@
       "cycleNum": 4
     },
     "dust": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "broken_axle",
+      "revealed": true,
       "cycleNum": 4
     }
   },
