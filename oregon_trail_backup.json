@@ -59,7 +59,7 @@
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "allen": 1
+    "allen": 0
   },
   "dysentery": {},
   "mvpVotes": {
@@ -176,7 +176,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 217,
+      "miles": 220,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -300,10 +300,10 @@
         "2026-05-26": 9700,
         "2026-05-27": 16402,
         "2026-05-28": 6324,
-        "2026-05-29": 0,
+        "2026-05-29": 5640,
         "2026-05-31": 4956
       },
-      "totalSteps": 76140
+      "totalSteps": 81780
     }
   },
   "appliedMigrations": [
