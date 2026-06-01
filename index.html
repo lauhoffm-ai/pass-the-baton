@@ -633,17 +633,22 @@ function fixState(s){
     if(s.teams){['mud','dust'].forEach(t=>{if(s.teams[t]){s.teams[t].pioneerEarned=[];}});}
     s.appliedMigrations.push('remove_bad_pioneer_v1');
   }
-  // Cleanup: deduplicate HUNT SUCCESSFUL entries — only keep one per team per cycle date
-  // Multiple re-entries during step corrections caused checkHunt to fire multiple times
-  if(!s.appliedMigrations.includes('dedup_hunt_successful_v1')){
+  // Cleanup: deduplicate HUNT SUCCESSFUL entries — only keep one per team per cycle
+  if(!s.appliedMigrations.includes('dedup_hunt_successful_v1')){s.appliedMigrations.push('dedup_hunt_successful_v1');}
+  // v2: re-keyed by cycle number (not date) — one hunt bonus per team per cycle max
+  if(!s.appliedMigrations.includes('dedup_hunt_successful_v2')){
+    const START_DATE='2026-05-21';const CDAYS=3;
+    function huntCycle(date){
+      const ms=new Date(date+'T00:00:00')-new Date(START_DATE+'T00:00:00');
+      return Math.floor(ms/86400000/CDAYS)+1;
+    }
     const seen={};
     s.mileAdj=s.mileAdj.filter(a=>{
       if(a.reason!=='HUNT SUCCESSFUL')return true;
-      const key=a.team+'_'+a.date;
+      const key=a.team+'_'+huntCycle(a.date);
       if(seen[key])return false;
       seen[key]=true;return true;
     });
-    // Also scrub duplicate HUNT SUCCESSFUL history events per cycle
     if(s.history){s.history.forEach(h=>{
       const huntSeen={};
       h.events=(h.events||[]).filter(e=>{
@@ -653,7 +658,17 @@ function fixState(s){
         huntSeen[key]=true;return true;
       });
     });}
-    s.appliedMigrations.push('dedup_hunt_successful_v1');
+    s.appliedMigrations.push('dedup_hunt_successful_v2');
+  }
+  // Reset Cycle 4 cards to unrevealed so teams can draw fresh after step data was corrected
+  if(!s.appliedMigrations.includes('reset_cycle4_cards')){
+    const currentCycle=4;
+    ['mud','dust'].forEach(t=>{
+      if(s.cards&&s.cards[t]&&s.cards[t].cycleNum===currentCycle){
+        s.cards[t]={cardId:null,revealed:false,cycleNum:currentCycle};
+      }
+    });
+    s.appliedMigrations.push('reset_cycle4_cards');
   }
   return s;
 }
