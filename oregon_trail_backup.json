@@ -40,26 +40,26 @@
       "date": "2026-05-31"
     },
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
       "team": "mud",
       "miles": -15,
       "reason": "RIVER CROSSING MISSED",
       "date": "2026-05-29"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
     }
   ],
   "deadWeight": {
-    "lauren": 1,
-    "michael": 0,
-    "jordan": 0,
-    "shania": 0,
-    "chris": 0,
-    "kaykay": 0,
-    "allen": 0
+    "lauren": 2,
+    "michael": 1,
+    "jordan": 1,
+    "shania": 1,
+    "chris": 1,
+    "kaykay": 1,
+    "allen": 1
   },
   "dysentery": {},
   "mvpVotes": {
@@ -132,15 +132,15 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "RIVER CROSSING MISSED",
           "miles": -15,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
           "cls": "hn"
         }
       ]
@@ -176,7 +176,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 191,
+      "miles": 194,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -299,9 +299,10 @@
         "2026-05-26": 9700,
         "2026-05-27": 16402,
         "2026-05-28": 6324,
-        "2026-05-29": 0
+        "2026-05-29": 0,
+        "2026-05-31": 4956
       },
-      "totalSteps": 71184
+      "totalSteps": 76140
     }
   },
   "appliedMigrations": [
