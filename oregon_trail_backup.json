@@ -193,9 +193,9 @@
   },
   "cards": {
     "mud": {
-      "cardId": "river_crossing",
-      "revealed": false,
-      "cycleNum": 3
+      "cardId": "ox_wore_out",
+      "revealed": true,
+      "cycleNum": 4
     },
     "dust": {
       "cardId": "dust_storm",
