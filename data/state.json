@@ -5,8 +5,7 @@
   "prairieFireFired": false,
   "closedCycles": [
     1,
-    2,
-    3
+    2
   ],
   "mileAdj": [
     {
@@ -28,12 +27,6 @@
       "date": "2026-05-27"
     },
     {
-      "team": "mud",
-      "miles": 15,
-      "reason": "HUNT SUCCESSFUL",
-      "date": "2026-05-25"
-    },
-    {
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
@@ -42,8 +35,8 @@
     {
       "team": "mud",
       "miles": 15,
-      "reason": "PIONEER SPIRIT",
-      "date": "2026-05-31"
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-05-25"
     },
     {
       "team": "dust",
@@ -53,7 +46,7 @@
     }
   ],
   "deadWeight": {
-    "lauren": 2,
+    "lauren": 1,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
@@ -61,11 +54,7 @@
     "kaykay": 0,
     "allen": 0
   },
-  "dysentery": {
-    "mudPlayer": "kaykay",
-    "affectedDate": "2026-05-30",
-    "revealDate": "2026-05-31"
-  },
+  "dysentery": {},
   "mvpVotes": {
     "mud": {},
     "dust": {}
@@ -112,6 +101,12 @@
       "dateRange": "MAY 27",
       "events": [
         {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
           "team": "mud",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
@@ -127,20 +122,8 @@
     },
     {
       "cycle": 4,
-      "dateRange": "MAY 30",
+      "dateRange": "MAY 31",
       "events": [
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "mud",
-          "text": "PIONEER SPIRIT",
-          "miles": 15,
-          "cls": "hp"
-        },
         {
           "team": "dust",
           "text": "PIONEER SPIRIT",
@@ -152,11 +135,10 @@
   ],
   "teams": {
     "mud": {
-      "miles": 268,
+      "miles": 251,
       "frozenUntilSteps": 0,
       "rareUsed": [
-        "wagon_mud",
-        "dysentery"
+        "wagon_mud"
       ],
       "huntClaimedCycle": 3,
       "mvpThisCycle": null,
@@ -176,18 +158,14 @@
         }
       },
       "axleSubs": {},
-      "pioneerEarned": [
-        4
-      ],
+      "pioneerEarned": [],
       "frozenDates": [],
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 196,
+      "miles": 176,
       "frozenUntilSteps": 0,
-      "rareUsed": [
-        "wagon_mud"
-      ],
+      "rareUsed": [],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
@@ -202,14 +180,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "dysentery",
+      "cardId": "river_crossing",
       "revealed": true,
-      "cycleNum": 4
+      "cycleNum": 3
     },
     "dust": {
-      "cardId": "wagon_mud",
+      "cardId": "native_trade",
       "revealed": true,
-      "cycleNum": 4
+      "cycleNum": 3
     }
   },
   "players": {
@@ -222,10 +200,9 @@
         "2026-05-25": 10895,
         "2026-05-27": 15832,
         "2026-05-26": 11966,
-        "2026-05-28": 16351,
-        "2026-05-29": 10020
+        "2026-05-28": 16351
       },
-      "totalSteps": 128353
+      "totalSteps": 118333
     },
     "jordan": {
       "steps": {
@@ -236,10 +213,9 @@
         "2026-05-25": 10025,
         "2026-05-26": 12027,
         "2026-05-27": 16991,
-        "2026-05-28": 14543,
-        "2026-05-29": 5423
+        "2026-05-28": 14543
       },
-      "totalSteps": 106073
+      "totalSteps": 100650
     },
     "shania": {
       "steps": {
@@ -250,10 +226,9 @@
         "2026-05-25": 3210,
         "2026-05-26": 29331,
         "2026-05-27": 22147,
-        "2026-05-28": 20897,
-        "2026-05-29": 19560
+        "2026-05-28": 20897
       },
-      "totalSteps": 138585
+      "totalSteps": 119025
     },
     "chris": {
       "steps": {
@@ -264,10 +239,9 @@
         "2026-05-25": 17796,
         "2026-05-27": 17226,
         "2026-05-28": 5002,
-        "2026-05-26": 19728,
-        "2026-05-29": 11981
+        "2026-05-26": 19728
       },
-      "totalSteps": 121607
+      "totalSteps": 109626
     },
     "kaykay": {
       "steps": {
@@ -278,10 +252,9 @@
         "2026-05-25": 11262,
         "2026-05-26": 9299,
         "2026-05-27": 11727,
-        "2026-05-28": 10079,
-        "2026-05-29": 10113
+        "2026-05-28": 10079
       },
-      "totalSteps": 99867
+      "totalSteps": 89754
     },
     "lauren": {
       "steps": {
@@ -292,10 +265,9 @@
         "2026-05-25": 3321,
         "2026-05-26": 5047,
         "2026-05-27": 13708,
-        "2026-05-28": 1044,
-        "2026-05-29": 4652
+        "2026-05-28": 1044
       },
-      "totalSteps": 45839
+      "totalSteps": 41187
     },
     "allen": {
       "steps": {
@@ -306,10 +278,9 @@
         "2026-05-25": 5555,
         "2026-05-26": 9700,
         "2026-05-27": 16402,
-        "2026-05-28": 6324,
-        "2026-05-29": 5640
+        "2026-05-28": 6324
       },
-      "totalSteps": 76824
+      "totalSteps": 71184
     }
   },
   "appliedMigrations": [
