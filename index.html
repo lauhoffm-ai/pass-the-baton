@@ -660,15 +660,14 @@ function fixState(s){
     });}
     s.appliedMigrations.push('dedup_hunt_successful_v2');
   }
-  // Reset Cycle 4 cards to unrevealed so teams can draw fresh after step data was corrected
-  if(!s.appliedMigrations.includes('reset_cycle4_cards')){
-    const currentCycle=4;
-    ['mud','dust'].forEach(t=>{
-      if(s.cards&&s.cards[t]&&s.cards[t].cycleNum===currentCycle){
-        s.cards[t]={cardId:null,revealed:false,cycleNum:currentCycle};
-      }
-    });
-    s.appliedMigrations.push('reset_cycle4_cards');
+  // Reset Cycle 4 cards to the correct original cards (dysentery=Mud, wagon_mud=Dust)
+  // v2 replaces the generic unrevealed reset with the specific cards
+  if(!s.appliedMigrations.includes('reset_cycle4_cards')){s.appliedMigrations.push('reset_cycle4_cards');}
+  if(!s.appliedMigrations.includes('reset_cycle4_cards_v2')){
+    if(!s.cards)s.cards={};
+    s.cards.mud={cardId:'dysentery',revealed:true,cycleNum:4};
+    s.cards.dust={cardId:'wagon_mud',revealed:true,cycleNum:4};
+    s.appliedMigrations.push('reset_cycle4_cards_v2');
   }
   return s;
 }
