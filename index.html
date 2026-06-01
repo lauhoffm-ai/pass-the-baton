@@ -603,6 +603,15 @@ function fixState(s){
   });
   // ONE-TIME MIGRATIONS — applied once and flagged so they never double-apply
   if(!s.appliedMigrations)s.appliedMigrations=[];
+  // Dead weight streaks are continuous across cycles — fix missing May 31 penalty
+  // Lauren was lowest May 29, 30, 31 (3 consecutive days) but penalty didn't fire due to cycle reset bug
+  if(!s.appliedMigrations.includes('lauren_dw_may31')){
+    // Remove ghost history event from bad data, then let updateDW recalculate naturally
+    if(s.history){s.history.forEach(h=>{if(h.events){h.events=h.events.filter(e=>!(e.text&&e.text.includes('DEAD WEIGHT')&&h.cycle===4));}});}
+    // Reset deadWeight counters so updateDW rebuilds correctly on next step entry
+    if(s.deadWeight){Object.keys(s.deadWeight).forEach(k=>{s.deadWeight[k]=0;});}
+    s.appliedMigrations.push('lauren_dw_may31');
+  }
   // Cycle 1 MVP bonus was already applied under the old system (Jordan +1k/day, Shania +1k/day May21-23)
   // Mark as applied so the new retroactive system doesn't double-apply if Cycle 1 is ever re-processed
   if(!s.appliedMigrations.includes('cycle1_mvp_bonus_already_applied')){
@@ -723,13 +732,8 @@ function updateDW(date){
   PLAYERS.forEach(p=>{state.deadWeight[p.id]=0;});
   state.mileAdj=state.mileAdj.filter(a=>!a.reason||!a.reason.startsWith('DEAD WEIGHT'));
   if(state.history)state.history.forEach(h=>{if(h.events)h.events=h.events.filter(e=>!e.text||!e.text.startsWith('DEAD WEIGHT'));});
-  // Helper: which cycle does a date belong to?
-  function cycleOfDate(d){return Math.floor(daysBetween(START,d)/CDAYS)+1;}
-  let prevCycle=null;
+  // Streaks are continuous across all dates — no cycle boundary resets
   allDates.forEach(d=>{
-    const thisCycle=cycleOfDate(d);
-    // Reset all streak counters when we cross into a new cycle
-    if(thisCycle!==prevCycle){PLAYERS.forEach(p=>{state.deadWeight[p.id]=0;});prevCycle=thisCycle;}
     const minS=Math.min(...PLAYERS.map(p=>state.players[p.id].steps[d]));
     PLAYERS.forEach(p=>{
       if(state.players[p.id].steps[d]===minS){
