@@ -56,6 +56,12 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-05-31"
     }
   ],
   "deadWeight": {
@@ -74,7 +80,8 @@
   },
   "landmarksHit": {
     "mud": [
-      250
+      250,
+      350
     ],
     "dust": []
   },
@@ -148,18 +155,30 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "HUNT SUCCESSFUL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "CHIMNEY ROCK REACHED!",
+          "miles": 25,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 334,
+      "miles": 356,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
       ],
-      "huntClaimedCycle": 0,
+      "huntClaimedCycle": 4,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
@@ -284,9 +303,10 @@
         "2026-05-27": 11727,
         "2026-05-28": 10079,
         "2026-05-29": 10113,
-        "2026-05-30": 15060
+        "2026-05-30": 15060,
+        "2026-05-31": 10373
       },
-      "totalSteps": 114927
+      "totalSteps": 125300
     },
     "lauren": {
       "steps": {
