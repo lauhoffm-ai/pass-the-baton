@@ -5,7 +5,8 @@
   "prairieFireFired": false,
   "closedCycles": [
     1,
-    2
+    2,
+    3
   ],
   "mileAdj": [
     {
@@ -27,12 +28,6 @@
       "date": "2026-05-27"
     },
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
       "team": "mud",
       "miles": 15,
       "reason": "HUNT SUCCESSFUL",
@@ -43,6 +38,18 @@
       "miles": 15,
       "reason": "PIONEER SPIRIT",
       "date": "2026-05-31"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
+    },
+    {
+      "team": "mud",
+      "miles": -15,
+      "reason": "RIVER CROSSING MISSED",
+      "date": "2026-05-29"
     }
   ],
   "deadWeight": {
@@ -101,12 +108,6 @@
       "dateRange": "MAY 27",
       "events": [
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
@@ -129,13 +130,25 @@
           "text": "PIONEER SPIRIT",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "RIVER CROSSING MISSED",
+          "miles": -15,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 251,
+      "miles": 236,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -163,7 +176,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 176,
+      "miles": 191,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -181,12 +194,12 @@
   "cards": {
     "mud": {
       "cardId": "river_crossing",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 3
     },
     "dust": {
       "cardId": "native_trade",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 3
     }
   },
@@ -200,7 +213,8 @@
         "2026-05-25": 10895,
         "2026-05-27": 15832,
         "2026-05-26": 11966,
-        "2026-05-28": 16351
+        "2026-05-28": 16351,
+        "2026-05-29": 0
       },
       "totalSteps": 118333
     },
@@ -213,7 +227,8 @@
         "2026-05-25": 10025,
         "2026-05-26": 12027,
         "2026-05-27": 16991,
-        "2026-05-28": 14543
+        "2026-05-28": 14543,
+        "2026-05-29": 0
       },
       "totalSteps": 100650
     },
@@ -226,7 +241,8 @@
         "2026-05-25": 3210,
         "2026-05-26": 29331,
         "2026-05-27": 22147,
-        "2026-05-28": 20897
+        "2026-05-28": 20897,
+        "2026-05-29": 0
       },
       "totalSteps": 119025
     },
@@ -239,7 +255,8 @@
         "2026-05-25": 17796,
         "2026-05-27": 17226,
         "2026-05-28": 5002,
-        "2026-05-26": 19728
+        "2026-05-26": 19728,
+        "2026-05-29": 0
       },
       "totalSteps": 109626
     },
@@ -252,7 +269,8 @@
         "2026-05-25": 11262,
         "2026-05-26": 9299,
         "2026-05-27": 11727,
-        "2026-05-28": 10079
+        "2026-05-28": 10079,
+        "2026-05-29": 0
       },
       "totalSteps": 89754
     },
@@ -265,9 +283,11 @@
         "2026-05-25": 3321,
         "2026-05-26": 5047,
         "2026-05-27": 13708,
-        "2026-05-28": 1044
+        "2026-05-28": 1044,
+        "2026-05-31": 1221,
+        "2026-05-29": 0
       },
-      "totalSteps": 41187
+      "totalSteps": 42408
     },
     "allen": {
       "steps": {
@@ -278,7 +298,8 @@
         "2026-05-25": 5555,
         "2026-05-26": 9700,
         "2026-05-27": 16402,
-        "2026-05-28": 6324
+        "2026-05-28": 6324,
+        "2026-05-29": 0
       },
       "totalSteps": 71184
     }
