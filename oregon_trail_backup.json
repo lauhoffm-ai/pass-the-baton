@@ -198,9 +198,9 @@
       "cycleNum": 3
     },
     "dust": {
-      "cardId": "native_trade",
-      "revealed": false,
-      "cycleNum": 3
+      "cardId": "dust_storm",
+      "revealed": true,
+      "cycleNum": 4
     }
   },
   "players": {
