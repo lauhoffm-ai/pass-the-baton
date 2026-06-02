@@ -1108,6 +1108,80 @@ function renderDashboard(){
     });
   });
 
+  // Per-player mile contributions
+  const SPM=1500;
+  function playerContribs(team){
+    const members=TEAMS[team].members;
+    const frozen=state.teams[team].frozenDates||[];
+    // Base raw miles per day
+    let base=0;
+    allDates.forEach(d=>{
+      if(frozen.includes(d))return;
+      const ts=members.reduce((s,pid)=>s+(state.players[pid].steps[d]||0),0);
+      base+=(ts/members.length*3)/SPM;
+    });
+    // Dead weight penalties per player
+    const dwPen={};
+    (state.mileAdj||[]).forEach(a=>{
+      if(a.team!==team||!a.reason.startsWith('DEAD WEIGHT:'))return;
+      const nm=a.reason.replace('DEAD WEIGHT:','').trim().toLowerCase();
+      members.forEach(pid=>{if(nm.includes(pid)||pid.includes(nm))dwPen[pid]=(dwPen[pid]||0)+a.miles;});
+    });
+    // Shared adj (hunt, landmarks, etc)
+    const sharedAdj=(state.mileAdj||[]).filter(a=>a.team===team&&!a.reason.startsWith('DEAD WEIGHT:')).reduce((s,a)=>s+a.miles,0)/members.length;
+    // Team total steps
+    const teamSteps=members.reduce((s,pid)=>s+Object.values(state.players[pid].steps||{}).reduce((a,b)=>a+(b||0),0),0);
+    return members.map(pid=>{
+      const pSteps=Object.values(state.players[pid].steps||{}).reduce((a,b)=>a+(b||0),0);
+      const share=teamSteps?pSteps/teamSteps:0;
+      const stepMi=base*share;
+      const dw=dwPen[pid]||0;
+      const total=stepMi+sharedAdj+dw;
+      return{pid,total,stepMi,sharedAdj,dw,share};
+    }).sort((a,b)=>b.total-a.total);
+  }
+
+  const mudContribs=playerContribs('mud');
+  const dustContribs=playerContribs('dust');
+
+  function contribHtml(contribs,team){
+    const teamTotal=contribs.reduce((s,c)=>s+c.total,0);
+    const maxAbs=Math.max(...contribs.map(c=>Math.abs(c.total)));
+    const tc=team==='mud'?'#ffb000':'#00ccff';
+    return`<div style="background:#0a0f0a;border:1px solid #1a3a1a;border-radius:10px;padding:12px 14px;margin-bottom:10px;">
+      <div style="font-size:11px;font-weight:700;color:${tc};letter-spacing:.06em;margin-bottom:10px;">${team==='mud'?'🐂 MUD & MUSCLE':'🐎 DUST & GLORY'}</div>
+      ${contribs.map(c=>{
+        const pl=PLAYERS.find(p=>p.id===c.pid);
+        const pct=teamTotal?Math.round((c.total/teamTotal)*100):0;
+        const barW=Math.round((Math.abs(c.total)/maxAbs)*100);
+        const isNeg=c.total<0;
+        const barColor=isNeg?'#ff6b6b':tc;
+        const hasDw=c.dw<0;
+        return`<div style="margin-bottom:10px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;">
+            <span style="font-size:13px;font-weight:500;color:${isNeg?'#ff6b6b':'#e0ffe0'};">${pl?.name||c.pid}</span>
+            <span style="font-size:13px;font-weight:700;color:${isNeg?'#ff6b6b':barColor};">${c.total.toFixed(1)} mi &nbsp;<span style="font-size:11px;color:${isNeg?'#ff6b6b':'#4a8a4a'};">(${pct}%)</span></span>
+          </div>
+          <div style="height:6px;background:#0f1f0f;border-radius:3px;overflow:hidden;margin-bottom:3px;">
+            <div style="height:100%;width:${barW}%;background:${barColor};border-radius:3px;"></div>
+          </div>
+          <div style="display:flex;gap:12px;font-size:10px;color:#3a6a3a;">
+            <span>Steps: +${c.stepMi.toFixed(1)} mi</span>
+            <span>Shared bonuses: +${c.sharedAdj.toFixed(1)} mi</span>
+            ${hasDw?`<span style="color:#ff6b6b;">Dead weight: ${c.dw} mi</span>`:''}
+          </div>
+        </div>`;
+      }).join('')}
+      <div style="border-top:1px solid #1a3a1a;padding-top:8px;display:flex;justify-content:space-between;font-size:11px;">
+        <span style="color:#3a6a3a;">Team total</span>
+        <span style="font-weight:700;color:${tc};">${teamTotal.toFixed(1)} mi</span>
+      </div>
+    </div>`;
+  }
+
+  const contribEl=document.getElementById('modContrib');
+  if(contribEl)contribEl.innerHTML=contribHtml(mudContribs,'mud')+contribHtml(dustContribs,'dust');
+
   // Team totals and hunt
   const teamTotals={mud:0,dust:0};
   players.forEach(p=>teamTotals[p.team]+=p.total);
@@ -1178,6 +1252,8 @@ function renderDashboard(){
         }).join('')}
       </div>
 
+      <div class="mod-sec-label">Mile Contribution by Player</div>
+      <div id="modContrib"></div>
       <div class="mod-sec-label">Pioneer Rankings</div>
       ${players.map((p,i)=>{
         const pct=Math.round(((p.dayAvg-groupDayAvg)/groupDayAvg)*100);
