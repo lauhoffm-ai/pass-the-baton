@@ -162,18 +162,6 @@
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
         }
       ]
     },
@@ -186,13 +174,25 @@
           "text": "WAGON STUCK! LIFTED 0/800LBS",
           "miles": 0,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 355,
+      "miles": 358,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
@@ -220,7 +220,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 246,
+      "miles": 231,
       "frozenUntilSteps": 40000,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -231,7 +231,9 @@
       "pioneerEarned": [
         4
       ],
-      "frozenDates": [],
+      "frozenDates": [
+        "2026-06-01"
+      ],
       "pioneerCheckedSunday": "2026-05-31"
     }
   },
@@ -261,9 +263,9 @@
         "2026-05-29": 10134,
         "2026-05-30": 17324,
         "2026-05-31": 11934,
-        "2026-06-01": 13165
+        "2026-06-01": 18094
       },
-      "totalSteps": 170890
+      "totalSteps": 175819
     },
     "jordan": {
       "steps": {
