@@ -242,9 +242,9 @@
       "cycleNum": 5
     },
     "dust": {
-      "cardId": "wagon_mud",
-      "revealed": false,
-      "cycleNum": 4
+      "cardId": "native_trade",
+      "revealed": true,
+      "cycleNum": 5
     }
   },
   "players": {
