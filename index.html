@@ -500,28 +500,35 @@ async function loadBin(){
   if(bak){_stateSha=null;return bak.data;}
   return null;
 }
-let _saving=false; // lock to prevent auto-refresh clobbering SHA during a save
+let _saving=false;
 async function saveBin(s){
   const el=document.getElementById('lastSync');
+  const bkEl=document.getElementById('bkStat');
   _saving=true;
-  try{
-    // Always refetch SHA fresh before writing to avoid stale SHA conflicts
-    const fresh=await ghGet(GH_STATE);
-    if(fresh)_stateSha=fresh.sha;
-    let newSha=await ghPut(GH_STATE,_stateSha,s);
-    if(!newSha){
-      // Second attempt — SHA may have changed between fetch and put
-      const res=await ghGet(GH_STATE);
-      if(res){_stateSha=res.sha;newSha=await ghPut(GH_STATE,_stateSha,s);}
+  // Try up to 5 times with fresh SHA each attempt
+  for(let attempt=1;attempt<=5;attempt++){
+    try{
+      if(el)el.textContent=attempt>1?`RETRY ${attempt}/5...`:'SAVING...';
+      const fresh=await ghGet(GH_STATE);
+      if(!fresh){if(el)el.textContent='CANNOT REACH GITHUB';continue;}
+      _stateSha=fresh.sha;
+      const newSha=await ghPut(GH_STATE,_stateSha,s);
+      if(newSha){
+        _stateSha=newSha;
+        lastSaveTime=Date.now();
+        if(el)el.textContent='SAVED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+        _saving=false;return true;
+      }
+      // PUT failed — wait before retry
+      await new Promise(r=>setTimeout(r,1500));
+    }catch(e){
+      await new Promise(r=>setTimeout(r,1500));
     }
-    if(newSha){
-      _stateSha=newSha;
-      if(el)el.textContent='SAVED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
-      _saving=false;return true;
-    }
-    if(el)el.textContent='SAVE FAILED - TRY AGAIN';
-    _saving=false;return false;
-  }catch(e){if(el)el.textContent='SAVE ERROR!';_saving=false;return false;}
+  }
+  // All attempts failed — show loud error and block refresh
+  if(el){el.textContent='⚠ SAVE FAILED — DO NOT CLOSE TAB';el.style.color='#ff4444';}
+  if(bkEl){bkEl.textContent='BACKUP: FAIL';bkEl.className='berr';}
+  _saving=false;return false;
 }
 function bakTimestamp(){
   const d=new Date();
@@ -550,7 +557,6 @@ async function pruneOldBackups(){
 }
 async function saveAll(s,skipBak=false){
   const ok=await saveBin(s);
-  if(ok)lastSaveTime=Date.now();
   if(!skipBak)backupGH(s).then(b=>{const el=document.getElementById('bkStat');if(el){el.textContent=b?'BACKUP: OK':'BACKUP: FAIL';el.className=b?'bok':'berr';}}).catch(()=>{});
   return ok;
 }
@@ -1589,9 +1595,12 @@ let lastSaveTime=0;
 function startRefresh(){
   if(rtimer)clearInterval(rtimer);
   rtimer=setInterval(async()=>{
-    // Don't refresh if a save is in progress or we saved within last 60 seconds
     if(_saving)return;
-    if(Date.now()-lastSaveTime<60000)return;
+    // Don't refresh for 5 minutes after a successful save
+    if(Date.now()-lastSaveTime<300000)return;
+    const el=document.getElementById('lastSync');
+    // Don't refresh if showing a save error
+    if(el&&el.textContent.includes('SAVE FAILED'))return;
     const f=await loadBin();
     if(f){state=fixState(f);render();}
   },30000);
