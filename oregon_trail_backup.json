@@ -87,7 +87,9 @@
       250,
       350
     ],
-    "dust": []
+    "dust": [
+      250
+    ]
   },
   "history": [
     {
@@ -183,6 +185,12 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "PLATTE RIVER REACHED!",
+          "miles": 20,
+          "cls": "hp"
         }
       ]
     }
@@ -218,7 +226,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 242,
+      "miles": 251,
       "frozenUntilSteps": 40000,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -295,9 +303,10 @@
         "2026-05-29": 19560,
         "2026-05-31": 15070,
         "2026-05-30": 15559,
-        "2026-06-02": 12475
+        "2026-06-02": 12475,
+        "2026-06-01": 17591
       },
-      "totalSteps": 181689
+      "totalSteps": 199280
     },
     "chris": {
       "steps": {
