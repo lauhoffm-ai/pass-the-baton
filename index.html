@@ -484,14 +484,27 @@ async function ghGet(path){
 }
 async function ghPut(path,sha,data,msg){
   try{
-    const content=btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))));
+    // Use TextEncoder + Uint8Array for reliable base64 on large payloads
+    // btoa(unescape(encodeURIComponent())) breaks silently on large state objects
+    const json=JSON.stringify(data,null,2);
+    const bytes=new TextEncoder().encode(json);
+    let binary='';
+    const chunkSize=8192;
+    for(let i=0;i<bytes.length;i+=chunkSize){
+      binary+=String.fromCharCode(...bytes.subarray(i,i+chunkSize));
+    }
+    const content=btoa(binary);
     const body={message:msg||`Save ${ld()}`,content};
     if(sha)body.sha=sha;
     const r=await fetch(`https://api.github.com/repos/${GHR}/contents/${path}`,{method:'PUT',headers:{'Authorization':'token '+GHT,'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},body:JSON.stringify(body)});
-    if(!r.ok)return null;
+    if(!r.ok){
+      const err=await r.json().catch(()=>({}));
+      console.error('ghPut failed:',r.status,err.message||'');
+      return null;
+    }
     const d=await r.json();
     return d.content?.sha||null;
-  }catch(e){return null;}
+  }catch(e){console.error('ghPut error:',e);return null;}
 }
 async function loadBin(){
   const res=await ghGet(GH_STATE);
