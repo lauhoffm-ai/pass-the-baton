@@ -607,6 +607,19 @@ function fixState(s){
     if(s.deadWeight){Object.keys(s.deadWeight).forEach(k=>{s.deadWeight[k]=0;});}
     s.appliedMigrations.push('lauren_dw_may31');
   }
+  // Restore Dust wagon freeze — was incorrectly freed on June 1 (same cycle it was frozen)
+  // Wagon can only be freed in Cycle 5 (June 2+) not Cycle 4
+  if(!s.appliedMigrations.includes('restore_dust_wagon_freeze_v1')){
+    // Remove the premature WAGON PUSHED FREE history event
+    if(s.history){s.history.forEach(h=>{if(h.events){h.events=h.events.filter(e=>!(e.text&&e.text==='WAGON PUSHED FREE!'&&e.team==='dust'));}});}
+    // Restore the freeze — 40,000 combined steps threshold, frozen in Cycle 4
+    if(s.teams&&s.teams.dust){
+      s.teams.dust.frozenUntilSteps=40000;
+      s.teams.dust.frozenSinceCycle=4;
+      s.teams.dust.frozenDates=(s.teams.dust.frozenDates||[]).filter(d=>d<'2026-06-02');
+    }
+    s.appliedMigrations.push('restore_dust_wagon_freeze_v1');
+  }
   // Cycle 1 MVP bonus was already applied under the old system (Jordan +1k/day, Shania +1k/day May21-23)
   // Mark as applied so the new retroactive system doesn't double-apply if Cycle 1 is ever re-processed
   if(!s.appliedMigrations.includes('cycle1_mvp_bonus_already_applied')){
@@ -799,8 +812,13 @@ function checkFrozen(team,date){
   // Only evaluate after ALL team members have submitted for this day
   const allIn=TEAMS[team].members.every(pid=>{const s=state.players[pid].steps[date];return s!==undefined&&s!==null;});
   if(!allIn)return;
+  // Wagon can only be freed on a day AFTER the cycle it was frozen in
+  // frozenSinceCycle tracks which cycle the freeze was set
+  const frozenCycle=state.teams[team].frozenSinceCycle||0;
+  const thisCycle=Math.floor(daysBetween(START,date)/CDAYS)+1;
+  if(thisCycle<=frozenCycle)return; // can't free on same cycle it was frozen
   const tot=TEAMS[team].members.reduce((s,pid)=>s+(state.players[pid].steps[date]||0),0);
-  if(tot>=state.teams[team].frozenUntilSteps){state.teams[team].frozenUntilSteps=0;addHist(team,'WAGON PUSHED FREE!',0,'hp');}
+  if(tot>=state.teams[team].frozenUntilSteps){state.teams[team].frozenUntilSteps=0;state.teams[team].frozenSinceCycle=0;addHist(team,'WAGON PUSHED FREE!',0,'hp');}
   else{if(!state.teams[team].frozenDates)state.teams[team].frozenDates=[];if(!state.teams[team].frozenDates.includes(date))state.teams[team].frozenDates.push(date);}
 }
 
@@ -888,7 +906,11 @@ function closeCycle(cn,force=false){
     }
     if(cd==='wagon_mud'){
       const ls=state.teams[team].liftSubs||{};const tot=m.reduce((s,pid)=>s+(ls[pid]?.weight||0),0);
-      if(tot<TEAMS[team].liftGoal&&!state.teams[team].frozenUntilSteps){state.teams[team].frozenUntilSteps=TEAMS[team].unstick;addHist(team,'WAGON STUCK! LIFTED '+tot+'/'+TEAMS[team].liftGoal+'LBS',0,'hn');}
+      if(tot<TEAMS[team].liftGoal&&!state.teams[team].frozenUntilSteps){
+        state.teams[team].frozenUntilSteps=TEAMS[team].unstick;
+        state.teams[team].frozenSinceCycle=cn; // track which cycle the freeze was set
+        addHist(team,'WAGON STUCK! LIFTED '+tot+'/'+TEAMS[team].liftGoal+'LBS',0,'hn');
+      }
       state.teams[team].liftSubs={};
     }
   });
