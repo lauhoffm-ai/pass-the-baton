@@ -230,6 +230,10 @@
         "chris": {
           "weight": 245,
           "date": "2026-06-01"
+        },
+        "shania": {
+          "weight": 120,
+          "date": "2026-06-01"
         }
       },
       "axleSubs": {},
