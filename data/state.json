@@ -50,6 +50,18 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
+    },
+    {
+      "team": "mud",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-06-02"
+    },
+    {
+      "team": "dust",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-06-02"
     }
   ],
   "deadWeight": {
@@ -138,6 +150,24 @@
           "cls": "hn"
         }
       ]
+    },
+    {
+      "cycle": 5,
+      "dateRange": "JUN 2",
+      "events": [
+        {
+          "team": "mud",
+          "text": "FAIR WEATHER BONUS",
+          "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "FAIR WEATHER BONUS",
+          "miles": 20,
+          "cls": "hp"
+        }
+      ]
     }
   ],
   "teams": {
@@ -193,9 +223,9 @@
       "cycleNum": 5
     },
     "dust": {
-      "cardId": "wagon_mud",
-      "revealed": false,
-      "cycleNum": 4
+      "cardId": "fair_weather",
+      "revealed": true,
+      "cycleNum": 5
     }
   },
   "players": {
