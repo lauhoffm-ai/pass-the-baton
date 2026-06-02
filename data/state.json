@@ -59,7 +59,7 @@
     }
   ],
   "deadWeight": {
-    "lauren": 2,
+    "lauren": 0,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
@@ -159,12 +159,6 @@
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
         }
       ]
     }
@@ -201,7 +195,7 @@
     },
     "dust": {
       "miles": 241,
-      "frozenUntilSteps": 0,
+      "frozenUntilSteps": 40000,
       "rareUsed": [],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
@@ -212,7 +206,8 @@
         4
       ],
       "frozenDates": [],
-      "pioneerCheckedSunday": "2026-05-31"
+      "pioneerCheckedSunday": "2026-05-31",
+      "frozenSinceCycle": 4
     }
   },
   "cards": {
@@ -222,9 +217,9 @@
       "cycleNum": 5
     },
     "dust": {
-      "cardId": "wagon_mud",
-      "revealed": false,
-      "cycleNum": 4
+      "cardId": "dust_storm",
+      "revealed": true,
+      "cycleNum": 5
     }
   },
   "players": {
@@ -351,6 +346,8 @@
     "cycle1_mvp_bonus_already_applied",
     "dedup_hunt_successful_v2",
     "reset_cycle4_cards",
-    "reset_cycle4_cards_v2"
+    "reset_cycle4_cards_v2",
+    "lauren_dw_may31",
+    "restore_dust_wagon_freeze_v1"
   ]
 }
