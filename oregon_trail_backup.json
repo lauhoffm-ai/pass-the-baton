@@ -218,7 +218,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 238,
+      "miles": 240,
       "frozenUntilSteps": 40000,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -340,9 +340,10 @@
         "2026-05-28": 1044,
         "2026-05-31": 1221,
         "2026-05-29": 4652,
-        "2026-05-30": 3142
+        "2026-05-30": 3142,
+        "2026-06-02": 4789
       },
-      "totalSteps": 50202
+      "totalSteps": 54991
     },
     "allen": {
       "steps": {
