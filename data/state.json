@@ -186,6 +186,12 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "WAGON PUSHED FREE!",
+          "miles": 0,
+          "cls": "hp"
         }
       ]
     }
@@ -221,7 +227,7 @@
     },
     "dust": {
       "miles": 231,
-      "frozenUntilSteps": 40000,
+      "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
@@ -314,9 +320,9 @@
         "2026-05-29": 12966,
         "2026-05-30": 4754,
         "2026-05-31": 9988,
-        "2026-06-01": 7200
+        "2026-06-01": 14127
       },
-      "totalSteps": 144534
+      "totalSteps": 151461
     },
     "kaykay": {
       "steps": {
