@@ -176,21 +176,21 @@
       "events": [
         {
           "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
           "text": "PLATTE RIVER REACHED!",
           "miles": 20,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -226,7 +226,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 251,
+      "miles": 258,
       "frozenUntilSteps": 40000,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -320,9 +320,10 @@
         "2026-05-26": 19728,
         "2026-05-29": 12966,
         "2026-05-30": 4754,
-        "2026-05-31": 9988
+        "2026-05-31": 9988,
+        "2026-06-01": 14127
       },
-      "totalSteps": 137334
+      "totalSteps": 151461
     },
     "kaykay": {
       "steps": {
