@@ -686,11 +686,14 @@ function fixState(s){
   // Reset Cycle 4 cards to the correct original cards (dysentery=Mud, wagon_mud=Dust)
   // v2 replaces the generic unrevealed reset with the specific cards
   if(!s.appliedMigrations.includes('reset_cycle4_cards')){s.appliedMigrations.push('reset_cycle4_cards');}
-  if(!s.appliedMigrations.includes('reset_cycle4_cards_v2')){
+  // reset_cycle4_cards_v2 RETIRED — Cycle 4 is closed, do not overwrite Cycle 5 cards
+  if(!s.appliedMigrations.includes('reset_cycle4_cards_v2')){s.appliedMigrations.push('reset_cycle4_cards_v2');}
+  // Restore correct Cycle 5 cards: Dust Storm (Mud), Native Trade (Dust)
+  if(!s.appliedMigrations.includes('restore_cycle5_cards_v1')){
     if(!s.cards)s.cards={};
-    s.cards.mud={cardId:'dysentery',revealed:true,cycleNum:4};
-    s.cards.dust={cardId:'wagon_mud',revealed:true,cycleNum:4};
-    s.appliedMigrations.push('reset_cycle4_cards_v2');
+    s.cards.mud={cardId:'dust_storm',revealed:true,cycleNum:5};
+    s.cards.dust={cardId:'native_trade',revealed:true,cycleNum:5};
+    s.appliedMigrations.push('restore_cycle5_cards_v1');
   }
   return s;
 }
