@@ -1317,6 +1317,7 @@ function renderDashboard(){
           <div class="mod-pl-rank">${rankIcon}</div>
           <div>
             <div class="mod-pl-name" style="color:${nameColor};">${p.name}</div>
+            <div style="font-size:10px;color:#3a6a3a;margin-bottom:3px;">${p.dayAvg.toLocaleString()} steps/day avg</div>
             <div class="mod-pl-bar-wrap"><div class="mod-pl-bar" style="width:${barW}%;background:${barColor};"></div></div>
             ${isDW?`<div class="mod-warn">⚠ Dead weight risk — ${dwStreak[p.id]}-day streak</div>`:''}
             ${hasPen?`<div class="mod-pen">☠ Dead weight penalty</div>`:''}
