@@ -6,8 +6,7 @@
   "closedCycles": [
     1,
     2,
-    3,
-    4
+    3
   ],
   "mileAdj": [
     {
@@ -47,22 +46,10 @@
       "date": "2026-05-29"
     },
     {
-      "team": "mud",
-      "miles": 15,
-      "reason": "HUNT SUCCESSFUL",
-      "date": "2026-05-30"
-    },
-    {
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-30"
     }
   ],
   "deadWeight": {
@@ -71,22 +58,17 @@
     "jordan": 0,
     "shania": 0,
     "chris": 0,
-    "kaykay": 1,
+    "kaykay": 0,
     "allen": 0
   },
-  "dysentery": {
-    "dustPlayer": "chris",
-    "affectedDate": "2026-06-02",
-    "revealDate": "2026-06-03"
-  },
+  "dysentery": {},
   "mvpVotes": {
     "mud": {},
     "dust": {}
   },
   "landmarksHit": {
     "mud": [
-      250,
-      350
+      250
     ],
     "dust": []
   },
@@ -154,42 +136,18 @@
           "text": "RIVER CROSSING MISSED",
           "miles": -15,
           "cls": "hn"
-        },
-        {
-          "team": "mud",
-          "text": "CHIMNEY ROCK REACHED!",
-          "miles": 25,
-          "cls": "hp"
-        },
-        {
-          "team": "mud",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 355,
+      "miles": 236,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud"
       ],
-      "huntClaimedCycle": 4,
+      "huntClaimedCycle": 3,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
@@ -212,11 +170,9 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 246,
+      "miles": 201,
       "frozenUntilSteps": 40000,
-      "rareUsed": [
-        "dysentery"
-      ],
+      "rareUsed": [],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
@@ -232,14 +188,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "hunting_party",
+      "cardId": "broken_axle",
       "revealed": true,
       "cycleNum": 5
     },
     "dust": {
-      "cardId": "dysentery",
-      "revealed": true,
-      "cycleNum": 5
+      "cardId": "wagon_mud",
+      "revealed": false,
+      "cycleNum": 4
     }
   },
   "players": {
@@ -253,12 +209,9 @@
         "2026-05-27": 15832,
         "2026-05-26": 11966,
         "2026-05-28": 16351,
-        "2026-05-29": 10134,
-        "2026-05-30": 17324,
-        "2026-05-31": 11934,
-        "2026-06-01": 13165
+        "2026-05-29": 0
       },
-      "totalSteps": 170890
+      "totalSteps": 118333
     },
     "jordan": {
       "steps": {
@@ -270,12 +223,9 @@
         "2026-05-26": 12027,
         "2026-05-27": 16991,
         "2026-05-28": 14543,
-        "2026-05-29": 5473,
-        "2026-05-30": 13713,
-        "2026-05-31": 11314,
-        "2026-06-01": 5670
+        "2026-05-29": 0
       },
-      "totalSteps": 136820
+      "totalSteps": 100650
     },
     "shania": {
       "steps": {
@@ -287,12 +237,10 @@
         "2026-05-26": 29331,
         "2026-05-27": 22147,
         "2026-05-28": 20897,
-        "2026-05-29": 19560,
-        "2026-05-31": 15070,
-        "2026-05-30": 15559,
-        "2026-06-01": 8377
+        "2026-05-29": 0,
+        "2026-05-31": 15070
       },
-      "totalSteps": 177591
+      "totalSteps": 134095
     },
     "chris": {
       "steps": {
@@ -304,12 +252,9 @@
         "2026-05-27": 17226,
         "2026-05-28": 5002,
         "2026-05-26": 19728,
-        "2026-05-29": 12966,
-        "2026-05-30": 4754,
-        "2026-05-31": 9988,
-        "2026-06-01": 7200
+        "2026-05-29": 0
       },
-      "totalSteps": 144534
+      "totalSteps": 109626
     },
     "kaykay": {
       "steps": {
@@ -321,12 +266,9 @@
         "2026-05-26": 9299,
         "2026-05-27": 11727,
         "2026-05-28": 10079,
-        "2026-05-29": 10113,
-        "2026-05-30": 15060,
-        "2026-05-31": 10373,
-        "2026-06-01": 1665
+        "2026-05-29": 0
       },
-      "totalSteps": 126965
+      "totalSteps": 89754
     },
     "lauren": {
       "steps": {
@@ -339,11 +281,9 @@
         "2026-05-27": 13708,
         "2026-05-28": 1044,
         "2026-05-31": 1221,
-        "2026-05-29": 4652,
-        "2026-05-30": 3142,
-        "2026-06-01": 3627
+        "2026-05-29": 0
       },
-      "totalSteps": 53829
+      "totalSteps": 42408
     },
     "allen": {
       "steps": {
@@ -355,12 +295,10 @@
         "2026-05-26": 9700,
         "2026-05-27": 16402,
         "2026-05-28": 6324,
-        "2026-05-29": 5640,
-        "2026-05-31": 4956,
-        "2026-05-30": 4443,
-        "2026-06-01": 9850
+        "2026-05-29": 0,
+        "2026-05-31": 4956
       },
-      "totalSteps": 96073
+      "totalSteps": 76140
     }
   },
   "appliedMigrations": [
@@ -371,10 +309,10 @@
     "remove_bad_pioneer_v1",
     "dedup_hunt_successful_v1",
     "cycle1_mvp_bonus_already_applied",
+    "lauren_dw_may31",
+    "restore_dust_wagon_freeze_v1",
     "dedup_hunt_successful_v2",
     "reset_cycle4_cards",
-    "reset_cycle4_cards_v2",
-    "lauren_dw_may31",
-    "restore_dust_wagon_freeze_v1"
+    "reset_cycle4_cards_v2"
   ]
 }
