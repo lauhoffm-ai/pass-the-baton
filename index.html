@@ -688,6 +688,13 @@ function fixState(s){
   if(!s.appliedMigrations.includes('reset_cycle4_cards')){s.appliedMigrations.push('reset_cycle4_cards');}
   // reset_cycle4_cards_v2 RETIRED — Cycle 4 is closed, do not overwrite Cycle 5 cards
   if(!s.appliedMigrations.includes('reset_cycle4_cards_v2')){s.appliedMigrations.push('reset_cycle4_cards_v2');}
+  // Ensure Lauren's May 30 dead weight penalty is in mileAdj
+  // updateDW rebuilds it on step entry but may be missing after restores
+  if(!s.appliedMigrations.includes('ensure_lauren_dw_may30')){
+    const hasMay30=s.mileAdj&&s.mileAdj.some(a=>a.reason==='DEAD WEIGHT: LAUREN'&&a.date==='2026-05-30');
+    if(!hasMay30){s.mileAdj=s.mileAdj||[];s.mileAdj.push({team:'dust',miles:-10,reason:'DEAD WEIGHT: LAUREN',date:'2026-05-30'});}
+    s.appliedMigrations.push('ensure_lauren_dw_may30');
+  }
   // Restore correct Cycle 5 cards: Dust Storm (Mud), Native Trade (Dust)
   if(!s.appliedMigrations.includes('restore_cycle5_cards_v1')){
     if(!s.cards)s.cards={};
