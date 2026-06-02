@@ -1113,9 +1113,10 @@ function renderDashboard(){
   function playerContribs(team){
     const members=TEAMS[team].members;
     const frozen=state.teams[team].frozenDates||[];
-    // Base raw miles per day
+    // Use ALL dates with any step data (not DW-filtered complete-days-only list)
+    const allStepDates=[...new Set(PLAYERS.flatMap(p=>Object.keys(state.players[p.id].steps||{})))].sort();
     let base=0;
-    allDates.forEach(d=>{
+    allStepDates.forEach(d=>{
       if(frozen.includes(d))return;
       const ts=members.reduce((s,pid)=>s+(state.players[pid].steps[d]||0),0);
       base+=(ts/members.length*3)/SPM;
@@ -1179,8 +1180,7 @@ function renderDashboard(){
     </div>`;
   }
 
-  const contribEl=document.getElementById('modContrib');
-  if(contribEl)contribEl.innerHTML=contribHtml(mudContribs,'mud')+contribHtml(dustContribs,'dust');
+
 
   // Team totals and hunt
   const teamTotals={mud:0,dust:0};
@@ -1248,12 +1248,32 @@ function renderDashboard(){
             <div class="mod-team-sub">total steps</div>
             ${adjs.map(a=>`<div class="mod-adj"><span style="color:#5a8a5a;font-size:10px;">${a.reason}</span><span style="color:${a.miles>0?'#4aff88':'#ff6b6b'};font-weight:700;">${a.miles>0?'+':''}${a.miles} mi</span></div>`).join('')}
             ${teamHunt[t]?`<span class="mod-badge mod-badge-hunt">⚡ Hunt Successful</span>`:''}
+          <div style="margin-top:12px;border-top:1px solid #1a3a1a;padding-top:10px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:.06em;color:#3a6a3a;margin-bottom:8px;">MILE CONTRIBUTION</div>
+            ${(t==='mud'?mudContribs:dustContribs).map(c=>{
+              const pl=PLAYERS.find(p=>p.id===c.pid);
+              const teamTot=(t==='mud'?mudContribs:dustContribs).reduce((s,x)=>s+x.total,0);
+              const pct=teamTot?Math.round((c.total/teamTot)*100):0;
+              const isNeg=c.total<0;
+              const maxAbs=Math.max(...(t==='mud'?mudContribs:dustContribs).map(x=>Math.abs(x.total)));
+              const barW=Math.round((Math.abs(c.total)/maxAbs)*100);
+              const tc2=t==='mud'?'#ffb000':'#00ccff';
+              return`<div style="margin-bottom:8px;">
+                <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px;">
+                  <span style="font-size:12px;color:${isNeg?'#ff6b6b':'#c0ddc0'};">${pl?.name||c.pid}</span>
+                  <span style="font-size:12px;font-weight:600;color:${isNeg?'#ff6b6b':tc2};">${c.total.toFixed(1)} mi <span style="font-size:10px;color:${isNeg?'#ff6b6b':'#3a6a3a'};">(${pct}%)</span></span>
+                </div>
+                <div style="height:5px;background:#0f1f0f;border-radius:3px;overflow:hidden;margin-bottom:2px;">
+                  <div style="height:100%;width:${barW}%;background:${isNeg?'#ff6b6b':tc2};border-radius:3px;"></div>
+                </div>
+                ${c.dw<0?`<div style="font-size:10px;color:#ff6b6b;">☠ ${c.dw} mi dead weight</div>`:''}
+              </div>`;
+            }).join('')}
+          </div>
           </div>`;
         }).join('')}
       </div>
 
-      <div class="mod-sec-label">Mile Contribution by Player</div>
-      <div id="modContrib"></div>
       <div class="mod-sec-label">Pioneer Rankings</div>
       ${players.map((p,i)=>{
         const pct=Math.round(((p.dayAvg-groupDayAvg)/groupDayAvg)*100);
