@@ -6,7 +6,8 @@
   "closedCycles": [
     1,
     2,
-    3
+    3,
+    4
   ],
   "mileAdj": [
     {
@@ -175,6 +176,18 @@
           "cls": "hn"
         }
       ]
+    },
+    {
+      "cycle": 5,
+      "dateRange": "JUN 2",
+      "events": [
+        {
+          "team": "dust",
+          "text": "WAGON STUCK! LIFTED 0/800LBS",
+          "miles": 0,
+          "cls": "hn"
+        }
+      ]
     }
   ],
   "teams": {
@@ -208,7 +221,7 @@
     },
     "dust": {
       "miles": 246,
-      "frozenUntilSteps": 0,
+      "frozenUntilSteps": 40000,
       "rareUsed": [],
       "huntClaimedCycle": 0,
       "mvpThisCycle": null,
@@ -224,13 +237,13 @@
   },
   "cards": {
     "mud": {
-      "cardId": "dysentery",
+      "cardId": "dust_storm",
       "revealed": true,
-      "cycleNum": 4
+      "cycleNum": 5
     },
     "dust": {
       "cardId": "wagon_mud",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 4
     }
   },
