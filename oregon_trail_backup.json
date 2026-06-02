@@ -189,7 +189,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 346,
+      "miles": 358,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -260,9 +260,10 @@
         "2026-05-29": 10134,
         "2026-05-30": 17324,
         "2026-05-31": 11934,
-        "2026-06-02": 8092
+        "2026-06-02": 8092,
+        "2026-06-01": 18094
       },
-      "totalSteps": 165817
+      "totalSteps": 183911
     },
     "jordan": {
       "steps": {
@@ -381,5 +382,6 @@
     "restore_dust_wagon_freeze_v1",
     "restore_cycle5_cards_v1",
     "ensure_lauren_dw_may30"
-  ]
+  ],
+  "_pingTest": true
 }
