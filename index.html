@@ -272,15 +272,10 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:
     <div class="pg" id="dustPg"></div>
   </div>
 
-  <!-- HISTORY -->
+  <!-- DASHBOARD -->
   <div class="sec">
     <div class="sec-ttl">> TRAIL LOG & TOTALS</div>
-    <div style="margin-bottom:12px;">
-      <div style="font-family:var(--px);font-size:5px;color:#00cc33;margin-bottom:5px;">CUMULATIVE STEPS</div>
-      <table class="tt"><thead><tr><th>PIONEER</th><th>WAGON</th><th>TOTAL STEPS</th></tr></thead><tbody id="totBod"></tbody></table>
-    </div>
-    <div style="font-family:var(--px);font-size:5px;color:#00cc33;margin-bottom:5px;">LAST 3 CYCLES</div>
-    <div id="histLog"><div style="font-size:15px;color:#00cc33;text-align:center;padding:14px;">NO HISTORY YET</div></div>
+    <div id="trailDash"></div>
   </div>
 
   <div class="stbar">AUTO-REFRESH: 30S | <span id="lastSync">SYNCING...</span> | <span id="bkStat" class="bok">BACKUP: OK</span></div>
@@ -801,6 +796,9 @@ function checkPioneer(){
 
 function checkFrozen(team,date){
   if(!state.teams[team].frozenUntilSteps)return;
+  // Only evaluate after ALL team members have submitted for this day
+  const allIn=TEAMS[team].members.every(pid=>{const s=state.players[pid].steps[date];return s!==undefined&&s!==null;});
+  if(!allIn)return;
   const tot=TEAMS[team].members.reduce((s,pid)=>s+(state.players[pid].steps[date]||0),0);
   if(tot>=state.teams[team].frozenUntilSteps){state.teams[team].frozenUntilSteps=0;addHist(team,'WAGON PUSHED FREE!',0,'hp');}
   else{if(!state.teams[team].frozenDates)state.teams[team].frozenDates=[];if(!state.teams[team].frozenDates.includes(date))state.teams[team].frozenDates.push(date);}
@@ -1060,16 +1058,135 @@ function renderCards(ci){
   document.getElementById('mvpOff').style.display=(mudTP||dustTP)?'none':'block';
 }
 
-function renderHistory(){
-  const el=document.getElementById('histLog');
-  if(!state.history?.length){el.innerHTML='<div style="font-size:15px;color:#00cc33;text-align:center;padding:14px;">NO HISTORY YET</div>';return;}
-  el.innerHTML=[...state.history].slice(-3).reverse().map(h=>`<div class="he"><div class="hc">> CYCLE ${h.cycle} - ${h.dateRange||''} ${(state.closedCycles||[]).includes(h.cycle)?'[CLOSED]':'[OPEN]'}</div>${(h.events||[]).map(ev=>`<div class="hr"><span class="${ev.cls||'hu'}">${ev.team?ev.team.toUpperCase()+': ':''}${ev.text}</span><span class="${ev.miles>0?'hp':ev.miles<0?'hn':'hu'}">${ev.miles?((ev.miles>0?'+':'')+ev.miles+' mi'):''}</span></div>`).join('')}</div>`).join('');
-}
+function renderDashboard(){
+  const el=document.getElementById('trailDash');
+  if(!el)return;
 
-function renderTotals(){
-  const rows=PLAYERS.map(p=>({...p,team:teamOf(p.id),tot:Object.values(state.players[p.id].steps).reduce((a,b)=>a+(b||0),0)})).sort((a,b)=>b.tot-a.tot);
-  document.getElementById('totBod').innerHTML=rows.map((p,i)=>`<tr><td class="${i===0?'r1':i===1?'r2':'rx'}">${i===0?'&#127945; ':i===1?'&#129352; ':''}${p.name}</td><td style="font-size:13px;">${p.team==='mud'?'&#128002;':'&#128014;'}</td><td class="${i===0?'r1':i===1?'r2':'rx'}">${p.tot.toLocaleString()}</td></tr>`).join('');
+  const players=PLAYERS.map(p=>{
+    const steps=state.players[p.id].steps||{};
+    const vals=Object.values(steps).filter(v=>v!=null&&v>0);
+    const total=vals.reduce((a,b)=>a+b,0);
+    const dayAvg=vals.length?Math.round(total/vals.length):0;
+    return{...p,team:teamOf(p.id),total,dayAvg,steps};
+  }).sort((a,b)=>b.total-a.total);
+
+  const groupDayAvg=Math.round(players.reduce((a,p)=>a+p.dayAvg,0)/players.length);
+  const maxTotal=players[0]?.total||1;
+
+  // Dead weight streaks
+  const allDates=[...new Set(PLAYERS.flatMap(p=>Object.keys(state.players[p.id].steps||{})))].filter(d=>PLAYERS.every(p=>{const s=state.players[p.id].steps[d];return s!==undefined&&s!==null;})).sort();
+  const dwStreak={};PLAYERS.forEach(p=>dwStreak[p.id]=0);
+  const dwPenalty=new Set();
+  allDates.forEach(d=>{
+    const minS=Math.min(...PLAYERS.map(p=>state.players[p.id].steps[d]||0));
+    PLAYERS.forEach(p=>{
+      const s=state.players[p.id].steps[d]||0;
+      if(s===minS){dwStreak[p.id]=(dwStreak[p.id]||0)+1;if(dwStreak[p.id]%3===0)dwPenalty.add(p.id);}
+      else dwStreak[p.id]=0;
+    });
+  });
+
+  // Team totals and hunt
+  const teamTotals={mud:0,dust:0};
+  players.forEach(p=>teamTotals[p.team]+=p.total);
+  const allD=[...new Set(PLAYERS.flatMap(p=>Object.keys(state.players[p.id].steps||{})))];
+  const teamHunt={mud:false,dust:false};
+  ['mud','dust'].forEach(t=>{teamHunt[t]=allD.some(d=>TEAMS[t].members.every(pid=>(state.players[pid].steps[d]||0)>=10000));});
+  const mudAdj=(state.mileAdj||[]).filter(a=>a.team==='mud');
+  const dustAdj=(state.mileAdj||[]).filter(a=>a.team==='dust');
+
+  // Cycle history
+  const histHtml=state.history?.length?[...state.history].slice(-3).reverse().map(h=>`
+    <div style="background:#0a0f0a;border:1px solid #1a3a1a;border-radius:10px;padding:12px 14px;margin-bottom:10px;">
+      <div style="font-size:11px;font-weight:600;color:#4a9a4a;letter-spacing:.06em;margin-bottom:8px;">
+        CYCLE ${h.cycle} &nbsp;·&nbsp; ${h.dateRange||''} &nbsp;·&nbsp;
+        <span style="color:${(state.closedCycles||[]).includes(h.cycle)?'#ff6b6b':'#4aff4a'};">${(state.closedCycles||[]).includes(h.cycle)?'CLOSED':'OPEN'}</span>
+      </div>
+      ${(h.events||[]).length?h.events.map(ev=>`
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #0f2a0f;">
+          <span style="font-size:12px;color:${ev.cls==='hp'?'#ffd166':ev.cls==='hn'?'#ff6b6b':'#7acc7a'};">
+            ${ev.team?`<span style="font-size:10px;font-weight:700;letter-spacing:.05em;padding:1px 6px;border-radius:3px;margin-right:6px;background:${ev.team==='mud'?'#2a1800':'#001a2a'};color:${ev.team==='mud'?'#ffb000':'#00ccff'};">${ev.team.toUpperCase()}</span>`:''}
+            ${ev.text}
+          </span>
+          ${ev.miles?`<span style="font-size:13px;font-weight:700;color:${ev.miles>0?'#4aff88':'#ff6b6b'};">${ev.miles>0?'+':''}${ev.miles} mi</span>`:''}
+        </div>`).join(''):'<div style="font-size:12px;color:#3a5a3a;padding:4px 0;">No events this cycle</div>'}
+    </div>`).join(''):'<div style="font-size:13px;color:#3a5a3a;text-align:center;padding:14px;">No history yet</div>';
+
+  el.innerHTML=`
+    <style>
+      .mod-dash { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #e0ffe0; }
+      .mod-sec-label { font-size: 10px; font-weight: 700; letter-spacing: .1em; color: #3a7a3a; margin: 18px 0 8px; text-transform: uppercase; }
+      .mod-team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 4px; }
+      .mod-team { border-radius: 12px; padding: 14px 16px; }
+      .mod-team.mud { background: linear-gradient(135deg,#120800,#0a0500); border: 1px solid #5a3a00; }
+      .mod-team.dust { background: linear-gradient(135deg,#00080f,#000510); border: 1px solid #004a6a; }
+      .mod-team-label { font-size: 10px; font-weight: 700; letter-spacing: .08em; margin-bottom: 6px; }
+      .mod-team.mud .mod-team-label { color: #ffb000; }
+      .mod-team.dust .mod-team-label { color: #00ccff; }
+      .mod-team-steps { font-size: 26px; font-weight: 300; line-height: 1; margin-bottom: 2px; }
+      .mod-team.mud .mod-team-steps { color: #ffb000; }
+      .mod-team.dust .mod-team-steps { color: #00ccff; }
+      .mod-team-sub { font-size: 10px; color: #3a5a3a; margin-bottom: 10px; }
+      .mod-adj { font-size: 11px; padding: 3px 0; display: flex; justify-content: space-between; border-bottom: 1px solid #0f200f; }
+      .mod-badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 20px; margin-top: 6px; }
+      .mod-badge-hunt { background: #0a2a00; color: #4aff4a; border: 1px solid #1a5a00; }
+      .mod-pl { display: grid; grid-template-columns: 28px 1fr 90px 54px; gap: 8px; align-items: center; padding: 8px 0; border-bottom: 1px solid #0a1a0a; }
+      .mod-pl-rank { font-size: 16px; text-align: center; }
+      .mod-pl-name { font-size: 13px; font-weight: 500; }
+      .mod-pl-bar-wrap { height: 4px; background: #0a1a0a; border-radius: 2px; margin-top: 4px; overflow: hidden; }
+      .mod-pl-bar { height: 100%; border-radius: 2px; }
+      .mod-pl-steps { font-size: 13px; font-weight: 600; text-align: right; }
+      .mod-pl-diff { font-size: 11px; font-weight: 600; text-align: right; }
+      .mod-warn { font-size: 10px; color: #ff6b6b; margin-top: 3px; }
+      .mod-pen { font-size: 10px; color: #ff8800; margin-top: 3px; }
+      .mod-avg-note { font-size: 10px; color: #2a4a2a; text-align: right; margin-top: 6px; }
+    </style>
+    <div class="mod-dash">
+      <div class="mod-sec-label">Team Comparison</div>
+      <div class="mod-team-grid">
+        ${['mud','dust'].map(t=>{
+          const adjs=(t==='mud'?mudAdj:dustAdj);
+          return`<div class="mod-team ${t}">
+            <div class="mod-team-label">${t==='mud'?'🐂 MUD & MUSCLE':'🐎 DUST & GLORY'}</div>
+            <div class="mod-team-steps">${teamTotals[t].toLocaleString()}</div>
+            <div class="mod-team-sub">total steps</div>
+            ${adjs.map(a=>`<div class="mod-adj"><span style="color:#5a8a5a;font-size:10px;">${a.reason}</span><span style="color:${a.miles>0?'#4aff88':'#ff6b6b'};font-weight:700;">${a.miles>0?'+':''}${a.miles} mi</span></div>`).join('')}
+            ${teamHunt[t]?`<span class="mod-badge mod-badge-hunt">⚡ Hunt Successful</span>`:''}
+          </div>`;
+        }).join('')}
+      </div>
+
+      <div class="mod-sec-label">Pioneer Rankings</div>
+      ${players.map((p,i)=>{
+        const pct=Math.round(((p.dayAvg-groupDayAvg)/groupDayAvg)*100);
+        const above=pct>=0;
+        const barW=Math.round((p.total/maxTotal)*100);
+        const barColor=p.team==='mud'?'#ffb000':'#00ccff';
+        const nameColor=p.team==='mud'?'#ffcc66':'#66ddff';
+        const rankIcon=i===0?'🥇':i===1?'🥈':i===2?'🥉':`<span style="font-size:13px;color:#3a6a3a;">${i+1}</span>`;
+        const isDW=dwStreak[p.id]>=2&&!dwPenalty.has(p.id);
+        const hasPen=dwPenalty.has(p.id);
+        return`<div class="mod-pl">
+          <div class="mod-pl-rank">${rankIcon}</div>
+          <div>
+            <div class="mod-pl-name" style="color:${nameColor};">${p.name}</div>
+            <div class="mod-pl-bar-wrap"><div class="mod-pl-bar" style="width:${barW}%;background:${barColor};"></div></div>
+            ${isDW?`<div class="mod-warn">⚠ Dead weight risk — ${dwStreak[p.id]}-day streak</div>`:''}
+            ${hasPen?`<div class="mod-pen">☠ Dead weight penalty</div>`:''}
+          </div>
+          <div class="mod-pl-steps" style="color:${nameColor};">${p.total.toLocaleString()}</div>
+          <div class="mod-pl-diff" style="color:${above?'#4aff88':'#ff6b6b'};">${above?'▲':'▼'}${Math.abs(pct)}%</div>
+        </div>`;
+      }).join('')}
+      <div class="mod-avg-note">% vs group daily avg · ${groupDayAvg.toLocaleString()} steps/day</div>
+
+      <div class="mod-sec-label">Cycle History</div>
+      ${histHtml}
+    </div>
+  `;
 }
+function renderHistory(){renderDashboard();}
+function renderTotals(){}
 
 function renderCycleWarn(ci){
   const warn=document.getElementById('cycleWarn');
@@ -1152,7 +1269,7 @@ function render(){
   renderCards(ci);
   renderPlayers(ci);
   renderHistory();
-  renderTotals();
+  renderDashboard();
   document.getElementById('lastSync').textContent='SYNCED '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
 }
 
