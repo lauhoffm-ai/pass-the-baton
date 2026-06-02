@@ -56,10 +56,16 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-30"
     }
   ],
   "deadWeight": {
-    "lauren": 0,
+    "lauren": 1,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
@@ -161,6 +167,24 @@
           "cls": "hp"
         }
       ]
+    },
+    {
+      "cycle": 5,
+      "dateRange": "JUN 2",
+      "events": [
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        }
+      ]
     }
   ],
   "teams": {
@@ -194,7 +218,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 241,
+      "miles": 238,
       "frozenUntilSteps": 40000,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -212,12 +236,12 @@
   },
   "cards": {
     "mud": {
-      "cardId": "dysentery",
+      "cardId": "dust_storm",
       "revealed": true,
       "cycleNum": 5
     },
     "dust": {
-      "cardId": "dust_storm",
+      "cardId": "native_trade",
       "revealed": true,
       "cycleNum": 5
     }
@@ -267,9 +291,10 @@
         "2026-05-28": 20897,
         "2026-05-29": 19560,
         "2026-05-31": 15070,
-        "2026-05-30": 15559
+        "2026-05-30": 15559,
+        "2026-06-02": 12475
       },
-      "totalSteps": 169214
+      "totalSteps": 181689
     },
     "chris": {
       "steps": {
@@ -348,6 +373,7 @@
     "reset_cycle4_cards",
     "reset_cycle4_cards_v2",
     "lauren_dw_may31",
-    "restore_dust_wagon_freeze_v1"
+    "restore_dust_wagon_freeze_v1",
+    "restore_cycle5_cards_v1"
   ]
 }
