@@ -6,7 +6,8 @@
   "closedCycles": [
     1,
     2,
-    3
+    3,
+    4
   ],
   "mileAdj": [
     {
@@ -65,7 +66,7 @@
     }
   ],
   "deadWeight": {
-    "lauren": 1,
+    "lauren": 2,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
@@ -226,7 +227,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 284,
+      "miles": 287,
       "frozenUntilSteps": 40000,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -357,9 +358,10 @@
         "2026-05-31": 1221,
         "2026-05-29": 4652,
         "2026-05-30": 3142,
-        "2026-06-02": 4789
+        "2026-06-02": 4789,
+        "2026-06-01": 5013
       },
-      "totalSteps": 54991
+      "totalSteps": 60004
     },
     "allen": {
       "steps": {
