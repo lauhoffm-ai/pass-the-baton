@@ -708,6 +708,36 @@ function fixState(s){
     if(!hasMay30){s.mileAdj=s.mileAdj||[];s.mileAdj.push({team:'dust',miles:-10,reason:'DEAD WEIGHT: LAUREN',date:'2026-05-30'});}
     s.appliedMigrations.push('ensure_lauren_dw_may30');
   }
+  // Remove June 2 from Dust frozenDates — wagon was freed that day but date wasn't cleared
+  if(!s.appliedMigrations.includes('fix_dust_frozen_dates_v1')){
+    if(s.teams&&s.teams.dust){
+      s.teams.dust.frozenDates=(s.teams.dust.frozenDates||[]).filter(d=>d!=='2026-06-02');
+    }
+    s.appliedMigrations.push('fix_dust_frozen_dates_v1');
+  }
+  // Clean up ghost events from bad card migration in Cycle 5
+  if(!s.appliedMigrations.includes('cleanup_cycle5_ghosts_v1')){
+    // Clear dysentery state — was set by ghost Dysentery card, not a real draw
+    if(s.dysentery&&s.dysentery.mudPlayer==='michael'&&s.dysentery.affectedDate==='2026-06-02'){
+      s.dysentery={};
+    }
+    // Remove ghost history events from Cycle 5 (wagon free, dead weight duplicates)
+    if(s.history){s.history.forEach(h=>{
+      if(h.cycle===5){
+        h.events=(h.events||[]).filter(e=>{
+          if(e.text==='WAGON PUSHED FREE!'&&e.team==='dust')return false;
+          if(e.text&&e.text.includes('DEAD WEIGHT')&&e.team==='dust')return false;
+          return true;
+        });
+      }
+    });}
+    // Restore wagon freeze — it was prematurely freed
+    if(s.teams&&s.teams.dust){
+      s.teams.dust.frozenUntilSteps=40000;
+      s.teams.dust.frozenSinceCycle=4;
+    }
+    s.appliedMigrations.push('cleanup_cycle5_ghosts_v1');
+  }
   // Restore correct Cycle 5 cards: Dust Storm (Mud), Native Trade (Dust)
   if(!s.appliedMigrations.includes('restore_cycle5_cards_v1')){
     if(!s.cards)s.cards={};
@@ -847,7 +877,7 @@ function checkFrozen(team,date){
   const thisCycle=Math.floor(daysBetween(START,date)/CDAYS)+1;
   if(thisCycle<=frozenCycle)return; // can't free on same cycle it was frozen
   const tot=TEAMS[team].members.reduce((s,pid)=>s+(state.players[pid].steps[date]||0),0);
-  if(tot>=state.teams[team].frozenUntilSteps){state.teams[team].frozenUntilSteps=0;state.teams[team].frozenSinceCycle=0;addHist(team,'WAGON PUSHED FREE!',0,'hp');}
+  if(tot>=state.teams[team].frozenUntilSteps){state.teams[team].frozenUntilSteps=0;state.teams[team].frozenSinceCycle=0;state.teams[team].frozenDates=(state.teams[team].frozenDates||[]).filter(d=>d!==date);addHist(team,'WAGON PUSHED FREE!',0,'hp');}
   else{if(!state.teams[team].frozenDates)state.teams[team].frozenDates=[];if(!state.teams[team].frozenDates.includes(date))state.teams[team].frozenDates.push(date);}
 }
 
