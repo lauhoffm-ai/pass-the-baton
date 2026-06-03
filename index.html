@@ -708,6 +708,15 @@ function fixState(s){
     if(!hasMay30){s.mileAdj=s.mileAdj||[];s.mileAdj.push({team:'dust',miles:-10,reason:'DEAD WEIGHT: LAUREN',date:'2026-05-30'});}
     s.appliedMigrations.push('ensure_lauren_dw_may30');
   }
+  // Fully clear Dust wagon freeze — wagon was legitimately freed June 2 (60,930 steps > 40,000)
+  if(!s.appliedMigrations.includes('clear_dust_wagon_freeze_v1')){
+    if(s.teams&&s.teams.dust){
+      s.teams.dust.frozenUntilSteps=0;
+      s.teams.dust.frozenSinceCycle=0;
+      s.teams.dust.frozenDates=[];
+    }
+    s.appliedMigrations.push('clear_dust_wagon_freeze_v1');
+  }
   // Remove June 2 from Dust frozenDates — wagon was freed that day but date wasn't cleared
   if(!s.appliedMigrations.includes('fix_dust_frozen_dates_v1')){
     if(s.teams&&s.teams.dust){
@@ -731,11 +740,7 @@ function fixState(s){
         });
       }
     });}
-    // Restore wagon freeze — it was prematurely freed
-    if(s.teams&&s.teams.dust){
-      s.teams.dust.frozenUntilSteps=40000;
-      s.teams.dust.frozenSinceCycle=4;
-    }
+    // Do NOT restore wagon freeze here — wagon was legitimately freed on June 2 (60k steps)
     s.appliedMigrations.push('cleanup_cycle5_ghosts_v1');
   }
   // Restore correct Cycle 5 cards: Dust Storm (Mud), Native Trade (Dust)
