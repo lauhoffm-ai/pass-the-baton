@@ -68,11 +68,11 @@
   "deadWeight": {
     "lauren": 0,
     "michael": 0,
-    "jordan": 1,
+    "jordan": 0,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "allen": 0
+    "allen": 1
   },
   "dysentery": {
     "mudPlayer": "michael",
@@ -295,10 +295,10 @@
         "2026-05-29": 5473,
         "2026-05-30": 13713,
         "2026-05-31": 11314,
-        "2026-06-02": 7504,
+        "2026-06-02": 7960,
         "2026-06-01": 10683
       },
-      "totalSteps": 149337
+      "totalSteps": 149793
     },
     "shania": {
       "steps": {
