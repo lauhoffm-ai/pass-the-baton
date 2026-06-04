@@ -53,6 +53,12 @@
       "date": "2026-05-30"
     },
     {
+      "team": "mud",
+      "miles": 6,
+      "reason": "DYSENTERY ERROR CORRECTION",
+      "date": "2026-06-03"
+    },
+    {
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
@@ -63,12 +69,6 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-30"
-    },
-    {
-      "team": "mud",
-      "miles": 6,
-      "reason": "DYSENTERY ERROR CORRECTION",
-      "date": "2026-06-03"
     }
   ],
   "deadWeight": {
@@ -80,11 +80,7 @@
     "kaykay": 0,
     "allen": 1
   },
-  "dysentery": {
-    "mudPlayer": "michael",
-    "affectedDate": "2026-06-02",
-    "revealDate": "2026-06-03"
-  },
+  "dysentery": {},
   "mvpVotes": {
     "mud": {},
     "dust": {}
@@ -188,35 +184,29 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "WAGON PUSHED FREE!",
-          "miles": 0,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "DYSENTERY ERROR CORRECTION",
           "miles": 6,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 386,
+      "miles": 392,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -245,7 +235,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 256,
+      "miles": 314,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -256,9 +246,7 @@
       "pioneerEarned": [
         4
       ],
-      "frozenDates": [
-        "2026-06-02"
-      ],
+      "frozenDates": [],
       "pioneerCheckedSunday": "2026-05-31",
       "frozenSinceCycle": 0
     }
@@ -344,9 +332,10 @@
         "2026-05-30": 4754,
         "2026-05-31": 9988,
         "2026-06-01": 14127,
-        "2026-06-02": 22093
+        "2026-06-02": 22093,
+        "2026-06-03": 14986
       },
-      "totalSteps": 173554
+      "totalSteps": 188540
     },
     "kaykay": {
       "steps": {
@@ -417,7 +406,10 @@
     "lauren_dw_may31",
     "restore_dust_wagon_freeze_v1",
     "restore_cycle5_cards_v1",
-    "ensure_lauren_dw_may30"
+    "ensure_lauren_dw_may30",
+    "clear_dust_wagon_freeze_v1",
+    "fix_dust_frozen_dates_v1",
+    "cleanup_cycle5_ghosts_v1"
   ],
   "_pingTest": true
 }
