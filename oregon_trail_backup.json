@@ -191,29 +191,29 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "FT. LARAMIE REACHED!",
           "miles": 20,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 455,
+      "miles": 462,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -306,9 +306,10 @@
         "2026-05-31": 11314,
         "2026-06-02": 7960,
         "2026-06-01": 10683,
-        "2026-06-03": 8869
+        "2026-06-03": 8869,
+        "2026-06-04": 11619
       },
-      "totalSteps": 158662
+      "totalSteps": 170281
     },
     "shania": {
       "steps": {
