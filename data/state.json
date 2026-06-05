@@ -199,21 +199,21 @@
         },
         {
           "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
           "text": "CHIMNEY ROCK REACHED!",
           "miles": 25,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -334,9 +334,9 @@
         "2026-06-02": 19292,
         "2026-06-01": 17591,
         "2026-06-03": 11503,
-        "2026-06-04": 17590
+        "2026-06-04": 17680
       },
-      "totalSteps": 235190
+      "totalSteps": 235280
     },
     "chris": {
       "steps": {
