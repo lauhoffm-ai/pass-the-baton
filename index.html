@@ -717,6 +717,14 @@ function fixState(s){
     }
     s.appliedMigrations.push('clear_dust_wagon_freeze_v1');
   }
+  // Fix huntClaimedCycle for Mud — was set to 6 but hunt fired on Jun 4 (Cycle 5)
+  // Correcting to 5 so Cycle 6 hunt is available
+  if(!s.appliedMigrations.includes('fix_mud_hunt_cycle_v1')){
+    if(s.teams&&s.teams.mud&&s.teams.mud.huntClaimedCycle===6){
+      s.teams.mud.huntClaimedCycle=5;
+    }
+    s.appliedMigrations.push('fix_mud_hunt_cycle_v1');
+  }
   // Remove June 2 from Dust frozenDates — wagon was freed that day but date wasn't cleared
   if(!s.appliedMigrations.includes('fix_dust_frozen_dates_v1')){
     if(s.teams&&s.teams.dust){
