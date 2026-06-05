@@ -72,13 +72,13 @@
     }
   ],
   "deadWeight": {
-    "lauren": 0,
+    "lauren": 1,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "allen": 2
+    "allen": 0
   },
   "dysentery": {},
   "mvpVotes": {
@@ -92,7 +92,8 @@
       450
     ],
     "dust": [
-      250
+      250,
+      350
     ]
   },
   "history": [
@@ -207,6 +208,12 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "CHIMNEY ROCK REACHED!",
+          "miles": 25,
+          "cls": "hp"
         }
       ]
     }
@@ -242,7 +249,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 342,
+      "miles": 351,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -326,9 +333,10 @@
         "2026-05-30": 15559,
         "2026-06-02": 19292,
         "2026-06-01": 17591,
-        "2026-06-03": 11503
+        "2026-06-03": 11503,
+        "2026-06-04": 17590
       },
-      "totalSteps": 217600
+      "totalSteps": 235190
     },
     "chris": {
       "steps": {
