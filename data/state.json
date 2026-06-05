@@ -274,14 +274,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "dust_storm",
-      "revealed": false,
-      "cycleNum": 5
+      "cardId": "broken_axle",
+      "revealed": true,
+      "cycleNum": 6
     },
     "dust": {
-      "cardId": "native_trade",
-      "revealed": false,
-      "cycleNum": 5
+      "cardId": "hunting_party",
+      "revealed": true,
+      "cycleNum": 6
     }
   },
   "players": {
