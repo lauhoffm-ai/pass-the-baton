@@ -77,8 +77,8 @@
     "michael": 0,
     "jordan": 0,
     "shania": 0,
-    "chris": 0,
-    "kaykay": 1,
+    "chris": 1,
+    "kaykay": 0,
     "allen": 0
   },
   "dysentery": {},
@@ -227,7 +227,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 465,
+      "miles": 466,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -381,9 +381,9 @@
         "2026-06-02": 12895,
         "2026-06-01": 8671,
         "2026-06-03": 8518,
-        "2026-06-04": 7556
+        "2026-06-04": 9660
       },
-      "totalSteps": 162940
+      "totalSteps": 165044
     },
     "lauren": {
       "steps": {
