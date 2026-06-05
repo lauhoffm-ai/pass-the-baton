@@ -7,7 +7,8 @@
     1,
     2,
     3,
-    4
+    4,
+    5
   ],
   "mileAdj": [
     {
@@ -202,7 +203,13 @@
           "text": "CHIMNEY ROCK REACHED!",
           "miles": 25,
           "cls": "hp"
-        },
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "dateRange": "JUN 5",
+      "events": [
         {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
@@ -268,12 +275,12 @@
   "cards": {
     "mud": {
       "cardId": "dust_storm",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 5
     },
     "dust": {
       "cardId": "native_trade",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 5
     }
   },
@@ -334,9 +341,9 @@
         "2026-06-02": 19292,
         "2026-06-01": 17591,
         "2026-06-03": 11503,
-        "2026-06-04": 17680
+        "2026-06-04": 17843
       },
-      "totalSteps": 235280
+      "totalSteps": 235443
     },
     "chris": {
       "steps": {
