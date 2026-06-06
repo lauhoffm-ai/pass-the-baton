@@ -717,6 +717,17 @@ function fixState(s){
     }
     s.appliedMigrations.push('clear_dust_wagon_freeze_v1');
   }
+  // Restore Cycle 5 cards so closeCycle(5) can evaluate them correctly
+  // Cards were overwritten to Cycle 6 before Cycle 5 closed
+  if(!s.appliedMigrations.includes('restore_cycle5_for_close_v1')){
+    if(!(s.closedCycles||[]).includes(5)){
+      // Cycle 5 not yet closed — restore correct cards so evaluation works
+      if(!s.cards)s.cards={};
+      s.cards.mud={cardId:'broken_axle',revealed:true,cycleNum:5};
+      s.cards.dust={cardId:'hunting_party',revealed:true,cycleNum:5};
+    }
+    s.appliedMigrations.push('restore_cycle5_for_close_v1');
+  }
   // Fix huntClaimedCycle for Mud — was set to 6 but hunt fired on Jun 4 (Cycle 5)
   // Correcting to 5 so Cycle 6 hunt is available
   if(!s.appliedMigrations.includes('fix_mud_hunt_cycle_v1')){
@@ -1441,8 +1452,10 @@ function render(){
   if(!state)return;
   const ci=getCycle();
   // Only reset card if it was drawn in a PREVIOUS cycle (not cycle 0 which means legacy data)
-  if(state.cards.mud.cycleNum>0&&state.cards.mud.cycleNum!==ci.cycle&&state.cards.mud.revealed)state.cards.mud={...state.cards.mud,revealed:false};
-  if(state.cards.dust.cycleNum>0&&state.cards.dust.cycleNum!==ci.cycle&&state.cards.dust.revealed)state.cards.dust={...state.cards.dust,revealed:false};
+  // Only reset cards to unrevealed if their cycle has already been closed
+  // Prevents overwriting active cycle cards when getCycle() ticks forward
+  if(state.cards.mud.cycleNum>0&&state.cards.mud.cycleNum!==ci.cycle&&state.cards.mud.revealed&&(state.closedCycles||[]).includes(state.cards.mud.cycleNum))state.cards.mud={...state.cards.mud,revealed:false};
+  if(state.cards.dust.cycleNum>0&&state.cards.dust.cycleNum!==ci.cycle&&state.cards.dust.revealed&&(state.closedCycles||[]).includes(state.cards.dust.cycleNum))state.cards.dust={...state.cards.dust,revealed:false};
   document.getElementById('cycNum').textContent=ci.cycle;
   document.getElementById('cycDL').textContent=ci.left+' DAY'+(ci.left!==1?'S':'')+' LEFT';
   document.getElementById('cycTimer').textContent='CYCLE ENDS: '+fd(ci.end);
