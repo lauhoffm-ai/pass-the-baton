@@ -7,7 +7,8 @@
     1,
     2,
     3,
-    4
+    4,
+    5
   ],
   "mileAdj": [
     {
@@ -87,16 +88,40 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-30"
+    },
+    {
+      "team": "mud",
+      "miles": -20,
+      "reason": "BROKEN AXLE MISSED",
+      "date": "2026-06-04"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: SHANIA",
+      "date": "2026-06-04"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: CHRIS",
+      "date": "2026-06-04"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: MICHAEL",
+      "date": "2026-06-04"
     }
   ],
   "deadWeight": {
-    "lauren": 0,
+    "lauren": 1,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "allen": 2
+    "allen": 0
   },
   "dysentery": {},
   "mvpVotes": {
@@ -256,13 +281,37 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "BROKEN AXLE MISSED (0/3)",
+          "miles": -20,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: SHANIA",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: CHRIS",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: MICHAEL",
+          "miles": 15,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 502,
+      "miles": 497,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -285,22 +334,13 @@
           "date": "2026-05-25"
         }
       },
-      "axleSubs": {
-        "michael": {
-          "mins": 57,
-          "date": "2026-06-05"
-        },
-        "jordan": {
-          "mins": 57,
-          "date": "2026-06-05"
-        }
-      },
+      "axleSubs": {},
       "pioneerEarned": [],
       "frozenDates": [],
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 370,
+      "miles": 405,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -319,12 +359,12 @@
   "cards": {
     "mud": {
       "cardId": "broken_axle",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 5
     },
     "dust": {
       "cardId": "hunting_party",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 5
     }
   },
@@ -444,9 +484,10 @@
         "2026-05-30": 3142,
         "2026-06-02": 12013,
         "2026-06-01": 5013,
-        "2026-06-03": 10443
+        "2026-06-03": 10443,
+        "2026-06-04": 9530
       },
-      "totalSteps": 77671
+      "totalSteps": 87201
     },
     "allen": {
       "steps": {
