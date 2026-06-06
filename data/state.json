@@ -115,7 +115,7 @@
     }
   ],
   "deadWeight": {
-    "lauren": 1,
+    "lauren": 2,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
@@ -357,7 +357,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 416,
+      "miles": 419,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -509,9 +509,10 @@
         "2026-06-02": 12013,
         "2026-06-01": 5013,
         "2026-06-03": 10443,
-        "2026-06-04": 9530
+        "2026-06-04": 9530,
+        "2026-06-05": 5299
       },
-      "totalSteps": 87201
+      "totalSteps": 92500
     },
     "allen": {
       "steps": {
