@@ -358,9 +358,9 @@
   },
   "cards": {
     "mud": {
-      "cardId": "broken_axle",
-      "revealed": false,
-      "cycleNum": 5
+      "cardId": "river_crossing",
+      "revealed": true,
+      "cycleNum": 6
     },
     "dust": {
       "cardId": "hunting_party",
