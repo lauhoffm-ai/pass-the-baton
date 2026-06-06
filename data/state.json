@@ -346,6 +346,10 @@
         "jordan": {
           "mins": 57,
           "date": "2026-06-05"
+        },
+        "kaykay": {
+          "mins": 42,
+          "date": "2026-06-05"
         }
       },
       "pioneerEarned": [],
@@ -373,12 +377,12 @@
   },
   "cards": {
     "mud": {
-      "cardId": "river_crossing",
+      "cardId": "broken_axle",
       "revealed": true,
       "cycleNum": 6
     },
     "dust": {
-      "cardId": "dysentery",
+      "cardId": "hunting_party",
       "revealed": true,
       "cycleNum": 6
     }
@@ -544,7 +548,9 @@
     "fix_dust_frozen_dates_v1",
     "cleanup_cycle5_ghosts_v1",
     "fix_mud_hunt_cycle_v1",
-    "restore_cycle5_for_close_v1"
+    "restore_cycle5_for_close_v1",
+    "restore_cycle6_cards_v1",
+    "restore_cycle6_cards_v2"
   ],
   "_pingTest": true
 }
