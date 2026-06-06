@@ -259,7 +259,12 @@
           "date": "2026-05-25"
         }
       },
-      "axleSubs": {},
+      "axleSubs": {
+        "michael": {
+          "mins": 57,
+          "date": "2026-06-05"
+        }
+      },
       "pioneerEarned": [],
       "frozenDates": [],
       "pioneerCheckedSunday": "2026-05-31"
