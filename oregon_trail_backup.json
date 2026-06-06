@@ -59,18 +59,6 @@
       "date": "2026-06-03"
     },
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-30"
-    },
-    {
       "team": "mud",
       "miles": 20,
       "reason": "FAIR WEATHER",
@@ -81,6 +69,18 @@
       "miles": 20,
       "reason": "FAIR WEATHER",
       "date": "2026-06-05"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-30"
     }
   ],
   "deadWeight": {
@@ -103,7 +103,8 @@
       350
     ],
     "dust": [
-      250
+      250,
+      350
     ]
   },
   "history": [
@@ -200,18 +201,6 @@
           "text": "DYSENTERY ERROR CORRECTION",
           "miles": 6,
           "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
         }
       ]
     },
@@ -229,6 +218,24 @@
           "team": "dust",
           "text": "FAIR WEATHER BONUS",
           "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "CHIMNEY ROCK REACHED!",
+          "miles": 25,
           "cls": "hp"
         }
       ]
@@ -274,7 +281,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 349,
+      "miles": 358,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -292,14 +299,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "fair_weather",
+      "cardId": "broken_axle",
       "revealed": true,
-      "cycleNum": 6
+      "cycleNum": 5
     },
     "dust": {
-      "cardId": "trading_post",
+      "cardId": "hunting_party",
       "revealed": true,
-      "cycleNum": 6
+      "cycleNum": 5
     }
   },
   "players": {
@@ -356,9 +363,10 @@
         "2026-05-30": 15559,
         "2026-06-02": 19292,
         "2026-06-01": 17591,
-        "2026-06-03": 11503
+        "2026-06-03": 11503,
+        "2026-06-04": 17843
       },
-      "totalSteps": 217600
+      "totalSteps": 235443
     },
     "chris": {
       "steps": {
@@ -455,7 +463,8 @@
     "clear_dust_wagon_freeze_v1",
     "fix_dust_frozen_dates_v1",
     "cleanup_cycle5_ghosts_v1",
-    "fix_mud_hunt_cycle_v1"
+    "fix_mud_hunt_cycle_v1",
+    "restore_cycle5_for_close_v1"
   ],
   "_pingTest": true
 }
