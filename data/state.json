@@ -228,22 +228,22 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "FT. LARAMIE REACHED!",
           "miles": 20,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -288,7 +288,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 358,
+      "miles": 365,
       "frozenUntilSteps": 0,
       "rareUsed": [],
       "huntClaimedCycle": 0,
@@ -448,9 +448,10 @@
         "2026-05-30": 4443,
         "2026-06-02": 7532,
         "2026-06-01": 13174,
-        "2026-06-03": 7598
+        "2026-06-03": 7598,
+        "2026-06-04": 14303
       },
-      "totalSteps": 114527
+      "totalSteps": 128830
     }
   },
   "appliedMigrations": [
