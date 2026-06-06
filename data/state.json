@@ -78,18 +78,6 @@
       "date": "2026-06-04"
     },
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-30"
-    },
-    {
       "team": "mud",
       "miles": -20,
       "reason": "BROKEN AXLE MISSED",
@@ -112,6 +100,18 @@
       "miles": 15,
       "reason": "HUNTING PARTY: MICHAEL",
       "date": "2026-06-04"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-30"
     }
   ],
   "deadWeight": {
@@ -275,18 +275,6 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "BROKEN AXLE MISSED (0/3)",
           "miles": -20,
@@ -309,6 +297,18 @@
           "text": "HUNTING PARTY: MICHAEL",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -464,9 +464,10 @@
         "2026-06-01": 14127,
         "2026-06-02": 22093,
         "2026-06-03": 15018,
-        "2026-06-04": 9684
+        "2026-06-04": 9684,
+        "2026-06-05": 17489
       },
-      "totalSteps": 198256
+      "totalSteps": 215745
     },
     "kaykay": {
       "steps": {
