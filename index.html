@@ -719,13 +719,13 @@ function fixState(s){
   }
   // restore_cycle5_for_close_v1 retired — Cycle 5 is already closed, Cycle 6 cards are correct
   if(!s.appliedMigrations.includes('restore_cycle5_for_close_v1')){s.appliedMigrations.push('restore_cycle5_for_close_v1');}
-  // Restore correct Cycle 6 cards: Fair Weather (Mud), Trading Post (Dust)
-  // Wrong cards (River Crossing/Dysentery) were auto-drawn when Cycle 5 closed
-  if(!s.appliedMigrations.includes('restore_cycle6_cards_v1')){
+  // Correct Cycle 6 cards: Broken Axle (Mud), Hunting Party (Dust)
+  if(!s.appliedMigrations.includes('restore_cycle6_cards_v2')){
+    if(!s.appliedMigrations.includes('restore_cycle6_cards_v1')){s.appliedMigrations.push('restore_cycle6_cards_v1');}
     if(!s.cards)s.cards={};
-    s.cards.mud={cardId:'fair_weather',revealed:true,cycleNum:6};
-    s.cards.dust={cardId:'trading_post',revealed:true,cycleNum:6};
-    s.appliedMigrations.push('restore_cycle6_cards_v1');
+    s.cards.mud={cardId:'broken_axle',revealed:true,cycleNum:6};
+    s.cards.dust={cardId:'hunting_party',revealed:true,cycleNum:6};
+    s.appliedMigrations.push('restore_cycle6_cards_v2');
   }
   // Fix huntClaimedCycle for Mud — was set to 6 but hunt fired on Jun 4 (Cycle 5)
   // Correcting to 5 so Cycle 6 hunt is available
