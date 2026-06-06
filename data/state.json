@@ -358,13 +358,13 @@
   },
   "cards": {
     "mud": {
-      "cardId": "broken_axle",
+      "cardId": "river_crossing",
       "revealed": true,
-      "cycleNum": 5
+      "cycleNum": 6
     },
     "dust": {
       "cardId": "hunting_party",
-      "revealed": true,
+      "revealed": false,
       "cycleNum": 5
     }
   },
