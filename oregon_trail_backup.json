@@ -140,7 +140,8 @@
     ],
     "dust": [
       250,
-      350
+      350,
+      450
     ]
   },
   "history": [
@@ -309,6 +310,12 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "FT. LARAMIE REACHED!",
+          "miles": 20,
+          "cls": "hp"
         }
       ]
     }
@@ -357,7 +364,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 429,
+      "miles": 459,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -512,9 +519,10 @@
         "2026-06-01": 5013,
         "2026-06-03": 10443,
         "2026-06-04": 9530,
-        "2026-06-05": 5299
+        "2026-06-05": 5299,
+        "2026-06-06": 10277
       },
-      "totalSteps": 92500
+      "totalSteps": 102777
     },
     "allen": {
       "steps": {
