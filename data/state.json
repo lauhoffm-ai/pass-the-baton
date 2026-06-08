@@ -8,7 +8,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
   ],
   "mileAdj": [
     {
@@ -112,13 +113,31 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-30"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: CHRIS",
+      "date": "2026-06-07"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: KAYKAY",
+      "date": "2026-06-07"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: ALLEN",
+      "date": "2026-06-07"
     }
   ],
   "deadWeight": {
     "lauren": 0,
     "michael": 0,
-    "jordan": 1,
-    "shania": 0,
+    "jordan": 0,
+    "shania": 1,
     "chris": 0,
     "kaykay": 0,
     "allen": 0
@@ -316,13 +335,37 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "BROKEN AXLE COMPLETED!",
+          "miles": 0,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: CHRIS",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: KAYKAY",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: ALLEN",
+          "miles": 15,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 564,
+      "miles": 579,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -345,26 +388,13 @@
           "date": "2026-05-25"
         }
       },
-      "axleSubs": {
-        "michael": {
-          "mins": 57,
-          "date": "2026-06-05"
-        },
-        "jordan": {
-          "mins": 57,
-          "date": "2026-06-05"
-        },
-        "kaykay": {
-          "mins": 42,
-          "date": "2026-06-05"
-        }
-      },
+      "axleSubs": {},
       "pioneerEarned": [],
       "frozenDates": [],
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 482,
+      "miles": 512,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -459,9 +489,10 @@
         "2026-06-03": 11503,
         "2026-06-04": 17843,
         "2026-06-05": 7333,
-        "2026-06-06": 7234
+        "2026-06-06": 7234,
+        "2026-06-07": 181
       },
-      "totalSteps": 250010
+      "totalSteps": 250191
     },
     "chris": {
       "steps": {
