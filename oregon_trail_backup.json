@@ -131,6 +131,12 @@
       "miles": 15,
       "reason": "HUNTING PARTY: ALLEN",
       "date": "2026-06-07"
+    },
+    {
+      "team": "mud",
+      "miles": 20,
+      "reason": "BROKEN AXLE PENALTY CORRECTION",
+      "date": "2026-06-08"
     }
   ],
   "deadWeight": {
@@ -359,13 +365,19 @@
           "text": "HUNTING PARTY: ALLEN",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "BROKEN AXLE PENALTY CORRECTION",
+          "miles": 20,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 579,
+      "miles": 599,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
