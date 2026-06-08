@@ -414,13 +414,13 @@
   },
   "cards": {
     "mud": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "hunting_party",
+      "revealed": true,
       "cycleNum": 7
     },
     "dust": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "river_crossing",
+      "revealed": true,
       "cycleNum": 7
     }
   },
