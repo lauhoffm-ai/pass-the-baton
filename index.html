@@ -1451,10 +1451,9 @@ function render(){
   if(!state)return;
   const ci=getCycle();
   // Only reset card if it was drawn in a PREVIOUS cycle (not cycle 0 which means legacy data)
-  // Only reset cards to unrevealed if their cycle has already been closed
-  // Prevents overwriting active cycle cards when getCycle() ticks forward
-  if(state.cards.mud.cycleNum>0&&state.cards.mud.cycleNum!==ci.cycle&&state.cards.mud.revealed&&(state.closedCycles||[]).includes(state.cards.mud.cycleNum))state.cards.mud={...state.cards.mud,revealed:false};
-  if(state.cards.dust.cycleNum>0&&state.cards.dust.cycleNum!==ci.cycle&&state.cards.dust.revealed&&(state.closedCycles||[]).includes(state.cards.dust.cycleNum))state.cards.dust={...state.cards.dust,revealed:false};
+  // Reset cards when moving to a new cycle — only if old cycle is closed
+  if(state.cards.mud.cycleNum>0&&state.cards.mud.cycleNum!==ci.cycle&&(state.closedCycles||[]).includes(state.cards.mud.cycleNum)){state.cards.mud={cardId:null,revealed:false,cycleNum:ci.cycle};saveAll(state,true);}
+  if(state.cards.dust.cycleNum>0&&state.cards.dust.cycleNum!==ci.cycle&&(state.closedCycles||[]).includes(state.cards.dust.cycleNum)){state.cards.dust={cardId:null,revealed:false,cycleNum:ci.cycle};saveAll(state,true);}
   document.getElementById('cycNum').textContent=ci.cycle;
   document.getElementById('cycDL').textContent=ci.left+' DAY'+(ci.left!==1?'S':'')+' LEFT';
   document.getElementById('cycTimer').textContent='CYCLE ENDS: '+fd(ci.end);
