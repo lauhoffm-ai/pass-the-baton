@@ -271,12 +271,6 @@
         },
         {
           "team": "mud",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
-          "team": "mud",
           "text": "BROKEN AXLE MISSED (0/3)",
           "miles": -20,
           "cls": "hn"
@@ -328,7 +322,7 @@
         "wagon_mud",
         "dysentery"
       ],
-      "huntClaimedCycle": 6,
+      "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
@@ -361,7 +355,7 @@
       },
       "pioneerEarned": [],
       "frozenDates": [],
-      "pioneerCheckedSunday": "2026-05-31"
+      "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
       "miles": 462,
@@ -378,7 +372,7 @@
         4
       ],
       "frozenDates": [],
-      "pioneerCheckedSunday": "2026-05-31",
+      "pioneerCheckedSunday": "2026-06-07",
       "frozenSinceCycle": 0
     }
   },
