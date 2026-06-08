@@ -414,12 +414,12 @@
   },
   "cards": {
     "mud": {
-      "cardId": "dust_storm",
+      "cardId": "hunting_party",
       "revealed": true,
       "cycleNum": 7
     },
     "dust": {
-      "cardId": "broken_axle",
+      "cardId": "river_crossing",
       "revealed": true,
       "cycleNum": 7
     }
