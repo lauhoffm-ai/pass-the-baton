@@ -414,14 +414,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "broken_axle",
-      "revealed": false,
-      "cycleNum": 6
+      "cardId": "dust_storm",
+      "revealed": true,
+      "cycleNum": 7
     },
     "dust": {
-      "cardId": "hunting_party",
-      "revealed": false,
-      "cycleNum": 6
+      "cardId": "broken_axle",
+      "revealed": true,
+      "cycleNum": 7
     }
   },
   "players": {
