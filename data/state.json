@@ -366,7 +366,13 @@
           "text": "SWEETWATER REACHED!",
           "miles": 25,
           "cls": "hp"
-        },
+        }
+      ]
+    },
+    {
+      "cycle": 8,
+      "dateRange": "JUN 11",
+      "events": [
         {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
@@ -413,7 +419,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 558,
+      "miles": 561,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -590,9 +596,10 @@
         "2026-06-06": 10277,
         "2026-06-07": 9433,
         "2026-06-08": 3154,
-        "2026-06-09": 1340
+        "2026-06-09": 1340,
+        "2026-06-10": 6796
       },
-      "totalSteps": 116704
+      "totalSteps": 123500
     },
     "allen": {
       "steps": {
