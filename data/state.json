@@ -495,14 +495,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "hunting_party",
-      "revealed": true,
-      "cycleNum": 7
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 8
     },
     "dust": {
-      "cardId": "river_crossing",
-      "revealed": true,
-      "cycleNum": 7
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 8
     }
   },
   "players": {
