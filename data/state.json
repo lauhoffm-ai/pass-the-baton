@@ -128,18 +128,6 @@
       "date": "2026-06-08"
     },
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-30"
-    },
-    {
       "team": "mud",
       "miles": 15,
       "reason": "HUNTING PARTY: MICHAEL",
@@ -162,16 +150,28 @@
       "miles": -15,
       "reason": "RIVER CROSSING MISSED",
       "date": "2026-06-10"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-30"
     }
   ],
   "deadWeight": {
     "lauren": 0,
     "michael": 0,
     "jordan": 0,
-    "shania": 1,
+    "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "allen": 0
+    "allen": 1
   },
   "dysentery": {
     "dustPlayer": "chris",
@@ -400,18 +400,6 @@
       "dateRange": "JUN 11",
       "events": [
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "HUNTING PARTY: MICHAEL",
           "miles": 15,
@@ -440,6 +428,18 @@
           "text": "INDEP. ROCK REACHED!",
           "miles": 30,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -475,7 +475,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 586,
+      "miles": 596,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -580,9 +580,9 @@
         "2026-06-07": 4953,
         "2026-06-08": 19673,
         "2026-06-09": 13652,
-        "2026-06-10": 0
+        "2026-06-10": 19457
       },
-      "totalSteps": 288288
+      "totalSteps": 307745
     },
     "chris": {
       "steps": {
