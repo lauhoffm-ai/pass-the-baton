@@ -416,6 +416,12 @@
         },
         {
           "team": "dust",
+          "text": "FT. LARAMIE REACHED!",
+          "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
@@ -467,12 +473,6 @@
           "text": "DEAD WEIGHT: ALLEN",
           "miles": -10,
           "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "FT. LARAMIE REACHED!",
-          "miles": 20,
-          "cls": "hp"
         }
       ]
     }
@@ -508,7 +508,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 455,
+      "miles": 462,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -634,9 +634,10 @@
         "2026-06-05": 0,
         "2026-06-06": 0,
         "2026-06-07": 0,
-        "2026-06-11": 14356
+        "2026-06-11": 14356,
+        "2026-06-10": 12395
       },
-      "totalSteps": 212612
+      "totalSteps": 225007
     },
     "kaykay": {
       "steps": {
