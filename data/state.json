@@ -152,12 +152,6 @@
       "date": "2026-06-06"
     },
     {
-      "team": "mud",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: JORDAN",
-      "date": "2026-06-07"
-    },
-    {
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: SHANIA",
@@ -417,12 +411,6 @@
           "cls": "hn"
         },
         {
-          "team": "mud",
-          "text": "DEAD WEIGHT: JORDAN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "dust",
           "text": "DEAD WEIGHT: SHANIA",
           "miles": -10,
@@ -439,7 +427,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 666,
+      "miles": 681,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -545,13 +533,13 @@
         "2026-06-04": 14542,
         "2026-06-05": 0,
         "2026-06-06": 0,
-        "2026-06-07": 0,
+        "2026-06-07": 8355,
         "2026-06-11": 10826,
         "2026-06-10": 11254,
         "2026-06-09": 9350,
         "2026-06-08": 11500
       },
-      "totalSteps": 216134
+      "totalSteps": 224489
     },
     "shania": {
       "steps": {
