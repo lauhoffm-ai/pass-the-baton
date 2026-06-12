@@ -154,12 +154,6 @@
     {
       "team": "mud",
       "miles": -10,
-      "reason": "DEAD WEIGHT: MICHAEL",
-      "date": "2026-06-07"
-    },
-    {
-      "team": "mud",
-      "miles": -10,
       "reason": "DEAD WEIGHT: JORDAN",
       "date": "2026-06-07"
     },
@@ -424,12 +418,6 @@
         },
         {
           "team": "mud",
-          "text": "DEAD WEIGHT: MICHAEL",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "mud",
           "text": "DEAD WEIGHT: JORDAN",
           "miles": -10,
           "cls": "hn"
@@ -451,7 +439,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 650,
+      "miles": 666,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -530,13 +518,13 @@
         "2026-06-04": 12063,
         "2026-06-05": 0,
         "2026-06-06": 0,
-        "2026-06-07": 0,
+        "2026-06-07": 8401,
         "2026-06-11": 15583,
         "2026-06-10": 18447,
         "2026-06-09": 9241,
         "2026-06-08": 17794
       },
-      "totalSteps": 278682
+      "totalSteps": 287083
     },
     "jordan": {
       "steps": {
