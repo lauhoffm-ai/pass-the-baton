@@ -122,6 +122,18 @@
       "date": "2026-06-07"
     },
     {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-06-11"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-06-11"
+    },
+    {
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
@@ -158,12 +170,6 @@
       "date": "2026-06-07"
     },
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: CHRIS",
-      "date": "2026-06-07"
-    },
-    {
       "team": "mud",
       "miles": -10,
       "reason": "DEAD WEIGHT: KAYKAY",
@@ -180,18 +186,6 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-09"
-    },
-    {
-      "team": "mud",
-      "miles": 15,
-      "reason": "HUNT SUCCESSFUL",
-      "date": "2026-06-11"
-    },
-    {
-      "team": "dust",
-      "miles": 15,
-      "reason": "HUNT SUCCESSFUL",
-      "date": "2026-06-11"
     }
   ],
   "deadWeight": {
@@ -459,12 +453,6 @@
           "cls": "hn"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: CHRIS",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "DEAD WEIGHT: KAYKAY",
           "miles": -10,
@@ -481,18 +469,6 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
-        },
-        {
-          "team": "mud",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
         }
       ]
     }
@@ -505,7 +481,7 @@
         "wagon_mud",
         "dysentery"
       ],
-      "huntClaimedCycle": 8,
+      "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
@@ -528,12 +504,12 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 509,
+      "miles": 525,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
       ],
-      "huntClaimedCycle": 8,
+      "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {},
@@ -659,13 +635,13 @@
         "2026-06-04": 9684,
         "2026-06-05": 0,
         "2026-06-06": 0,
-        "2026-06-07": 0,
+        "2026-06-07": 11518,
         "2026-06-11": 14356,
         "2026-06-10": 12395,
         "2026-06-09": 20493,
         "2026-06-08": 10256
       },
-      "totalSteps": 255756
+      "totalSteps": 267274
     },
     "kaykay": {
       "steps": {
