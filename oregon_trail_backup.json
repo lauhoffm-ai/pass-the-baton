@@ -178,12 +178,6 @@
     {
       "team": "dust",
       "miles": -10,
-      "reason": "DEAD WEIGHT: ALLEN",
-      "date": "2026-06-07"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-09"
     }
@@ -460,12 +454,6 @@
         },
         {
           "team": "dust",
-          "text": "DEAD WEIGHT: ALLEN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
@@ -504,7 +492,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 525,
+      "miles": 541,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -716,13 +704,13 @@
         "2026-06-04": 14303,
         "2026-06-05": 0,
         "2026-06-06": 0,
-        "2026-06-07": 0,
+        "2026-06-07": 11329,
         "2026-06-11": 12592,
         "2026-06-10": 9656,
         "2026-06-09": 12152,
         "2026-06-08": 7324
       },
-      "totalSteps": 170554
+      "totalSteps": 181883
     }
   },
   "appliedMigrations": [
