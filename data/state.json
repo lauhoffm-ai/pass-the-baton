@@ -79,18 +79,6 @@
       "date": "2026-06-04"
     },
     {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-30"
-    },
-    {
       "team": "mud",
       "miles": -20,
       "reason": "BROKEN AXLE MISSED",
@@ -130,6 +118,60 @@
       "team": "dust",
       "miles": 15,
       "reason": "HUNTING PARTY: SHANIA",
+      "date": "2026-06-07"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-30"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-06-06"
+    },
+    {
+      "team": "mud",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: MICHAEL",
+      "date": "2026-06-07"
+    },
+    {
+      "team": "mud",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: JORDAN",
+      "date": "2026-06-07"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: SHANIA",
+      "date": "2026-06-07"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: CHRIS",
+      "date": "2026-06-07"
+    },
+    {
+      "team": "mud",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: KAYKAY",
+      "date": "2026-06-07"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: ALLEN",
       "date": "2026-06-07"
     }
   ],
@@ -294,18 +336,6 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "BROKEN AXLE MISSED (0/3)",
           "miles": -20,
@@ -358,13 +388,67 @@
           "text": "HUNTING PARTY: SHANIA",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "DEAD WEIGHT: MICHAEL",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "DEAD WEIGHT: JORDAN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: SHANIA",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: CHRIS",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "DEAD WEIGHT: KAYKAY",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: ALLEN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 527,
+      "miles": 507,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -393,7 +477,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 420,
+      "miles": 380,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -443,9 +527,10 @@
         "2026-06-04": 12063,
         "2026-06-05": 0,
         "2026-06-06": 0,
-        "2026-06-07": 0
+        "2026-06-07": 0,
+        "2026-06-11": 15350
       },
-      "totalSteps": 217617
+      "totalSteps": 232967
     },
     "jordan": {
       "steps": {
