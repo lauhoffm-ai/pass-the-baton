@@ -154,12 +154,6 @@
     {
       "team": "dust",
       "miles": -10,
-      "reason": "DEAD WEIGHT: SHANIA",
-      "date": "2026-06-07"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
     }
@@ -419,12 +413,6 @@
         },
         {
           "team": "dust",
-          "text": "DEAD WEIGHT: SHANIA",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
@@ -463,7 +451,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 576,
+      "miles": 589,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -565,7 +553,7 @@
         "2026-06-01": 17591,
         "2026-06-03": 11503,
         "2026-06-04": 17843,
-        "2026-06-05": 0,
+        "2026-06-05": 7333,
         "2026-06-06": 0,
         "2026-06-07": 4953,
         "2026-06-11": 13028,
@@ -573,7 +561,7 @@
         "2026-06-09": 24982,
         "2026-06-08": 19673
       },
-      "totalSteps": 317536
+      "totalSteps": 324869
     },
     "chris": {
       "steps": {
