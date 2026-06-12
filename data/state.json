@@ -121,6 +121,12 @@
       "date": "2026-06-07"
     },
     {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-06-11"
+    },
+    {
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
@@ -173,12 +179,6 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: ALLEN",
       "date": "2026-06-07"
-    },
-    {
-      "team": "mud",
-      "miles": 15,
-      "reason": "HUNT SUCCESSFUL",
-      "date": "2026-06-11"
     }
   ],
   "deadWeight": {
@@ -396,6 +396,12 @@
           "cls": "hp"
         },
         {
+          "team": "mud",
+          "text": "HUNT SUCCESSFUL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
@@ -448,12 +454,6 @@
           "text": "DEAD WEIGHT: ALLEN",
           "miles": -10,
           "cls": "hn"
-        },
-        {
-          "team": "mud",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
         }
       ]
     }
@@ -489,7 +489,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 394,
+      "miles": 399,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -659,9 +659,10 @@
         "2026-06-04": 9530,
         "2026-06-05": 0,
         "2026-06-06": 0,
-        "2026-06-07": 0
+        "2026-06-07": 0,
+        "2026-06-11": 11514
       },
-      "totalSteps": 87201
+      "totalSteps": 98715
     },
     "allen": {
       "steps": {
