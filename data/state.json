@@ -173,7 +173,7 @@
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-06-09"
+      "date": "2026-06-10"
     }
   ],
   "deadWeight": {
@@ -480,7 +480,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 541,
+      "miles": 546,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -665,13 +665,13 @@
         "2026-06-04": 9530,
         "2026-06-05": 0,
         "2026-06-06": 0,
-        "2026-06-07": 0,
+        "2026-06-07": 9433,
         "2026-06-11": 11514,
         "2026-06-10": 6796,
         "2026-06-09": 1340,
         "2026-06-08": 3154
       },
-      "totalSteps": 110005
+      "totalSteps": 119438
     },
     "allen": {
       "steps": {
