@@ -149,12 +149,6 @@
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-06-06"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
     }
   ],
@@ -396,33 +390,27 @@
         },
         {
           "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
           "text": "SWEETWATER REACHED!",
           "miles": 25,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -458,7 +446,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 602,
+      "miles": 617,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -642,14 +630,14 @@
         "2026-06-03": 10443,
         "2026-06-04": 9530,
         "2026-06-05": 5299,
-        "2026-06-06": 0,
+        "2026-06-06": 10277,
         "2026-06-07": 9433,
         "2026-06-11": 11514,
         "2026-06-10": 6796,
         "2026-06-09": 1340,
         "2026-06-08": 3154
       },
-      "totalSteps": 124737
+      "totalSteps": 135014
     },
     "allen": {
       "steps": {
