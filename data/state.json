@@ -215,7 +215,8 @@
     "mud": [
       250,
       350,
-      450
+      450,
+      600
     ],
     "dust": [
       250,
@@ -473,13 +474,19 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "SWEETWATER REACHED!",
+          "miles": 25,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 587,
+      "miles": 619,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -561,9 +568,10 @@
         "2026-06-07": 0,
         "2026-06-11": 15350,
         "2026-06-10": 18447,
-        "2026-06-09": 9241
+        "2026-06-09": 9241,
+        "2026-06-08": 17794
       },
-      "totalSteps": 260655
+      "totalSteps": 278449
     },
     "jordan": {
       "steps": {
