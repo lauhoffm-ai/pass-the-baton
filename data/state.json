@@ -416,6 +416,12 @@
           "cls": "hp"
         },
         {
+          "team": "mud",
+          "text": "SWEETWATER REACHED!",
+          "miles": 25,
+          "cls": "hp"
+        },
+        {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
@@ -474,19 +480,13 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
-        },
-        {
-          "team": "mud",
-          "text": "SWEETWATER REACHED!",
-          "miles": 25,
-          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 619,
+      "miles": 627,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -595,9 +595,10 @@
         "2026-06-07": 0,
         "2026-06-11": 10826,
         "2026-06-10": 11254,
-        "2026-06-09": 9350
+        "2026-06-09": 9350,
+        "2026-06-08": 11500
       },
-      "totalSteps": 204634
+      "totalSteps": 216134
     },
     "shania": {
       "steps": {
