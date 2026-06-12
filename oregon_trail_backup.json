@@ -548,13 +548,13 @@
   },
   "cards": {
     "mud": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "prairie_fire",
+      "revealed": true,
       "cycleNum": 8
     },
     "dust": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "prairie_fire",
+      "revealed": true,
       "cycleNum": 8
     }
   },
