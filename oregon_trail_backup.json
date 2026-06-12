@@ -394,6 +394,12 @@
           "cls": "hp"
         },
         {
+          "team": "mud",
+          "text": "INDEP. ROCK REACHED!",
+          "miles": 30,
+          "cls": "hp"
+        },
+        {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
@@ -422,19 +428,13 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
-        },
-        {
-          "team": "mud",
-          "text": "INDEP. ROCK REACHED!",
-          "miles": 30,
-          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 701,
+      "miles": 707,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -538,7 +538,7 @@
         "2026-06-01": 10683,
         "2026-06-03": 8869,
         "2026-06-04": 14542,
-        "2026-06-05": 0,
+        "2026-06-05": 8330,
         "2026-06-06": 0,
         "2026-06-07": 8355,
         "2026-06-11": 10826,
@@ -546,7 +546,7 @@
         "2026-06-09": 9350,
         "2026-06-08": 11500
       },
-      "totalSteps": 224489
+      "totalSteps": 232819
     },
     "shania": {
       "steps": {
