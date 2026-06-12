@@ -122,18 +122,6 @@
       "date": "2026-06-07"
     },
     {
-      "team": "mud",
-      "miles": 15,
-      "reason": "HUNT SUCCESSFUL",
-      "date": "2026-06-11"
-    },
-    {
-      "team": "dust",
-      "miles": 15,
-      "reason": "HUNT SUCCESSFUL",
-      "date": "2026-06-11"
-    },
-    {
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
@@ -511,7 +499,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 648,
+      "miles": 633,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -540,7 +528,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 524,
+      "miles": 509,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -591,12 +579,12 @@
         "2026-06-05": 0,
         "2026-06-06": 0,
         "2026-06-07": 0,
-        "2026-06-11": 15350,
+        "2026-06-11": 15583,
         "2026-06-10": 18447,
         "2026-06-09": 9241,
         "2026-06-08": 17794
       },
-      "totalSteps": 278449
+      "totalSteps": 278682
     },
     "jordan": {
       "steps": {
