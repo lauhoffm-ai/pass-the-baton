@@ -9,7 +9,8 @@
     3,
     4,
     5,
-    6
+    6,
+    7
   ],
   "mileAdj": [
     {
@@ -190,7 +191,7 @@
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-06-10"
+      "date": "2026-06-09"
     }
   ],
   "deadWeight": {
@@ -515,7 +516,7 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 506,
+      "miles": 509,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -730,9 +731,10 @@
         "2026-06-07": 0,
         "2026-06-11": 12592,
         "2026-06-10": 9656,
-        "2026-06-09": 12152
+        "2026-06-09": 12152,
+        "2026-06-08": 7324
       },
-      "totalSteps": 163230
+      "totalSteps": 170554
     }
   },
   "appliedMigrations": [
