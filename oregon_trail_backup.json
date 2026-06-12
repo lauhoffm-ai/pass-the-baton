@@ -409,18 +409,6 @@
           "cls": "hp"
         },
         {
-          "team": "mud",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
@@ -485,7 +473,7 @@
         "wagon_mud",
         "dysentery"
       ],
-      "huntClaimedCycle": 8,
+      "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
@@ -508,12 +496,12 @@
       "pioneerCheckedSunday": "2026-05-31"
     },
     "dust": {
-      "miles": 498,
+      "miles": 493,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
       ],
-      "huntClaimedCycle": 8,
+      "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {},
@@ -691,9 +679,9 @@
         "2026-06-07": 0,
         "2026-06-11": 11514,
         "2026-06-10": 6796,
-        "2026-06-09": 10236
+        "2026-06-09": 1340
       },
-      "totalSteps": 115747
+      "totalSteps": 106851
     },
     "allen": {
       "steps": {
