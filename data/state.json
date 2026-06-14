@@ -436,28 +436,28 @@
       "dateRange": "JUN 14",
       "events": [
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "INDEP. ROCK REACHED!",
           "miles": 30,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -547,9 +547,9 @@
         "2026-06-08": 17794,
         "2026-06-09": 0,
         "2026-06-10": 0,
-        "2026-06-13": 8778
+        "2026-06-13": 8901
       },
-      "totalSteps": 272720
+      "totalSteps": 272843
     },
     "jordan": {
       "steps": {
