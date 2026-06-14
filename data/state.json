@@ -569,8 +569,8 @@
   },
   "cards": {
     "mud": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "ox_wore_out",
+      "revealed": true,
       "cycleNum": 9
     },
     "dust": {
