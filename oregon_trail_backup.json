@@ -193,7 +193,8 @@
       250,
       350,
       450,
-      600
+      600,
+      700
     ],
     "dust": [
       250,
@@ -451,13 +452,19 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "INDEP. ROCK REACHED!",
+          "miles": 30,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 695,
+      "miles": 701,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -539,9 +546,10 @@
         "2026-06-07": 8060,
         "2026-06-08": 17794,
         "2026-06-09": 0,
-        "2026-06-10": 0
+        "2026-06-10": 0,
+        "2026-06-13": 8778
       },
-      "totalSteps": 263942
+      "totalSteps": 272720
     },
     "jordan": {
       "steps": {
