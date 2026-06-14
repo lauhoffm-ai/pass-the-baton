@@ -174,6 +174,12 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: JORDAN",
       "date": "2026-06-12"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-06-11"
     }
   ],
   "deadWeight": {
@@ -477,6 +483,12 @@
           "text": "DEAD WEIGHT: JORDAN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "HUNT SUCCESSFUL",
+          "miles": 15,
+          "cls": "hp"
         }
       ]
     }
@@ -512,12 +524,12 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 612,
+      "miles": 632,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
       ],
-      "huntClaimedCycle": 0,
+      "huntClaimedCycle": 9,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {},
@@ -711,9 +723,10 @@
         "2026-06-09": 0,
         "2026-06-10": 0,
         "2026-06-13": 4608,
-        "2026-06-12": 11161
+        "2026-06-12": 11161,
+        "2026-06-11": 11514
       },
-      "totalSteps": 131133
+      "totalSteps": 142647
     },
     "allen": {
       "steps": {
