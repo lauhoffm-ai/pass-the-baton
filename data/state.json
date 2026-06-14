@@ -569,14 +569,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "prairie_fire",
-      "revealed": true,
-      "cycleNum": 8
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 9
     },
     "dust": {
-      "cardId": "prairie_fire",
-      "revealed": true,
-      "cycleNum": 8
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 9
     }
   },
   "players": {
