@@ -450,6 +450,12 @@
         },
         {
           "team": "dust",
+          "text": "SWEETWATER REACHED!",
+          "miles": 25,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
@@ -471,12 +477,6 @@
           "text": "DEAD WEIGHT: JORDAN",
           "miles": -10,
           "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "SWEETWATER REACHED!",
-          "miles": 25,
-          "cls": "hp"
         }
       ]
     }
@@ -512,7 +512,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 605,
+      "miles": 612,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -739,9 +739,10 @@
         "2026-06-09": 0,
         "2026-06-10": 0,
         "2026-06-13": 6060,
-        "2026-06-12": 12318
+        "2026-06-12": 12318,
+        "2026-06-11": 12592
       },
-      "totalSteps": 186982
+      "totalSteps": 199574
     }
   },
   "appliedMigrations": [
