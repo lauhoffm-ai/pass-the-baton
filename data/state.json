@@ -205,7 +205,8 @@
     "dust": [
       250,
       350,
-      450
+      450,
+      600
     ]
   },
   "history": [
@@ -470,6 +471,12 @@
           "text": "DEAD WEIGHT: JORDAN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "SWEETWATER REACHED!",
+          "miles": 25,
+          "cls": "hp"
         }
       ]
     }
@@ -505,7 +512,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 598,
+      "miles": 605,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -646,9 +653,10 @@
         "2026-06-09": 0,
         "2026-06-10": 0,
         "2026-06-13": 23085,
-        "2026-06-12": 9856
+        "2026-06-12": 9856,
+        "2026-06-11": 14356
       },
-      "totalSteps": 290339
+      "totalSteps": 304695
     },
     "kaykay": {
       "steps": {
