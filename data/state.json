@@ -487,35 +487,35 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "SOUTH PASS REACHED!",
           "miles": 25,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 855,
+      "miles": 861,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -720,9 +720,10 @@
         "2026-06-10": 7547,
         "2026-06-13": 21369,
         "2026-06-12": 9789,
-        "2026-06-11": 21031
+        "2026-06-11": 21031,
+        "2026-06-15": 8702
       },
-      "totalSteps": 291576
+      "totalSteps": 300278
     },
     "lauren": {
       "steps": {
