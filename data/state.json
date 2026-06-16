@@ -190,13 +190,13 @@
     }
   ],
   "deadWeight": {
-    "lauren": 1,
+    "lauren": 0,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "allen": 0
+    "allen": 1
   },
   "dysentery": {
     "dustPlayer": "chris",
@@ -544,7 +544,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 682,
+      "miles": 684,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -780,9 +780,10 @@
         "2026-06-10": 9656,
         "2026-06-13": 6060,
         "2026-06-12": 12318,
-        "2026-06-11": 12592
+        "2026-06-11": 12592,
+        "2026-06-15": 3750
       },
-      "totalSteps": 221382
+      "totalSteps": 225132
     }
   },
   "appliedMigrations": [
