@@ -213,7 +213,8 @@
       350,
       450,
       600,
-      700
+      700,
+      850
     ],
     "dust": [
       250,
@@ -502,13 +503,19 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "SOUTH PASS REACHED!",
+          "miles": 25,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 824,
+      "miles": 855,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -623,9 +630,10 @@
         "2026-06-10": 11254,
         "2026-06-13": 10806,
         "2026-06-12": 7611,
-        "2026-06-11": 11110
+        "2026-06-11": 11110,
+        "2026-06-15": 8758
       },
-      "totalSteps": 258309
+      "totalSteps": 267067
     },
     "shania": {
       "steps": {
