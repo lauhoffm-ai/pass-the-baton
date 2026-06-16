@@ -159,6 +159,18 @@
       "date": "2026-06-11"
     },
     {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-06-11"
+    },
+    {
+      "team": "dust",
+      "miles": -25,
+      "reason": "PRAIRIE FIRE LOST",
+      "date": "2026-06-11"
+    },
+    {
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
@@ -180,18 +192,6 @@
       "team": "mud",
       "miles": -10,
       "reason": "DEAD WEIGHT: JORDAN",
-      "date": "2026-06-11"
-    },
-    {
-      "team": "mud",
-      "miles": 15,
-      "reason": "HUNT SUCCESSFUL",
-      "date": "2026-06-11"
-    },
-    {
-      "team": "dust",
-      "miles": -25,
-      "reason": "PRAIRIE FIRE LOST",
       "date": "2026-06-11"
     }
   ],
@@ -475,9 +475,9 @@
         },
         {
           "team": "dust",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
+          "text": "PRAIRIE FIRE: DUST LOST",
+          "miles": -25,
+          "cls": "hn"
         },
         {
           "team": "dust",
@@ -502,18 +502,6 @@
           "text": "DEAD WEIGHT: JORDAN",
           "miles": -10,
           "cls": "hn"
-        },
-        {
-          "team": "mud",
-          "text": "HUNT SUCCESSFUL",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "PRAIRIE FIRE: DUST LOST",
-          "miles": -25,
-          "cls": "hn"
         }
       ]
     }
@@ -526,7 +514,7 @@
         "wagon_mud",
         "dysentery"
       ],
-      "huntClaimedCycle": 9,
+      "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
@@ -549,12 +537,12 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 607,
+      "miles": 620,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
       ],
-      "huntClaimedCycle": 9,
+      "huntClaimedCycle": 0,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {},
@@ -659,13 +647,13 @@
         "2026-06-06": 7234,
         "2026-06-07": 4953,
         "2026-06-08": 19673,
-        "2026-06-09": 0,
+        "2026-06-09": 24982,
         "2026-06-10": 0,
         "2026-06-13": 8778,
         "2026-06-12": 8872,
         "2026-06-11": 23256
       },
-      "totalSteps": 315542
+      "totalSteps": 340524
     },
     "chris": {
       "steps": {
