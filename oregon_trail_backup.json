@@ -220,7 +220,8 @@
       250,
       350,
       450,
-      600
+      600,
+      700
     ]
   },
   "history": [
@@ -491,7 +492,13 @@
           "text": "SOUTH PASS REACHED!",
           "miles": 25,
           "cls": "hp"
-        },
+        }
+      ]
+    },
+    {
+      "cycle": 10,
+      "dateRange": "JUN 17",
+      "events": [
         {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
@@ -509,6 +516,12 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "INDEP. ROCK REACHED!",
+          "miles": 30,
+          "cls": "hp"
         }
       ]
     }
@@ -544,7 +557,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 697,
+      "miles": 700,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -757,9 +770,10 @@
         "2026-06-12": 11161,
         "2026-06-11": 11514,
         "2026-06-15": 4635,
-        "2026-06-14": 6146
+        "2026-06-14": 6146,
+        "2026-06-16": 6698
       },
-      "totalSteps": 161564
+      "totalSteps": 168262
     },
     "allen": {
       "steps": {
