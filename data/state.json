@@ -173,24 +173,6 @@
     },
     {
       "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-30"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-06-10"
-    },
-    {
-      "team": "dust",
       "miles": 15,
       "reason": "HUNTING PARTY: SHANIA",
       "date": "2026-06-16"
@@ -206,16 +188,34 @@
       "miles": 15,
       "reason": "HUNTING PARTY: JORDAN",
       "date": "2026-06-16"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-30"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-06-10"
     }
   ],
   "deadWeight": {
-    "lauren": 0,
+    "lauren": 1,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "allen": 1
+    "allen": 0
   },
   "dysentery": {
     "dustPlayer": "chris",
@@ -523,24 +523,6 @@
       "events": [
         {
           "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
           "text": "INDEP. ROCK REACHED!",
           "miles": 30,
           "cls": "hp"
@@ -568,6 +550,24 @@
           "text": "HUNTING PARTY: JORDAN",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -605,7 +605,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 743,
+      "miles": 745,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -825,9 +825,10 @@
         "2026-06-11": 11514,
         "2026-06-15": 4635,
         "2026-06-14": 6146,
-        "2026-06-16": 6698
+        "2026-06-16": 6698,
+        "2026-06-17": 3216
       },
-      "totalSteps": 168262
+      "totalSteps": 171478
     },
     "allen": {
       "steps": {
