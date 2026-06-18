@@ -605,7 +605,8 @@
       "miles": 743,
       "frozenUntilSteps": 0,
       "rareUsed": [
-        "dysentery"
+        "dysentery",
+        "wagon_mud"
       ],
       "huntClaimedCycle": 9,
       "mvpThisCycle": null,
@@ -627,8 +628,8 @@
       "cycleNum": 10
     },
     "dust": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "wagon_mud",
+      "revealed": true,
       "cycleNum": 10
     }
   },
