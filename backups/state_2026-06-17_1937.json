@@ -1,0 +1,888 @@
+{
+  "version": 5,
+  "challengeStart": "2026-05-21",
+  "prairieFireCycle": 8,
+  "prairieFireFired": true,
+  "closedCycles": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "mileAdj": [
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-05-22"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-05-27"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-05-27"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-05-25"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "PIONEER SPIRIT",
+      "date": "2026-05-31"
+    },
+    {
+      "team": "mud",
+      "miles": -15,
+      "reason": "RIVER CROSSING MISSED",
+      "date": "2026-05-29"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-05-30"
+    },
+    {
+      "team": "mud",
+      "miles": 6,
+      "reason": "DYSENTERY ERROR CORRECTION",
+      "date": "2026-06-03"
+    },
+    {
+      "team": "mud",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-06-05"
+    },
+    {
+      "team": "dust",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-06-05"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-06-04"
+    },
+    {
+      "team": "mud",
+      "miles": -20,
+      "reason": "BROKEN AXLE MISSED",
+      "date": "2026-06-04"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: SHANIA",
+      "date": "2026-06-04"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: CHRIS",
+      "date": "2026-06-04"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: MICHAEL",
+      "date": "2026-06-04"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: CHRIS",
+      "date": "2026-06-07"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: KAYKAY",
+      "date": "2026-06-07"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: ALLEN",
+      "date": "2026-06-07"
+    },
+    {
+      "team": "mud",
+      "miles": 20,
+      "reason": "BROKEN AXLE PENALTY CORRECTION",
+      "date": "2026-06-08"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: SHANIA",
+      "date": "2026-06-10"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: MICHAEL",
+      "date": "2026-06-10"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: JORDAN",
+      "date": "2026-06-10"
+    },
+    {
+      "team": "dust",
+      "miles": -15,
+      "reason": "RIVER CROSSING MISSED",
+      "date": "2026-06-10"
+    },
+    {
+      "team": "dust",
+      "miles": -25,
+      "reason": "PRAIRIE FIRE LOST",
+      "date": "2026-06-11"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-06-11"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-06-11"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-30"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-06-10"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: SHANIA",
+      "date": "2026-06-16"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: MICHAEL",
+      "date": "2026-06-16"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: JORDAN",
+      "date": "2026-06-16"
+    }
+  ],
+  "deadWeight": {
+    "lauren": 0,
+    "michael": 0,
+    "jordan": 0,
+    "shania": 0,
+    "chris": 0,
+    "kaykay": 0,
+    "allen": 1
+  },
+  "dysentery": {
+    "dustPlayer": "chris",
+    "affectedDate": "2026-06-05",
+    "revealDate": "2026-06-06"
+  },
+  "mvpVotes": {
+    "mud": {
+      "michael": "kaykay"
+    },
+    "dust": {}
+  },
+  "landmarksHit": {
+    "mud": [
+      250,
+      350,
+      450,
+      600,
+      700,
+      850
+    ],
+    "dust": [
+      250,
+      350,
+      450,
+      600,
+      700
+    ]
+  },
+  "history": [
+    {
+      "cycle": 1,
+      "dateRange": "MAY 21",
+      "events": [
+        {
+          "team": "mud",
+          "text": "TRADING POST MVP: JORDAN",
+          "miles": 0,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "TRADING POST MVP: SHANIA",
+          "miles": 0,
+          "cls": "hp"
+        }
+      ]
+    },
+    {
+      "cycle": 2,
+      "dateRange": "MAY 25",
+      "events": [
+        {
+          "team": "mud",
+          "text": "HUNT SUCCESSFUL",
+          "miles": 15,
+          "cls": "hp"
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "dateRange": "MAY 27",
+      "events": [
+        {
+          "team": "mud",
+          "text": "HUNT SUCCESSFUL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "PLATTE RIVER REACHED!",
+          "miles": 20,
+          "cls": "hp"
+        }
+      ]
+    },
+    {
+      "cycle": 4,
+      "dateRange": "MAY 31",
+      "events": [
+        {
+          "team": "dust",
+          "text": "PIONEER SPIRIT",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "RIVER CROSSING MISSED",
+          "miles": -15,
+          "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "CHIMNEY ROCK REACHED!",
+          "miles": 25,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNT SUCCESSFUL",
+          "miles": 15,
+          "cls": "hp"
+        }
+      ]
+    },
+    {
+      "cycle": 5,
+      "dateRange": "JUN 2",
+      "events": [
+        {
+          "team": "dust",
+          "text": "PLATTE RIVER REACHED!",
+          "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "DYSENTERY ERROR CORRECTION",
+          "miles": 6,
+          "cls": "hp"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "dateRange": "JUN 5",
+      "events": [
+        {
+          "team": "mud",
+          "text": "FAIR WEATHER BONUS",
+          "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "FAIR WEATHER BONUS",
+          "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "CHIMNEY ROCK REACHED!",
+          "miles": 25,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "FT. LARAMIE REACHED!",
+          "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "BROKEN AXLE MISSED (0/3)",
+          "miles": -20,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: SHANIA",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: CHRIS",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: MICHAEL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "FT. LARAMIE REACHED!",
+          "miles": 20,
+          "cls": "hp"
+        }
+      ]
+    },
+    {
+      "cycle": 7,
+      "dateRange": "JUN 8",
+      "events": [
+        {
+          "team": "mud",
+          "text": "BROKEN AXLE COMPLETED!",
+          "miles": 0,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: CHRIS",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: KAYKAY",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: ALLEN",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "BROKEN AXLE PENALTY CORRECTION",
+          "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "SWEETWATER REACHED!",
+          "miles": 25,
+          "cls": "hp"
+        }
+      ]
+    },
+    {
+      "cycle": 8,
+      "dateRange": "JUN 13",
+      "events": [
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: SHANIA",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: MICHAEL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: JORDAN",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "RIVER CROSSING MISSED",
+          "miles": -15,
+          "cls": "hn"
+        }
+      ]
+    },
+    {
+      "cycle": 9,
+      "dateRange": "JUN 14",
+      "events": [
+        {
+          "team": "mud",
+          "text": "INDEP. ROCK REACHED!",
+          "miles": 30,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "SWEETWATER REACHED!",
+          "miles": 25,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "PRAIRIE FIRE: DUST LOST",
+          "miles": -25,
+          "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "HUNT SUCCESSFUL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "HUNT SUCCESSFUL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "SOUTH PASS REACHED!",
+          "miles": 25,
+          "cls": "hp"
+        }
+      ]
+    },
+    {
+      "cycle": 10,
+      "dateRange": "JUN 17",
+      "events": [
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "INDEP. ROCK REACHED!",
+          "miles": 30,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "OX WORE OUT - 10% PENALTY DAY 2",
+          "miles": 0,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: SHANIA",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: MICHAEL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: JORDAN",
+          "miles": 15,
+          "cls": "hp"
+        }
+      ]
+    }
+  ],
+  "teams": {
+    "mud": {
+      "miles": 930,
+      "frozenUntilSteps": 0,
+      "rareUsed": [
+        "wagon_mud",
+        "dysentery"
+      ],
+      "huntClaimedCycle": 9,
+      "mvpThisCycle": null,
+      "mvpNextCycle": "kaykay",
+      "liftSubs": {
+        "michael": {
+          "weight": 275,
+          "date": "2026-05-25"
+        },
+        "jordan": {
+          "weight": 135,
+          "date": "2026-05-25"
+        },
+        "kaykay": {
+          "weight": 255,
+          "date": "2026-05-25"
+        }
+      },
+      "axleSubs": {
+        "_ox_2026-06-15": true
+      },
+      "pioneerEarned": [],
+      "frozenDates": [],
+      "pioneerCheckedSunday": "2026-06-07"
+    },
+    "dust": {
+      "miles": 743,
+      "frozenUntilSteps": 0,
+      "rareUsed": [
+        "dysentery",
+        "wagon_mud"
+      ],
+      "huntClaimedCycle": 9,
+      "mvpThisCycle": null,
+      "mvpNextCycle": null,
+      "liftSubs": {},
+      "axleSubs": {},
+      "pioneerEarned": [
+        4
+      ],
+      "frozenDates": [],
+      "pioneerCheckedSunday": "2026-06-07",
+      "frozenSinceCycle": 0
+    }
+  },
+  "cards": {
+    "mud": {
+      "cardId": "trading_post",
+      "revealed": true,
+      "cycleNum": 10
+    },
+    "dust": {
+      "cardId": "wagon_mud",
+      "revealed": true,
+      "cycleNum": 10
+    }
+  },
+  "players": {
+    "michael": {
+      "steps": {
+        "2026-05-21": 20826,
+        "2026-05-22": 17163,
+        "2026-05-23": 11684,
+        "2026-05-24": 13616,
+        "2026-05-25": 10895,
+        "2026-05-27": 15832,
+        "2026-05-26": 11966,
+        "2026-05-28": 16351,
+        "2026-05-29": 10134,
+        "2026-05-30": 17324,
+        "2026-05-31": 11934,
+        "2026-06-02": 9635,
+        "2026-06-01": 18094,
+        "2026-06-03": 20100,
+        "2026-06-04": 12063,
+        "2026-06-05": 12215,
+        "2026-06-06": 8256,
+        "2026-06-07": 8060,
+        "2026-06-08": 17794,
+        "2026-06-09": 9241,
+        "2026-06-10": 18447,
+        "2026-06-13": 8901,
+        "2026-06-12": 11670,
+        "2026-06-11": 15583,
+        "2026-06-15": 19798,
+        "2026-06-14": 10035,
+        "2026-06-16": 13376
+      },
+      "totalSteps": 357617
+    },
+    "jordan": {
+      "steps": {
+        "2026-05-21": 14873,
+        "2026-05-22": 14389,
+        "2026-05-23": 5888,
+        "2026-05-24": 11914,
+        "2026-05-25": 10025,
+        "2026-05-26": 12027,
+        "2026-05-27": 16991,
+        "2026-05-28": 14543,
+        "2026-05-29": 5473,
+        "2026-05-30": 13713,
+        "2026-05-31": 11314,
+        "2026-06-02": 7960,
+        "2026-06-01": 10683,
+        "2026-06-03": 8869,
+        "2026-06-04": 14542,
+        "2026-06-05": 8192,
+        "2026-06-06": 7203,
+        "2026-06-07": 8295,
+        "2026-06-08": 11284,
+        "2026-06-09": 9350,
+        "2026-06-10": 11254,
+        "2026-06-13": 10806,
+        "2026-06-12": 7611,
+        "2026-06-11": 11110,
+        "2026-06-15": 8758,
+        "2026-06-14": 12515,
+        "2026-06-16": 13092
+      },
+      "totalSteps": 279582
+    },
+    "shania": {
+      "steps": {
+        "2026-05-21": 21272,
+        "2026-05-22": 15181,
+        "2026-05-23": 3266,
+        "2026-05-24": 3721,
+        "2026-05-25": 3210,
+        "2026-05-26": 29331,
+        "2026-05-27": 22147,
+        "2026-05-28": 20897,
+        "2026-05-29": 19560,
+        "2026-05-31": 15070,
+        "2026-05-30": 15559,
+        "2026-06-02": 19292,
+        "2026-06-01": 17591,
+        "2026-06-03": 11503,
+        "2026-06-04": 17843,
+        "2026-06-05": 7333,
+        "2026-06-06": 7234,
+        "2026-06-07": 4953,
+        "2026-06-08": 19673,
+        "2026-06-09": 24982,
+        "2026-06-10": 19457,
+        "2026-06-13": 8778,
+        "2026-06-12": 8872,
+        "2026-06-11": 23256,
+        "2026-06-15": 25706,
+        "2026-06-14": 7688,
+        "2026-06-16": 25429
+      },
+      "totalSteps": 393375
+    },
+    "chris": {
+      "steps": {
+        "2026-05-21": 8260,
+        "2026-05-22": 18320,
+        "2026-05-23": 12535,
+        "2026-05-24": 10759,
+        "2026-05-25": 17796,
+        "2026-05-27": 17226,
+        "2026-05-28": 5002,
+        "2026-05-26": 19728,
+        "2026-05-29": 12966,
+        "2026-05-30": 4754,
+        "2026-05-31": 9988,
+        "2026-06-01": 14127,
+        "2026-06-02": 22093,
+        "2026-06-03": 15018,
+        "2026-06-04": 9684,
+        "2026-06-05": 17489,
+        "2026-06-06": 19990,
+        "2026-06-07": 11407,
+        "2026-06-08": 10256,
+        "2026-06-09": 20493,
+        "2026-06-10": 12395,
+        "2026-06-13": 23085,
+        "2026-06-12": 9856,
+        "2026-06-11": 14356,
+        "2026-06-15": 11748,
+        "2026-06-14": 5580,
+        "2026-06-16": 14898
+      },
+      "totalSteps": 354911
+    },
+    "kaykay": {
+      "steps": {
+        "2026-05-21": 8555,
+        "2026-05-22": 20089,
+        "2026-05-23": 10767,
+        "2026-05-24": 7976,
+        "2026-05-25": 11262,
+        "2026-05-26": 9299,
+        "2026-05-27": 11727,
+        "2026-05-28": 10079,
+        "2026-05-29": 10113,
+        "2026-05-30": 15060,
+        "2026-05-31": 10373,
+        "2026-06-02": 12895,
+        "2026-06-01": 8671,
+        "2026-06-03": 8518,
+        "2026-06-04": 10065,
+        "2026-06-05": 15897,
+        "2026-06-06": 21191,
+        "2026-06-07": 10716,
+        "2026-06-08": 8351,
+        "2026-06-09": 10236,
+        "2026-06-10": 7547,
+        "2026-06-13": 21369,
+        "2026-06-12": 9789,
+        "2026-06-11": 21031,
+        "2026-06-15": 8702,
+        "2026-06-14": 3391,
+        "2026-06-16": 9719
+      },
+      "totalSteps": 303669
+    },
+    "lauren": {
+      "steps": {
+        "2026-05-21": 6412,
+        "2026-05-22": 6131,
+        "2026-05-23": 889,
+        "2026-05-24": 4635,
+        "2026-05-25": 3321,
+        "2026-05-26": 5047,
+        "2026-05-27": 13708,
+        "2026-05-28": 1044,
+        "2026-05-31": 1221,
+        "2026-05-29": 4652,
+        "2026-05-30": 3142,
+        "2026-06-02": 12013,
+        "2026-06-01": 5013,
+        "2026-06-03": 10443,
+        "2026-06-04": 9530,
+        "2026-06-05": 5299,
+        "2026-06-06": 10277,
+        "2026-06-07": 9433,
+        "2026-06-08": 3154,
+        "2026-06-09": 1340,
+        "2026-06-10": 6796,
+        "2026-06-13": 4608,
+        "2026-06-12": 11161,
+        "2026-06-11": 11514,
+        "2026-06-15": 4635,
+        "2026-06-14": 6146,
+        "2026-06-16": 6698
+      },
+      "totalSteps": 168262
+    },
+    "allen": {
+      "steps": {
+        "2026-05-21": 8775,
+        "2026-05-22": 10284,
+        "2026-05-23": 2815,
+        "2026-05-24": 11329,
+        "2026-05-25": 5555,
+        "2026-05-26": 9700,
+        "2026-05-27": 16402,
+        "2026-05-28": 6324,
+        "2026-05-29": 5640,
+        "2026-05-31": 4956,
+        "2026-05-30": 4443,
+        "2026-06-02": 7532,
+        "2026-06-01": 13174,
+        "2026-06-03": 7598,
+        "2026-06-04": 14303,
+        "2026-06-05": 14952,
+        "2026-06-06": 7639,
+        "2026-06-07": 9859,
+        "2026-06-08": 7324,
+        "2026-06-09": 12152,
+        "2026-06-10": 9656,
+        "2026-06-13": 6060,
+        "2026-06-12": 12318,
+        "2026-06-11": 12592,
+        "2026-06-15": 3750,
+        "2026-06-14": 6662,
+        "2026-06-16": 15226
+      },
+      "totalSteps": 231794
+    }
+  },
+  "appliedMigrations": [
+    "lauren_dw_cycle1",
+    "clear_stale_mvp_badges",
+    "remove_bad_dw_cycle3_v2",
+    "cleanup_stale_migrations_v1",
+    "remove_bad_pioneer_v1",
+    "dedup_hunt_successful_v1",
+    "cycle1_mvp_bonus_already_applied",
+    "dedup_hunt_successful_v2",
+    "reset_cycle4_cards",
+    "reset_cycle4_cards_v2",
+    "lauren_dw_may31",
+    "restore_dust_wagon_freeze_v1",
+    "restore_cycle5_cards_v1",
+    "ensure_lauren_dw_may30",
+    "clear_dust_wagon_freeze_v1",
+    "fix_dust_frozen_dates_v1",
+    "cleanup_cycle5_ghosts_v1",
+    "fix_mud_hunt_cycle_v1",
+    "restore_cycle5_for_close_v1",
+    "restore_cycle6_cards_v1",
+    "restore_cycle6_cards_v2"
+  ],
+  "_pingTest": true
+}
