@@ -11,7 +11,8 @@
     5,
     6,
     7,
-    8
+    8,
+    9
   ],
   "mileAdj": [
     {
@@ -187,6 +188,24 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: SHANIA",
+      "date": "2026-06-16"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: MICHAEL",
+      "date": "2026-06-16"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: JORDAN",
+      "date": "2026-06-16"
     }
   ],
   "deadWeight": {
@@ -522,13 +541,37 @@
           "text": "INDEP. ROCK REACHED!",
           "miles": 30,
           "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "OX WORE OUT - 10% PENALTY DAY 2",
+          "miles": 0,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: SHANIA",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: MICHAEL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: JORDAN",
+          "miles": 15,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 878,
+      "miles": 930,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -551,13 +594,15 @@
           "date": "2026-05-25"
         }
       },
-      "axleSubs": {},
+      "axleSubs": {
+        "_ox_2026-06-15": true
+      },
       "pioneerEarned": [],
       "frozenDates": [],
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 700,
+      "miles": 743,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery"
@@ -577,14 +622,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "ox_wore_out",
+      "cardId": "trading_post",
       "revealed": true,
-      "cycleNum": 9
+      "cycleNum": 10
     },
     "dust": {
-      "cardId": "hunting_party",
-      "revealed": true,
-      "cycleNum": 9
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 10
     }
   },
   "players": {
@@ -615,7 +660,8 @@
         "2026-06-12": 11670,
         "2026-06-11": 15583,
         "2026-06-15": 19798,
-        "2026-06-14": 10035
+        "2026-06-14": 10035,
+        "2026-06-16": 13376
       },
       "totalSteps": 357617
     },
@@ -646,7 +692,8 @@
         "2026-06-12": 7611,
         "2026-06-11": 11110,
         "2026-06-15": 8758,
-        "2026-06-14": 12515
+        "2026-06-14": 12515,
+        "2026-06-16": 13092
       },
       "totalSteps": 279582
     },
@@ -677,7 +724,8 @@
         "2026-06-12": 8872,
         "2026-06-11": 23256,
         "2026-06-15": 25706,
-        "2026-06-14": 7688
+        "2026-06-14": 7688,
+        "2026-06-16": 25429
       },
       "totalSteps": 393375
     },
@@ -708,7 +756,8 @@
         "2026-06-12": 9856,
         "2026-06-11": 14356,
         "2026-06-15": 11748,
-        "2026-06-14": 5580
+        "2026-06-14": 5580,
+        "2026-06-16": 14898
       },
       "totalSteps": 354911
     },
@@ -739,7 +788,8 @@
         "2026-06-12": 9789,
         "2026-06-11": 21031,
         "2026-06-15": 8702,
-        "2026-06-14": 3391
+        "2026-06-14": 3391,
+        "2026-06-16": 9719
       },
       "totalSteps": 303669
     },
@@ -802,7 +852,8 @@
         "2026-06-12": 12318,
         "2026-06-11": 12592,
         "2026-06-15": 3750,
-        "2026-06-14": 6662
+        "2026-06-14": 6662,
+        "2026-06-16": 15226
       },
       "totalSteps": 231794
     }
