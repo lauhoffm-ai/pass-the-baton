@@ -225,7 +225,8 @@
   "mvpVotes": {
     "mud": {
       "michael": "kaykay",
-      "jordan": "kaykay"
+      "jordan": "kaykay",
+      "kaykay": "michael"
     },
     "dust": {}
   },
@@ -574,7 +575,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 930,
+      "miles": 949,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -605,7 +606,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 745,
+      "miles": 791,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
