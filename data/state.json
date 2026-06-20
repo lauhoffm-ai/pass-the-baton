@@ -237,7 +237,8 @@
       450,
       600,
       700,
-      850
+      850,
+      1000
     ],
     "dust": [
       250,
@@ -575,13 +576,19 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "FT. BRIDGER REACHED!",
+          "miles": 20,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 979,
+      "miles": 1014,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -708,9 +715,10 @@
         "2026-06-15": 8758,
         "2026-06-14": 12515,
         "2026-06-16": 13092,
-        "2026-06-17": 10459
+        "2026-06-17": 10459,
+        "2026-06-18": 7812
       },
-      "totalSteps": 279582
+      "totalSteps": 310945
     },
     "shania": {
       "steps": {
