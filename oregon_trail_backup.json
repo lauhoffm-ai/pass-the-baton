@@ -209,13 +209,13 @@
     }
   ],
   "deadWeight": {
-    "lauren": 2,
+    "lauren": 0,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "allen": 0
+    "allen": 1
   },
   "dysentery": {
     "dustPlayer": "chris",
@@ -890,9 +890,10 @@
         "2026-06-14": 6662,
         "2026-06-16": 15226,
         "2026-06-17": 11083,
-        "2026-06-19": 3113
+        "2026-06-19": 3113,
+        "2026-06-18": 440
       },
-      "totalSteps": 261216
+      "totalSteps": 261656
     }
   },
   "appliedMigrations": [
