@@ -628,7 +628,12 @@
       "huntClaimedCycle": 9,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
-      "liftSubs": {},
+      "liftSubs": {
+        "chris": {
+          "weight": 280,
+          "date": "2026-06-19"
+        }
+      },
       "axleSubs": {},
       "pioneerEarned": [
         4
