@@ -560,28 +560,28 @@
       "dateRange": "JUN 20",
       "events": [
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "FT. BRIDGER REACHED!",
           "miles": 20,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -619,7 +619,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 812,
+      "miles": 823,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -750,9 +750,10 @@
         "2026-06-14": 7688,
         "2026-06-16": 25429,
         "2026-06-17": 23858,
-        "2026-06-19": 7802
+        "2026-06-19": 7802,
+        "2026-06-18": 21257
       },
-      "totalSteps": 450464
+      "totalSteps": 471721
     },
     "chris": {
       "steps": {
