@@ -643,8 +643,8 @@
   },
   "cards": {
     "mud": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "trading_post",
+      "revealed": true,
       "cycleNum": 11
     },
     "dust": {
