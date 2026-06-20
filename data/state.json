@@ -648,8 +648,8 @@
       "cycleNum": 11
     },
     "dust": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "hunting_party",
+      "revealed": true,
       "cycleNum": 11
     }
   },
