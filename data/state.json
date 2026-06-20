@@ -209,7 +209,7 @@
     }
   ],
   "deadWeight": {
-    "lauren": 1,
+    "lauren": 2,
     "michael": 0,
     "jordan": 0,
     "shania": 0,
@@ -551,7 +551,13 @@
           "text": "HUNTING PARTY: JORDAN",
           "miles": 15,
           "cls": "hp"
-        },
+        }
+      ]
+    },
+    {
+      "cycle": 11,
+      "dateRange": "JUN 20",
+      "events": [
         {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
@@ -575,7 +581,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 949,
+      "miles": 955,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -667,9 +673,10 @@
         "2026-06-15": 19798,
         "2026-06-14": 10035,
         "2026-06-16": 13376,
-        "2026-06-17": 15173
+        "2026-06-17": 15173,
+        "2026-06-19": 8629
       },
-      "totalSteps": 357617
+      "totalSteps": 394795
     },
     "jordan": {
       "steps": {
