@@ -12,7 +12,8 @@
     6,
     7,
     8,
-    9
+    9,
+    10
   ],
   "mileAdj": [
     {
@@ -223,11 +224,7 @@
     "revealDate": "2026-06-06"
   },
   "mvpVotes": {
-    "mud": {
-      "michael": "kaykay",
-      "jordan": "kaykay",
-      "kaykay": "michael"
-    },
+    "mud": {},
     "dust": {}
   },
   "landmarksHit": {
@@ -582,13 +579,19 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "TRADING POST MVP: KAYKAY (+1K/DAY THIS CYCLE)",
+          "miles": 0,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1021,
+      "miles": 1031,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -628,20 +631,7 @@
       "huntClaimedCycle": 9,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
-      "liftSubs": {
-        "chris": {
-          "weight": 280,
-          "date": "2026-06-19"
-        },
-        "shania": {
-          "weight": 365,
-          "date": "2026-06-19"
-        },
-        "allen": {
-          "weight": 155,
-          "date": "2026-06-19"
-        }
-      },
+      "liftSubs": {},
       "axleSubs": {},
       "pioneerEarned": [
         4
@@ -655,12 +645,12 @@
     "mud": {
       "cardId": "trading_post",
       "revealed": true,
-      "cycleNum": 10
+      "cycleNum": 11
     },
     "dust": {
-      "cardId": "wagon_mud",
+      "cardId": "hunting_party",
       "revealed": true,
-      "cycleNum": 10
+      "cycleNum": 11
     }
   },
   "players": {
@@ -729,7 +719,8 @@
         "2026-06-14": 12515,
         "2026-06-16": 13092,
         "2026-06-17": 10459,
-        "2026-06-18": 7812
+        "2026-06-18": 7812,
+        "2026-06-19": 10709
       },
       "totalSteps": 310945
     },
@@ -832,11 +823,11 @@
         "2026-06-15": 8702,
         "2026-06-14": 3391,
         "2026-06-16": 9719,
-        "2026-06-17": 3320,
-        "2026-06-19": 18750,
-        "2026-06-18": 11196
+        "2026-06-17": 4320,
+        "2026-06-19": 19750,
+        "2026-06-18": 12196
       },
-      "totalSteps": 346654
+      "totalSteps": 349654
     },
     "lauren": {
       "steps": {
