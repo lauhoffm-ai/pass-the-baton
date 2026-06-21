@@ -224,7 +224,9 @@
     "revealDate": "2026-06-06"
   },
   "mvpVotes": {
-    "mud": {},
+    "mud": {
+      "kaykay": "michael"
+    },
     "dust": {}
   },
   "landmarksHit": {
@@ -606,7 +608,7 @@
       ],
       "huntClaimedCycle": 9,
       "mvpThisCycle": null,
-      "mvpNextCycle": "kaykay",
+      "mvpNextCycle": "michael",
       "liftSubs": {
         "michael": {
           "weight": 275,
