@@ -571,27 +571,27 @@
         },
         {
           "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
           "text": "SOUTH PASS REACHED!",
           "miles": 25,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -629,7 +629,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 852,
+      "miles": 853,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -908,10 +908,10 @@
         "2026-06-16": 15226,
         "2026-06-17": 11083,
         "2026-06-19": 3113,
-        "2026-06-18": 440,
+        "2026-06-18": 1317,
         "2026-06-20": 7541
       },
-      "totalSteps": 269197
+      "totalSteps": 270074
     }
   },
   "appliedMigrations": [
