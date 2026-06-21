@@ -216,7 +216,7 @@
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "allen": 1
+    "allen": 2
   },
   "dysentery": {
     "dustPlayer": "chris",
@@ -563,35 +563,35 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "TRADING POST MVP: KAYKAY (+1K/DAY THIS CYCLE)",
           "miles": 0,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1031,
+      "miles": 1038,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -685,9 +685,10 @@
         "2026-06-16": 13376,
         "2026-06-17": 15173,
         "2026-06-19": 8629,
-        "2026-06-18": 17078
+        "2026-06-18": 17078,
+        "2026-06-20": 10825
       },
-      "totalSteps": 411873
+      "totalSteps": 422698
     },
     "jordan": {
       "steps": {
