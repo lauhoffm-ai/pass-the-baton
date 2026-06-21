@@ -213,10 +213,10 @@
     "lauren": 0,
     "michael": 0,
     "jordan": 0,
-    "shania": 0,
+    "shania": 1,
     "chris": 0,
     "kaykay": 0,
-    "allen": 2
+    "allen": 0
   },
   "dysentery": {
     "dustPlayer": "chris",
@@ -242,7 +242,8 @@
       350,
       450,
       600,
-      700
+      700,
+      850
     ]
   },
   "history": [
@@ -585,6 +586,12 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "SOUTH PASS REACHED!",
+          "miles": 25,
+          "cls": "hp"
         }
       ]
     }
@@ -622,7 +629,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 848,
+      "miles": 852,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -901,9 +908,10 @@
         "2026-06-16": 15226,
         "2026-06-17": 11083,
         "2026-06-19": 3113,
-        "2026-06-18": 440
+        "2026-06-18": 440,
+        "2026-06-20": 7541
       },
-      "totalSteps": 261656
+      "totalSteps": 269197
     }
   },
   "appliedMigrations": [
