@@ -226,7 +226,8 @@
   "mvpVotes": {
     "mud": {
       "kaykay": "michael",
-      "michael": "kaykay"
+      "michael": "kaykay",
+      "jordan": "kaykay"
     },
     "dust": {}
   },
@@ -609,7 +610,7 @@
       ],
       "huntClaimedCycle": 9,
       "mvpThisCycle": null,
-      "mvpNextCycle": "michael",
+      "mvpNextCycle": "kaykay",
       "liftSubs": {
         "michael": {
           "weight": 275,
