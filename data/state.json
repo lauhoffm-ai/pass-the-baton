@@ -659,7 +659,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 1104,
+      "miles": 1109,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -711,8 +711,8 @@
   },
   "cards": {
     "mud": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "hunting_party",
+      "revealed": true,
       "cycleNum": 12
     },
     "dust": {
