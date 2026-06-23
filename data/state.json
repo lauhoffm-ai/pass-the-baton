@@ -711,14 +711,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "trading_post",
-      "revealed": true,
-      "cycleNum": 11
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 12
     },
     "dust": {
-      "cardId": "hunting_party",
-      "revealed": true,
-      "cycleNum": 11
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 12
     }
   },
   "players": {
