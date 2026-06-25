@@ -193,24 +193,6 @@
     },
     {
       "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-30"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-06-10"
-    },
-    {
-      "team": "dust",
       "miles": 15,
       "reason": "HUNT SUCCESSFUL",
       "date": "2026-06-22"
@@ -244,16 +226,34 @@
       "miles": 20,
       "reason": "FAIR WEATHER",
       "date": "2026-06-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-30"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-06-10"
     }
   ],
   "deadWeight": {
     "lauren": 0,
     "michael": 0,
-    "jordan": 1,
+    "jordan": 0,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
-    "allen": 0
+    "allen": 1
   },
   "dysentery": {
     "dustPlayer": "chris",
@@ -272,7 +272,8 @@
       600,
       700,
       850,
-      1000
+      1000,
+      1150
     ],
     "dust": [
       250,
@@ -280,7 +281,8 @@
       450,
       600,
       700,
-      850
+      850,
+      1000
     ]
   },
   "history": [
@@ -620,24 +622,6 @@
       "events": [
         {
           "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
@@ -677,13 +661,43 @@
           "text": "FAIR WEATHER BONUS",
           "miles": 20,
           "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "SNAKE RIVER REACHED!",
+          "miles": 30,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "FT. BRIDGER REACHED!",
+          "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1109,
+      "miles": 1168,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -714,7 +728,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 970,
+      "miles": 1021,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -781,9 +795,10 @@
         "2026-06-20": 11072,
         "2026-06-21": 4876,
         "2026-06-22": 15453,
-        "2026-06-23": 16754
+        "2026-06-23": 16754,
+        "2026-06-24": 17700
       },
-      "totalSteps": 443092
+      "totalSteps": 477728
     },
     "jordan": {
       "steps": {
