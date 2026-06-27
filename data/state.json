@@ -14,7 +14,8 @@
     8,
     9,
     10,
-    11
+    11,
+    12
   ],
   "mileAdj": [
     {
@@ -244,6 +245,24 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: SHANIA",
+      "date": "2026-06-25"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: MICHAEL",
+      "date": "2026-06-25"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: CHRIS",
+      "date": "2026-06-25"
     }
   ],
   "deadWeight": {
@@ -693,11 +712,35 @@
           "cls": "hn"
         }
       ]
+    },
+    {
+      "cycle": 13,
+      "dateRange": "JUN 26",
+      "events": [
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: SHANIA",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: MICHAEL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: CHRIS",
+          "miles": 15,
+          "cls": "hp"
+        }
+      ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1178,
+      "miles": 1247,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -728,7 +771,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 1054,
+      "miles": 1104,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -749,14 +792,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "hunting_party",
-      "revealed": true,
-      "cycleNum": 12
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 13
     },
     "dust": {
-      "cardId": "fair_weather",
-      "revealed": true,
-      "cycleNum": 12
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 13
     }
   },
   "players": {
