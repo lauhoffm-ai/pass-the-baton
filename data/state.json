@@ -263,6 +263,18 @@
       "miles": 15,
       "reason": "HUNTING PARTY: CHRIS",
       "date": "2026-06-25"
+    },
+    {
+      "team": "mud",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-06-26"
+    },
+    {
+      "team": "dust",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-06-26"
     }
   ],
   "deadWeight": {
@@ -734,6 +746,18 @@
           "text": "HUNTING PARTY: CHRIS",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "FAIR WEATHER BONUS",
+          "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "FAIR WEATHER BONUS",
+          "miles": 20,
+          "cls": "hp"
         }
       ]
     }
@@ -792,8 +816,8 @@
   },
   "cards": {
     "mud": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "fair_weather",
+      "revealed": true,
       "cycleNum": 13
     },
     "dust": {
