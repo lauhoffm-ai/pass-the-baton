@@ -230,24 +230,6 @@
     },
     {
       "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-23"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-05-30"
-    },
-    {
-      "team": "dust",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: LAUREN",
-      "date": "2026-06-10"
-    },
-    {
-      "team": "dust",
       "miles": 15,
       "reason": "HUNTING PARTY: SHANIA",
       "date": "2026-06-25"
@@ -287,12 +269,30 @@
       "miles": 20,
       "reason": "FAIR WEATHER",
       "date": "2026-06-26"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-23"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-05-30"
+    },
+    {
+      "team": "dust",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: LAUREN",
+      "date": "2026-06-10"
     }
   ],
   "deadWeight": {
-    "lauren": 0,
+    "lauren": 1,
     "michael": 0,
-    "jordan": 1,
+    "jordan": 0,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
@@ -325,7 +325,8 @@
       600,
       700,
       850,
-      1000
+      1000,
+      1150
     ]
   },
   "history": [
@@ -716,24 +717,6 @@
           "text": "FT. BRIDGER REACHED!",
           "miles": 20,
           "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
         }
       ]
     },
@@ -782,6 +765,30 @@
           "text": "FAIR WEATHER BONUS",
           "miles": 20,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "SNAKE RIVER REACHED!",
+          "miles": 30,
+          "cls": "hp"
         }
       ]
     }
@@ -819,7 +826,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 1144,
+      "miles": 1150,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -1093,9 +1100,10 @@
         "2026-06-22": 13843,
         "2026-06-23": 12204,
         "2026-06-24": 14241,
-        "2026-06-25": 3616
+        "2026-06-25": 3616,
+        "2026-06-26": 11967
       },
-      "totalSteps": 239419
+      "totalSteps": 255002
     },
     "allen": {
       "steps": {
