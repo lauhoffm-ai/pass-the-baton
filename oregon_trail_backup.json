@@ -14,7 +14,8 @@
     8,
     9,
     10,
-    11
+    11,
+    12
   ],
   "mileAdj": [
     {
@@ -244,6 +245,36 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: SHANIA",
+      "date": "2026-06-25"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: MICHAEL",
+      "date": "2026-06-25"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: CHRIS",
+      "date": "2026-06-25"
+    },
+    {
+      "team": "mud",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-06-26"
+    },
+    {
+      "team": "dust",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-06-26"
     }
   ],
   "deadWeight": {
@@ -693,11 +724,47 @@
           "cls": "hn"
         }
       ]
+    },
+    {
+      "cycle": 13,
+      "dateRange": "JUN 26",
+      "events": [
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: SHANIA",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "HUNTING PARTY: MICHAEL",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "HUNTING PARTY: CHRIS",
+          "miles": 15,
+          "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "FAIR WEATHER BONUS",
+          "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "FAIR WEATHER BONUS",
+          "miles": 20,
+          "cls": "hp"
+        }
+      ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1178,
+      "miles": 1267,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -728,7 +795,7 @@
       "pioneerCheckedSunday": "2026-06-07"
     },
     "dust": {
-      "miles": 1054,
+      "miles": 1124,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -749,14 +816,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "hunting_party",
-      "revealed": true,
-      "cycleNum": 12
-    },
-    "dust": {
       "cardId": "fair_weather",
       "revealed": true,
-      "cycleNum": 12
+      "cycleNum": 13
+    },
+    "dust": {
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 13
     }
   },
   "players": {
@@ -796,7 +863,8 @@
         "2026-06-21": 4876,
         "2026-06-22": 15453,
         "2026-06-23": 16754,
-        "2026-06-24": 17700
+        "2026-06-24": 17730,
+        "2026-06-25": 23993
       },
       "totalSteps": 477728
     },
@@ -836,7 +904,8 @@
         "2026-06-21": 7027,
         "2026-06-22": 10291,
         "2026-06-23": 13884,
-        "2026-06-24": 5544
+        "2026-06-24": 5544,
+        "2026-06-25": 10493
       },
       "totalSteps": 367170
     },
@@ -876,7 +945,8 @@
         "2026-06-21": 5963,
         "2026-06-22": 24152,
         "2026-06-23": 26100,
-        "2026-06-24": 19421
+        "2026-06-24": 19421,
+        "2026-06-25": 22121
       },
       "totalSteps": 552688
     },
@@ -916,7 +986,8 @@
         "2026-06-21": 5981,
         "2026-06-22": 11071,
         "2026-06-23": 18029,
-        "2026-06-24": 20133
+        "2026-06-24": 20657,
+        "2026-06-25": 6191
       },
       "totalSteps": 484352
     },
@@ -956,7 +1027,8 @@
         "2026-06-21": 6568,
         "2026-06-22": 9540,
         "2026-06-23": 10337,
-        "2026-06-24": 9343
+        "2026-06-24": 9811,
+        "2026-06-25": 8527
       },
       "totalSteps": 406368
     },
@@ -996,7 +1068,8 @@
         "2026-06-21": 2222,
         "2026-06-22": 13843,
         "2026-06-23": 12204,
-        "2026-06-24": 14241
+        "2026-06-24": 14241,
+        "2026-06-25": 3616
       },
       "totalSteps": 239419
     },
@@ -1036,7 +1109,8 @@
         "2026-06-21": 5617,
         "2026-06-22": 14430,
         "2026-06-23": 4324,
-        "2026-06-24": 13483
+        "2026-06-24": 13654,
+        "2026-06-25": 5821
       },
       "totalSteps": 309928
     }
