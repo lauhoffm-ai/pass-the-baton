@@ -737,28 +737,28 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "BLUE MTNS REACHED!",
           "miles": 25,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -796,7 +796,7 @@
       "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1131,
+      "miles": 1137,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -1087,9 +1087,10 @@
         "2026-06-24": 14241,
         "2026-06-25": 0,
         "2026-06-28": 1047,
-        "2026-06-27": 10468
+        "2026-06-27": 10468,
+        "2026-06-26": 11967
       },
-      "totalSteps": 250934
+      "totalSteps": 262901
     },
     "allen": {
       "steps": {
