@@ -230,48 +230,6 @@
     },
     {
       "team": "dust",
-      "miles": 15,
-      "reason": "HUNTING PARTY: SHANIA",
-      "date": "2026-06-25"
-    },
-    {
-      "team": "mud",
-      "miles": 15,
-      "reason": "HUNTING PARTY: MICHAEL",
-      "date": "2026-06-25"
-    },
-    {
-      "team": "dust",
-      "miles": 15,
-      "reason": "HUNTING PARTY: CHRIS",
-      "date": "2026-06-25"
-    },
-    {
-      "team": "mud",
-      "miles": 20,
-      "reason": "FAIR WEATHER",
-      "date": "2026-06-26"
-    },
-    {
-      "team": "dust",
-      "miles": 20,
-      "reason": "FAIR WEATHER",
-      "date": "2026-06-26"
-    },
-    {
-      "team": "mud",
-      "miles": 20,
-      "reason": "FAIR WEATHER",
-      "date": "2026-06-26"
-    },
-    {
-      "team": "dust",
-      "miles": 20,
-      "reason": "FAIR WEATHER",
-      "date": "2026-06-26"
-    },
-    {
-      "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
@@ -287,12 +245,30 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: SHANIA",
+      "date": "2026-06-25"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNTING PARTY: CHRIS",
+      "date": "2026-06-25"
+    },
+    {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNTING PARTY: MICHAEL",
+      "date": "2026-06-25"
     }
   ],
   "deadWeight": {
-    "lauren": 1,
+    "lauren": 0,
     "michael": 0,
-    "jordan": 0,
+    "jordan": 1,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
@@ -325,8 +301,7 @@
       600,
       700,
       850,
-      1000,
-      1150
+      1000
     ]
   },
   "history": [
@@ -717,22 +692,34 @@
           "text": "FT. BRIDGER REACHED!",
           "miles": 20,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     },
     {
       "cycle": 13,
-      "dateRange": "JUN 26",
+      "dateRange": "JUN 28",
       "events": [
         {
           "team": "dust",
           "text": "HUNTING PARTY: SHANIA",
-          "miles": 15,
-          "cls": "hp"
-        },
-        {
-          "team": "mud",
-          "text": "HUNTING PARTY: MICHAEL",
           "miles": 15,
           "cls": "hp"
         },
@@ -744,50 +731,8 @@
         },
         {
           "team": "mud",
-          "text": "FAIR WEATHER BONUS",
-          "miles": 20,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "FAIR WEATHER BONUS",
-          "miles": 20,
-          "cls": "hp"
-        },
-        {
-          "team": "mud",
-          "text": "FAIR WEATHER BONUS",
-          "miles": 20,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "FAIR WEATHER BONUS",
-          "miles": 20,
-          "cls": "hp"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "SNAKE RIVER REACHED!",
-          "miles": 30,
+          "text": "HUNTING PARTY: MICHAEL",
+          "miles": 15,
           "cls": "hp"
         }
       ]
@@ -795,7 +740,7 @@
   ],
   "teams": {
     "mud": {
-      "miles": 1287,
+      "miles": 1193,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -823,10 +768,10 @@
       },
       "pioneerEarned": [],
       "frozenDates": [],
-      "pioneerCheckedSunday": "2026-06-07"
+      "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1150,
+      "miles": 1085,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -841,19 +786,19 @@
         4
       ],
       "frozenDates": [],
-      "pioneerCheckedSunday": "2026-06-07",
+      "pioneerCheckedSunday": "2026-06-28",
       "frozenSinceCycle": 0
     }
   },
   "cards": {
     "mud": {
-      "cardId": "fair_weather",
-      "revealed": true,
+      "cardId": null,
+      "revealed": false,
       "cycleNum": 13
     },
     "dust": {
-      "cardId": "fair_weather",
-      "revealed": true,
+      "cardId": null,
+      "revealed": false,
       "cycleNum": 13
     }
   },
@@ -895,9 +840,7 @@
         "2026-06-22": 15453,
         "2026-06-23": 16754,
         "2026-06-24": 17730,
-        "2026-06-25": 23993,
-        "2026-06-26": 14603,
-        "2026-06-27": 22589
+        "2026-06-25": 0
       },
       "totalSteps": 477728
     },
@@ -938,9 +881,7 @@
         "2026-06-22": 10291,
         "2026-06-23": 13884,
         "2026-06-24": 5544,
-        "2026-06-25": 10493,
-        "2026-06-26": 5759,
-        "2026-06-27": 24542
+        "2026-06-25": 0
       },
       "totalSteps": 367170
     },
@@ -981,9 +922,7 @@
         "2026-06-22": 24152,
         "2026-06-23": 26100,
         "2026-06-24": 19421,
-        "2026-06-25": 22121,
-        "2026-06-26": 8107,
-        "2026-06-27": 11115
+        "2026-06-25": 0
       },
       "totalSteps": 552688
     },
@@ -1024,9 +963,7 @@
         "2026-06-22": 11071,
         "2026-06-23": 18029,
         "2026-06-24": 20657,
-        "2026-06-25": 6191,
-        "2026-06-26": 16948,
-        "2026-06-27": 14829
+        "2026-06-25": 0
       },
       "totalSteps": 484352
     },
@@ -1067,9 +1004,7 @@
         "2026-06-22": 9540,
         "2026-06-23": 10337,
         "2026-06-24": 9811,
-        "2026-06-25": 8527,
-        "2026-06-26": 10932,
-        "2026-06-27": 10040
+        "2026-06-25": 0
       },
       "totalSteps": 406368
     },
@@ -1110,11 +1045,9 @@
         "2026-06-22": 13843,
         "2026-06-23": 12204,
         "2026-06-24": 14241,
-        "2026-06-25": 3616,
-        "2026-06-26": 11967,
-        "2026-06-27": 10486
+        "2026-06-25": 0
       },
-      "totalSteps": 255002
+      "totalSteps": 239419
     },
     "allen": {
       "steps": {
@@ -1153,9 +1086,7 @@
         "2026-06-22": 14430,
         "2026-06-23": 4324,
         "2026-06-24": 13654,
-        "2026-06-25": 5821,
-        "2026-06-26": 5832,
-        "2026-06-27": 3225
+        "2026-06-25": 0
       },
       "totalSteps": 309928
     }
