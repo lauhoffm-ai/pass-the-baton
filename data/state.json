@@ -15,7 +15,8 @@
     9,
     10,
     11,
-    12
+    12,
+    13
   ],
   "mileAdj": [
     {
@@ -269,6 +270,12 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
+    },
+    {
+      "team": "mud",
+      "miles": -10,
+      "reason": "DEAD WEIGHT: JORDAN",
+      "date": "2026-06-26"
     }
   ],
   "deadWeight": {
@@ -759,13 +766,19 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "DEAD WEIGHT: JORDAN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1301,
+      "miles": 1291,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -796,7 +809,7 @@
       "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1137,
+      "miles": 1140,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -1131,9 +1144,10 @@
         "2026-06-24": 13654,
         "2026-06-25": 0,
         "2026-06-28": 5029,
-        "2026-06-27": 3225
+        "2026-06-27": 3225,
+        "2026-06-26": 5832
       },
-      "totalSteps": 318353
+      "totalSteps": 324185
     }
   },
   "appliedMigrations": [
