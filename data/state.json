@@ -298,7 +298,8 @@
       700,
       850,
       1000,
-      1150
+      1150,
+      1300
     ],
     "dust": [
       250,
@@ -752,13 +753,19 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "BLUE MTNS REACHED!",
+          "miles": 25,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1293,
+      "miles": 1301,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -1036,9 +1043,10 @@
         "2026-06-24": 9811,
         "2026-06-25": 0,
         "2026-06-28": 3388,
-        "2026-06-27": 10161
+        "2026-06-27": 10161,
+        "2026-06-26": 10932
       },
-      "totalSteps": 420385
+      "totalSteps": 431317
     },
     "lauren": {
       "steps": {
