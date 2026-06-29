@@ -832,12 +832,12 @@
     "mud": {
       "cardId": null,
       "revealed": false,
-      "cycleNum": 13
+      "cycleNum": 14
     },
     "dust": {
       "cardId": null,
       "revealed": false,
-      "cycleNum": 13
+      "cycleNum": 14
     }
   },
   "players": {
