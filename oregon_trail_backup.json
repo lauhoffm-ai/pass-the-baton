@@ -315,7 +315,8 @@
       600,
       700,
       850,
-      1000
+      1000,
+      1150
     ]
   },
   "history": [
@@ -772,6 +773,12 @@
           "text": "DEAD WEIGHT: JORDAN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "SNAKE RIVER REACHED!",
+          "miles": 30,
+          "cls": "hp"
         }
       ]
     }
@@ -809,7 +816,7 @@
       "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1140,
+      "miles": 1181,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -971,9 +978,10 @@
         "2026-06-25": 0,
         "2026-06-28": 4796,
         "2026-06-27": 11115,
-        "2026-06-26": 15080
+        "2026-06-26": 15080,
+        "2026-06-29": 30246
       },
-      "totalSteps": 583679
+      "totalSteps": 613925
     },
     "chris": {
       "steps": {
