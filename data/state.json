@@ -826,7 +826,12 @@
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {},
-      "axleSubs": {},
+      "axleSubs": {
+        "lauren": {
+          "mins": 60,
+          "date": "2026-06-30"
+        }
+      },
       "pioneerEarned": [
         4
       ],
