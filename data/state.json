@@ -752,6 +752,12 @@
         },
         {
           "team": "dust",
+          "text": "SNAKE RIVER REACHED!",
+          "miles": 30,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
@@ -773,12 +779,6 @@
           "text": "DEAD WEIGHT: JORDAN",
           "miles": -10,
           "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "SNAKE RIVER REACHED!",
-          "miles": 30,
-          "cls": "hp"
         }
       ]
     }
@@ -816,7 +816,7 @@
       "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1181,
+      "miles": 1187,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -1023,9 +1023,10 @@
         "2026-06-25": 0,
         "2026-06-28": 10166,
         "2026-06-27": 14829,
-        "2026-06-26": 16948
+        "2026-06-26": 16948,
+        "2026-06-29": 12125
       },
-      "totalSteps": 526819
+      "totalSteps": 538944
     },
     "kaykay": {
       "steps": {
