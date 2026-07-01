@@ -270,12 +270,18 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
+    },
+    {
+      "team": "dust",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-06-30"
     }
   ],
   "deadWeight": {
-    "lauren": 2,
+    "lauren": 0,
     "michael": 0,
-    "jordan": 0,
+    "jordan": 1,
     "shania": 0,
     "chris": 0,
     "kaykay": 0,
@@ -769,6 +775,12 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "HUNT SUCCESSFUL",
+          "miles": 15,
+          "cls": "hp"
         }
       ]
     }
@@ -806,13 +818,13 @@
       "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1245,
+      "miles": 1266,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
         "wagon_mud"
       ],
-      "huntClaimedCycle": 12,
+      "huntClaimedCycle": 14,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
       "liftSubs": {
@@ -1177,9 +1189,10 @@
         "2026-06-28": 5779,
         "2026-06-27": 3225,
         "2026-06-26": 5832,
-        "2026-06-29": 14515
+        "2026-06-29": 14515,
+        "2026-06-30": 12573
       },
-      "totalSteps": 339450
+      "totalSteps": 357844
     }
   },
   "appliedMigrations": [
