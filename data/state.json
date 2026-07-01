@@ -825,7 +825,12 @@
       "huntClaimedCycle": 12,
       "mvpThisCycle": null,
       "mvpNextCycle": null,
-      "liftSubs": {},
+      "liftSubs": {
+        "lauren": {
+          "weight": 101,
+          "date": "2026-06-29"
+        }
+      },
       "axleSubs": {
         "lauren": {
           "mins": 60,
