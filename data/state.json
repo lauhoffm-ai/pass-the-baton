@@ -270,12 +270,6 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
-    },
-    {
-      "team": "mud",
-      "miles": -10,
-      "reason": "DEAD WEIGHT: JORDAN",
-      "date": "2026-06-26"
     }
   ],
   "deadWeight": {
@@ -775,19 +769,13 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
-        },
-        {
-          "team": "mud",
-          "text": "DEAD WEIGHT: JORDAN",
-          "miles": -10,
-          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1346,
+      "miles": 1366,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -913,9 +901,10 @@
         "2026-06-28": 4646,
         "2026-06-27": 22589,
         "2026-06-26": 14603,
-        "2026-06-29": 14892
+        "2026-06-29": 14892,
+        "2026-06-30": 14964
       },
-      "totalSteps": 534488
+      "totalSteps": 573445
     },
     "jordan": {
       "steps": {
