@@ -772,28 +772,28 @@
       "dateRange": "JUL 2",
       "events": [
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "COLUMBIA REACHED!",
           "miles": 40,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -831,7 +831,7 @@
       "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1282,
+      "miles": 1285,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -1208,9 +1208,10 @@
         "2026-06-27": 3225,
         "2026-06-26": 5832,
         "2026-06-29": 14515,
-        "2026-06-30": 12573
+        "2026-06-30": 12573,
+        "2026-07-01": 6730
       },
-      "totalSteps": 357844
+      "totalSteps": 364574
     }
   },
   "appliedMigrations": [
