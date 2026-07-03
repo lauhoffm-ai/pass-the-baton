@@ -308,7 +308,8 @@
       850,
       1000,
       1150,
-      1300
+      1300,
+      1400
     ],
     "dust": [
       250,
@@ -787,13 +788,19 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "COLUMBIA REACHED!",
+          "miles": 40,
+          "cls": "hp"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1399,
+      "miles": 1425,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -1108,9 +1115,10 @@
         "2026-06-27": 10161,
         "2026-06-26": 10932,
         "2026-06-29": 9036,
-        "2026-06-30": 14230
+        "2026-06-30": 14230,
+        "2026-07-01": 8256
       },
-      "totalSteps": 468637
+      "totalSteps": 476893
     },
     "lauren": {
       "steps": {
