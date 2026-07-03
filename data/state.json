@@ -868,14 +868,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "trading_post",
-      "revealed": true,
-      "cycleNum": 14
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 15
     },
     "dust": {
-      "cardId": "broken_axle",
-      "revealed": true,
-      "cycleNum": 14
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 15
     }
   },
   "players": {
