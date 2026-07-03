@@ -277,6 +277,18 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
+    },
+    {
+      "team": "mud",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-07-02"
+    },
+    {
+      "team": "dust",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-07-02"
     }
   ],
   "deadWeight": {
@@ -805,6 +817,18 @@
           "text": "BROKEN AXLE COMPLETED!",
           "miles": 0,
           "cls": "hp"
+        },
+        {
+          "team": "mud",
+          "text": "FAIR WEATHER BONUS",
+          "miles": 20,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "FAIR WEATHER BONUS",
+          "miles": 20,
+          "cls": "hp"
         }
       ]
     }
@@ -873,8 +897,8 @@
       "cycleNum": 15
     },
     "dust": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "fair_weather",
+      "revealed": true,
       "cycleNum": 15
     }
   },
