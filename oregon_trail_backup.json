@@ -255,6 +255,12 @@
     },
     {
       "team": "dust",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-06-30"
+    },
+    {
+      "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-05-23"
@@ -270,12 +276,6 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
-    },
-    {
-      "team": "dust",
-      "miles": 15,
-      "reason": "HUNT SUCCESSFUL",
-      "date": "2026-06-30"
     }
   ],
   "deadWeight": {
@@ -760,27 +760,33 @@
         },
         {
           "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
+        }
+      ]
+    },
+    {
+      "cycle": 15,
+      "dateRange": "JUL 2",
+      "events": [
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
@@ -818,7 +824,7 @@
       "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1266,
+      "miles": 1277,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -1006,9 +1012,10 @@
         "2026-06-27": 11115,
         "2026-06-26": 15080,
         "2026-06-29": 30246,
-        "2026-06-30": 21456
+        "2026-06-30": 21456,
+        "2026-07-01": 20959
       },
-      "totalSteps": 657502
+      "totalSteps": 678461
     },
     "chris": {
       "steps": {
