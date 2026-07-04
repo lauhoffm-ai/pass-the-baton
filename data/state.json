@@ -261,6 +261,18 @@
       "date": "2026-06-30"
     },
     {
+      "team": "mud",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-07-02"
+    },
+    {
+      "team": "dust",
+      "miles": 20,
+      "reason": "FAIR WEATHER",
+      "date": "2026-07-02"
+    },
+    {
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
@@ -277,25 +289,13 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
-    },
-    {
-      "team": "mud",
-      "miles": 20,
-      "reason": "FAIR WEATHER",
-      "date": "2026-07-02"
-    },
-    {
-      "team": "dust",
-      "miles": 20,
-      "reason": "FAIR WEATHER",
-      "date": "2026-07-02"
     }
   ],
   "deadWeight": {
-    "lauren": 1,
+    "lauren": 0,
     "michael": 0,
     "jordan": 0,
-    "shania": 0,
+    "shania": 1,
     "chris": 0,
     "kaykay": 0,
     "allen": 0
@@ -330,7 +330,8 @@
       700,
       850,
       1000,
-      1150
+      1150,
+      1300
     ]
   },
   "history": [
@@ -789,24 +790,6 @@
           "cls": "hp"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "TRADING POST MVP: MICHAEL (+1K/DAY THIS CYCLE)",
           "miles": 0,
@@ -829,13 +812,37 @@
           "text": "FAIR WEATHER BONUS",
           "miles": 20,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "BLUE MTNS REACHED!",
+          "miles": 25,
+          "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1427,
+      "miles": 1494,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -866,7 +873,7 @@
       "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1286,
+      "miles": 1343,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -948,9 +955,10 @@
         "2026-06-30": 15980,
         "2026-07-01": 13525,
         "2026-07-02": 10828,
-        "2026-07-03": 12828
+        "2026-07-03": 12828,
+        "2026-07-04": 6421
       },
-      "totalSteps": 588986
+      "totalSteps": 619063
     },
     "jordan": {
       "steps": {
