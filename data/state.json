@@ -918,14 +918,14 @@
   },
   "cards": {
     "mud": {
-      "cardId": "dust_storm",
-      "revealed": true,
-      "cycleNum": 15
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 16
     },
     "dust": {
-      "cardId": "fair_weather",
-      "revealed": true,
-      "cycleNum": 15
+      "cardId": null,
+      "revealed": false,
+      "cycleNum": 16
     }
   },
   "players": {
