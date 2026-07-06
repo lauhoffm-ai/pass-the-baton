@@ -17,7 +17,8 @@
     11,
     12,
     13,
-    14
+    14,
+    15
   ],
   "mileAdj": [
     {
@@ -289,15 +290,21 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
+    },
+    {
+      "team": "mud",
+      "miles": -15,
+      "reason": "DUST STORM MISSED",
+      "date": "2026-07-04"
     }
   ],
   "deadWeight": {
     "lauren": 0,
     "michael": 0,
     "jordan": 0,
-    "shania": 1,
+    "shania": 0,
     "chris": 0,
-    "kaykay": 0,
+    "kaykay": 1,
     "allen": 0
   },
   "dysentery": {
@@ -842,13 +849,19 @@
           "text": "DEAD WEIGHT: LAUREN",
           "miles": -10,
           "cls": "hn"
+        },
+        {
+          "team": "mud",
+          "text": "DUST STORM MISSED",
+          "miles": -15,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1500,
+      "miles": 1485,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -879,7 +892,7 @@
       "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1358,
+      "miles": 1386,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -1113,9 +1126,10 @@
         "2026-07-01": 10319,
         "2026-07-02": 15789,
         "2026-07-03": 5429,
-        "2026-07-05": 6033
+        "2026-07-05": 6033,
+        "2026-07-04": 17197
       },
-      "totalSteps": 602304
+      "totalSteps": 619501
     },
     "kaykay": {
       "steps": {
