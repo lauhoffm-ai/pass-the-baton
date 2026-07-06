@@ -280,6 +280,12 @@
       "date": "2026-07-04"
     },
     {
+      "team": "mud",
+      "miles": 15,
+      "reason": "HUNT SUCCESSFUL",
+      "date": "2026-07-04"
+    },
+    {
       "team": "dust",
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
@@ -296,12 +302,6 @@
       "miles": -10,
       "reason": "DEAD WEIGHT: LAUREN",
       "date": "2026-06-10"
-    },
-    {
-      "team": "mud",
-      "miles": 15,
-      "reason": "HUNT SUCCESSFUL",
-      "date": "2026-07-04"
     }
   ],
   "deadWeight": {
@@ -845,35 +845,35 @@
           "cls": "hn"
         },
         {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
-          "team": "dust",
-          "text": "DEAD WEIGHT: LAUREN",
-          "miles": -10,
-          "cls": "hn"
-        },
-        {
           "team": "mud",
           "text": "HUNT SUCCESSFUL",
           "miles": 15,
           "cls": "hp"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
+        },
+        {
+          "team": "dust",
+          "text": "DEAD WEIGHT: LAUREN",
+          "miles": -10,
+          "cls": "hn"
         }
       ]
     }
   ],
   "teams": {
     "mud": {
-      "miles": 1536,
+      "miles": 1538,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "wagon_mud",
@@ -988,9 +988,10 @@
         "2026-07-02": 10828,
         "2026-07-03": 12828,
         "2026-07-04": 15585,
-        "2026-07-05": 9906
+        "2026-07-05": 9906,
+        "2026-07-06": 3100
       },
-      "totalSteps": 638133
+      "totalSteps": 641233
     },
     "jordan": {
       "steps": {
