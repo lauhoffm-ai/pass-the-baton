@@ -879,7 +879,7 @@
       "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1351,
+      "miles": 1356,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -1262,9 +1262,10 @@
         "2026-07-01": 6730,
         "2026-07-02": 4288,
         "2026-07-03": 12781,
-        "2026-07-05": 4235
+        "2026-07-05": 4235,
+        "2026-07-04": 10425
       },
-      "totalSteps": 385878
+      "totalSteps": 396303
     }
   },
   "appliedMigrations": [
