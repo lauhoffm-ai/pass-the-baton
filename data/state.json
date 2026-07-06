@@ -818,7 +818,13 @@
           "text": "BLUE MTNS REACHED!",
           "miles": 25,
           "cls": "hp"
-        },
+        }
+      ]
+    },
+    {
+      "cycle": 16,
+      "dateRange": "JUL 6",
+      "events": [
         {
           "team": "dust",
           "text": "DEAD WEIGHT: LAUREN",
@@ -873,7 +879,7 @@
       "pioneerCheckedSunday": "2026-06-28"
     },
     "dust": {
-      "miles": 1343,
+      "miles": 1344,
       "frozenUntilSteps": 0,
       "rareUsed": [
         "dysentery",
@@ -1055,9 +1061,10 @@
         "2026-06-30": 21456,
         "2026-07-01": 20959,
         "2026-07-02": 22212,
-        "2026-07-03": 2395
+        "2026-07-03": 2395,
+        "2026-07-05": 2753
       },
-      "totalSteps": 678461
+      "totalSteps": 705821
     },
     "chris": {
       "steps": {
