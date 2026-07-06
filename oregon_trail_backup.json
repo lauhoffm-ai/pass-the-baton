@@ -947,8 +947,8 @@
       "cycleNum": 16
     },
     "dust": {
-      "cardId": null,
-      "revealed": false,
+      "cardId": "dust_storm",
+      "revealed": true,
       "cycleNum": 16
     }
   },
