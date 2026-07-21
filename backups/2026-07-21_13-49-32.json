@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "challengeStart": "2026-07-22",
+  "getawayClockHours": null,
+  "crews": {
+    "family": {
+      "name": "THE BLOOD",
+      "members": [
+        "michael",
+        "chris",
+        "meghan",
+        "lauren"
+      ],
+      "totalSteps": 0,
+      "currentPhase": 1,
+      "phaseProgress": 0,
+      "getawayStartedAt": null,
+      "lootChoice": null,
+      "outcome": null,
+      "phase2OpenedOn": null,
+      "rolesResolved": false,
+      "heatChecks": [],
+      "combination": "5678",
+      "board": []
+    },
+    "inlaws": {
+      "name": "THE OUTLAWS",
+      "members": [
+        "shania",
+        "kaykay",
+        "jordan",
+        "allen"
+      ],
+      "totalSteps": 0,
+      "currentPhase": 1,
+      "phaseProgress": 0,
+      "getawayStartedAt": null,
+      "lootChoice": null,
+      "outcome": null,
+      "phase2OpenedOn": null,
+      "rolesResolved": false,
+      "heatChecks": [],
+      "combination": "5678",
+      "board": []
+    }
+  },
+  "alarmTriggeredAt": null,
+  "players": {
+    "michael": {
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
+    },
+    "chris": {
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
+    },
+    "meghan": {
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
+    },
+    "lauren": {
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
+    },
+    "shania": {
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
+    },
+    "kaykay": {
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
+    },
+    "jordan": {
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
+    },
+    "allen": {
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
+    }
+  },
+  "history": [],
+  "awards": []
+}
