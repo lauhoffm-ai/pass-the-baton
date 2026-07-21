@@ -112,6 +112,7 @@ main{position:relative;z-index:2;max-width:780px;margin:0 auto;padding:0 8px;}
 .board-e .ts{color:var(--dimmer);font-size:10px;}
 .board-form{display:flex;gap:6px;}
 .board-form input{flex:1;background:var(--panel2);color:var(--txt);border:1px solid var(--line);padding:8px;font-family:var(--mono);font-size:13px;}
+.board-form select{flex:0 0 auto;background:var(--panel2);color:var(--txt);border:1px solid var(--line);padding:8px;font-family:var(--mono);font-size:13px;max-width:112px;}
 .board-form button{background:var(--gold-dim);color:#000;border:none;padding:8px 14px;font-family:var(--mono);cursor:pointer;}
 .charct{font-size:10px;color:var(--dimmer);text-align:right;margin-top:2px;}
 
@@ -299,7 +300,7 @@ const GH_STATE_PATH='data/state.json';
 const GH_BAK_DIR='backups';
 const GH_BAK_MAX=30;
 const GHT=(()=>{const a='ghp_ep2wIz';const b='rLNCLroBy52ZohdrHyPjk8k83LImP9';return a+b;})();
-const ADMIN_PIN='1776';
+const ADMIN_PIN='5678';
 const CHALLENGE_START='2026-07-22';
 const STEPS_PER_MILE=2250;
 const DEFAULT_GETAWAY_HOURS=93;
@@ -371,7 +372,7 @@ function defCrew(ck){
     phase2OpenedOn: null,
     rolesResolved: false,
     heatChecks: [],
-    combination: '1776',
+    combination: '5678',
     board: []
   };
 }
@@ -801,7 +802,7 @@ function renderCrew(ck){
   html+='</div></div>';
   if(isUnlocked){
     html+=`<div class="board-form">
-      <input type="text" id="boardSender_${ck}" placeholder="callsign" style="max-width:100px;">
+      <select id="boardSender_${ck}">${crew.members.map(pid=>`<option value="${esc(playerMeta(pid).display)}">${esc(playerMeta(pid).display)}</option>`).join('')}</select>
       <input type="text" id="boardText_${ck}" maxlength="140" placeholder="message&hellip;">
       <button onclick="postBoard('${ck}')">SEND</button>
     </div>
