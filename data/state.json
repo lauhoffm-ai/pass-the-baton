@@ -54,7 +54,12 @@
   "players": {
     "michael": {
       "steps": {},
-      "rolePrefs": null,
+      "rolePrefs": [
+        "Safecracker",
+        "Driver",
+        "Ghost",
+        "Lookout"
+      ],
       "role": null
     },
     "chris": {
