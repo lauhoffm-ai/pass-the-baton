@@ -1,7 +1,7 @@
 {
   "version": 1,
   "challengeStart": "2026-07-22",
-  "getawayClockHours": null,
+  "getawayClockHours": 96,
   "crews": {
     "family": {
       "name": "THE BLOOD",
