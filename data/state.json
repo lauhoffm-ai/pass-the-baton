@@ -21,7 +21,13 @@
       "rolesResolved": false,
       "heatChecks": [],
       "combination": "5678",
-      "board": []
+      "board": [
+        {
+          "sender": "Michael",
+          "text": "Test",
+          "ts": "2026-07-22T18:44:01.823Z"
+        }
+      ]
     },
     "inlaws": {
       "name": "THE OUTLAWS",
