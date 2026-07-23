@@ -99,7 +99,12 @@
     },
     "kaykay": {
       "steps": {},
-      "rolePrefs": null,
+      "rolePrefs": [
+        "Safecracker",
+        "Ghost",
+        "Driver",
+        "Lookout"
+      ],
       "role": null
     },
     "jordan": {
