@@ -89,7 +89,12 @@
     },
     "lauren": {
       "steps": {},
-      "rolePrefs": null,
+      "rolePrefs": [
+        "Ghost",
+        "Driver",
+        "Lookout",
+        "Safecracker"
+      ],
       "role": null
     },
     "shania": {
