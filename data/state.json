@@ -114,7 +114,12 @@
     },
     "allen": {
       "steps": {},
-      "rolePrefs": null,
+      "rolePrefs": [
+        "Driver",
+        "Ghost",
+        "Lookout",
+        "Safecracker"
+      ],
       "role": null
     }
   },
