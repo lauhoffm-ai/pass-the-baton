@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 14173,
+      "totalSteps": 26192,
       "currentPhase": 1,
-      "phaseProgress": 14173,
+      "phaseProgress": 26192,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -63,7 +63,9 @@
   "alarmTriggeredAt": null,
   "players": {
     "michael": {
-      "steps": {},
+      "steps": {
+        "2026-07-22": 12019
+      },
       "rolePrefs": [
         "Safecracker",
         "Driver",
