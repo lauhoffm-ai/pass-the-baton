@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "challengeStart": "2026-07-22",
+  "getawayClockHours": 96,
+  "crews": {
+    "family": {
+      "name": "THE BLOOD",
+      "members": [
+        "michael",
+        "chris",
+        "meghan",
+        "lauren"
+      ],
+      "totalSteps": 39350,
+      "currentPhase": 1,
+      "phaseProgress": 39350,
+      "getawayStartedAt": null,
+      "lootChoice": null,
+      "outcome": null,
+      "phase2OpenedOn": null,
+      "rolesResolved": false,
+      "heatChecks": [],
+      "combination": "5678",
+      "board": [
+        {
+          "sender": "Michael",
+          "text": "Test",
+          "ts": "2026-07-22T18:44:01.823Z"
+        },
+        {
+          "sender": "Michael",
+          "text": "Outlaws don’t stand a chance",
+          "ts": "2026-07-22T19:09:28.301Z"
+        },
+        {
+          "sender": "Meghan",
+          "text": "Gotta get my steps after work today!",
+          "ts": "2026-07-22T19:22:48.359Z"
+        }
+      ]
+    },
+    "inlaws": {
+      "name": "THE OUTLAWS",
+      "members": [
+        "shania",
+        "kaykay",
+        "jordan",
+        "allen"
+      ],
+      "totalSteps": 24197,
+      "currentPhase": 1,
+      "phaseProgress": 24197,
+      "getawayStartedAt": null,
+      "lootChoice": null,
+      "outcome": null,
+      "phase2OpenedOn": null,
+      "rolesResolved": false,
+      "heatChecks": [],
+      "combination": "5678",
+      "board": []
+    }
+  },
+  "alarmTriggeredAt": null,
+  "players": {
+    "michael": {
+      "steps": {
+        "2026-07-22": 12019
+      },
+      "rolePrefs": [
+        "Safecracker",
+        "Driver",
+        "Ghost",
+        "Lookout"
+      ],
+      "role": null
+    },
+    "chris": {
+      "steps": {
+        "2026-07-22": 14173
+      },
+      "rolePrefs": null,
+      "role": null
+    },
+    "meghan": {
+      "steps": {
+        "2026-07-23": 0,
+        "2026-07-22": 10280
+      },
+      "rolePrefs": [
+        "Lookout",
+        "Ghost",
+        "Safecracker",
+        "Driver"
+      ],
+      "role": null
+    },
+    "lauren": {
+      "steps": {
+        "2026-07-23": 0,
+        "2026-07-22": 2878
+      },
+      "rolePrefs": null,
+      "role": null
+    },
+    "shania": {
+      "steps": {
+        "2026-07-22": 9600
+      },
+      "rolePrefs": null,
+      "role": null
+    },
+    "kaykay": {
+      "steps": {
+        "2026-07-22": 2867
+      },
+      "rolePrefs": [
+        "Safecracker",
+        "Ghost",
+        "Driver",
+        "Lookout"
+      ],
+      "role": null
+    },
+    "jordan": {
+      "steps": {
+        "2026-07-23": 2913
+      },
+      "rolePrefs": null,
+      "role": null
+    },
+    "allen": {
+      "steps": {
+        "2026-07-23": 8817
+      },
+      "rolePrefs": [
+        "Driver",
+        "Ghost",
+        "Lookout",
+        "Safecracker"
+      ],
+      "role": null
+    }
+  },
+  "history": [],
+  "awards": []
+}
