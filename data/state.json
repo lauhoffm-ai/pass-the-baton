@@ -47,9 +47,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 14597,
+      "totalSteps": 24197,
       "currentPhase": 1,
-      "phaseProgress": 14597,
+      "phaseProgress": 24197,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -103,7 +103,9 @@
       "role": null
     },
     "shania": {
-      "steps": {},
+      "steps": {
+        "2026-07-22": 9600
+      },
       "rolePrefs": null,
       "role": null
     },
