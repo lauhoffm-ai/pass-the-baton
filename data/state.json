@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 0,
+      "totalSteps": 14173,
       "currentPhase": 1,
-      "phaseProgress": 0,
+      "phaseProgress": 14173,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -73,7 +73,9 @@
       "role": null
     },
     "chris": {
-      "steps": {},
+      "steps": {
+        "2026-07-22": 14173
+      },
       "rolePrefs": null,
       "role": null
     },
