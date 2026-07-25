@@ -46,6 +46,11 @@
           "sender": "Lauren",
           "text": "Thanks for carrying me on yalls back the first two days!",
           "ts": "2026-07-25T21:43:13.860Z"
+        },
+        {
+          "sender": "Chris",
+          "text": "Two mile walk to float the river",
+          "ts": "2026-07-25T22:28:42.237Z"
         }
       ]
     },
@@ -67,13 +72,7 @@
       "rolesResolved": false,
       "heatChecks": [],
       "combination": "5678",
-      "board": [
-        {
-          "sender": "KayKay",
-          "text": "Shania we need you and all your steps!!",
-          "ts": "2026-07-25T22:28:36.302Z"
-        }
-      ]
+      "board": []
     }
   },
   "alarmTriggeredAt": null,
