@@ -52,9 +52,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 24197,
+      "totalSteps": 37254,
       "currentPhase": 1,
-      "phaseProgress": 24197,
+      "phaseProgress": 37254,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -121,7 +121,8 @@
     },
     "kaykay": {
       "steps": {
-        "2026-07-22": 2867
+        "2026-07-22": 2867,
+        "2026-07-24": 13057
       },
       "rolePrefs": [
         "Safecracker",
