@@ -11,13 +11,13 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 50552,
-      "currentPhase": 1,
-      "phaseProgress": 50552,
+      "totalSteps": 64426,
+      "currentPhase": 2,
+      "phaseProgress": 4426,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
-      "phase2OpenedOn": null,
+      "phase2OpenedOn": "2026-07-25",
       "rolesResolved": false,
       "heatChecks": [],
       "combination": "5678",
@@ -69,7 +69,8 @@
   "players": {
     "michael": {
       "steps": {
-        "2026-07-22": 12019
+        "2026-07-22": 12019,
+        "2026-07-24": 13874
       },
       "rolePrefs": [
         "Safecracker",
@@ -147,6 +148,15 @@
       "role": null
     }
   },
-  "history": [],
+  "history": [
+    {
+      "ts": "2026-07-25T21:39:13.638Z",
+      "text": "PHASE 2 UNLOCKED: THE BLOOD — ASSEMBLE THE CREW"
+    },
+    {
+      "ts": "2026-07-25T21:39:13.637Z",
+      "text": "PHASE 2 UNLOCKED: THE BLOOD — ASSEMBLE THE CREW"
+    }
+  ],
   "awards": []
 }
