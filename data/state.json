@@ -52,9 +52,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 37254,
+      "totalSteps": 42815,
       "currentPhase": 1,
-      "phaseProgress": 37254,
+      "phaseProgress": 42815,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -134,7 +134,8 @@
     },
     "jordan": {
       "steps": {
-        "2026-07-23": 2913
+        "2026-07-23": 2913,
+        "2026-07-24": 5561
       },
       "rolePrefs": null,
       "role": null
