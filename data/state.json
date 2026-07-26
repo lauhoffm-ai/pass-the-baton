@@ -67,14 +67,14 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 132780,
-      "currentPhase": 2,
-      "phaseProgress": 72780,
+      "totalSteps": 139019,
+      "currentPhase": 3,
+      "phaseProgress": 4019,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
       "phase2OpenedOn": "2026-07-25",
-      "rolesResolved": false,
+      "rolesResolved": true,
       "heatChecks": [],
       "combination": "5678",
       "board": [
@@ -142,7 +142,8 @@
       "steps": {
         "2026-07-22": 9600,
         "2026-07-23": 14160,
-        "2026-07-24": 7615
+        "2026-07-24": 7615,
+        "2026-07-25": 6239
       },
       "rolePrefs": [
         "Safecracker",
@@ -150,7 +151,7 @@
         "Ghost",
         "Lookout"
       ],
-      "role": null
+      "role": "Safecracker"
     },
     "kaykay": {
       "steps": {
@@ -164,7 +165,7 @@
         "Driver",
         "Lookout"
       ],
-      "role": null
+      "role": "Ghost"
     },
     "jordan": {
       "steps": {
@@ -173,7 +174,7 @@
         "2026-07-25": 4082
       },
       "rolePrefs": null,
-      "role": null
+      "role": "Driver"
     },
     "allen": {
       "steps": {
@@ -188,10 +189,18 @@
         "Lookout",
         "Safecracker"
       ],
-      "role": null
+      "role": "Lookout"
     }
   },
   "history": [
+    {
+      "ts": "2026-07-26T04:51:58.965Z",
+      "text": "PHASE 3 UNLOCKED: THE OUTLAWS — SOURCE THE GEAR"
+    },
+    {
+      "ts": "2026-07-26T04:51:58.965Z",
+      "text": "ROLES ASSIGNED: THE OUTLAWS"
+    },
     {
       "ts": "2026-07-25T22:18:36.094Z",
       "text": "PHASE 3 UNLOCKED: THE BLOOD — SOURCE THE GEAR"
