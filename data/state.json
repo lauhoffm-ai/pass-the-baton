@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 153078,
+      "totalSteps": 151466,
       "currentPhase": 3,
-      "phaseProgress": 18078,
+      "phaseProgress": 16466,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -93,7 +93,7 @@
         "2026-07-22": 12019,
         "2026-07-24": 13874,
         "2026-07-25": 7732,
-        "2026-07-23": 15998
+        "2026-07-23": 14386
       },
       "rolePrefs": [
         "Safecracker",
