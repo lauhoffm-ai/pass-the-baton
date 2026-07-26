@@ -72,7 +72,13 @@
       "rolesResolved": false,
       "heatChecks": [],
       "combination": "5678",
-      "board": []
+      "board": [
+        {
+          "sender": "Jordan",
+          "text": "This is Michael…..y’all are lame",
+          "ts": "2026-07-26T01:19:55.520Z"
+        }
+      ]
     }
   },
   "alarmTriggeredAt": null,
