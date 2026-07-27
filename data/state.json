@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 183982,
+      "totalSteps": 184114,
       "currentPhase": 3,
-      "phaseProgress": 48982,
+      "phaseProgress": 49114,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -107,7 +107,7 @@
       "steps": {
         "2026-07-22": 12019,
         "2026-07-24": 13874,
-        "2026-07-25": 10715,
+        "2026-07-25": 10847,
         "2026-07-23": 15998
       },
       "rolePrefs": [
