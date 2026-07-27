@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 214751,
-      "currentPhase": 3,
-      "phaseProgress": 79751,
+      "totalSteps": 227934,
+      "currentPhase": 4,
+      "phaseProgress": 2934,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -151,7 +151,8 @@
         "2026-07-23": 4394,
         "2026-07-22": 2878,
         "2026-07-24": 13760,
-        "2026-07-25": 6017
+        "2026-07-25": 6017,
+        "2026-07-26": 13183
       },
       "rolePrefs": null,
       "role": "Ghost"
@@ -213,6 +214,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-07-27T06:31:15.916Z",
+      "text": "PHASE 4 UNLOCKED: THE BLOOD — KILL THE POWER"
+    },
     {
       "ts": "2026-07-26T04:51:58.965Z",
       "text": "PHASE 3 UNLOCKED: THE OUTLAWS — SOURCE THE GEAR"
