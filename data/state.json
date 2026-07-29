@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 276833,
+      "totalSteps": 330104,
       "currentPhase": 4,
-      "phaseProgress": 51833,
+      "phaseProgress": 105104,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -76,6 +76,11 @@
           "sender": "Lauren",
           "text": "Oops, my last message came through as Michael 🤣",
           "ts": "2026-07-29T03:23:44.315Z"
+        },
+        {
+          "sender": "Chris",
+          "text": "Tonya Harding knows what to do",
+          "ts": "2026-07-29T18:49:04.441Z"
         }
       ]
     },
@@ -87,9 +92,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 271850,
+      "totalSteps": 309963,
       "currentPhase": 4,
-      "phaseProgress": 46850,
+      "phaseProgress": 84963,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
