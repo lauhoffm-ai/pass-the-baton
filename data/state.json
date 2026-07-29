@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 227934,
+      "totalSteps": 276833,
       "currentPhase": 4,
-      "phaseProgress": 2934,
+      "phaseProgress": 51833,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -66,6 +66,11 @@
           "sender": "Michael",
           "text": "Just walked 7.27 miles… leaving The Outlaws in the dust 💨",
           "ts": "2026-07-27T06:33:33.099Z"
+        },
+        {
+          "sender": "Michael",
+          "text": "They are catching up!",
+          "ts": "2026-07-29T02:07:37.190Z"
         }
       ]
     },
@@ -77,9 +82,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 253774,
+      "totalSteps": 253843,
       "currentPhase": 4,
-      "phaseProgress": 28774,
+      "phaseProgress": 28843,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
