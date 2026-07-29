@@ -77,9 +77,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 212548,
-      "currentPhase": 3,
-      "phaseProgress": 77548,
+      "totalSteps": 228962,
+      "currentPhase": 4,
+      "phaseProgress": 3962,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -217,7 +217,8 @@
         "2026-07-22": 8817,
         "2026-07-25": 16053,
         "2026-07-26": 4015,
-        "2026-07-27": 18234
+        "2026-07-27": 18234,
+        "2026-07-28": 16414
       },
       "rolePrefs": [
         "Driver",
@@ -229,6 +230,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-07-29T00:16:46.634Z",
+      "text": "PHASE 4 UNLOCKED: THE OUTLAWS — KILL THE POWER"
+    },
     {
       "ts": "2026-07-27T06:31:15.916Z",
       "text": "PHASE 4 UNLOCKED: THE BLOOD — KILL THE POWER"
