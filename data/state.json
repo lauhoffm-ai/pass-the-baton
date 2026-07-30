@@ -92,9 +92,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 318100,
-      "currentPhase": 4,
-      "phaseProgress": 93100,
+      "totalSteps": 338436,
+      "currentPhase": 5,
+      "phaseProgress": 3436,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -264,7 +264,8 @@
         "2026-07-25": 16053,
         "2026-07-26": 4015,
         "2026-07-27": 18234,
-        "2026-07-28": 16920
+        "2026-07-28": 16920,
+        "2026-07-29": 20336
       },
       "rolePrefs": [
         "Driver",
@@ -276,6 +277,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-07-30T05:17:00.207Z",
+      "text": "PHASE 5 UNLOCKED: THE OUTLAWS — BREACH THE PERIMETER"
+    },
     {
       "ts": "2026-07-30T05:13:34.345Z",
       "text": "PHASE 5 UNLOCKED: THE BLOOD — BREACH THE PERIMETER"
