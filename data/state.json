@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 345282,
+      "totalSteps": 345283,
       "currentPhase": 5,
-      "phaseProgress": 10282,
+      "phaseProgress": 10283,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -197,7 +197,7 @@
         "2026-07-27": 13424,
         "2026-07-28": 10724,
         "2026-07-29": 15178,
-        "2026-07-30": 0
+        "2026-07-30": 1
       },
       "rolePrefs": null,
       "role": "Ghost"
