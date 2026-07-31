@@ -92,9 +92,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 376536,
+      "totalSteps": 391769,
       "currentPhase": 5,
-      "phaseProgress": 41536,
+      "phaseProgress": 56769,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -217,7 +217,8 @@
         "2026-07-26": 2510,
         "2026-07-27": 15460,
         "2026-07-28": 14761,
-        "2026-07-29": 15303
+        "2026-07-29": 15303,
+        "2026-07-30": 15233
       },
       "rolePrefs": [
         "Safecracker",
