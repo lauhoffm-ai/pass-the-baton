@@ -92,9 +92,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 402489,
+      "totalSteps": 406786,
       "currentPhase": 5,
-      "phaseProgress": 67489,
+      "phaseProgress": 71786,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -238,7 +238,7 @@
         "2026-07-27": 11187,
         "2026-07-28": 10880,
         "2026-07-29": 3467,
-        "2026-07-30": 6902
+        "2026-07-30": 11199
       },
       "rolePrefs": [
         "Ghost",
