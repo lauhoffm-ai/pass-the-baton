@@ -97,9 +97,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 418302,
+      "totalSteps": 418427,
       "currentPhase": 5,
-      "phaseProgress": 83302,
+      "phaseProgress": 83427,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -137,11 +137,6 @@
           "sender": "Shania",
           "text": "Rude, I check this place.",
           "ts": "2026-07-29T18:50:08.702Z"
-        },
-        {
-          "sender": "Allen",
-          "text": "Sources close to me (me) confirm I’m a sleeper pick for MVP.",
-          "ts": "2026-08-01T03:46:52.203Z"
         }
       ]
     }
@@ -284,7 +279,7 @@
         "2026-07-28": 17070,
         "2026-07-29": 20336,
         "2026-07-30": 21836,
-        "2026-07-31": 10881
+        "2026-07-31": 11006
       },
       "rolePrefs": [
         "Driver",
