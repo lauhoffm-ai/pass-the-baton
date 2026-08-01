@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 425605,
+      "totalSteps": 426552,
       "currentPhase": 5,
-      "phaseProgress": 90605,
+      "phaseProgress": 91552,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -81,6 +81,11 @@
           "sender": "Chris",
           "text": "Tonya Harding knows what to do",
           "ts": "2026-07-29T18:49:04.441Z"
+        },
+        {
+          "sender": "Michael",
+          "text": "All this walking is making me use my hemorrhoid cream more.",
+          "ts": "2026-08-01T02:44:56.204Z"
         }
       ]
     },
