@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 532340,
+      "totalSteps": 532449,
       "currentPhase": 6,
-      "phaseProgress": 67340,
+      "phaseProgress": 67449,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -97,9 +97,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 463881,
-      "currentPhase": 5,
-      "phaseProgress": 128881,
+      "totalSteps": 468834,
+      "currentPhase": 6,
+      "phaseProgress": 3834,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -142,6 +142,11 @@
           "sender": "Allen",
           "text": "You never sync your steps though.",
           "ts": "2026-08-02T06:37:37.070Z"
+        },
+        {
+          "sender": "KayKay",
+          "text": "Allen is right you never sync your steps 🤗",
+          "ts": "2026-08-02T23:05:11.183Z"
         }
       ]
     }
@@ -311,6 +316,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-08-02T23:04:45.175Z",
+      "text": "PHASE 6 UNLOCKED: THE OUTLAWS — CRACK THE VAULT"
+    },
     {
       "ts": "2026-08-02T06:34:46.083Z",
       "text": "PHASE 6 UNLOCKED: THE BLOOD — CRACK THE VAULT"
