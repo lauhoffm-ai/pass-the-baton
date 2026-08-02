@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 426552,
-      "currentPhase": 5,
-      "phaseProgress": 91552,
+      "totalSteps": 503407,
+      "currentPhase": 6,
+      "phaseProgress": 38407,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -97,9 +97,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 418427,
+      "totalSteps": 442207,
       "currentPhase": 5,
-      "phaseProgress": 83427,
+      "phaseProgress": 107207,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -212,7 +212,8 @@
         "2026-07-28": 10724,
         "2026-07-29": 15178,
         "2026-07-30": 5760,
-        "2026-07-31": 11247
+        "2026-07-31": 11247,
+        "2026-08-01": 8030
       },
       "rolePrefs": null,
       "role": "Ghost"
@@ -298,6 +299,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-08-02T06:34:46.083Z",
+      "text": "PHASE 6 UNLOCKED: THE BLOOD — CRACK THE VAULT"
+    },
     {
       "ts": "2026-07-30T05:17:00.207Z",
       "text": "PHASE 5 UNLOCKED: THE OUTLAWS — BREACH THE PERIMETER"
