@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 532449,
+      "totalSteps": 593571,
       "currentPhase": 6,
-      "phaseProgress": 67449,
+      "phaseProgress": 128571,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -86,6 +86,11 @@
           "sender": "Michael",
           "text": "All this walking is making me use my hemorrhoid cream more.",
           "ts": "2026-08-01T02:44:56.204Z"
+        },
+        {
+          "sender": "Michael",
+          "text": "Keep the pressure on the outlaws!",
+          "ts": "2026-08-03T21:22:21.099Z"
         }
       ]
     },
@@ -97,9 +102,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 476141,
+      "totalSteps": 514251,
       "currentPhase": 6,
-      "phaseProgress": 11141,
+      "phaseProgress": 49251,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
