@@ -102,9 +102,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 514251,
+      "totalSteps": 530659,
       "currentPhase": 6,
-      "phaseProgress": 49251,
+      "phaseProgress": 65659,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -317,7 +317,8 @@
         "2026-07-30": 21836,
         "2026-07-31": 11006,
         "2026-08-01": 4497,
-        "2026-08-02": 7307
+        "2026-08-02": 7307,
+        "2026-08-03": 16408
       },
       "rolePrefs": [
         "Driver",
