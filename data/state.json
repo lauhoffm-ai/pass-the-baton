@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 640765,
-      "currentPhase": 6,
-      "phaseProgress": 175765,
+      "totalSteps": 661593,
+      "currentPhase": 7,
+      "phaseProgress": 16593,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -239,7 +239,8 @@
         "2026-07-31": 11247,
         "2026-08-01": 8030,
         "2026-08-02": 11943,
-        "2026-08-03": 10790
+        "2026-08-03": 10790,
+        "2026-08-04": 20828
       },
       "rolePrefs": null,
       "role": "Ghost"
@@ -338,6 +339,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-08-05T05:28:52.280Z",
+      "text": "PHASE 7 UNLOCKED: THE BLOOD — LOAD THE SCORE"
+    },
     {
       "ts": "2026-08-02T23:04:45.175Z",
       "text": "PHASE 6 UNLOCKED: THE OUTLAWS — CRACK THE VAULT"
