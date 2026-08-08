@@ -11,11 +11,11 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 692851,
-      "currentPhase": 7,
-      "phaseProgress": 47851,
-      "getawayStartedAt": null,
-      "lootChoice": null,
+      "totalSteps": 777352,
+      "currentPhase": 8,
+      "phaseProgress": 27352,
+      "getawayStartedAt": "2026-08-08T01:50:36.246Z",
+      "lootChoice": "carry",
       "outcome": null,
       "phase2OpenedOn": "2026-07-25",
       "rolesResolved": true,
@@ -107,9 +107,9 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 641414,
-      "currentPhase": 6,
-      "phaseProgress": 176414,
+      "totalSteps": 737965,
+      "currentPhase": 7,
+      "phaseProgress": 92965,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -161,7 +161,7 @@
       ]
     }
   },
-  "alarmTriggeredAt": null,
+  "alarmTriggeredAt": "2026-08-08T01:50:36.246Z",
   "players": {
     "michael": {
       "steps": {
@@ -366,6 +366,18 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-08-08T01:50:49.819Z",
+      "text": "THE BLOOD CALLS IT: CARRY IT ALL"
+    },
+    {
+      "ts": "2026-08-08T01:50:36.246Z",
+      "text": "PHASE 7 UNLOCKED: THE OUTLAWS — LOAD THE SCORE"
+    },
+    {
+      "ts": "2026-08-08T01:50:36.246Z",
+      "text": "ALARM: THE BLOOD ENTERS THE GETAWAY"
+    },
     {
       "ts": "2026-08-05T05:28:52.280Z",
       "text": "PHASE 7 UNLOCKED: THE BLOOD — LOAD THE SCORE"
