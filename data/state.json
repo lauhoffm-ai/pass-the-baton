@@ -11,9 +11,9 @@
         "meghan",
         "lauren"
       ],
-      "totalSteps": 789026,
+      "totalSteps": 799380,
       "currentPhase": 8,
-      "phaseProgress": 39026,
+      "phaseProgress": 49380,
       "getawayStartedAt": "2026-08-08T01:50:36.246Z",
       "lootChoice": "carry",
       "outcome": null,
@@ -230,7 +230,8 @@
         "2026-08-03": 9166,
         "2026-08-04": 7361,
         "2026-08-05": 5649,
-        "2026-08-06": 17309
+        "2026-08-06": 17309,
+        "2026-08-07": 10354
       },
       "rolePrefs": [
         "Lookout",
