@@ -111,7 +111,7 @@
       "currentPhase": 8,
       "phaseProgress": 60158,
       "getawayStartedAt": "2026-08-09T01:28:03.960Z",
-      "lootChoice": null,
+      "lootChoice": "drop",
       "outcome": null,
       "phase2OpenedOn": "2026-07-25",
       "rolesResolved": true,
@@ -380,6 +380,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-08-09T02:28:14.573Z",
+      "text": "THE OUTLAWS CALLS IT: DROP A QUARTER"
+    },
     {
       "ts": "2026-08-09T01:28:03.961Z",
       "text": "ALARM: THE OUTLAWS ENTERS THE GETAWAY"
