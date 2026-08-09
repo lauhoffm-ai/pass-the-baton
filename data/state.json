@@ -107,10 +107,10 @@
         "jordan",
         "allen"
       ],
-      "totalSteps": 737965,
-      "currentPhase": 7,
-      "phaseProgress": 92965,
-      "getawayStartedAt": null,
+      "totalSteps": 751867,
+      "currentPhase": 8,
+      "phaseProgress": 1867,
+      "getawayStartedAt": "2026-08-09T01:28:03.960Z",
       "lootChoice": null,
       "outcome": null,
       "phase2OpenedOn": "2026-07-25",
@@ -354,7 +354,8 @@
         "2026-08-03": 16408,
         "2026-08-05": 17119,
         "2026-08-04": 16788,
-        "2026-08-06": 23416
+        "2026-08-06": 23416,
+        "2026-08-07": 13902
       },
       "rolePrefs": [
         "Driver",
@@ -366,6 +367,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-08-09T01:28:03.961Z",
+      "text": "ALARM: THE OUTLAWS ENTERS THE GETAWAY"
+    },
     {
       "ts": "2026-08-08T01:50:49.819Z",
       "text": "THE BLOOD CALLS IT: CARRY IT ALL"
