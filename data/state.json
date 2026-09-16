@@ -1,487 +1,92 @@
 {
   "version": 1,
-  "challengeStart": "2026-07-22",
+  "challengeStart": "2026-08-11",
   "getawayClockHours": 96,
   "crews": {
     "family": {
-      "name": "THE BLOOD",
+      "name": "CREW ONE",
       "members": [
         "michael",
-        "chris",
-        "meghan",
-        "lauren"
-      ],
-      "totalSteps": 911884,
-      "currentPhase": 8,
-      "phaseProgress": 161884,
-      "getawayStartedAt": "2026-08-08T01:50:36.246Z",
-      "lootChoice": "carry",
-      "outcome": "escaped",
-      "phase2OpenedOn": "2026-07-25",
-      "rolesResolved": true,
-      "heatChecks": [],
-      "combination": "5678",
-      "board": [
-        {
-          "sender": "Michael",
-          "text": "Test",
-          "ts": "2026-07-22T18:44:01.823Z"
-        },
-        {
-          "sender": "Michael",
-          "text": "Outlaws don’t stand a chance",
-          "ts": "2026-07-22T19:09:28.301Z"
-        },
-        {
-          "sender": "Meghan",
-          "text": "Gotta get my steps after work today!",
-          "ts": "2026-07-22T19:22:48.359Z"
-        },
-        {
-          "sender": "Michael",
-          "text": "Early lead!",
-          "ts": "2026-07-24T02:26:05.066Z"
-        },
-        {
-          "sender": "Lauren",
-          "text": "Thanks for carrying me on yalls back the first two days!",
-          "ts": "2026-07-25T21:43:13.860Z"
-        },
-        {
-          "sender": "Chris",
-          "text": "Two mile walk to float the river",
-          "ts": "2026-07-25T22:28:42.237Z"
-        },
-        {
-          "sender": "Michael",
-          "text": "Swing your arms while you float….extra steps",
-          "ts": "2026-07-26T01:20:55.427Z"
-        },
-        {
-          "sender": "Meghan",
-          "text": "Thanks for updating my steps!!",
-          "ts": "2026-07-26T04:56:42.931Z"
-        },
-        {
-          "sender": "Michael",
-          "text": "Just walked 7.27 miles… leaving The Outlaws in the dust 💨",
-          "ts": "2026-07-27T06:33:33.099Z"
-        },
-        {
-          "sender": "Michael",
-          "text": "They are catching up!",
-          "ts": "2026-07-29T02:07:37.190Z"
-        },
-        {
-          "sender": "Lauren",
-          "text": "Oops, my last message came through as Michael 🤣",
-          "ts": "2026-07-29T03:23:44.315Z"
-        },
-        {
-          "sender": "Chris",
-          "text": "Tonya Harding knows what to do",
-          "ts": "2026-07-29T18:49:04.441Z"
-        },
-        {
-          "sender": "Michael",
-          "text": "All this walking is making me use my hemorrhoid cream more.",
-          "ts": "2026-08-01T02:44:56.204Z"
-        },
-        {
-          "sender": "Michael",
-          "text": "Keep the pressure on the outlaws!",
-          "ts": "2026-08-03T21:22:21.099Z"
-        },
-        {
-          "sender": "Lauren",
-          "text": "Let’s get this bread.",
-          "ts": "2026-08-05T05:30:40.176Z"
-        }
-      ]
-    },
-    "inlaws": {
-      "name": "THE OUTLAWS",
-      "members": [
-        "shania",
-        "kaykay",
         "jordan",
+        "lauren",
         "allen"
       ],
-      "totalSteps": 857124,
-      "currentPhase": 8,
-      "phaseProgress": 107124,
-      "getawayStartedAt": "2026-08-09T01:28:03.960Z",
-      "lootChoice": "drop",
+      "totalSteps": 0,
+      "currentPhase": 1,
+      "phaseProgress": 0,
+      "getawayStartedAt": null,
+      "lootChoice": null,
       "outcome": null,
-      "phase2OpenedOn": "2026-07-25",
-      "rolesResolved": true,
+      "phase2OpenedOn": null,
+      "rolesResolved": false,
       "heatChecks": [],
       "combination": "5678",
-      "board": [
-        {
-          "sender": "Jordan",
-          "text": "This is Michael…..y’all are lame",
-          "ts": "2026-07-26T01:19:55.520Z"
-        },
-        {
-          "sender": "Allen",
-          "text": "Lame!",
-          "ts": "2026-07-26T04:57:29.417Z"
-        },
-        {
-          "sender": "KayKay",
-          "text": "So excited to be the Ghost",
-          "ts": "2026-07-26T16:43:34.670Z"
-        },
-        {
-          "sender": "Jordan",
-          "text": "Let’s just see if Shania even looks at the site",
-          "ts": "2026-07-29T00:04:48.676Z"
-        },
-        {
-          "sender": "KayKay",
-          "text": "Allen is killing it!!!!!",
-          "ts": "2026-07-29T02:30:41.329Z"
-        },
-        {
-          "sender": "Shania",
-          "text": "Rude, I check this place.",
-          "ts": "2026-07-29T18:50:08.702Z"
-        },
-        {
-          "sender": "Allen",
-          "text": "You never sync your steps though.",
-          "ts": "2026-08-02T06:37:37.070Z"
-        },
-        {
-          "sender": "KayKay",
-          "text": "Allen is right you never sync your steps 🤗",
-          "ts": "2026-08-02T23:05:11.183Z"
-        }
-      ]
+      "board": []
+    },
+    "inlaws": {
+      "name": "CREW TWO",
+      "members": [
+        "chris",
+        "kaykay",
+        "meghan",
+        "shania"
+      ],
+      "totalSteps": 0,
+      "currentPhase": 1,
+      "phaseProgress": 0,
+      "getawayStartedAt": null,
+      "lootChoice": null,
+      "outcome": null,
+      "phase2OpenedOn": null,
+      "rolesResolved": false,
+      "heatChecks": [],
+      "combination": "5678",
+      "board": []
     }
   },
-  "alarmTriggeredAt": "2026-08-08T01:50:36.246Z",
+  "alarmTriggeredAt": null,
   "players": {
     "michael": {
-      "steps": {
-        "2026-07-22": 12019,
-        "2026-07-24": 13874,
-        "2026-07-25": 10847,
-        "2026-07-23": 15998,
-        "2026-07-26": 8870,
-        "2026-07-27": 13323,
-        "2026-07-28": 17760,
-        "2026-07-29": 11236,
-        "2026-07-30": 16098,
-        "2026-07-31": 21839,
-        "2026-08-01": 18595,
-        "2026-08-02": 10139,
-        "2026-08-03": 11972,
-        "2026-08-04": 10662,
-        "2026-08-05": 10941,
-        "2026-08-06": 12890,
-        "2026-08-07": 11674,
-        "2026-08-08": 10090,
-        "2026-08-09": 11065,
-        "2026-08-10": 16901
-      },
-      "rolePrefs": [
-        "Safecracker",
-        "Driver",
-        "Ghost",
-        "Lookout"
-      ],
-      "role": "Safecracker"
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
     },
     "chris": {
-      "steps": {
-        "2026-07-22": 14173,
-        "2026-07-25": 24972,
-        "2026-07-24": 10984,
-        "2026-07-23": 11614,
-        "2026-07-26": 13945,
-        "2026-07-27": 15664,
-        "2026-07-28": 15952,
-        "2026-07-29": 14875,
-        "2026-07-30": 15440,
-        "2026-07-31": 20631,
-        "2026-08-01": 3822,
-        "2026-08-02": 24873,
-        "2026-08-03": 15266,
-        "2026-08-04": 14626,
-        "2026-08-05": 12293,
-        "2026-08-06": 12574,
-        "2026-08-07": 9833,
-        "2026-08-08": 18341,
-        "2026-08-09": 11736,
-        "2026-08-10": 15040
-      },
+      "steps": {},
       "rolePrefs": null,
-      "role": "Driver"
+      "role": null
     },
     "meghan": {
-      "steps": {
-        "2026-07-23": 12128,
-        "2026-07-22": 10280,
-        "2026-07-24": 9934,
-        "2026-07-25": 10242,
-        "2026-07-26": 7858,
-        "2026-07-27": 6452,
-        "2026-07-28": 8835,
-        "2026-07-29": 4425,
-        "2026-07-30": 13436,
-        "2026-07-31": 15108,
-        "2026-08-01": 6625,
-        "2026-08-02": 14167,
-        "2026-08-03": 9166,
-        "2026-08-04": 7361,
-        "2026-08-05": 5649,
-        "2026-08-06": 17309,
-        "2026-08-07": 10354,
-        "2026-08-08": 21000,
-        "2026-08-09": 6877,
-        "2026-08-10": 10109
-      },
-      "rolePrefs": [
-        "Lookout",
-        "Ghost",
-        "Safecracker",
-        "Driver"
-      ],
-      "role": "Lookout"
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
     },
     "lauren": {
-      "steps": {
-        "2026-07-23": 4394,
-        "2026-07-22": 2878,
-        "2026-07-24": 13760,
-        "2026-07-25": 6017,
-        "2026-07-26": 13183,
-        "2026-07-27": 13424,
-        "2026-07-28": 10724,
-        "2026-07-29": 15178,
-        "2026-07-30": 5760,
-        "2026-07-31": 11247,
-        "2026-08-01": 8030,
-        "2026-08-02": 11943,
-        "2026-08-03": 10790,
-        "2026-08-04": 20828,
-        "2026-08-05": 3833,
-        "2026-08-06": 7621,
-        "2026-08-07": 4255,
-        "2026-08-08": 12287,
-        "2026-08-09": 8625,
-        "2026-08-10": 3762
-      },
+      "steps": {},
       "rolePrefs": null,
-      "role": "Ghost"
+      "role": null
     },
     "shania": {
-      "steps": {
-        "2026-07-22": 9600,
-        "2026-07-23": 14160,
-        "2026-07-24": 7615,
-        "2026-07-25": 6239,
-        "2026-07-26": 2510,
-        "2026-07-27": 15460,
-        "2026-07-28": 14761,
-        "2026-07-29": 15303,
-        "2026-07-30": 15233,
-        "2026-07-31": 3067,
-        "2026-08-01": 3592,
-        "2026-08-02": 2703,
-        "2026-08-03": 15109,
-        "2026-08-04": 25004,
-        "2026-08-05": 15381,
-        "2026-08-06": 21025,
-        "2026-08-07": 8384,
-        "2026-08-08": 1421,
-        "2026-08-09": 7767,
-        "2026-08-10": 23278
-      },
-      "rolePrefs": [
-        "Safecracker",
-        "Driver",
-        "Ghost",
-        "Lookout"
-      ],
-      "role": "Safecracker"
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
     },
     "kaykay": {
-      "steps": {
-        "2026-07-22": 2867,
-        "2026-07-24": 13057,
-        "2026-07-23": 14451,
-        "2026-07-25": 20520,
-        "2026-07-26": 13451,
-        "2026-07-27": 11187,
-        "2026-07-28": 10880,
-        "2026-07-29": 3467,
-        "2026-07-30": 11199,
-        "2026-07-31": 15612,
-        "2026-08-01": 1329,
-        "2026-08-02": 25068,
-        "2026-08-03": 8629,
-        "2026-08-04": 11140,
-        "2026-08-05": 6371,
-        "2026-08-06": 14551,
-        "2026-08-07": 12232,
-        "2026-08-08": 17715,
-        "2026-08-09": 11621,
-        "2026-08-10": 8376
-      },
-      "rolePrefs": [
-        "Ghost",
-        "Safecracker",
-        "Driver",
-        "Lookout"
-      ],
-      "role": "Ghost"
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
     },
     "jordan": {
-      "steps": {
-        "2026-07-23": 11270,
-        "2026-07-24": 5561,
-        "2026-07-25": 7828,
-        "2026-07-22": 2913,
-        "2026-07-26": 10100,
-        "2026-07-27": 13625,
-        "2026-07-28": 12622,
-        "2026-07-29": 5900,
-        "2026-07-30": 4034,
-        "2026-07-31": 5101,
-        "2026-08-01": 17209,
-        "2026-08-02": 10339,
-        "2026-08-03": 10972,
-        "2026-08-04": 8663,
-        "2026-08-05": 6655,
-        "2026-08-06": 6483,
-        "2026-08-07": 6612,
-        "2026-08-08": 15416,
-        "2026-08-09": 10856,
-        "2026-08-10": 7614
-      },
+      "steps": {},
       "rolePrefs": null,
-      "role": "Driver"
+      "role": null
     },
     "allen": {
-      "steps": {
-        "2026-07-23": 14386,
-        "2026-07-24": 10861,
-        "2026-07-22": 8817,
-        "2026-07-25": 16053,
-        "2026-07-26": 4015,
-        "2026-07-27": 18234,
-        "2026-07-28": 17070,
-        "2026-07-29": 20336,
-        "2026-07-30": 21836,
-        "2026-07-31": 11006,
-        "2026-08-01": 4497,
-        "2026-08-02": 7307,
-        "2026-08-03": 16408,
-        "2026-08-05": 17119,
-        "2026-08-04": 16788,
-        "2026-08-06": 23416,
-        "2026-08-07": 13902,
-        "2026-08-08": 15733,
-        "2026-08-09": 3364,
-        "2026-08-10": 19671
-      },
-      "rolePrefs": [
-        "Driver",
-        "Ghost",
-        "Lookout",
-        "Safecracker"
-      ],
-      "role": "Lookout"
+      "steps": {},
+      "rolePrefs": null,
+      "role": null
     }
   },
-  "history": [
-    {
-      "ts": "2026-08-10T06:40:49.448Z",
-      "text": "THE BLOOD ESCAPED CLEAN (CARRY)"
-    },
-    {
-      "ts": "2026-08-09T02:28:14.573Z",
-      "text": "THE OUTLAWS CALLS IT: DROP A QUARTER"
-    },
-    {
-      "ts": "2026-08-09T01:28:03.961Z",
-      "text": "ALARM: THE OUTLAWS ENTERS THE GETAWAY"
-    },
-    {
-      "ts": "2026-08-08T01:50:49.819Z",
-      "text": "THE BLOOD CALLS IT: CARRY IT ALL"
-    },
-    {
-      "ts": "2026-08-08T01:50:36.246Z",
-      "text": "PHASE 7 UNLOCKED: THE OUTLAWS — LOAD THE SCORE"
-    },
-    {
-      "ts": "2026-08-08T01:50:36.246Z",
-      "text": "ALARM: THE BLOOD ENTERS THE GETAWAY"
-    },
-    {
-      "ts": "2026-08-05T05:28:52.280Z",
-      "text": "PHASE 7 UNLOCKED: THE BLOOD — LOAD THE SCORE"
-    },
-    {
-      "ts": "2026-08-02T23:04:45.175Z",
-      "text": "PHASE 6 UNLOCKED: THE OUTLAWS — CRACK THE VAULT"
-    },
-    {
-      "ts": "2026-08-02T06:34:46.083Z",
-      "text": "PHASE 6 UNLOCKED: THE BLOOD — CRACK THE VAULT"
-    },
-    {
-      "ts": "2026-07-30T05:17:00.207Z",
-      "text": "PHASE 5 UNLOCKED: THE OUTLAWS — BREACH THE PERIMETER"
-    },
-    {
-      "ts": "2026-07-30T05:13:34.345Z",
-      "text": "PHASE 5 UNLOCKED: THE BLOOD — BREACH THE PERIMETER"
-    },
-    {
-      "ts": "2026-07-29T00:16:46.634Z",
-      "text": "PHASE 4 UNLOCKED: THE OUTLAWS — KILL THE POWER"
-    },
-    {
-      "ts": "2026-07-27T06:31:15.916Z",
-      "text": "PHASE 4 UNLOCKED: THE BLOOD — KILL THE POWER"
-    },
-    {
-      "ts": "2026-07-26T04:51:58.965Z",
-      "text": "PHASE 3 UNLOCKED: THE OUTLAWS — SOURCE THE GEAR"
-    },
-    {
-      "ts": "2026-07-26T04:51:58.965Z",
-      "text": "ROLES ASSIGNED: THE OUTLAWS"
-    },
-    {
-      "ts": "2026-07-25T22:18:36.094Z",
-      "text": "PHASE 3 UNLOCKED: THE BLOOD — SOURCE THE GEAR"
-    },
-    {
-      "ts": "2026-07-25T22:18:36.094Z",
-      "text": "ROLES ASSIGNED: THE BLOOD"
-    },
-    {
-      "ts": "2026-07-25T22:16:56.279Z",
-      "text": "PHASE 2 UNLOCKED: THE OUTLAWS — ASSEMBLE THE CREW"
-    },
-    {
-      "ts": "2026-07-25T22:16:56.279Z",
-      "text": "PHASE 2 UNLOCKED: THE OUTLAWS — ASSEMBLE THE CREW"
-    },
-    {
-      "ts": "2026-07-25T21:39:13.638Z",
-      "text": "PHASE 2 UNLOCKED: THE BLOOD — ASSEMBLE THE CREW"
-    },
-    {
-      "ts": "2026-07-25T21:39:13.637Z",
-      "text": "PHASE 2 UNLOCKED: THE BLOOD — ASSEMBLE THE CREW"
-    }
-  ],
+  "history": [],
   "awards": []
 }
