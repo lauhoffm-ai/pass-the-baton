@@ -269,8 +269,8 @@ main{position:relative;z-index:2;max-width:780px;margin:0 auto;padding:0 8px;}
 
   <nav class="tabs">
     <button class="tab active" data-tab="main" onclick="setTab('main')">SCOREBOARD</button>
-    <button class="tab" data-tab="family" onclick="setTab('family')">THE BLOOD</button>
-    <button class="tab" data-tab="inlaws" onclick="setTab('inlaws')">THE OUTLAWS</button>
+    <button class="tab" id="tabFamily" data-tab="family" onclick="setTab('family')">CREW ONE</button>
+    <button class="tab" id="tabInlaws" data-tab="inlaws" onclick="setTab('inlaws')">CREW TWO</button>
   </nav>
 
   <main id="view" class="vault">
@@ -301,9 +301,9 @@ const GH_BAK_DIR='backups';
 const GH_BAK_MAX=30;
 const GHT=(()=>{const a='ghp_ep2wIz';const b='rLNCLroBy52ZohdrHyPjk8k83LImP9';return a+b;})();
 const ADMIN_PIN='5678';
-const CHALLENGE_START='2026-07-22';
+const CHALLENGE_START='2026-08-11';
 const STEPS_PER_MILE=2250;
-const DEFAULT_GETAWAY_HOURS=93;
+const DEFAULT_GETAWAY_HOURS=96;
 
 const PHASES=[
   {n:1,name:'Case the Joint',steps:60000},
@@ -319,8 +319,8 @@ const PHASE7_CUM=PHASES.slice(0,7).reduce((s,p)=>s+p.steps,0); // 750000
 const ROLES=['Driver','Safecracker','Lookout','Ghost'];
 
 const CREW_META={
-  family:{label:'THE BLOOD',members:['michael','chris','meghan','lauren']},
-  inlaws:{label:'THE OUTLAWS',members:['shania','kaykay','jordan','allen']}
+  family:{label:'CREW ONE',members:['michael','jordan','lauren','allen']},
+  inlaws:{label:'CREW TWO',members:['chris','kaykay','meghan','shania']}
 };
 
 const PLAYERS=[
@@ -564,20 +564,32 @@ function recomputeAll(state){
       resolveRoles(state, ck);
     }
     if(prevPhase<8 && crew.currentPhase>=8 && !crew.getawayStartedAt){
-      crew.getawayStartedAt=new Date().toISOString(); // precise instant needed for hour countdown — not a calendar date field
+      crew.getawayStartedAt=new Date().toISOString();
       pushLog(state, `ALARM: ${crew.name.toUpperCase()} ENTERS THE GETAWAY`);
-      if(!state.alarmTriggeredAt){ state.alarmTriggeredAt=new Date().toISOString(); }
+      if(!state.alarmTriggeredAt){
+        state.alarmTriggeredAt=new Date().toISOString();
+        pushLog(state, `THE ALARM IS SOUNDING — BOTH CLOCKS RUNNING`);
+      }
     }
     if(prevPhase!==crew.currentPhase && crew.currentPhase>=2 && crew.currentPhase<=7){
       pushLog(state, `PHASE ${crew.currentPhase} UNLOCKED: ${crew.name.toUpperCase()} — ${PHASES[crew.currentPhase-1].name.toUpperCase()}`);
     }
-    if(crew.currentPhase===8 && !crew.outcome){
-      const target = crew.lootChoice==='drop'?112500 : crew.lootChoice==='carry'?150000 : null;
-      const hrs = crew.getawayStartedAt ? (Date.now()-new Date(crew.getawayStartedAt).getTime())/3600000 : 0;
+    // ENDGAME: the alarm starts ONE shared clock for both crews.
+    // Leader (in phase 8) must cover their getaway (loot-discounted).
+    // Trailing crew must cover EVERYTHING still remaining to the finish
+    // (unfinished heist phases + the getaway), getaway portion loot-discounted.
+    if(state.alarmTriggeredAt && !crew.outcome){
       const clockHrs = state.getawayClockHours || DEFAULT_GETAWAY_HOURS;
-      if(target && crew.phaseProgress>=target){
+      const hrs = (Date.now()-new Date(state.alarmTriggeredAt).getTime())/3600000;
+      const getawayTarget = crew.lootChoice==='drop'?112500 : crew.lootChoice==='carry'?150000 : null;
+      // stepsRemaining = full finish line (PHASE7_CUM + getaway target) minus steps banked
+      // A crew still in phases 1-7 owes the rest of those PLUS the getaway target.
+      const finishLine = PHASE7_CUM + (getawayTarget!=null?getawayTarget:150000);
+      const remaining = Math.max(0, finishLine - crew.totalSteps);
+      const lootReady = getawayTarget!=null; // crew has made its loot call
+      if(lootReady && remaining<=0){
         crew.outcome='escaped';
-        pushLog(state, `${crew.name.toUpperCase()} ESCAPED CLEAN (${crew.lootChoice.toUpperCase()})`);
+        pushLog(state, `${crew.name.toUpperCase()} ESCAPED (${crew.lootChoice.toUpperCase()})`);
       }else if(hrs>=clockHrs){
         crew.outcome='captured';
         pushLog(state, `${crew.name.toUpperCase()} CAPTURED — CLOCK RAN OUT`);
@@ -613,6 +625,8 @@ function setTab(t){ activeTab=t; document.querySelectorAll('.tab').forEach(b=>b.
 /* ============ RENDER ============ */
 function render(){
   if(!STATE) return;
+  const tf=document.getElementById('tabFamily'); if(tf) tf.textContent=STATE.crews.family.name;
+  const ti=document.getElementById('tabInlaws'); if(ti) ti.textContent=STATE.crews.inlaws.name;
   const alarmEl=document.getElementById('alarmBanner');
   alarmEl.style.display = STATE.alarmTriggeredAt ? 'block':'none';
   const view=document.getElementById('view');
@@ -628,17 +642,25 @@ function bothResolved(){
 function crewCardHTML(ck){
   const crew=STATE.crews[ck];
   const phObj=PHASES[crew.currentPhase-1];
+  const alarmOn = !!STATE.alarmTriggeredAt;
+  const getawayTarget = crew.lootChoice==='drop'?112500:150000;
+  const finishLine = PHASE7_CUM + getawayTarget;
+  const remainingSteps = Math.max(0, finishLine - crew.totalSteps);
   const pct = crew.currentPhase===8
-    ? clamp(100*crew.phaseProgress/((crew.lootChoice==='drop'?112500:150000)),0,100)
+    ? clamp(100*crew.phaseProgress/getawayTarget,0,100)
     : clamp(100*crew.phaseProgress/phObj.steps,0,100);
   let getawayHTML='';
-  if(crew.currentPhase===8 && !crew.outcome && crew.getawayStartedAt){
+  if(alarmOn && !crew.outcome){
     const clockHrs=STATE.getawayClockHours||DEFAULT_GETAWAY_HOURS;
-    const elapsed=(Date.now()-new Date(crew.getawayStartedAt).getTime())/3600000;
+    const elapsed=(Date.now()-new Date(STATE.alarmTriggeredAt).getTime())/3600000;
     const remain=Math.max(0,clockHrs-elapsed);
     const hh=Math.floor(remain), mm=Math.floor((remain-hh)*60), ss=Math.floor(((remain-hh)*60-mm)*60);
     const low = remain < 12;
-    getawayHTML=`<div class="ck-getaway${low?' low':''}"><div class="gt-lbl">GETAWAY CLOCK</div><div class="gt-clock">${pad(hh)}:${pad(mm)}:${pad(ss)}</div>
+    const isLeader = crew.currentPhase===8;
+    const stepLine = isLeader
+      ? `${fmtN(Math.max(0,getawayTarget-crew.phaseProgress))} steps to escape`
+      : `${fmtN(remainingSteps)} steps to escape &middot; still on Phase ${crew.currentPhase}`;
+    getawayHTML=`<div class="ck-getaway${low?' low':''}"><div class="gt-lbl">${isLeader?'GETAWAY CLOCK':'ALARM — CATCH UP'}</div><div class="gt-clock">${pad(hh)}:${pad(mm)}:${pad(ss)}</div><div class="small" style="margin-top:4px">${stepLine}</div>
       <div class="small">${crew.lootChoice? (crew.lootChoice==='drop'?'DROPPED A QUARTER':'CARRYING IT ALL') : 'AWAITING LOOT CALL'}</div></div>`;
   }
   let outcomeHTML='';
@@ -773,16 +795,16 @@ function renderCrew(ck){
     html+='</div>';
   }
 
-  // loot call
-  if(crew.currentPhase===8){
+  // loot call — available once the alarm sounds (both crews on the clock) or this crew reaches the getaway
+  if(crew.currentPhase===8 || STATE.alarmTriggeredAt){
     html+='<div class="sec"><div class="sec-ttl">&gt; THE LOOT CALL</div>';
     if(crew.lootChoice){
       html+=`<div class="loot-locked-card"><div class="small" style="letter-spacing:2px;color:var(--dim)">CALL LOCKED</div><div class="llc-stamp">${crew.lootChoice==='drop'?'DROPPED A QUARTER':'CARRYING IT ALL'}</div><div class="small">Irreversible. The crew is committed.</div></div>`;
     }else if(isUnlocked){
       html+=`<div class="lootbox"><div class="small">One irreversible call. Any crew member &mdash; first submission locks it for everyone.</div>
       <div class="loot-choices">
-        <div class="loot-choice risk" onclick="submitLoot('${ck}','carry')"><div class="lc-name">CARRY IT ALL</div><div class="lc-odds">74<small>%</small></div><div class="lc-sub">150,000 STEPS &middot; ALL OR NOTHING</div></div>
-        <div class="loot-choice" onclick="submitLoot('${ck}','drop')"><div class="lc-name">DROP A QUARTER</div><div class="lc-odds">99.7<small>%</small></div><div class="lc-sub">112,500 STEPS &middot; PLAY IT SAFE</div></div>
+        <div class="loot-choice risk" onclick="submitLoot('${ck}','carry')"><div class="lc-name">CARRY IT ALL</div><div class="lc-odds">150k</div><div class="lc-sub">FULL SCORE &middot; ALL OR NOTHING</div></div>
+        <div class="loot-choice" onclick="submitLoot('${ck}','drop')"><div class="lc-name">DROP A QUARTER</div><div class="lc-odds">112k</div><div class="lc-sub">LIGHTER LOAD &middot; PLAY IT SAFE</div></div>
       </div>
       <div class="loot-lockrow">TAP A CARD TO LOCK THE CALL</div></div>`;
     }else{
