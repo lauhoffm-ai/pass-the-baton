@@ -47,7 +47,13 @@
       "rolesResolved": false,
       "heatChecks": [],
       "combination": "5678",
-      "board": []
+      "board": [
+        {
+          "sender": "Shania",
+          "text": "I actually synced my Fitbit for once",
+          "ts": "2026-09-17T16:03:15.989Z"
+        }
+      ]
     }
   },
   "alarmTriggeredAt": null,
