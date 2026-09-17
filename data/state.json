@@ -53,27 +53,37 @@
   "alarmTriggeredAt": null,
   "players": {
     "michael": {
-      "steps": {},
+      "steps": {
+        "2026-09-16": 13300
+      },
       "rolePrefs": null,
       "role": null
     },
     "chris": {
-      "steps": {},
+      "steps": {
+        "2026-09-16": 12779
+      },
       "rolePrefs": null,
       "role": null
     },
     "meghan": {
-      "steps": {},
+      "steps": {
+        "2026-09-16": 8697
+      },
       "rolePrefs": null,
       "role": null
     },
     "lauren": {
-      "steps": {},
+      "steps": {
+        "2026-09-16": 7648
+      },
       "rolePrefs": null,
       "role": null
     },
     "shania": {
-      "steps": {},
+      "steps": {
+        "2026-09-16": 17100
+      },
       "rolePrefs": null,
       "role": null
     },
@@ -83,12 +93,16 @@
       "role": null
     },
     "jordan": {
-      "steps": {},
+      "steps": {
+        "2026-09-16": 12725
+      },
       "rolePrefs": null,
       "role": null
     },
     "allen": {
-      "steps": {},
+      "steps": {
+        "2026-09-16": 21725
+      },
       "rolePrefs": null,
       "role": null
     }
