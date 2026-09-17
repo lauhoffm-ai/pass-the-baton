@@ -4,16 +4,16 @@
   "getawayClockHours": 96,
   "crews": {
     "family": {
-      "name": "CREW ONE",
+      "name": "Cstat cronies",
       "members": [
         "michael",
         "jordan",
         "lauren",
         "allen"
       ],
-      "totalSteps": 0,
+      "totalSteps": 55398,
       "currentPhase": 1,
-      "phaseProgress": 0,
+      "phaseProgress": 55398,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -37,9 +37,9 @@
         "meghan",
         "shania"
       ],
-      "totalSteps": 0,
+      "totalSteps": 38576,
       "currentPhase": 1,
-      "phaseProgress": 0,
+      "phaseProgress": 38576,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
