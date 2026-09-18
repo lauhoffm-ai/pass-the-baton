@@ -11,13 +11,13 @@
         "lauren",
         "allen"
       ],
-      "totalSteps": 55398,
-      "currentPhase": 1,
-      "phaseProgress": 55398,
+      "totalSteps": 81520,
+      "currentPhase": 2,
+      "phaseProgress": 21520,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
-      "phase2OpenedOn": null,
+      "phase2OpenedOn": "2026-09-17",
       "rolesResolved": false,
       "heatChecks": [],
       "combination": "5678",
@@ -37,9 +37,9 @@
         "meghan",
         "shania"
       ],
-      "totalSteps": 38576,
+      "totalSteps": 50154,
       "currentPhase": 1,
-      "phaseProgress": 38576,
+      "phaseProgress": 50154,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -114,12 +114,22 @@
     },
     "allen": {
       "steps": {
-        "2026-09-16": 21725
+        "2026-09-16": 21725,
+        "2026-09-17": 26122
       },
       "rolePrefs": null,
       "role": null
     }
   },
-  "history": [],
+  "history": [
+    {
+      "ts": "2026-09-18T04:55:53.357Z",
+      "text": "PHASE 2 UNLOCKED: CSTAT CRONIES — ASSEMBLE THE CREW"
+    },
+    {
+      "ts": "2026-09-18T04:55:53.357Z",
+      "text": "PHASE 2 UNLOCKED: CSTAT CRONIES — ASSEMBLE THE CREW"
+    }
+  ],
   "awards": []
 }
