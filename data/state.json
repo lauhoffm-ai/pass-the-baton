@@ -117,7 +117,12 @@
         "2026-09-16": 21725,
         "2026-09-17": 26122
       },
-      "rolePrefs": null,
+      "rolePrefs": [
+        "Ghost",
+        "Driver",
+        "Lookout",
+        "Safecracker"
+      ],
       "role": null
     }
   },
