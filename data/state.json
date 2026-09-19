@@ -102,7 +102,12 @@
       "steps": {
         "2026-09-16": 11578
       },
-      "rolePrefs": null,
+      "rolePrefs": [
+        "Ghost",
+        "Safecracker",
+        "Driver",
+        "Lookout"
+      ],
       "role": null
     },
     "jordan": {
