@@ -5,12 +5,7 @@
   "crews": {
     "family": {
       "name": "Cstat cronies",
-      "members": [
-        "michael",
-        "jordan",
-        "lauren",
-        "allen"
-      ],
+      "members": ["michael", "jordan", "lauren", "allen"],
       "totalSteps": 102110,
       "currentPhase": 2,
       "phaseProgress": 42110,
@@ -22,21 +17,12 @@
       "heatChecks": [],
       "combination": "5678",
       "board": [
-        {
-          "sender": "Michael",
-          "text": "Jojo better get on that walking pad",
-          "ts": "2026-09-16T16:01:26.438Z"
-        }
+        {"sender": "Michael", "text": "Jojo better get on that walking pad", "ts": "2026-09-16T16:01:26.438Z"}
       ]
     },
     "inlaws": {
       "name": "CREW TWO",
-      "members": [
-        "chris",
-        "kaykay",
-        "meghan",
-        "shania"
-      ],
+      "members": ["chris", "kaykay", "meghan", "shania"],
       "totalSteps": 50154,
       "currentPhase": 1,
       "phaseProgress": 50154,
@@ -48,114 +34,58 @@
       "heatChecks": [],
       "combination": "5678",
       "board": [
-        {
-          "sender": "Shania",
-          "text": "I actually synced my Fitbit for once",
-          "ts": "2026-09-17T16:03:15.989Z"
-        },
-        {
-          "sender": "KayKay",
-          "text": "Well done!! I keep forgetting 🤓",
-          "ts": "2026-09-19T00:40:25.772Z"
-        },
-        {
-          "sender": "KayKay",
-          "text": "We need a name…crew far and wild?",
-          "ts": "2026-09-19T00:40:53.489Z"
-        }
+        {"sender": "Shania", "text": "I actually synced my Fitbit for once", "ts": "2026-09-17T16:03:15.989Z"},
+        {"sender": "KayKay", "text": "Well done!! I keep forgetting 🥵", "ts": "2026-09-19T00:40:25.772Z"},
+        {"sender": "KayKay", "text": "We need a name…crew far and wild?", "ts": "2026-09-19T00:40:53.489Z"}
       ]
     }
   },
   "alarmTriggeredAt": null,
   "players": {
     "michael": {
-      "steps": {
-        "2026-09-16": 13300
-      },
-      "rolePrefs": [
-        "Driver",
-        "Safecracker",
-        "Ghost",
-        "Lookout"
-      ],
+      "steps": {"2026-09-16": 13300, "2026-09-17": 16419, "2026-09-18": 19519},
+      "rolePrefs": ["Driver", "Safecracker", "Ghost", "Lookout"],
       "role": null
     },
     "chris": {
-      "steps": {
-        "2026-09-16": 12779
-      },
-      "rolePrefs": [
-        "Lookout",
-        "Ghost",
-        "Safecracker",
-        "Driver"
-      ],
+      "steps": {"2026-09-16": 12779, "2026-09-17": 7153, "2026-09-18": 18621},
+      "rolePrefs": ["Lookout", "Ghost", "Safecracker", "Driver"],
       "role": null
     },
     "meghan": {
-      "steps": {
-        "2026-09-16": 8697
-      },
+      "steps": {"2026-09-16": 8697, "2026-09-17": 7392, "2026-09-18": 4122},
       "rolePrefs": null,
       "role": null
     },
     "lauren": {
-      "steps": {
-        "2026-09-16": 7648
-      },
+      "steps": {"2026-09-16": 7648, "2026-09-17": 6595, "2026-09-18": 9368},
       "rolePrefs": null,
       "role": null
     },
     "shania": {
-      "steps": {
-        "2026-09-16": 17100
-      },
+      "steps": {"2026-09-16": 17100, "2026-09-17": 19954, "2026-09-18": 17169},
       "rolePrefs": null,
       "role": null
     },
     "kaykay": {
-      "steps": {
-        "2026-09-16": 11578
-      },
-      "rolePrefs": [
-        "Ghost",
-        "Safecracker",
-        "Driver",
-        "Lookout"
-      ],
+      "steps": {"2026-09-16": 11578, "2026-09-17": 8579, "2026-09-18": 16917},
+      "rolePrefs": ["Ghost", "Safecracker", "Driver", "Lookout"],
       "role": null
     },
     "jordan": {
-      "steps": {
-        "2026-09-16": 12725
-      },
+      "steps": {"2026-09-16": 12725, "2026-09-17": 11958, "2026-09-18": 15275},
       "rolePrefs": null,
       "role": null
     },
     "allen": {
-      "steps": {
-        "2026-09-16": 21725,
-        "2026-09-17": 26122,
-        "2026-09-18": 20590
-      },
-      "rolePrefs": [
-        "Ghost",
-        "Driver",
-        "Lookout",
-        "Safecracker"
-      ],
+      "steps": {"2026-09-16": 21725, "2026-09-17": 26122, "2026-09-18": 20765},
+      "rolePrefs": ["Ghost", "Driver", "Lookout", "Safecracker"],
       "role": null
     }
   },
   "history": [
-    {
-      "ts": "2026-09-18T04:55:53.357Z",
-      "text": "PHASE 2 UNLOCKED: CSTAT CRONIES — ASSEMBLE THE CREW"
-    },
-    {
-      "ts": "2026-09-18T04:55:53.357Z",
-      "text": "PHASE 2 UNLOCKED: CSTAT CRONIES — ASSEMBLE THE CREW"
-    }
+    {"ts": "2026-09-18T04:55:53.357Z", "text": "PHASE 2 UNLOCKED: CSTAT CRONIES — ASSEMBLE THE CREW"},
+    {"ts": "2026-09-18T04:55:53.357Z", "text": "PHASE 2 UNLOCKED: CSTAT CRONIES — ASSEMBLE THE CREW"}
   ],
   "awards": []
 }
