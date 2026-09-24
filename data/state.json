@@ -37,9 +37,9 @@
         "meghan",
         "shania"
       ],
-      "totalSteps": 322404,
+      "totalSteps": 330076,
       "currentPhase": 4,
-      "phaseProgress": 97404,
+      "phaseProgress": 105076,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -112,7 +112,8 @@
         "2026-09-18": 4122,
         "2026-09-19": 1572,
         "2026-09-20": 6676,
-        "2026-09-21": 5824
+        "2026-09-21": 5824,
+        "2026-09-22": 7672
       },
       "rolePrefs": null,
       "role": "Driver"
