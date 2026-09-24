@@ -11,9 +11,9 @@
         "lauren",
         "allen"
       ],
-      "totalSteps": 370481,
+      "totalSteps": 401757,
       "currentPhase": 5,
-      "phaseProgress": 35481,
+      "phaseProgress": 66757,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -26,6 +26,11 @@
           "sender": "Michael",
           "text": "Jojo better get on that walking pad",
           "ts": "2026-09-16T16:01:26.438Z"
+        },
+        {
+          "sender": "Michael",
+          "text": "How hard could it be to beat a team with no name",
+          "ts": "2026-09-24T23:19:02.419Z"
         }
       ]
     },
@@ -37,9 +42,9 @@
         "meghan",
         "shania"
       ],
-      "totalSteps": 330076,
-      "currentPhase": 4,
-      "phaseProgress": 105076,
+      "totalSteps": 398026,
+      "currentPhase": 5,
+      "phaseProgress": 63026,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -203,6 +208,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-09-24T23:18:47.829Z",
+      "text": "PHASE 5 UNLOCKED: CREW TWO — BREACH THE PERIMETER"
+    },
     {
       "ts": "2026-09-24T10:37:40.395Z",
       "text": "PHASE 5 UNLOCKED: CSTAT CRONIES — BREACH THE PERIMETER"
