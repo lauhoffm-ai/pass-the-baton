@@ -11,9 +11,9 @@
         "lauren",
         "allen"
       ],
-      "totalSteps": 363590,
+      "totalSteps": 370481,
       "currentPhase": 5,
-      "phaseProgress": 28590,
+      "phaseProgress": 35481,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -124,7 +124,8 @@
         "2026-09-18": 9368,
         "2026-09-19": 1146,
         "2026-09-20": 2844,
-        "2026-09-21": 6969
+        "2026-09-21": 6969,
+        "2026-09-22": 6891
       },
       "rolePrefs": null,
       "role": "Lookout"
