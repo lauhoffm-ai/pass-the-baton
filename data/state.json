@@ -37,9 +37,9 @@
         "meghan",
         "shania"
       ],
-      "totalSteps": 294801,
+      "totalSteps": 310233,
       "currentPhase": 4,
-      "phaseProgress": 69801,
+      "phaseProgress": 85233,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -93,7 +93,8 @@
         "2026-09-18": 18621,
         "2026-09-19": 16858,
         "2026-09-20": 18577,
-        "2026-09-21": 10982
+        "2026-09-21": 10982,
+        "2026-09-22": 15432
       },
       "rolePrefs": [
         "Lookout",
