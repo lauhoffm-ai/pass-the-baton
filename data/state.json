@@ -11,9 +11,9 @@
         "lauren",
         "allen"
       ],
-      "totalSteps": 331887,
-      "currentPhase": 4,
-      "phaseProgress": 106887,
+      "totalSteps": 349461,
+      "currentPhase": 5,
+      "phaseProgress": 14461,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -75,7 +75,8 @@
         "2026-09-18": 19519,
         "2026-09-19": 13451,
         "2026-09-20": 7402,
-        "2026-09-21": 15654
+        "2026-09-21": 15654,
+        "2026-09-22": 17574
       },
       "rolePrefs": [
         "Driver",
@@ -188,6 +189,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-09-24T10:37:40.395Z",
+      "text": "PHASE 5 UNLOCKED: CSTAT CRONIES — BREACH THE PERIMETER"
+    },
     {
       "ts": "2026-09-24T10:35:42.278Z",
       "text": "PHASE 4 UNLOCKED: CREW TWO — KILL THE POWER"
