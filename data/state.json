@@ -11,9 +11,9 @@
         "lauren",
         "allen"
       ],
-      "totalSteps": 349461,
+      "totalSteps": 363590,
       "currentPhase": 5,
-      "phaseProgress": 14461,
+      "phaseProgress": 28590,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -164,7 +164,8 @@
         "2026-09-18": 15275,
         "2026-09-19": 13809,
         "2026-09-20": 8159,
-        "2026-09-21": 13563
+        "2026-09-21": 13563,
+        "2026-09-22": 14129
       },
       "rolePrefs": null,
       "role": "Safecracker"
