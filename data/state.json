@@ -11,9 +11,9 @@
         "lauren",
         "allen"
       ],
-      "totalSteps": 401757,
+      "totalSteps": 424935,
       "currentPhase": 5,
-      "phaseProgress": 66757,
+      "phaseProgress": 89935,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -196,7 +196,8 @@
         "2026-09-19": 6759,
         "2026-09-20": 4944,
         "2026-09-22": 19833,
-        "2026-09-23": 21017
+        "2026-09-23": 21017,
+        "2026-09-24": 23178
       },
       "rolePrefs": [
         "Ghost",
