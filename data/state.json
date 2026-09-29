@@ -11,9 +11,9 @@
         "lauren",
         "allen"
       ],
-      "totalSteps": 424935,
-      "currentPhase": 5,
-      "phaseProgress": 89935,
+      "totalSteps": 548990,
+      "currentPhase": 6,
+      "phaseProgress": 83990,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -35,16 +35,16 @@
       ]
     },
     "inlaws": {
-      "name": "CREW No Name",
+      "name": "Walkaholics anonymous",
       "members": [
         "chris",
         "kaykay",
         "meghan",
         "shania"
       ],
-      "totalSteps": 398026,
-      "currentPhase": 5,
-      "phaseProgress": 63026,
+      "totalSteps": 611358,
+      "currentPhase": 6,
+      "phaseProgress": 146358,
       "getawayStartedAt": null,
       "lootChoice": null,
       "outcome": null,
@@ -239,6 +239,14 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-09-29T02:15:57.087Z",
+      "text": "PHASE 6 UNLOCKED: CREW NO NAME — CRACK THE VAULT"
+    },
+    {
+      "ts": "2026-09-29T02:15:57.087Z",
+      "text": "PHASE 6 UNLOCKED: CSTAT CRONIES — CRACK THE VAULT"
+    },
     {
       "ts": "2026-09-24T23:18:47.829Z",
       "text": "PHASE 5 UNLOCKED: CREW TWO — BREACH THE PERIMETER"
