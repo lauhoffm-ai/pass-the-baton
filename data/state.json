@@ -4,17 +4,17 @@
   "getawayClockHours": 96,
   "crews": {
     "family": {
-      "name": "Cstat cronies",
+      "name": "Old hags",
       "members": [
         "michael",
         "jordan",
         "lauren",
         "allen"
       ],
-      "totalSteps": 548990,
-      "currentPhase": 6,
-      "phaseProgress": 83990,
-      "getawayStartedAt": null,
+      "totalSteps": 755161,
+      "currentPhase": 8,
+      "phaseProgress": 5161,
+      "getawayStartedAt": "2026-10-01T17:52:36.370Z",
       "lootChoice": null,
       "outcome": null,
       "phase2OpenedOn": "2026-09-17",
@@ -42,10 +42,10 @@
         "meghan",
         "shania"
       ],
-      "totalSteps": 611358,
-      "currentPhase": 6,
-      "phaseProgress": 146358,
-      "getawayStartedAt": null,
+      "totalSteps": 751017,
+      "currentPhase": 8,
+      "phaseProgress": 1017,
+      "getawayStartedAt": "2026-10-01T17:52:36.370Z",
       "lootChoice": null,
       "outcome": null,
       "phase2OpenedOn": "2026-09-21",
@@ -71,7 +71,7 @@
       ]
     }
   },
-  "alarmTriggeredAt": null,
+  "alarmTriggeredAt": "2026-10-01T17:52:36.370Z",
   "players": {
     "michael": {
       "steps": {
@@ -263,6 +263,18 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-10-01T17:52:36.370Z",
+      "text": "ALARM: WALKAHOLICS ANONYMOUS ENTERS THE GETAWAY"
+    },
+    {
+      "ts": "2026-10-01T17:52:36.370Z",
+      "text": "THE ALARM IS SOUNDING — BOTH CLOCKS RUNNING"
+    },
+    {
+      "ts": "2026-10-01T17:52:36.370Z",
+      "text": "ALARM: CSTAT CRONIES ENTERS THE GETAWAY"
+    },
     {
       "ts": "2026-09-29T02:15:57.087Z",
       "text": "PHASE 6 UNLOCKED: CREW NO NAME — CRACK THE VAULT"
