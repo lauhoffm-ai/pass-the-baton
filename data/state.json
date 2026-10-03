@@ -46,7 +46,7 @@
       "currentPhase": 8,
       "phaseProgress": 1017,
       "getawayStartedAt": "2026-10-01T17:52:36.370Z",
-      "lootChoice": null,
+      "lootChoice": "carry",
       "outcome": null,
       "phase2OpenedOn": "2026-09-21",
       "rolesResolved": true,
@@ -263,6 +263,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-10-03T03:46:05.340Z",
+      "text": "WALKAHOLICS ANONYMOUS CALLS IT: CARRY IT ALL"
+    },
     {
       "ts": "2026-10-03T00:34:02.530Z",
       "text": "OLD HAGS CALLS IT: CARRY IT ALL"
