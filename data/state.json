@@ -11,9 +11,9 @@
         "lauren",
         "allen"
       ],
-      "totalSteps": 815045,
+      "totalSteps": 816234,
       "currentPhase": 8,
-      "phaseProgress": 65045,
+      "phaseProgress": 66234,
       "getawayStartedAt": "2026-10-01T17:52:36.370Z",
       "lootChoice": "carry",
       "outcome": null,
@@ -242,7 +242,8 @@
         "2026-09-27": 1659,
         "2026-09-28": 11758,
         "2026-09-29": 21036,
-        "2026-09-30": 22030
+        "2026-09-30": 22030,
+        "2026-10-01": 1189
       },
       "rolePrefs": null,
       "role": "Safecracker"
