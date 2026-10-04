@@ -11,9 +11,9 @@
         "lauren",
         "allen"
       ],
-      "totalSteps": 886617,
+      "totalSteps": 887855,
       "currentPhase": 8,
-      "phaseProgress": 136617,
+      "phaseProgress": 137855,
       "getawayStartedAt": "2026-10-01T17:52:36.370Z",
       "lootChoice": "carry",
       "outcome": null,
@@ -93,7 +93,7 @@
         "2026-10-02": 9942,
         "2026-10-03": 11991,
         "2026-10-01": 9975,
-        "2026-10-04": 3746
+        "2026-10-04": 4984
       },
       "rolePrefs": [
         "Driver",
