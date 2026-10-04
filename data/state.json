@@ -11,9 +11,9 @@
         "lauren",
         "allen"
       ],
-      "totalSteps": 900439,
+      "totalSteps": 902214,
       "currentPhase": 8,
-      "phaseProgress": 150439,
+      "phaseProgress": 152214,
       "getawayStartedAt": "2026-10-01T17:52:36.370Z",
       "lootChoice": "carry",
       "outcome": "escaped",
@@ -279,7 +279,7 @@
         "2026-10-02": 19499,
         "2026-10-01": 10759,
         "2026-10-03": 4543,
-        "2026-10-04": 1300
+        "2026-10-04": 3075
       },
       "rolePrefs": [
         "Ghost",
