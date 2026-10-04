@@ -11,9 +11,9 @@
         "lauren",
         "allen"
       ],
-      "totalSteps": 816234,
+      "totalSteps": 874826,
       "currentPhase": 8,
-      "phaseProgress": 66234,
+      "phaseProgress": 124826,
       "getawayStartedAt": "2026-10-01T17:52:36.370Z",
       "lootChoice": "carry",
       "outcome": null,
@@ -42,9 +42,9 @@
         "meghan",
         "shania"
       ],
-      "totalSteps": 837688,
+      "totalSteps": 899447,
       "currentPhase": 8,
-      "phaseProgress": 87688,
+      "phaseProgress": 149447,
       "getawayStartedAt": "2026-10-01T17:52:36.370Z",
       "lootChoice": "carry",
       "outcome": null,
@@ -174,7 +174,8 @@
         "2026-09-30": 17220,
         "2026-10-02": 9909,
         "2026-10-03": 5232,
-        "2026-10-01": 6519
+        "2026-10-01": 6519,
+        "2026-10-04": 6205
       },
       "rolePrefs": null,
       "role": "Lookout"
