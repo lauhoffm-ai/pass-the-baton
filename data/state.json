@@ -42,9 +42,9 @@
         "meghan",
         "shania"
       ],
-      "totalSteps": 829925,
+      "totalSteps": 837688,
       "currentPhase": 8,
-      "phaseProgress": 79925,
+      "phaseProgress": 87688,
       "getawayStartedAt": "2026-10-01T17:52:36.370Z",
       "lootChoice": "carry",
       "outcome": null,
@@ -147,7 +147,8 @@
         "2026-09-29": 0,
         "2026-09-30": 5354,
         "2026-10-02": 8913,
-        "2026-10-03": 1459
+        "2026-10-03": 1459,
+        "2026-10-01": 7763
       },
       "rolePrefs": null,
       "role": "Driver"
