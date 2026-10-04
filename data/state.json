@@ -42,12 +42,12 @@
         "meghan",
         "shania"
       ],
-      "totalSteps": 899447,
+      "totalSteps": 907048,
       "currentPhase": 8,
-      "phaseProgress": 149447,
+      "phaseProgress": 157048,
       "getawayStartedAt": "2026-10-01T17:52:36.370Z",
       "lootChoice": "carry",
-      "outcome": null,
+      "outcome": "escaped",
       "phase2OpenedOn": "2026-09-21",
       "rolesResolved": true,
       "heatChecks": [],
@@ -122,7 +122,8 @@
         "2026-09-30": 11162,
         "2026-10-02": 16919,
         "2026-10-03": 15263,
-        "2026-10-01": 16291
+        "2026-10-01": 16291,
+        "2026-10-04": 7601
       },
       "rolePrefs": [
         "Lookout",
@@ -290,6 +291,10 @@
     }
   },
   "history": [
+    {
+      "ts": "2026-10-04T22:47:19.342Z",
+      "text": "BETAS ESCAPED (CARRY)"
+    },
     {
       "ts": "2026-10-04T21:16:00.846Z",
       "text": "ALPHAS ESCAPED (CARRY)"
