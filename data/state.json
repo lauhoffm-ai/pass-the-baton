@@ -29,7 +29,8 @@
   "players": {
     "michael": {
       "steps": {
-        "2026-10-18": 9000
+        "2026-10-18": 9000,
+        "2026-10-19": 9000
       }
     },
     "jordan": {
@@ -99,10 +100,16 @@
     "lost": false
   },
   "floorSeen": {
-    "crypt": 1,
+    "crypt": 2,
     "lost": 1
   },
   "history": [
+    {
+      "at": "2026-10-18T14:47:40.232Z",
+      "crew": "crypt",
+      "kind": "floor",
+      "text": "The Crypt Keepers reached floor 2."
+    },
     {
       "at": "2026-10-19T12:05:00.000Z",
       "crew": "lost",
