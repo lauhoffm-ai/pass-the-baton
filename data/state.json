@@ -52,7 +52,8 @@
     },
     "chris": {
       "steps": {
-        "2026-10-18": 9000
+        "2026-10-18": 9000,
+        "2026-10-19": 9000
       }
     },
     "kaykay": {
@@ -103,9 +104,15 @@
   },
   "floorSeen": {
     "crypt": 2,
-    "lost": 1
+    "lost": 2
   },
   "history": [
+    {
+      "at": "2026-10-18T14:47:45.639Z",
+      "crew": "lost",
+      "kind": "floor",
+      "text": "The Lost Souls reached floor 2."
+    },
     {
       "at": "2026-10-18T14:47:40.232Z",
       "crew": "crypt",
