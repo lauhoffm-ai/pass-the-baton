@@ -21,7 +21,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .small{font-size:12px;color:var(--dim);}
 b{color:var(--bone);}
 
-.hdr{text-align:center;padding:34px 16px 16px;}
+.hdr{text-align:center;padding:34px 16px 16px;position:relative;}
 .hdr-top{font-size:11px;letter-spacing:6px;color:var(--dim);}
 .hdr h1{font-family:var(--disp);font-weight:900;font-size:40px;letter-spacing:3px;line-height:1.05;margin-top:8px;color:var(--bone);text-shadow:0 0 22px rgba(255,122,26,.28);animation:flick 7s infinite;}
 .hdr h1 em{font-style:normal;color:var(--orange);}
@@ -122,7 +122,7 @@ input[type=tel],input[type=text],input[type=number],input[type=date],input[type=
 .f-row label{display:block;font-size:11px;letter-spacing:2px;color:var(--dim);margin-bottom:4px;}
 
 /* admin */
-.fab{position:fixed;right:14px;bottom:14px;width:46px;height:46px;border-radius:50%;background:#14110f;color:var(--dim);border:1px solid var(--line);font-size:20px;z-index:20;cursor:pointer;}
+.fab{position:absolute;right:12px;top:12px;width:36px;height:36px;border-radius:50%;background:#14110f;color:var(--dimmer);border:1px solid var(--line);font-size:17px;z-index:5;cursor:pointer;}
 .aov{display:none;position:fixed;inset:0;z-index:30;background:rgba(5,4,7,.99);overflow-y:auto;padding:0 14px 60px;}
 .aov.open{display:block;}
 .ahdr{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--orange-dim);margin-bottom:10px;max-width:560px;margin-left:auto;margin-right:auto;}
@@ -143,6 +143,7 @@ input[type=tel],input[type=text],input[type=number],input[type=date],input[type=
 <body>
 <div id="app">
   <header class="hdr">
+    <button class="fab" onclick="openAdmin()" aria-label="Admin">&#9881;</button>
     <div class="hdr-top">NOW CHECKING IN</div>
     <h1>THE <em>13TH</em> FLOOR</h1>
     <div class="hdr-sub">MARCOS &amp; MUSCLES &middot; TWO CREWS &middot; ONE HOTEL</div>
@@ -155,7 +156,6 @@ input[type=tel],input[type=text],input[type=number],input[type=date],input[type=
     <button class="tab" data-tab="log" onclick="setTab('log')">Log</button>
   </nav>
   <main id="view"></main>
-  <button class="fab" onclick="openAdmin()" aria-label="Admin">&#9881;</button>
   <div class="aov" id="adminOverlay">
     <div class="ahdr"><div class="att">&#9632; BACKDOOR</div><button class="acl" onclick="closeAdmin()">[X] CLOSE</button></div>
     <div id="adminBody"></div>
@@ -251,7 +251,7 @@ function defState(){
   const crews={};
   CREW_KEYS.forEach(k=>{crews[k]={name:CREWS[k].label,members:CREWS[k].members.slice(),combination:DEFAULT_COMBO,board:[]};});
   return {
-    version:1, challenge:CHALLENGE_ID, config:{},
+    version:1, challenge:CHALLENGE_ID, epoch:(Math.random().toString(36).slice(2,10)+Date.now().toString(36)), config:{},
     crews, players,
     reveals:{crypt:{},lost:{}},   // date -> {player, at}   (only ever contains past, revealed picks)
     doors:{crypt:{},lost:{}},     // floor -> {day, at}      (sticky once opened)
@@ -263,6 +263,7 @@ function defState(){
   };
 }
 function ensureShape(s){
+  if(!s.epoch)s.epoch='e0';
   s.config=s.config||{};
   s.reveals=s.reveals||{};s.doors=s.doors||{};s.targets=s.targets||{};s.verdicts=s.verdicts||{};
   s.hold=s.hold||{};s.floorSeen=s.floorSeen||{};s.history=s.history||[];s.players=s.players||{};
@@ -457,6 +458,7 @@ function canLog(s,pid,date,val,now){
 /* ---------- restore safety: a restore never un-reveals or re-locks ---------- */
 function mergeSticky(restored,current){
   ensureShape(restored);ensureShape(current);
+  restored.epoch=current.epoch;   // a restore must not log crews out
   CREW_KEYS.forEach(ck=>{
     Object.keys(current.reveals[ck]).forEach(d=>{restored.reveals[ck][d]=current.reveals[ck][d];});
     Object.keys(current.doors[ck]).forEach(L=>{restored.doors[ck][L]=current.doors[ck][L];});
@@ -514,9 +516,19 @@ async function ghDeleteFile(path,sha,message){
 let STATE=null,stateSha=null,FOREIGN=false,LOADERR=null;
 let saveInFlight=false,saveChain=Promise.resolve();
 let activeTab='main';
-let unlocked={crypt:false,lost:false,admin:false};
-try{const u=JSON.parse(sessionStorage.getItem('u13')||'{}');unlocked.crypt=!!u.crypt;unlocked.lost=!!u.lost;unlocked.admin=!!u.admin;}catch(e){}
-function persistUnlocked(){try{sessionStorage.setItem('u13',JSON.stringify(unlocked));}catch(e){}}
+let unlocked={admin:false};   // admin is never remembered: re-enter the PIN every time
+function unlockRec(){try{return JSON.parse(sessionStorage.getItem('u13')||'{}')||{};}catch(e){return {};}}
+function setUnlockRec(r){try{sessionStorage.setItem('u13',JSON.stringify(r));}catch(e){}}
+// a remembered crew unlock only counts while the challenge epoch and the crew's combination are unchanged,
+// so changing the code or resetting the challenge locks everyone back out
+function crewUnlocked(ck){
+  if(unlocked.admin)return true;
+  if(!STATE)return false;
+  const r=unlockRec()[ck];
+  return !!(r&&r.epoch===STATE.epoch&&(r.combo===STATE.crews[ck].combination||r.next===STATE.crews[ck].combination));
+}
+function rememberUnlock(ck){const r=unlockRec();r[ck]={epoch:STATE.epoch,combo:STATE.crews[ck].combination};setUnlockRec(r);}
+function lockCrew(ck){const r=unlockRec();delete r[ck];setUnlockRec(r);render(true);}
 
 async function loadFresh(){
   let f;
@@ -570,8 +582,14 @@ async function _commit(mutator,msg){
 }
 
 /* ---------- backups ---------- */
+function bakStamp(name){
+  const m=name.match(/(\d{4}-\d{2}-\d{2})(?:_(\d{2}-\d{2}-\d{2}))?/);
+  return m?m[1]+'_'+(m[2]||'99-99-99'):'0000';
+}
+function bakSort(a,b){const x=bakStamp(a.name),y=bakStamp(b.name);return x<y?-1:x>y?1:a.name.localeCompare(b.name);}
 async function writeBackup(name,obj){
-  const r=await ghPutRaw(GH_BAK_DIR+'/'+name+'.json',obj,null,'backup '+name);
+  let r=await ghPutRaw(GH_BAK_DIR+'/'+name+'.json',obj,null,'backup '+name);
+  if(r.status===422) r=await ghPutRaw(GH_BAK_DIR+'/'+name+'-b.json',obj,null,'backup '+name); // same name already taken
   if(r.ok) await pruneBackups();
   return r.ok;
 }
@@ -579,10 +597,13 @@ async function listBackups(){
   const r=await fetch(GH_API+'/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+GH_BAK_DIR+'?t='+Date.now(),{headers:GH_HEAD,cache:'no-store'});
   if(!r.ok) return [];
   const list=await r.json();
-  return Array.isArray(list)?list.filter(f=>/\.json$/.test(f.name)).sort((a,b)=>a.name.localeCompare(b.name)):[];
+  return Array.isArray(list)?list.filter(f=>/\.json$/.test(f.name)).sort(bakSort):[];   // oldest first, by timestamp
 }
+// keep the newest GH_BAK_MAX routine backups; the OLDEST (by timestamp, not by file name) are deleted first
 async function pruneBackups(){
-  const routine=(await listBackups()).filter(f=>!BAK_EXEMPT.test(f.name));
+  const list=await listBackups();
+  if(!list.length) return;
+  const routine=list.filter(f=>!BAK_EXEMPT.test(f.name));
   if(routine.length>GH_BAK_MAX){
     for(const f of routine.slice(0,routine.length-GH_BAK_MAX)) await ghDeleteFile(f.path,f.sha,'prune '+f.name);
   }
@@ -637,7 +658,8 @@ function bannersHTML(now){
     }
     const w=waitingOn(STATE,ck,now);
     if(w&&cur.date<=c.halloween){
-      if(w.waitingForMorning) h+='<div class="ban wait">'+esc(nm)+': everyone is in. The '+fmtDay(w.date)+' possession is revealed at 7:00 AM.</div>';
+      if(w.missing.length===0&&!w.waitingForMorning){/* everyone is in and the reveal is being written: say nothing */}
+      else if(w.waitingForMorning) h+='<div class="ban wait">'+esc(nm)+': everyone is in. The '+fmtDay(w.date)+' possession is revealed at 7:00 AM.</div>';
       else h+='<div class="ban wait">'+esc(nm)+': the '+fmtDay(w.date)+' possession is waiting on '+w.missing.map(p=>esc(playerMeta(p).display)).join(', ')+'.</div>';
     }
   });
@@ -727,12 +749,12 @@ function individualStatsHTML(pid){
     +'<div class="ghosts">'+ghosts+'</div></div>';
 }
 function renderCrew(ck,now){
-  const crew=STATE.crews[ck],isU=unlocked[ck]||unlocked.admin,c=cfg(STATE),fi=floorInfo(STATE,ck,now);
+  const crew=STATE.crews[ck],isU=crewUnlocked(ck),c=cfg(STATE),fi=floorInfo(STATE,ck,now);
   let h='<div class="sec"><div class="sec-ttl">&gt; '+esc(crew.name).toUpperCase()+'</div><div class="sec-sub">Gates what you can do here, not what the elevator shows.</div>';
   if(!isU){
     h+='<div class="gate"><div class="gate-lbl">ENTER THE COMBINATION</div><input type="tel" id="combo_'+ck+'" maxlength="8" placeholder="&bull;&bull;&bull;&bull;" onkeydown="if(event.key===\'Enter\')tryCombo(\''+ck+'\')"><div style="margin-top:10px"><button onclick="tryCombo(\''+ck+'\')">UNLOCK</button></div><div class="am" id="comboMsg_'+ck+'"></div></div>';
   }else{
-    h+='<div class="unl">&#9632; UNLOCKED</div>'
+    h+='<div class="unl">&#9632; UNLOCKED <button class="btn ghost" style="float:right;padding:2px 10px;font-size:12px" onclick="lockCrew(\''+ck+'\')">LOCK</button></div>'
       +'<div class="cr-row"><input type="text" id="crewNameInput_'+ck+'" maxlength="24" value="'+esc(crew.name)+'"><button onclick="saveCrewName(\''+ck+'\')">SAVE</button></div>'
       +'<div class="am" id="nameMsg_'+ck+'"></div>';
     h+='<div class="as" style="margin-top:12px"><div class="ast">CHANGE YOUR COMBINATION</div>'
@@ -753,12 +775,12 @@ function renderCrew(ck,now){
     }
   }
   h+='</div>';
-  h+='<div class="sec"><div class="sec-ttl">&gt; THE BURNER BOARD</div><div class="sec-sub">Crew chatter. Nobody else is listening. Probably.</div>';
+  h+='<div class="sec"><div class="sec-ttl">&gt; THE OUIJA BOARD</div><div class="sec-sub">Crew chatter. Nobody else is listening. Probably.</div>';
   const posts=(crew.board||[]).slice().reverse();
   h+='<div class="board">'+(posts.length?posts.map(p=>'<div class="board-e"><span class="who">'+esc(p.sender)+':</span> '+esc(p.text)+' <span class="ts">'+esc(new Date(p.ts).toLocaleString('en-US',{timeZone:TZ,month:'numeric',day:'numeric',hour:'numeric',minute:'2-digit'}))+'</span></div>').join(''):'<div class="small">No messages yet.</div>')+'</div>';
   if(isU){
     h+='<div class="board-form"><select id="boardSender_'+ck+'">'+crew.members.map(pid=>'<option value="'+esc(playerMeta(pid).display)+'">'+esc(playerMeta(pid).display)+'</option>').join('')+'</select>'
-      +'<input type="text" id="boardText_'+ck+'" maxlength="140" placeholder="message&hellip;"><button onclick="postBoard(\''+ck+'\')">SEND</button></div>';
+      +'<input type="text" id="boardText_'+ck+'" maxlength="140" placeholder="whisper&hellip;"><button onclick="postBoard(\''+ck+'\')">SUMMON</button></div>';
   }
   return h+'</div>';
 }
@@ -769,7 +791,7 @@ function renderLog(now){
   const maxD=today<c.halloween?today:c.halloween;
   const opts=CREW_KEYS.map(ck=>'<optgroup label="'+esc(STATE.crews[ck].name)+'">'+STATE.crews[ck].members.map(pid=>'<option value="'+pid+'">'+esc(playerMeta(pid).display)+'</option>').join('')+'</optgroup>').join('');
   return '<div class="sec"><div class="sec-ttl">&gt; LOG YOUR STEPS</div><div class="sec-sub">Pick your name, pick the day, enter your Stridekick total. You can fix a day any time until 10:00 AM on '+fmtDay(c.graceEnd)+'. Dates are Central Time.</div>'
-    +'<div class="f-row"><label>WHO</label><select id="logWho" onchange="logHint()">'+opts+'</select></div>'
+    +'<div class="f-row"><label>WHO</label><select id="logWho" onchange="logHint()"><option value="">Choose your name&hellip;</option>'+opts+'</select></div>'
     +'<div class="f-row"><label>DAY</label><input type="date" id="logDate" value="'+maxD+'" min="'+c.start+'" max="'+maxD+'" onchange="logHint()"></div>'
     +'<div class="f-row"><label>STEPS</label><input type="number" id="logVal" inputmode="numeric" min="0" max="150000" placeholder="e.g. 12500"></div>'
     +'<button class="btn block" onclick="submitLog()">SAVE STEPS</button><div class="am" id="logMsg"></div><div class="small" id="logHintEl"></div></div>';
@@ -777,12 +799,14 @@ function renderLog(now){
 function logHint(){
   const el=document.getElementById('logHintEl');if(!el||!STATE)return;
   const pid=document.getElementById('logWho').value,d=document.getElementById('logDate').value;
+  if(!pid){el.textContent='';return;}
   const cur=stepsOf(STATE,pid,d);
   el.textContent=cur>0?('Currently logged for '+fmtDay(d)+': '+fmtN(cur)+'. Saving replaces it.'):('Nothing logged yet for '+fmtDay(d)+'.');
 }
 async function submitLog(){
   const pid=document.getElementById('logWho').value,date=document.getElementById('logDate').value,raw=document.getElementById('logVal').value;
   const val=raw===''?NaN:Number(raw),msg=document.getElementById('logMsg');
+  if(!pid){msg.className='am err';msg.textContent='Pick your name first.';return;}
   const err=canLog(STATE,pid,date,val,NOW());
   if(err){msg.className='am err';msg.textContent=err;return;}
   msg.className='am';msg.textContent='Saving...';
@@ -795,7 +819,7 @@ async function submitLog(){
 /* ---------- crew actions ---------- */
 function tryCombo(ck){
   const v=document.getElementById('combo_'+ck).value.trim();
-  if(v===STATE.crews[ck].combination||v===ADMIN_PIN){unlocked[ck]=true;persistUnlocked();render();}
+  if(v===STATE.crews[ck].combination||v===ADMIN_PIN){rememberUnlock(ck);render(true);}
   else{const m=document.getElementById('comboMsg_'+ck);m.className='am err';m.textContent='WRONG COMBINATION';}
 }
 async function saveCrewName(ck){
@@ -812,12 +836,14 @@ async function changeCombo(ck){
   if(!/^\d{4,8}$/.test(nw))return bad('New combination must be 4 to 8 digits.');
   if(nw===ADMIN_PIN)return bad('Pick something else, that one is taken.');
   if(nw!==cf)return bad('The two new combinations do not match.');
+  {const r0=unlockRec();r0[ck]=Object.assign({epoch:STATE.epoch,combo:STATE.crews[ck].combination},r0[ck]||{},{next:nw});setUnlockRec(r0);}  // so the redraw during the save does not bounce you to the gate
   const res=await commit(s=>{
     if(cur!==s.crews[ck].combination&&cur!==ADMIN_PIN)throw new Error('Current combination is wrong.');
     s.crews[ck].combination=nw;
   },'combination changed: '+ck);
+  if(!res.ok){const r1=unlockRec();if(r1[ck]){delete r1[ck].next;setUnlockRec(r1);}}
   const m2=document.getElementById('comboChgMsg_'+ck);if(!m2)return;
-  if(res.ok){['cc_cur_','cc_new_','cc_cnf_'].forEach(p=>{const e=document.getElementById(p+ck);if(e)e.value='';});m2.className='am ok';m2.textContent='Combination changed. Tell your crew.';}
+  if(res.ok){rememberUnlock(ck);['cc_cur_','cc_new_','cc_cnf_'].forEach(p=>{const e=document.getElementById(p+ck);if(e)e.value='';});m2.className='am ok';m2.textContent='Combination changed. Tell your crew.';}
   else{m2.className='am err';m2.textContent=res.error;}
 }
 async function postBoard(ck){
@@ -833,7 +859,12 @@ function userEditing(){
   if(document.getElementById('adminOverlay').classList.contains('open'))return true;
   return !!(a&&(a.tagName==='INPUT'||a.tagName==='SELECT'||a.tagName==='TEXTAREA')&&a.closest('#view'));
 }
-function render(){
+let lastKey='';
+function snapForm(root){const m={};root.querySelectorAll('input,select,textarea').forEach(e=>{if(e.id)m[e.id]=e.value;});return m;}
+function restoreForm(root,m){Object.keys(m).forEach(id=>{const e=root.querySelector('#'+id);if(e&&e.value!==m[id])e.value=m[id];});}
+// render(true) = a deliberate redraw (tab switch, unlock). render() = background: skips if nothing changed,
+// otherwise redraws but puts every field value and the focus back, so a refresh can never change who a form is for.
+function render(force){
   if(!STATE){return;}
   const now=NOW();
   document.getElementById('tabCrypt').textContent=STATE.crews.crypt.name;
@@ -842,12 +873,22 @@ function render(){
   const bar=document.getElementById('cdbar');
   const cd=FOREIGN?'':cdBarHTML(now);bar.innerHTML=cd;bar.style.display=cd?'block':'none';
   const v=document.getElementById('view');
-  if(activeTab==='main')v.innerHTML=renderMain(now);
-  else if(activeTab==='log')v.innerHTML=renderLog(now);
-  else v.innerHTML=renderCrew(activeTab,now);
+  let html;
+  if(activeTab==='main')html=renderMain(now);
+  else if(activeTab==='log')html=renderLog(now);
+  else html=renderCrew(activeTab,now);
+  const key=activeTab+'|'+html;
+  if(force){v.innerHTML=html;lastKey=key;}
+  else if(key!==lastKey){
+    const snap=snapForm(v),a=document.activeElement,fid=(a&&a.id&&v.contains(a))?a.id:null;
+    const ss=(fid&&a.selectionStart!=null)?[a.selectionStart,a.selectionEnd]:null;
+    v.innerHTML=html;lastKey=key;
+    restoreForm(v,snap);
+    if(fid){const e=document.getElementById(fid);if(e){e.focus();try{if(ss)e.setSelectionRange(ss[0],ss[1]);}catch(x){}}}
+  }
   if(activeTab==='log')logHint();
 }
-function setTab(t){activeTab=t;render();window.scrollTo(0,0);}
+function setTab(t){activeTab=t;render(true);window.scrollTo(0,0);}
 
 async function refresh(){
   if(saveInFlight||userEditing())return;
@@ -863,7 +904,7 @@ async function boot(){
   const f=await loadFresh();
   if(f.error){document.getElementById('view').innerHTML='<div class="sec"><div class="ban">'+esc(f.error)+'</div><button class="btn block" onclick="boot()">TRY AGAIN</button></div>';return;}
   STATE=f.state;stateSha=f.sha;FOREIGN=!!f.foreign;
-  render();
+  render(true);
   if(!FOREIGN)await commit(null,'auto: reveal/door/target');
   setInterval(refresh,30000);
   setInterval(tickCountdown,1000);
@@ -871,18 +912,19 @@ async function boot(){
 
 /* ============ ADMIN ============ */
 function openAdmin(){document.getElementById('adminOverlay').classList.add('open');renderAdmin();}
-function closeAdmin(){document.getElementById('adminOverlay').classList.remove('open');render();}
+function closeAdmin(){unlocked.admin=false;document.getElementById('adminOverlay').classList.remove('open');render(true);}
 function setAdminMsg(t,cls){const el=document.getElementById('adminMsg');if(el){el.className='am '+(cls||'');el.textContent=t;}}
 function chkAdminPin(){
-  if(document.getElementById('adminPinInput').value===ADMIN_PIN){unlocked.admin=true;persistUnlocked();renderAdmin();}
+  if(document.getElementById('adminPinInput').value===ADMIN_PIN){unlocked.admin=true;renderAdmin();}
   else{const m=document.getElementById('adminPinMsg');m.className='am err';m.textContent='WRONG PIN';}
 }
 function renderAdmin(){
   const body=document.getElementById('adminBody');
+  const snap=snapForm(body);
   if(!unlocked.admin){body.innerHTML='<div class="as" style="text-align:center"><input type="tel" id="adminPinInput" placeholder="PIN" maxlength="6" style="max-width:160px;text-align:center" onkeydown="if(event.key===\'Enter\')chkAdminPin()"><button class="btn block" style="max-width:180px;margin:10px auto 0" onclick="chkAdminPin()">ENTER</button><div class="am" id="adminPinMsg"></div></div>';return;}
   if(!STATE){body.innerHTML='<div class="small">Still loading.</div>';return;}
   const c=cfg(STATE),now=NOW();
-  const pOpts=PLAYERS.map(p=>'<option value="'+p.id+'">'+p.display+' ('+p.username+')</option>').join('');
+  const pOpts='<option value="">Choose a player&hellip;</option>'+PLAYERS.map(p=>'<option value="'+p.id+'">'+p.display+' ('+p.username+')</option>').join('');
   const cOpts=CREW_KEYS.map(k=>'<option value="'+k+'">'+esc(STATE.crews[k].name)+'</option>').join('');
   const dOpts=climbDaysList().map(d=>'<option value="'+d+'">'+fmtDay(d)+'</option>').join('');
   let reveals='';
@@ -918,7 +960,7 @@ function renderAdmin(){
   +'<div class="as"><div class="ast">&gt; BACKUPS</div><button class="btn ghost block" onclick="admBackupNow()">BACKUP NOW</button><button class="btn ghost block" onclick="admListBackups()">LIST BACKUPS</button><div id="admBakList"></div></div>'
   +'<div class="as"><div class="ast">&gt; DANGER ZONE</div><button class="btn danger block" onclick="admResetAll()">RESET ENTIRE CHALLENGE</button></div>'
   +'<div class="am" id="adminMsg"></div>';
-  admFillRP();
+  restoreForm(body,snap);admFillRP();restoreForm(body,snap);
 }
 function climbDaysList(){return dateRange(cfg(STATE).start,cfg(STATE).climbEnd);}
 function admFillRP(){
@@ -934,8 +976,9 @@ async function admAct(fn,msg,okText){
 }
 function admLog(){
   const pid=document.getElementById('admP').value,date=document.getElementById('admD').value,val=Number(document.getElementById('admV').value);
+  if(!pid){setAdminMsg('PICK A PLAYER FIRST','err');return;}
   if(!date||!Number.isFinite(val)||val<0||val>150000||Math.floor(val)!==val){setAdminMsg('INVALID ENTRY','err');return;}
-  admAct(s=>{if(val===0)delete s.players[pid].steps[date];else s.players[pid].steps[date]=val;},'admin steps: '+pid+' '+date+'='+val);
+  admAct(s=>{if(val===0)delete s.players[pid].steps[date];else s.players[pid].steps[date]=val;},'admin steps: '+pid+' '+date+'='+val).then(r=>{if(r&&r.ok){const e=document.getElementById('admV');if(e)e.value='';}});
 }
 function admSetReveal(){
   const ck=document.getElementById('admRC').value,d=document.getElementById('admRD').value,p=document.getElementById('admRP').value;
