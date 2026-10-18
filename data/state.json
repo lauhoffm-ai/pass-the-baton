@@ -57,7 +57,8 @@
     "chris": {
       "steps": {
         "2026-10-18": 9000,
-        "2026-10-19": 9000
+        "2026-10-19": 9000,
+        "2026-10-31": 5000
       }
     },
     "kaykay": {
@@ -155,5 +156,5 @@
       "text": "Allen was possessed on 10/18. +9,000 steps for The Crypt Keepers."
     }
   ],
-  "lastBackupAt": "2026-10-20T13:00:00.000Z"
+  "lastBackupAt": "2026-11-02T15:30:00.000Z"
 }
