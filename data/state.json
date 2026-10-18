@@ -28,7 +28,9 @@
   },
   "players": {
     "michael": {
-      "steps": {}
+      "steps": {
+        "2026-10-18": 12500
+      }
     },
     "jordan": {
       "steps": {}
@@ -77,5 +79,5 @@
     "lost": 1
   },
   "history": [],
-  "lastBackupAt": null
+  "lastBackupAt": "2026-10-18T14:31:25.274Z"
 }
