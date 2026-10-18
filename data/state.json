@@ -23,7 +23,13 @@
         "shania"
       ],
       "combination": "1313",
-      "board": []
+      "board": [
+        {
+          "sender": "Chris",
+          "text": "It’s scary in here, let’s GTFO",
+          "ts": "2026-10-18T15:35:42.825Z"
+        }
+      ]
     }
   },
   "players": {
@@ -77,5 +83,6 @@
     "lost": 1
   },
   "history": [],
-  "lastBackupAt": "2026-10-18T14:50:00.471Z"
+  "lastBackupAt": "2026-10-18T14:50:00.471Z",
+  "epoch": "e0"
 }
