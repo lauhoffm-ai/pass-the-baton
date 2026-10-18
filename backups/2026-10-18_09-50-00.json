@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "challenge": "13th-floor",
+  "config": {},
+  "crews": {
+    "crypt": {
+      "name": "The Crypt Keepers",
+      "members": [
+        "michael",
+        "jordan",
+        "lauren",
+        "allen"
+      ],
+      "combination": "1313",
+      "board": []
+    },
+    "lost": {
+      "name": "The Lost Souls",
+      "members": [
+        "chris",
+        "kaykay",
+        "meghan",
+        "shania"
+      ],
+      "combination": "1313",
+      "board": []
+    }
+  },
+  "players": {
+    "michael": {
+      "steps": {}
+    },
+    "jordan": {
+      "steps": {}
+    },
+    "lauren": {
+      "steps": {}
+    },
+    "allen": {
+      "steps": {}
+    },
+    "chris": {
+      "steps": {}
+    },
+    "kaykay": {
+      "steps": {}
+    },
+    "meghan": {
+      "steps": {}
+    },
+    "shania": {
+      "steps": {}
+    }
+  },
+  "reveals": {
+    "crypt": {},
+    "lost": {}
+  },
+  "doors": {
+    "crypt": {},
+    "lost": {}
+  },
+  "targets": {
+    "crypt": null,
+    "lost": null
+  },
+  "verdicts": {
+    "crypt": null,
+    "lost": null
+  },
+  "hold": {
+    "crypt": false,
+    "lost": false
+  },
+  "floorSeen": {
+    "crypt": 1,
+    "lost": 1
+  },
+  "history": [],
+  "lastBackupAt": "2026-10-18T14:50:00.471Z"
+}
