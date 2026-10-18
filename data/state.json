@@ -11,7 +11,7 @@
         "lauren",
         "allen"
       ],
-      "combination": "2424",
+      "combination": "1313",
       "board": []
     },
     "lost": {
@@ -22,81 +22,39 @@
         "meghan",
         "shania"
       ],
-      "combination": "2424",
+      "combination": "1313",
       "board": []
     }
   },
   "players": {
     "michael": {
-      "steps": {
-        "2026-10-18": 9000,
-        "2026-10-19": 9000,
-        "2026-10-20": 15500
-      }
+      "steps": {}
     },
     "jordan": {
-      "steps": {
-        "2026-10-18": 9000,
-        "2026-10-19": 9000,
-        "2026-10-20": 15500
-      }
+      "steps": {}
     },
     "lauren": {
-      "steps": {
-        "2026-10-18": 9000,
-        "2026-10-19": 9000,
-        "2026-10-20": 15500
-      }
+      "steps": {}
     },
     "allen": {
-      "steps": {
-        "2026-10-18": 9000,
-        "2026-10-20": 15500
-      }
+      "steps": {}
     },
     "chris": {
-      "steps": {
-        "2026-10-18": 9000,
-        "2026-10-19": 9000,
-        "2026-10-31": 5000
-      }
+      "steps": {}
     },
     "kaykay": {
-      "steps": {
-        "2026-10-18": 9000,
-        "2026-10-19": 9000
-      }
+      "steps": {}
     },
     "meghan": {
-      "steps": {
-        "2026-10-18": 9000,
-        "2026-10-19": 9000
-      }
+      "steps": {}
     },
     "shania": {
-      "steps": {
-        "2026-10-18": 9000,
-        "2026-10-19": 9000
-      }
+      "steps": {}
     }
   },
   "reveals": {
-    "crypt": {
-      "2026-10-18": {
-        "player": "allen",
-        "at": "2026-10-19T12:05:00.000Z"
-      }
-    },
-    "lost": {
-      "2026-10-18": {
-        "player": "meghan",
-        "at": "2026-10-19T12:05:00.000Z"
-      },
-      "2026-10-19": {
-        "player": "chris",
-        "at": "2026-10-20T13:00:00.000Z"
-      }
-    }
+    "crypt": {},
+    "lost": {}
   },
   "doors": {
     "crypt": {},
@@ -115,46 +73,9 @@
     "lost": false
   },
   "floorSeen": {
-    "crypt": 3,
-    "lost": 2
+    "crypt": 1,
+    "lost": 1
   },
-  "history": [
-    {
-      "at": "2026-10-20T13:00:00.000Z",
-      "crew": "crypt",
-      "kind": "floor",
-      "text": "The Crypt Keepers reached floor 3."
-    },
-    {
-      "at": "2026-10-20T13:00:00.000Z",
-      "crew": "lost",
-      "kind": "reveal",
-      "text": "Chris was possessed on 10/19. +9,000 steps for The Lost Souls."
-    },
-    {
-      "at": "2026-10-18T14:47:45.639Z",
-      "crew": "lost",
-      "kind": "floor",
-      "text": "The Lost Souls reached floor 2."
-    },
-    {
-      "at": "2026-10-18T14:47:40.232Z",
-      "crew": "crypt",
-      "kind": "floor",
-      "text": "The Crypt Keepers reached floor 2."
-    },
-    {
-      "at": "2026-10-19T12:05:00.000Z",
-      "crew": "lost",
-      "kind": "reveal",
-      "text": "Meghan was possessed on 10/18. +9,000 steps for The Lost Souls."
-    },
-    {
-      "at": "2026-10-19T12:05:00.000Z",
-      "crew": "crypt",
-      "kind": "reveal",
-      "text": "Allen was possessed on 10/18. +9,000 steps for The Crypt Keepers."
-    }
-  ],
-  "lastBackupAt": "2026-11-02T15:30:00.000Z"
+  "history": [],
+  "lastBackupAt": "2026-10-18T14:50:00.471Z"
 }
