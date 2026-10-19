@@ -56,7 +56,9 @@
       "steps": {}
     },
     "kaykay": {
-      "steps": {}
+      "steps": {
+        "2026-10-18": 10823
+      }
     },
     "meghan": {
       "steps": {}
@@ -90,6 +92,6 @@
     "lost": 1
   },
   "history": [],
-  "lastBackupAt": "2026-10-19T11:17:56.978Z",
+  "lastBackupAt": "2026-10-19T18:04:43.432Z",
   "epoch": "e0"
 }
