@@ -54,7 +54,9 @@
       }
     },
     "allen": {
-      "steps": {}
+      "steps": {
+        "2026-10-18": 7783
+      }
     },
     "chris": {
       "steps": {
@@ -76,7 +78,12 @@
     }
   },
   "reveals": {
-    "crypt": {},
+    "crypt": {
+      "2026-10-18": {
+        "player": "jordan",
+        "at": "2026-10-19T22:55:04.554Z"
+      }
+    },
     "lost": {}
   },
   "doors": {
@@ -99,7 +106,14 @@
     "crypt": 1,
     "lost": 1
   },
-  "history": [],
+  "history": [
+    {
+      "at": "2026-10-19T22:55:04.554Z",
+      "crew": "crypt",
+      "kind": "reveal",
+      "text": "Jordan was possessed on 10/18. +10,343 steps for The Crypt Keepers."
+    }
+  ],
   "lastBackupAt": "2026-10-19T18:04:43.432Z",
   "epoch": "e0"
 }
