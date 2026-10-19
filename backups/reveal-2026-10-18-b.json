@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "challenge": "13th-floor",
+  "config": {},
+  "crews": {
+    "crypt": {
+      "name": "The Crypt Keepers",
+      "members": [
+        "michael",
+        "jordan",
+        "lauren",
+        "allen"
+      ],
+      "combination": "1313",
+      "board": []
+    },
+    "lost": {
+      "name": "The Lost Souls",
+      "members": [
+        "chris",
+        "kaykay",
+        "meghan",
+        "shania"
+      ],
+      "combination": "1313",
+      "board": [
+        {
+          "sender": "Chris",
+          "text": "It’s scary in here, let’s GTFO",
+          "ts": "2026-10-18T15:35:42.825Z"
+        },
+        {
+          "sender": "KayKay",
+          "text": "😂 too much orange",
+          "ts": "2026-10-18T16:18:48.464Z"
+        }
+      ]
+    }
+  },
+  "players": {
+    "michael": {
+      "steps": {
+        "2026-10-18": 11203
+      }
+    },
+    "jordan": {
+      "steps": {
+        "2026-10-18": 10343
+      }
+    },
+    "lauren": {
+      "steps": {
+        "2026-10-18": 7078
+      }
+    },
+    "allen": {
+      "steps": {
+        "2026-10-18": 7783
+      }
+    },
+    "chris": {
+      "steps": {
+        "2026-10-18": 13946
+      }
+    },
+    "kaykay": {
+      "steps": {
+        "2026-10-18": 10823
+      }
+    },
+    "meghan": {
+      "steps": {
+        "2026-10-18": 10597
+      }
+    },
+    "shania": {
+      "steps": {}
+    }
+  },
+  "reveals": {
+    "crypt": {
+      "2026-10-18": {
+        "player": "jordan",
+        "at": "2026-10-19T22:55:04.554Z"
+      }
+    },
+    "lost": {}
+  },
+  "doors": {
+    "crypt": {},
+    "lost": {}
+  },
+  "targets": {
+    "crypt": null,
+    "lost": null
+  },
+  "verdicts": {
+    "crypt": null,
+    "lost": null
+  },
+  "hold": {
+    "crypt": false,
+    "lost": false
+  },
+  "floorSeen": {
+    "crypt": 1,
+    "lost": 1
+  },
+  "history": [
+    {
+      "at": "2026-10-19T22:55:04.554Z",
+      "crew": "crypt",
+      "kind": "reveal",
+      "text": "Jordan was possessed on 10/18. +10,343 steps for The Crypt Keepers."
+    }
+  ],
+  "lastBackupAt": "2026-10-19T18:04:43.432Z",
+  "epoch": "e0"
+}
