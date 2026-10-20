@@ -97,7 +97,9 @@
       }
     },
     "shania": {
-      "steps": {}
+      "steps": {
+        "2026-10-18": 25797
+      }
     }
   },
   "reveals": {
@@ -107,7 +109,12 @@
         "at": "2026-10-19T22:55:04.554Z"
       }
     },
-    "lost": {}
+    "lost": {
+      "2026-10-18": {
+        "player": "kaykay",
+        "at": "2026-10-20T04:48:04.971Z"
+      }
+    }
   },
   "doors": {
     "crypt": {},
@@ -130,6 +137,12 @@
     "lost": 2
   },
   "history": [
+    {
+      "at": "2026-10-20T04:48:04.971Z",
+      "crew": "lost",
+      "kind": "reveal",
+      "text": "KayKay was possessed on 10/18. +10,823 steps for The Lost Souls."
+    },
     {
       "at": "2026-10-20T04:47:23.471Z",
       "crew": "lost",
