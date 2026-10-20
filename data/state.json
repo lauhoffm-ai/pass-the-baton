@@ -86,7 +86,8 @@
     },
     "kaykay": {
       "steps": {
-        "2026-10-18": 10823
+        "2026-10-18": 10823,
+        "2026-10-19": 7444
       }
     },
     "meghan": {
@@ -125,9 +126,15 @@
   },
   "floorSeen": {
     "crypt": 2,
-    "lost": 1
+    "lost": 2
   },
   "history": [
+    {
+      "at": "2026-10-20T04:47:23.471Z",
+      "crew": "lost",
+      "kind": "floor",
+      "text": "The Lost Souls reached floor 2."
+    },
     {
       "at": "2026-10-20T04:45:53.459Z",
       "crew": "crypt",
