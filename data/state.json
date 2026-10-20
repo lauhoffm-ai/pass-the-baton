@@ -66,7 +66,8 @@
     },
     "lauren": {
       "steps": {
-        "2026-10-18": 7078
+        "2026-10-18": 7078,
+        "2026-10-19": 15883
       }
     },
     "allen": {
@@ -119,10 +120,16 @@
     "lost": false
   },
   "floorSeen": {
-    "crypt": 1,
+    "crypt": 2,
     "lost": 1
   },
   "history": [
+    {
+      "at": "2026-10-20T04:45:53.459Z",
+      "crew": "crypt",
+      "kind": "floor",
+      "text": "The Crypt Keepers reached floor 2."
+    },
     {
       "at": "2026-10-19T22:55:04.554Z",
       "crew": "crypt",
