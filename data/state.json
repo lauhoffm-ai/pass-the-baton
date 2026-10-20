@@ -12,7 +12,13 @@
         "allen"
       ],
       "combination": "6767",
-      "board": []
+      "board": [
+        {
+          "sender": "Michael",
+          "text": "I ain’t afraid of no ghost",
+          "ts": "2026-10-20T02:50:46.647Z"
+        }
+      ]
     },
     "lost": {
       "name": "The Lost Souls",
