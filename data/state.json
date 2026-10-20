@@ -98,7 +98,8 @@
     },
     "shania": {
       "steps": {
-        "2026-10-18": 25797
+        "2026-10-18": 25797,
+        "2026-10-19": 17363
       }
     }
   },
@@ -134,9 +135,15 @@
   },
   "floorSeen": {
     "crypt": 2,
-    "lost": 2
+    "lost": 3
   },
   "history": [
+    {
+      "at": "2026-10-20T04:48:19.557Z",
+      "crew": "lost",
+      "kind": "floor",
+      "text": "The Lost Souls reached floor 3."
+    },
     {
       "at": "2026-10-20T04:48:04.971Z",
       "crew": "lost",
