@@ -62,7 +62,8 @@
     "michael": {
       "steps": {
         "2026-10-18": 11256,
-        "2026-10-19": 12363
+        "2026-10-19": 12363,
+        "2026-10-20": 16924
       }
     },
     "jordan": {
@@ -200,6 +201,6 @@
       "text": "Jordan was possessed on 10/18. +10,343 steps for The Crypt Keepers."
     }
   ],
-  "lastBackupAt": "2026-10-20T11:00:55.173Z",
+  "lastBackupAt": "2026-10-22T01:20:50.170Z",
   "epoch": "e0"
 }
