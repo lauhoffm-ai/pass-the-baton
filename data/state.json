@@ -147,6 +147,10 @@
       "2026-10-20": {
         "player": "chris",
         "at": "2026-10-22T05:09:41.187Z"
+      },
+      "2026-10-21": {
+        "player": "shania",
+        "at": "2026-10-22T12:38:50.541Z"
       }
     }
   },
@@ -171,6 +175,12 @@
     "lost": 3
   },
   "history": [
+    {
+      "at": "2026-10-22T12:38:50.541Z",
+      "crew": "lost",
+      "kind": "reveal",
+      "text": "Shania was possessed on 10/21. +15,000 steps for The Lost Souls."
+    },
     {
       "at": "2026-10-22T05:09:41.187Z",
       "crew": "lost",
@@ -232,6 +242,6 @@
       "text": "Jordan was possessed on 10/18. +10,343 steps for The Crypt Keepers."
     }
   ],
-  "lastBackupAt": "2026-10-22T01:20:50.170Z",
+  "lastBackupAt": "2026-10-22T12:38:50.541Z",
   "epoch": "e0"
 }
