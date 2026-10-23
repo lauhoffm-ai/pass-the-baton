@@ -190,7 +190,12 @@
         "at": "2026-10-23T11:24:28.356Z"
       }
     },
-    "lost": {}
+    "lost": {
+      "4": {
+        "day": "2026-10-20",
+        "at": "2026-10-23T23:31:46.186Z"
+      }
+    }
   },
   "targets": {
     "crypt": null,
@@ -206,9 +211,21 @@
   },
   "floorSeen": {
     "crypt": 7,
-    "lost": 3
+    "lost": 7
   },
   "history": [
+    {
+      "at": "2026-10-23T23:31:46.186Z",
+      "crew": "lost",
+      "kind": "floor",
+      "text": "The Lost Souls reached floor 7."
+    },
+    {
+      "at": "2026-10-23T23:31:46.186Z",
+      "crew": "lost",
+      "kind": "door",
+      "text": "The door to floor 4 swung open for The Lost Souls."
+    },
     {
       "at": "2026-10-23T13:20:06.018Z",
       "crew": "lost",
@@ -312,6 +329,6 @@
       "text": "Jordan was possessed on 10/18. +10,343 steps for The Crypt Keepers."
     }
   ],
-  "lastBackupAt": "2026-10-23T11:23:32.446Z",
+  "lastBackupAt": "2026-10-23T23:31:46.186Z",
   "epoch": "e0"
 }
