@@ -173,7 +173,7 @@ const DEFAULTS={
   floorSize:54000,         // counted steps per floor
   floors:12,
   lockedFloors:[4,8,12],
-  unlockSteps:60000,       // raw crew steps in one local day to open a door
+  unlockSteps:70000,       // COUNTED crew steps (raw + that day's possession bonus) in one local day to open a door
   hBase:810000,            // Halloween target = hBase - banked
   hMin:20000,
   hMax:90000,
@@ -315,7 +315,7 @@ function evalDoors(s,ck,now){
     const last=today<c.climbEnd?today:c.climbEnd;
     for(const d of dateRange(land,last)){
       if(used.has(d))continue;
-      if(crewRaw(s,ck,d)>=c.unlockSteps){
+      if(countedOn(s,ck,d)>=c.unlockSteps){   // the bonus is known at the 7 AM reveal, so most doors open then
         s.doors[ck][L]={day:d,at:new Date(now).toISOString()};
         used.add(d);opened.push({floor:L,day:d});break;
       }
@@ -673,6 +673,7 @@ function crewCardHTML(ck,now){
   const c=cfg(STATE),crew=STATE.crews[ck],fi=floorInfo(STATE,ck,now),cur=chi(now),v=STATE.verdicts[ck];
   const inGame=cur.date>=c.start&&cur.date<=c.halloween;
   const todayRaw=inGame?crewRaw(STATE,ck,cur.date):0;
+  const todayCounted=inGame?countedOn(STATE,ck,cur.date):0;
   let cells='';
   const top=fi.floor13?13:c.floors;
   for(let n=top;n>=1;n--){
@@ -690,9 +691,10 @@ function crewCardHTML(ck,now){
       +'<div class="small" style="margin-top:4px"><b>'+fmtN(hi.raw)+'</b> steps on 10/31'+(hi.met?' &middot; target met':'')+'</div></div>';
   }else if(fi.lockedAt){
     mid='<div class="lockbox"><div class="lb-h">&#128274; DOOR LOCKED &middot; FLOOR '+fi.lockedAt+'</div>'
-      +'<div class="small">Today: <b>'+fmtN(todayRaw)+'</b> / '+fmtN(c.unlockSteps)+'</div>'
-      +'<div class="barwrap"><div class="bar" style="width:'+Math.min(100,100*todayRaw/c.unlockSteps)+'%"></div></div>'
-      +'<div class="lb-s" style="margin-top:4px">'+fmtN(fi.waitingBehindDoor)+' steps banked behind the door</div></div>';
+      +'<div class="small">Today: <b>'+fmtN(todayCounted)+'</b> / '+fmtN(c.unlockSteps)+'</div>'
+      +'<div class="barwrap"><div class="bar" style="width:'+Math.min(100,100*todayCounted/c.unlockSteps)+'%"></div></div>'
+      +'<div class="lb-s" style="margin-top:4px">'+fmtN(fi.waitingBehindDoor)+' steps banked behind the door</div>'
+      +'<div class="lb-s">Possession bonus counts at the 7:00 AM reveal.</div></div>';
   }else if(fi.cleared){
     mid='<div class="lockbox"><div class="lb-h">CLIMB COMPLETE</div><div class="lb-s">Waiting for the 13th floor.</div></div>';
   }else{
