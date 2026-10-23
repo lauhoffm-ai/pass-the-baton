@@ -27,6 +27,11 @@
           "sender": "Michael",
           "text": "No towels in our room…..had to walk to front desk to get more. Phones are glitching",
           "ts": "2026-10-20T13:41:46.120Z"
+        },
+        {
+          "sender": "Lauren",
+          "text": "$5 says Shania won’t sync",
+          "ts": "2026-10-23T02:28:00.270Z"
         }
       ]
     },
@@ -256,6 +261,6 @@
       "text": "Jordan was possessed on 10/18. +10,343 steps for The Crypt Keepers."
     }
   ],
-  "lastBackupAt": "2026-10-22T12:38:50.541Z",
+  "lastBackupAt": "2026-10-23T02:28:00.270Z",
   "epoch": "e0"
 }
