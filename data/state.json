@@ -78,7 +78,8 @@
         "2026-10-18": 10343,
         "2026-10-19": 10964,
         "2026-10-20": 16738,
-        "2026-10-21": 13333
+        "2026-10-21": 13333,
+        "2026-10-22": 16522
       }
     },
     "lauren": {
@@ -171,7 +172,12 @@
     }
   },
   "doors": {
-    "crypt": {},
+    "crypt": {
+      "4": {
+        "day": "2026-10-22",
+        "at": "2026-10-23T11:24:28.356Z"
+      }
+    },
     "lost": {}
   },
   "targets": {
@@ -187,10 +193,22 @@
     "lost": false
   },
   "floorSeen": {
-    "crypt": 3,
+    "crypt": 6,
     "lost": 3
   },
   "history": [
+    {
+      "at": "2026-10-23T11:24:28.356Z",
+      "crew": "crypt",
+      "kind": "floor",
+      "text": "The Crypt Keepers reached floor 6."
+    },
+    {
+      "at": "2026-10-23T11:24:28.356Z",
+      "crew": "crypt",
+      "kind": "door",
+      "text": "The door to floor 4 swung open for The Crypt Keepers."
+    },
     {
       "at": "2026-10-22T16:22:31.674Z",
       "crew": "crypt",
