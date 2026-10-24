@@ -90,7 +90,8 @@
         "2026-10-19": 15883,
         "2026-10-20": 5408,
         "2026-10-21": 3821,
-        "2026-10-22": 17040
+        "2026-10-22": 17040,
+        "2026-10-23": 6698
       }
     },
     "allen": {
@@ -161,6 +162,10 @@
       "2026-10-22": {
         "player": "lauren",
         "at": "2026-10-23T13:20:06.018Z"
+      },
+      "2026-10-23": {
+        "player": "michael",
+        "at": "2026-10-24T13:29:04.608Z"
       }
     },
     "lost": {
@@ -191,6 +196,10 @@
       "4": {
         "day": "2026-10-22",
         "at": "2026-10-23T11:24:28.356Z"
+      },
+      "8": {
+        "day": "2026-10-23",
+        "at": "2026-10-24T13:29:04.608Z"
       }
     },
     "lost": {
@@ -213,10 +222,28 @@
     "lost": false
   },
   "floorSeen": {
-    "crypt": 7,
+    "crypt": 8,
     "lost": 7
   },
   "history": [
+    {
+      "at": "2026-10-24T13:29:04.608Z",
+      "crew": "crypt",
+      "kind": "floor",
+      "text": "The Crypt Keepers reached floor 8."
+    },
+    {
+      "at": "2026-10-24T13:29:04.608Z",
+      "crew": "crypt",
+      "kind": "door",
+      "text": "The door to floor 8 swung open for The Crypt Keepers."
+    },
+    {
+      "at": "2026-10-24T13:29:04.608Z",
+      "crew": "crypt",
+      "kind": "reveal",
+      "text": "Michael was possessed on 10/23. +15,000 steps for The Crypt Keepers."
+    },
     {
       "at": "2026-10-23T23:31:46.186Z",
       "crew": "lost",
