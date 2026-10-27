@@ -113,7 +113,8 @@
         "2026-10-22": 19446,
         "2026-10-23": 21255,
         "2026-10-24": 13959,
-        "2026-10-25": 4100
+        "2026-10-25": 4100,
+        "2026-10-26": 17186
       }
     },
     "chris": {
@@ -194,6 +195,10 @@
       "2026-10-25": {
         "player": "jordan",
         "at": "2026-10-26T13:00:00.736Z"
+      },
+      "2026-10-26": {
+        "player": "lauren",
+        "at": "2026-10-27T12:12:23.907Z"
       }
     },
     "lost": {
@@ -236,6 +241,10 @@
       "8": {
         "day": "2026-10-23",
         "at": "2026-10-24T13:29:04.608Z"
+      },
+      "12": {
+        "day": "2026-10-26",
+        "at": "2026-10-27T12:12:23.907Z"
       }
     },
     "lost": {
@@ -258,10 +267,28 @@
     "lost": false
   },
   "floorSeen": {
-    "crypt": 11,
+    "crypt": 12,
     "lost": 7
   },
   "history": [
+    {
+      "at": "2026-10-27T12:12:23.907Z",
+      "crew": "crypt",
+      "kind": "floor",
+      "text": "The Crypt Keepers reached floor 12."
+    },
+    {
+      "at": "2026-10-27T12:12:23.907Z",
+      "crew": "crypt",
+      "kind": "door",
+      "text": "The door to floor 12 swung open for The Crypt Keepers."
+    },
+    {
+      "at": "2026-10-27T12:12:23.907Z",
+      "crew": "crypt",
+      "kind": "reveal",
+      "text": "Lauren was possessed on 10/26. +15,000 steps for The Crypt Keepers."
+    },
     {
       "at": "2026-10-27T12:11:05.584Z",
       "crew": "crypt",
