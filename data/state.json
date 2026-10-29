@@ -226,6 +226,10 @@
       "2026-10-27": {
         "player": "michael",
         "at": "2026-10-28T17:26:12.586Z"
+      },
+      "2026-10-28": {
+        "player": "jordan",
+        "at": "2026-10-29T16:37:51.181Z"
       }
     },
     "lost": {
@@ -268,6 +272,10 @@
       "2026-10-27": {
         "player": "shania",
         "at": "2026-10-28T14:11:40.235Z"
+      },
+      "2026-10-28": {
+        "player": "meghan",
+        "at": "2026-10-29T16:37:51.181Z"
       }
     }
   },
@@ -314,6 +322,18 @@
     "lost": 11
   },
   "history": [
+    {
+      "at": "2026-10-29T16:37:51.181Z",
+      "crew": "lost",
+      "kind": "reveal",
+      "text": "Meghan was possessed on 10/28. +7,272 steps for The Lost Souls."
+    },
+    {
+      "at": "2026-10-29T16:37:51.181Z",
+      "crew": "crypt",
+      "kind": "reveal",
+      "text": "Jordan was possessed on 10/28. +9,698 steps for The Crypt Keepers."
+    },
     {
       "at": "2026-10-28T17:26:12.586Z",
       "crew": "crypt",
@@ -543,6 +563,6 @@
       "text": "Jordan was possessed on 10/18. +10,343 steps for The Crypt Keepers."
     }
   ],
-  "lastBackupAt": "2026-10-29T05:48:40.308Z",
+  "lastBackupAt": "2026-10-29T16:37:51.181Z",
   "epoch": "e0"
 }
