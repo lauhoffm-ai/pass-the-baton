@@ -319,9 +319,15 @@
   },
   "floorSeen": {
     "crypt": 12,
-    "lost": 11
+    "lost": 12
   },
   "history": [
+    {
+      "at": "2026-10-31T05:40:49.916Z",
+      "crew": "lost",
+      "kind": "floor",
+      "text": "The Lost Souls reached floor 12."
+    },
     {
       "at": "2026-10-29T16:37:51.181Z",
       "crew": "lost",
@@ -563,6 +569,6 @@
       "text": "Jordan was possessed on 10/18. +10,343 steps for The Crypt Keepers."
     }
   ],
-  "lastBackupAt": "2026-10-29T16:37:51.181Z",
+  "lastBackupAt": "2026-10-31T05:40:49.916Z",
   "epoch": "e0"
 }
