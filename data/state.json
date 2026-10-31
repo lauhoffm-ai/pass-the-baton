@@ -137,7 +137,8 @@
         "2026-10-26": 14371,
         "2026-10-27": 13625,
         "2026-10-28": 7061,
-        "2026-10-29": 3140
+        "2026-10-29": 3140,
+        "2026-10-30": 11481
       }
     },
     "kaykay": {
@@ -287,6 +288,10 @@
       "2026-10-29": {
         "player": "kaykay",
         "at": "2026-10-31T15:20:00.142Z"
+      },
+      "2026-10-30": {
+        "player": "chris",
+        "at": "2026-10-31T15:21:22.689Z"
       }
     }
   },
@@ -318,7 +323,12 @@
   },
   "targets": {
     "crypt": null,
-    "lost": null
+    "lost": {
+      "banked": 770352,
+      "target": 39648,
+      "at": "2026-10-31T15:21:22.689Z",
+      "forced": false
+    }
   },
   "verdicts": {
     "crypt": null,
@@ -333,6 +343,18 @@
     "lost": 12
   },
   "history": [
+    {
+      "at": "2026-10-31T15:21:22.689Z",
+      "crew": "lost",
+      "kind": "target",
+      "text": "The Lost Souls's Halloween target is locked at 39,648 steps."
+    },
+    {
+      "at": "2026-10-31T15:21:22.689Z",
+      "crew": "lost",
+      "kind": "reveal",
+      "text": "Chris was possessed on 10/30. +11,481 steps for The Lost Souls."
+    },
     {
       "at": "2026-10-31T15:20:00.142Z",
       "crew": "lost",
