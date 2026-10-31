@@ -77,7 +77,8 @@
         "2026-10-27": 13547,
         "2026-10-26": 17042,
         "2026-10-28": 15721,
-        "2026-10-29": 14335
+        "2026-10-29": 14335,
+        "2026-10-30": 13676
       }
     },
     "jordan": {
@@ -249,6 +250,10 @@
       "2026-10-29": {
         "player": "allen",
         "at": "2026-10-31T15:24:49.538Z"
+      },
+      "2026-10-30": {
+        "player": "michael",
+        "at": "2026-10-31T15:25:47.680Z"
       }
     },
     "lost": {
@@ -333,7 +338,12 @@
     }
   },
   "targets": {
-    "crypt": null,
+    "crypt": {
+      "banked": 846732,
+      "target": 20000,
+      "at": "2026-10-31T15:25:47.680Z",
+      "forced": false
+    },
     "lost": {
       "banked": 770352,
       "target": 39648,
@@ -354,6 +364,18 @@
     "lost": 12
   },
   "history": [
+    {
+      "at": "2026-10-31T15:25:47.680Z",
+      "crew": "crypt",
+      "kind": "target",
+      "text": "The Crypt Keepers's Halloween target is locked at 20,000 steps."
+    },
+    {
+      "at": "2026-10-31T15:25:47.680Z",
+      "crew": "crypt",
+      "kind": "reveal",
+      "text": "Michael was possessed on 10/30. +13,676 steps for The Crypt Keepers."
+    },
     {
       "at": "2026-10-31T15:24:49.538Z",
       "crew": "crypt",
