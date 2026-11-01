@@ -114,7 +114,8 @@
         "2026-10-27": 6843,
         "2026-10-28": 7843,
         "2026-10-29": 11001,
-        "2026-10-30": 8374
+        "2026-10-30": 8374,
+        "2026-10-31": 8841
       }
     },
     "allen": {
@@ -359,7 +360,14 @@
     }
   },
   "verdicts": {
-    "crypt": null,
+    "crypt": {
+      "outcome": "escaped",
+      "raw": 44509,
+      "target": 20000,
+      "banked": 846732,
+      "at": "2026-11-01T17:39:31.171Z",
+      "early": true
+    },
     "lost": {
       "outcome": "trapped",
       "raw": 32232,
@@ -378,6 +386,12 @@
     "lost": 12
   },
   "history": [
+    {
+      "at": "2026-11-01T17:39:31.171Z",
+      "crew": "crypt",
+      "kind": "verdict",
+      "text": "The Crypt Keepers: ESCAPED."
+    },
     {
       "at": "2026-11-01T05:19:02.883Z",
       "crew": "lost",
