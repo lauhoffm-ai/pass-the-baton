@@ -357,7 +357,14 @@
   },
   "verdicts": {
     "crypt": null,
-    "lost": null
+    "lost": {
+      "outcome": "trapped",
+      "raw": 32232,
+      "target": 39648,
+      "banked": 770352,
+      "at": "2026-11-01T05:19:02.883Z",
+      "early": true
+    }
   },
   "hold": {
     "crypt": false,
@@ -368,6 +375,12 @@
     "lost": 12
   },
   "history": [
+    {
+      "at": "2026-11-01T05:19:02.883Z",
+      "crew": "lost",
+      "kind": "verdict",
+      "text": "The Lost Souls: CHECKED IN FOREVER."
+    },
     {
       "at": "2026-10-31T15:25:47.680Z",
       "crew": "crypt",
@@ -651,6 +664,6 @@
       "text": "Jordan was possessed on 10/18. +10,343 steps for The Crypt Keepers."
     }
   ],
-  "lastBackupAt": "2026-10-31T23:01:33.746Z",
+  "lastBackupAt": "2026-11-01T05:19:02.883Z",
   "epoch": "e0"
 }
