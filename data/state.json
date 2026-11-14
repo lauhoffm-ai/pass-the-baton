@@ -154,7 +154,9 @@
       "shania": "Pumpkin"
     }
   },
-  "rest": {},
+  "rest": {
+    "lauren": "2026-11-16"
+  },
   "plays": [
     {
       "id": "play-michael-2026-11-16-steal-1",
@@ -543,6 +545,11 @@
       "at": "2026-11-15T13:05:00.000Z",
       "who": "lauren",
       "what": "play butter for 2026-11-16"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "lauren",
+      "what": "rest day lauren 2026-11-16"
     }
   ],
   "lastBackupAt": "2026-11-15T13:05:00.000Z"
