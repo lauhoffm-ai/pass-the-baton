@@ -173,6 +173,15 @@
       "target": "jordan",
       "at": "2026-11-15T13:05:00.000Z",
       "status": "blocked"
+    },
+    {
+      "id": "play-shania-2026-11-16-steal-3",
+      "pid": "shania",
+      "type": "steal",
+      "date": "2026-11-16",
+      "target": "meghan",
+      "at": "2026-11-15T13:05:00.000Z",
+      "status": "blocked"
     }
   ],
   "awards": [
@@ -515,6 +524,11 @@
       "at": "2026-11-15T13:05:00.000Z",
       "who": "kaykay",
       "what": "STEAL BLOCKED by Shield for 2026-11-16 vs jordan"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "shania",
+      "what": "STEAL BLOCKED by Shield for 2026-11-16 vs meghan"
     }
   ],
   "lastBackupAt": "2026-11-15T13:05:00.000Z"
