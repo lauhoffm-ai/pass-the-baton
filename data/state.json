@@ -182,6 +182,15 @@
       "target": "meghan",
       "at": "2026-11-15T13:05:00.000Z",
       "status": "blocked"
+    },
+    {
+      "id": "play-lauren-2026-11-16-butter-4",
+      "pid": "lauren",
+      "type": "butter",
+      "date": "2026-11-16",
+      "target": null,
+      "at": "2026-11-15T13:05:00.000Z",
+      "status": "ok"
     }
   ],
   "awards": [
@@ -529,6 +538,11 @@
       "at": "2026-11-15T13:05:00.000Z",
       "who": "shania",
       "what": "STEAL BLOCKED by Shield for 2026-11-16 vs meghan"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "lauren",
+      "what": "play butter for 2026-11-16"
     }
   ],
   "lastBackupAt": "2026-11-15T13:05:00.000Z"
