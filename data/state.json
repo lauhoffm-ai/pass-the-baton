@@ -22,7 +22,9 @@
   },
   "players": {
     "michael": {
-      "steps": {},
+      "steps": {
+        "2026-11-14": 14681
+      },
       "code": "1111"
     },
     "jordan": {
@@ -54,7 +56,11 @@
       "code": "1111"
     }
   },
-  "entryAt": {},
+  "entryAt": {
+    "michael": {
+      "2026-11-14": "2026-11-15T13:05:00.000Z"
+    }
+  },
   "setup": {
     "prevAvg": {
       "shania": 17789,
@@ -120,6 +126,11 @@
     "2026-11-14": {
       "id": 1,
       "revealedAt": "2026-11-14T14:41:16.573Z",
+      "resolved": null
+    },
+    "2026-11-15": {
+      "id": 4,
+      "revealedAt": "2026-11-15T13:05:00.000Z",
       "resolved": null
     }
   },
@@ -342,7 +353,12 @@
       "at": "2026-11-14T14:41:36.773Z",
       "who": "allen",
       "what": "code changed"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "michael",
+      "what": "log michael 2026-11-14 = 14681"
     }
   ],
-  "lastBackupAt": "2026-11-14T14:41:16.573Z"
+  "lastBackupAt": "2026-11-15T13:05:00.000Z"
 }
