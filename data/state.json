@@ -163,6 +163,42 @@
       "type": "shield",
       "source": "goal 2026-11-14",
       "at": "2026-11-15T13:05:00.000Z"
+    },
+    {
+      "id": "simgrant-0",
+      "pid": "michael",
+      "type": "steal",
+      "source": "sim"
+    },
+    {
+      "id": "simgrant-1",
+      "pid": "kaykay",
+      "type": "steal",
+      "source": "sim"
+    },
+    {
+      "id": "simgrant-2",
+      "pid": "lauren",
+      "type": "butter",
+      "source": "sim"
+    },
+    {
+      "id": "simgrant-3",
+      "pid": "shania",
+      "type": "steal",
+      "source": "sim"
+    },
+    {
+      "id": "simgrant-4",
+      "pid": "meghan",
+      "type": "shield",
+      "source": "sim"
+    },
+    {
+      "id": "simgrant-5",
+      "pid": "allen",
+      "type": "butter",
+      "source": "sim"
     }
   ],
   "goals": {
