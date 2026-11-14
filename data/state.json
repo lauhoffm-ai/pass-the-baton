@@ -155,7 +155,17 @@
     }
   },
   "rest": {},
-  "plays": [],
+  "plays": [
+    {
+      "id": "play-michael-2026-11-16-steal-1",
+      "pid": "michael",
+      "type": "steal",
+      "date": "2026-11-16",
+      "target": "chris",
+      "at": "2026-11-15T13:05:00.000Z",
+      "status": "ok"
+    }
+  ],
   "awards": [
     {
       "id": "goal-2026-11-14",
@@ -486,6 +496,11 @@
       "at": "2026-11-15T13:05:00.000Z",
       "who": "auto",
       "what": "goal 2026-11-14 won by jordan"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "michael",
+      "what": "play steal for 2026-11-16 vs chris"
     }
   ],
   "lastBackupAt": "2026-11-15T13:05:00.000Z"
