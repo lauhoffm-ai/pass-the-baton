@@ -164,6 +164,15 @@
       "target": "chris",
       "at": "2026-11-15T13:05:00.000Z",
       "status": "ok"
+    },
+    {
+      "id": "play-kaykay-2026-11-16-steal-2",
+      "pid": "kaykay",
+      "type": "steal",
+      "date": "2026-11-16",
+      "target": "jordan",
+      "at": "2026-11-15T13:05:00.000Z",
+      "status": "blocked"
     }
   ],
   "awards": [
@@ -501,6 +510,11 @@
       "at": "2026-11-15T13:05:00.000Z",
       "who": "michael",
       "what": "play steal for 2026-11-16 vs chris"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "kaykay",
+      "what": "STEAL BLOCKED by Shield for 2026-11-16 vs jordan"
     }
   ],
   "lastBackupAt": "2026-11-15T13:05:00.000Z"
