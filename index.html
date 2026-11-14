@@ -495,20 +495,45 @@ function prevEntered(S,pid,date){
 }
 function entryMs(S,pid,date){const t=(S.entryAt[pid]||{})[date];return t?Date.parse(t):8.64e15;}
 const GOALS=[
-  {id:1,name:'Closest to exactly 12,345 steps',tag:'chance',key:c=>-Math.abs(c.steps-12345)},
-  {id:2,name:'Biggest percentage jump over your own previous day',tag:'improve',needsPrev:true,key:c=>c.prev==null||c.prev===0?null:(c.steps/c.prev-1)},
-  {id:3,name:'First to log yesterday\'s steps',tag:'speed',key:c=>-c.entryMs},
-  {id:4,name:'Highest daily score',tag:'score',key:c=>c.day.raw},
-  {id:5,name:'Closest to your own baseline',tag:'baseline',key:c=>-Math.abs(c.day.pct-100)},
-  {id:6,name:'Closest to exactly 10,000 steps',tag:'chance',key:c=>-Math.abs(c.steps-10000)},
-  {id:7,name:'Highest percent of baseline',tag:'baseline',key:c=>c.day.pct},
-  {id:8,name:'Smallest drop from your own previous day',tag:'improve',needsPrev:true,key:c=>c.prev==null?null:(c.steps-c.prev)},
-  {id:9,name:'Closest to the group\'s average steps for the day',tag:'chance',key:c=>-Math.abs(c.steps-c.groupAvg)},
-  {id:10,name:'Closest to exactly 15,000 steps',tag:'chance',key:c=>-Math.abs(c.steps-15000)},
-  {id:11,name:'Lowest daily score that still clears 100',tag:'baseline',key:c=>c.day.raw>100?-c.day.raw:null},
-  {id:12,name:'Most steps above your baseline',tag:'baseline',key:c=>c.steps-c.base},
-  {id:13,name:'Highest percent of baseline with no power-up played',tag:'baseline',key:c=>c.naked?c.day.pct:null}
+  /* retired: kept only so goals already revealed or resolved still display and score. Never picked for new days. */
+  {id:1,retired:true,name:'Closest to exactly 12,345 steps',key:c=>-Math.abs(c.steps-12345)},
+  {id:3,retired:true,name:'First to log yesterday\'s steps',key:c=>-c.entryMs},
+  {id:5,retired:true,name:'Closest to your own baseline',key:c=>-Math.abs(c.day.pct-100)},
+  {id:6,retired:true,name:'Closest to exactly 10,000 steps',key:c=>-Math.abs(c.steps-10000)},
+  {id:8,retired:true,name:'Smallest drop from your own previous day',key:c=>c.prev==null?null:(c.steps-c.prev)},
+  {id:9,retired:true,name:'Closest to the group\'s average steps for the day',key:c=>-Math.abs(c.steps-c.groupAvg)},
+  {id:10,retired:true,name:'Closest to exactly 15,000 steps',key:c=>-Math.abs(c.steps-15000)},
+  {id:11,retired:true,name:'Lowest daily score that still clears 100',key:c=>c.day.raw>100?-c.day.raw:null},
+  {id:12,retired:true,name:'Most steps above your baseline',key:c=>c.steps-c.base},
+  /* active pool: every goal rewards walking MORE relative to your own baseline or history */
+  {id:2,name:'Biggest percentage jump over your own previous day',needsPrev:true,key:c=>c.prev==null||c.prev===0?null:(c.steps/c.prev-1)},
+  {id:4,name:'Highest daily score',key:c=>c.day.raw},
+  {id:7,name:'Highest percent of baseline',key:c=>c.day.pct},
+  {id:13,name:'Highest percent of baseline with no power-up played',key:c=>c.naked?c.day.pct:null},
+  {id:14,name:'Biggest beat of your own average so far',needsPrev:true,key:c=>c.earlier.length?c.day.pct-c.earlier.reduce((a,b)=>a+b,0)/c.earlier.length:null},
+  {id:15,name:'New personal best (highest percent among players who set one)',needsPrev:true,key:c=>c.earlier.length&&c.day.pct>Math.max.apply(null,c.earlier)?c.day.pct:null},
+  {id:16,name:'Best back-to-back: highest average percent of today and yesterday',needsPrev:true,key:c=>c.prevPct==null?null:(c.day.pct+c.prevPct)/2},
+  {id:17,name:'Longest streak at or above your baseline, ending today',key:c=>c.day.pct>=100?c.streak:null},
+  {id:18,name:'Biggest win over your matchup opponent today',key:c=>c.oppRaw==null?null:(c.day.raw-c.oppRaw)},
+  {id:19,name:'Most improved from your first day (percent today minus your Day 1 percent)',needsPrev:true,key:c=>c.earlier.length?c.day.pct-c.earlier[0]:null},
+  {id:20,name:'Team spotlight: highest percent of baseline on the featured team',key:c=>c.spot?c.day.pct:null}
 ];
+function spotlightTeam(S,date){return dayDiff(S.config.start,date)%2===0?'A':'B';}   // alternates by day, so both teams get turns
+function goalActive(g){return !g.retired;}
+function earlierPcts(S,pid,date){
+  const out=[];
+  dateRange(S.config.start,addDays(date,-1)).forEach(d=>{if(d<S.config.start||S.rest[pid]===d)return;const v=S.players[pid].steps[d];if(v!=null)out.push(v/S.setup.baseline[pid]*100);});
+  return out;
+}
+function streakEnding(S,pid,date){
+  let n=0;
+  for(let d=date;d>=S.config.start;d=addDays(d,-1)){
+    if(S.rest[pid]===d)continue;
+    const v=S.players[pid].steps[d];
+    if(v!=null&&v/S.setup.baseline[pid]*100>=100)n++;else break;
+  }
+  return n;
+}
 function goalById(id){return GOALS.find(g=>g.id===id);}
 function goalWinner(S,date,goalId){
   const g=goalById(goalId),ds=dayScores(S,date,false);
@@ -516,8 +541,10 @@ function goalWinner(S,date,goalId){
   if(!elig.length)return null;
   const gAvg=elig.reduce((t,p)=>t+ds[p].steps,0)/elig.length;
   const rows=elig.map(pid=>{
-    const c={pid,day:ds[pid],steps:ds[pid].steps,base:S.setup.baseline[pid],prev:prevEntered(S,pid,date),
-      entryMs:entryMs(S,pid,date),groupAvg:gAvg,naked:!playOn(S,pid,date)};
+    const opp=opponentOf(S,pid,date),od=opp?ds[opp]:null,pv=prevEntered(S,pid,date);
+    const c={pid,day:ds[pid],steps:ds[pid].steps,base:S.setup.baseline[pid],prev:pv,prevPct:pv==null?null:pv/S.setup.baseline[pid]*100,
+      earlier:earlierPcts(S,pid,date),streak:streakEnding(S,pid,date),oppRaw:(od&&!od.rest&&!od.pending)?od.raw:null,
+      entryMs:entryMs(S,pid,date),groupAvg:gAvg,naked:!playOn(S,pid,date),spot:S.setup.team[pid]===spotlightTeam(S,date)};
     return {pid,steps:c.steps,em:c.entryMs,key:g.key(c)};
   }).filter(x=>x.key!=null&&isFinite(x.key));
   if(!rows.length)return null;
@@ -525,10 +552,12 @@ function goalWinner(S,date,goalId){
   return rows[0].pid;
 }
 function pickGoal(S,date,rng){
-  const used=Object.values(S.goals).map(g=>g.id);
-  if(date===S.config.start&&!used.includes(1))return 1;
-  let pool=GOALS.filter(g=>!used.includes(g.id)&&!(g.needsPrev&&date===S.config.start));
-  if(!pool.length){const last=used[used.length-1];pool=GOALS.filter(g=>g.id!==last&&!(g.needsPrev&&date===S.config.start));}
+  const active=GOALS.filter(goalActive),first=date===S.config.start;
+  const used=Object.keys(S.goals).sort().map(d=>S.goals[d].id);
+  if(first&&!used.includes(7))return 7;                       // day 1 has no history: highest percent of baseline
+  const ok=g=>!(g.needsPrev&&first);
+  let pool=active.filter(g=>ok(g)&&!used.includes(g.id));
+  if(!pool.length){const last=used[used.length-1];pool=active.filter(g=>ok(g)&&g.id!==last);}   // pool used up: repeat, never back to back
   return pool[rng(pool.length)].id;
 }
 function drawType(S,rng){
@@ -663,6 +692,8 @@ function maintain(S,now,rng){
       backups.push('reveal-'+d);changed=true;
     });
   }
+  // 1b. an unresolved goal whose rule was retired is swapped for an active one (resolved goals never change)
+  Object.keys(S.goals).sort().forEach(d=>{const g=S.goals[d],def=goalById(g.id);if(!g.resolved&&def&&def.retired){const old=g.id;g.id=pickGoal(S,d,rng);hist(S,'auto','goal '+d+' swapped #'+old+' -> #'+g.id,now);changed=true;}});
   // 2. resolve goals
   Object.keys(S.goals).sort().forEach(d=>{if(goalReady(S,d)){resolveGoal(S,d,now,rng,false);changed=true;}});
   // 3. close rounds in order
@@ -980,7 +1011,7 @@ function goalCard(date,title){
   const S=STATE,g=S.goals[date];
   if(!g)return '<div class="card"><h3>'+title+'</h3><div class="mu">'+(date===today()?'Revealed at 7:00 AM Chicago time.':'Not revealed.')+'</div></div>';
   const def=goalById(g.id);
-  let h='<div class="card"><h3>'+title+' · '+fmtDay(date)+'</h3><div style="font-weight:800;font-size:18px">'+esc(def.name)+'</div>';
+  let h='<div class="card"><h3>'+title+' · '+fmtDay(date)+'</h3><div style="font-weight:800;font-size:18px">'+esc(def.name)+'</div>'+(g.id===20?'<div class="mu">Featured team: <b>'+esc(teamName(spotlightTeam(S,date)))+'</b> (only its players can win)</div>':'');
   if(g.resolved){h+=g.resolved.winner?'<div class="ban ok" style="margin-top:8px">🏅 Winner: <b>'+esc(NAMES[g.resolved.winner])+'</b></div>':'<div class="mu" style="margin-top:6px">No winner (nobody qualified).</div>';}
   else{const miss=missingFor(S,date);h+='<div class="mu" style="margin-top:6px">Measured on '+fmtDay(date)+' steps. '+(date>=today()?'Logged tomorrow morning.':(miss.length?'Waiting on '+esc(listNames(miss))+'.':'Resolving…'))+'</div>';}
   return h+'</div>';
