@@ -1010,7 +1010,28 @@
         "minDate": "2026-11-26"
       }
     ],
-    "claims": {}
+    "claims": {
+      "chris": {
+        "1": {
+          "status": "approved",
+          "at": "2026-11-27T14:00:00.000Z",
+          "by": "chris",
+          "auto": true
+        },
+        "10": {
+          "status": "pending",
+          "at": "2026-11-27T14:00:00.000Z",
+          "by": "chris"
+        },
+        "15": {
+          "status": "rejected",
+          "at": "2026-11-27T14:00:00.000Z",
+          "by": "chris",
+          "reason": "Your best day so far is 125% of baseline (need 150%).",
+          "auto": true
+        }
+      }
+    }
   },
   "history": [
     {
@@ -1652,6 +1673,21 @@
       "at": "2026-11-27T14:00:00.000Z",
       "who": "auto",
       "what": "close round 3"
+    },
+    {
+      "at": "2026-11-27T14:00:00.000Z",
+      "who": "chris",
+      "what": "bingo claim 1 -> approved"
+    },
+    {
+      "at": "2026-11-27T14:00:00.000Z",
+      "who": "chris",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-27T14:00:00.000Z",
+      "who": "chris",
+      "what": "bingo claim 10 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-27T14:00:00.000Z"
