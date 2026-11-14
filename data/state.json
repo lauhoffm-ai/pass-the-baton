@@ -1019,9 +1019,10 @@
           "auto": true
         },
         "10": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-27T14:00:00.000Z",
-          "by": "chris"
+          "by": "chris",
+          "decidedAt": "2026-11-27T14:00:00.000Z"
         },
         "15": {
           "status": "rejected",
@@ -1688,6 +1689,11 @@
       "at": "2026-11-27T14:00:00.000Z",
       "who": "chris",
       "what": "bingo claim 10 -> pending"
+    },
+    {
+      "at": "2026-11-27T14:00:00.000Z",
+      "who": "admin",
+      "what": "bingo approved chris #10"
     }
   ],
   "lastBackupAt": "2026-11-27T14:00:00.000Z"
