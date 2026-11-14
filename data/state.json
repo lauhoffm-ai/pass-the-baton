@@ -116,7 +116,13 @@
   "rest": {},
   "plays": [],
   "awards": [],
-  "goals": {},
+  "goals": {
+    "2026-11-14": {
+      "id": 1,
+      "revealedAt": "2026-11-14T15:02:31.184Z",
+      "resolved": null
+    }
+  },
   "rounds": {},
   "hold": {},
   "coin": {},
@@ -328,5 +334,5 @@
       "what": "INITIALIZE PIE WARS"
     }
   ],
-  "lastBackupAt": null
+  "lastBackupAt": "2026-11-14T15:02:31.184Z"
 }
