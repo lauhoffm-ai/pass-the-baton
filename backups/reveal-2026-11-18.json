@@ -1,0 +1,578 @@
+{
+  "version": 1,
+  "challenge": "pie-wars",
+  "epoch": "emwgik4g0",
+  "config": {
+    "start": "2026-11-14",
+    "end": "2026-11-26",
+    "w": 0.85,
+    "mult": 2,
+    "cap": 150,
+    "floor": 0,
+    "butter": 1.25,
+    "steal": 15,
+    "restDays": 1,
+    "roundDates": null,
+    "drawWeights": {
+      "butter": 1,
+      "steal": 1,
+      "shield": 1
+    },
+    "teamA": "Feast Mode"
+  },
+  "players": {
+    "michael": {
+      "steps": {
+        "2026-11-14": 14681,
+        "2026-11-15": 14821
+      },
+      "code": "1111"
+    },
+    "jordan": {
+      "steps": {
+        "2026-11-14": 12385
+      },
+      "code": "1111"
+    },
+    "lauren": {
+      "steps": {
+        "2026-11-14": 9247
+      },
+      "code": "1111"
+    },
+    "allen": {
+      "steps": {
+        "2026-11-14": 15626
+      },
+      "code": "1111"
+    },
+    "chris": {
+      "steps": {
+        "2026-11-14": 13919
+      },
+      "code": "1111"
+    },
+    "kaykay": {
+      "steps": {
+        "2026-11-14": 10772
+      },
+      "code": "1111"
+    },
+    "meghan": {
+      "steps": {
+        "2026-11-14": 5986
+      },
+      "code": "1111"
+    },
+    "shania": {
+      "steps": {
+        "2026-11-14": 18693
+      },
+      "code": "1111"
+    }
+  },
+  "entryAt": {
+    "michael": {
+      "2026-11-14": "2026-11-15T13:05:00.000Z",
+      "2026-11-15": "2026-11-18T13:05:00.000Z"
+    },
+    "jordan": {
+      "2026-11-14": "2026-11-15T13:05:00.000Z"
+    },
+    "lauren": {
+      "2026-11-14": "2026-11-15T13:05:00.000Z"
+    },
+    "allen": {
+      "2026-11-14": "2026-11-15T13:05:00.000Z"
+    },
+    "chris": {
+      "2026-11-14": "2026-11-15T13:05:00.000Z"
+    },
+    "kaykay": {
+      "2026-11-14": "2026-11-15T13:05:00.000Z"
+    },
+    "meghan": {
+      "2026-11-14": "2026-11-15T13:05:00.000Z"
+    },
+    "shania": {
+      "2026-11-14": "2026-11-15T13:05:00.000Z"
+    }
+  },
+  "setup": {
+    "prevAvg": {
+      "shania": 17789,
+      "allen": 17146,
+      "michael": 14245,
+      "jordan": 12366,
+      "kaykay": 11877,
+      "chris": 11442,
+      "lauren": 8461,
+      "meghan": 6598
+    },
+    "group": 12491,
+    "w": 0.85,
+    "baseline": {
+      "michael": 13982,
+      "jordan": 12385,
+      "lauren": 9066,
+      "allen": 16448,
+      "chris": 11599,
+      "kaykay": 11969,
+      "meghan": 7482,
+      "shania": 16994
+    },
+    "seed": {
+      "shania": 1,
+      "allen": 2,
+      "michael": 3,
+      "jordan": 4,
+      "kaykay": 5,
+      "chris": 6,
+      "lauren": 7,
+      "meghan": 8
+    },
+    "team": {
+      "michael": "B",
+      "jordan": "A",
+      "lauren": "A",
+      "allen": "B",
+      "chris": "A",
+      "kaykay": "B",
+      "meghan": "B",
+      "shania": "A"
+    },
+    "teamNames": {
+      "A": "Feast Mode",
+      "B": "Sweat Potatoes"
+    },
+    "pieNames": {
+      "michael": "Apple",
+      "jordan": "Sweet Potato",
+      "lauren": "Chocolate Silk",
+      "allen": "Pecan",
+      "chris": "Key Lime",
+      "kaykay": "Cherry",
+      "meghan": "Banana Cream",
+      "shania": "Pumpkin"
+    }
+  },
+  "rest": {
+    "lauren": "2026-11-16"
+  },
+  "plays": [
+    {
+      "id": "play-michael-2026-11-16-steal-1",
+      "pid": "michael",
+      "type": "steal",
+      "date": "2026-11-16",
+      "target": "chris",
+      "at": "2026-11-15T13:05:00.000Z",
+      "status": "ok"
+    },
+    {
+      "id": "play-kaykay-2026-11-16-steal-2",
+      "pid": "kaykay",
+      "type": "steal",
+      "date": "2026-11-16",
+      "target": "jordan",
+      "at": "2026-11-15T13:05:00.000Z",
+      "status": "blocked"
+    },
+    {
+      "id": "play-shania-2026-11-16-steal-3",
+      "pid": "shania",
+      "type": "steal",
+      "date": "2026-11-16",
+      "target": "meghan",
+      "at": "2026-11-15T13:05:00.000Z",
+      "status": "blocked"
+    },
+    {
+      "id": "play-lauren-2026-11-16-butter-4",
+      "pid": "lauren",
+      "type": "butter",
+      "date": "2026-11-16",
+      "target": null,
+      "at": "2026-11-15T13:05:00.000Z",
+      "status": "ok"
+    }
+  ],
+  "awards": [
+    {
+      "id": "goal-2026-11-14",
+      "pid": "jordan",
+      "type": "shield",
+      "source": "goal 2026-11-14",
+      "at": "2026-11-15T13:05:00.000Z"
+    },
+    {
+      "id": "simgrant-0",
+      "pid": "michael",
+      "type": "steal",
+      "source": "sim"
+    },
+    {
+      "id": "simgrant-1",
+      "pid": "kaykay",
+      "type": "steal",
+      "source": "sim"
+    },
+    {
+      "id": "simgrant-2",
+      "pid": "lauren",
+      "type": "butter",
+      "source": "sim"
+    },
+    {
+      "id": "simgrant-3",
+      "pid": "shania",
+      "type": "steal",
+      "source": "sim"
+    },
+    {
+      "id": "simgrant-4",
+      "pid": "meghan",
+      "type": "shield",
+      "source": "sim"
+    },
+    {
+      "id": "simgrant-5",
+      "pid": "allen",
+      "type": "butter",
+      "source": "sim"
+    }
+  ],
+  "goals": {
+    "2026-11-14": {
+      "id": 1,
+      "revealedAt": "2026-11-14T14:41:16.573Z",
+      "resolved": {
+        "winner": "jordan",
+        "at": "2026-11-15T13:05:00.000Z",
+        "awardId": "goal-2026-11-14"
+      }
+    },
+    "2026-11-15": {
+      "id": 4,
+      "revealedAt": "2026-11-15T13:05:00.000Z",
+      "resolved": null
+    },
+    "2026-11-16": {
+      "id": 10,
+      "revealedAt": "2026-11-18T13:05:00.000Z",
+      "resolved": null
+    },
+    "2026-11-17": {
+      "id": 8,
+      "revealedAt": "2026-11-18T13:05:00.000Z",
+      "resolved": null
+    },
+    "2026-11-18": {
+      "id": 5,
+      "revealedAt": "2026-11-18T13:05:00.000Z",
+      "resolved": null
+    }
+  },
+  "rounds": {},
+  "hold": {},
+  "coin": {},
+  "bingo": {
+    "squares": [
+      {
+        "id": 0,
+        "text": "Walk with a kid or a pet",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 1,
+        "text": "A day at 120% of your baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "pct",
+          "min": 120
+        },
+        "minDate": null
+      },
+      {
+        "id": 2,
+        "text": "Sunset walk",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 3,
+        "text": "Walk in the rain",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 4,
+        "text": "New route",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 5,
+        "text": "30-minute workout",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 6,
+        "text": "3 days in a row at or above baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "streak",
+          "days": 3,
+          "min": 100
+        },
+        "minDate": null
+      },
+      {
+        "id": 7,
+        "text": "Walk before 7am (tracker screenshot)",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 8,
+        "text": "Bounce back: 100% the day after a day under 90%",
+        "type": "auto",
+        "rule": {
+          "kind": "bounce"
+        },
+        "minDate": null
+      },
+      {
+        "id": 9,
+        "text": "Walk with a family member",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 10,
+        "text": "Call someone you have not talked to in a month",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 11,
+        "text": "Stairs instead of the elevator all day",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 12,
+        "text": "FREE",
+        "type": "free",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 13,
+        "text": "Take a pie to someone, walking",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 14,
+        "text": "Park far away on purpose",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 15,
+        "text": "A day at 150% of your baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "pct",
+          "min": 150
+        },
+        "minDate": null
+      },
+      {
+        "id": 16,
+        "text": "Two days in a row at 110% of baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "streak",
+          "days": 2,
+          "min": 110
+        },
+        "minDate": null
+      },
+      {
+        "id": 17,
+        "text": "Turkey, squirrel or deer sighting",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 18,
+        "text": "Walk in a different park",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 19,
+        "text": "Walk while listening to a full podcast episode",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 20,
+        "text": "Match your best day so far within 5%",
+        "type": "auto",
+        "rule": {
+          "kind": "bestmatch",
+          "tol": 5
+        },
+        "minDate": null
+      },
+      {
+        "id": 21,
+        "text": "Hit baseline on a power-up day",
+        "type": "auto",
+        "rule": {
+          "kind": "powerday"
+        },
+        "minDate": null
+      },
+      {
+        "id": 22,
+        "text": "Walk after dinner",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 23,
+        "text": "Pick up trash on a walk",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 24,
+        "text": "Thanksgiving morning walk (claimable Nov 26)",
+        "type": "photo",
+        "rule": null,
+        "minDate": "2026-11-26"
+      }
+    ],
+    "claims": {}
+  },
+  "history": [
+    {
+      "at": "2026-11-14T14:41:15.648Z",
+      "who": "admin",
+      "what": "INITIALIZE PIE WARS"
+    },
+    {
+      "at": "2026-11-14T14:41:33.458Z",
+      "who": "allen",
+      "what": "code changed"
+    },
+    {
+      "at": "2026-11-14T14:41:36.773Z",
+      "who": "allen",
+      "what": "code changed"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "michael",
+      "what": "log michael 2026-11-14 = 14681"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "jordan",
+      "what": "log jordan 2026-11-14 = 12385"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "lauren",
+      "what": "log lauren 2026-11-14 = 9247"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "allen",
+      "what": "log allen 2026-11-14 = 15626"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "chris",
+      "what": "log chris 2026-11-14 = 13919"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-14 = 10772"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "meghan",
+      "what": "log meghan 2026-11-14 = 5986"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "meghan",
+      "what": "edit meghan 2026-11-14 = 5986 (was 5986)"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "shania",
+      "what": "log shania 2026-11-14 = 18693"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "auto",
+      "what": "goal 2026-11-14 won by jordan"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "michael",
+      "what": "play steal for 2026-11-16 vs chris"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "kaykay",
+      "what": "STEAL BLOCKED by Shield for 2026-11-16 vs jordan"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "shania",
+      "what": "STEAL BLOCKED by Shield for 2026-11-16 vs meghan"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "lauren",
+      "what": "play butter for 2026-11-16"
+    },
+    {
+      "at": "2026-11-15T13:05:00.000Z",
+      "who": "lauren",
+      "what": "rest day lauren 2026-11-16"
+    },
+    {
+      "at": "2026-11-18T13:05:00.000Z",
+      "who": "michael",
+      "what": "log michael 2026-11-15 = 14821"
+    }
+  ],
+  "lastBackupAt": "2026-11-18T13:05:00.000Z"
+}
