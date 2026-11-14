@@ -1,7 +1,7 @@
 {
   "version": 1,
   "challenge": "pie-wars",
-  "epoch": "emwgiu19o",
+  "epoch": "emwgjawlj",
   "config": {
     "start": "2026-11-14",
     "end": "2026-11-26",
@@ -116,13 +116,7 @@
   "rest": {},
   "plays": [],
   "awards": [],
-  "goals": {
-    "2026-11-14": {
-      "id": 1,
-      "revealedAt": "2026-11-14T14:48:58.787Z",
-      "resolved": null
-    }
-  },
+  "goals": {},
   "rounds": {},
   "hold": {},
   "coin": {},
@@ -329,10 +323,10 @@
   },
   "history": [
     {
-      "at": "2026-11-14T14:48:58.093Z",
+      "at": "2026-11-14T15:02:05.191Z",
       "who": "admin",
-      "what": "RESET PIE WARS"
+      "what": "INITIALIZE PIE WARS"
     }
   ],
-  "lastBackupAt": "2026-11-14T14:48:58.787Z"
+  "lastBackupAt": null
 }
