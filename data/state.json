@@ -486,10 +486,11 @@
           "decidedAt": "2026-11-15T18:01:35.632Z"
         },
         "18": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-15T17:19:33.187Z",
           "by": "kaykay",
-          "photo": "bingo/kaykay-18.jpg"
+          "photo": "bingo/kaykay-18.jpg",
+          "decidedAt": "2026-11-15T18:01:43.052Z"
         }
       }
     }
@@ -704,6 +705,11 @@
       "at": "2026-11-15T18:01:35.632Z",
       "who": "admin",
       "what": "bingo approved kaykay #9"
+    },
+    {
+      "at": "2026-11-15T18:01:43.052Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #18"
     }
   ],
   "lastBackupAt": "2026-11-15T18:01:35.632Z"
