@@ -332,6 +332,12 @@
           "at": "2026-11-15T01:12:55.854Z",
           "by": "lauren",
           "photo": "bingo/lauren-0.jpg"
+        },
+        "4": {
+          "status": "pending",
+          "at": "2026-11-15T01:16:01.095Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-4.jpg"
         }
       }
     }
@@ -346,6 +352,11 @@
       "at": "2026-11-15T01:12:55.854Z",
       "who": "lauren",
       "what": "bingo claim 0 -> pending"
+    },
+    {
+      "at": "2026-11-15T01:16:01.095Z",
+      "who": "lauren",
+      "what": "bingo claim 4 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-15T01:12:55.855Z"
