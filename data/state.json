@@ -353,6 +353,14 @@
           "by": "meghan",
           "photo": "bingo/meghan-13.jpg"
         }
+      },
+      "shania": {
+        "0": {
+          "status": "pending",
+          "at": "2026-11-15T01:18:51.491Z",
+          "by": "shania",
+          "photo": "bingo/shania-0.jpg"
+        }
       }
     }
   },
@@ -381,6 +389,11 @@
       "at": "2026-11-15T01:18:06.433Z",
       "who": "meghan",
       "what": "bingo claim 13 -> pending"
+    },
+    {
+      "at": "2026-11-15T01:18:51.491Z",
+      "who": "shania",
+      "what": "bingo claim 0 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-15T01:12:55.855Z"
