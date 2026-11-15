@@ -479,10 +479,11 @@
       },
       "kaykay": {
         "9": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-15T17:19:00.519Z",
           "by": "kaykay",
-          "photo": "bingo/kaykay-9.jpg"
+          "photo": "bingo/kaykay-9.jpg",
+          "decidedAt": "2026-11-15T18:01:35.632Z"
         },
         "18": {
           "status": "pending",
@@ -698,7 +699,12 @@
       "at": "2026-11-15T17:19:33.187Z",
       "who": "kaykay",
       "what": "bingo claim 18 -> pending"
+    },
+    {
+      "at": "2026-11-15T18:01:35.632Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #9"
     }
   ],
-  "lastBackupAt": "2026-11-15T11:27:51.091Z"
+  "lastBackupAt": "2026-11-15T18:01:35.632Z"
 }
