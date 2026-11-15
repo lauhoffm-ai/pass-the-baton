@@ -376,10 +376,11 @@
           "decidedAt": "2026-11-15T03:24:31.054Z"
         },
         "4": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-15T03:22:23.604Z",
           "by": "michael",
-          "photo": "bingo/michael-4.jpg"
+          "photo": "bingo/michael-4.jpg",
+          "decidedAt": "2026-11-15T03:24:33.471Z"
         }
       }
     }
@@ -459,6 +460,11 @@
       "at": "2026-11-15T03:24:31.054Z",
       "who": "admin",
       "what": "bingo approved michael #2"
+    },
+    {
+      "at": "2026-11-15T03:24:33.471Z",
+      "who": "admin",
+      "what": "bingo approved michael #4"
     }
   ],
   "lastBackupAt": "2026-11-15T01:12:55.855Z"
