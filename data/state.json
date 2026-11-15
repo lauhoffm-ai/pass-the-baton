@@ -400,11 +400,12 @@
           "decidedAt": "2026-11-15T03:20:57.245Z"
         },
         "9": {
-          "status": "approved",
+          "status": "rejected",
           "at": "2026-11-15T01:17:09.090Z",
           "by": "lauren",
           "photo": "bingo/lauren-9.jpg",
-          "decidedAt": "2026-11-15T03:21:09.760Z"
+          "decidedAt": "2026-11-15T18:04:21.605Z",
+          "reason": "Not approved."
         }
       },
       "meghan": {
@@ -728,6 +729,11 @@
       "at": "2026-11-15T18:02:41.853Z",
       "who": "admin",
       "what": "bingo rejected michael #0"
+    },
+    {
+      "at": "2026-11-15T18:04:21.605Z",
+      "who": "admin",
+      "what": "bingo rejected lauren #9"
     }
   ],
   "lastBackupAt": "2026-11-15T18:01:35.632Z"
