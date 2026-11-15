@@ -500,6 +500,14 @@
           "photo": "bingo/kaykay-18.jpg",
           "decidedAt": "2026-11-15T18:01:43.052Z"
         }
+      },
+      "chris": {
+        "9": {
+          "status": "pending",
+          "at": "2026-11-15T22:45:25.609Z",
+          "by": "chris",
+          "photo": "bingo/chris-9.jpg"
+        }
       }
     }
   },
@@ -753,6 +761,11 @@
       "at": "2026-11-15T20:30:52.548Z",
       "who": "lauren",
       "what": "bingo claim 19 -> pending"
+    },
+    {
+      "at": "2026-11-15T22:45:25.609Z",
+      "who": "chris",
+      "what": "bingo claim 9 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-15T18:01:35.632Z"
