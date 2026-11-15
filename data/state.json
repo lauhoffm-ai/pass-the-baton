@@ -351,10 +351,11 @@
       },
       "meghan": {
         "13": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-15T01:18:06.433Z",
           "by": "meghan",
-          "photo": "bingo/meghan-13.jpg"
+          "photo": "bingo/meghan-13.jpg",
+          "decidedAt": "2026-11-15T03:21:12.311Z"
         }
       },
       "shania": {
@@ -417,6 +418,11 @@
       "at": "2026-11-15T03:21:09.760Z",
       "who": "admin",
       "what": "bingo approved lauren #9"
+    },
+    {
+      "at": "2026-11-15T03:21:12.311Z",
+      "who": "admin",
+      "what": "bingo approved meghan #13"
     }
   ],
   "lastBackupAt": "2026-11-15T01:12:55.855Z"
