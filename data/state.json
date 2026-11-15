@@ -461,6 +461,12 @@
           "decidedAt": "2026-11-15T18:02:23.635Z",
           "reason": "Not approved."
         },
+        "5": {
+          "status": "pending",
+          "at": "2026-11-15T23:17:02.705Z",
+          "by": "michael",
+          "photo": "bingo/michael-5.jpg"
+        },
         "14": {
           "status": "pending",
           "at": "2026-11-15T23:16:46.725Z",
@@ -776,6 +782,11 @@
       "at": "2026-11-15T23:16:46.725Z",
       "who": "michael",
       "what": "bingo claim 14 -> pending"
+    },
+    {
+      "at": "2026-11-15T23:17:02.705Z",
+      "who": "michael",
+      "what": "bingo claim 5 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-15T18:01:35.632Z"
