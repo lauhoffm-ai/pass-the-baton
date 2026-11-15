@@ -389,6 +389,12 @@
           "at": "2026-11-15T05:01:57.226Z",
           "by": "jordan",
           "photo": "bingo/jordan-2.jpg"
+        },
+        "4": {
+          "status": "pending",
+          "at": "2026-11-15T05:02:19.583Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-4.jpg"
         }
       }
     }
@@ -483,6 +489,11 @@
       "at": "2026-11-15T05:01:57.226Z",
       "who": "jordan",
       "what": "bingo claim 2 -> pending"
+    },
+    {
+      "at": "2026-11-15T05:02:19.583Z",
+      "who": "jordan",
+      "what": "bingo claim 4 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-15T01:12:55.855Z"
