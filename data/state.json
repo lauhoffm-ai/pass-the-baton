@@ -462,10 +462,11 @@
           "reason": "Not approved."
         },
         "5": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-15T23:17:02.705Z",
           "by": "michael",
-          "photo": "bingo/michael-5.jpg"
+          "photo": "bingo/michael-5.jpg",
+          "decidedAt": "2026-11-15T23:17:12.201Z"
         },
         "14": {
           "status": "pending",
@@ -787,6 +788,11 @@
       "at": "2026-11-15T23:17:02.705Z",
       "who": "michael",
       "what": "bingo claim 5 -> pending"
+    },
+    {
+      "at": "2026-11-15T23:17:12.201Z",
+      "who": "admin",
+      "what": "bingo approved michael #5"
     }
   ],
   "lastBackupAt": "2026-11-15T18:01:35.632Z"
