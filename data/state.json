@@ -483,6 +483,12 @@
           "at": "2026-11-15T17:19:00.519Z",
           "by": "kaykay",
           "photo": "bingo/kaykay-9.jpg"
+        },
+        "18": {
+          "status": "pending",
+          "at": "2026-11-15T17:19:33.187Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-18.jpg"
         }
       }
     }
@@ -687,6 +693,11 @@
       "at": "2026-11-15T17:19:00.519Z",
       "who": "kaykay",
       "what": "bingo claim 9 -> pending"
+    },
+    {
+      "at": "2026-11-15T17:19:33.187Z",
+      "who": "kaykay",
+      "what": "bingo claim 18 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-15T11:27:51.091Z"
