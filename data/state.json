@@ -22,7 +22,9 @@
   },
   "players": {
     "michael": {
-      "steps": {},
+      "steps": {
+        "2026-11-14": 13926
+      },
       "code": "5309"
     },
     "jordan": {
@@ -54,7 +56,11 @@
       "code": "1111"
     }
   },
-  "entryAt": {},
+  "entryAt": {
+    "michael": {
+      "2026-11-14": "2026-11-15T11:27:51.091Z"
+    }
+  },
   "setup": {
     "prevAvg": {
       "shania": 17789,
@@ -506,7 +512,12 @@
       "at": "2026-11-15T05:03:03.821Z",
       "who": "admin",
       "what": "bingo approved jordan #4"
+    },
+    {
+      "at": "2026-11-15T11:27:51.091Z",
+      "who": "michael",
+      "what": "log michael 2026-11-14 = 13926"
     }
   ],
-  "lastBackupAt": "2026-11-15T01:12:55.855Z"
+  "lastBackupAt": "2026-11-15T11:27:51.091Z"
 }
