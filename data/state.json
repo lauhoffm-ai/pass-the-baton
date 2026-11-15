@@ -476,6 +476,14 @@
           "photo": "bingo/jordan-4.jpg",
           "decidedAt": "2026-11-15T05:03:03.821Z"
         }
+      },
+      "kaykay": {
+        "9": {
+          "status": "pending",
+          "at": "2026-11-15T17:19:00.519Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-9.jpg"
+        }
       }
     }
   },
@@ -674,6 +682,11 @@
       "at": "2026-11-15T17:17:25.257Z",
       "who": "chris",
       "what": "edit chris 2026-11-14 = 9127 (was 7606)"
+    },
+    {
+      "at": "2026-11-15T17:19:00.519Z",
+      "who": "kaykay",
+      "what": "bingo claim 9 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-15T11:27:51.091Z"
