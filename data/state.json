@@ -427,11 +427,12 @@
       },
       "michael": {
         "0": {
-          "status": "approved",
+          "status": "rejected",
           "at": "2026-11-15T16:03:23.574Z",
           "by": "michael",
           "photo": "bingo/michael-0.jpg",
-          "decidedAt": "2026-11-15T16:03:42.632Z"
+          "decidedAt": "2026-11-15T18:02:41.853Z",
+          "reason": "Not approved."
         },
         "2": {
           "status": "approved",
@@ -722,6 +723,11 @@
       "at": "2026-11-15T18:02:31.718Z",
       "who": "admin",
       "what": "bingo rejected jordan #4"
+    },
+    {
+      "at": "2026-11-15T18:02:41.853Z",
+      "who": "admin",
+      "what": "bingo rejected michael #0"
     }
   ],
   "lastBackupAt": "2026-11-15T18:01:35.632Z"
