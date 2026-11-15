@@ -325,14 +325,28 @@
         "minDate": "2026-11-26"
       }
     ],
-    "claims": {}
+    "claims": {
+      "lauren": {
+        "0": {
+          "status": "pending",
+          "at": "2026-11-15T01:12:55.854Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-0.jpg"
+        }
+      }
+    }
   },
   "history": [
     {
       "at": "2026-11-14T15:02:30.162Z",
       "who": "admin",
       "what": "INITIALIZE PIE WARS"
+    },
+    {
+      "at": "2026-11-15T01:12:55.854Z",
+      "who": "lauren",
+      "what": "bingo claim 0 -> pending"
     }
   ],
-  "lastBackupAt": "2026-11-14T15:02:31.184Z"
+  "lastBackupAt": "2026-11-15T01:12:55.855Z"
 }
