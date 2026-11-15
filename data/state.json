@@ -328,10 +328,11 @@
     "claims": {
       "lauren": {
         "0": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-15T01:12:55.854Z",
           "by": "lauren",
-          "photo": "bingo/lauren-0.jpg"
+          "photo": "bingo/lauren-0.jpg",
+          "decidedAt": "2026-11-15T03:20:54.526Z"
         },
         "4": {
           "status": "pending",
@@ -399,6 +400,11 @@
       "at": "2026-11-15T03:19:26.660Z",
       "who": "michael",
       "what": "code changed"
+    },
+    {
+      "at": "2026-11-15T03:20:54.526Z",
+      "who": "admin",
+      "what": "bingo approved lauren #0"
     }
   ],
   "lastBackupAt": "2026-11-15T01:12:55.855Z"
