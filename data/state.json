@@ -426,6 +426,12 @@
         }
       },
       "michael": {
+        "0": {
+          "status": "pending",
+          "at": "2026-11-15T16:03:23.574Z",
+          "by": "michael",
+          "photo": "bingo/michael-0.jpg"
+        },
         "2": {
           "status": "approved",
           "at": "2026-11-15T03:23:16.748Z",
@@ -630,6 +636,11 @@
       "at": "2026-11-15T16:03:05.345Z",
       "who": "michael",
       "what": "bingo claim 3 -> pending"
+    },
+    {
+      "at": "2026-11-15T16:03:23.574Z",
+      "who": "michael",
+      "what": "bingo claim 0 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-15T11:27:51.091Z"
