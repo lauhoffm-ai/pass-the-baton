@@ -335,10 +335,11 @@
           "decidedAt": "2026-11-15T03:20:54.526Z"
         },
         "4": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-15T01:16:01.095Z",
           "by": "lauren",
-          "photo": "bingo/lauren-4.jpg"
+          "photo": "bingo/lauren-4.jpg",
+          "decidedAt": "2026-11-15T03:20:57.245Z"
         },
         "9": {
           "status": "pending",
@@ -405,6 +406,11 @@
       "at": "2026-11-15T03:20:54.526Z",
       "who": "admin",
       "what": "bingo approved lauren #0"
+    },
+    {
+      "at": "2026-11-15T03:20:57.245Z",
+      "who": "admin",
+      "what": "bingo approved lauren #4"
     }
   ],
   "lastBackupAt": "2026-11-15T01:12:55.855Z"
