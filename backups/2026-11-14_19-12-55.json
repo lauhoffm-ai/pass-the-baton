@@ -1,0 +1,352 @@
+{
+  "version": 1,
+  "challenge": "pie-wars",
+  "epoch": "emwgjbfv5",
+  "config": {
+    "start": "2026-11-14",
+    "end": "2026-11-26",
+    "w": 0.85,
+    "mult": 2,
+    "cap": 150,
+    "floor": 0,
+    "butter": 1.25,
+    "steal": 15,
+    "restDays": 1,
+    "roundDates": null,
+    "drawWeights": {
+      "butter": 1,
+      "steal": 1,
+      "shield": 1
+    },
+    "teamA": "Feast Mode"
+  },
+  "players": {
+    "michael": {
+      "steps": {},
+      "code": "1111"
+    },
+    "jordan": {
+      "steps": {},
+      "code": "1111"
+    },
+    "lauren": {
+      "steps": {},
+      "code": "1111"
+    },
+    "allen": {
+      "steps": {},
+      "code": "1111"
+    },
+    "chris": {
+      "steps": {},
+      "code": "1111"
+    },
+    "kaykay": {
+      "steps": {},
+      "code": "1111"
+    },
+    "meghan": {
+      "steps": {},
+      "code": "1111"
+    },
+    "shania": {
+      "steps": {},
+      "code": "1111"
+    }
+  },
+  "entryAt": {},
+  "setup": {
+    "prevAvg": {
+      "shania": 17789,
+      "allen": 17146,
+      "michael": 14245,
+      "jordan": 12366,
+      "kaykay": 11877,
+      "chris": 11442,
+      "lauren": 8461,
+      "meghan": 6598
+    },
+    "group": 12491,
+    "w": 0.85,
+    "baseline": {
+      "michael": 13982,
+      "jordan": 12385,
+      "lauren": 9066,
+      "allen": 16448,
+      "chris": 11599,
+      "kaykay": 11969,
+      "meghan": 7482,
+      "shania": 16994
+    },
+    "seed": {
+      "shania": 1,
+      "allen": 2,
+      "michael": 3,
+      "jordan": 4,
+      "kaykay": 5,
+      "chris": 6,
+      "lauren": 7,
+      "meghan": 8
+    },
+    "team": {
+      "michael": "B",
+      "jordan": "A",
+      "lauren": "A",
+      "allen": "B",
+      "chris": "A",
+      "kaykay": "B",
+      "meghan": "B",
+      "shania": "A"
+    },
+    "teamNames": {
+      "A": "Feast Mode",
+      "B": "Sweat Potatoes"
+    },
+    "pieNames": {
+      "michael": "Apple",
+      "jordan": "Sweet Potato",
+      "lauren": "Chocolate Silk",
+      "allen": "Pecan",
+      "chris": "Key Lime",
+      "kaykay": "Cherry",
+      "meghan": "Banana Cream",
+      "shania": "Pumpkin"
+    }
+  },
+  "rest": {},
+  "plays": [],
+  "awards": [],
+  "goals": {
+    "2026-11-14": {
+      "id": 1,
+      "revealedAt": "2026-11-14T15:02:31.184Z",
+      "resolved": null
+    }
+  },
+  "rounds": {},
+  "hold": {},
+  "coin": {},
+  "bingo": {
+    "squares": [
+      {
+        "id": 0,
+        "text": "Walk with a kid or a pet",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 1,
+        "text": "A day at 120% of your baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "pct",
+          "min": 120
+        },
+        "minDate": null
+      },
+      {
+        "id": 2,
+        "text": "Sunset walk",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 3,
+        "text": "Walk in the rain",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 4,
+        "text": "New route",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 5,
+        "text": "30-minute workout",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 6,
+        "text": "3 days in a row at or above baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "streak",
+          "days": 3,
+          "min": 100
+        },
+        "minDate": null
+      },
+      {
+        "id": 7,
+        "text": "Walk before 7am (tracker screenshot)",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 8,
+        "text": "Bounce back: 100% the day after a day under 90%",
+        "type": "auto",
+        "rule": {
+          "kind": "bounce"
+        },
+        "minDate": null
+      },
+      {
+        "id": 9,
+        "text": "Walk with a family member",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 10,
+        "text": "Call someone you have not talked to in a month",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 11,
+        "text": "Stairs instead of the elevator all day",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 12,
+        "text": "FREE",
+        "type": "free",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 13,
+        "text": "Take a pie to someone, walking",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 14,
+        "text": "Park far away on purpose",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 15,
+        "text": "A day at 150% of your baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "pct",
+          "min": 150
+        },
+        "minDate": null
+      },
+      {
+        "id": 16,
+        "text": "Two days in a row at 110% of baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "streak",
+          "days": 2,
+          "min": 110
+        },
+        "minDate": null
+      },
+      {
+        "id": 17,
+        "text": "Turkey, squirrel or deer sighting",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 18,
+        "text": "Walk in a different park",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 19,
+        "text": "Walk while listening to a full podcast episode",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 20,
+        "text": "Match your best day so far within 5%",
+        "type": "auto",
+        "rule": {
+          "kind": "bestmatch",
+          "tol": 5
+        },
+        "minDate": null
+      },
+      {
+        "id": 21,
+        "text": "Hit baseline on a power-up day",
+        "type": "auto",
+        "rule": {
+          "kind": "powerday"
+        },
+        "minDate": null
+      },
+      {
+        "id": 22,
+        "text": "Walk after dinner",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 23,
+        "text": "Pick up trash on a walk",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 24,
+        "text": "Thanksgiving morning walk (claimable Nov 26)",
+        "type": "photo",
+        "rule": null,
+        "minDate": "2026-11-26"
+      }
+    ],
+    "claims": {
+      "lauren": {
+        "0": {
+          "status": "pending",
+          "at": "2026-11-15T01:12:55.854Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-0.jpg"
+        }
+      }
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-14T15:02:30.162Z",
+      "who": "admin",
+      "what": "INITIALIZE PIE WARS"
+    },
+    {
+      "at": "2026-11-15T01:12:55.854Z",
+      "who": "lauren",
+      "what": "bingo claim 0 -> pending"
+    }
+  ],
+  "lastBackupAt": "2026-11-15T01:12:55.855Z"
+}
