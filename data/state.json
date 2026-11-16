@@ -406,6 +406,12 @@
           "photo": "bingo/lauren-9.jpg",
           "decidedAt": "2026-11-15T19:07:30.098Z"
         },
+        "17": {
+          "status": "pending",
+          "at": "2026-11-16T03:41:42.643Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-17.jpg"
+        },
         "19": {
           "status": "approved",
           "at": "2026-11-15T20:30:52.548Z",
@@ -811,7 +817,12 @@
       "at": "2026-11-15T23:17:21.669Z",
       "who": "admin",
       "what": "bingo approved chris #9"
+    },
+    {
+      "at": "2026-11-16T03:41:42.643Z",
+      "who": "lauren",
+      "what": "bingo claim 17 -> pending"
     }
   ],
-  "lastBackupAt": "2026-11-15T18:01:35.632Z"
+  "lastBackupAt": "2026-11-16T03:41:42.645Z"
 }
