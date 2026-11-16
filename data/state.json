@@ -540,6 +540,12 @@
           "photo": "bingo/kaykay-9.jpg",
           "decidedAt": "2026-11-15T18:01:35.632Z"
         },
+        "16": {
+          "status": "approved",
+          "at": "2026-11-16T18:52:30.692Z",
+          "by": "kaykay",
+          "auto": true
+        },
         "18": {
           "status": "approved",
           "at": "2026-11-15T17:19:33.187Z",
@@ -906,6 +912,11 @@
       "at": "2026-11-16T18:51:48.849Z",
       "who": "kaykay",
       "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-16T18:52:30.692Z",
+      "who": "kaykay",
+      "what": "bingo claim 16 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-16T13:00:04.200Z"
