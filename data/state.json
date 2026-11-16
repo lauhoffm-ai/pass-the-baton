@@ -520,6 +520,12 @@
           "at": "2026-11-15T23:16:46.725Z",
           "by": "michael",
           "decidedAt": "2026-11-15T23:17:19.652Z"
+        },
+        "17": {
+          "status": "pending",
+          "at": "2026-11-16T23:33:17.343Z",
+          "by": "michael",
+          "photo": "bingo/michael-17.jpg"
         }
       },
       "jordan": {
@@ -993,6 +999,11 @@
       "at": "2026-11-16T19:40:15.466Z",
       "who": "auto",
       "what": "goal 2026-11-15 won by lauren"
+    },
+    {
+      "at": "2026-11-16T23:33:17.343Z",
+      "who": "michael",
+      "what": "bingo claim 17 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-16T19:11:11.390Z"
