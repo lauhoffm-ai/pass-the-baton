@@ -179,6 +179,11 @@
       "id": 18,
       "revealedAt": "2026-11-15T13:00:59.364Z",
       "resolved": null
+    },
+    "2026-11-16": {
+      "id": 4,
+      "revealedAt": "2026-11-16T13:00:04.200Z",
+      "resolved": null
     }
   },
   "rounds": {},
@@ -824,5 +829,5 @@
       "what": "bingo claim 17 -> pending"
     }
   ],
-  "lastBackupAt": "2026-11-16T03:41:42.645Z"
+  "lastBackupAt": "2026-11-16T13:00:04.200Z"
 }
