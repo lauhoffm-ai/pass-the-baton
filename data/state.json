@@ -456,6 +456,12 @@
           "photo": "bingo/lauren-0.jpg",
           "decidedAt": "2026-11-15T03:20:54.526Z"
         },
+        "1": {
+          "status": "approved",
+          "at": "2026-11-17T23:24:09.053Z",
+          "by": "lauren",
+          "auto": true
+        },
         "3": {
           "status": "approved",
           "at": "2026-11-17T03:03:05.043Z",
@@ -1568,6 +1574,11 @@
       "at": "2026-11-17T23:24:05.850Z",
       "who": "lauren",
       "what": "bingo claim 15 -> approved"
+    },
+    {
+      "at": "2026-11-17T23:24:09.053Z",
+      "who": "lauren",
+      "what": "bingo claim 1 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-17T20:11:23.537Z"
