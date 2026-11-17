@@ -641,6 +641,12 @@
           "by": "kaykay",
           "reason": "No day within 5% of your earlier best yet.",
           "auto": true
+        },
+        "22": {
+          "status": "pending",
+          "at": "2026-11-17T03:49:15.705Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-22.jpg"
         }
       },
       "chris": {
@@ -1214,6 +1220,11 @@
       "at": "2026-11-17T03:49:01.266Z",
       "who": "kaykay",
       "what": "bingo claim 5 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:49:15.705Z",
+      "who": "kaykay",
+      "what": "bingo claim 22 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-17T03:03:05.044Z"
