@@ -573,9 +573,10 @@
           "reason": "Not approved."
         },
         "11": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-17T03:25:25.921Z",
-          "by": "jordan"
+          "by": "jordan",
+          "decidedAt": "2026-11-17T03:30:07.352Z"
         },
         "14": {
           "status": "pending",
@@ -1113,6 +1114,11 @@
       "at": "2026-11-17T03:29:47.656Z",
       "who": "admin",
       "what": "bingo approved lauren #3"
+    },
+    {
+      "at": "2026-11-17T03:30:07.352Z",
+      "who": "admin",
+      "what": "bingo approved jordan #11"
     }
   ],
   "lastBackupAt": "2026-11-17T03:03:05.044Z"
