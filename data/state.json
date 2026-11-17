@@ -582,10 +582,11 @@
           "by": "jordan"
         },
         "17": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-17T03:26:04.864Z",
           "by": "jordan",
-          "photo": "bingo/jordan-17.jpg"
+          "photo": "bingo/jordan-17.jpg",
+          "decidedAt": "2026-11-17T03:29:41.984Z"
         }
       },
       "kaykay": {
@@ -1101,6 +1102,11 @@
       "at": "2026-11-17T03:29:38.876Z",
       "who": "admin",
       "what": "bingo rejected jordan #5"
+    },
+    {
+      "at": "2026-11-17T03:29:41.984Z",
+      "who": "admin",
+      "what": "bingo approved jordan #17"
     }
   ],
   "lastBackupAt": "2026-11-17T03:03:05.044Z"
