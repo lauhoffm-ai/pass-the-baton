@@ -511,6 +511,13 @@
           "by": "lauren",
           "decidedAt": "2026-11-15T23:17:18.018Z"
         },
+        "20": {
+          "status": "rejected",
+          "at": "2026-11-17T23:23:55.389Z",
+          "by": "lauren",
+          "reason": "No day within 5% of your earlier best yet.",
+          "auto": true
+        },
         "22": {
           "status": "approved",
           "at": "2026-11-17T03:41:36.270Z",
@@ -1533,6 +1540,11 @@
       "at": "2026-11-17T23:23:50.836Z",
       "who": "lauren",
       "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-17T23:23:55.389Z",
+      "who": "lauren",
+      "what": "bingo claim 20 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-17T20:11:23.537Z"
