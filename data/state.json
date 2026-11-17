@@ -641,6 +641,13 @@
           "by": "jordan",
           "decidedAt": "2026-11-17T03:30:10.116Z"
         },
+        "15": {
+          "status": "rejected",
+          "at": "2026-11-17T22:14:03.865Z",
+          "by": "jordan",
+          "reason": "Your best day so far is 136% of baseline (need 150%).",
+          "auto": true
+        },
         "17": {
           "status": "approved",
           "at": "2026-11-17T03:26:04.864Z",
@@ -1409,6 +1416,11 @@
       "at": "2026-11-17T22:13:47.451Z",
       "who": "jordan",
       "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-17T22:14:03.865Z",
+      "who": "jordan",
+      "what": "bingo claim 15 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-17T20:11:23.537Z"
