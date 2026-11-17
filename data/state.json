@@ -710,6 +710,12 @@
           "photo": "bingo/chris-9.jpg",
           "decidedAt": "2026-11-15T23:17:21.669Z"
         },
+        "16": {
+          "status": "approved",
+          "at": "2026-11-17T16:41:04.729Z",
+          "by": "chris",
+          "auto": true
+        },
         "17": {
           "status": "approved",
           "at": "2026-11-17T03:43:14.096Z",
@@ -1348,6 +1354,11 @@
       "at": "2026-11-17T16:41:03.232Z",
       "who": "chris",
       "what": "edit chris 2026-11-16 = 15732 (was 15732)"
+    },
+    {
+      "at": "2026-11-17T16:41:04.729Z",
+      "who": "chris",
+      "what": "bingo claim 16 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-17T12:13:26.648Z"
