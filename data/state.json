@@ -529,6 +529,12 @@
           "photo": "bingo/michael-7.jpg",
           "decidedAt": "2026-11-16T13:01:45.064Z"
         },
+        "8": {
+          "status": "approved",
+          "at": "2026-11-17T12:14:37.296Z",
+          "by": "michael",
+          "auto": true
+        },
         "11": {
           "status": "approved",
           "at": "2026-11-17T03:31:02.580Z",
@@ -1232,6 +1238,11 @@
       "at": "2026-11-17T12:13:26.648Z",
       "who": "michael",
       "what": "log michael 2026-11-16 = 16027"
+    },
+    {
+      "at": "2026-11-17T12:14:37.296Z",
+      "who": "michael",
+      "what": "bingo claim 8 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-17T12:13:26.648Z"
