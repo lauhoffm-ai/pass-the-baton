@@ -570,10 +570,12 @@
           "decidedAt": "2026-11-17T03:29:14.426Z"
         },
         "5": {
-          "status": "pending",
+          "status": "rejected",
           "at": "2026-11-17T03:30:36.833Z",
           "by": "jordan",
-          "photo": "bingo/jordan-5.jpg"
+          "photo": "bingo/jordan-5.jpg",
+          "decidedAt": "2026-11-17T03:31:11.065Z",
+          "reason": "Not approved."
         },
         "11": {
           "status": "approved",
@@ -1138,6 +1140,11 @@
       "at": "2026-11-17T03:31:02.580Z",
       "who": "michael",
       "what": "bingo claim 11 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:31:11.065Z",
+      "who": "admin",
+      "what": "bingo rejected jordan #5"
     }
   ],
   "lastBackupAt": "2026-11-17T03:03:05.044Z"
