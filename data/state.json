@@ -700,9 +700,10 @@
       },
       "allen": {
         "11": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-17T03:43:37.731Z",
-          "by": "allen"
+          "by": "allen",
+          "decidedAt": "2026-11-17T12:15:45.046Z"
         }
       }
     }
@@ -1267,6 +1268,11 @@
       "at": "2026-11-17T12:15:03.875Z",
       "who": "michael",
       "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-17T12:15:45.046Z",
+      "who": "admin",
+      "what": "bingo approved allen #11"
     }
   ],
   "lastBackupAt": "2026-11-17T12:13:26.648Z"
