@@ -663,6 +663,13 @@
           "by": "chris",
           "photo": "bingo/chris-17.jpg"
         }
+      },
+      "allen": {
+        "11": {
+          "status": "pending",
+          "at": "2026-11-17T03:43:37.731Z",
+          "by": "allen"
+        }
       }
     }
   },
@@ -1191,6 +1198,11 @@
       "at": "2026-11-17T03:43:14.096Z",
       "who": "chris",
       "what": "bingo claim 17 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:43:37.731Z",
+      "who": "allen",
+      "what": "bingo claim 11 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-17T03:03:05.044Z"
