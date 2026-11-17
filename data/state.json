@@ -689,6 +689,12 @@
           "by": "kaykay",
           "auto": true
         },
+        "17": {
+          "status": "pending",
+          "at": "2026-11-17T22:28:40.380Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-17.jpg"
+        },
         "18": {
           "status": "approved",
           "at": "2026-11-15T17:19:33.187Z",
@@ -1432,6 +1438,11 @@
       "at": "2026-11-17T22:17:23.378Z",
       "who": "jordan",
       "what": "bingo claim 7 -> pending"
+    },
+    {
+      "at": "2026-11-17T22:28:40.380Z",
+      "who": "kaykay",
+      "what": "bingo claim 17 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-17T20:11:23.537Z"
