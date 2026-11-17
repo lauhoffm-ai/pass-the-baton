@@ -560,6 +560,13 @@
           "by": "michael",
           "photo": "bingo/michael-17.jpg",
           "decidedAt": "2026-11-16T23:33:27.853Z"
+        },
+        "20": {
+          "status": "rejected",
+          "at": "2026-11-17T12:15:03.875Z",
+          "by": "michael",
+          "reason": "No day within 5% of your earlier best yet.",
+          "auto": true
         }
       },
       "jordan": {
@@ -1255,6 +1262,11 @@
       "at": "2026-11-17T12:14:45.784Z",
       "who": "michael",
       "what": "bingo claim 1 -> rejected"
+    },
+    {
+      "at": "2026-11-17T12:15:03.875Z",
+      "who": "michael",
+      "what": "bingo claim 20 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-17T12:13:26.648Z"
