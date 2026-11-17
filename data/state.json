@@ -494,6 +494,13 @@
           "decidedAt": "2026-11-15T18:02:41.853Z",
           "reason": "Not approved."
         },
+        "1": {
+          "status": "rejected",
+          "at": "2026-11-17T12:14:45.784Z",
+          "by": "michael",
+          "reason": "Your best day so far is 115% of baseline (need 120%).",
+          "auto": true
+        },
         "2": {
           "status": "approved",
           "at": "2026-11-15T03:23:16.748Z",
@@ -1243,6 +1250,11 @@
       "at": "2026-11-17T12:14:37.296Z",
       "who": "michael",
       "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-17T12:14:45.784Z",
+      "who": "michael",
+      "what": "bingo claim 1 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-17T12:13:26.648Z"
