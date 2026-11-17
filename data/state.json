@@ -477,6 +477,13 @@
           "reason": "Your longest run at 100%+ is 1 day (need 3).",
           "auto": true
         },
+        "8": {
+          "status": "rejected",
+          "at": "2026-11-17T23:23:42.851Z",
+          "by": "lauren",
+          "reason": "Need a day at 100%+ right after a day under 90%.",
+          "auto": true
+        },
         "9": {
           "status": "approved",
           "at": "2026-11-15T19:07:21.975Z",
@@ -1509,6 +1516,11 @@
       "at": "2026-11-17T23:23:37.522Z",
       "who": "lauren",
       "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-17T23:23:42.851Z",
+      "who": "lauren",
+      "what": "bingo claim 8 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-17T20:11:23.537Z"
