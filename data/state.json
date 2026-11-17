@@ -623,6 +623,12 @@
           "photo": "bingo/jordan-5.jpg",
           "decidedAt": "2026-11-17T03:34:04.191Z"
         },
+        "8": {
+          "status": "approved",
+          "at": "2026-11-17T22:13:47.451Z",
+          "by": "jordan",
+          "auto": true
+        },
         "11": {
           "status": "approved",
           "at": "2026-11-17T03:25:25.921Z",
@@ -1398,6 +1404,11 @@
       "at": "2026-11-17T22:13:05.712Z",
       "who": "jordan",
       "what": "log jordan 2026-11-16 = 14965"
+    },
+    {
+      "at": "2026-11-17T22:13:47.451Z",
+      "who": "jordan",
+      "what": "bingo claim 8 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-17T20:11:23.537Z"
