@@ -555,6 +555,13 @@
           "by": "michael",
           "decidedAt": "2026-11-15T23:17:19.652Z"
         },
+        "16": {
+          "status": "rejected",
+          "at": "2026-11-17T12:16:28.030Z",
+          "by": "michael",
+          "reason": "Your longest run at 110%+ is 1 day (need 2).",
+          "auto": true
+        },
         "17": {
           "status": "approved",
           "at": "2026-11-16T23:33:17.343Z",
@@ -1297,6 +1304,11 @@
       "at": "2026-11-17T12:16:02.040Z",
       "who": "admin",
       "what": "bingo approved kaykay #22"
+    },
+    {
+      "at": "2026-11-17T12:16:28.030Z",
+      "who": "michael",
+      "what": "bingo claim 16 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-17T12:13:26.648Z"
