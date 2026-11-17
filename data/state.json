@@ -457,6 +457,12 @@
           "at": "2026-11-15T20:30:52.548Z",
           "by": "lauren",
           "decidedAt": "2026-11-15T23:17:18.018Z"
+        },
+        "22": {
+          "status": "pending",
+          "at": "2026-11-17T03:41:36.270Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-22.jpg"
         }
       },
       "meghan": {
@@ -1169,6 +1175,11 @@
       "at": "2026-11-17T03:34:04.191Z",
       "who": "admin",
       "what": "bingo approved jordan #5"
+    },
+    {
+      "at": "2026-11-17T03:41:36.270Z",
+      "who": "lauren",
+      "what": "bingo claim 22 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-17T03:03:05.044Z"
