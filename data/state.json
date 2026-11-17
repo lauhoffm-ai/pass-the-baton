@@ -633,10 +633,11 @@
           "auto": true
         },
         "5": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-17T03:49:01.266Z",
           "by": "kaykay",
-          "photo": "bingo/kaykay-5.jpg"
+          "photo": "bingo/kaykay-5.jpg",
+          "decidedAt": "2026-11-17T12:15:57.425Z"
         },
         "9": {
           "status": "approved",
@@ -1285,6 +1286,11 @@
       "at": "2026-11-17T12:15:51.325Z",
       "who": "admin",
       "what": "bingo approved chris #17"
+    },
+    {
+      "at": "2026-11-17T12:15:57.425Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #5"
     }
   ],
   "lastBackupAt": "2026-11-17T12:13:26.648Z"
