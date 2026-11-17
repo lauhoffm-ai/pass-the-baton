@@ -470,6 +470,13 @@
           "photo": "bingo/lauren-4.jpg",
           "decidedAt": "2026-11-15T03:20:57.245Z"
         },
+        "6": {
+          "status": "rejected",
+          "at": "2026-11-17T23:23:37.522Z",
+          "by": "lauren",
+          "reason": "Your longest run at 100%+ is 1 day (need 3).",
+          "auto": true
+        },
         "9": {
           "status": "approved",
           "at": "2026-11-15T19:07:21.975Z",
@@ -1497,6 +1504,11 @@
       "at": "2026-11-17T23:22:40.506Z",
       "who": "auto",
       "what": "goal 2026-11-16 won by jordan"
+    },
+    {
+      "at": "2026-11-17T23:23:37.522Z",
+      "who": "lauren",
+      "what": "bingo claim 6 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-17T20:11:23.537Z"
