@@ -491,6 +491,13 @@
           "photo": "bingo/lauren-9.jpg",
           "decidedAt": "2026-11-15T19:07:30.098Z"
         },
+        "16": {
+          "status": "rejected",
+          "at": "2026-11-17T23:23:50.836Z",
+          "by": "lauren",
+          "reason": "Your longest run at 110%+ is 1 day (need 2).",
+          "auto": true
+        },
         "17": {
           "status": "approved",
           "at": "2026-11-16T03:41:42.643Z",
@@ -1521,6 +1528,11 @@
       "at": "2026-11-17T23:23:42.851Z",
       "who": "lauren",
       "what": "bingo claim 8 -> rejected"
+    },
+    {
+      "at": "2026-11-17T23:23:50.836Z",
+      "who": "lauren",
+      "what": "bingo claim 16 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-17T20:11:23.537Z"
