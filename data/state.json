@@ -569,12 +569,10 @@
       },
       "michael": {
         "0": {
-          "status": "rejected",
-          "at": "2026-11-15T16:03:23.574Z",
+          "status": "pending",
+          "at": "2026-11-18T12:59:10.414Z",
           "by": "michael",
-          "photo": "bingo/michael-0.jpg",
-          "decidedAt": "2026-11-15T18:02:41.853Z",
-          "reason": "Not approved."
+          "photo": "bingo/michael-0.jpg"
         },
         "1": {
           "status": "approved",
@@ -1643,6 +1641,11 @@
       "at": "2026-11-18T12:58:15.334Z",
       "who": "michael",
       "what": "bingo claim 1 -> approved"
+    },
+    {
+      "at": "2026-11-18T12:59:10.414Z",
+      "who": "michael",
+      "what": "bingo claim 0 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-18T12:57:44.698Z"
