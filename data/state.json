@@ -621,6 +621,13 @@
           "photo": "bingo/michael-5.jpg",
           "decidedAt": "2026-11-15T23:17:12.201Z"
         },
+        "6": {
+          "status": "rejected",
+          "at": "2026-11-18T13:01:31.777Z",
+          "by": "michael",
+          "reason": "Your longest run at 100%+ is 2 days (need 3).",
+          "auto": true
+        },
         "7": {
           "status": "approved",
           "at": "2026-11-16T13:00:49.335Z",
@@ -1678,6 +1685,11 @@
       "at": "2026-11-18T13:00:42.675Z",
       "who": "michael",
       "what": "bingo claim 16 -> approved"
+    },
+    {
+      "at": "2026-11-18T13:01:31.777Z",
+      "who": "michael",
+      "what": "bingo claim 6 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-18T12:57:44.698Z"
