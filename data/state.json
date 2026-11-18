@@ -657,7 +657,7 @@
         },
         "20": {
           "status": "rejected",
-          "at": "2026-11-17T12:15:03.875Z",
+          "at": "2026-11-18T12:59:39.978Z",
           "by": "michael",
           "reason": "No day within 5% of your earlier best yet.",
           "auto": true
@@ -1659,6 +1659,11 @@
       "at": "2026-11-18T12:59:30.529Z",
       "who": "admin",
       "what": "bingo approved michael #0"
+    },
+    {
+      "at": "2026-11-18T12:59:39.978Z",
+      "who": "michael",
+      "what": "bingo claim 20 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-18T12:57:44.698Z"
