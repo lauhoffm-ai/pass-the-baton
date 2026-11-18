@@ -765,6 +765,12 @@
           "photo": "bingo/jordan-17.jpg",
           "decidedAt": "2026-11-17T03:29:41.984Z"
         },
+        "20": {
+          "status": "approved",
+          "at": "2026-11-18T21:12:19.143Z",
+          "by": "jordan",
+          "auto": true
+        },
         "22": {
           "status": "pending",
           "at": "2026-11-18T21:12:02.354Z",
@@ -1741,6 +1747,11 @@
       "at": "2026-11-18T21:12:02.354Z",
       "who": "jordan",
       "what": "bingo claim 22 -> pending"
+    },
+    {
+      "at": "2026-11-18T21:12:19.143Z",
+      "who": "jordan",
+      "what": "bingo claim 20 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-18T21:01:00.871Z"
