@@ -654,6 +654,12 @@
           "by": "michael",
           "reason": "No day within 5% of your earlier best yet.",
           "auto": true
+        },
+        "22": {
+          "status": "pending",
+          "at": "2026-11-18T01:25:13.350Z",
+          "by": "michael",
+          "photo": "bingo/michael-22.jpg"
         }
       },
       "jordan": {
@@ -1586,6 +1592,11 @@
       "at": "2026-11-17T23:34:02.023Z",
       "who": "lauren",
       "what": "rest day lauren 2026-11-17"
+    },
+    {
+      "at": "2026-11-18T01:25:13.350Z",
+      "who": "michael",
+      "what": "bingo claim 22 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-17T20:11:23.537Z"
