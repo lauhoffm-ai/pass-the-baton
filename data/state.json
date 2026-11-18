@@ -838,6 +838,12 @@
           "by": "kaykay",
           "photo": "bingo/kaykay-22.jpg",
           "decidedAt": "2026-11-17T12:16:02.040Z"
+        },
+        "23": {
+          "status": "pending",
+          "at": "2026-11-18T22:47:05.163Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-23.jpg"
         }
       },
       "chris": {
@@ -1783,6 +1789,11 @@
       "at": "2026-11-18T22:46:15.779Z",
       "who": "chris",
       "what": "edit chris 2026-11-17 = 15741 (was 15741)"
+    },
+    {
+      "at": "2026-11-18T22:47:05.163Z",
+      "who": "kaykay",
+      "what": "bingo claim 23 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-18T21:01:00.871Z"
