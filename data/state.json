@@ -87,7 +87,8 @@
       "steps": {
         "2026-11-14": 19424,
         "2026-11-15": 15456,
-        "2026-11-16": 14526
+        "2026-11-16": 14526,
+        "2026-11-17": 22647
       },
       "code": "1111"
     }
@@ -137,7 +138,8 @@
     "shania": {
       "2026-11-14": "2026-11-15T11:29:24.349Z",
       "2026-11-15": "2026-11-16T19:40:15.465Z",
-      "2026-11-16": "2026-11-17T23:22:40.505Z"
+      "2026-11-16": "2026-11-17T23:22:40.505Z",
+      "2026-11-17": "2026-11-19T02:13:43.222Z"
     }
   },
   "setup": {
@@ -230,6 +232,13 @@
       "type": "shield",
       "source": "bingo row 1",
       "at": "2026-11-18T12:59:30.529Z"
+    },
+    {
+      "id": "goal-2026-11-17",
+      "pid": "jordan",
+      "type": "butter",
+      "source": "goal 2026-11-17",
+      "at": "2026-11-19T02:13:43.222Z"
     }
   ],
   "goals": {
@@ -263,7 +272,11 @@
     "2026-11-17": {
       "id": 16,
       "revealedAt": "2026-11-17T16:16:48.713Z",
-      "resolved": null
+      "resolved": {
+        "winner": "jordan",
+        "at": "2026-11-19T02:13:43.222Z",
+        "awardId": "goal-2026-11-17"
+      }
     },
     "2026-11-18": {
       "id": 19,
@@ -271,7 +284,66 @@
       "resolved": null
     }
   },
-  "rounds": {},
+  "rounds": {
+    "1": {
+      "closedAt": "2026-11-19T02:13:43.222Z",
+      "forced": false,
+      "matches": [
+        {
+          "id": "qf1",
+          "bracket": "W",
+          "place": null,
+          "a": "shania",
+          "b": "meghan",
+          "aAvg": 100.10444862892786,
+          "bAvg": 99.2949746057204,
+          "aRaw": 72053,
+          "bRaw": 32023,
+          "winner": "shania",
+          "how": "avg"
+        },
+        {
+          "id": "qf2",
+          "bracket": "W",
+          "place": null,
+          "a": "allen",
+          "b": "lauren",
+          "aAvg": 36.89810311284047,
+          "bAvg": 85.04669460989778,
+          "aRaw": 38617,
+          "bRaw": 30084,
+          "winner": "lauren",
+          "how": "avg"
+        },
+        {
+          "id": "qf3",
+          "bracket": "W",
+          "place": null,
+          "a": "michael",
+          "b": "chris",
+          "aAvg": 105.90044342726362,
+          "bAvg": 105.35390981981205,
+          "aRaw": 60816,
+          "bRaw": 52379,
+          "winner": "michael",
+          "how": "avg"
+        },
+        {
+          "id": "qf4",
+          "bracket": "W",
+          "place": null,
+          "a": "jordan",
+          "b": "kaykay",
+          "aAvg": 114.72749293500202,
+          "bAvg": 114.21797978110118,
+          "aRaw": 58822,
+          "bRaw": 54683,
+          "winner": "jordan",
+          "how": "avg"
+        }
+      ]
+    }
+  },
   "hold": {},
   "coin": {},
   "bingo": {
@@ -1794,6 +1866,21 @@
       "at": "2026-11-18T22:47:05.163Z",
       "who": "kaykay",
       "what": "bingo claim 23 -> pending"
+    },
+    {
+      "at": "2026-11-19T02:13:43.222Z",
+      "who": "shania",
+      "what": "log shania 2026-11-17 = 22647"
+    },
+    {
+      "at": "2026-11-19T02:13:43.222Z",
+      "who": "auto",
+      "what": "goal 2026-11-17 won by jordan"
+    },
+    {
+      "at": "2026-11-19T02:13:43.222Z",
+      "who": "auto",
+      "what": "close round 1"
     }
   ],
   "lastBackupAt": "2026-11-18T21:01:00.871Z"
