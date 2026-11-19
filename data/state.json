@@ -724,10 +724,11 @@
           "auto": true
         },
         "9": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-19T02:25:20.158Z",
           "by": "michael",
-          "photo": "bingo/michael-9.jpg"
+          "photo": "bingo/michael-9.jpg",
+          "decidedAt": "2026-11-19T02:25:45.297Z"
         },
         "11": {
           "status": "approved",
@@ -1892,6 +1893,11 @@
       "at": "2026-11-19T02:25:20.158Z",
       "who": "michael",
       "what": "bingo claim 9 -> pending"
+    },
+    {
+      "at": "2026-11-19T02:25:45.297Z",
+      "who": "admin",
+      "what": "bingo approved michael #9"
     }
   ],
   "lastBackupAt": "2026-11-18T21:01:00.871Z"
