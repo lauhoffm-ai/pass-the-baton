@@ -241,6 +241,13 @@
       "type": "butter",
       "source": "goal 2026-11-17",
       "at": "2026-11-19T02:13:43.222Z"
+    },
+    {
+      "id": "bingo-row-michael-1",
+      "pid": "michael",
+      "type": "steal",
+      "source": "bingo row 2",
+      "at": "2026-11-19T12:39:03.274Z"
     }
   ],
   "goals": {
@@ -712,10 +719,9 @@
           "decidedAt": "2026-11-15T23:17:12.201Z"
         },
         "6": {
-          "status": "rejected",
-          "at": "2026-11-18T13:01:31.777Z",
+          "status": "approved",
+          "at": "2026-11-19T12:39:03.272Z",
           "by": "michael",
-          "reason": "Your longest run at 100%+ is 2 days (need 3).",
           "auto": true
         },
         "7": {
@@ -1933,6 +1939,11 @@
       "at": "2026-11-19T12:38:26.378Z",
       "who": "michael",
       "what": "log michael 2026-11-18 = 18411"
+    },
+    {
+      "at": "2026-11-19T12:39:03.272Z",
+      "who": "michael",
+      "what": "bingo claim 6 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-19T12:38:26.378Z"
