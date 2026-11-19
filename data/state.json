@@ -723,6 +723,12 @@
           "by": "michael",
           "auto": true
         },
+        "9": {
+          "status": "pending",
+          "at": "2026-11-19T02:25:20.158Z",
+          "by": "michael",
+          "photo": "bingo/michael-9.jpg"
+        },
         "11": {
           "status": "approved",
           "at": "2026-11-17T03:31:02.580Z",
@@ -1881,6 +1887,11 @@
       "at": "2026-11-19T02:13:43.222Z",
       "who": "auto",
       "what": "close round 1"
+    },
+    {
+      "at": "2026-11-19T02:25:20.158Z",
+      "who": "michael",
+      "what": "bingo claim 9 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-18T21:01:00.871Z"
