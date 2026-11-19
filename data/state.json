@@ -770,10 +770,9 @@
           "decidedAt": "2026-11-16T23:33:27.853Z"
         },
         "20": {
-          "status": "rejected",
-          "at": "2026-11-18T12:59:45.033Z",
+          "status": "approved",
+          "at": "2026-11-19T12:39:09.724Z",
           "by": "michael",
-          "reason": "No day within 5% of your earlier best yet.",
           "auto": true
         },
         "22": {
@@ -1944,6 +1943,11 @@
       "at": "2026-11-19T12:39:03.272Z",
       "who": "michael",
       "what": "bingo claim 6 -> approved"
+    },
+    {
+      "at": "2026-11-19T12:39:09.724Z",
+      "who": "michael",
+      "what": "bingo claim 20 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-19T12:38:26.378Z"
