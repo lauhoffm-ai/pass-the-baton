@@ -918,6 +918,11 @@
           "photo": "bingo/kaykay-9.jpg",
           "decidedAt": "2026-11-15T18:01:35.632Z"
         },
+        "11": {
+          "status": "pending",
+          "at": "2026-11-20T00:35:18.693Z",
+          "by": "kaykay"
+        },
         "16": {
           "status": "approved",
           "at": "2026-11-16T18:52:30.692Z",
@@ -2007,6 +2012,11 @@
       "at": "2026-11-20T00:34:54.218Z",
       "who": "kaykay",
       "what": "bingo claim 20 -> approved"
+    },
+    {
+      "at": "2026-11-20T00:35:18.693Z",
+      "who": "kaykay",
+      "what": "bingo claim 11 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-19T19:11:54.288Z"
