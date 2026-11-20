@@ -208,7 +208,8 @@
   },
   "rest": {
     "lauren": "2026-11-17",
-    "michael": "2026-11-19"
+    "michael": "2026-11-19",
+    "jordan": "2026-11-19"
   },
   "plays": [],
   "awards": [
@@ -2023,6 +2024,11 @@
       "at": "2026-11-20T01:24:53.976Z",
       "who": "michael",
       "what": "rest day michael 2026-11-19"
+    },
+    {
+      "at": "2026-11-20T01:26:07.569Z",
+      "who": "jordan",
+      "what": "rest day jordan 2026-11-19"
     }
   ],
   "lastBackupAt": "2026-11-20T01:24:53.977Z"
