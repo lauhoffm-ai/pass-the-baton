@@ -936,6 +936,12 @@
           "by": "kaykay",
           "auto": true
         },
+        "4": {
+          "status": "pending",
+          "at": "2026-11-20T21:51:31.343Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-4.jpg"
+        },
         "5": {
           "status": "approved",
           "at": "2026-11-17T03:49:01.266Z",
@@ -2151,7 +2157,12 @@
       "at": "2026-11-20T16:04:56.849Z",
       "who": "kaykay",
       "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-20T21:51:31.343Z",
+      "who": "kaykay",
+      "what": "bingo claim 4 -> pending"
     }
   ],
-  "lastBackupAt": "2026-11-20T15:22:01.984Z"
+  "lastBackupAt": "2026-11-20T21:51:31.343Z"
 }
