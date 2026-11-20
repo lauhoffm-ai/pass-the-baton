@@ -944,10 +944,9 @@
           "by": "kaykay"
         },
         "20": {
-          "status": "rejected",
-          "at": "2026-11-16T18:51:48.849Z",
+          "status": "approved",
+          "at": "2026-11-20T00:34:54.218Z",
           "by": "kaykay",
-          "reason": "No day within 5% of your earlier best yet.",
           "auto": true
         },
         "22": {
@@ -2003,6 +2002,11 @@
       "at": "2026-11-19T23:53:28.831Z",
       "who": "kaykay",
       "what": "bingo claim 19 -> pending"
+    },
+    {
+      "at": "2026-11-20T00:34:54.218Z",
+      "who": "kaykay",
+      "what": "bingo claim 20 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-19T19:11:54.288Z"
