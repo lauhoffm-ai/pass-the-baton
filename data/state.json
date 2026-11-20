@@ -331,6 +331,11 @@
       "id": 17,
       "revealedAt": "2026-11-19T13:49:25.356Z",
       "resolved": null
+    },
+    "2026-11-20": {
+      "id": 20,
+      "revealedAt": "2026-11-20T15:22:01.984Z",
+      "resolved": null
     }
   },
   "rounds": {
@@ -2120,5 +2125,5 @@
       "what": "log meghan 2026-11-19 = 6322"
     }
   ],
-  "lastBackupAt": "2026-11-20T01:24:53.977Z"
+  "lastBackupAt": "2026-11-20T15:22:01.984Z"
 }
