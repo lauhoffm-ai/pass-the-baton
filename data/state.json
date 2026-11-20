@@ -870,6 +870,12 @@
           "photo": "bingo/jordan-5.jpg",
           "decidedAt": "2026-11-17T03:34:04.191Z"
         },
+        "6": {
+          "status": "approved",
+          "at": "2026-11-20T23:29:26.756Z",
+          "by": "jordan",
+          "auto": true
+        },
         "7": {
           "status": "approved",
           "at": "2026-11-17T22:17:23.378Z",
@@ -2172,6 +2178,11 @@
       "at": "2026-11-20T23:29:11.172Z",
       "who": "jordan",
       "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-20T23:29:26.756Z",
+      "who": "jordan",
+      "what": "bingo claim 6 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-20T21:51:31.343Z"
