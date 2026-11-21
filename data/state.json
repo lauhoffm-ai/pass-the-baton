@@ -1266,6 +1266,13 @@
           "at": "2026-11-17T03:43:37.731Z",
           "by": "allen",
           "decidedAt": "2026-11-17T12:15:45.046Z"
+        },
+        "15": {
+          "status": "rejected",
+          "at": "2026-11-21T21:02:21.763Z",
+          "by": "allen",
+          "reason": "Your best day so far is 108% of baseline (need 150%).",
+          "auto": true
         }
       }
     }
@@ -2655,6 +2662,11 @@
       "at": "2026-11-21T21:02:14.408Z",
       "who": "allen",
       "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-21T21:02:21.763Z",
+      "who": "allen",
+      "what": "bingo claim 15 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-21T17:04:18.177Z"
