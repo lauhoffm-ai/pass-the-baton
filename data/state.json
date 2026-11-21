@@ -302,6 +302,13 @@
       "type": "steal",
       "source": "bingo row 2",
       "at": "2026-11-21T01:52:30.853Z"
+    },
+    {
+      "id": "bingo-row-kaykay-3",
+      "pid": "kaykay",
+      "type": "butter",
+      "source": "bingo row 4",
+      "at": "2026-11-21T16:46:34.943Z"
     }
   ],
   "goals": {
@@ -1055,6 +1062,12 @@
           "at": "2026-11-20T00:35:18.693Z",
           "by": "kaykay",
           "decidedAt": "2026-11-21T01:52:25.577Z"
+        },
+        "15": {
+          "status": "approved",
+          "at": "2026-11-21T16:46:34.943Z",
+          "by": "kaykay",
+          "auto": true
         },
         "16": {
           "status": "approved",
@@ -2458,6 +2471,11 @@
       "at": "2026-11-21T16:45:07.893Z",
       "who": "kaykay",
       "what": "edit kaykay 2026-11-20 = 21606 (was 14224)"
+    },
+    {
+      "at": "2026-11-21T16:46:34.943Z",
+      "who": "kaykay",
+      "what": "bingo claim 15 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-21T10:59:41.931Z"
