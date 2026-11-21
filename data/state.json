@@ -281,6 +281,13 @@
       "type": "shield",
       "source": "goal 2026-11-18",
       "at": "2026-11-20T06:26:24.517Z"
+    },
+    {
+      "id": "bingo-row-jordan-1",
+      "pid": "jordan",
+      "type": "steal",
+      "source": "bingo row 2",
+      "at": "2026-11-21T01:52:30.853Z"
     }
   ],
   "goals": {
@@ -905,10 +912,11 @@
           "auto": true
         },
         "9": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-20T23:31:42.795Z",
           "by": "jordan",
-          "photo": "bingo/jordan-9.jpg"
+          "photo": "bingo/jordan-9.jpg",
+          "decidedAt": "2026-11-21T01:52:30.853Z"
         },
         "11": {
           "status": "approved",
@@ -2303,6 +2311,11 @@
       "at": "2026-11-21T01:52:27.527Z",
       "who": "admin",
       "what": "bingo approved kaykay #19"
+    },
+    {
+      "at": "2026-11-21T01:52:30.853Z",
+      "who": "admin",
+      "what": "bingo approved jordan #9"
     }
   ],
   "lastBackupAt": "2026-11-20T21:51:31.343Z"
