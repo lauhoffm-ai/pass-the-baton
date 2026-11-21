@@ -1212,6 +1212,13 @@
           "by": "chris",
           "photo": "bingo/chris-17.jpg",
           "decidedAt": "2026-11-17T12:15:51.325Z"
+        },
+        "20": {
+          "status": "rejected",
+          "at": "2026-11-21T18:47:40.698Z",
+          "by": "chris",
+          "reason": "No day within 5% of your earlier best yet.",
+          "auto": true
         }
       },
       "allen": {
@@ -2564,6 +2571,11 @@
       "at": "2026-11-21T18:47:18.409Z",
       "who": "chris",
       "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-21T18:47:40.698Z",
+      "who": "chris",
+      "what": "bingo claim 20 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-21T17:04:18.177Z"
