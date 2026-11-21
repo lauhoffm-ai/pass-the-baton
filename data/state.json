@@ -954,6 +954,12 @@
           "by": "kaykay",
           "auto": true
         },
+        "2": {
+          "status": "pending",
+          "at": "2026-11-21T00:42:03.311Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-2.jpg"
+        },
         "4": {
           "status": "pending",
           "at": "2026-11-20T21:51:31.343Z",
@@ -2215,6 +2221,11 @@
     {
       "at": "2026-11-21T00:41:23.991Z",
       "who": "chris",
+      "what": "bingo claim 2 -> pending"
+    },
+    {
+      "at": "2026-11-21T00:42:03.311Z",
+      "who": "kaykay",
       "what": "bingo claim 2 -> pending"
     }
   ],
