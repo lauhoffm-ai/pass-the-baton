@@ -923,6 +923,12 @@
         }
       },
       "jordan": {
+        "0": {
+          "status": "pending",
+          "at": "2026-11-21T19:22:18.248Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-0.jpg"
+        },
         "1": {
           "status": "approved",
           "at": "2026-11-15T16:09:04.400Z",
@@ -2587,6 +2593,11 @@
       "at": "2026-11-21T18:49:04.371Z",
       "who": "chris",
       "what": "bingo claim 5 -> pending"
+    },
+    {
+      "at": "2026-11-21T19:22:18.248Z",
+      "who": "jordan",
+      "what": "bingo claim 0 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-21T17:04:18.177Z"
