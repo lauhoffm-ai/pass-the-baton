@@ -679,6 +679,12 @@
           "photo": "bingo/lauren-9.jpg",
           "decidedAt": "2026-11-15T19:07:30.098Z"
         },
+        "13": {
+          "status": "pending",
+          "at": "2026-11-21T11:03:40.739Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-13.jpg"
+        },
         "14": {
           "status": "approved",
           "at": "2026-11-19T13:57:51.777Z",
@@ -2386,6 +2392,11 @@
       "at": "2026-11-21T11:01:32.565Z",
       "who": "meghan",
       "what": "log meghan 2026-11-20 = 6408"
+    },
+    {
+      "at": "2026-11-21T11:03:40.739Z",
+      "who": "lauren",
+      "what": "bingo claim 13 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-21T10:59:41.931Z"
