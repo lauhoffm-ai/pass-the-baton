@@ -1285,6 +1285,12 @@
           "by": "allen",
           "reason": "Your longest run at 110%+ is 0 days (need 2).",
           "auto": true
+        },
+        "20": {
+          "status": "approved",
+          "at": "2026-11-21T21:02:34.276Z",
+          "by": "allen",
+          "auto": true
         }
       }
     }
@@ -2689,6 +2695,11 @@
       "at": "2026-11-21T21:02:28.593Z",
       "who": "allen",
       "what": "bingo claim 10 -> pending"
+    },
+    {
+      "at": "2026-11-21T21:02:34.276Z",
+      "who": "allen",
+      "what": "bingo claim 20 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-21T17:04:18.177Z"
