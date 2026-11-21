@@ -1037,9 +1037,10 @@
           "decidedAt": "2026-11-15T18:01:43.052Z"
         },
         "19": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-19T23:53:28.831Z",
-          "by": "kaykay"
+          "by": "kaykay",
+          "decidedAt": "2026-11-21T01:52:27.527Z"
         },
         "20": {
           "status": "approved",
@@ -2297,6 +2298,11 @@
       "at": "2026-11-21T01:52:25.577Z",
       "who": "admin",
       "what": "bingo approved kaykay #11"
+    },
+    {
+      "at": "2026-11-21T01:52:27.527Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #19"
     }
   ],
   "lastBackupAt": "2026-11-20T21:51:31.343Z"
