@@ -1162,6 +1162,13 @@
           "photo": "bingo/chris-2.jpg",
           "decidedAt": "2026-11-21T01:52:11.164Z"
         },
+        "6": {
+          "status": "rejected",
+          "at": "2026-11-21T18:47:18.409Z",
+          "by": "chris",
+          "reason": "Your longest run at 100%+ is 2 days (need 3).",
+          "auto": true
+        },
         "8": {
           "status": "approved",
           "at": "2026-11-16T19:11:11.389Z",
@@ -2552,6 +2559,11 @@
       "at": "2026-11-21T17:17:45.349Z",
       "who": "auto",
       "what": "goal 2026-11-20 won by chris"
+    },
+    {
+      "at": "2026-11-21T18:47:18.409Z",
+      "who": "chris",
+      "what": "bingo claim 6 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-21T17:04:18.177Z"
