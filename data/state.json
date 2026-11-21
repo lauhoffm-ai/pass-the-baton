@@ -1243,7 +1243,7 @@
       "allen": {
         "1": {
           "status": "rejected",
-          "at": "2026-11-21T21:02:03.630Z",
+          "at": "2026-11-21T21:02:04.711Z",
           "by": "allen",
           "reason": "Your best day so far is 108% of baseline (need 120%).",
           "auto": true
@@ -2620,6 +2620,11 @@
     },
     {
       "at": "2026-11-21T21:02:03.630Z",
+      "who": "allen",
+      "what": "bingo claim 1 -> rejected"
+    },
+    {
+      "at": "2026-11-21T21:02:04.711Z",
       "who": "allen",
       "what": "bingo claim 1 -> rejected"
     }
