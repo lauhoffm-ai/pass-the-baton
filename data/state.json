@@ -971,10 +971,11 @@
           "auto": true
         },
         "2": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-21T00:42:03.311Z",
           "by": "kaykay",
-          "photo": "bingo/kaykay-2.jpg"
+          "photo": "bingo/kaykay-2.jpg",
+          "decidedAt": "2026-11-21T01:52:16.680Z"
         },
         "4": {
           "status": "pending",
@@ -2279,6 +2280,11 @@
       "at": "2026-11-21T01:52:11.164Z",
       "who": "admin",
       "what": "bingo approved chris #2"
+    },
+    {
+      "at": "2026-11-21T01:52:16.680Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #2"
     }
   ],
   "lastBackupAt": "2026-11-20T21:51:31.343Z"
