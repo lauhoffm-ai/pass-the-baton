@@ -1273,6 +1273,13 @@
           "by": "allen",
           "reason": "Your best day so far is 108% of baseline (need 150%).",
           "auto": true
+        },
+        "16": {
+          "status": "rejected",
+          "at": "2026-11-21T21:02:24.874Z",
+          "by": "allen",
+          "reason": "Your longest run at 110%+ is 0 days (need 2).",
+          "auto": true
         }
       }
     }
@@ -2667,6 +2674,11 @@
       "at": "2026-11-21T21:02:21.763Z",
       "who": "allen",
       "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-21T21:02:24.874Z",
+      "who": "allen",
+      "what": "bingo claim 16 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-21T17:04:18.177Z"
