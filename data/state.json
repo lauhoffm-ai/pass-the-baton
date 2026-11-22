@@ -886,6 +886,13 @@
           "by": "shania",
           "reason": "Your best day so far is 133% of baseline (need 150%).",
           "auto": true
+        },
+        "16": {
+          "status": "rejected",
+          "at": "2026-11-22T06:42:18.323Z",
+          "by": "shania",
+          "reason": "Your longest run at 110%+ is 1 day (need 2).",
+          "auto": true
         }
       },
       "michael": {
@@ -3048,6 +3055,11 @@
       "at": "2026-11-22T06:42:15.788Z",
       "who": "shania",
       "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:42:18.323Z",
+      "who": "shania",
+      "what": "bingo claim 16 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
