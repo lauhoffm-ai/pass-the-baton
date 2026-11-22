@@ -860,6 +860,12 @@
           "by": "shania",
           "photo": "bingo/shania-0.jpg",
           "decidedAt": "2026-11-15T03:21:14.559Z"
+        },
+        "1": {
+          "status": "approved",
+          "at": "2026-11-22T06:42:04.837Z",
+          "by": "shania",
+          "auto": true
         }
       },
       "michael": {
@@ -3002,6 +3008,11 @@
       "at": "2026-11-22T06:41:57.972Z",
       "who": "meghan",
       "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:42:04.837Z",
+      "who": "shania",
+      "what": "bingo claim 1 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
