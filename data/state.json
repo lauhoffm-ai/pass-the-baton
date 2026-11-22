@@ -1291,9 +1291,10 @@
           "auto": true
         },
         "10": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-21T21:02:28.593Z",
-          "by": "allen"
+          "by": "allen",
+          "decidedAt": "2026-11-22T04:26:13.468Z"
         },
         "11": {
           "status": "approved",
@@ -2786,6 +2787,11 @@
       "at": "2026-11-22T04:26:05.036Z",
       "who": "admin",
       "what": "bingo approved chris #5"
+    },
+    {
+      "at": "2026-11-22T04:26:13.468Z",
+      "who": "admin",
+      "what": "bingo approved allen #10"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
