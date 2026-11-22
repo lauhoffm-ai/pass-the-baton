@@ -823,6 +823,13 @@
           "by": "meghan",
           "photo": "bingo/meghan-13.jpg",
           "decidedAt": "2026-11-15T03:21:12.311Z"
+        },
+        "15": {
+          "status": "rejected",
+          "at": "2026-11-22T06:41:44.936Z",
+          "by": "meghan",
+          "reason": "Your best day so far is 145% of baseline (need 150%).",
+          "auto": true
         }
       },
       "shania": {
@@ -2954,6 +2961,11 @@
       "at": "2026-11-22T06:41:42.085Z",
       "who": "meghan",
       "what": "bingo claim 11 -> pending"
+    },
+    {
+      "at": "2026-11-22T06:41:44.936Z",
+      "who": "meghan",
+      "what": "bingo claim 15 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
