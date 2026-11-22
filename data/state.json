@@ -752,7 +752,7 @@
         },
         "16": {
           "status": "rejected",
-          "at": "2026-11-22T06:40:09.125Z",
+          "at": "2026-11-22T06:40:10.290Z",
           "by": "lauren",
           "reason": "Your longest run at 110%+ is 1 day (need 2).",
           "auto": true
@@ -2838,6 +2838,11 @@
     },
     {
       "at": "2026-11-22T06:40:09.125Z",
+      "who": "lauren",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:10.290Z",
       "who": "lauren",
       "what": "bingo claim 16 -> rejected"
     }
