@@ -1315,6 +1315,11 @@
           "by": "allen",
           "decidedAt": "2026-11-17T12:15:45.046Z"
         },
+        "14": {
+          "status": "pending",
+          "at": "2026-11-22T06:40:59.704Z",
+          "by": "allen"
+        },
         "15": {
           "status": "rejected",
           "at": "2026-11-22T06:40:42.345Z",
@@ -2900,6 +2905,11 @@
       "at": "2026-11-22T06:40:48.582Z",
       "who": "allen",
       "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:59.704Z",
+      "who": "allen",
+      "what": "bingo claim 14 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
