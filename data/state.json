@@ -1317,6 +1317,12 @@
         }
       },
       "kaykay": {
+        "0": {
+          "status": "pending",
+          "at": "2026-11-22T22:21:27.086Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-0.jpg"
+        },
         "1": {
           "status": "approved",
           "at": "2026-11-16T18:50:46.328Z",
@@ -3364,7 +3370,12 @@
       "at": "2026-11-22T20:31:18.056Z",
       "who": "kaykay",
       "what": "play butter for 2026-11-23"
+    },
+    {
+      "at": "2026-11-22T22:21:27.086Z",
+      "who": "kaykay",
+      "what": "bingo claim 0 -> pending"
     }
   ],
-  "lastBackupAt": "2026-11-22T15:14:01.544Z"
+  "lastBackupAt": "2026-11-22T22:21:27.086Z"
 }
