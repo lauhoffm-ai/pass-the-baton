@@ -1402,6 +1402,13 @@
           "by": "chris",
           "reason": "No day within 5% of your earlier best yet.",
           "auto": true
+        },
+        "21": {
+          "status": "rejected",
+          "at": "2026-11-22T06:47:34.459Z",
+          "by": "chris",
+          "reason": "Need a day at 100%+ on a day you played a power-up.",
+          "auto": true
         }
       },
       "allen": {
@@ -3132,6 +3139,11 @@
       "at": "2026-11-22T06:47:32.157Z",
       "who": "chris",
       "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:47:34.459Z",
+      "who": "chris",
+      "what": "bingo claim 21 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
