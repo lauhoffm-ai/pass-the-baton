@@ -418,6 +418,11 @@
       "id": 13,
       "revealedAt": "2026-11-21T15:29:56.598Z",
       "resolved": null
+    },
+    "2026-11-22": {
+      "id": 7,
+      "revealedAt": "2026-11-22T15:14:01.544Z",
+      "resolved": null
     }
   },
   "rounds": {
@@ -3250,5 +3255,5 @@
       "what": "log shania 2026-11-21 = 2562"
     }
   ],
-  "lastBackupAt": "2026-11-22T04:25:10.837Z"
+  "lastBackupAt": "2026-11-22T15:14:01.544Z"
 }
