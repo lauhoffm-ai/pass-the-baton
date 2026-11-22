@@ -779,7 +779,7 @@
         },
         "21": {
           "status": "rejected",
-          "at": "2026-11-21T11:03:58.344Z",
+          "at": "2026-11-22T06:40:14.525Z",
           "by": "lauren",
           "reason": "Need a day at 100%+ on a day you played a power-up.",
           "auto": true
@@ -2860,6 +2860,11 @@
       "at": "2026-11-22T06:40:13.231Z",
       "who": "lauren",
       "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:14.525Z",
+      "who": "lauren",
+      "what": "bingo claim 21 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
