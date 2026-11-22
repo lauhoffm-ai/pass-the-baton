@@ -866,6 +866,13 @@
           "at": "2026-11-22T06:42:04.837Z",
           "by": "shania",
           "auto": true
+        },
+        "6": {
+          "status": "rejected",
+          "at": "2026-11-22T06:42:08.152Z",
+          "by": "shania",
+          "reason": "Your longest run at 100%+ is 2 days (need 3).",
+          "auto": true
         }
       },
       "michael": {
@@ -3013,6 +3020,11 @@
       "at": "2026-11-22T06:42:04.837Z",
       "who": "shania",
       "what": "bingo claim 1 -> approved"
+    },
+    {
+      "at": "2026-11-22T06:42:08.152Z",
+      "who": "shania",
+      "what": "bingo claim 6 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
