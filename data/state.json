@@ -719,7 +719,7 @@
         },
         "8": {
           "status": "rejected",
-          "at": "2026-11-21T11:03:50.098Z",
+          "at": "2026-11-22T06:40:06.991Z",
           "by": "lauren",
           "reason": "Need a day at 100%+ right after a day under 90%.",
           "auto": true
@@ -2830,6 +2830,11 @@
       "at": "2026-11-22T06:40:04.327Z",
       "who": "lauren",
       "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:06.991Z",
+      "who": "lauren",
+      "what": "bingo claim 8 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
