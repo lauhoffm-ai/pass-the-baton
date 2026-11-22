@@ -867,6 +867,12 @@
           "by": "shania",
           "auto": true
         },
+        "5": {
+          "status": "pending",
+          "at": "2026-11-22T06:45:11.007Z",
+          "by": "shania",
+          "photo": "bingo/shania-5.jpg"
+        },
         "6": {
           "status": "rejected",
           "at": "2026-11-22T06:42:08.152Z",
@@ -3105,6 +3111,11 @@
       "at": "2026-11-22T06:44:33.389Z",
       "who": "shania",
       "what": "bingo claim 13 -> pending"
+    },
+    {
+      "at": "2026-11-22T06:45:11.007Z",
+      "who": "shania",
+      "what": "bingo claim 5 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
