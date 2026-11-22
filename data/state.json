@@ -812,6 +812,11 @@
           "by": "meghan",
           "auto": true
         },
+        "11": {
+          "status": "pending",
+          "at": "2026-11-22T06:41:42.085Z",
+          "by": "meghan"
+        },
         "13": {
           "status": "approved",
           "at": "2026-11-15T01:18:06.433Z",
@@ -2944,6 +2949,11 @@
       "at": "2026-11-22T06:41:32.886Z",
       "who": "meghan",
       "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-22T06:41:42.085Z",
+      "who": "meghan",
+      "what": "bingo claim 11 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
