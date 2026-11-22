@@ -1458,7 +1458,7 @@
         },
         "16": {
           "status": "rejected",
-          "at": "2026-11-22T06:40:44.782Z",
+          "at": "2026-11-22T06:48:11.649Z",
           "by": "allen",
           "reason": "Your longest run at 110%+ is 0 days (need 2).",
           "auto": true
@@ -3164,6 +3164,11 @@
       "at": "2026-11-22T06:48:07.730Z",
       "who": "allen",
       "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:48:11.649Z",
+      "who": "allen",
+      "what": "bingo claim 16 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
