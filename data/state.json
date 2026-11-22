@@ -772,7 +772,7 @@
         },
         "20": {
           "status": "rejected",
-          "at": "2026-11-22T06:40:12.320Z",
+          "at": "2026-11-22T06:40:13.231Z",
           "by": "lauren",
           "reason": "No day within 5% of your earlier best yet.",
           "auto": true
@@ -2853,6 +2853,11 @@
     },
     {
       "at": "2026-11-22T06:40:12.320Z",
+      "who": "lauren",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:13.231Z",
       "who": "lauren",
       "what": "bingo claim 20 -> rejected"
     }
