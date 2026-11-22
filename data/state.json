@@ -265,7 +265,17 @@
     "michael": "2026-11-19",
     "jordan": "2026-11-19"
   },
-  "plays": [],
+  "plays": [
+    {
+      "id": "play-kaykay-2026-11-23-butter-1",
+      "pid": "kaykay",
+      "type": "butter",
+      "date": "2026-11-23",
+      "target": null,
+      "at": "2026-11-22T20:31:18.056Z",
+      "status": "ok"
+    }
+  ],
   "awards": [
     {
       "id": "goal-2026-11-14",
@@ -3349,6 +3359,11 @@
       "at": "2026-11-22T18:10:11.927Z",
       "who": "auto",
       "what": "close round 2"
+    },
+    {
+      "at": "2026-11-22T20:31:18.056Z",
+      "who": "kaykay",
+      "what": "play butter for 2026-11-23"
     }
   ],
   "lastBackupAt": "2026-11-22T15:14:01.544Z"
