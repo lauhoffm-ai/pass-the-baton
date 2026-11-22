@@ -893,6 +893,13 @@
           "by": "shania",
           "reason": "Your longest run at 110%+ is 1 day (need 2).",
           "auto": true
+        },
+        "20": {
+          "status": "rejected",
+          "at": "2026-11-22T06:42:21.788Z",
+          "by": "shania",
+          "reason": "No day within 5% of your earlier best yet.",
+          "auto": true
         }
       },
       "michael": {
@@ -3060,6 +3067,11 @@
       "at": "2026-11-22T06:42:18.323Z",
       "who": "shania",
       "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:42:21.788Z",
+      "who": "shania",
+      "what": "bingo claim 20 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
