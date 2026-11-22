@@ -879,6 +879,13 @@
           "at": "2026-11-22T06:42:10.638Z",
           "by": "shania",
           "auto": true
+        },
+        "15": {
+          "status": "rejected",
+          "at": "2026-11-22T06:42:15.788Z",
+          "by": "shania",
+          "reason": "Your best day so far is 133% of baseline (need 150%).",
+          "auto": true
         }
       },
       "michael": {
@@ -3036,6 +3043,11 @@
       "at": "2026-11-22T06:42:10.638Z",
       "who": "shania",
       "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-22T06:42:15.788Z",
+      "who": "shania",
+      "what": "bingo claim 15 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
