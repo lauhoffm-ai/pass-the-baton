@@ -806,6 +806,12 @@
           "reason": "Your longest run at 100%+ is 2 days (need 3).",
           "auto": true
         },
+        "8": {
+          "status": "approved",
+          "at": "2026-11-22T06:41:32.886Z",
+          "by": "meghan",
+          "auto": true
+        },
         "13": {
           "status": "approved",
           "at": "2026-11-15T01:18:06.433Z",
@@ -2933,6 +2939,11 @@
       "at": "2026-11-22T06:41:28.385Z",
       "who": "meghan",
       "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:41:32.886Z",
+      "who": "meghan",
+      "what": "bingo claim 8 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-22T04:25:10.837Z"
