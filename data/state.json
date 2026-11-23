@@ -1373,6 +1373,12 @@
           "by": "kaykay",
           "auto": true
         },
+        "7": {
+          "status": "pending",
+          "at": "2026-11-23T15:12:12.462Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-7.jpg"
+        },
         "8": {
           "status": "approved",
           "at": "2026-11-20T16:04:56.849Z",
@@ -3438,6 +3444,11 @@
       "at": "2026-11-23T07:55:02.040Z",
       "who": "shania",
       "what": "log shania 2026-11-22 = 13636"
+    },
+    {
+      "at": "2026-11-23T15:12:12.462Z",
+      "who": "kaykay",
+      "what": "bingo claim 7 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-23T15:11:50.284Z"
