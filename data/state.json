@@ -837,7 +837,7 @@
         },
         "6": {
           "status": "rejected",
-          "at": "2026-11-22T06:40:04.327Z",
+          "at": "2026-11-23T16:43:42.792Z",
           "by": "lauren",
           "reason": "Your longest run at 100%+ is 1 day (need 3).",
           "auto": true
@@ -3504,6 +3504,11 @@
       "at": "2026-11-23T16:43:10.185Z",
       "who": "lauren",
       "what": "code changed"
+    },
+    {
+      "at": "2026-11-23T16:43:42.792Z",
+      "who": "lauren",
+      "what": "bingo claim 6 -> rejected"
     }
   ],
   "lastBackupAt": "2026-11-23T15:11:50.284Z"
