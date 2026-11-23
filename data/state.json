@@ -3549,6 +3549,11 @@
       "at": "2026-11-23T16:44:36.174Z",
       "who": "chris",
       "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-23T17:43:31.033Z",
+      "who": "michael",
+      "what": "edit michael 2026-11-22 = 11687 (was 11687)"
     }
   ],
   "lastBackupAt": "2026-11-23T15:11:50.284Z"
