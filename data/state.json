@@ -1142,6 +1142,11 @@
           "photo": "bingo/michael-9.jpg",
           "decidedAt": "2026-11-19T02:25:45.297Z"
         },
+        "10": {
+          "status": "pending",
+          "at": "2026-11-24T03:12:34.506Z",
+          "by": "michael"
+        },
         "11": {
           "status": "approved",
           "at": "2026-11-17T03:31:02.580Z",
@@ -3574,6 +3579,11 @@
       "at": "2026-11-24T03:11:57.612Z",
       "who": "jordan",
       "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-24T03:12:34.506Z",
+      "who": "michael",
+      "what": "bingo claim 10 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-24T03:11:50.033Z"
