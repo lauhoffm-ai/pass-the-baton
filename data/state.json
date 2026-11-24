@@ -515,6 +515,11 @@
       "id": 2,
       "revealedAt": "2026-11-23T15:11:50.284Z",
       "resolved": null
+    },
+    "2026-11-24": {
+      "id": 14,
+      "revealedAt": "2026-11-24T14:25:04.041Z",
+      "resolved": null
     }
   },
   "rounds": {
@@ -3735,5 +3740,5 @@
       "what": "bingo claim 13 -> pending"
     }
   ],
-  "lastBackupAt": "2026-11-24T03:11:50.033Z"
+  "lastBackupAt": "2026-11-24T14:25:04.041Z"
 }
