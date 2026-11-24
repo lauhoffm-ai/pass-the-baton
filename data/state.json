@@ -390,6 +390,13 @@
       "type": "shield",
       "source": "goal 2026-11-22",
       "at": "2026-11-23T16:39:56.417Z"
+    },
+    {
+      "id": "bingo-row-michael-2",
+      "pid": "michael",
+      "type": "shield",
+      "source": "bingo row 3",
+      "at": "2026-11-24T03:13:06.428Z"
     }
   ],
   "goals": {
@@ -1143,9 +1150,10 @@
           "decidedAt": "2026-11-19T02:25:45.297Z"
         },
         "10": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-24T03:12:34.506Z",
-          "by": "michael"
+          "by": "michael",
+          "decidedAt": "2026-11-24T03:13:06.428Z"
         },
         "11": {
           "status": "approved",
@@ -3584,6 +3592,11 @@
       "at": "2026-11-24T03:12:34.506Z",
       "who": "michael",
       "what": "bingo claim 10 -> pending"
+    },
+    {
+      "at": "2026-11-24T03:13:06.428Z",
+      "who": "admin",
+      "what": "bingo approved michael #10"
     }
   ],
   "lastBackupAt": "2026-11-24T03:11:50.033Z"
