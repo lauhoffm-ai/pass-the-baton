@@ -1069,9 +1069,10 @@
           "reason": "Not approved."
         },
         "10": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-22T06:42:24.823Z",
-          "by": "shania"
+          "by": "shania",
+          "decidedAt": "2026-11-24T03:13:46.367Z"
         },
         "13": {
           "status": "pending",
@@ -3685,6 +3686,11 @@
       "at": "2026-11-24T03:13:44.358Z",
       "who": "admin",
       "what": "bingo approved meghan #11"
+    },
+    {
+      "at": "2026-11-24T03:13:46.367Z",
+      "who": "admin",
+      "what": "bingo approved shania #10"
     }
   ],
   "lastBackupAt": "2026-11-24T03:11:50.033Z"
