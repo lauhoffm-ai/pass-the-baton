@@ -1075,10 +1075,11 @@
           "decidedAt": "2026-11-24T03:13:46.367Z"
         },
         "13": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-22T06:44:33.389Z",
           "by": "shania",
-          "photo": "bingo/shania-13.jpg"
+          "photo": "bingo/shania-13.jpg",
+          "decidedAt": "2026-11-24T03:13:50.989Z"
         },
         "15": {
           "status": "rejected",
@@ -3691,6 +3692,11 @@
       "at": "2026-11-24T03:13:46.367Z",
       "who": "admin",
       "what": "bingo approved shania #10"
+    },
+    {
+      "at": "2026-11-24T03:13:50.989Z",
+      "who": "admin",
+      "what": "bingo approved shania #13"
     }
   ],
   "lastBackupAt": "2026-11-24T03:11:50.033Z"
