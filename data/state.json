@@ -1636,9 +1636,10 @@
           "decidedAt": "2026-11-17T12:15:45.046Z"
         },
         "14": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-22T06:40:59.704Z",
-          "by": "allen"
+          "by": "allen",
+          "decidedAt": "2026-11-24T03:13:18.140Z"
         },
         "15": {
           "status": "rejected",
@@ -3635,6 +3636,11 @@
       "at": "2026-11-24T03:13:16.202Z",
       "who": "admin",
       "what": "bingo approved lauren #11"
+    },
+    {
+      "at": "2026-11-24T03:13:18.140Z",
+      "who": "admin",
+      "what": "bingo approved allen #14"
     }
   ],
   "lastBackupAt": "2026-11-24T03:11:50.033Z"
