@@ -1511,10 +1511,11 @@
       },
       "chris": {
         "0": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-22T22:22:06.565Z",
           "by": "chris",
-          "photo": "bingo/chris-0.jpg"
+          "photo": "bingo/chris-0.jpg",
+          "decidedAt": "2026-11-24T03:13:20.193Z"
         },
         "1": {
           "status": "approved",
@@ -3641,6 +3642,11 @@
       "at": "2026-11-24T03:13:18.140Z",
       "who": "admin",
       "what": "bingo approved allen #14"
+    },
+    {
+      "at": "2026-11-24T03:13:20.193Z",
+      "who": "admin",
+      "what": "bingo approved chris #0"
     }
   ],
   "lastBackupAt": "2026-11-24T03:11:50.033Z"
