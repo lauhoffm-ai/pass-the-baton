@@ -1060,10 +1060,12 @@
           "auto": true
         },
         "9": {
-          "status": "pending",
+          "status": "rejected",
           "at": "2026-11-22T06:45:26.673Z",
           "by": "shania",
-          "photo": "bingo/shania-9.jpg"
+          "photo": "bingo/shania-9.jpg",
+          "decidedAt": "2026-11-24T03:13:39.717Z",
+          "reason": "Not approved."
         },
         "10": {
           "status": "pending",
@@ -3672,6 +3674,11 @@
       "at": "2026-11-24T03:13:27.191Z",
       "who": "admin",
       "what": "bingo approved shania #5"
+    },
+    {
+      "at": "2026-11-24T03:13:39.717Z",
+      "who": "admin",
+      "what": "bingo rejected shania #9"
     }
   ],
   "lastBackupAt": "2026-11-24T03:11:50.033Z"
