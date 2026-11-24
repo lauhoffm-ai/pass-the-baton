@@ -397,6 +397,13 @@
       "type": "shield",
       "source": "bingo row 3",
       "at": "2026-11-24T03:13:06.428Z"
+    },
+    {
+      "id": "bingo-row-jordan-2",
+      "pid": "jordan",
+      "type": "butter",
+      "source": "bingo row 3",
+      "at": "2026-11-24T03:13:08.904Z"
     }
   ],
   "goals": {
@@ -1284,9 +1291,10 @@
           "decidedAt": "2026-11-21T01:52:30.853Z"
         },
         "10": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-22T04:29:36.005Z",
-          "by": "jordan"
+          "by": "jordan",
+          "decidedAt": "2026-11-24T03:13:08.904Z"
         },
         "11": {
           "status": "approved",
@@ -3597,6 +3605,11 @@
       "at": "2026-11-24T03:13:06.428Z",
       "who": "admin",
       "what": "bingo approved michael #10"
+    },
+    {
+      "at": "2026-11-24T03:13:08.904Z",
+      "who": "admin",
+      "what": "bingo approved jordan #10"
     }
   ],
   "lastBackupAt": "2026-11-24T03:11:50.033Z"
