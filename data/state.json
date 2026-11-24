@@ -1296,7 +1296,7 @@
         },
         "15": {
           "status": "rejected",
-          "at": "2026-11-20T23:29:11.172Z",
+          "at": "2026-11-24T03:11:50.031Z",
           "by": "jordan",
           "reason": "Your best day so far is 136% of baseline (need 150%).",
           "auto": true
@@ -3554,7 +3554,12 @@
       "at": "2026-11-23T17:43:31.033Z",
       "who": "michael",
       "what": "edit michael 2026-11-22 = 11687 (was 11687)"
+    },
+    {
+      "at": "2026-11-24T03:11:50.031Z",
+      "who": "jordan",
+      "what": "bingo claim 15 -> rejected"
     }
   ],
-  "lastBackupAt": "2026-11-23T15:11:50.284Z"
+  "lastBackupAt": "2026-11-24T03:11:50.033Z"
 }
