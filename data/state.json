@@ -1329,7 +1329,7 @@
         },
         "21": {
           "status": "rejected",
-          "at": "2026-11-24T03:11:56.486Z",
+          "at": "2026-11-24T03:11:57.612Z",
           "by": "jordan",
           "reason": "Need a day at 100%+ on a day you played a power-up.",
           "auto": true
@@ -3567,6 +3567,11 @@
     },
     {
       "at": "2026-11-24T03:11:56.486Z",
+      "who": "jordan",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-24T03:11:57.612Z",
       "who": "jordan",
       "what": "bingo claim 21 -> rejected"
     }
