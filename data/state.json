@@ -1593,6 +1593,12 @@
           "by": "chris",
           "decidedAt": "2026-11-18T01:25:57.652Z"
         },
+        "13": {
+          "status": "pending",
+          "at": "2026-11-24T03:22:30.357Z",
+          "by": "chris",
+          "photo": "bingo/chris-13.jpg"
+        },
         "14": {
           "status": "approved",
           "at": "2026-11-17T20:11:23.536Z",
@@ -3721,6 +3727,11 @@
     {
       "at": "2026-11-24T03:21:35.468Z",
       "who": "kaykay",
+      "what": "bingo claim 13 -> pending"
+    },
+    {
+      "at": "2026-11-24T03:22:30.357Z",
+      "who": "chris",
       "what": "bingo claim 13 -> pending"
     }
   ],
