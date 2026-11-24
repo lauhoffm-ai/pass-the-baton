@@ -1381,10 +1381,11 @@
       },
       "kaykay": {
         "0": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-22T22:21:27.086Z",
           "by": "kaykay",
-          "photo": "bingo/kaykay-0.jpg"
+          "photo": "bingo/kaykay-0.jpg",
+          "decidedAt": "2026-11-24T03:13:22.312Z"
         },
         "1": {
           "status": "approved",
@@ -3647,6 +3648,11 @@
       "at": "2026-11-24T03:13:20.193Z",
       "who": "admin",
       "what": "bingo approved chris #0"
+    },
+    {
+      "at": "2026-11-24T03:13:22.312Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #0"
     }
   ],
   "lastBackupAt": "2026-11-24T03:11:50.033Z"
