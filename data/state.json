@@ -303,6 +303,15 @@
       "target": "jordan",
       "at": "2026-11-24T03:16:30.091Z",
       "status": "blocked"
+    },
+    {
+      "id": "play-jordan-2026-11-25-butter-3",
+      "pid": "jordan",
+      "type": "butter",
+      "date": "2026-11-25",
+      "target": null,
+      "at": "2026-11-24T18:05:50.275Z",
+      "status": "ok"
     }
   ],
   "awards": [
@@ -3768,6 +3777,11 @@
       "at": "2026-11-24T16:11:47.298Z",
       "who": "kaykay",
       "what": "bingo claim 21 -> approved"
+    },
+    {
+      "at": "2026-11-24T18:05:50.275Z",
+      "who": "jordan",
+      "what": "play butter for 2026-11-25"
     }
   ],
   "lastBackupAt": "2026-11-24T14:25:04.041Z"
