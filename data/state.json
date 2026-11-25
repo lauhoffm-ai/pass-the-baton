@@ -336,6 +336,15 @@
       "target": null,
       "at": "2026-11-24T18:05:50.275Z",
       "status": "ok"
+    },
+    {
+      "id": "play-michael-2026-11-26-butter-4",
+      "pid": "michael",
+      "type": "butter",
+      "date": "2026-11-26",
+      "target": null,
+      "at": "2026-11-25T18:16:28.323Z",
+      "status": "ok"
     }
   ],
   "awards": [
@@ -4043,6 +4052,11 @@
       "at": "2026-11-25T16:01:58.401Z",
       "who": "kaykay",
       "what": "edit kaykay 2026-11-24 = 12608 (was 3948)"
+    },
+    {
+      "at": "2026-11-25T18:16:28.323Z",
+      "who": "michael",
+      "what": "play butter for 2026-11-26"
     }
   ],
   "lastBackupAt": "2026-11-25T14:05:29.411Z"
