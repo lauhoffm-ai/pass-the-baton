@@ -1297,6 +1297,12 @@
           "by": "michael",
           "auto": true
         },
+        "21": {
+          "status": "approved",
+          "at": "2026-11-25T14:30:31.018Z",
+          "by": "michael",
+          "auto": true
+        },
         "22": {
           "status": "approved",
           "at": "2026-11-18T01:25:13.350Z",
@@ -3914,6 +3920,11 @@
       "at": "2026-11-25T14:30:11.616Z",
       "who": "michael",
       "what": "edit michael 2026-11-24 = 21531 (was 21531)"
+    },
+    {
+      "at": "2026-11-25T14:30:31.018Z",
+      "who": "michael",
+      "what": "bingo claim 21 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-25T14:05:29.411Z"
