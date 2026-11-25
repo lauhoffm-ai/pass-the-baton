@@ -480,6 +480,13 @@
       "type": "butter",
       "source": "goal 2026-11-24",
       "at": "2026-11-25T16:00:09.245Z"
+    },
+    {
+      "id": "bingo-row-lauren-0",
+      "pid": "lauren",
+      "type": "butter",
+      "source": "bingo row 1",
+      "at": "2026-11-25T18:17:15.286Z"
     }
   ],
   "goals": {
@@ -919,10 +926,11 @@
           "auto": true
         },
         "2": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-25T14:09:13.695Z",
           "by": "lauren",
-          "photo": "bingo/lauren-2.jpg"
+          "photo": "bingo/lauren-2.jpg",
+          "decidedAt": "2026-11-25T18:17:15.285Z"
         },
         "3": {
           "status": "approved",
@@ -4057,6 +4065,11 @@
       "at": "2026-11-25T18:16:28.323Z",
       "who": "michael",
       "what": "play butter for 2026-11-26"
+    },
+    {
+      "at": "2026-11-25T18:17:15.285Z",
+      "who": "admin",
+      "what": "bingo approved lauren #2"
     }
   ],
   "lastBackupAt": "2026-11-25T14:05:29.411Z"
