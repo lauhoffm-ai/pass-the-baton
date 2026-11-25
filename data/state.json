@@ -1700,6 +1700,12 @@
           "reason": "Your best day so far is 108% of baseline (need 120%).",
           "auto": true
         },
+        "2": {
+          "status": "pending",
+          "at": "2026-11-25T14:10:31.334Z",
+          "by": "allen",
+          "photo": "bingo/allen-2.jpg"
+        },
         "6": {
           "status": "rejected",
           "at": "2026-11-22T06:40:40.415Z",
@@ -3875,6 +3881,11 @@
     {
       "at": "2026-11-25T14:09:13.695Z",
       "who": "lauren",
+      "what": "bingo claim 2 -> pending"
+    },
+    {
+      "at": "2026-11-25T14:10:31.334Z",
+      "who": "allen",
       "what": "bingo claim 2 -> pending"
     }
   ],
