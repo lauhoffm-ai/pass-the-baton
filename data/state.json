@@ -539,6 +539,11 @@
       "id": 14,
       "revealedAt": "2026-11-24T14:25:04.041Z",
       "resolved": null
+    },
+    "2026-11-25": {
+      "id": 15,
+      "revealedAt": "2026-11-25T14:05:29.411Z",
+      "resolved": null
     }
   },
   "rounds": {
@@ -3820,5 +3825,5 @@
       "what": "edit chris 2026-11-24 = 13602 (was 13602)"
     }
   ],
-  "lastBackupAt": "2026-11-25T06:40:02.760Z"
+  "lastBackupAt": "2026-11-25T14:05:29.411Z"
 }
