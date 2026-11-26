@@ -1583,6 +1583,12 @@
           "by": "jordan",
           "photo": "bingo/jordan-23.jpg",
           "decidedAt": "2026-11-24T03:13:10.981Z"
+        },
+        "24": {
+          "status": "pending",
+          "at": "2026-11-26T21:25:31.955Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-24.jpg"
         }
       },
       "kaykay": {
@@ -4283,6 +4289,11 @@
       "at": "2026-11-26T21:24:27.491Z",
       "who": "jordan",
       "what": "bingo claim 19 -> pending"
+    },
+    {
+      "at": "2026-11-26T21:25:31.955Z",
+      "who": "jordan",
+      "what": "bingo claim 24 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-26T21:20:53.586Z"
