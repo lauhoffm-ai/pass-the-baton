@@ -616,6 +616,11 @@
       "id": 15,
       "revealedAt": "2026-11-25T14:05:29.411Z",
       "resolved": null
+    },
+    "2026-11-26": {
+      "id": 17,
+      "revealedAt": "2026-11-26T14:29:46.725Z",
+      "resolved": null
     }
   },
   "rounds": {
@@ -4149,5 +4154,5 @@
       "what": "play butter for 2026-11-26"
     }
   ],
-  "lastBackupAt": "2026-11-26T04:00:49.946Z"
+  "lastBackupAt": "2026-11-26T14:29:46.725Z"
 }
