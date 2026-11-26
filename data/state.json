@@ -356,6 +356,15 @@
       "target": null,
       "at": "2026-11-26T04:29:49.347Z",
       "status": "ok"
+    },
+    {
+      "id": "play-jordan-2026-11-26-butter-6",
+      "pid": "jordan",
+      "type": "butter",
+      "date": "2026-11-26",
+      "target": null,
+      "at": "2026-11-26T05:06:04.095Z",
+      "status": "ok"
     }
   ],
   "awards": [
@@ -4132,6 +4141,11 @@
     {
       "at": "2026-11-26T04:29:49.347Z",
       "who": "kaykay",
+      "what": "play butter for 2026-11-26"
+    },
+    {
+      "at": "2026-11-26T05:06:04.095Z",
+      "who": "jordan",
       "what": "play butter for 2026-11-26"
     }
   ],
