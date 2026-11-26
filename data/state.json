@@ -1695,6 +1695,12 @@
           "by": "kaykay",
           "photo": "bingo/kaykay-23.jpg",
           "decidedAt": "2026-11-19T02:25:52.673Z"
+        },
+        "24": {
+          "status": "pending",
+          "at": "2026-11-26T17:52:56.416Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-24.jpg"
         }
       },
       "chris": {
@@ -4184,6 +4190,11 @@
     {
       "at": "2026-11-26T17:52:29.688Z",
       "who": "chris",
+      "what": "bingo claim 24 -> pending"
+    },
+    {
+      "at": "2026-11-26T17:52:56.416Z",
+      "who": "kaykay",
       "what": "bingo claim 24 -> pending"
     }
   ],
