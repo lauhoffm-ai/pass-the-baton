@@ -532,6 +532,21 @@
       "type": "shield",
       "source": "bingo row 1",
       "at": "2026-11-26T21:21:00.265Z"
+    },
+    {
+      "id": "bingo-row-kaykay-4",
+      "pid": "kaykay",
+      "type": "shield",
+      "source": "bingo row 5",
+      "at": "2026-11-26T21:21:02.300Z"
+    },
+    {
+      "id": "blackout-kaykay",
+      "pid": "kaykay",
+      "type": null,
+      "choice": true,
+      "source": "blackout",
+      "at": "2026-11-26T21:21:02.300Z"
     }
   ],
   "goals": {
@@ -1717,10 +1732,11 @@
           "decidedAt": "2026-11-19T02:25:52.673Z"
         },
         "24": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-26T17:52:56.416Z",
           "by": "kaykay",
-          "photo": "bingo/kaykay-24.jpg"
+          "photo": "bingo/kaykay-24.jpg",
+          "decidedAt": "2026-11-26T21:21:02.300Z"
         }
       },
       "chris": {
@@ -4242,6 +4258,11 @@
       "at": "2026-11-26T21:21:00.265Z",
       "who": "admin",
       "what": "bingo approved kaykay #3"
+    },
+    {
+      "at": "2026-11-26T21:21:02.300Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #24"
     }
   ],
   "lastBackupAt": "2026-11-26T21:20:53.586Z"
