@@ -1,0 +1,4119 @@
+{
+  "version": 1,
+  "challenge": "pie-wars",
+  "epoch": "emwgjbfv5",
+  "config": {
+    "start": "2026-11-14",
+    "end": "2026-11-26",
+    "w": 0.85,
+    "mult": 2,
+    "cap": 150,
+    "floor": 0,
+    "butter": 1.25,
+    "steal": 15,
+    "restDays": 1,
+    "roundDates": null,
+    "drawWeights": {
+      "butter": 1,
+      "steal": 1,
+      "shield": 1
+    },
+    "teamA": "Feast Mode"
+  },
+  "players": {
+    "michael": {
+      "steps": {
+        "2026-11-14": 14126,
+        "2026-11-15": 12394,
+        "2026-11-16": 16040,
+        "2026-11-17": 18256,
+        "2026-11-18": 18411,
+        "2026-11-20": 18085,
+        "2026-11-21": 15246,
+        "2026-11-22": 11687,
+        "2026-11-23": 18001,
+        "2026-11-24": 21531
+      },
+      "code": "5309"
+    },
+    "jordan": {
+      "steps": {
+        "2026-11-14": 16797,
+        "2026-11-15": 10399,
+        "2026-11-16": 14965,
+        "2026-11-17": 16661,
+        "2026-11-18": 13629,
+        "2026-11-20": 11560,
+        "2026-11-21": 14157,
+        "2026-11-22": 15453,
+        "2026-11-23": 8928,
+        "2026-11-24": 15144
+      },
+      "code": "0912"
+    },
+    "lauren": {
+      "steps": {
+        "2026-11-14": 16252,
+        "2026-11-15": 6390,
+        "2026-11-16": 7442,
+        "2026-11-18": 6208,
+        "2026-11-19": 7141,
+        "2026-11-20": 6208,
+        "2026-11-21": 8428,
+        "2026-11-22": 3183,
+        "2026-11-24": 1197,
+        "2026-11-23": 8915
+      },
+      "code": "1408"
+    },
+    "allen": {
+      "steps": {
+        "2026-11-14": 5030,
+        "2026-11-15": 5001,
+        "2026-11-16": 13065,
+        "2026-11-17": 15521,
+        "2026-11-18": 12958,
+        "2026-11-19": 17682,
+        "2026-11-20": 17682,
+        "2026-11-21": 2940,
+        "2026-11-22": 1044,
+        "2026-11-24": 13217
+      },
+      "code": "1111"
+    },
+    "chris": {
+      "steps": {
+        "2026-11-14": 9127,
+        "2026-11-15": 16939,
+        "2026-11-16": 10572,
+        "2026-11-17": 15741,
+        "2026-11-18": 3918,
+        "2026-11-19": 12312,
+        "2026-11-20": 18294,
+        "2026-11-21": 11440,
+        "2026-11-22": 7759,
+        "2026-11-23": 11200,
+        "2026-11-24": 13602
+      },
+      "code": "1111"
+    },
+    "kaykay": {
+      "steps": {
+        "2026-11-14": 13181,
+        "2026-11-15": 14803,
+        "2026-11-16": 12108,
+        "2026-11-17": 14591,
+        "2026-11-18": 9788,
+        "2026-11-19": 14224,
+        "2026-11-20": 21606,
+        "2026-11-21": 13141,
+        "2026-11-22": 14603,
+        "2026-11-23": 12149,
+        "2026-11-24": 12608
+      },
+      "code": "5585"
+    },
+    "meghan": {
+      "steps": {
+        "2026-11-14": 10836,
+        "2026-11-15": 7528,
+        "2026-11-16": 5176,
+        "2026-11-17": 8483,
+        "2026-11-18": 4681,
+        "2026-11-19": 6322,
+        "2026-11-20": 6408,
+        "2026-11-21": 4810,
+        "2026-11-22": 828,
+        "2026-11-24": 1644
+      },
+      "code": "1111"
+    },
+    "shania": {
+      "steps": {
+        "2026-11-14": 19424,
+        "2026-11-15": 15456,
+        "2026-11-16": 14526,
+        "2026-11-17": 22647,
+        "2026-11-18": 18005,
+        "2026-11-19": 15431,
+        "2026-11-20": 6426,
+        "2026-11-21": 2562,
+        "2026-11-22": 13674,
+        "2026-11-24": 17923,
+        "2026-11-23": 20502
+      },
+      "code": "1111"
+    }
+  },
+  "entryAt": {
+    "michael": {
+      "2026-11-14": "2026-11-15T11:27:51.091Z",
+      "2026-11-15": "2026-11-16T13:02:57.457Z",
+      "2026-11-16": "2026-11-17T12:13:26.648Z",
+      "2026-11-17": "2026-11-18T12:57:44.698Z",
+      "2026-11-18": "2026-11-19T12:38:26.378Z",
+      "2026-11-20": "2026-11-21T10:59:56.274Z",
+      "2026-11-21": "2026-11-22T06:49:27.176Z",
+      "2026-11-22": "2026-11-23T07:53:46.695Z",
+      "2026-11-23": "2026-11-25T00:12:33.837Z",
+      "2026-11-24": "2026-11-25T14:06:24.917Z"
+    },
+    "jordan": {
+      "2026-11-14": "2026-11-15T11:28:08.079Z",
+      "2026-11-15": "2026-11-16T14:05:36.735Z",
+      "2026-11-16": "2026-11-17T22:13:05.712Z",
+      "2026-11-17": "2026-11-18T21:01:00.870Z",
+      "2026-11-18": "2026-11-20T06:08:15.126Z",
+      "2026-11-20": "2026-11-21T11:00:06.521Z",
+      "2026-11-21": "2026-11-22T06:49:37.733Z",
+      "2026-11-22": "2026-11-23T07:54:01.075Z",
+      "2026-11-23": "2026-11-25T00:13:30.455Z",
+      "2026-11-24": "2026-11-25T14:06:34.880Z"
+    },
+    "lauren": {
+      "2026-11-14": "2026-11-15T11:28:22.320Z",
+      "2026-11-15": "2026-11-16T19:39:12.080Z",
+      "2026-11-16": "2026-11-17T23:21:50.445Z",
+      "2026-11-18": "2026-11-20T06:07:30.146Z",
+      "2026-11-19": "2026-11-20T06:07:42.237Z",
+      "2026-11-20": "2026-11-21T11:00:22.131Z",
+      "2026-11-21": "2026-11-22T06:49:46.694Z",
+      "2026-11-22": "2026-11-23T07:54:09.128Z",
+      "2026-11-24": "2026-11-25T14:06:51.990Z",
+      "2026-11-23": "2026-11-25T15:57:09.747Z"
+    },
+    "allen": {
+      "2026-11-14": "2026-11-15T11:28:40.193Z",
+      "2026-11-15": "2026-11-16T19:39:23.520Z",
+      "2026-11-16": "2026-11-17T23:22:00.734Z",
+      "2026-11-17": "2026-11-18T21:18:19.042Z",
+      "2026-11-18": "2026-11-20T06:14:04.795Z",
+      "2026-11-19": "2026-11-20T06:26:47.576Z",
+      "2026-11-20": "2026-11-21T11:00:53.224Z",
+      "2026-11-21": "2026-11-22T06:50:00.613Z",
+      "2026-11-22": "2026-11-23T07:54:22.962Z",
+      "2026-11-24": "2026-11-25T14:07:04.553Z"
+    },
+    "chris": {
+      "2026-11-14": "2026-11-15T11:28:49.419Z",
+      "2026-11-15": "2026-11-16T17:31:11.134Z",
+      "2026-11-16": "2026-11-17T16:40:15.127Z",
+      "2026-11-17": "2026-11-18T21:18:27.491Z",
+      "2026-11-18": "2026-11-19T13:49:33.378Z",
+      "2026-11-19": "2026-11-20T06:27:22.864Z",
+      "2026-11-20": "2026-11-21T11:01:09.689Z",
+      "2026-11-21": "2026-11-22T06:50:09.950Z",
+      "2026-11-22": "2026-11-23T07:54:35.095Z",
+      "2026-11-23": "2026-11-24T14:25:17.343Z",
+      "2026-11-24": "2026-11-25T06:40:02.759Z"
+    },
+    "kaykay": {
+      "2026-11-14": "2026-11-15T11:29:01.750Z",
+      "2026-11-15": "2026-11-16T18:47:24.920Z",
+      "2026-11-16": "2026-11-17T16:17:08.419Z",
+      "2026-11-17": "2026-11-18T16:29:35.875Z",
+      "2026-11-18": "2026-11-19T19:11:54.288Z",
+      "2026-11-19": "2026-11-20T16:02:15.062Z",
+      "2026-11-20": "2026-11-21T11:01:18.828Z",
+      "2026-11-21": "2026-11-22T18:10:11.927Z",
+      "2026-11-22": "2026-11-23T15:13:42.593Z",
+      "2026-11-23": "2026-11-24T16:11:29.030Z",
+      "2026-11-24": "2026-11-25T14:07:20.761Z"
+    },
+    "meghan": {
+      "2026-11-14": "2026-11-15T11:29:13.565Z",
+      "2026-11-15": "2026-11-16T19:39:55.531Z",
+      "2026-11-16": "2026-11-17T23:22:25.587Z",
+      "2026-11-17": "2026-11-18T21:18:43.129Z",
+      "2026-11-18": "2026-11-20T06:26:10.257Z",
+      "2026-11-19": "2026-11-20T06:36:58.070Z",
+      "2026-11-20": "2026-11-21T11:01:32.565Z",
+      "2026-11-21": "2026-11-22T06:50:27.327Z",
+      "2026-11-22": "2026-11-23T16:39:56.416Z",
+      "2026-11-24": "2026-11-25T14:07:31.220Z"
+    },
+    "shania": {
+      "2026-11-14": "2026-11-15T11:29:24.349Z",
+      "2026-11-15": "2026-11-16T19:40:15.465Z",
+      "2026-11-16": "2026-11-17T23:22:40.505Z",
+      "2026-11-17": "2026-11-19T02:13:43.222Z",
+      "2026-11-18": "2026-11-20T06:26:24.517Z",
+      "2026-11-19": "2026-11-21T17:17:24.114Z",
+      "2026-11-20": "2026-11-21T17:17:45.349Z",
+      "2026-11-21": "2026-11-22T06:50:36.738Z",
+      "2026-11-22": "2026-11-23T07:55:02.040Z",
+      "2026-11-24": "2026-11-25T16:00:09.244Z",
+      "2026-11-23": "2026-11-25T16:00:53.884Z"
+    }
+  },
+  "setup": {
+    "prevAvg": {
+      "shania": 17789,
+      "allen": 17146,
+      "michael": 14245,
+      "jordan": 12366,
+      "kaykay": 11877,
+      "chris": 11442,
+      "lauren": 8461,
+      "meghan": 6598
+    },
+    "group": 12491,
+    "w": 0.85,
+    "baseline": {
+      "michael": 13982,
+      "jordan": 12385,
+      "lauren": 9066,
+      "allen": 16448,
+      "chris": 11599,
+      "kaykay": 11969,
+      "meghan": 7482,
+      "shania": 16994
+    },
+    "seed": {
+      "shania": 1,
+      "allen": 2,
+      "michael": 3,
+      "jordan": 4,
+      "kaykay": 5,
+      "chris": 6,
+      "lauren": 7,
+      "meghan": 8
+    },
+    "team": {
+      "michael": "B",
+      "jordan": "A",
+      "lauren": "A",
+      "allen": "B",
+      "chris": "A",
+      "kaykay": "B",
+      "meghan": "B",
+      "shania": "A"
+    },
+    "teamNames": {
+      "A": "Feast Mode",
+      "B": "Sweat Potatoes"
+    },
+    "pieNames": {
+      "michael": "Apple",
+      "jordan": "Sweet Potato",
+      "lauren": "Chocolate Silk",
+      "allen": "Pecan",
+      "chris": "Key Lime",
+      "kaykay": "Cherry",
+      "meghan": "Banana Cream",
+      "shania": "Pumpkin"
+    }
+  },
+  "rest": {
+    "lauren": "2026-11-17",
+    "michael": "2026-11-19",
+    "jordan": "2026-11-19",
+    "chris": "2026-11-25"
+  },
+  "plays": [
+    {
+      "id": "play-kaykay-2026-11-23-butter-1",
+      "pid": "kaykay",
+      "type": "butter",
+      "date": "2026-11-23",
+      "target": null,
+      "at": "2026-11-22T20:31:18.056Z",
+      "status": "ok"
+    },
+    {
+      "id": "play-michael-2026-11-24-steal-2",
+      "pid": "michael",
+      "type": "steal",
+      "date": "2026-11-24",
+      "target": "jordan",
+      "at": "2026-11-24T03:16:30.091Z",
+      "status": "blocked"
+    },
+    {
+      "id": "play-jordan-2026-11-25-butter-3",
+      "pid": "jordan",
+      "type": "butter",
+      "date": "2026-11-25",
+      "target": null,
+      "at": "2026-11-24T18:05:50.275Z",
+      "status": "ok"
+    },
+    {
+      "id": "play-michael-2026-11-26-butter-4",
+      "pid": "michael",
+      "type": "butter",
+      "date": "2026-11-26",
+      "target": null,
+      "at": "2026-11-25T18:16:28.323Z",
+      "status": "ok"
+    }
+  ],
+  "awards": [
+    {
+      "id": "goal-2026-11-14",
+      "pid": "kaykay",
+      "type": "butter",
+      "source": "goal 2026-11-14",
+      "at": "2026-11-15T11:29:24.349Z"
+    },
+    {
+      "id": "goal-2026-11-15",
+      "pid": "lauren",
+      "type": "shield",
+      "source": "goal 2026-11-15",
+      "at": "2026-11-16T19:40:15.466Z"
+    },
+    {
+      "id": "goal-2026-11-16",
+      "pid": "jordan",
+      "type": "butter",
+      "source": "goal 2026-11-16",
+      "at": "2026-11-17T23:22:40.506Z"
+    },
+    {
+      "id": "bingo-row-michael-0",
+      "pid": "michael",
+      "type": "shield",
+      "source": "bingo row 1",
+      "at": "2026-11-18T12:59:30.529Z"
+    },
+    {
+      "id": "goal-2026-11-17",
+      "pid": "jordan",
+      "type": "butter",
+      "source": "goal 2026-11-17",
+      "at": "2026-11-19T02:13:43.222Z"
+    },
+    {
+      "id": "bingo-row-michael-1",
+      "pid": "michael",
+      "type": "steal",
+      "source": "bingo row 2",
+      "at": "2026-11-19T12:39:03.274Z"
+    },
+    {
+      "id": "goal-2026-11-18",
+      "pid": "allen",
+      "type": "shield",
+      "source": "goal 2026-11-18",
+      "at": "2026-11-20T06:26:24.517Z"
+    },
+    {
+      "id": "bingo-row-jordan-1",
+      "pid": "jordan",
+      "type": "steal",
+      "source": "bingo row 2",
+      "at": "2026-11-21T01:52:30.853Z"
+    },
+    {
+      "id": "bingo-row-kaykay-3",
+      "pid": "kaykay",
+      "type": "butter",
+      "source": "bingo row 4",
+      "at": "2026-11-21T16:46:34.943Z"
+    },
+    {
+      "id": "goal-2026-11-19",
+      "pid": "allen",
+      "type": "shield",
+      "source": "goal 2026-11-19",
+      "at": "2026-11-21T17:17:24.114Z"
+    },
+    {
+      "id": "goal-2026-11-20",
+      "pid": "chris",
+      "type": "shield",
+      "source": "goal 2026-11-20",
+      "at": "2026-11-21T17:17:45.349Z"
+    },
+    {
+      "id": "bingo-row-jordan-0",
+      "pid": "jordan",
+      "type": "butter",
+      "source": "bingo row 1",
+      "at": "2026-11-22T04:25:29.710Z"
+    },
+    {
+      "id": "goal-2026-11-21",
+      "pid": "jordan",
+      "type": "shield",
+      "source": "goal 2026-11-21",
+      "at": "2026-11-22T18:10:11.927Z"
+    },
+    {
+      "id": "goal-2026-11-22",
+      "pid": "jordan",
+      "type": "shield",
+      "source": "goal 2026-11-22",
+      "at": "2026-11-23T16:39:56.417Z"
+    },
+    {
+      "id": "bingo-row-michael-2",
+      "pid": "michael",
+      "type": "shield",
+      "source": "bingo row 3",
+      "at": "2026-11-24T03:13:06.428Z"
+    },
+    {
+      "id": "bingo-row-jordan-2",
+      "pid": "jordan",
+      "type": "butter",
+      "source": "bingo row 3",
+      "at": "2026-11-24T03:13:08.904Z"
+    },
+    {
+      "id": "bingo-row-lauren-2",
+      "pid": "lauren",
+      "type": "shield",
+      "source": "bingo row 3",
+      "at": "2026-11-24T03:13:16.202Z"
+    },
+    {
+      "id": "bingo-row-kaykay-1",
+      "pid": "kaykay",
+      "type": "shield",
+      "source": "bingo row 2",
+      "at": "2026-11-24T03:13:24.624Z"
+    },
+    {
+      "id": "goal-2026-11-24",
+      "pid": "michael",
+      "type": "butter",
+      "source": "goal 2026-11-24",
+      "at": "2026-11-25T16:00:09.245Z"
+    },
+    {
+      "id": "bingo-row-lauren-0",
+      "pid": "lauren",
+      "type": "butter",
+      "source": "bingo row 1",
+      "at": "2026-11-25T18:17:15.286Z"
+    },
+    {
+      "id": "bingo-row-kaykay-2",
+      "pid": "kaykay",
+      "type": "shield",
+      "source": "bingo row 3",
+      "at": "2026-11-25T18:17:28.389Z"
+    }
+  ],
+  "goals": {
+    "2026-11-14": {
+      "id": 1,
+      "revealedAt": "2026-11-14T15:02:31.184Z",
+      "resolved": {
+        "winner": "kaykay",
+        "at": "2026-11-15T11:29:24.349Z",
+        "awardId": "goal-2026-11-14"
+      }
+    },
+    "2026-11-15": {
+      "id": 18,
+      "revealedAt": "2026-11-15T13:00:59.364Z",
+      "resolved": {
+        "winner": "lauren",
+        "at": "2026-11-16T19:40:15.466Z",
+        "awardId": "goal-2026-11-15"
+      }
+    },
+    "2026-11-16": {
+      "id": 4,
+      "revealedAt": "2026-11-16T13:00:04.200Z",
+      "resolved": {
+        "winner": "jordan",
+        "at": "2026-11-17T23:22:40.506Z",
+        "awardId": "goal-2026-11-16"
+      }
+    },
+    "2026-11-17": {
+      "id": 16,
+      "revealedAt": "2026-11-17T16:16:48.713Z",
+      "resolved": {
+        "winner": "jordan",
+        "at": "2026-11-19T02:13:43.222Z",
+        "awardId": "goal-2026-11-17"
+      }
+    },
+    "2026-11-18": {
+      "id": 19,
+      "revealedAt": "2026-11-18T13:00:24.162Z",
+      "resolved": {
+        "winner": "allen",
+        "at": "2026-11-20T06:26:24.517Z",
+        "awardId": "goal-2026-11-18"
+      }
+    },
+    "2026-11-19": {
+      "id": 17,
+      "revealedAt": "2026-11-19T13:49:25.356Z",
+      "resolved": {
+        "winner": "allen",
+        "at": "2026-11-21T17:17:24.114Z",
+        "awardId": "goal-2026-11-19"
+      }
+    },
+    "2026-11-20": {
+      "id": 20,
+      "revealedAt": "2026-11-20T15:22:01.984Z",
+      "resolved": {
+        "winner": "chris",
+        "at": "2026-11-21T17:17:45.349Z",
+        "awardId": "goal-2026-11-20"
+      }
+    },
+    "2026-11-21": {
+      "id": 13,
+      "revealedAt": "2026-11-21T15:29:56.598Z",
+      "resolved": {
+        "winner": "jordan",
+        "at": "2026-11-22T18:10:11.927Z",
+        "awardId": "goal-2026-11-21"
+      }
+    },
+    "2026-11-22": {
+      "id": 7,
+      "revealedAt": "2026-11-22T15:14:01.544Z",
+      "resolved": {
+        "winner": "jordan",
+        "at": "2026-11-23T16:39:56.417Z",
+        "awardId": "goal-2026-11-22"
+      }
+    },
+    "2026-11-23": {
+      "id": 2,
+      "revealedAt": "2026-11-23T15:11:50.284Z",
+      "resolved": null
+    },
+    "2026-11-24": {
+      "id": 14,
+      "revealedAt": "2026-11-24T14:25:04.041Z",
+      "resolved": {
+        "winner": "michael",
+        "at": "2026-11-25T16:00:09.245Z",
+        "awardId": "goal-2026-11-24"
+      }
+    },
+    "2026-11-25": {
+      "id": 15,
+      "revealedAt": "2026-11-25T14:05:29.411Z",
+      "resolved": null
+    }
+  },
+  "rounds": {
+    "1": {
+      "closedAt": "2026-11-19T02:13:43.222Z",
+      "forced": false,
+      "matches": [
+        {
+          "id": "qf1",
+          "bracket": "W",
+          "place": null,
+          "a": "shania",
+          "b": "meghan",
+          "aAvg": 100.10444862892786,
+          "bAvg": 99.2949746057204,
+          "aRaw": 72053,
+          "bRaw": 32023,
+          "winner": "shania",
+          "how": "avg"
+        },
+        {
+          "id": "qf2",
+          "bracket": "W",
+          "place": null,
+          "a": "allen",
+          "b": "lauren",
+          "aAvg": 36.89810311284047,
+          "bAvg": 85.04669460989778,
+          "aRaw": 38617,
+          "bRaw": 30084,
+          "winner": "lauren",
+          "how": "avg"
+        },
+        {
+          "id": "qf3",
+          "bracket": "W",
+          "place": null,
+          "a": "michael",
+          "b": "chris",
+          "aAvg": 105.90044342726362,
+          "bAvg": 105.35390981981205,
+          "aRaw": 60816,
+          "bRaw": 52379,
+          "winner": "michael",
+          "how": "avg"
+        },
+        {
+          "id": "qf4",
+          "bracket": "W",
+          "place": null,
+          "a": "jordan",
+          "b": "kaykay",
+          "aAvg": 114.72749293500202,
+          "bAvg": 114.21797978110118,
+          "aRaw": 58822,
+          "bRaw": 54683,
+          "winner": "jordan",
+          "how": "avg"
+        }
+      ]
+    },
+    "2": {
+      "closedAt": "2026-11-22T18:10:11.927Z",
+      "forced": false,
+      "matches": [
+        {
+          "id": "sfw1",
+          "bracket": "W",
+          "place": null,
+          "a": "shania",
+          "b": "jordan",
+          "aAvg": 46.88860774390962,
+          "bAvg": 103.6764903781456,
+          "aRaw": 42424,
+          "bRaw": 39346,
+          "winner": "jordan",
+          "how": "avg"
+        },
+        {
+          "id": "sfw2",
+          "bracket": "W",
+          "place": null,
+          "a": "lauren",
+          "b": "michael",
+          "aAvg": 54.34039267593206,
+          "bAvg": 123.35383588423213,
+          "aRaw": 27985,
+          "bRaw": 51742,
+          "winner": "michael",
+          "how": "avg"
+        },
+        {
+          "id": "sfc1",
+          "bracket": "C",
+          "place": null,
+          "a": "meghan",
+          "b": "kaykay",
+          "aAvg": 48.496391339214114,
+          "bAvg": 110.5470381819701,
+          "aRaw": 22221,
+          "bRaw": 58759,
+          "winner": "kaykay",
+          "how": "avg"
+        },
+        {
+          "id": "sfc2",
+          "bracket": "C",
+          "place": null,
+          "a": "allen",
+          "b": "chris",
+          "aAvg": 68.1420233463035,
+          "bAvg": 88.35136649711183,
+          "aRaw": 51262,
+          "bRaw": 45964,
+          "winner": "chris",
+          "how": "avg"
+        }
+      ]
+    }
+  },
+  "hold": {},
+  "coin": {},
+  "bingo": {
+    "squares": [
+      {
+        "id": 0,
+        "text": "Walk with a kid or a pet",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 1,
+        "text": "A day at 120% of your baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "pct",
+          "min": 120
+        },
+        "minDate": null
+      },
+      {
+        "id": 2,
+        "text": "Sunset walk",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 3,
+        "text": "Walk in the rain",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 4,
+        "text": "New route",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 5,
+        "text": "30-minute workout",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 6,
+        "text": "3 days in a row at or above baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "streak",
+          "days": 3,
+          "min": 100
+        },
+        "minDate": null
+      },
+      {
+        "id": 7,
+        "text": "Walk before 7am (tracker screenshot)",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 8,
+        "text": "Bounce back: 100% the day after a day under 90%",
+        "type": "auto",
+        "rule": {
+          "kind": "bounce"
+        },
+        "minDate": null
+      },
+      {
+        "id": 9,
+        "text": "Walk with a family member",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 10,
+        "text": "Call someone you have not talked to in a month",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 11,
+        "text": "Stairs instead of the elevator all day",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 12,
+        "text": "FREE",
+        "type": "free",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 13,
+        "text": "Take a pie to someone, walking",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 14,
+        "text": "Park far away on purpose",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 15,
+        "text": "A day at 150% of your baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "pct",
+          "min": 150
+        },
+        "minDate": null
+      },
+      {
+        "id": 16,
+        "text": "Two days in a row at 110% of baseline",
+        "type": "auto",
+        "rule": {
+          "kind": "streak",
+          "days": 2,
+          "min": 110
+        },
+        "minDate": null
+      },
+      {
+        "id": 17,
+        "text": "Turkey, squirrel or deer sighting",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 18,
+        "text": "Walk in a different park",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 19,
+        "text": "Walk while listening to a full podcast episode",
+        "type": "honor",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 20,
+        "text": "Match your best day so far within 5%",
+        "type": "auto",
+        "rule": {
+          "kind": "bestmatch",
+          "tol": 5
+        },
+        "minDate": null
+      },
+      {
+        "id": 21,
+        "text": "Hit baseline on a power-up day",
+        "type": "auto",
+        "rule": {
+          "kind": "powerday"
+        },
+        "minDate": null
+      },
+      {
+        "id": 22,
+        "text": "Walk after dinner",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 23,
+        "text": "Pick up trash on a walk",
+        "type": "photo",
+        "rule": null,
+        "minDate": null
+      },
+      {
+        "id": 24,
+        "text": "Thanksgiving morning walk (claimable Nov 26)",
+        "type": "photo",
+        "rule": null,
+        "minDate": "2026-11-26"
+      }
+    ],
+    "claims": {
+      "lauren": {
+        "0": {
+          "status": "approved",
+          "at": "2026-11-15T01:12:55.854Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-0.jpg",
+          "decidedAt": "2026-11-15T03:20:54.526Z"
+        },
+        "1": {
+          "status": "approved",
+          "at": "2026-11-17T23:24:09.053Z",
+          "by": "lauren",
+          "auto": true
+        },
+        "2": {
+          "status": "approved",
+          "at": "2026-11-25T14:09:13.695Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-2.jpg",
+          "decidedAt": "2026-11-25T18:17:15.285Z"
+        },
+        "3": {
+          "status": "approved",
+          "at": "2026-11-17T03:03:05.043Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-3.jpg",
+          "decidedAt": "2026-11-17T03:29:47.656Z"
+        },
+        "4": {
+          "status": "approved",
+          "at": "2026-11-15T01:16:01.095Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-4.jpg",
+          "decidedAt": "2026-11-15T03:20:57.245Z"
+        },
+        "5": {
+          "status": "approved",
+          "at": "2026-11-19T03:08:01.042Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-5.jpg",
+          "decidedAt": "2026-11-21T01:53:28.052Z"
+        },
+        "6": {
+          "status": "rejected",
+          "at": "2026-11-23T16:43:44.001Z",
+          "by": "lauren",
+          "reason": "Your longest run at 100%+ is 1 day (need 3).",
+          "auto": true
+        },
+        "7": {
+          "status": "approved",
+          "at": "2026-11-21T12:02:18.269Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-7.jpg",
+          "decidedAt": "2026-11-22T04:25:52.467Z"
+        },
+        "8": {
+          "status": "rejected",
+          "at": "2026-11-23T16:44:07.535Z",
+          "by": "lauren",
+          "reason": "Need a day at 100%+ right after a day under 90%.",
+          "auto": true
+        },
+        "9": {
+          "status": "approved",
+          "at": "2026-11-15T19:07:21.975Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-9.jpg",
+          "decidedAt": "2026-11-15T19:07:30.098Z"
+        },
+        "10": {
+          "status": "approved",
+          "at": "2026-11-22T06:48:22.600Z",
+          "by": "lauren",
+          "decidedAt": "2026-11-24T03:13:14.045Z"
+        },
+        "11": {
+          "status": "approved",
+          "at": "2026-11-22T06:48:30.655Z",
+          "by": "lauren",
+          "decidedAt": "2026-11-24T03:13:16.202Z"
+        },
+        "13": {
+          "status": "approved",
+          "at": "2026-11-21T11:03:40.739Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-13.jpg",
+          "decidedAt": "2026-11-22T04:26:00.764Z"
+        },
+        "14": {
+          "status": "approved",
+          "at": "2026-11-19T13:57:51.777Z",
+          "by": "lauren",
+          "decidedAt": "2026-11-21T01:52:07.057Z"
+        },
+        "15": {
+          "status": "approved",
+          "at": "2026-11-17T23:24:05.850Z",
+          "by": "lauren",
+          "auto": true
+        },
+        "16": {
+          "status": "rejected",
+          "at": "2026-11-23T16:43:50.818Z",
+          "by": "lauren",
+          "reason": "Your longest run at 110%+ is 1 day (need 2).",
+          "auto": true
+        },
+        "17": {
+          "status": "approved",
+          "at": "2026-11-16T03:41:42.643Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-17.jpg",
+          "decidedAt": "2026-11-16T13:01:49.272Z"
+        },
+        "18": {
+          "status": "approved",
+          "at": "2026-11-25T14:18:31.376Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-18.jpg",
+          "decidedAt": "2026-11-25T18:17:17.952Z"
+        },
+        "19": {
+          "status": "approved",
+          "at": "2026-11-15T20:30:52.548Z",
+          "by": "lauren",
+          "decidedAt": "2026-11-15T23:17:18.018Z"
+        },
+        "20": {
+          "status": "rejected",
+          "at": "2026-11-23T16:43:56.035Z",
+          "by": "lauren",
+          "reason": "No day within 5% of your earlier best yet.",
+          "auto": true
+        },
+        "21": {
+          "status": "rejected",
+          "at": "2026-11-23T16:43:53.567Z",
+          "by": "lauren",
+          "reason": "Need a day at 100%+ on a day you played a power-up.",
+          "auto": true
+        },
+        "22": {
+          "status": "approved",
+          "at": "2026-11-17T03:41:36.270Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-22.jpg",
+          "decidedAt": "2026-11-17T12:15:47.011Z"
+        },
+        "23": {
+          "status": "approved",
+          "at": "2026-11-25T14:12:37.780Z",
+          "by": "lauren",
+          "photo": "bingo/lauren-23.jpg",
+          "decidedAt": "2026-11-25T18:17:21.521Z"
+        }
+      },
+      "meghan": {
+        "1": {
+          "status": "approved",
+          "at": "2026-11-22T06:41:21.769Z",
+          "by": "meghan",
+          "auto": true
+        },
+        "6": {
+          "status": "rejected",
+          "at": "2026-11-22T06:41:28.385Z",
+          "by": "meghan",
+          "reason": "Your longest run at 100%+ is 2 days (need 3).",
+          "auto": true
+        },
+        "8": {
+          "status": "approved",
+          "at": "2026-11-22T06:41:32.886Z",
+          "by": "meghan",
+          "auto": true
+        },
+        "11": {
+          "status": "approved",
+          "at": "2026-11-22T06:41:42.085Z",
+          "by": "meghan",
+          "decidedAt": "2026-11-24T03:13:44.358Z"
+        },
+        "13": {
+          "status": "approved",
+          "at": "2026-11-15T01:18:06.433Z",
+          "by": "meghan",
+          "photo": "bingo/meghan-13.jpg",
+          "decidedAt": "2026-11-15T03:21:12.311Z"
+        },
+        "15": {
+          "status": "rejected",
+          "at": "2026-11-22T06:41:44.936Z",
+          "by": "meghan",
+          "reason": "Your best day so far is 145% of baseline (need 150%).",
+          "auto": true
+        },
+        "16": {
+          "status": "rejected",
+          "at": "2026-11-22T06:41:47.237Z",
+          "by": "meghan",
+          "reason": "Your longest run at 110%+ is 1 day (need 2).",
+          "auto": true
+        },
+        "20": {
+          "status": "rejected",
+          "at": "2026-11-22T06:41:55.635Z",
+          "by": "meghan",
+          "reason": "No day within 5% of your earlier best yet.",
+          "auto": true
+        },
+        "21": {
+          "status": "rejected",
+          "at": "2026-11-22T06:41:57.972Z",
+          "by": "meghan",
+          "reason": "Need a day at 100%+ on a day you played a power-up.",
+          "auto": true
+        }
+      },
+      "shania": {
+        "0": {
+          "status": "approved",
+          "at": "2026-11-15T01:18:51.491Z",
+          "by": "shania",
+          "photo": "bingo/shania-0.jpg",
+          "decidedAt": "2026-11-15T03:21:14.559Z"
+        },
+        "1": {
+          "status": "approved",
+          "at": "2026-11-22T06:42:04.837Z",
+          "by": "shania",
+          "auto": true
+        },
+        "5": {
+          "status": "approved",
+          "at": "2026-11-22T06:45:11.007Z",
+          "by": "shania",
+          "photo": "bingo/shania-5.jpg",
+          "decidedAt": "2026-11-24T03:13:27.191Z"
+        },
+        "6": {
+          "status": "rejected",
+          "at": "2026-11-22T06:42:08.152Z",
+          "by": "shania",
+          "reason": "Your longest run at 100%+ is 2 days (need 3).",
+          "auto": true
+        },
+        "8": {
+          "status": "approved",
+          "at": "2026-11-22T06:42:10.638Z",
+          "by": "shania",
+          "auto": true
+        },
+        "9": {
+          "status": "rejected",
+          "at": "2026-11-22T06:45:26.673Z",
+          "by": "shania",
+          "photo": "bingo/shania-9.jpg",
+          "decidedAt": "2026-11-24T03:13:39.717Z",
+          "reason": "Not approved."
+        },
+        "10": {
+          "status": "approved",
+          "at": "2026-11-22T06:42:24.823Z",
+          "by": "shania",
+          "decidedAt": "2026-11-24T03:13:46.367Z"
+        },
+        "13": {
+          "status": "approved",
+          "at": "2026-11-22T06:44:33.389Z",
+          "by": "shania",
+          "photo": "bingo/shania-13.jpg",
+          "decidedAt": "2026-11-24T03:13:50.989Z"
+        },
+        "15": {
+          "status": "rejected",
+          "at": "2026-11-22T06:42:15.788Z",
+          "by": "shania",
+          "reason": "Your best day so far is 133% of baseline (need 150%).",
+          "auto": true
+        },
+        "16": {
+          "status": "rejected",
+          "at": "2026-11-22T06:42:18.323Z",
+          "by": "shania",
+          "reason": "Your longest run at 110%+ is 1 day (need 2).",
+          "auto": true
+        },
+        "20": {
+          "status": "rejected",
+          "at": "2026-11-22T06:42:21.788Z",
+          "by": "shania",
+          "reason": "No day within 5% of your earlier best yet.",
+          "auto": true
+        },
+        "21": {
+          "status": "rejected",
+          "at": "2026-11-22T06:42:27.256Z",
+          "by": "shania",
+          "reason": "Need a day at 100%+ on a day you played a power-up.",
+          "auto": true
+        }
+      },
+      "michael": {
+        "0": {
+          "status": "approved",
+          "at": "2026-11-18T12:59:10.414Z",
+          "by": "michael",
+          "photo": "bingo/michael-0.jpg",
+          "decidedAt": "2026-11-18T12:59:30.529Z"
+        },
+        "1": {
+          "status": "approved",
+          "at": "2026-11-18T12:58:15.334Z",
+          "by": "michael",
+          "auto": true
+        },
+        "2": {
+          "status": "approved",
+          "at": "2026-11-15T03:23:16.748Z",
+          "by": "michael",
+          "photo": "bingo/michael-2.jpg",
+          "decidedAt": "2026-11-15T03:24:31.054Z"
+        },
+        "3": {
+          "status": "approved",
+          "at": "2026-11-15T16:03:05.345Z",
+          "by": "michael",
+          "photo": "bingo/michael-3.jpg",
+          "decidedAt": "2026-11-15T16:03:46.902Z"
+        },
+        "4": {
+          "status": "approved",
+          "at": "2026-11-17T03:33:49.292Z",
+          "by": "michael",
+          "photo": "bingo/michael-4.jpg",
+          "decidedAt": "2026-11-17T03:33:58.113Z"
+        },
+        "5": {
+          "status": "approved",
+          "at": "2026-11-15T23:17:02.705Z",
+          "by": "michael",
+          "photo": "bingo/michael-5.jpg",
+          "decidedAt": "2026-11-15T23:17:12.201Z"
+        },
+        "6": {
+          "status": "approved",
+          "at": "2026-11-19T12:39:03.272Z",
+          "by": "michael",
+          "auto": true
+        },
+        "7": {
+          "status": "approved",
+          "at": "2026-11-16T13:00:49.335Z",
+          "by": "michael",
+          "photo": "bingo/michael-7.jpg",
+          "decidedAt": "2026-11-16T13:01:45.064Z"
+        },
+        "8": {
+          "status": "approved",
+          "at": "2026-11-17T12:14:37.296Z",
+          "by": "michael",
+          "auto": true
+        },
+        "9": {
+          "status": "approved",
+          "at": "2026-11-19T02:25:20.158Z",
+          "by": "michael",
+          "photo": "bingo/michael-9.jpg",
+          "decidedAt": "2026-11-19T02:25:45.297Z"
+        },
+        "10": {
+          "status": "approved",
+          "at": "2026-11-24T03:12:34.506Z",
+          "by": "michael",
+          "decidedAt": "2026-11-24T03:13:06.428Z"
+        },
+        "11": {
+          "status": "approved",
+          "at": "2026-11-17T03:31:02.580Z",
+          "by": "michael",
+          "decidedAt": "2026-11-17T03:31:15.204Z"
+        },
+        "13": {
+          "status": "approved",
+          "at": "2026-11-21T01:50:58.177Z",
+          "by": "michael",
+          "photo": "bingo/michael-13.jpg",
+          "decidedAt": "2026-11-21T01:51:47.532Z"
+        },
+        "14": {
+          "status": "approved",
+          "at": "2026-11-15T23:16:46.725Z",
+          "by": "michael",
+          "decidedAt": "2026-11-15T23:17:19.652Z"
+        },
+        "15": {
+          "status": "approved",
+          "at": "2026-11-25T14:30:35.229Z",
+          "by": "michael",
+          "auto": true
+        },
+        "16": {
+          "status": "approved",
+          "at": "2026-11-18T13:00:42.675Z",
+          "by": "michael",
+          "auto": true
+        },
+        "17": {
+          "status": "approved",
+          "at": "2026-11-16T23:33:17.343Z",
+          "by": "michael",
+          "photo": "bingo/michael-17.jpg",
+          "decidedAt": "2026-11-16T23:33:27.853Z"
+        },
+        "18": {
+          "status": "approved",
+          "at": "2026-11-21T01:51:33.306Z",
+          "by": "michael",
+          "photo": "bingo/michael-18.jpg",
+          "decidedAt": "2026-11-21T01:51:50.142Z"
+        },
+        "20": {
+          "status": "approved",
+          "at": "2026-11-19T12:39:09.724Z",
+          "by": "michael",
+          "auto": true
+        },
+        "21": {
+          "status": "approved",
+          "at": "2026-11-25T14:30:31.018Z",
+          "by": "michael",
+          "auto": true
+        },
+        "22": {
+          "status": "approved",
+          "at": "2026-11-18T01:25:13.350Z",
+          "by": "michael",
+          "photo": "bingo/michael-22.jpg",
+          "decidedAt": "2026-11-18T01:25:29.717Z"
+        },
+        "23": {
+          "status": "approved",
+          "at": "2026-11-22T04:25:10.836Z",
+          "by": "michael",
+          "photo": "bingo/michael-23.jpg",
+          "decidedAt": "2026-11-22T04:25:23.147Z"
+        }
+      },
+      "jordan": {
+        "0": {
+          "status": "approved",
+          "at": "2026-11-21T19:22:18.248Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-0.jpg",
+          "decidedAt": "2026-11-22T04:25:29.710Z"
+        },
+        "1": {
+          "status": "approved",
+          "at": "2026-11-15T16:09:04.400Z",
+          "by": "jordan",
+          "auto": true
+        },
+        "2": {
+          "status": "approved",
+          "at": "2026-11-15T05:01:57.226Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-2.jpg",
+          "decidedAt": "2026-11-15T05:02:57.587Z"
+        },
+        "3": {
+          "status": "approved",
+          "at": "2026-11-17T03:24:55.633Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-3.jpg",
+          "decidedAt": "2026-11-17T03:29:11.903Z"
+        },
+        "4": {
+          "status": "approved",
+          "at": "2026-11-17T03:25:45.612Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-4.jpg",
+          "decidedAt": "2026-11-17T03:29:14.426Z"
+        },
+        "5": {
+          "status": "approved",
+          "at": "2026-11-17T03:32:10.737Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-5.jpg",
+          "decidedAt": "2026-11-17T03:34:04.191Z"
+        },
+        "6": {
+          "status": "approved",
+          "at": "2026-11-20T23:29:26.756Z",
+          "by": "jordan",
+          "auto": true
+        },
+        "7": {
+          "status": "approved",
+          "at": "2026-11-17T22:17:23.378Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-7.jpg",
+          "decidedAt": "2026-11-18T01:25:33.019Z"
+        },
+        "8": {
+          "status": "approved",
+          "at": "2026-11-17T22:13:47.451Z",
+          "by": "jordan",
+          "auto": true
+        },
+        "9": {
+          "status": "approved",
+          "at": "2026-11-20T23:31:42.795Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-9.jpg",
+          "decidedAt": "2026-11-21T01:52:30.853Z"
+        },
+        "10": {
+          "status": "approved",
+          "at": "2026-11-22T04:29:36.005Z",
+          "by": "jordan",
+          "decidedAt": "2026-11-24T03:13:08.904Z"
+        },
+        "11": {
+          "status": "approved",
+          "at": "2026-11-17T03:25:25.921Z",
+          "by": "jordan",
+          "decidedAt": "2026-11-17T03:30:07.352Z"
+        },
+        "13": {
+          "status": "approved",
+          "at": "2026-11-21T16:57:43.578Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-13.jpg",
+          "decidedAt": "2026-11-22T04:25:32.163Z"
+        },
+        "14": {
+          "status": "approved",
+          "at": "2026-11-17T03:25:11.701Z",
+          "by": "jordan",
+          "decidedAt": "2026-11-17T03:30:10.116Z"
+        },
+        "15": {
+          "status": "rejected",
+          "at": "2026-11-24T03:11:53.629Z",
+          "by": "jordan",
+          "reason": "Your best day so far is 136% of baseline (need 150%).",
+          "auto": true
+        },
+        "16": {
+          "status": "approved",
+          "at": "2026-11-18T21:10:22.256Z",
+          "by": "jordan",
+          "auto": true
+        },
+        "17": {
+          "status": "approved",
+          "at": "2026-11-17T03:26:04.864Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-17.jpg",
+          "decidedAt": "2026-11-17T03:29:41.984Z"
+        },
+        "18": {
+          "status": "approved",
+          "at": "2026-11-20T23:29:40.920Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-18.jpg",
+          "decidedAt": "2026-11-21T01:51:53.617Z"
+        },
+        "20": {
+          "status": "approved",
+          "at": "2026-11-18T21:12:19.143Z",
+          "by": "jordan",
+          "auto": true
+        },
+        "21": {
+          "status": "rejected",
+          "at": "2026-11-24T03:11:57.612Z",
+          "by": "jordan",
+          "reason": "Need a day at 100%+ on a day you played a power-up.",
+          "auto": true
+        },
+        "22": {
+          "status": "approved",
+          "at": "2026-11-18T21:12:02.354Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-22.jpg",
+          "decidedAt": "2026-11-19T02:25:48.180Z"
+        },
+        "23": {
+          "status": "approved",
+          "at": "2026-11-22T04:28:29.087Z",
+          "by": "jordan",
+          "photo": "bingo/jordan-23.jpg",
+          "decidedAt": "2026-11-24T03:13:10.981Z"
+        }
+      },
+      "kaykay": {
+        "0": {
+          "status": "approved",
+          "at": "2026-11-22T22:21:27.086Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-0.jpg",
+          "decidedAt": "2026-11-24T03:13:22.312Z"
+        },
+        "1": {
+          "status": "approved",
+          "at": "2026-11-16T18:50:46.328Z",
+          "by": "kaykay",
+          "auto": true
+        },
+        "2": {
+          "status": "approved",
+          "at": "2026-11-21T00:42:03.311Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-2.jpg",
+          "decidedAt": "2026-11-21T01:52:16.680Z"
+        },
+        "4": {
+          "status": "approved",
+          "at": "2026-11-20T21:51:31.343Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-4.jpg",
+          "decidedAt": "2026-11-21T01:52:22.043Z"
+        },
+        "5": {
+          "status": "approved",
+          "at": "2026-11-17T03:49:01.266Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-5.jpg",
+          "decidedAt": "2026-11-17T12:15:57.425Z"
+        },
+        "6": {
+          "status": "approved",
+          "at": "2026-11-19T19:12:51.513Z",
+          "by": "kaykay",
+          "auto": true
+        },
+        "7": {
+          "status": "approved",
+          "at": "2026-11-23T15:12:12.462Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-7.jpg",
+          "decidedAt": "2026-11-24T03:13:24.624Z"
+        },
+        "8": {
+          "status": "approved",
+          "at": "2026-11-20T16:04:56.849Z",
+          "by": "kaykay",
+          "auto": true
+        },
+        "9": {
+          "status": "approved",
+          "at": "2026-11-15T17:19:00.519Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-9.jpg",
+          "decidedAt": "2026-11-15T18:01:35.632Z"
+        },
+        "10": {
+          "status": "approved",
+          "at": "2026-11-21T22:33:30.467Z",
+          "by": "kaykay",
+          "decidedAt": "2026-11-22T04:26:15.216Z"
+        },
+        "11": {
+          "status": "approved",
+          "at": "2026-11-20T00:35:18.693Z",
+          "by": "kaykay",
+          "decidedAt": "2026-11-21T01:52:25.577Z"
+        },
+        "13": {
+          "status": "approved",
+          "at": "2026-11-24T03:21:35.468Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-13.jpg",
+          "decidedAt": "2026-11-25T18:17:28.389Z"
+        },
+        "14": {
+          "status": "approved",
+          "at": "2026-11-21T22:31:02.085Z",
+          "by": "kaykay",
+          "decidedAt": "2026-11-22T04:26:16.966Z"
+        },
+        "15": {
+          "status": "approved",
+          "at": "2026-11-21T16:46:34.943Z",
+          "by": "kaykay",
+          "auto": true
+        },
+        "16": {
+          "status": "approved",
+          "at": "2026-11-16T18:52:30.692Z",
+          "by": "kaykay",
+          "auto": true
+        },
+        "17": {
+          "status": "approved",
+          "at": "2026-11-17T22:28:40.380Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-17.jpg",
+          "decidedAt": "2026-11-18T01:25:54.339Z"
+        },
+        "18": {
+          "status": "approved",
+          "at": "2026-11-15T17:19:33.187Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-18.jpg",
+          "decidedAt": "2026-11-15T18:01:43.052Z"
+        },
+        "19": {
+          "status": "approved",
+          "at": "2026-11-19T23:53:28.831Z",
+          "by": "kaykay",
+          "decidedAt": "2026-11-21T01:52:27.527Z"
+        },
+        "20": {
+          "status": "approved",
+          "at": "2026-11-20T00:34:54.218Z",
+          "by": "kaykay",
+          "auto": true
+        },
+        "21": {
+          "status": "approved",
+          "at": "2026-11-24T16:11:47.298Z",
+          "by": "kaykay",
+          "auto": true
+        },
+        "22": {
+          "status": "approved",
+          "at": "2026-11-17T03:49:15.705Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-22.jpg",
+          "decidedAt": "2026-11-17T12:16:02.040Z"
+        },
+        "23": {
+          "status": "approved",
+          "at": "2026-11-18T22:47:05.163Z",
+          "by": "kaykay",
+          "photo": "bingo/kaykay-23.jpg",
+          "decidedAt": "2026-11-19T02:25:52.673Z"
+        }
+      },
+      "chris": {
+        "0": {
+          "status": "approved",
+          "at": "2026-11-22T22:22:06.565Z",
+          "by": "chris",
+          "photo": "bingo/chris-0.jpg",
+          "decidedAt": "2026-11-24T03:13:20.193Z"
+        },
+        "1": {
+          "status": "approved",
+          "at": "2026-11-16T19:11:56.498Z",
+          "by": "chris",
+          "auto": true
+        },
+        "2": {
+          "status": "approved",
+          "at": "2026-11-21T00:41:23.991Z",
+          "by": "chris",
+          "photo": "bingo/chris-2.jpg",
+          "decidedAt": "2026-11-21T01:52:11.164Z"
+        },
+        "5": {
+          "status": "approved",
+          "at": "2026-11-21T18:49:04.371Z",
+          "by": "chris",
+          "photo": "bingo/chris-5.jpg",
+          "decidedAt": "2026-11-22T04:26:05.036Z"
+        },
+        "6": {
+          "status": "rejected",
+          "at": "2026-11-23T16:44:36.174Z",
+          "by": "chris",
+          "reason": "Your longest run at 100%+ is 2 days (need 3).",
+          "auto": true
+        },
+        "8": {
+          "status": "approved",
+          "at": "2026-11-16T19:11:11.389Z",
+          "by": "chris",
+          "auto": true
+        },
+        "9": {
+          "status": "approved",
+          "at": "2026-11-15T22:45:25.609Z",
+          "by": "chris",
+          "photo": "bingo/chris-9.jpg",
+          "decidedAt": "2026-11-15T23:17:21.669Z"
+        },
+        "11": {
+          "status": "approved",
+          "at": "2026-11-17T16:41:33.691Z",
+          "by": "chris",
+          "decidedAt": "2026-11-18T01:25:57.652Z"
+        },
+        "13": {
+          "status": "approved",
+          "at": "2026-11-24T03:22:30.357Z",
+          "by": "chris",
+          "photo": "bingo/chris-13.jpg",
+          "decidedAt": "2026-11-25T18:17:26.755Z"
+        },
+        "14": {
+          "status": "approved",
+          "at": "2026-11-17T20:11:23.536Z",
+          "by": "chris",
+          "decidedAt": "2026-11-18T01:25:59.716Z"
+        },
+        "15": {
+          "status": "approved",
+          "at": "2026-11-21T17:04:18.175Z",
+          "by": "chris",
+          "auto": true
+        },
+        "16": {
+          "status": "approved",
+          "at": "2026-11-17T16:41:04.729Z",
+          "by": "chris",
+          "auto": true
+        },
+        "17": {
+          "status": "approved",
+          "at": "2026-11-17T03:43:14.096Z",
+          "by": "chris",
+          "photo": "bingo/chris-17.jpg",
+          "decidedAt": "2026-11-17T12:15:51.325Z"
+        },
+        "20": {
+          "status": "rejected",
+          "at": "2026-11-22T06:47:56.331Z",
+          "by": "chris",
+          "reason": "No day within 5% of your earlier best yet.",
+          "auto": true
+        },
+        "21": {
+          "status": "rejected",
+          "at": "2026-11-22T06:47:53.598Z",
+          "by": "chris",
+          "reason": "Need a day at 100%+ on a day you played a power-up.",
+          "auto": true
+        }
+      },
+      "allen": {
+        "1": {
+          "status": "rejected",
+          "at": "2026-11-23T16:44:15.498Z",
+          "by": "allen",
+          "reason": "Your best day so far is 108% of baseline (need 120%).",
+          "auto": true
+        },
+        "2": {
+          "status": "approved",
+          "at": "2026-11-25T14:10:31.334Z",
+          "by": "allen",
+          "photo": "bingo/allen-2.jpg",
+          "decidedAt": "2026-11-25T18:17:24.327Z"
+        },
+        "6": {
+          "status": "rejected",
+          "at": "2026-11-22T06:40:40.415Z",
+          "by": "allen",
+          "reason": "Your longest run at 100%+ is 2 days (need 3).",
+          "auto": true
+        },
+        "8": {
+          "status": "approved",
+          "at": "2026-11-21T21:02:14.408Z",
+          "by": "allen",
+          "auto": true
+        },
+        "10": {
+          "status": "approved",
+          "at": "2026-11-21T21:02:28.593Z",
+          "by": "allen",
+          "decidedAt": "2026-11-22T04:26:13.468Z"
+        },
+        "11": {
+          "status": "approved",
+          "at": "2026-11-17T03:43:37.731Z",
+          "by": "allen",
+          "decidedAt": "2026-11-17T12:15:45.046Z"
+        },
+        "14": {
+          "status": "approved",
+          "at": "2026-11-22T06:40:59.704Z",
+          "by": "allen",
+          "decidedAt": "2026-11-24T03:13:18.140Z"
+        },
+        "15": {
+          "status": "rejected",
+          "at": "2026-11-22T06:48:14.001Z",
+          "by": "allen",
+          "reason": "Your best day so far is 108% of baseline (need 150%).",
+          "auto": true
+        },
+        "16": {
+          "status": "rejected",
+          "at": "2026-11-22T06:48:11.649Z",
+          "by": "allen",
+          "reason": "Your longest run at 110%+ is 0 days (need 2).",
+          "auto": true
+        },
+        "20": {
+          "status": "approved",
+          "at": "2026-11-21T21:02:34.276Z",
+          "by": "allen",
+          "auto": true
+        },
+        "21": {
+          "status": "rejected",
+          "at": "2026-11-22T06:48:07.730Z",
+          "by": "allen",
+          "reason": "Need a day at 100%+ on a day you played a power-up.",
+          "auto": true
+        }
+      }
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-14T15:02:30.162Z",
+      "who": "admin",
+      "what": "INITIALIZE PIE WARS"
+    },
+    {
+      "at": "2026-11-15T01:12:55.854Z",
+      "who": "lauren",
+      "what": "bingo claim 0 -> pending"
+    },
+    {
+      "at": "2026-11-15T01:16:01.095Z",
+      "who": "lauren",
+      "what": "bingo claim 4 -> pending"
+    },
+    {
+      "at": "2026-11-15T01:17:09.090Z",
+      "who": "lauren",
+      "what": "bingo claim 9 -> pending"
+    },
+    {
+      "at": "2026-11-15T01:18:06.433Z",
+      "who": "meghan",
+      "what": "bingo claim 13 -> pending"
+    },
+    {
+      "at": "2026-11-15T01:18:51.491Z",
+      "who": "shania",
+      "what": "bingo claim 0 -> pending"
+    },
+    {
+      "at": "2026-11-15T03:19:26.660Z",
+      "who": "michael",
+      "what": "code changed"
+    },
+    {
+      "at": "2026-11-15T03:20:54.526Z",
+      "who": "admin",
+      "what": "bingo approved lauren #0"
+    },
+    {
+      "at": "2026-11-15T03:20:57.245Z",
+      "who": "admin",
+      "what": "bingo approved lauren #4"
+    },
+    {
+      "at": "2026-11-15T03:21:09.760Z",
+      "who": "admin",
+      "what": "bingo approved lauren #9"
+    },
+    {
+      "at": "2026-11-15T03:21:12.311Z",
+      "who": "admin",
+      "what": "bingo approved meghan #13"
+    },
+    {
+      "at": "2026-11-15T03:21:14.559Z",
+      "who": "admin",
+      "what": "bingo approved shania #0"
+    },
+    {
+      "at": "2026-11-15T03:22:23.604Z",
+      "who": "michael",
+      "what": "bingo claim 4 -> pending"
+    },
+    {
+      "at": "2026-11-15T03:23:16.748Z",
+      "who": "michael",
+      "what": "bingo claim 2 -> pending"
+    },
+    {
+      "at": "2026-11-15T03:24:31.054Z",
+      "who": "admin",
+      "what": "bingo approved michael #2"
+    },
+    {
+      "at": "2026-11-15T03:24:33.471Z",
+      "who": "admin",
+      "what": "bingo approved michael #4"
+    },
+    {
+      "at": "2026-11-15T05:01:36.880Z",
+      "who": "jordan",
+      "what": "code changed"
+    },
+    {
+      "at": "2026-11-15T05:01:57.226Z",
+      "who": "jordan",
+      "what": "bingo claim 2 -> pending"
+    },
+    {
+      "at": "2026-11-15T05:02:19.583Z",
+      "who": "jordan",
+      "what": "bingo claim 4 -> pending"
+    },
+    {
+      "at": "2026-11-15T05:02:57.587Z",
+      "who": "admin",
+      "what": "bingo approved jordan #2"
+    },
+    {
+      "at": "2026-11-15T05:03:03.821Z",
+      "who": "admin",
+      "what": "bingo approved jordan #4"
+    },
+    {
+      "at": "2026-11-15T11:27:51.091Z",
+      "who": "michael",
+      "what": "log michael 2026-11-14 = 13926"
+    },
+    {
+      "at": "2026-11-15T11:28:08.079Z",
+      "who": "jordan",
+      "what": "log jordan 2026-11-14 = 16797"
+    },
+    {
+      "at": "2026-11-15T11:28:22.320Z",
+      "who": "lauren",
+      "what": "log lauren 2026-11-14 = 16252"
+    },
+    {
+      "at": "2026-11-15T11:28:40.193Z",
+      "who": "allen",
+      "what": "log allen 2026-11-14 = 5030"
+    },
+    {
+      "at": "2026-11-15T11:28:49.419Z",
+      "who": "chris",
+      "what": "log chris 2026-11-14 = 7606"
+    },
+    {
+      "at": "2026-11-15T11:29:01.750Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-14 = 13181"
+    },
+    {
+      "at": "2026-11-15T11:29:13.565Z",
+      "who": "meghan",
+      "what": "log meghan 2026-11-14 = 10836"
+    },
+    {
+      "at": "2026-11-15T11:29:24.349Z",
+      "who": "shania",
+      "what": "log shania 2026-11-14 = 19424"
+    },
+    {
+      "at": "2026-11-15T11:29:24.349Z",
+      "who": "auto",
+      "what": "goal 2026-11-14 won by kaykay"
+    },
+    {
+      "at": "2026-11-15T15:33:46.186Z",
+      "who": "michael",
+      "what": "edit michael 2026-11-14 = 14126 (was 13926)"
+    },
+    {
+      "at": "2026-11-15T15:39:51.228Z",
+      "who": "auto",
+      "what": "goal 2026-11-15 swapped #6 -> #18"
+    },
+    {
+      "at": "2026-11-15T16:03:05.345Z",
+      "who": "michael",
+      "what": "bingo claim 3 -> pending"
+    },
+    {
+      "at": "2026-11-15T16:03:23.574Z",
+      "who": "michael",
+      "what": "bingo claim 0 -> pending"
+    },
+    {
+      "at": "2026-11-15T16:03:42.632Z",
+      "who": "admin",
+      "what": "bingo approved michael #0"
+    },
+    {
+      "at": "2026-11-15T16:03:46.902Z",
+      "who": "admin",
+      "what": "bingo approved michael #3"
+    },
+    {
+      "at": "2026-11-15T16:09:04.400Z",
+      "who": "jordan",
+      "what": "bingo claim 1 -> approved"
+    },
+    {
+      "at": "2026-11-15T17:13:57.077Z",
+      "who": "kaykay",
+      "what": "code changed"
+    },
+    {
+      "at": "2026-11-15T17:17:25.257Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-14 = 9127 (was 7606)"
+    },
+    {
+      "at": "2026-11-15T17:19:00.519Z",
+      "who": "kaykay",
+      "what": "bingo claim 9 -> pending"
+    },
+    {
+      "at": "2026-11-15T17:19:33.187Z",
+      "who": "kaykay",
+      "what": "bingo claim 18 -> pending"
+    },
+    {
+      "at": "2026-11-15T18:01:35.632Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #9"
+    },
+    {
+      "at": "2026-11-15T18:01:43.052Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #18"
+    },
+    {
+      "at": "2026-11-15T18:02:23.635Z",
+      "who": "admin",
+      "what": "bingo rejected michael #4"
+    },
+    {
+      "at": "2026-11-15T18:02:31.718Z",
+      "who": "admin",
+      "what": "bingo rejected jordan #4"
+    },
+    {
+      "at": "2026-11-15T18:02:41.853Z",
+      "who": "admin",
+      "what": "bingo rejected michael #0"
+    },
+    {
+      "at": "2026-11-15T18:04:21.605Z",
+      "who": "admin",
+      "what": "bingo rejected lauren #9"
+    },
+    {
+      "at": "2026-11-15T19:07:21.975Z",
+      "who": "lauren",
+      "what": "bingo claim 9 -> pending"
+    },
+    {
+      "at": "2026-11-15T19:07:30.098Z",
+      "who": "admin",
+      "what": "bingo approved lauren #9"
+    },
+    {
+      "at": "2026-11-15T20:30:52.548Z",
+      "who": "lauren",
+      "what": "bingo claim 19 -> pending"
+    },
+    {
+      "at": "2026-11-15T22:45:25.609Z",
+      "who": "chris",
+      "what": "bingo claim 9 -> pending"
+    },
+    {
+      "at": "2026-11-15T23:16:46.725Z",
+      "who": "michael",
+      "what": "bingo claim 14 -> pending"
+    },
+    {
+      "at": "2026-11-15T23:17:02.705Z",
+      "who": "michael",
+      "what": "bingo claim 5 -> pending"
+    },
+    {
+      "at": "2026-11-15T23:17:12.201Z",
+      "who": "admin",
+      "what": "bingo approved michael #5"
+    },
+    {
+      "at": "2026-11-15T23:17:18.018Z",
+      "who": "admin",
+      "what": "bingo approved lauren #19"
+    },
+    {
+      "at": "2026-11-15T23:17:19.652Z",
+      "who": "admin",
+      "what": "bingo approved michael #14"
+    },
+    {
+      "at": "2026-11-15T23:17:21.669Z",
+      "who": "admin",
+      "what": "bingo approved chris #9"
+    },
+    {
+      "at": "2026-11-16T03:41:42.643Z",
+      "who": "lauren",
+      "what": "bingo claim 17 -> pending"
+    },
+    {
+      "at": "2026-11-16T13:00:49.335Z",
+      "who": "michael",
+      "what": "bingo claim 7 -> pending"
+    },
+    {
+      "at": "2026-11-16T13:01:45.064Z",
+      "who": "admin",
+      "what": "bingo approved michael #7"
+    },
+    {
+      "at": "2026-11-16T13:01:49.272Z",
+      "who": "admin",
+      "what": "bingo approved lauren #17"
+    },
+    {
+      "at": "2026-11-16T13:02:57.457Z",
+      "who": "michael",
+      "what": "log michael 2026-11-15 = 12394"
+    },
+    {
+      "at": "2026-11-16T14:05:36.735Z",
+      "who": "jordan",
+      "what": "log jordan 2026-11-15 = 10383"
+    },
+    {
+      "at": "2026-11-16T17:31:11.134Z",
+      "who": "chris",
+      "what": "log chris 2026-11-15 = 16237"
+    },
+    {
+      "at": "2026-11-16T17:31:12.354Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-15 = 16237 (was 16237)"
+    },
+    {
+      "at": "2026-11-16T18:47:24.920Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-15 = 14803"
+    },
+    {
+      "at": "2026-11-16T18:50:46.328Z",
+      "who": "kaykay",
+      "what": "bingo claim 1 -> approved"
+    },
+    {
+      "at": "2026-11-16T18:51:48.849Z",
+      "who": "kaykay",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-16T18:52:30.692Z",
+      "who": "kaykay",
+      "what": "bingo claim 16 -> approved"
+    },
+    {
+      "at": "2026-11-16T19:11:11.389Z",
+      "who": "chris",
+      "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-16T19:11:56.498Z",
+      "who": "chris",
+      "what": "bingo claim 1 -> approved"
+    },
+    {
+      "at": "2026-11-16T19:38:54.925Z",
+      "who": "jordan",
+      "what": "edit jordan 2026-11-15 = 10399 (was 10383)"
+    },
+    {
+      "at": "2026-11-16T19:39:12.080Z",
+      "who": "lauren",
+      "what": "log lauren 2026-11-15 = 6390"
+    },
+    {
+      "at": "2026-11-16T19:39:23.520Z",
+      "who": "allen",
+      "what": "log allen 2026-11-15 = 5001"
+    },
+    {
+      "at": "2026-11-16T19:39:36.124Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-15 = 16939 (was 16237)"
+    },
+    {
+      "at": "2026-11-16T19:39:55.531Z",
+      "who": "meghan",
+      "what": "log meghan 2026-11-15 = 7528"
+    },
+    {
+      "at": "2026-11-16T19:40:15.465Z",
+      "who": "shania",
+      "what": "log shania 2026-11-15 = 15456"
+    },
+    {
+      "at": "2026-11-16T19:40:15.466Z",
+      "who": "auto",
+      "what": "goal 2026-11-15 won by lauren"
+    },
+    {
+      "at": "2026-11-16T23:33:17.343Z",
+      "who": "michael",
+      "what": "bingo claim 17 -> pending"
+    },
+    {
+      "at": "2026-11-16T23:33:27.853Z",
+      "who": "admin",
+      "what": "bingo approved michael #17"
+    },
+    {
+      "at": "2026-11-17T03:03:05.043Z",
+      "who": "lauren",
+      "what": "bingo claim 3 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:22:24.049Z",
+      "who": "jordan",
+      "what": "edit jordan 2026-11-15 = 10399 (was 10399)"
+    },
+    {
+      "at": "2026-11-17T03:24:55.633Z",
+      "who": "jordan",
+      "what": "bingo claim 3 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:25:11.701Z",
+      "who": "jordan",
+      "what": "bingo claim 14 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:25:25.921Z",
+      "who": "jordan",
+      "what": "bingo claim 11 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:25:45.612Z",
+      "who": "jordan",
+      "what": "bingo claim 4 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:26:04.864Z",
+      "who": "jordan",
+      "what": "bingo claim 17 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:26:49.411Z",
+      "who": "jordan",
+      "what": "bingo claim 5 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:29:11.903Z",
+      "who": "admin",
+      "what": "bingo approved jordan #3"
+    },
+    {
+      "at": "2026-11-17T03:29:14.426Z",
+      "who": "admin",
+      "what": "bingo approved jordan #4"
+    },
+    {
+      "at": "2026-11-17T03:29:38.876Z",
+      "who": "admin",
+      "what": "bingo rejected jordan #5"
+    },
+    {
+      "at": "2026-11-17T03:29:41.984Z",
+      "who": "admin",
+      "what": "bingo approved jordan #17"
+    },
+    {
+      "at": "2026-11-17T03:29:47.656Z",
+      "who": "admin",
+      "what": "bingo approved lauren #3"
+    },
+    {
+      "at": "2026-11-17T03:30:07.352Z",
+      "who": "admin",
+      "what": "bingo approved jordan #11"
+    },
+    {
+      "at": "2026-11-17T03:30:10.116Z",
+      "who": "admin",
+      "what": "bingo approved jordan #14"
+    },
+    {
+      "at": "2026-11-17T03:30:36.833Z",
+      "who": "jordan",
+      "what": "bingo claim 5 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:31:02.580Z",
+      "who": "michael",
+      "what": "bingo claim 11 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:31:11.065Z",
+      "who": "admin",
+      "what": "bingo rejected jordan #5"
+    },
+    {
+      "at": "2026-11-17T03:31:15.204Z",
+      "who": "admin",
+      "what": "bingo approved michael #11"
+    },
+    {
+      "at": "2026-11-17T03:32:10.737Z",
+      "who": "jordan",
+      "what": "bingo claim 5 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:33:49.292Z",
+      "who": "michael",
+      "what": "bingo claim 4 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:33:58.113Z",
+      "who": "admin",
+      "what": "bingo approved michael #4"
+    },
+    {
+      "at": "2026-11-17T03:34:04.191Z",
+      "who": "admin",
+      "what": "bingo approved jordan #5"
+    },
+    {
+      "at": "2026-11-17T03:41:36.270Z",
+      "who": "lauren",
+      "what": "bingo claim 22 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:43:14.096Z",
+      "who": "chris",
+      "what": "bingo claim 17 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:43:37.731Z",
+      "who": "allen",
+      "what": "bingo claim 11 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:49:01.266Z",
+      "who": "kaykay",
+      "what": "bingo claim 5 -> pending"
+    },
+    {
+      "at": "2026-11-17T03:49:15.705Z",
+      "who": "kaykay",
+      "what": "bingo claim 22 -> pending"
+    },
+    {
+      "at": "2026-11-17T12:13:26.648Z",
+      "who": "michael",
+      "what": "log michael 2026-11-16 = 16027"
+    },
+    {
+      "at": "2026-11-17T12:14:37.296Z",
+      "who": "michael",
+      "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-17T12:14:45.784Z",
+      "who": "michael",
+      "what": "bingo claim 1 -> rejected"
+    },
+    {
+      "at": "2026-11-17T12:15:03.875Z",
+      "who": "michael",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-17T12:15:45.046Z",
+      "who": "admin",
+      "what": "bingo approved allen #11"
+    },
+    {
+      "at": "2026-11-17T12:15:47.011Z",
+      "who": "admin",
+      "what": "bingo approved lauren #22"
+    },
+    {
+      "at": "2026-11-17T12:15:51.325Z",
+      "who": "admin",
+      "what": "bingo approved chris #17"
+    },
+    {
+      "at": "2026-11-17T12:15:57.425Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #5"
+    },
+    {
+      "at": "2026-11-17T12:16:02.040Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #22"
+    },
+    {
+      "at": "2026-11-17T12:16:28.030Z",
+      "who": "michael",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-17T16:17:08.419Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-16 = 12108"
+    },
+    {
+      "at": "2026-11-17T16:40:15.127Z",
+      "who": "chris",
+      "what": "log chris 2026-11-16 = 15732"
+    },
+    {
+      "at": "2026-11-17T16:40:16.574Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-16 = 15732 (was 15732)"
+    },
+    {
+      "at": "2026-11-17T16:40:56.081Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-16 = 15732 (was 15732)"
+    },
+    {
+      "at": "2026-11-17T16:40:59.883Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-16 = 15732 (was 15732)"
+    },
+    {
+      "at": "2026-11-17T16:41:03.232Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-16 = 15732 (was 15732)"
+    },
+    {
+      "at": "2026-11-17T16:41:04.729Z",
+      "who": "chris",
+      "what": "bingo claim 16 -> approved"
+    },
+    {
+      "at": "2026-11-17T16:41:14.513Z",
+      "who": "chris",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-17T16:41:33.691Z",
+      "who": "chris",
+      "what": "bingo claim 11 -> pending"
+    },
+    {
+      "at": "2026-11-17T20:11:23.536Z",
+      "who": "chris",
+      "what": "bingo claim 14 -> pending"
+    },
+    {
+      "at": "2026-11-17T22:13:05.712Z",
+      "who": "jordan",
+      "what": "log jordan 2026-11-16 = 14965"
+    },
+    {
+      "at": "2026-11-17T22:13:47.451Z",
+      "who": "jordan",
+      "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-17T22:14:03.865Z",
+      "who": "jordan",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-17T22:17:23.378Z",
+      "who": "jordan",
+      "what": "bingo claim 7 -> pending"
+    },
+    {
+      "at": "2026-11-17T22:28:40.380Z",
+      "who": "kaykay",
+      "what": "bingo claim 17 -> pending"
+    },
+    {
+      "at": "2026-11-17T23:21:36.447Z",
+      "who": "michael",
+      "what": "edit michael 2026-11-16 = 16040 (was 16027)"
+    },
+    {
+      "at": "2026-11-17T23:21:50.445Z",
+      "who": "lauren",
+      "what": "log lauren 2026-11-16 = 7442"
+    },
+    {
+      "at": "2026-11-17T23:22:00.734Z",
+      "who": "allen",
+      "what": "log allen 2026-11-16 = 13065"
+    },
+    {
+      "at": "2026-11-17T23:22:11.065Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-16 = 10572 (was 15732)"
+    },
+    {
+      "at": "2026-11-17T23:22:25.587Z",
+      "who": "meghan",
+      "what": "log meghan 2026-11-16 = 5176"
+    },
+    {
+      "at": "2026-11-17T23:22:40.505Z",
+      "who": "shania",
+      "what": "log shania 2026-11-16 = 14526"
+    },
+    {
+      "at": "2026-11-17T23:22:40.506Z",
+      "who": "auto",
+      "what": "goal 2026-11-16 won by jordan"
+    },
+    {
+      "at": "2026-11-17T23:23:37.522Z",
+      "who": "lauren",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-17T23:23:42.851Z",
+      "who": "lauren",
+      "what": "bingo claim 8 -> rejected"
+    },
+    {
+      "at": "2026-11-17T23:23:50.836Z",
+      "who": "lauren",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-17T23:23:55.389Z",
+      "who": "lauren",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-17T23:24:00.135Z",
+      "who": "lauren",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-17T23:24:05.850Z",
+      "who": "lauren",
+      "what": "bingo claim 15 -> approved"
+    },
+    {
+      "at": "2026-11-17T23:24:09.053Z",
+      "who": "lauren",
+      "what": "bingo claim 1 -> approved"
+    },
+    {
+      "at": "2026-11-17T23:34:02.023Z",
+      "who": "lauren",
+      "what": "rest day lauren 2026-11-17"
+    },
+    {
+      "at": "2026-11-18T01:25:13.350Z",
+      "who": "michael",
+      "what": "bingo claim 22 -> pending"
+    },
+    {
+      "at": "2026-11-18T01:25:29.717Z",
+      "who": "admin",
+      "what": "bingo approved michael #22"
+    },
+    {
+      "at": "2026-11-18T01:25:33.019Z",
+      "who": "admin",
+      "what": "bingo approved jordan #7"
+    },
+    {
+      "at": "2026-11-18T01:25:54.339Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #17"
+    },
+    {
+      "at": "2026-11-18T01:25:57.652Z",
+      "who": "admin",
+      "what": "bingo approved chris #11"
+    },
+    {
+      "at": "2026-11-18T01:25:59.716Z",
+      "who": "admin",
+      "what": "bingo approved chris #14"
+    },
+    {
+      "at": "2026-11-18T12:57:44.698Z",
+      "who": "michael",
+      "what": "log michael 2026-11-17 = 18256"
+    },
+    {
+      "at": "2026-11-18T12:57:51.673Z",
+      "who": "michael",
+      "what": "edit michael 2026-11-17 = 18256 (was 18256)"
+    },
+    {
+      "at": "2026-11-18T12:58:15.334Z",
+      "who": "michael",
+      "what": "bingo claim 1 -> approved"
+    },
+    {
+      "at": "2026-11-18T12:59:10.414Z",
+      "who": "michael",
+      "what": "bingo claim 0 -> pending"
+    },
+    {
+      "at": "2026-11-18T12:59:30.529Z",
+      "who": "admin",
+      "what": "bingo approved michael #0"
+    },
+    {
+      "at": "2026-11-18T12:59:39.978Z",
+      "who": "michael",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-18T12:59:45.033Z",
+      "who": "michael",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-18T13:00:42.675Z",
+      "who": "michael",
+      "what": "bingo claim 16 -> approved"
+    },
+    {
+      "at": "2026-11-18T13:01:31.777Z",
+      "who": "michael",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-18T16:29:35.875Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-17 = 14591"
+    },
+    {
+      "at": "2026-11-18T21:01:00.870Z",
+      "who": "jordan",
+      "what": "log jordan 2026-11-17 = 16661"
+    },
+    {
+      "at": "2026-11-18T21:01:04.957Z",
+      "who": "jordan",
+      "what": "edit jordan 2026-11-17 = 16661 (was 16661)"
+    },
+    {
+      "at": "2026-11-18T21:01:05.939Z",
+      "who": "jordan",
+      "what": "edit jordan 2026-11-17 = 16661 (was 16661)"
+    },
+    {
+      "at": "2026-11-18T21:10:07.805Z",
+      "who": "jordan",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-18T21:10:22.256Z",
+      "who": "jordan",
+      "what": "bingo claim 16 -> approved"
+    },
+    {
+      "at": "2026-11-18T21:12:02.354Z",
+      "who": "jordan",
+      "what": "bingo claim 22 -> pending"
+    },
+    {
+      "at": "2026-11-18T21:12:19.143Z",
+      "who": "jordan",
+      "what": "bingo claim 20 -> approved"
+    },
+    {
+      "at": "2026-11-18T21:18:19.042Z",
+      "who": "allen",
+      "what": "log allen 2026-11-17 = 15521"
+    },
+    {
+      "at": "2026-11-18T21:18:27.491Z",
+      "who": "chris",
+      "what": "log chris 2026-11-17 = 8191"
+    },
+    {
+      "at": "2026-11-18T21:18:43.129Z",
+      "who": "meghan",
+      "what": "log meghan 2026-11-17 = 8483"
+    },
+    {
+      "at": "2026-11-18T22:46:14.581Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-17 = 15741 (was 8191)"
+    },
+    {
+      "at": "2026-11-18T22:46:15.779Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-17 = 15741 (was 15741)"
+    },
+    {
+      "at": "2026-11-18T22:47:05.163Z",
+      "who": "kaykay",
+      "what": "bingo claim 23 -> pending"
+    },
+    {
+      "at": "2026-11-19T02:13:43.222Z",
+      "who": "shania",
+      "what": "log shania 2026-11-17 = 22647"
+    },
+    {
+      "at": "2026-11-19T02:13:43.222Z",
+      "who": "auto",
+      "what": "goal 2026-11-17 won by jordan"
+    },
+    {
+      "at": "2026-11-19T02:13:43.222Z",
+      "who": "auto",
+      "what": "close round 1"
+    },
+    {
+      "at": "2026-11-19T02:25:20.158Z",
+      "who": "michael",
+      "what": "bingo claim 9 -> pending"
+    },
+    {
+      "at": "2026-11-19T02:25:45.297Z",
+      "who": "admin",
+      "what": "bingo approved michael #9"
+    },
+    {
+      "at": "2026-11-19T02:25:48.180Z",
+      "who": "admin",
+      "what": "bingo approved jordan #22"
+    },
+    {
+      "at": "2026-11-19T02:25:51.360Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #23"
+    },
+    {
+      "at": "2026-11-19T02:25:52.673Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #23"
+    },
+    {
+      "at": "2026-11-19T03:08:01.042Z",
+      "who": "lauren",
+      "what": "bingo claim 5 -> pending"
+    },
+    {
+      "at": "2026-11-19T12:38:26.378Z",
+      "who": "michael",
+      "what": "log michael 2026-11-18 = 18411"
+    },
+    {
+      "at": "2026-11-19T12:39:03.272Z",
+      "who": "michael",
+      "what": "bingo claim 6 -> approved"
+    },
+    {
+      "at": "2026-11-19T12:39:09.724Z",
+      "who": "michael",
+      "what": "bingo claim 20 -> approved"
+    },
+    {
+      "at": "2026-11-19T13:49:33.378Z",
+      "who": "chris",
+      "what": "log chris 2026-11-18 = 6084"
+    },
+    {
+      "at": "2026-11-19T13:49:34.588Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-18 = 6084 (was 6084)"
+    },
+    {
+      "at": "2026-11-19T13:57:51.777Z",
+      "who": "lauren",
+      "what": "bingo claim 14 -> pending"
+    },
+    {
+      "at": "2026-11-19T19:11:54.288Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-18 = 9788"
+    },
+    {
+      "at": "2026-11-19T19:12:51.513Z",
+      "who": "kaykay",
+      "what": "bingo claim 6 -> approved"
+    },
+    {
+      "at": "2026-11-19T23:53:28.831Z",
+      "who": "kaykay",
+      "what": "bingo claim 19 -> pending"
+    },
+    {
+      "at": "2026-11-20T00:34:54.218Z",
+      "who": "kaykay",
+      "what": "bingo claim 20 -> approved"
+    },
+    {
+      "at": "2026-11-20T00:35:18.693Z",
+      "who": "kaykay",
+      "what": "bingo claim 11 -> pending"
+    },
+    {
+      "at": "2026-11-20T01:24:53.976Z",
+      "who": "michael",
+      "what": "rest day michael 2026-11-19"
+    },
+    {
+      "at": "2026-11-20T01:26:07.569Z",
+      "who": "jordan",
+      "what": "rest day jordan 2026-11-19"
+    },
+    {
+      "at": "2026-11-20T06:07:30.146Z",
+      "who": "lauren",
+      "what": "log lauren 2026-11-18 = 6124"
+    },
+    {
+      "at": "2026-11-20T06:07:42.237Z",
+      "who": "lauren",
+      "what": "log lauren 2026-11-19 = 7089"
+    },
+    {
+      "at": "2026-11-20T06:08:15.126Z",
+      "who": "jordan",
+      "what": "log jordan 2026-11-18 = 13629"
+    },
+    {
+      "at": "2026-11-20T06:14:04.795Z",
+      "who": "allen",
+      "what": "log allen 2026-11-18 = 12958"
+    },
+    {
+      "at": "2026-11-20T06:21:36.201Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-18 = 3918 (was 6084)"
+    },
+    {
+      "at": "2026-11-20T06:26:10.257Z",
+      "who": "meghan",
+      "what": "log meghan 2026-11-18 = 4681"
+    },
+    {
+      "at": "2026-11-20T06:26:24.517Z",
+      "who": "shania",
+      "what": "log shania 2026-11-18 = 1870"
+    },
+    {
+      "at": "2026-11-20T06:26:24.517Z",
+      "who": "auto",
+      "what": "goal 2026-11-18 won by allen"
+    },
+    {
+      "at": "2026-11-20T06:26:47.576Z",
+      "who": "allen",
+      "what": "log allen 2026-11-19 = 12958"
+    },
+    {
+      "at": "2026-11-20T06:27:06.832Z",
+      "who": "allen",
+      "what": "edit allen 2026-11-19 = 17682 (was 12958)"
+    },
+    {
+      "at": "2026-11-20T06:27:22.864Z",
+      "who": "chris",
+      "what": "log chris 2026-11-19 = 3578"
+    },
+    {
+      "at": "2026-11-20T06:36:58.070Z",
+      "who": "meghan",
+      "what": "log meghan 2026-11-19 = 6322"
+    },
+    {
+      "at": "2026-11-20T15:22:10.605Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-19 = 12312 (was 3578)"
+    },
+    {
+      "at": "2026-11-20T15:22:11.677Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-19 = 12312 (was 12312)"
+    },
+    {
+      "at": "2026-11-20T16:02:15.062Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-19 = 14224"
+    },
+    {
+      "at": "2026-11-20T16:04:56.849Z",
+      "who": "kaykay",
+      "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-20T21:51:31.343Z",
+      "who": "kaykay",
+      "what": "bingo claim 4 -> pending"
+    },
+    {
+      "at": "2026-11-20T23:29:09.212Z",
+      "who": "jordan",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-20T23:29:11.172Z",
+      "who": "jordan",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-20T23:29:26.756Z",
+      "who": "jordan",
+      "what": "bingo claim 6 -> approved"
+    },
+    {
+      "at": "2026-11-20T23:29:40.920Z",
+      "who": "jordan",
+      "what": "bingo claim 18 -> pending"
+    },
+    {
+      "at": "2026-11-20T23:31:42.795Z",
+      "who": "jordan",
+      "what": "bingo claim 9 -> pending"
+    },
+    {
+      "at": "2026-11-21T00:41:23.991Z",
+      "who": "chris",
+      "what": "bingo claim 2 -> pending"
+    },
+    {
+      "at": "2026-11-21T00:42:03.311Z",
+      "who": "kaykay",
+      "what": "bingo claim 2 -> pending"
+    },
+    {
+      "at": "2026-11-21T01:50:58.177Z",
+      "who": "michael",
+      "what": "bingo claim 13 -> pending"
+    },
+    {
+      "at": "2026-11-21T01:51:33.306Z",
+      "who": "michael",
+      "what": "bingo claim 18 -> pending"
+    },
+    {
+      "at": "2026-11-21T01:51:47.532Z",
+      "who": "admin",
+      "what": "bingo approved michael #13"
+    },
+    {
+      "at": "2026-11-21T01:51:50.142Z",
+      "who": "admin",
+      "what": "bingo approved michael #18"
+    },
+    {
+      "at": "2026-11-21T01:51:53.617Z",
+      "who": "admin",
+      "what": "bingo approved jordan #18"
+    },
+    {
+      "at": "2026-11-21T01:52:07.057Z",
+      "who": "admin",
+      "what": "bingo approved lauren #14"
+    },
+    {
+      "at": "2026-11-21T01:52:11.164Z",
+      "who": "admin",
+      "what": "bingo approved chris #2"
+    },
+    {
+      "at": "2026-11-21T01:52:16.680Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #2"
+    },
+    {
+      "at": "2026-11-21T01:52:22.043Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #4"
+    },
+    {
+      "at": "2026-11-21T01:52:25.577Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #11"
+    },
+    {
+      "at": "2026-11-21T01:52:27.527Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #19"
+    },
+    {
+      "at": "2026-11-21T01:52:30.853Z",
+      "who": "admin",
+      "what": "bingo approved jordan #9"
+    },
+    {
+      "at": "2026-11-21T01:53:28.052Z",
+      "who": "admin",
+      "what": "bingo approved lauren #5"
+    },
+    {
+      "at": "2026-11-21T10:59:41.930Z",
+      "who": "lauren",
+      "what": "edit lauren 2026-11-18 = 6208 (was 6124)"
+    },
+    {
+      "at": "2026-11-21T10:59:45.044Z",
+      "who": "lauren",
+      "what": "edit lauren 2026-11-18 = 6208 (was 6208)"
+    },
+    {
+      "at": "2026-11-21T10:59:56.274Z",
+      "who": "michael",
+      "what": "log michael 2026-11-20 = 17977"
+    },
+    {
+      "at": "2026-11-21T11:00:06.521Z",
+      "who": "jordan",
+      "what": "log jordan 2026-11-20 = 11532"
+    },
+    {
+      "at": "2026-11-21T11:00:22.131Z",
+      "who": "lauren",
+      "what": "log lauren 2026-11-20 = 6208"
+    },
+    {
+      "at": "2026-11-21T11:00:42.337Z",
+      "who": "lauren",
+      "what": "edit lauren 2026-11-19 = 7141 (was 7089)"
+    },
+    {
+      "at": "2026-11-21T11:00:53.224Z",
+      "who": "allen",
+      "what": "log allen 2026-11-20 = 17682"
+    },
+    {
+      "at": "2026-11-21T11:01:09.689Z",
+      "who": "chris",
+      "what": "log chris 2026-11-20 = 3606"
+    },
+    {
+      "at": "2026-11-21T11:01:18.828Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-20 = 14224"
+    },
+    {
+      "at": "2026-11-21T11:01:32.565Z",
+      "who": "meghan",
+      "what": "log meghan 2026-11-20 = 6408"
+    },
+    {
+      "at": "2026-11-21T11:03:40.739Z",
+      "who": "lauren",
+      "what": "bingo claim 13 -> pending"
+    },
+    {
+      "at": "2026-11-21T11:03:46.087Z",
+      "who": "lauren",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-21T11:03:47.516Z",
+      "who": "lauren",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-21T11:03:50.098Z",
+      "who": "lauren",
+      "what": "bingo claim 8 -> rejected"
+    },
+    {
+      "at": "2026-11-21T11:03:53.653Z",
+      "who": "lauren",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-21T11:03:55.944Z",
+      "who": "lauren",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-21T11:03:58.344Z",
+      "who": "lauren",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-21T11:04:00.861Z",
+      "who": "lauren",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-21T12:02:18.269Z",
+      "who": "lauren",
+      "what": "bingo claim 7 -> pending"
+    },
+    {
+      "at": "2026-11-21T15:30:50.725Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-20 = 18294 (was 3606)"
+    },
+    {
+      "at": "2026-11-21T16:45:07.893Z",
+      "who": "kaykay",
+      "what": "edit kaykay 2026-11-20 = 21606 (was 14224)"
+    },
+    {
+      "at": "2026-11-21T16:46:34.943Z",
+      "who": "kaykay",
+      "what": "bingo claim 15 -> approved"
+    },
+    {
+      "at": "2026-11-21T16:51:22.008Z",
+      "who": "michael",
+      "what": "edit michael 2026-11-20 = 18085 (was 17977)"
+    },
+    {
+      "at": "2026-11-21T16:52:34.549Z",
+      "who": "jordan",
+      "what": "edit jordan 2026-11-20 = 11560 (was 11532)"
+    },
+    {
+      "at": "2026-11-21T16:57:43.578Z",
+      "who": "jordan",
+      "what": "bingo claim 13 -> pending"
+    },
+    {
+      "at": "2026-11-21T17:04:18.175Z",
+      "who": "chris",
+      "what": "bingo claim 15 -> approved"
+    },
+    {
+      "at": "2026-11-21T17:16:58.671Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-18 = 18005 (was 1870)"
+    },
+    {
+      "at": "2026-11-21T17:17:24.114Z",
+      "who": "shania",
+      "what": "log shania 2026-11-19 = 15431"
+    },
+    {
+      "at": "2026-11-21T17:17:24.114Z",
+      "who": "auto",
+      "what": "goal 2026-11-19 won by allen"
+    },
+    {
+      "at": "2026-11-21T17:17:45.349Z",
+      "who": "shania",
+      "what": "log shania 2026-11-20 = 6426"
+    },
+    {
+      "at": "2026-11-21T17:17:45.349Z",
+      "who": "auto",
+      "what": "goal 2026-11-20 won by chris"
+    },
+    {
+      "at": "2026-11-21T18:47:18.409Z",
+      "who": "chris",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-21T18:47:40.698Z",
+      "who": "chris",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-21T18:49:04.371Z",
+      "who": "chris",
+      "what": "bingo claim 5 -> pending"
+    },
+    {
+      "at": "2026-11-21T19:22:18.248Z",
+      "who": "jordan",
+      "what": "bingo claim 0 -> pending"
+    },
+    {
+      "at": "2026-11-21T19:22:26.925Z",
+      "who": "jordan",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-21T21:02:03.630Z",
+      "who": "allen",
+      "what": "bingo claim 1 -> rejected"
+    },
+    {
+      "at": "2026-11-21T21:02:04.711Z",
+      "who": "allen",
+      "what": "bingo claim 1 -> rejected"
+    },
+    {
+      "at": "2026-11-21T21:02:08.977Z",
+      "who": "allen",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-21T21:02:09.917Z",
+      "who": "allen",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-21T21:02:14.408Z",
+      "who": "allen",
+      "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-21T21:02:21.763Z",
+      "who": "allen",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-21T21:02:24.874Z",
+      "who": "allen",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-21T21:02:28.593Z",
+      "who": "allen",
+      "what": "bingo claim 10 -> pending"
+    },
+    {
+      "at": "2026-11-21T21:02:34.276Z",
+      "who": "allen",
+      "what": "bingo claim 20 -> approved"
+    },
+    {
+      "at": "2026-11-21T21:02:37.697Z",
+      "who": "allen",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-21T22:31:02.085Z",
+      "who": "kaykay",
+      "what": "bingo claim 14 -> pending"
+    },
+    {
+      "at": "2026-11-21T22:33:30.467Z",
+      "who": "kaykay",
+      "what": "bingo claim 10 -> pending"
+    },
+    {
+      "at": "2026-11-22T04:25:10.836Z",
+      "who": "michael",
+      "what": "bingo claim 23 -> pending"
+    },
+    {
+      "at": "2026-11-22T04:25:23.147Z",
+      "who": "admin",
+      "what": "bingo approved michael #23"
+    },
+    {
+      "at": "2026-11-22T04:25:29.710Z",
+      "who": "admin",
+      "what": "bingo approved jordan #0"
+    },
+    {
+      "at": "2026-11-22T04:25:32.163Z",
+      "who": "admin",
+      "what": "bingo approved jordan #13"
+    },
+    {
+      "at": "2026-11-22T04:25:52.467Z",
+      "who": "admin",
+      "what": "bingo approved lauren #7"
+    },
+    {
+      "at": "2026-11-22T04:26:00.764Z",
+      "who": "admin",
+      "what": "bingo approved lauren #13"
+    },
+    {
+      "at": "2026-11-22T04:26:05.036Z",
+      "who": "admin",
+      "what": "bingo approved chris #5"
+    },
+    {
+      "at": "2026-11-22T04:26:13.468Z",
+      "who": "admin",
+      "what": "bingo approved allen #10"
+    },
+    {
+      "at": "2026-11-22T04:26:15.216Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #10"
+    },
+    {
+      "at": "2026-11-22T04:26:16.966Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #14"
+    },
+    {
+      "at": "2026-11-22T04:28:29.087Z",
+      "who": "jordan",
+      "what": "bingo claim 23 -> pending"
+    },
+    {
+      "at": "2026-11-22T04:29:36.005Z",
+      "who": "jordan",
+      "what": "bingo claim 10 -> pending"
+    },
+    {
+      "at": "2026-11-22T06:40:04.327Z",
+      "who": "lauren",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:06.991Z",
+      "who": "lauren",
+      "what": "bingo claim 8 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:09.125Z",
+      "who": "lauren",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:10.290Z",
+      "who": "lauren",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:11.387Z",
+      "who": "lauren",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:12.320Z",
+      "who": "lauren",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:13.231Z",
+      "who": "lauren",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:14.525Z",
+      "who": "lauren",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:15.626Z",
+      "who": "lauren",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:37.487Z",
+      "who": "allen",
+      "what": "bingo claim 1 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:40.415Z",
+      "who": "allen",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:42.345Z",
+      "who": "allen",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:44.782Z",
+      "who": "allen",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:46.998Z",
+      "who": "allen",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:48.582Z",
+      "who": "allen",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:40:59.704Z",
+      "who": "allen",
+      "what": "bingo claim 14 -> pending"
+    },
+    {
+      "at": "2026-11-22T06:41:21.769Z",
+      "who": "meghan",
+      "what": "bingo claim 1 -> approved"
+    },
+    {
+      "at": "2026-11-22T06:41:28.385Z",
+      "who": "meghan",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:41:32.886Z",
+      "who": "meghan",
+      "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-22T06:41:42.085Z",
+      "who": "meghan",
+      "what": "bingo claim 11 -> pending"
+    },
+    {
+      "at": "2026-11-22T06:41:44.936Z",
+      "who": "meghan",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:41:47.237Z",
+      "who": "meghan",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:41:55.635Z",
+      "who": "meghan",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:41:57.972Z",
+      "who": "meghan",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:42:04.837Z",
+      "who": "shania",
+      "what": "bingo claim 1 -> approved"
+    },
+    {
+      "at": "2026-11-22T06:42:08.152Z",
+      "who": "shania",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:42:10.638Z",
+      "who": "shania",
+      "what": "bingo claim 8 -> approved"
+    },
+    {
+      "at": "2026-11-22T06:42:15.788Z",
+      "who": "shania",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:42:18.323Z",
+      "who": "shania",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:42:21.788Z",
+      "who": "shania",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:42:24.823Z",
+      "who": "shania",
+      "what": "bingo claim 10 -> pending"
+    },
+    {
+      "at": "2026-11-22T06:42:27.256Z",
+      "who": "shania",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:44:33.389Z",
+      "who": "shania",
+      "what": "bingo claim 13 -> pending"
+    },
+    {
+      "at": "2026-11-22T06:45:11.007Z",
+      "who": "shania",
+      "what": "bingo claim 5 -> pending"
+    },
+    {
+      "at": "2026-11-22T06:45:26.673Z",
+      "who": "shania",
+      "what": "bingo claim 9 -> pending"
+    },
+    {
+      "at": "2026-11-22T06:47:32.157Z",
+      "who": "chris",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:47:34.459Z",
+      "who": "chris",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:47:53.598Z",
+      "who": "chris",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:47:56.331Z",
+      "who": "chris",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:47:59.450Z",
+      "who": "chris",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:48:07.730Z",
+      "who": "allen",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:48:11.649Z",
+      "who": "allen",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:48:14.001Z",
+      "who": "allen",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-22T06:48:22.600Z",
+      "who": "lauren",
+      "what": "bingo claim 10 -> pending"
+    },
+    {
+      "at": "2026-11-22T06:48:30.655Z",
+      "who": "lauren",
+      "what": "bingo claim 11 -> pending"
+    },
+    {
+      "at": "2026-11-22T06:49:27.176Z",
+      "who": "michael",
+      "what": "log michael 2026-11-21 = 15246"
+    },
+    {
+      "at": "2026-11-22T06:49:37.733Z",
+      "who": "jordan",
+      "what": "log jordan 2026-11-21 = 14157"
+    },
+    {
+      "at": "2026-11-22T06:49:46.694Z",
+      "who": "lauren",
+      "what": "log lauren 2026-11-21 = 8428"
+    },
+    {
+      "at": "2026-11-22T06:50:00.613Z",
+      "who": "allen",
+      "what": "log allen 2026-11-21 = 2940"
+    },
+    {
+      "at": "2026-11-22T06:50:09.950Z",
+      "who": "chris",
+      "what": "log chris 2026-11-21 = 4548"
+    },
+    {
+      "at": "2026-11-22T06:50:11.043Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-21 = 4548 (was 4548)"
+    },
+    {
+      "at": "2026-11-22T06:50:27.327Z",
+      "who": "meghan",
+      "what": "log meghan 2026-11-21 = 4810"
+    },
+    {
+      "at": "2026-11-22T06:50:36.738Z",
+      "who": "shania",
+      "what": "log shania 2026-11-21 = 2562"
+    },
+    {
+      "at": "2026-11-22T15:14:13.815Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-21 = 11440 (was 4548)"
+    },
+    {
+      "at": "2026-11-22T15:14:14.871Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-21 = 11440 (was 11440)"
+    },
+    {
+      "at": "2026-11-22T18:10:11.927Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-21 = 13141"
+    },
+    {
+      "at": "2026-11-22T18:10:11.927Z",
+      "who": "auto",
+      "what": "goal 2026-11-21 won by jordan"
+    },
+    {
+      "at": "2026-11-22T18:10:11.927Z",
+      "who": "auto",
+      "what": "close round 2"
+    },
+    {
+      "at": "2026-11-22T20:31:18.056Z",
+      "who": "kaykay",
+      "what": "play butter for 2026-11-23"
+    },
+    {
+      "at": "2026-11-22T22:21:27.086Z",
+      "who": "kaykay",
+      "what": "bingo claim 0 -> pending"
+    },
+    {
+      "at": "2026-11-22T22:22:06.565Z",
+      "who": "chris",
+      "what": "bingo claim 0 -> pending"
+    },
+    {
+      "at": "2026-11-23T07:53:46.695Z",
+      "who": "michael",
+      "what": "log michael 2026-11-22 = 11687"
+    },
+    {
+      "at": "2026-11-23T07:53:50.298Z",
+      "who": "michael",
+      "what": "edit michael 2026-11-22 = 11687 (was 11687)"
+    },
+    {
+      "at": "2026-11-23T07:54:01.075Z",
+      "who": "jordan",
+      "what": "log jordan 2026-11-22 = 15387"
+    },
+    {
+      "at": "2026-11-23T07:54:09.128Z",
+      "who": "lauren",
+      "what": "log lauren 2026-11-22 = 3183"
+    },
+    {
+      "at": "2026-11-23T07:54:22.962Z",
+      "who": "allen",
+      "what": "log allen 2026-11-22 = 1044"
+    },
+    {
+      "at": "2026-11-23T07:54:35.095Z",
+      "who": "chris",
+      "what": "log chris 2026-11-22 = 7759"
+    },
+    {
+      "at": "2026-11-23T07:55:02.040Z",
+      "who": "shania",
+      "what": "log shania 2026-11-22 = 13636"
+    },
+    {
+      "at": "2026-11-23T15:12:12.462Z",
+      "who": "kaykay",
+      "what": "bingo claim 7 -> pending"
+    },
+    {
+      "at": "2026-11-23T15:13:42.593Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-22 = 14603"
+    },
+    {
+      "at": "2026-11-23T15:16:21.457Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-22 = 14124 (was 7759)"
+    },
+    {
+      "at": "2026-11-23T15:16:22.679Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-22 = 14124 (was 14124)"
+    },
+    {
+      "at": "2026-11-23T16:39:56.416Z",
+      "who": "meghan",
+      "what": "log meghan 2026-11-22 = 828"
+    },
+    {
+      "at": "2026-11-23T16:39:56.417Z",
+      "who": "auto",
+      "what": "goal 2026-11-22 won by jordan"
+    },
+    {
+      "at": "2026-11-23T16:41:10.472Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-22 = 7759 (was 14124)"
+    },
+    {
+      "at": "2026-11-23T16:41:35.517Z",
+      "who": "jordan",
+      "what": "edit jordan 2026-11-22 = 15453 (was 15387)"
+    },
+    {
+      "at": "2026-11-23T16:43:10.185Z",
+      "who": "lauren",
+      "what": "code changed"
+    },
+    {
+      "at": "2026-11-23T16:43:42.792Z",
+      "who": "lauren",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-23T16:43:44.001Z",
+      "who": "lauren",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-23T16:43:47.867Z",
+      "who": "lauren",
+      "what": "bingo claim 8 -> rejected"
+    },
+    {
+      "at": "2026-11-23T16:43:50.818Z",
+      "who": "lauren",
+      "what": "bingo claim 16 -> rejected"
+    },
+    {
+      "at": "2026-11-23T16:43:53.567Z",
+      "who": "lauren",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-23T16:43:56.035Z",
+      "who": "lauren",
+      "what": "bingo claim 20 -> rejected"
+    },
+    {
+      "at": "2026-11-23T16:44:07.535Z",
+      "who": "lauren",
+      "what": "bingo claim 8 -> rejected"
+    },
+    {
+      "at": "2026-11-23T16:44:15.498Z",
+      "who": "allen",
+      "what": "bingo claim 1 -> rejected"
+    },
+    {
+      "at": "2026-11-23T16:44:36.174Z",
+      "who": "chris",
+      "what": "bingo claim 6 -> rejected"
+    },
+    {
+      "at": "2026-11-23T17:43:31.033Z",
+      "who": "michael",
+      "what": "edit michael 2026-11-22 = 11687 (was 11687)"
+    },
+    {
+      "at": "2026-11-24T03:11:50.031Z",
+      "who": "jordan",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-24T03:11:53.629Z",
+      "who": "jordan",
+      "what": "bingo claim 15 -> rejected"
+    },
+    {
+      "at": "2026-11-24T03:11:56.486Z",
+      "who": "jordan",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-24T03:11:57.612Z",
+      "who": "jordan",
+      "what": "bingo claim 21 -> rejected"
+    },
+    {
+      "at": "2026-11-24T03:12:34.506Z",
+      "who": "michael",
+      "what": "bingo claim 10 -> pending"
+    },
+    {
+      "at": "2026-11-24T03:13:06.428Z",
+      "who": "admin",
+      "what": "bingo approved michael #10"
+    },
+    {
+      "at": "2026-11-24T03:13:08.904Z",
+      "who": "admin",
+      "what": "bingo approved jordan #10"
+    },
+    {
+      "at": "2026-11-24T03:13:10.981Z",
+      "who": "admin",
+      "what": "bingo approved jordan #23"
+    },
+    {
+      "at": "2026-11-24T03:13:14.045Z",
+      "who": "admin",
+      "what": "bingo approved lauren #10"
+    },
+    {
+      "at": "2026-11-24T03:13:16.202Z",
+      "who": "admin",
+      "what": "bingo approved lauren #11"
+    },
+    {
+      "at": "2026-11-24T03:13:18.140Z",
+      "who": "admin",
+      "what": "bingo approved allen #14"
+    },
+    {
+      "at": "2026-11-24T03:13:20.193Z",
+      "who": "admin",
+      "what": "bingo approved chris #0"
+    },
+    {
+      "at": "2026-11-24T03:13:22.312Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #0"
+    },
+    {
+      "at": "2026-11-24T03:13:24.624Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #7"
+    },
+    {
+      "at": "2026-11-24T03:13:27.191Z",
+      "who": "admin",
+      "what": "bingo approved shania #5"
+    },
+    {
+      "at": "2026-11-24T03:13:39.717Z",
+      "who": "admin",
+      "what": "bingo rejected shania #9"
+    },
+    {
+      "at": "2026-11-24T03:13:44.358Z",
+      "who": "admin",
+      "what": "bingo approved meghan #11"
+    },
+    {
+      "at": "2026-11-24T03:13:46.367Z",
+      "who": "admin",
+      "what": "bingo approved shania #10"
+    },
+    {
+      "at": "2026-11-24T03:13:50.989Z",
+      "who": "admin",
+      "what": "bingo approved shania #13"
+    },
+    {
+      "at": "2026-11-24T03:16:30.091Z",
+      "who": "michael",
+      "what": "STEAL BLOCKED by Shield for 2026-11-24 vs jordan"
+    },
+    {
+      "at": "2026-11-24T03:21:35.468Z",
+      "who": "kaykay",
+      "what": "bingo claim 13 -> pending"
+    },
+    {
+      "at": "2026-11-24T03:22:30.357Z",
+      "who": "chris",
+      "what": "bingo claim 13 -> pending"
+    },
+    {
+      "at": "2026-11-24T14:25:17.343Z",
+      "who": "chris",
+      "what": "log chris 2026-11-23 = 11200"
+    },
+    {
+      "at": "2026-11-24T14:25:18.667Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-23 = 11200 (was 11200)"
+    },
+    {
+      "at": "2026-11-24T16:11:29.030Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-23 = 12149"
+    },
+    {
+      "at": "2026-11-24T16:11:47.298Z",
+      "who": "kaykay",
+      "what": "bingo claim 21 -> approved"
+    },
+    {
+      "at": "2026-11-24T18:05:50.275Z",
+      "who": "jordan",
+      "what": "play butter for 2026-11-25"
+    },
+    {
+      "at": "2026-11-25T00:12:33.837Z",
+      "who": "michael",
+      "what": "log michael 2026-11-23 = 18001"
+    },
+    {
+      "at": "2026-11-25T00:12:42.708Z",
+      "who": "michael",
+      "what": "edit michael 2026-11-23 = 18001 (was 18001)"
+    },
+    {
+      "at": "2026-11-25T00:13:30.455Z",
+      "who": "jordan",
+      "what": "log jordan 2026-11-23 = 8928"
+    },
+    {
+      "at": "2026-11-25T06:40:02.759Z",
+      "who": "chris",
+      "what": "log chris 2026-11-24 = 13602"
+    },
+    {
+      "at": "2026-11-25T06:40:07.112Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-24 = 13602 (was 13602)"
+    },
+    {
+      "at": "2026-11-25T06:40:08.240Z",
+      "who": "chris",
+      "what": "edit chris 2026-11-24 = 13602 (was 13602)"
+    },
+    {
+      "at": "2026-11-25T14:06:24.917Z",
+      "who": "michael",
+      "what": "log michael 2026-11-24 = 21531"
+    },
+    {
+      "at": "2026-11-25T14:06:34.880Z",
+      "who": "jordan",
+      "what": "log jordan 2026-11-24 = 15144"
+    },
+    {
+      "at": "2026-11-25T14:06:51.990Z",
+      "who": "lauren",
+      "what": "log lauren 2026-11-24 = 1197"
+    },
+    {
+      "at": "2026-11-25T14:07:04.553Z",
+      "who": "allen",
+      "what": "log allen 2026-11-24 = 13217"
+    },
+    {
+      "at": "2026-11-25T14:07:20.761Z",
+      "who": "kaykay",
+      "what": "log kaykay 2026-11-24 = 3948"
+    },
+    {
+      "at": "2026-11-25T14:07:31.220Z",
+      "who": "meghan",
+      "what": "log meghan 2026-11-24 = 1644"
+    },
+    {
+      "at": "2026-11-25T14:09:13.695Z",
+      "who": "lauren",
+      "what": "bingo claim 2 -> pending"
+    },
+    {
+      "at": "2026-11-25T14:10:31.334Z",
+      "who": "allen",
+      "what": "bingo claim 2 -> pending"
+    },
+    {
+      "at": "2026-11-25T14:12:37.780Z",
+      "who": "lauren",
+      "what": "bingo claim 23 -> pending"
+    },
+    {
+      "at": "2026-11-25T14:18:31.376Z",
+      "who": "lauren",
+      "what": "bingo claim 18 -> pending"
+    },
+    {
+      "at": "2026-11-25T14:30:11.616Z",
+      "who": "michael",
+      "what": "edit michael 2026-11-24 = 21531 (was 21531)"
+    },
+    {
+      "at": "2026-11-25T14:30:31.018Z",
+      "who": "michael",
+      "what": "bingo claim 21 -> approved"
+    },
+    {
+      "at": "2026-11-25T14:30:35.229Z",
+      "who": "michael",
+      "what": "bingo claim 15 -> approved"
+    },
+    {
+      "at": "2026-11-25T15:57:09.747Z",
+      "who": "lauren",
+      "what": "log lauren 2026-11-23 = 8915"
+    },
+    {
+      "at": "2026-11-25T16:00:09.244Z",
+      "who": "shania",
+      "what": "log shania 2026-11-24 = 17923"
+    },
+    {
+      "at": "2026-11-25T16:00:09.245Z",
+      "who": "auto",
+      "what": "goal 2026-11-24 won by michael"
+    },
+    {
+      "at": "2026-11-25T16:00:30.412Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-24 = 17923 (was 17923)"
+    },
+    {
+      "at": "2026-11-25T16:00:30.805Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-24 = 17923 (was 17923)"
+    },
+    {
+      "at": "2026-11-25T16:00:32.296Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-24 = 17923 (was 17923)"
+    },
+    {
+      "at": "2026-11-25T16:00:33.732Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-24 = 17923 (was 17923)"
+    },
+    {
+      "at": "2026-11-25T16:00:35.369Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-24 = 17923 (was 17923)"
+    },
+    {
+      "at": "2026-11-25T16:00:35.879Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-24 = 17923 (was 17923)"
+    },
+    {
+      "at": "2026-11-25T16:00:36.292Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-24 = 17923 (was 17923)"
+    },
+    {
+      "at": "2026-11-25T16:00:37.711Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-24 = 17923 (was 17923)"
+    },
+    {
+      "at": "2026-11-25T16:00:39.157Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-24 = 17923 (was 17923)"
+    },
+    {
+      "at": "2026-11-25T16:00:53.884Z",
+      "who": "shania",
+      "what": "log shania 2026-11-23 = 20502"
+    },
+    {
+      "at": "2026-11-25T16:00:55.336Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-23 = 20502 (was 20502)"
+    },
+    {
+      "at": "2026-11-25T16:01:00.362Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-23 = 20502 (was 20502)"
+    },
+    {
+      "at": "2026-11-25T16:01:02.096Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-23 = 20502 (was 20502)"
+    },
+    {
+      "at": "2026-11-25T16:01:17.370Z",
+      "who": "shania",
+      "what": "edit shania 2026-11-22 = 13674 (was 13636)"
+    },
+    {
+      "at": "2026-11-25T16:01:58.401Z",
+      "who": "kaykay",
+      "what": "edit kaykay 2026-11-24 = 12608 (was 3948)"
+    },
+    {
+      "at": "2026-11-25T18:16:28.323Z",
+      "who": "michael",
+      "what": "play butter for 2026-11-26"
+    },
+    {
+      "at": "2026-11-25T18:17:15.285Z",
+      "who": "admin",
+      "what": "bingo approved lauren #2"
+    },
+    {
+      "at": "2026-11-25T18:17:17.952Z",
+      "who": "admin",
+      "what": "bingo approved lauren #18"
+    },
+    {
+      "at": "2026-11-25T18:17:21.521Z",
+      "who": "admin",
+      "what": "bingo approved lauren #23"
+    },
+    {
+      "at": "2026-11-25T18:17:24.327Z",
+      "who": "admin",
+      "what": "bingo approved allen #2"
+    },
+    {
+      "at": "2026-11-25T18:17:26.755Z",
+      "who": "admin",
+      "what": "bingo approved chris #13"
+    },
+    {
+      "at": "2026-11-25T18:17:28.389Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #13"
+    },
+    {
+      "at": "2026-11-26T04:00:49.946Z",
+      "who": "chris",
+      "what": "rest day chris 2026-11-25"
+    }
+  ],
+  "lastBackupAt": "2026-11-26T04:00:49.946Z"
+}
