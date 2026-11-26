@@ -1390,6 +1390,12 @@
           "by": "michael",
           "photo": "bingo/michael-23.jpg",
           "decidedAt": "2026-11-22T04:25:23.147Z"
+        },
+        "24": {
+          "status": "pending",
+          "at": "2026-11-26T14:30:14.453Z",
+          "by": "michael",
+          "photo": "bingo/michael-24.jpg"
         }
       },
       "jordan": {
@@ -4152,6 +4158,11 @@
       "at": "2026-11-26T05:06:04.095Z",
       "who": "jordan",
       "what": "play butter for 2026-11-26"
+    },
+    {
+      "at": "2026-11-26T14:30:14.453Z",
+      "who": "michael",
+      "what": "bingo claim 24 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-26T14:29:46.725Z"
