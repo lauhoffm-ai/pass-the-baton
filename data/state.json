@@ -518,6 +518,13 @@
       "type": "shield",
       "source": "bingo row 3",
       "at": "2026-11-25T18:17:28.389Z"
+    },
+    {
+      "id": "bingo-row-michael-4",
+      "pid": "michael",
+      "type": "shield",
+      "source": "bingo row 5",
+      "at": "2026-11-26T21:20:53.586Z"
     }
   ],
   "goals": {
@@ -1396,10 +1403,11 @@
           "decidedAt": "2026-11-22T04:25:23.147Z"
         },
         "24": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-26T14:30:14.453Z",
           "by": "michael",
-          "photo": "bingo/michael-24.jpg"
+          "photo": "bingo/michael-24.jpg",
+          "decidedAt": "2026-11-26T21:20:53.585Z"
         }
       },
       "jordan": {
@@ -4210,7 +4218,12 @@
       "at": "2026-11-26T20:26:23.346Z",
       "who": "jordan",
       "what": "log jordan 2026-11-25 = 9585"
+    },
+    {
+      "at": "2026-11-26T21:20:53.585Z",
+      "who": "admin",
+      "what": "bingo approved michael #24"
     }
   ],
-  "lastBackupAt": "2026-11-26T14:29:46.725Z"
+  "lastBackupAt": "2026-11-26T21:20:53.586Z"
 }
