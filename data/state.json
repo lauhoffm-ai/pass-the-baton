@@ -525,6 +525,13 @@
       "type": "shield",
       "source": "bingo row 5",
       "at": "2026-11-26T21:20:53.586Z"
+    },
+    {
+      "id": "bingo-row-kaykay-0",
+      "pid": "kaykay",
+      "type": "shield",
+      "source": "bingo row 1",
+      "at": "2026-11-26T21:21:00.265Z"
     }
   ],
   "goals": {
@@ -1580,10 +1587,11 @@
           "decidedAt": "2026-11-21T01:52:16.680Z"
         },
         "3": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-26T17:51:53.644Z",
           "by": "kaykay",
-          "photo": "bingo/kaykay-3.jpg"
+          "photo": "bingo/kaykay-3.jpg",
+          "decidedAt": "2026-11-26T21:21:00.265Z"
         },
         "4": {
           "status": "approved",
@@ -4229,6 +4237,11 @@
       "at": "2026-11-26T21:20:57.917Z",
       "who": "admin",
       "what": "bingo approved chris #24"
+    },
+    {
+      "at": "2026-11-26T21:21:00.265Z",
+      "who": "admin",
+      "what": "bingo approved kaykay #3"
     }
   ],
   "lastBackupAt": "2026-11-26T21:20:53.586Z"
