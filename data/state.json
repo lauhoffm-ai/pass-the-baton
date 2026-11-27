@@ -564,6 +564,13 @@
       "choice": true,
       "source": "blackout",
       "at": "2026-11-27T00:25:38.636Z"
+    },
+    {
+      "id": "bingo-row-jordan-3",
+      "pid": "jordan",
+      "type": "steal",
+      "source": "bingo row 4",
+      "at": "2026-11-27T14:08:54.178Z"
     }
   ],
   "goals": {
@@ -1549,10 +1556,9 @@
           "decidedAt": "2026-11-17T03:30:10.116Z"
         },
         "15": {
-          "status": "rejected",
-          "at": "2026-11-24T03:11:53.629Z",
+          "status": "approved",
+          "at": "2026-11-27T14:08:54.176Z",
           "by": "jordan",
-          "reason": "Your best day so far is 136% of baseline (need 150%).",
           "auto": true
         },
         "16": {
@@ -4344,6 +4350,11 @@
       "at": "2026-11-27T14:08:39.527Z",
       "who": "jordan",
       "what": "log jordan 2026-11-26 = 20762"
+    },
+    {
+      "at": "2026-11-27T14:08:54.176Z",
+      "who": "jordan",
+      "what": "bingo claim 15 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-27T14:08:39.529Z"
