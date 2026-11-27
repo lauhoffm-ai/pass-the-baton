@@ -1895,10 +1895,11 @@
           "decidedAt": "2026-11-17T12:15:51.325Z"
         },
         "18": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-27T16:56:18.449Z",
           "by": "chris",
-          "photo": "bingo/chris-18.jpg"
+          "photo": "bingo/chris-18.jpg",
+          "decidedAt": "2026-11-27T20:14:13.452Z"
         },
         "20": {
           "status": "rejected",
@@ -4443,6 +4444,11 @@
       "at": "2026-11-27T20:14:10.883Z",
       "who": "admin",
       "what": "bingo approved chris #3"
+    },
+    {
+      "at": "2026-11-27T20:14:13.452Z",
+      "who": "admin",
+      "what": "bingo approved chris #18"
     }
   ],
   "lastBackupAt": "2026-11-27T20:13:37.312Z"
