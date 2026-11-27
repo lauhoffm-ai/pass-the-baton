@@ -564,7 +564,7 @@
     {
       "id": "blackout-michael",
       "pid": "michael",
-      "type": null,
+      "type": "butter",
       "choice": true,
       "source": "blackout",
       "at": "2026-11-27T00:25:38.636Z"
@@ -4425,7 +4425,12 @@
       "at": "2026-11-27T16:56:44.356Z",
       "who": "chris",
       "what": "bingo claim 3 -> pending"
+    },
+    {
+      "at": "2026-11-27T20:13:37.311Z",
+      "who": "michael",
+      "what": "blackout choice butter"
     }
   ],
-  "lastBackupAt": "2026-11-27T14:08:39.529Z"
+  "lastBackupAt": "2026-11-27T20:13:37.312Z"
 }
