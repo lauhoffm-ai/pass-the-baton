@@ -571,6 +571,21 @@
       "type": "steal",
       "source": "bingo row 4",
       "at": "2026-11-27T14:08:54.178Z"
+    },
+    {
+      "id": "bingo-row-jordan-4",
+      "pid": "jordan",
+      "type": "butter",
+      "source": "bingo row 5",
+      "at": "2026-11-27T14:09:01.324Z"
+    },
+    {
+      "id": "blackout-jordan",
+      "pid": "jordan",
+      "type": null,
+      "choice": true,
+      "source": "blackout",
+      "at": "2026-11-27T14:09:01.324Z"
     }
   ],
   "goals": {
@@ -1594,10 +1609,9 @@
           "auto": true
         },
         "21": {
-          "status": "rejected",
-          "at": "2026-11-26T21:24:19.771Z",
+          "status": "approved",
+          "at": "2026-11-27T14:09:01.324Z",
           "by": "jordan",
-          "reason": "Need a day at 100%+ on a day you played a power-up.",
           "auto": true
         },
         "22": {
@@ -4355,6 +4369,11 @@
       "at": "2026-11-27T14:08:54.176Z",
       "who": "jordan",
       "what": "bingo claim 15 -> approved"
+    },
+    {
+      "at": "2026-11-27T14:09:01.324Z",
+      "who": "jordan",
+      "what": "bingo claim 21 -> approved"
     }
   ],
   "lastBackupAt": "2026-11-27T14:08:39.529Z"
