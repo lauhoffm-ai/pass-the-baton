@@ -547,6 +547,21 @@
       "choice": true,
       "source": "blackout",
       "at": "2026-11-26T21:21:02.300Z"
+    },
+    {
+      "id": "bingo-row-michael-3",
+      "pid": "michael",
+      "type": "steal",
+      "source": "bingo row 4",
+      "at": "2026-11-27T00:25:38.636Z"
+    },
+    {
+      "id": "blackout-michael",
+      "pid": "michael",
+      "type": null,
+      "choice": true,
+      "source": "blackout",
+      "at": "2026-11-27T00:25:38.636Z"
     }
   ],
   "goals": {
@@ -1399,9 +1414,10 @@
           "decidedAt": "2026-11-21T01:51:50.142Z"
         },
         "19": {
-          "status": "pending",
+          "status": "approved",
           "at": "2026-11-27T00:25:27.780Z",
-          "by": "michael"
+          "by": "michael",
+          "decidedAt": "2026-11-27T00:25:38.636Z"
         },
         "20": {
           "status": "approved",
@@ -4304,6 +4320,11 @@
       "at": "2026-11-27T00:25:27.780Z",
       "who": "michael",
       "what": "bingo claim 19 -> pending"
+    },
+    {
+      "at": "2026-11-27T00:25:38.636Z",
+      "who": "admin",
+      "what": "bingo approved michael #19"
     }
   ],
   "lastBackupAt": "2026-11-26T21:20:53.586Z"
