@@ -1820,6 +1820,12 @@
           "photo": "bingo/chris-2.jpg",
           "decidedAt": "2026-11-21T01:52:11.164Z"
         },
+        "3": {
+          "status": "pending",
+          "at": "2026-11-27T16:56:44.356Z",
+          "by": "chris",
+          "photo": "bingo/chris-3.jpg"
+        },
         "5": {
           "status": "approved",
           "at": "2026-11-21T18:49:04.371Z",
@@ -4414,6 +4420,11 @@
       "at": "2026-11-27T16:56:18.449Z",
       "who": "chris",
       "what": "bingo claim 18 -> pending"
+    },
+    {
+      "at": "2026-11-27T16:56:44.356Z",
+      "who": "chris",
+      "what": "bingo claim 3 -> pending"
     }
   ],
   "lastBackupAt": "2026-11-27T14:08:39.529Z"
