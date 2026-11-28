@@ -2034,11 +2034,6 @@
   },
   "history": [
     {
-      "at": "2026-11-15T03:19:26.660Z",
-      "who": "michael",
-      "what": "code changed"
-    },
-    {
       "at": "2026-11-15T03:20:54.526Z",
       "who": "admin",
       "what": "bingo approved lauren #0"
@@ -4532,6 +4527,11 @@
       "at": "2026-11-28T05:28:50.764Z",
       "who": "meghan",
       "what": "edit meghan 2026-11-25 = 3527 (was 5520)"
+    },
+    {
+      "at": "2026-11-28T05:29:02.331Z",
+      "who": "meghan",
+      "what": "edit meghan 2026-11-26 = 5520 (was 5520)"
     }
   ],
   "lastBackupAt": "2026-11-28T04:07:22.649Z"
