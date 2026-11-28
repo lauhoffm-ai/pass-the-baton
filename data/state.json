@@ -2034,11 +2034,6 @@
   },
   "history": [
     {
-      "at": "2026-11-15T01:17:09.090Z",
-      "who": "lauren",
-      "what": "bingo claim 9 -> pending"
-    },
-    {
       "at": "2026-11-15T01:18:06.433Z",
       "who": "meghan",
       "what": "bingo claim 13 -> pending"
@@ -4532,6 +4527,11 @@
       "at": "2026-11-28T04:11:41.607Z",
       "who": "meghan",
       "what": "log meghan 2026-11-25 = 3237"
+    },
+    {
+      "at": "2026-11-28T05:28:13.904Z",
+      "who": "meghan",
+      "what": "edit meghan 2026-11-25 = 3237 (was 3237)"
     }
   ],
   "lastBackupAt": "2026-11-28T04:07:22.649Z"
